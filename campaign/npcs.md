@@ -19,6 +19,7 @@ in different places.** Search the **bold heading** given below, not the name.
 | **Ista** | `## ISTA` | **her full expedition sheet** — AC 8, hp 4, hand axe at −2, the lantern duty. Her earlier entry is in the *Wethersby* table |
 | **Hask** | `## The four off the road`, then `### HASK PUT HIS SHARE` | stats, AC 3, the shears stake, *he will not choose in an audience* |
 | **Dellie, Corm, Sarn** | `### Gear and how to run them` | the stat table for all four ex-bandits |
+| **Sarn** | `## DAY 39, evening — SARN` | **the leg, the letters, and the three things he knows about waiting in the dark.** Read the LEFT OPEN block before any Sarn scene |
 | **Wend** | *Wethersby* table, then `## DAY 32` | the factorship, and why three neutral rolls in one night |
 | **Coll** | `## DAY 32`, then `### COLL — 99` | his authority, and the two men still owed |
 | **Marrow, Sim** | `## Marrow's holding`, then `## DAY 33` | the whole thread, closed |
@@ -603,3 +604,136 @@ real thing, not a made-up job."*
 **She learned joinery off Bern and took to the tools faster than Tristle did.**
 On the road she went over the dismantled broad loom by hand and found a missing
 peg nobody else had looked for.
+
+---
+
+## DAY 39, evening — SARN. The first of the six check-ins
+
+**Reaction sequence: 113 → 42 → 77 → 55.** All four in `rolls.tsv`. The useful
+one is the **42**, and the reason is worth keeping.
+
+### The leg — closed
+
+*(d6 = 4, steady.)* Corvie out to it day 35, grunted, which from Corvie is a clean
+bill. **No shortening. He will not limp.** **Two more weeks on crutches** (to about
+day 53), then a fortnight walking carefully. **hp max still 2.**
+
+### What he has actually been doing, and what he thinks he has been doing
+
+**He has been running the store for a month.** The tally board is his own work —
+marks in groups of five, four upright and one struck through — and it balances to
+the sheet Coll left. Every barrel, hank of wire and pound of salt since day 32.
+
+> *(The party found **eighty-six marks in that exact notation** under the kitchen
+> table in area 2 two days earlier. Dave saw Sarn's board. Nobody said anything.
+> It is in `journal.md`; leave the two facts sitting next to each other.)*
+
+**Sarn does not think he has been running anything.** *"Coll runs it. I've kept the
+marks on a sheet. That's a man with one useful arse and nothing else to do."* He
+will not be argued out of this and **he is not being paid.**
+
+### HE CANNOT READ OR WRITE — and he asked
+
+Nan's boy **Tam** (9) holds the pen; the counting is all Sarn's. He raised it
+himself, unprompted *(d6 = 6)*, having rehearsed it for days:
+
+> *"Corm's got the bench. Hask's got whatever Hask's got. That's three of four
+> sorted… Fortnight from now I'm a man with two good legs and no trade, in a
+> market town where the reeve knows exactly what I used to be."*
+
+**He is much closer than he believes** *(d6 = 5)*. He knows his own name on
+sight, he has the numerals cold, and he reads a dozen words by shape — SALT,
+IRON, OIL, KEEP DRY. **He does not count this as reading. He calls it knowing
+which crate.**
+
+### THE 42 — the lesson, and it is a NEW one
+
+Dave answered warmly, generously, and in generalities: *fantastic, let's find
+someone in town.* **42.** Not a rebuff — Sarn was pleased. But:
+
+> **He asked for an ARRANGEMENT and was given APPROVAL.**
+>
+> *"When, though? …I've got a fortnight of sitting still left in me and then I've
+> got none, and after that this'll be the thing that gets put off."*
+
+This is **not** the gifts-fail/work-lands finding — his work *was* named and that
+part landed. It is its own thing, and it belongs beside it in `articles.md`:
+**for a man with no standing, a warm yes with no day and no name in it reads as
+a polite no that hasn't happened yet.** He has had four months of large
+generous yeses.
+
+**And "idle" is Ottir's word and Sarn has been carrying it.** Dave used it kindly
+— *"you haven't been idle at all"* — and got: *"Say that again about idle. Ottir
+said that word. Day four, in front of all of us. I've had that in my head every
+day I've been sat on this stool."*
+
+### THE 77 — the fix, and it is the debt reversal again
+
+Dave named a day (start when you like), and then **reframed Frython as the one
+being helped**: laid up a week, wants company, wants something to do.
+
+**Sarn re-filed it instantly.** A wizard teaching him letters is charity and he
+cannot take it. **A man on his back who needs someone to fetch is a job.**
+
+> *"I'm a man on sticks and he's a man on his back, neither of us is going
+> anywhere, and one of us has got to be the one that fetches. I can do that.
+> That I can do."*
+
+**He refused to let Frython come to him.** *"No. I asked. I'll go."* — a man on
+crutches crossing Wethersby at first light so that neither of them is the one
+being done a favour. **He is at Frython's lodgings from first light, day 40.**
+*(d6 = 5, he moved on it immediately.)*
+
+**TOLLER is banked, not taken.** He wants a week of letters in him first and
+then to walk there **on his own legs**. His objection is the one Toller himself
+already answered, and **nobody has told Sarn the line**:
+
+> Toller, day 32, reaction 91: *"— and then bring the things to me, **which isn't
+> charity, obviously**."*
+>
+> Sarn, day 39: *"Tristle's being taught a **trade**. That's got a use in it for
+> Toller at the end. **What's the use in me?**"*
+>
+> **That sentence is the key to that door and it is sitting in Dave's pocket.**
+
+### THE 55 — he was told the truth about expedition 6, and it frightened him
+
+Dave gave him the pit trap straight: forty feet into cold water, the floor closed
+over them, touch and go getting everyone out and back up, and something unknown
+waiting in a corridor by the pool.
+
+**The 55 is fear, not coolness.** He looked at his own leg on the stool and did
+not say the obvious thing about what forty feet does to a leg. What he did say:
+
+> *"Corm's got a bench. I've got a board. **Hask and Dellie have got a hole in the
+> ground with a floor that opens.**"*
+
+### WHAT SARN KNOWS THAT NOBODY ELSE IN WETHERSBY DOES
+
+*(d6 = 3 — real, limited, and he flagged the limit twice himself: "what I know is
+men on roads.")* **Eleven years on the professional side of one question: what a
+patient thing in a dark place is waiting for.** Treat this as a genuine,
+non-magical consulting asset the party has been sitting on.
+
+1. **"Nothing that's frightened of you watches you. Frightened goes."** If it
+   stopped and looked, it was deciding *when*, not whether to run.
+2. **"You don't take the cart on the way out. You take him on the way back."**
+   Tired, loaded, half of them hurt, the dangerous part behind them. *"That's how
+   we got Halm. That's how we got the joiner. Every single one on the way home."*
+3. **"A snare that shuts is a snare somebody means to come back to. You don't
+   build a thing that closes if all you want is a dead man at the bottom — a hole
+   does that on its own. Closing's for keeping."** Then: ***"Was there anything
+   else in the water?"***
+
+**He is guessing and says so.** But nobody else in the district has the instinct.
+
+### LEFT OPEN — for whoever runs the next Sarn scene
+
+- **He is not paid.** A month of tally-keeping, unasked, unwaged, and he would
+  refuse a payment framed as thanks. Frame it as **wages for a clerk**, or as
+  **Coll's second**, and it lands.
+- **Nobody has ever told the four how Kell died** — carrion crawler, west passage
+  off (21,22), buried under stones at (17,21), and the party killed the thing.
+  Still true as of day 39.
+- He half-started a sentence about Hask and Dellie and stopped it. It is still in
+  him.

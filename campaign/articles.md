@@ -188,6 +188,29 @@ Wend named half of it herself and got the room right and the cause wrong:
 **It was never only the room.** Dave took Ista aside privately and still got a 9.
 It was the **debt**. The fix is not privacy, it is **employment**.
 
+### THE SECOND FINDING — day 39, Sarn. A warm yes is not an arrangement
+
+| | | |
+|---|---|---|
+| Sarn, asked for a teacher, told *"fantastic — let's find someone"* | **42** | flat |
+| **Sarn, given a DAY, and Frython reframed as the one needing company** | **77** | well |
+
+His work *had* just been named and that part landed — so this is **not** the
+gifts/work axis. It is its own thing:
+
+> **For a person with no standing, approval without a day and a name in it reads
+> as a polite no that has not happened yet.** He has had four months of large
+> generous yeses. *"When, though?"*
+
+**And the fix is the same mechanism as employment, one turn further round.**
+Sarn could not accept a wizard teaching him his letters — charity. He accepted
+instantly when told Frython was laid up a week and wanted company, because that
+is **a job**: *"one of us has got to be the one that fetches."*
+
+> **Reverse the direction of the debt and the same offer becomes acceptable.**
+> Do not ask what would help them. Ask what they could be told they are helping
+> with — and then name the hour.
+
 
 ---
 

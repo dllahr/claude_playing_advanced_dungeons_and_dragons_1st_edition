@@ -811,7 +811,7 @@ scene:
 | **Bern** | the loom. **May or may not have started it** — the party left Wend in charge and did not say. Ista told him about the caves herself and asked that nobody help; **outcome unknown, do not resolve it for her** |
 | **Coll** | basecamp and the barn. Has his authority in writing now. All six unlisted hands went to Marrow's with a written right of return |
 | **Halm** | the guide. **Genuinely does not know about the barrel** (d6=1, answered honestly) |
-| **Sarn** | mending, **will not limp** |
+| ~~**Sarn**~~ | **DONE day 39 evening.** See `npcs.md` `## DAY 39, evening — SARN`. Learning his letters off Frython from first light day 40; **Toller banked a week** and Dave holds the line that opens that door. **He is still unpaid for a month of running the store** |
 
 **Do not front-load these with mechanics.** Reaction rolls per DMG p.63 with the
 adjustment said aloud first, and remember the standing finding in
