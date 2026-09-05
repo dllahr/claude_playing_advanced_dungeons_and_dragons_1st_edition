@@ -13,8 +13,12 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## What this is
 
 This is not a software project. It is a personal reference library of AD&D 1st Edition
-rulebooks and adventure modules, used to answer rules questions and to prep/run games.
-There is no build, no tests, no dependencies, and no version control here.
+rulebooks and adventure modules, used to answer rules questions and to prep/run games —
+which has grown a live campaign, a rules cache, a map database and a test suite around it.
+There is no build step and no dependencies beyond the conda env.
+
+**It IS a git repo as of 2026-09-05** — see *Version control* below. The scans and
+everything generated from them are gitignored; the ~2 MB of text is tracked.
 
 Work is therefore mostly **retrieval**: find the authoritative passage in the source books
 and quote or summarize it accurately.
@@ -36,6 +40,59 @@ Do not read facts out of it, and do not update it. `tools/deprecated/` is the
 same idea for code. *(First occupant, 2026-09-05: `map_known.md`, a prose map
 kept in parallel with the database, which rotted two expeditions behind while
 still being listed as authoritative for what the party had seen.)*
+
+## Version control — what git is for HERE
+
+Initialised 2026-09-05. `.gitignore` keeps out `manuals/`, module PDFs,
+`mapdb/output/` and the conversation exports: 229 MB on disk, ~2 MB tracked.
+
+**Git is the safety net for the PROSE, not for the game state.** The TSVs are
+append-only and the tools have 171 tests, so both fail loudly when they break.
+The ten markdown files have no tool and no test — nothing fails when they rot,
+which is how a wrong thief percentage sat on `party_roster.md` for weeks and how
+`map_known.md` fell two expeditions behind. **Those are what git protects.**
+
+> ### ⚠ NEVER `checkout`, `reset` or `revert` A CAMPAIGN TSV TO UNDO PLAY
+>
+> `encounters.tsv`, `world_changes.tsv`, `hp_log.tsv`, `clock.tsv`, `light.tsv`,
+> `rolls.tsv` and `spells.tsv` are **append-only by design**. Rewinding one
+> deletes events that actually happened at the table, and the tools will then
+> compute a confidently wrong answer from the truncated log.
+>
+> **A wrong game event is corrected by APPENDING** — a superseding row, or an
+> `anchor` row that sets totals outright. That is what the day-39 XP anchor is.
+> Git may revert **code, rules and prose**. It may not revert the past.
+
+### When to commit
+
+The trigger is a **coherent boundary**, not a clock. At each of these, say
+"worth committing" and give the command — the user runs it unless they have
+given standing authorization:
+
+| boundary | why |
+|---|---|
+| **Before every `/compact`, without exception** | The conversation is about to become a summary. Whatever is on disk and committed is what survives. **This is the important one.** |
+| **End of an in-game day** | Same trigger as the `calendar.md` row. Keeps play history granular enough to bisect. |
+| **End of an expedition** | The big narrative boundary. |
+| **After a `rules/` or `tools/` change — SEPARATELY from play** | So a bad rules edit can be reverted without unwinding a session of play. Never mix the two in one commit. |
+| **Before a risky refactor** | Today's `xp.py` reweighting would have been much easier to abandon. |
+
+### Message convention — because `git log` is a session index
+
+**Prefix play commits with the day number, infrastructure with its area:**
+
+```
+day 39: Hask, Dellie and Ista become 1st-level characters
+day 40: check-ins in Wethersby
+rules: zero-level.md, and the 0-level attack column correction
+tools: xp.py weights monster and treasure xp separately
+map:   level 2 built and merged
+```
+
+**This matters more than it looks.** `git log --oneline` is a complete campaign
+history that costs almost no context to read — far cheaper than opening
+`calendar.md`, `npcs.md` and the DM notes to reconstruct what happened when. **At
+the start of a session, read it.** It is the cheapest orientation available.
 
 Each book is a scanned PDF; most also have a sibling `.txt` of the same basename.
 

@@ -12,6 +12,7 @@ without relearning anything.
 
 ```bash
 conda activate advanced_dnd_1e
+git log --oneline | head -20           # what happened, when — CHEAPEST orientation there is
 python tools/xp.py                     # current XP — never quote a stored total
 python tools/hp.py                     # current hit points, likewise computed
 python tools/world.py state --level 1  # what the party has done to the dungeon
@@ -789,19 +790,70 @@ Standing facts that carry to any new sheet:
 
 ---
 
-## 11. Where the campaign stands *(updated 2026-09-02)*
+## 11. Where the campaign stands *(updated 2026-09-05, day 39)*
 
-**NOBODY IS IN THE DUNGEON. Campaign day 28**, on the road home from Ludbury,
-four days short of Wethersby. Three loaded carts, thirteen people out of
-Wethersby plus Fenn and his sons, and **229 gp in a strongbox that belongs to
-the six wool holders.** See the HANDOFF block at the end of
-`modules/B1_DM_NOTES_DO_NOT_READ.md` — it carries live state and open threads.
+> **Read `git log --oneline` first.** It is the campaign history and it costs
+> almost nothing. This section is a snapshot and snapshots rot — this very
+> heading said "day 28" while play was at day 39.
+
+**NOBODY IS IN THE DUNGEON. Campaign day 39, in Wethersby**, expedition 6
+closed — all eight came out alive after 26 hours 20 minutes under.
+
+### THE IMMEDIATE AGENDA — the player's own list, given 2026-09-05
+
+**Six check-ins, in Wethersby, day 39-40.** Named in this order and all owed a
+scene:
+
+| | and the thing they are actually waiting on |
+|---|---|
+| **Wend** | factor. Holds the succession document, the at-cost board, the Ancel connection, and **Wat's terms are still not agreed** — she said ask **Coll**, not Wat |
+| **Ottir** | witnessed everything. His **sealed causeway report to Master Wace is still undelivered**; Draycot has now written a *second* time about the headboard |
+| **Bern** | the loom. **May or may not have started it** — the party left Wend in charge and did not say. Ista told him about the caves herself and asked that nobody help; **outcome unknown, do not resolve it for her** |
+| **Coll** | basecamp and the barn. Has his authority in writing now. All six unlisted hands went to Marrow's with a written right of return |
+| **Halm** | the guide. **Genuinely does not know about the barrel** (d6=1, answered honestly) |
+| **Sarn** | mending, **will not limp** |
+
+**Do not front-load these with mechanics.** Reaction rolls per DMG p.63 with the
+adjustment said aloud first, and remember the standing finding in
+`campaign/articles.md`: **gifts land badly, work lands.**
+
+### State
+
+- **Nine characters, not six.** Hask (Fighter), Dellie (Cleric) and Ista (Thief)
+  were promoted day 39. **Dellie may not use edged weapons and is AC 6.**
+  **Ista's CON 3** caps her resurrections at three.
+- **Funds 595 gp 6 sp** (617 gp 6 sp less Ista's 22 gp kit).
+- **Frython and Blartho are invalid until day 45** — a week off their feet.
+- **13 iron spikes carried; 3 left in the dungeon.** Three of them hold the
+  **pit trap at (29,31) jammed open** — that is a world change, not a memory.
+- **Tristle: 641 XP, needs 1,251 — and 1,500 gp of training he cannot afford.**
+- **The ring is still unidentified.** Only lead is **Wraye**, three days east of
+  Ludbury, which has a library.
+
+### Owed in the fiction
+
+Fetch **Ede** (~17 days out; 2½ days each way on horseback) · send a lad to the
+weaver at **Lyde** · **Wat's terms** · Ottir's report to **Master Wace** ·
+**Draycot's second letter** about the headboard.
+
+### Dungeon threads
+
+**Areas 10 and 11 are still mis-mapped — do not take the party there.**
+**Level 2 is built and merged but entirely unexplored**: two exits from room 50,
+and something in the east passage. Level 2's room extents are "nearest numbered
+area", not "inside room N", and are not reliable.
+
+### Known unfixed
+
+**`combat.py` does not cycle a multi-value damage list** — it rolls the first
+value for every attack in the list. Roll those by hand.
 
 **`clock.py status` still reports expedition 5, round 358. That clock is CLOSED**
 — there is no `close` subcommand, and `clock.py start --exped 6` will supersede
 it. Do not read a live dungeon clock off it while the party is overland.
 
-**Tests: 367** (`python -m pytest mapdb tools -q`).
+**Tests: 171 in `tools/`** (`conda run -n advanced_dnd_1e python -m pytest tools/tests -q`),
+plus the `mapdb` suite — `python -m pytest mapdb tools -q` runs both.
 **Reachability regression: DMG 21/641, B1 6/1197.** B1 moved 5 -> 6 on 2026-08-29
 and that was a FIX; `rebuild.sh` explains why in its footer.
 
@@ -811,7 +863,11 @@ extractor. **Areas 10 and 11 are still broken and the party must not be taken
 there yet.** New correction scopes exist for this: `member` (assign a square to a
 room, `none` clears) and `feature` (clear a false `stairs`).
 
-**New this session:** `tools/light.py` (lantern fuel), `campaign/spells.tsv`
-(memorised spells), `mapdb/doorcheck.py` and `mapdb/diagcheck.py` (review sheets),
-`rules/experience.md`, `rules/thief.md`, `bestiary/carrion-crawler.md`, and
-encounter-reaction + missile-range tables in `rules/combat.md`.
+**New 2026-09-05:** `rules/zero-level.md` (normal men, and the 0-level attack
+column the three henchmen were NOT being run off), `deprecated/` and
+`tools/deprecated/`, `.gitignore`, and **the repo is now under git** — see
+CLAUDE.md's *Version control* section for the commit cadence and for the one
+hard rule: **never revert a campaign TSV to undo play.**
+
+`tools/xp.py` now weights **monster xp full and treasure xp by share**; the
+day-39 anchor row in `encounters.tsv` is what keeps that prospective.
