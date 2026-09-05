@@ -66,7 +66,7 @@ anything. Met in area 7 of Quasqueton, expedition 4.
 | **Dellie** | the woman. Spear. Sharp, says little, means it | First of the four to accept giving up the road, instantly. Decides for Hask when he can't |
 | **Corm** | quiet. Hand axe. Father was a wheelwright | Asked the one question nobody could answer: *"You can vouch for us. Can you make them take it?"* Now works Bern's bench and that satisfies Ottir's condition for him indefinitely |
 | **Sarn** | broken leg | Yrtone's last *cure light wounds* took the fever out of it; **Corvie** set the bone on night 3. On crutches Corm made him |
-| *Kell* | **dead** | Killed by the carrion crawler three days before the party met them, in the west passage off (21,22), and buried under stones at **(17,21)**. **The party killed that crawler and has never told them.** |
+| *Kell* | **dead** | Died underground three days before the party met them; the four got the body back and buried it under stones in a stub off their own route in. **HASK HAS NEVER SAID HOW, AND THE PARTY HAS NEVER ASKED.** He will not go back down that passage and cannot be argued into it. *(How Kell died is DM-side and is in the module notes. Do not restate it here and do not let a summary assume the party knows it — a summary already did, once, and got the direction backwards.)* |
 
 ### Gear and how to run them — **REARMOURED AT LUDBURY, day 27**
 
@@ -729,11 +729,22 @@ non-magical consulting asset the party has been sitting on.
 
 ### LEFT OPEN — for whoever runs the next Sarn scene
 
-- **He is not paid.** A month of tally-keeping, unasked, unwaged, and he would
-  refuse a payment framed as thanks. Frame it as **wages for a clerk**, or as
-  **Coll's second**, and it lands.
-- **Nobody has ever told the four how Kell died** — carrion crawler, west passage
-  off (21,22), buried under stones at (17,21), and the party killed the thing.
-  Still true as of day 39.
+- **He is not paid, and the reason is structural — he is on NOBODY'S list.**
+  The premises are **Wend's barn**. The foreman is **Coll**, appointed by Wend
+  herself and now holding written authority. The **stock** is the party's, sold
+  to the district at cost. Sarn is none of those things: he was never one of the
+  six unlisted hands (Hew, Meg, Tibb, Odo and the other two — all of whom went to
+  Marrow's on day 34 with a written right of return), he was never on Coll's
+  sheet, and nobody ever hired him. **He simply started keeping the tally and no
+  one stopped him.** So this is not neglect; it is that paying him is not
+  obviously anyone's job, which is exactly why it has to be *made* somebody's.
+  **Ask Wend — the premises and the appointment are hers — or Coll, who runs it.**
+  And frame it as **wages for a clerk** or as **Coll's second**, never as thanks.
+- **CORRECTED 2026-09-05, player-caught. The withholding runs the OTHER WAY.**
+  It is not that the party knows how Kell died and has not told the four. **The
+  party does not know.** It happened before they ever met, nobody has asked, and
+  **Hask will not volunteer it** — he has not got the words and does not want
+  them. The question *"how did Kell die?"* has never been put to any of the four.
+  Sarn is not the one to ask; he was there, and he is the one on the crutches.
 - He half-started a sentence about Hask and Dellie and stopped it. It is still in
   him.
