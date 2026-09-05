@@ -71,17 +71,23 @@ the right boundary and mention it in a line if it is worth knowing.
 
 **What that authorization does NOT cover:**
 
-- **`git push`** — **there IS a remote**: `origin` →
+- **`git push` IS authorized** (granted 2026-09-05), to `origin` →
   `github.com:dllahr/claude_playing_advanced_dungeons_and_dragons_1st_edition`.
-  Pushing publishes. **Ask first, every time.** Committing is local and safe;
-  pushing is not the same act.
+  Still not authorized: force-push, or pushing anything that rewrote history.
 
-  > **Tracked and therefore published: `modules/B1_DM_NOTES_DO_NOT_READ.md`**,
-  > `modules/private/b1_wandering.tsv`, and the B1 level-1 map PNG. The first is
-  > the campaign's spoiler file — the rolled stocking key that must never be
-  > shown to the player. **If the repo is public, it is readable by anyone,
-  > including the player.** The scanned rulebooks and module PDFs are gitignored
-  > and are NOT published. Flagged 2026-09-05; the player's call, not mine.
+  > ### THE REPO IS PUBLIC AND THE DM NOTES ARE IN IT — SETTLED, DO NOT RE-RAISE
+  >
+  > `modules/B1_DM_NOTES_DO_NOT_READ.md`, `modules/private/b1_wandering.tsv` and
+  > the B1 level-1 map PNG are tracked and published. **This was flagged and the
+  > player decided: the repo stays public and he will not read the notes.**
+  >
+  > **Nothing about this relaxes CHECKLIST §8.** The player choosing not to look
+  > is not permission to tell him. **Preserve surprise exactly as before** — the
+  > arrangement is trust, and the whole value of it is that it is never tested.
+  >
+  > A future session will notice this and want to raise it again. **Don't.** It
+  > is decided. *(The scanned rulebooks and module PDFs are gitignored and are
+  > NOT published.)*
 - **Anything that rewrites history** — `reset --hard`, `rebase`, `commit
   --amend` on an existing commit, force-anything.
 - **Reverting a campaign TSV.** See the box above. Standing permission to
