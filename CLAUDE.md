@@ -65,9 +65,20 @@ which is how a wrong thief percentage sat on `party_roster.md` for weeks and how
 
 ### When to commit
 
-The trigger is a **coherent boundary**, not a clock. At each of these, say
-"worth committing" and give the command — the user runs it unless they have
-given standing authorization:
+**STANDING AUTHORIZATION, granted 2026-09-05: commit without asking.** Do not
+stop play to request permission, and do not narrate the commit — just make it at
+the right boundary and mention it in a line if it is worth knowing.
+
+**What that authorization does NOT cover:**
+
+- **`git push`** — there is no remote, and adding one publishes the campaign.
+  Ask first, always.
+- **Anything that rewrites history** — `reset --hard`, `rebase`, `commit
+  --amend` on an existing commit, force-anything.
+- **Reverting a campaign TSV.** See the box above. Standing permission to
+  *commit* is not permission to *undo*.
+
+The trigger is a **coherent boundary**, not a clock:
 
 | boundary | why |
 |---|---|
