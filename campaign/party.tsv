@@ -1,0 +1,89 @@
+# Where the party is. APPEND ONLY — written by tools/party.py.
+#
+# Position used to live only in the DM's narration, so nothing could check a
+# move. On expedition 4 round 1111 the party was walked from (19,5) to (19,6)
+# through a WALL that the query output had printed on screen moments earlier.
+# The player caught it by reading the printed map.
+#
+# `move` routes with mapdb/dmap.py path, which cannot cross a wall, and REFUSES
+# an impossible destination instead of narrating one. `place` skips the check
+# and is a separate verb so that skipping is always deliberate and visible.
+#
+when	map	level	x	y	exped	turn	squares	feet	rate	why	route
+2026-08-28	b1	1	16	1	4	0			PLACED	entered Quasqueton at the start of expedition 4	
+2026-08-28	b1	1	20	7	4	1111	36	360	known	the whole of expedition 4 so far, backfilled to the corrected position	16,1 16,2 16,3 16,4 16,5 16,6 16,7 16,8 16,9 16,10 16,11 16,12 16,13 17,13 18,13 19,13 20,13 21,13 22,13 23,13 24,13 25,13 26,13 27,13 27,12 27,11 27,10 27,9 27,8 27,7 26,7 25,7 24,7 23,7 22,7 21,7 20,7
+2026-08-28	b1	1	20	12	4	112	5	50	explore	north from the three-way junction, following the corridor	20,7 20,8 20,9 20,10 20,11 20,12
+2026-08-28	b1	1	22	12	4	112	2	20	explore	east along the corridor to the corner	20,12 21,12 22,12
+2026-08-28	b1	1	22	10	4	112	2	20	explore	south to the wrecked access-room door to recover the spikes	22,12 22,11 22,10
+2026-08-28	b1	1	26	10	4	113	4	40	known	east along the known corridor to the mouth of the throne room	22,10 23,10 24,10 25,10 26,10
+2026-08-28	b1	1	27	7	4	113	4	40	known	south across the looted throne room to its south opening	26,10 27,10 27,9 27,8 27,7
+2026-08-28	b1	1	27	6	4	113	1	10	explore	out of the throne room into the south corridor	27,7 27,6
+2026-08-28	b1	1	27	4	4	113	2	20	explore	advance to the turn at the south end of the corridor	27,6 27,5 27,4
+2026-08-29	b1	1	21	4	4	115	6	60	explore	west along the corridor to the opening in the north wall	27,4 26,4 25,4 24,4 23,4 22,4 21,4
+2026-08-29	b1	1	21	6	4	115	2	20	explore	north up the side passage to where it turns east	21,4 21,5 21,6
+2026-08-29	b1	1	23	6	4	115	2	20	explore	up to the door at the end of the passage	21,6 22,6 23,6
+2026-08-29	b1	1	24	6	4	115	1	10	explore	into area 29 in formation	23,6 24,6
+2026-08-29	b1	1	27	7	4	117	14	140	known	leaving area 29, retracing the route back to the throne room	24,6 23,6 22,6 21,6 21,5 21,4 22,4 23,4 24,4 25,4 26,4 27,4 27,5 27,6 27,7
+2026-08-29	b1	1	27	13	4	119	6	60	known	north through the throne room and the short corridor, out through the standing-open south door onto the y=13 corridor	27,7 27,8 27,9 27,10 27,11 27,12 27,13
+2026-08-29	b1	1	22	13	4	119	5	50	known	west along the y=13 corridor to the opening in its north wall	27,13 26,13 25,13 24,13 23,13 22,13
+2026-08-29	b1	1	22	18	4	119	5	50	explore	north up the side passage	22,13 22,14 22,15 22,16 22,17 22,18
+2026-08-29	b1	1	21	20	4	120	3	30	explore	west round the dog-leg then north to where the corridor turns again	22,18 21,18 21,19 21,20
+2026-08-29	b1	1	22	22	4	120	3	30	explore	east 10 ft then north 20 ft up the zigzag	21,20 22,20 22,21 22,22
+2026-08-29	b1	1	23	23	4	121	2	20	explore	east then north to the door in the east wall	22,22 23,22 23,23
+2026-08-29	b1	1	24	23	4	122	1	10	explore	into the large irregular room, formation	23,23 24,23
+2026-08-29	b1	1	24	21	4	122	2	20	explore	south out of the antechamber to where the passage turns west	24,23 24,22 24,21
+2026-08-29	b1	1	22	19	4	123	4	40	explore	follow the passage west then south to its end	24,21 23,21 23,20 23,19 22,19
+2026-08-29	b1	1	24	23	4	125	6	60	known	back up the south limb to the antechamber inside the door	22,19 23,19 23,20 23,21 24,21 24,22 24,23
+2026-08-29	b1	1	25	24	4	125	2	20	explore	into the diagonal chamber to examine the arms on the walls and look at the ceiling	24,23 24,24 25,24
+2026-08-29	b1	1	30	29	4	126	10	100	explore	north-east up the diagonal chamber in formation	25,24 25,25 26,25 26,26 27,26 27,27 28,27 28,28 29,28 29,29 30,29
+2026-08-29	b1	1	31	31	4	128	3	30	explore	up to the far door at the north-east end of area 34	30,29 30,30 30,31 31,31
+2026-08-29	b1	1	32	31	4	129	1	10	explore	into the barracks; door closed and spiked behind	31,31 32,31
+2026-08-29	b1	1	25	11	4	146	41	410	known	carry the salvage back to the trophy room to stash it	32,31 31,31 31,30 31,29 30,29 30,28 29,28 29,27 28,27 28,26 27,26 27,25 26,25 26,24 25,24 25,23 24,23 23,23 23,22 22,22 22,21 22,20 21,20 21,19 21,18 22,18 22,17 22,16 22,15 22,14 22,13 23,13 24,13 25,13 26,13 27,13 27,12 27,11 27,10 26,10 25,10 25,11
+2026-08-29	b1	1	22	22	4	147	22	220	known	back out to the y=13 hall, north up the zigzag to the crossing	25,11 25,10 26,10 27,10 27,11 27,12 27,13 26,13 25,13 24,13 23,13 22,13 22,14 22,15 22,16 22,17 22,18 21,18 21,19 21,20 22,20 22,21 22,22
+2026-08-29	b1	1	21	22	4	147	1	10	explore	west one square off the crossing — the way not taken	22,22 21,22
+2026-08-29	b1	1	21	24	4	148	2	20	explore	north up the side passage to the door	21,22 21,23 21,24
+2026-08-29	b1	1	21	25	4	148	1	10	explore	into the passage; door closed and floor-spiked behind	21,24 21,25
+2026-08-29	b1	1	20	28	4	149	4	40	flee	pursuing the crawler west out of area 5; lost it	21,25 21,26 21,27 21,28 20,28
+2026-08-29	b1	1	21	27	4	149	2	20	flee	regroup on Blartho in the middle of area 5	20,28 20,27 21,27
+2026-08-29	b1	1	20	28	4	150	2	20	explore	north one square, then west along the north row scanning walls and ceiling	21,27 21,28 20,28
+2026-08-29	b1	1	23	26	4	152	5	50	explore	spike the west door, then east along the chamber in formation	20,28 20,27 21,27 21,26 22,26 23,26
+2026-08-29	b1	1	23	25	4	153	1	10	explore	into the closet; Dave guards the door facing out	23,26 23,25
+2026-08-29	b1	1	23	26	4	156	1	10	explore	back into area 5 to search it properly	23,25 23,26
+2026-08-29	b1	1	18	27	4	165	6	60	known	west along the chamber to the crawler's body and the west south-wall door	23,26 23,27 22,27 21,27 20,27 19,27 18,27
+2026-08-29	b1	1	18	26	4	166	1	10	explore	step into the south corridor	18,27 18,26
+2026-08-29	b1	1	18	24	4	167	2	20	explore	forward into the annex to reach Sarn, weapons sheathed, clerics leading	18,26 18,25 18,24
+2026-08-30	b1	1	22	13			23	230	known	out of area 5, south down the spine past the west junction, to the four-way at (22,13); litter-paced	18,24 18,25 18,26 18,27 19,27 20,27 21,27 21,26 21,25 21,24 21,23 21,22 22,22 22,21 22,20 21,20 21,19 21,18 22,18 22,17 22,16 22,15 22,14 22,13
+2026-08-30	b1	1	18	13			4	40	known	west to the secret-door stub	22,13 21,13 20,13 19,13 18,13
+2026-08-30	b1	1	16	1			14	140	known	out: through the spiked-open one-way door at (17,13,V), south past the alcoves and the forced outer door, to the entrance	18,13 17,13 16,13 16,12 16,11 16,10 16,9 16,8 16,7 16,6 16,5 16,4 16,3 16,2 16,1
+2026-08-31	b1	1	27	13			23	230	known	expedition 5, day 18: in and east to the door at (27,13)	16,1 16,2 16,3 16,4 16,5 16,6 16,7 16,8 16,9 16,10 16,11 16,12 16,13 17,13 18,13 19,13 20,13 21,13 22,13 23,13 24,13 25,13 26,13 27,13
+2026-08-31	b1	1	25	10			5	50	known	to the trophy room door	27,13 27,12 27,11 27,10 26,10 25,10
+2026-08-31	b1	1	25	6			20	200	known	to area 29, the Captain's Chamber	25,10 26,10 27,10 27,9 27,8 27,7 27,6 27,5 27,4 26,4 25,4 24,4 23,4 22,4 21,4 21,5 21,6 22,6 23,6 24,6 25,6
+2026-08-31	b1	1	25	10			20	200	known	the barrel rolled from area 29 back to the trophy room door	25,6 24,6 23,6 22,6 21,6 21,5 21,4 22,4 23,4 24,4 25,4 26,4 27,4 27,5 27,6 27,7 27,8 27,9 27,10 26,10 25,10
+2026-08-31	b1	1	21	25			25	250	known	trophy room to Zelligar's chamber, area 5	25,10 26,10 27,10 27,11 27,12 27,13 26,13 25,13 24,13 23,13 22,13 22,14 22,15 22,16 22,17 22,18 21,18 21,19 21,20 22,20 22,21 22,22 21,22 21,23 21,24 21,25
+2026-09-01	b1	1	16	1			29	290	known	out of Quasqueton, expedition 5, laden	21,25 21,24 21,23 21,22 20,22 19,22 18,22 17,22 16,22 16,21 16,20 16,19 16,18 16,17 16,16 16,15 16,14 16,13 16,12 16,11 16,10 16,9 16,8 16,7 16,6 16,5 16,4 16,3 16,2 16,1
+2026-09-03	b1	1	18	13	6		14	140	known	expedition 6 entry: north up x=16 to alcove pair 2, east through the spiked-open one-way slab. AVOIDS the mouths at pair 3 (y=17)	16,1 16,2 16,3 16,4 16,5 16,6 16,7 16,8 16,9 16,10 16,11 16,12 16,13 17,13 18,13
+2026-09-03	b1	1	19	19	6		7	70	known	east to the junction at (19,13), then north up x=19 to the corner at (19,19)	18,13 19,13 19,14 19,15 19,16 19,17 19,18 19,19
+2026-09-03	b1	1	17	19	6		2	20	explore	west along y=19, UNEXPLORED middle stretch, stopping one square short of the (16,19) intersection	19,19 18,19 17,19
+2026-09-03	b1	1	14	20	6		4	40	explore	into area 2, the kitchen; door closed behind	17,19 16,19 16,20 15,20 14,20
+2026-09-03	b1	1	12	20	6		2	20	explore	west down area 2, carefully, under the hanging racks	14,20 13,20 12,20
+2026-09-03	b1	1	10	20	6		2	20	explore	on west down area 2, carefully	12,20 11,20 10,20
+2026-09-03	b1	1	9	20	6		1	10	explore	to the west end of area 2, to look north	10,20 9,20
+2026-09-03	b1	1	15	20	6		6	60	known	back east along area 2 to the entry door	9,20 10,20 11,20 12,20 13,20 14,20 15,20
+2026-09-04	b1	1	16	19	6		2	20	known	out of area 2 through the east door and into the (16,19) crossing	15,20 16,20 16,19
+2026-09-04	b1	1	16	21	6		2	20	explore	north out of the crossing, following the wear	16,19 16,20 16,21
+2026-09-04	b1	1	16	22	6		1	10	explore	north to the east-side junction	16,21 16,22
+2026-09-04	b1	1	16	29	6		7	70	explore	north up the corridor between area 9 and area 5 to where it turns east	16,22 16,23 16,24 16,25 16,26 16,27 16,28 16,29
+2026-09-04	b1	1	24	29	6		8	80	explore	east along y=29, the corridor running behind area 5, to the door in the north wall	16,29 17,29 18,29 19,29 20,29 21,29 22,29 23,29 24,29
+2026-09-04	b1	1	24	31	6		2	20	explore	into the room, door spiked behind, to the north-west corner and the foot of the steps	24,29 24,30 24,31
+2026-09-04	b1	1	24	30	6		1	10	known	back into the empty room to seal in	24,31 24,30
+2026-09-04	b1	1	24	29	6		1	10	known	out of area 36 into the y=29 corridor after the rest	24,30 24,29
+2026-09-04	b1	1	27	29	6		3	30	explore	east along y=29 following the drag marks, carefully	24,29 25,29 26,29 27,29
+2026-09-04	b1	1	27	30	6		1	10	explore	round the corner into the corner square, three abreast, facing east	27,29 27,30
+2026-09-04	b1	1	29	30	6		2	20	explore	east along the arm to where it turns north	27,30 28,30 29,30
+2026-09-05	b1	1	24	30	6		7	70	explore	back west out of the dead end and into area 36, carrying Frython and Blartho	29,30 28,30 27,30 27,29 26,29 25,29 24,29 24,30
+2026-09-05	b1	1	16	29	6		9	90	known	out of area 36 and west along y=29, withdrawing	24,30 24,29 23,29 22,29 21,29 20,29 19,29 18,29 17,29 16,29
+2026-09-05	b1	1	16	19	6		10	100	known	withdrawal: the long way, avoiding the magic mouths	16,29 16,28 16,27 16,26 16,25 16,24 16,23 16,22 16,21 16,20 16,19
+2026-09-05	b1	1	19	19	6		3	30	known	withdrawal: the long way, avoiding the magic mouths	16,19 17,19 18,19 19,19
+2026-09-05	b1	1	19	13	6		6	60	known	withdrawal: the long way, avoiding the magic mouths	19,19 19,18 19,17 19,16 19,15 19,14 19,13
+2026-09-05	b1	1	16	13	6		3	30	known	withdrawal: the long way, avoiding the magic mouths	19,13 18,13 17,13 16,13
+2026-09-05	b1	1	16	1	6		12	120	known	south down the entrance corridor to the door	16,13 16,12 16,11 16,10 16,9 16,8 16,7 16,6 16,5 16,4 16,3 16,2 16,1

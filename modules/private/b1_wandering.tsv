@@ -1,0 +1,38 @@
+# B1 wandering monster tables, extracted from the module OCR text.
+# DM-ONLY: tools/clock.py prints an entry only when a check
+# actually fires, which is the moment it stops being a spoiler.
+# level 1 = upper works, level 2 = lower caverns.
+# The source is OCR. CHECK THE PDF PAGE BEFORE TRUSTING A NUMBER
+# in one of these lines -- digits corrupt silently in these scans.
+level	roll	entry
+1	1	Ores (1 -4)-AC 6, HD 1, hp 6,4,3,1, #AT 1, D1 -6 or by wea¬ pon, MV 90' (30'), Save FI, ML 8
+1	2	GiantCentipedes(1-2)-AC9, HDV 2 , hp2,2,#AT 1, Dpoi¬ son, MV 60' (20'), Save NM, ML 7
+1	3	Kobolds (1 -6)-AC 7, HDV 2 , hp4,3,3,2,2,1,#AT 1, D 1-4 or weapon -1, MV 90’ (30’), Save NM, ML 6
+1	4	Troglodytes (1-2)-AC 5, HD 2', hp 6,5, #AT 3, D 1-4/1-4/ 1-4, MV 120' (40'), Save F2, ML 9
+1	5	Giant Rats (2-5)-AC 7, HD7 2 , hp 4,3,2,1,1, #AT 1, D 1 -3 + disease, MV 120' (40') swimming 60' (20'), Save NM, ML 8
+1	6	Berserkers (1-2)-AC 7, HD 1 +1’, hp 5,4, #AT 1, D 1-8 or by weapon, MV 90' (30'), Save FI, ML 12
+2	1	Troglodytes (1-4)-AC 5, HD 2*, hp 9,8,5,4, #AT 3, D 1-4/1-4/1-4, MV 120' (40'), Save F2, ML 9
+2	2	CrabSpider(1)-AC7, HD2*, hp 12,#AT 1, D1-8 +poison, MV 120'(40'), Save FI, ML7
+2	3	Kobolds (2-7)-AC7, HD V 2 , hp4,4,3,3,2,2,1,#AT1,D1-4or weapon -1, MV 90' (30'), Save NM, ML 6
+2	4	Ores (1-8)-AC 6, HD 1, hp 6,5,5,4,4,3,3,2, #AT 1, D 1-6 or by weapon, MV 90' (30'), Save FI, ML 8
+2	5	Zombies (1-2)-AC 8, HD 2, hp8,7,#AT 1, D 1-8 or by wea¬ pon, MV 90' (30'), Save FI, ML 12
+2	6	Goblins (2-7)-AC 6, HD 1 -1, hp 5,5,4,4,3,2,1, #AT 1, D 1 -6 or by weapon, MV 90' (30'), Save NM, ML 7
+# ---------------------------------------------------------------------------
+# level 0 = THE NORTH ROAD, built 2026-08-30 for the patrol.
+#
+# NOT the DMG wilderness tables, which are built for open country and would put
+# a 50-orc warband on a trade road two hours from a market town. This table is
+# scoped to the PLACE, not to the party's level: a settled road inside a day of
+# a town that has farms on it, a reeve, and a weekly market. If that road
+# routinely held warbands the town would not be there.
+#
+# It is not toothless -- 3 and 6 can kill somebody on 2 hit points -- but the
+# ceiling is set by geography rather than by mercy, which is the distinction
+# that matters. Roll 1 in 6 per half-day of patrolling.
+level	roll	entry
+0	1	Travellers on foot (2-5) — a family, a pedlar, a pair of drovers. Not a fight; they are frightened of YOU until spoken to. Reaction roll.
+0	2	Sign only — a cold campfire off the verge, old boot-marks in a ditch, a cut strap in the grass. Days old. Nothing to fight, something to read.
+0	3	Wolves (2-5) — AC 7, HD 2+2, #AT 1, D 2-5, MV 180' (60'), Save F1, ML 8 (MM). THE DANGEROUS ENTRY. Will not press a large armed group that stands its ground; morale breaks fast.
+0	4	A merchant's cart with 1-2 hired guards. Wary, then relieved. Good for the party's reputation and it TALKS in town afterward.
+0	5	Nothing at all. A day of walking. This is the commonest real outcome and it is the one that proves the road is clear.
+0	6	Desperate men (1-3) — AC 9 (no armour), HD 1, hp 5,3,2, #AT 1, D by weapon, ML 6. Hungry, not organised, exactly what Hask's crew were six days ago. Reaction roll BEFORE assuming a fight.

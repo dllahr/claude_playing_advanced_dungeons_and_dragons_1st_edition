@@ -1,0 +1,40 @@
+# The party. Read by tools/xp.py, tools/combat.py and tools/hp.py.
+#
+# prime / score / bonus / next_level — experience.
+#   `prime` is the class's prime requisite; a score of 16 or more earns +10% of
+#   experience awarded (PHB p.9 fighters, p.10 magic-users, p.11 clerics and
+#   thieves — all four verified from page renders).
+#   `next_level` is the XP needed for 2nd level in that class.
+#
+# ac / hp_max — from the CURRENT STATE block of party_roster.md, which is where
+#   the player states them. Tristle's AC 4 is leather (8) with his DEX 18
+#   defensive adjustment of -4 (PHB p.11).
+#
+# melee_hit / melee_dmg — STRENGTH adjustments. They apply to melee and HURLED
+#   weapons only, never to a bow: see rules/abilities.md. Dave's 18/26 is the
+#   party's only one.
+#
+# missile_hit — DEXTERITY Reaction/Attacking adjustment (PHB p.11, DEXTERITY
+#   TABLE I), which the book applies to "both surprise situations and missile
+#   combat attacks". SEPARATE from any racial weapon bonus.
+#
+# proficient — weapons the character may use without the class non-proficiency
+#   penalty from rules/combat.md. Anything not listed takes the penalty.
+#
+# bonus_weapons — weapons carrying an extra racial +1 to hit. Tristle is an elf,
+#   which grants +1 with long sword, short sword and bow (PHB race description).
+# TRISTLE'S SPEAR is NOT in his proficiencies and takes the thief's -3 every
+#   time. That is intentional: a spear reaches from the SECOND RANK, and behind
+#   Dave and Torsat in a 10-ft corridor a long sword reaches nothing. Do not
+#   'correct' it. See CHECKLIST.md section 3.
+#
+name	class	level	ac	hp_max	melee_hit	melee_dmg	missile_hit	proficient	bonus_weapons	prime	score	bonus	next_level	share
+Dave	Fighter	1	3	9	1	3	0	long sword,short bow,spear	-	STR	18/26	yes	2000	full
+Torsat	Fighter	1	3	6	0	0	0	long sword,short bow,spear	-	STR	13	no	2000	full
+Tristle	Thief	1	4	3	0	0	3	long sword,short bow	long sword,short bow	DEX	18	yes	1251	full
+Blartho	Cleric	1	3	2	0	0	0	footman's flail,sling	-	WIS	15	no	1501	full
+Yrtone	Cleric	1	3	7	0	0	0	footman's flail,sling	-	WIS	16	yes	1501	full
+Frython	Magic-User	1	10	2	0	0	0	dart	-	INT	17	yes	2501	full
+Hask	Fighter	1	3	7	0	0	0	short sword,spear,sling	-	STR	11	no	2000	half
+Dellie	Cleric	1	6	5	0	0	-2	footman's flail,sling	-	WIS	16	yes	1501	half
+Ista	Thief	1	7	4	0	0	0	dart,spear	-	DEX	13	no	1251	half

@@ -1,0 +1,610 @@
+=== line 1184 ===
+for wandering monsters must be made up to three times for 
+any 8-hour period they remain there (these checks are made 
+at a normal 1 in 6 chance). It is customary to have one or 
+more adventurers in the party standing guard at any one 
+time, as the party members sleep in shifts in order to always 
+have continual protection (although the devious DM may 
+give a slight chance of a guard being asleep if a monster 
+comes . . .). Just as with march order, it is important that play¬ 
+ers provide the DM with the sleeping location of each mem¬ 
+ber and the placement of the guard or guards, since this 
+may be crucial if and when a monster approaches from a 
+given direction. 
+
+Experience points earned and any benefits gained will only 
+be applicable if and when the adventurers successfully exit 
+the dungeon; experience gained in an adventure is only 
+credited after the adventure is complete. However, success¬ 
+fully exiting the dungeon and then returning later would al¬ 
+low the characters to use experience gained on the previous 
+foray, if applicable. 
+
+
+TIME 
+
+As adventures go on, the Dungeon Master is responsible for 
+keeping track of time elapsed. 
+
+In normal movement and exploration, each turn is consid¬ 
+ered to be ten minutes. If an encounter or melee occurs, the 
+Dungeon Master immediately (but temporarily, for the dura¬ 
+tion of the encounter) adjusts the time frame to melee rounds 
+consisting of ten 10-second melee rounds. 
+
+Every third turn of adventuring, the DM should take a die roll 
+for the possible appearance of wandering monsters at the 
+indicated chances (which are normally 1 in 6, but which may 
+vary depending upon location and dungeon level). Some 
+occurrences (such as noise and commotion caused by ad¬ 
+venturers) may necessitate additional checks. 
+
+Paper and pencil can be used to tally time, and the DM 
+should monitor its passage as he or she sees fit, but keeping 
+in mind that exploring, mapping and examining various fea¬ 
+tures takes up considerable time—with the larger the area 
+
+
+=== line 1218 ===
+for the possible appearance of wandering monsters at the 
+indicated chances (which are normally 1 in 6, but which may 
+vary depending upon location and dungeon level). Some 
+occurrences (such as noise and commotion caused by ad¬ 
+venturers) may necessitate additional checks. 
+
+Paper and pencil can be used to tally time, and the DM 
+should monitor its passage as he or she sees fit, but keeping 
+in mind that exploring, mapping and examining various fea¬ 
+tures takes up considerable time—with the larger the area 
+
+
+4 
+
+
+
+and the greater the care taken in examining, the more time 
+consumed. Wasted time is also a factor which should be 
+noted, as players may waste time arguing or needlessly dis¬ 
+cussing unimportant matters or by simply blundering around 
+aimlessly. On the other hand, time can pass quickly if adven¬ 
+turers move rapidly through the areas which have been pre¬ 
+viously explored and mapped. In all cases the DM should 
+use good judgment and common sense. 
+
+Generally, eight hours of each twenty-four must be spent rest¬ 
+ing and sleeping, and prudent adventurers will sleep in shifts 
+with a guard always awake. In this dungeon, three checks 
+will be made each "night" for possible wandering monsters. 
+
+
+COMPUTING EXPERIENCE 
+
+At the conclusion of an adventure (the party's emergence 
+from the dungeon), the surviving characters divide the 
+treasure (with equal shares generally awarded to each and 
+magical or special items diced for by eligible characters) 
+and experience is computed. Retainers usually get an equal 
+share of any treasure, although their experience point award 
+may vary at the Dungeon Master’s discretion from half to the 
+full amount awarded to player characters, depending upon 
+their accomplishments. 
+
+As an example, let us assume that the first level player char¬ 
+acters (a magic-user and a fighter) and a first-level retainer 
+
+=== line 1246 ===
+will be made each "night" for possible wandering monsters. 
+
+
+COMPUTING EXPERIENCE 
+
+At the conclusion of an adventure (the party's emergence 
+from the dungeon), the surviving characters divide the 
+treasure (with equal shares generally awarded to each and 
+magical or special items diced for by eligible characters) 
+and experience is computed. Retainers usually get an equal 
+share of any treasure, although their experience point award 
+may vary at the Dungeon Master’s discretion from half to the 
+full amount awarded to player characters, depending upon 
+their accomplishments. 
+
+As an example, let us assume that the first level player char¬ 
+acters (a magic-user and a fighter) and a first-level retainer 
+(a fighter) survive an adventure and return to the outside 
+world from a dungeon which has claimed several of their 
+comrades. The treasure they carry out with them amounts to 
+the following: 630 g.p., 9—50 g.p. gems, a scroll of 2 magic- 
+user spells, a sword +1 and a ring of protection +1. In the 
+course of their adventure, their party slew the following mon¬ 
+sters: 8 kobolds, 5 ores, and a black widow spider. 
+
+In this instance, the treasure is rather easily divided: the gold 
+pieces are split into 210 apiece, 3 gems are awarded to 
+each character, the scroll goes to the magic-user (since he is 
+the only one who can use it), and the two fighters roll dice for 
+the sword and the ring, with one going to each (in some in¬ 
+stances, a non-player character may end up with the best 
+treasure this way, but such is the luck of the dice . . .). This 
+gives each adventurer the equivalent of 210 g.p. cash, plus 
+150 g.p. in gems (if traded or sold for gold pieces), plus one 
+other item which can be retained and used. 
+
+The monsters slain are considered for experience point 
+values as follows (see page 12 of the D&D Basic Set booklet): 
+the 8 kobolds are worth 5 points apiece as creatures under 1 
+hit die, the 5 ores are worth 10 points each as 1 hit die mon¬ 
+sters, and the spider is worth 50 points (35 points as a 3 hit die 
+creature plus 15 points for its special ability of poison). The to¬ 
+tal value of all monsters killed is thus 140 experience points— 
+40 for the kobolds, 50 for the ores, and 50 for the spider. This 
+divides to 46 experience points per surviving adventurer for 
+
+=== line 1699 ===
+WANDERING MONSTERS 
+
+Check every second turn; 1 in 6 (roll a 6-sided die). If a mon¬ 
+ster is indicated, roll a six-sided die again and compare to 
+the list below to determine what type of monster appears. 
+Then check for surprise. The abbreviations which follow are 
+the same as used and explained in the section entitled MON¬ 
+STER LIST. 
+
+1. Ores (1 -4)-AC 6, HD 1, hp 6,4,3,1, #AT 1, D1 -6 or by wea¬ 
+
+pon, MV 90' (30'), Save FI, ML 8 
+
+2. GiantCentipedes(1-2)-AC9, HDV 2 , hp2,2,#AT 1, Dpoi¬ 
+son, MV 60' (20'), Save NM, ML 7 
+
+3. Kobolds (1 -6)-AC 7, HDV 2 , hp4,3,3,2,2,1,#AT 1, D 1-4 or 
+weapon -1, MV 90’ (30’), Save NM, ML 6 
+
+4. Troglodytes (1-2)-AC 5, HD 2', hp 6,5, #AT 3, D 1-4/1-4/ 
+1-4, MV 120' (40'), Save F2, ML 9 
+
+5. Giant Rats (2-5)-AC 7, HD7 2 , hp 4,3,2,1,1, #AT 1, D 1 -3 + 
+disease, MV 120' (40') swimming 60' (20'), Save NM, ML 8 
+
+6. Berserkers (1-2)-AC 7, HD 1 +1’, hp 5,4, #AT 1, D 1-8 or 
+by weapon, MV 90' (30'), Save FI, ML 12 
+
+
+ENCOUNTER AREAS 
+
+ENTRANCE. A cave-like opening, somewhat obscured by 
+vegetation, is noticeable at the end of a treacherous path¬ 
+way which leads up to the craggy outcropping of black 
+rock. By sweeping aside some of the vines and branches, the 
+opening becomes easily accessible to human-size explorers. 
+
+
+The opening leads straight into the rock formation, with a 10' 
+wide corridor leading the way to a large wooden door. The 
+door opens freely, and close examination will reveal that bits 
+of wood have been chipped away from the edge, indicat¬ 
+ing that it has previously been forced (this fact will certainly 
+be known if adventurers indicate they are examining the 
+door; otherwise, there will be a 10% chance per adventurer, 
+
+=== line 2287 ===
+cial additional check for wandering monsters being attract¬ 
+ed to the ruckus, and even if a monster appears, the affect¬ 
+ed characters will be unable to oppose it until the gas effects 
+wear off (if a monster does come, roll a 4-sided die to see 
+how many melee rounds it appears after the laughing starts). 
+Characters under the influence of the gas will not respond to 
+any efforts by others to snap them out of its effects (even slap¬ 
+ping the face will do no more than cause more laughing), al¬ 
+though if a dispel magic spell is thrown, it will make them 
+sober immediately. Otherwise, the only way to stop the 
+laughter is to wait for the effects to wear off. 
+
+
+11 
+
+
+
+
+
+
+
+Several pine logs are piled underneath one of the tables, 
+and if these are moved, a shiny "gold" ring will be found. Al¬ 
+though it appears brilliant and seems to be worth up to 100 
+g.p., it is actually worthless. It has no special magical proper¬ 
+ties. 
+
+Along the west wall is a large wooden rack, apparently from 
+some kind of torture chamber, since it is obviously sized for 
+human bodies. A trickle of dried blood stains the oaken con¬ 
+struction on the front. 
+
+On the south wall is a stretched leather skin with magical writ¬ 
+ings which will be undecipherable unless a read magic spell 
+is cast. The legend, if interpreted, will read: "What mysterious 
+happenings have their birth here? Only the greatest feats of 
+wizardry, for which every element of earth, water and sky is 
+but a tool!" The skin is old and extremely fragile, and any at¬ 
+tempts to remove it will cause irreparable harm and render it 
+useless because of the skin crumbling away. 
+
+A sunken fire pit, blackened and cold, is noticeable as the 
+centerpiece of the room. The pit is only 2' deep, although it 
+appears slightly less than that due to several inches of ashes 
+resting within it. An iron bracing and bar across the 4' wide 
+
+=== line 2687 ===
+and this may attract wandering monsters at the Dungeon 
+Master's discretion beyond normal chances. Additionally, 
+each saw has 20% of its blade breaking in any 6 hour period 
+—and there are no extra blades. 
+
+If all attempts to escape fail, the persons trapped will be 
+doomed to their fate. 
+
+Monster: 
+
+Treasure & Location: 
+
+
+14. AUXILIARY STOREROOM. This extra storeroom is empty of 
+goods and supplies. In one corner is a pile of rock rubble. 
+
+Monster: 
+
+Treasure & Location: 
+
+15. & 16. TELEPORTATION ROOMS. A strong magic causing 
+teleportation has been permanently placed upon these two 
+
+
+13 
+
+
+
+
+rooms of equal size and shape. This is a trick to fool and con¬ 
+fuse unwary adventurers and is designed to upset their direc¬ 
+tional sense. 
+
+Both rooms function in the same manner once their doors are 
+opened. In each room, at the corner farthest from the door, is 
+a shiny, sparkling outcropping of crystalline rock which will 
+dazzle when light is reflected off of it; in both rooms the out¬ 
+croppings are identical. Once adventurers enter the room to 
+investigate this, the entire party is instantly teleported to 
+identical locations at the other room—whether they be in the 
+room itself or nearby in the hallway. This teleportation occurs 
+without the adventurer noticing that it has occurred; that is, 
+they have no way of "feeling" that anything unusual has 
+happened. And of course, this means that, although they are 
+in a different location facing in different directions, the ad¬ 
+
+=== line 3499 ===
+for wandering monsters must be made if this occurs). The 
+contents of the drawer are determined by rolling a single 
+twelve-sided die (only one roll is taken, for there is but a single 
+item within): 1 Potion of levitation; 2 Elven boots; 3 10-100 
+g.p.; 4 A 50 g.p. gem (moonstone); 5 a golden medallion 
+worth 20 g.p.; 6 Read languages scroll; 7 Web scroll; 8 
+Cursed scroll (permanently removes 1 point from charisma 
+rating of first person to read it— remove curse (see D&D Ex¬ 
+pert rules) will not counteract it); 9 Ring of protection +1; 10 
+Potion of healing (two doses); 11 A dagger +1 with ornately 
+carved handle; 12 Nothing. 
+
+Monster: 
+
+Treasure & Location: 
+
+33. BARRACKS. This large, open room is the dwelling place 
+for the guards and men-at-arms of the stronghold (most of 
+whom left on the last adventure with Rogahn and Zelligar). 
+Scattered throughout the room are about 40 common beds, 
+and about half that numbr of chairs and stools. There are 
+several large wooden tables along various walls, and at the 
+south wall is a large wooden chest of drawers which is empty 
+except for a few old socks, some common footwear, a few 
+cloth vestments, and other similar items of no special value. 
+
+In the southwest corner of the room the floor slants toward the 
+wall steeply and an opening (too small to give any access) 
+leads into the wall. From the faint smell, it is apparent that this 
+is some kind of crude toilet area. 
+
+The walls of the room are rough stone, but there are wall 
+sconces designed to hold torches, and various pegs upon 
+the wall. There are some odds and ends hanging from sev¬ 
+eral of the pegs: an old battered shield, an empty canteen, 
+a 20' section of light chain, a sheathed sword (old and rusty), 
+and a bearskin. 
+
+Monster: 
+
+Treasure & Location: 
+
+34. ARMORY. This irregularly-shaped room is designed to 
+house the arms supply of the stronghold. It is mostly empty 
+now, however, since many of the arms were taken along on 
+
+=== line 3722 ===
+WANDERING MONSTERS 
+
+Check every second turn; 1 in 6 (roll a 6-sided die). If a mon¬ 
+ster is indicated, roll a six-sided die again and compare to 
+the list below to determine what type of monster appears. 
+Then check for surprise. The abbreviations which follow are 
+the same as used and explained in the section entitled MON¬ 
+STER LIST. 
+
+1. Troglodytes (1-4)-AC 5, HD 2*, hp 9,8,5,4, #AT 3, D 
+1-4/1-4/1-4, MV 120' (40'), Save F2, ML 9 
+
+2. CrabSpider(1)-AC7, HD2*, hp 12,#AT 1, D1-8 +poison, 
+MV 120'(40'), Save FI, ML7 
+
+3. Kobolds (2-7)-AC7, HD V 2 , hp4,4,3,3,2,2,1,#AT1,D1-4or 
+weapon -1, MV 90' (30'), Save NM, ML 6 
+
+4. Ores (1-8)-AC 6, HD 1, hp 6,5,5,4,4,3,3,2, #AT 1, D 1-6 or 
+by weapon, MV 90' (30'), Save FI, ML 8 
+
+5. Zombies (1-2)-AC 8, HD 2, hp8,7,#AT 1, D 1-8 or by wea¬ 
+pon, MV 90' (30'), Save FI, ML 12 
+
+6. Goblins (2-7)-AC 6, HD 1 -1, hp 5,5,4,4,3,2,1, #AT 1, D 1 -6 
+or by weapon, MV 90' (30'), Save NM, ML 7 
+
+ENCOUNTER AREAS 
+
+38. ACCESS ROOM. This room is filled with piles of rock and 
+rubble, as well as mining equipment: rock carts, mining 
+jacks, timbers, pickaxes, etc. It is apparent that there has 
+been no mining activity for quite some time. 
+
+Monster: 
+
+Treasure & Location: 
+
+39. MUSEUM. This room is an unfinished museum, a special 
+monument to the achievements of the stronghold's most illus¬ 
+trious inhabitants. 
+
+The west wall is a sectioned fresco showing various events 
+and deeds from the life of Rogahn, and the several views 
+pictured are: a young boy raising a sword, a young man 
+
+=== line 4073 ===
+cial roll for wandering monsters. 
+
+A sort of fluffy and dusty guano covers the floor of the grand 
+cavern, quite different from the droppings of most other 
+species of bats. 
+
+
+The bats will return and leave at sunset each day until return¬ 
+ing as a swarm at the following dawn. 
+
+Monster: 
+
+Treasure & Location: 
+
+54. TREASURE CAVE. This secret room, itself opening to a 
+corridor shielded by secret doors on either end, was de¬ 
+signed as the hiding place for the valuables in the strong¬ 
+hold. There is a scattering of gold pieces (11 -30; roll a twenty¬ 
+sided die and add 10) on the floor of the room, and three 
+locked chests (which are empty unless noted below). 
+
+Two short human statues (appearing lifelike, as if made from 
+wax) are within the room. As soon as any item of value is 
+touched or disturbed, both will immediately spring to life and 
+draw their swords and attack the party. These are magical 
+berserkers (4 Hit Points each, Armor Class 7) who will fight to 
+the death. Neither has any treasure on his person. 
+
+Monster: 
+
+Treasure & Location: 
+
+35. EXIT CAVE. This large cavern is otherwise unremarkable, 
+except for the fact that a secret one-way passage out of the 
+stronghold is hidden in the northeast corner of the cave. This 
+secret exit is triggered by pushing on a loose rock within the 
+wall, at which time the opening occurs in the wall, leading to 
+the outside world. The opening allows access for only 10 sec¬ 
+onds, at which time it closes once more, and will not be trig¬ 
+gered for another 24 hours. 
+
+If characters take advantage of this exit, they will find them¬ 
+selves on a rock ledge about 3 feet wide and 20 feet long. If 
+they use ropes to scale down, they can rappel without too 
+much difficulty to a location some 40 feet below where the 
+
+=== line 4276 ===
+or as "wandering monsters." The latter encounters are more 
+irregular, uncertain, and unpredictable as adventurers hap¬ 
+pen to meet the monsters on a random basis while exploring. 
+
+The monster list below is keyed by number for easy reference, 
+and shows the monsters which will be shown on the game 
+map as being in their "lair." The wandering monster lists ap¬ 
+pear within the descriptive copy of the module and are 
+given prior to the information on each of the two levels of the 
+dungeon—one being for the upper level, and the other for 
+the lower level. 
+
+Monsters are shown on the list with pertinent details given 
+(consult the descriptions within the D&D game booklet for fur¬ 
+ther information on each type), thus allowing them to be em¬ 
+ployed by the DM when encountered without additional 
+dice rolling (except for the initial roll to determine number 
+appearing). Important: although there are 25 listings, the 
+Dungeon Master should use only 16 to 20 of them In the 
+dungeon, placing some on each of the two levels In the 
+rooms and chambers desired. The remainder are unused. 
+
+The following are brief explanations of the abbreviations 
+used in the monster lists. Name —an asterisk (*) after a name 
+indicates that a special weapon or attack form is needed to 
+hit this monster, (#)—number appearing, this type of die 
+
+
+24 
+
+
+
+should be rolled to determine the number of monsters, AC— 
+armor class, HD —hit dice, an asterisk (*) after hit dice means 
+that the special abilities bonus should be added when cal¬ 
+culating experience, hp —hit points, the number of hit points 
+that each monster has, #AT —number of attacks, D —dam¬ 
+age done by each attack given in ranges of hit points, MV— 
+move of the monster in feet per turn (and feet per round). 
+Save —the class and level at which the monster makes it sav¬ 
+ing throws, D = dwarf, F - fighter, NM = normal man, T = 
+thief, ML —morale (optional, see page B27 of the D&D Basic 
+rulebook). 
+
+
+
+=== line 4282 ===
+map as being in their "lair." The wandering monster lists ap¬ 
+pear within the descriptive copy of the module and are 
+given prior to the information on each of the two levels of the 
+dungeon—one being for the upper level, and the other for 
+the lower level. 
+
+Monsters are shown on the list with pertinent details given 
+(consult the descriptions within the D&D game booklet for fur¬ 
+ther information on each type), thus allowing them to be em¬ 
+ployed by the DM when encountered without additional 
+dice rolling (except for the initial roll to determine number 
+appearing). Important: although there are 25 listings, the 
+Dungeon Master should use only 16 to 20 of them In the 
+dungeon, placing some on each of the two levels In the 
+rooms and chambers desired. The remainder are unused. 
+
+The following are brief explanations of the abbreviations 
+used in the monster lists. Name —an asterisk (*) after a name 
+indicates that a special weapon or attack form is needed to 
+hit this monster, (#)—number appearing, this type of die 
+
+
+24 
+
+
+
+should be rolled to determine the number of monsters, AC— 
+armor class, HD —hit dice, an asterisk (*) after hit dice means 
+that the special abilities bonus should be added when cal¬ 
+culating experience, hp —hit points, the number of hit points 
+that each monster has, #AT —number of attacks, D —dam¬ 
+age done by each attack given in ranges of hit points, MV— 
+move of the monster in feet per turn (and feet per round). 
+Save —the class and level at which the monster makes it sav¬ 
+ing throws, D = dwarf, F - fighter, NM = normal man, T = 
+thief, ML —morale (optional, see page B27 of the D&D Basic 
+rulebook). 
+
+
+MONSTERS 
+
+1. Ores (1 -4)-AC 6, HD 1, hp5,4,3,2,#AT 1, D 1 -6 or by wea¬ 
+pon, MV 90' (30'), Save FI, ML 8 
+
+2. Troglodytes (1-2)-AC 5, HD 2*, hp 7,3, #AT 3, D 1-4/1-4/ 
+
+=== line 5898 ===
+your share of wandering monsters without accomplishing 
+anything. As you gain playing experience you will learn the 
+proper pace, but rely on your DM for guidance. 
+
+5) Avoid arguing. While disagreements about a course of 
+action will certainly arise from time to time, players should 
+quickly discuss their options and reach a consensus in order 
+to proceed. Bickering in the dungeon will only create noise 
+which may well attract wandering monsters. Above all, re¬ 
+member that this is just a game and a little consideration will 
+go far toward avoiding any hard feelings . . . 
+
+6) Be on your guard. Don't be overly cautious, but be ad¬ 
+vised that some non-player characters may try to hoodwink 
+you, players may doublecross you, and while adventuring, 
+tricks and traps await the unwary. Of course, you won't avoid 
+every such pitfall (dealing with tne uncertainties is part of the 
+fun and challenge of the game), but don't be surprised if 
+everything is not always as It seems. 
+
+7) Treat any retainers or NPCs fairly. If you reward them gen¬ 
+erously and do not expose them to great risks of life and limb 
+that your own character would not face, then you can ex¬ 
+pect a continuing loyalty (although there may be excep¬ 
+tions, of course). 
+
+8) Know your limits. Your party may not be a match for every 
+monster you encounter, and occasionally it pays to know 
+when ana how to run away form danger. Likewise, a dun¬ 
+geon adventure may have to be cut short if your party suffers 
+great adversity and/or depleted strength. Many times it will 
+take more than one adventure to accomplish certain goals, 
+and it will thus be necessary to come back out of a dungeon 
+to heal wounds, restore magical abilities and spells, and re¬ 
+inforce a party's strength. 
+
+9) Use your head. Many of the characters' goals in the game 
+can be accomplished through the strength of arms or mag¬ 
+ic. Others, however, demand common sense and shrewd 
+judgment as well as logical deduction. The most successful 
+players are those who can effectively use both aspects of the 
+game to advantage. 
+
+10) The fun of a D&D game comes in playing your charac¬ 
+ter's role. Take on your character's persona and immerse 
+
+=== line 5906 ===
+which may well attract wandering monsters. Above all, re¬ 
+member that this is just a game and a little consideration will 
+go far toward avoiding any hard feelings . . . 
+
+6) Be on your guard. Don't be overly cautious, but be ad¬ 
+vised that some non-player characters may try to hoodwink 
+you, players may doublecross you, and while adventuring, 
+tricks and traps await the unwary. Of course, you won't avoid 
+every such pitfall (dealing with tne uncertainties is part of the 
+fun and challenge of the game), but don't be surprised if 
+everything is not always as It seems. 
+
+7) Treat any retainers or NPCs fairly. If you reward them gen¬ 
+erously and do not expose them to great risks of life and limb 
+that your own character would not face, then you can ex¬ 
+pect a continuing loyalty (although there may be excep¬ 
+tions, of course). 
+
+8) Know your limits. Your party may not be a match for every 
+monster you encounter, and occasionally it pays to know 
+when ana how to run away form danger. Likewise, a dun¬ 
+geon adventure may have to be cut short if your party suffers 
+great adversity and/or depleted strength. Many times it will 
+take more than one adventure to accomplish certain goals, 
+and it will thus be necessary to come back out of a dungeon 
+to heal wounds, restore magical abilities and spells, and re¬ 
+inforce a party's strength. 
+
+9) Use your head. Many of the characters' goals in the game 
+can be accomplished through the strength of arms or mag¬ 
+ic. Others, however, demand common sense and shrewd 
+judgment as well as logical deduction. The most successful 
+players are those who can effectively use both aspects of the 
+game to advantage. 
+
+10) The fun of a D&D game comes in playing your charac¬ 
+ter's role. Take on your character's persona and immerse 
+yourself in the game setting, enjoying the fantasy element 
+and the interaction with your fellow players and the Dungeon 
+Master. 
+
+
+2) Always keep in mind that the Dungeon Master is the Enjoy yourself, and good luck, 
+moderator of the game, and as such, deserves the con¬ 
+tinued cooperation, consideration and respect of all the 

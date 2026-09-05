@@ -1,0 +1,257 @@
+#!/usr/bin/env python3
+"""Where the party is, and the only legal way to move it.
+
+    python tools/party.py where
+    python tools/party.py move --to 20,7 --why "north to the three-way"
+    python tools/party.py move --to 20,7 --rate known
+    python tools/party.py place --at 16,1 --why "entered the dungeon"
+    python tools/party.py trail --last 10
+
+Why this exists
+---------------
+The party's position used to live only in the DM's prose, which meant nothing
+could check a move. On expedition 4, round 1111, the party was walked from
+(19,5) to (19,6) -- straight through a wall that the query output had printed
+on screen a moment earlier -- and given a corridor opening that does not exist.
+The player caught it by reading the printed map.
+
+`mapdb/dmap.py path` physically cannot route through a wall. It reproduced the
+correct route first try. The tool that cannot make the mistake existed; it just
+was not in the loop.
+
+So position is now DATA, in `campaign/party.tsv`, and `move` is the only thing
+that changes it. A move to an unreachable square RAISES rather than narrating.
+This converts "remember to check the map" into "cannot be got wrong".
+
+`place` exists for the start of an expedition and for teleports and falls --
+anything that legitimately puts the party somewhere without walking. It is
+deliberately a separate verb so that skipping the check is always explicit.
+"""
+import argparse
+import os
+import sys
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, os.path.join(
+    os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'mapdb'))
+from tsvlog import append, read_tsv, today                      # noqa: E402
+
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+LOG = os.path.join(ROOT, 'campaign', 'party.tsv')
+DB = os.path.join(ROOT, 'mapdb', 'output', 'b1', 'b1.sqlite')
+
+# Feet per turn for dmap's --rate, by how the party is moving.
+# rules/exploration.md, PHB p.102: exploring is the rate per TURN, a known route
+# is five times faster, fleeing and combat ten times.
+RATES = {'explore': 90, 'known': 450, 'flee': 900}
+
+
+def parse_cell(text):
+    f = [c.strip() for c in str(text).split(',')]
+    if len(f) != 2:
+        raise ValueError('cell must be "x,y", got %r' % text)
+    return int(f[0]), int(f[1])
+
+
+def history(path=None, map_name=None):
+    rows = read_tsv(path or LOG, missing_ok=True)
+    if map_name:
+        rows = [r for r in rows
+                if (r.get('map') or '').lower() == map_name.lower()]
+    return rows
+
+
+def where(path=None, map_name='b1'):
+    """(x, y, level, the row it came from) or None if never placed."""
+    rows = history(path, map_name)
+    if not rows:
+        return None
+    last = rows[-1]
+    return (int(last['x']), int(last['y']), int(last['level'] or 1), last)
+
+
+def route(db, level, a, b):
+    """The walkable path from a to b, or None. Never crosses a wall."""
+    import dmap
+    return dmap.find_path(db, level, a, b)
+
+
+def move(to, why='', rate='explore', db=None, path=None, map_name='b1',
+         exped='', turn='', max_squares=None):
+    """Move the party. Raises ValueError if the route does not exist.
+
+    This is the whole point of the module: an illegal move is an exception,
+    not a sentence of narration.
+    """
+    db = db or DB
+    cur = where(path, map_name)
+    if cur is None:
+        raise ValueError('the party has never been placed; use `place` first')
+    x, y, level, _ = cur
+    dest = parse_cell(to)
+    if dest == (x, y):
+        raise ValueError('the party is already at %d,%d' % dest)
+    cells, _ = _load(db, level)
+    if dest not in cells:
+        raise ValueError('(%d,%d) is not a square on level %d of %s'
+                         % (dest[0], dest[1], level, os.path.basename(db)))
+    steps, crossed = route(db, level, (x, y), dest)
+    if not steps:
+        raise ValueError(
+            'NO WALKABLE ROUTE from (%d,%d) to (%d,%d) on level %d.\n'
+            '    The party cannot get there. Check the map before narrating:\n'
+            '        python mapdb/dmap.py at %s %d %d\n'
+            '    If they should be able to, the MAP is wrong -- fix it in the '
+            'corrections file, do not move them anyway.'
+            % (x, y, dest[0], dest[1], level, db, dest[0], dest[1]))
+    # A route far longer than the straight line means the destination is NOT
+    # where the caller thinks it is. This is the check that actually catches
+    # the round-1111 error: (19,5) to (19,6) looks like one square north, and
+    # the map routes it 28 squares the long way round. Refusing impossible
+    # destinations was never enough -- the bad move was possible, just not the
+    # way it was imagined.
+    straight = abs(dest[0] - x) + abs(dest[1] - y)
+    walked = len(steps) - 1
+    # max(2, ...) not max(3, ...): a one-square straight line that costs three
+    # squares of walking IS the failure being hunted. The floor of 2 still
+    # allows an ordinary step round a corner without complaint.
+    detour = walked > max(2, straight * 2)
+    if detour and max_squares is None:
+        raise ValueError(
+            'DETOUR: (%d,%d) to (%d,%d) is %d square(s) apart in a straight '
+            'line but the only route is %d squares, %d feet.\n'
+            '    The destination is NOT adjacent the way it looks -- there is '
+            'something between them.\n'
+            '    Route: %s\n'
+            '    If the long way round is what you meant, pass --max-squares %d '
+            'to confirm it.'
+            % (x, y, dest[0], dest[1], straight, walked, walked * 10,
+               ' '.join('%d,%d' % s for s in steps), walked))
+    if max_squares is not None and walked > max_squares:
+        raise ValueError(
+            'route is %d squares, longer than the %d you expected. '
+            'The destination is not where you think.\n    Route: %s'
+            % (walked, max_squares, ' '.join('%d,%d' % s for s in steps)))
+    feet = walked * 10
+    append(path or LOG, dict(
+        when=today(), map=map_name, level=level, x=dest[0], y=dest[1],
+        exped=exped, turn=turn, squares=len(steps) - 1, feet=feet,
+        rate=rate, why=why,
+        route=' '.join('%d,%d' % s for s in steps)))
+    return steps, crossed, feet
+
+
+def _load(db, level):
+    import dmap
+    return dmap.load(db, level)
+
+
+def place(at, why='', level=1, path=None, map_name='b1', exped='', turn=''):
+    """Put the party somewhere without walking there.
+
+    For the start of an expedition, a teleport, or a fall. Separate from `move`
+    on purpose: skipping the reachability check should always be a deliberate,
+    visible act.
+    """
+    dest = parse_cell(at)
+    append(path or LOG, dict(
+        when=today(), map=map_name, level=level, x=dest[0], y=dest[1],
+        exped=exped, turn=turn, squares='', feet='', rate='PLACED', why=why,
+        route=''))
+    return dest
+
+
+def build_parser():
+    p = argparse.ArgumentParser(
+        prog='party.py',
+        description='Where the party is. Moves are validated against the map.',
+        epilog='An illegal move raises. That is the point.')
+    p.add_argument('--log-file', default=LOG)
+    p.add_argument('--db', default=DB)
+    p.add_argument('--map', default='b1')
+    sub = p.add_subparsers(dest='cmd', required=True)
+
+    sub.add_parser('where', help='current square, and what is around it')
+
+    mv = sub.add_parser('move', help='move the party along a real route')
+    mv.add_argument('--to', required=True, metavar='X,Y')
+    mv.add_argument('--rate', default='explore', choices=sorted(RATES),
+                    help='explore = mapping; known = a route already walked; '
+                         'flee = fleeing or in combat')
+    mv.add_argument('--why', default='')
+    mv.add_argument('--max-squares', type=int, default=None,
+                    help='how many squares you EXPECT the route to be. A '
+                         'longer one is refused. Also confirms a deliberate '
+                         'detour, which is otherwise refused automatically.')
+    mv.add_argument('--exped', default='')
+    mv.add_argument('--turn', default='')
+
+    pl = sub.add_parser('place', help='put the party somewhere WITHOUT walking')
+    pl.add_argument('--at', required=True, metavar='X,Y')
+    pl.add_argument('--level', type=int, default=1)
+    pl.add_argument('--why', required=True,
+                    help='say why the check is being skipped')
+    pl.add_argument('--exped', default='')
+    pl.add_argument('--turn', default='')
+
+    tr = sub.add_parser('trail', help='where the party has been')
+    tr.add_argument('--last', type=int, default=10)
+    return p
+
+
+def main(argv=None):
+    a = build_parser().parse_args(argv)
+
+    if a.cmd == 'where':
+        cur = where(a.log_file, a.map)
+        if cur is None:
+            print('the party has not been placed on map %r' % a.map)
+            return 1
+        x, y, level, row = cur
+        print('party at (%d,%d) on %s level %d' % (x, y, a.map, level))
+        if row.get('why'):
+            print('  last move: %s' % row['why'])
+        import dmap
+        print()
+        print('\n'.join(dmap.describe(a.db, level, (x, y))))
+        return 0
+
+    if a.cmd == 'move':
+        try:
+            steps, crossed, feet = move(a.to, a.why, a.rate, a.db,
+                                        a.log_file, a.map, a.exped, a.turn,
+                                        a.max_squares)
+        except ValueError as e:
+            print('REFUSED: %s' % e)
+            return 1
+        print('party -> (%d,%d)   %d squares, %d feet'
+              % (steps[-1][0], steps[-1][1], len(steps) - 1, feet))
+        rate = RATES[a.rate]
+        rounds = max(1, int(round(feet / rate * 10)))
+        print('  %s rate, %d ft/turn -> about %d round(s)'
+              % (a.rate, rate, rounds))
+        if crossed:
+            # dmap returns (kind, (x, y, orient)) tuples, not strings.
+            print('  crosses: %s' % ', '.join(
+                '%s at (%d,%d,%s)' % (k, e[0], e[1], e[2]) for k, e in crossed))
+        print('  route: %s' % ' '.join('%d,%d' % s for s in steps))
+        return 0
+
+    if a.cmd == 'place':
+        dest = place(a.at, a.why, a.level, a.log_file, a.map, a.exped, a.turn)
+        print('party PLACED at (%d,%d) without a reachability check: %s'
+              % (dest[0], dest[1], a.why))
+        return 0
+
+    if a.cmd == 'trail':
+        for r in history(a.log_file, a.map)[-a.last:]:
+            print('%-11s exp%-3s turn %-5s (%3s,%3s) %-8s %s'
+                  % (r.get('when', ''), r.get('exped', ''), r.get('turn', ''),
+                     r.get('x', ''), r.get('y', ''), r.get('rate', ''),
+                     r.get('why', '')))
+        return 0
+    return 1
+
+
+if __name__ == '__main__':
+    sys.exit(main())

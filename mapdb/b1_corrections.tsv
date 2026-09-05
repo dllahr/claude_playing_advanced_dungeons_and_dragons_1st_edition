@@ -1,0 +1,549 @@
+# Human corrections to B1, Quasqueton upper level.
+# APPLIED LAST by build.py, so these always win over the classifier.
+# Format: what  x  y  orient  value  who  note      (see corrections.tsv)
+#
+# --- furniture drawn inside a room, read as structure -------------------------
+# Both of these were found by the room-size cross-check, not by reachability.
+# Note they fail differently: one fabricates a wall, the other a DOOR -- and a
+# fabricated door is still passable, so no connectivity check can see it.
+edge	2	21	V	open	dl	area 17: things drawn in the room, read as a wall (thick=10)
+edge	6	19	H	open	dl	area 18: things drawn in the NE corner, read as a door (hole=47)
+edge	5	20	V	open	dl	area 18: the same NE-corner furniture, now read as a door at boxr=0.50
+edge	25	8	H	open	dl	area 28: the drawn sacrifice pit ("a circular depression... 5ft across") read as a door
+#
+# --- area 9, WIZARD'S LABORATORY ------------------------------------------------
+# The room is x11-15, y26-28 (5x3 = 15 squares), matching the text's "50' by 30'".
+# It is densely furnished -- tables, shelving, containers, glassware -- and the
+# drawings produced SIX false doors and one false wall inside it, splitting the
+# room into a 3x3 fragment. Every one of these is interior furniture.
+edge	11	26	V	open	dl	area 9: furniture read as a door (hole=51)
+edge	11	28	V	open	dl	area 9: furniture read as a door (hole=111)
+edge	12	28	V	open	dl	area 9: furniture read as a door (hole=134)
+edge	11	26	H	open	dl	area 9: furniture read as a door (hole=86)
+edge	12	26	H	open	dl	area 9: furniture read as a wall (thick=6)
+edge	11	27	H	open	dl	area 9: furniture read as a door (hole=47)
+# The laboratory's secret entrance. Read as a plain wall (thick=14) with no glyph
+# at all -- the marker detector never proposed it, and reachability could not have
+# found it either because the room has a second, ordinary door.
+edge	14	28	H	secret	dl	area 9: secret door in the north wall of (14,28)
+#
+# --- area 25, ROGAHN'S CHAMBER (the party is standing here) ----------------------
+# An irregular lobed chamber, x31-34 y11-15. Three S markers on the sheet.
+edge	32	10	H	secret	dl	area 25: S marker on the south wall (read as wall, thick=17)
+edge	33	10	H	secret	dl	area 25: second S marker on the south wall (read as wall, thick=14)
+edge	31	12	H	secret	dl	area 25: S marker on the west diagonal stub (read as a plain door)
+edge	32	13	V	open	dl	area 25: furniture between two of its own squares, read as a door
+#
+# --- secret doors the module text names but never locates ------------------------
+# Confirmed against the sheet by the player, 2026-08-25. All three read as plain
+# walls at thickness 14-18 with NO glyph proposed by the detector, and none could
+# be corroborated by reachability because each room has another way in. This is
+# the class of fault that only the text sweep finds.
+edge	8	25	V	secret	dl	area 10 STOREROOM: east wall of (8,25) — "hidden by a secret door"
+edge	33	6	H	secret	dl	area 24 MISTRESS' CHAMBER: north wall of (33,6)
+edge	30	19	V	secret	dl	area 32 ADVISOR'S CHAMBER: its west wall — "access only via a secret door... to the Room of Pools (31)". The party found this one in play.
+#
+# --- alcove pair 2, the one-way secret door the party has actually used --------
+# Found while migrating play state into campaign/world_changes.tsv: the party
+# went through this boundary at the end of expedition 3 and the map database
+# did not have it. It reads as a plain wall (thick=15) though it carries a hole
+# of 15, and reachability could never have found it because both sides are
+# reachable by the ordinary route. Only the play record caught it.
+# The corridor east of it is the west dead end; the door is obvious from that
+# side and unnoticeable from the entrance-corridor face, hence one_way.
+edge	17	13	V	one_way	dl	area 1: one-way secret door, back of alcove pair 2; operable from the EAST (dead-end) side only
+#
+# --- area 27: furniture on the room's east side read as two doors -------------
+# Found in play 2026-08-25 while the party was approaching the room. Both edges
+# classified 'door' at thickness 13-14 with holes of 283 and 95; B1's real doors
+# measure thickness 4-11 with holes of 62-174, so these are far too heavy and
+# the 283 is nearly twice the largest genuine door on the level. The sheet draws
+# a large oval object here containing two smaller glyphs -- a drawn furnishing
+# sitting on the line, not an opening.
+# Neither could be caught by reachability (a fabricated door stays passable) nor
+# by the extent check (the room has another way in). Only the measurements and
+# the page render found them, which is the third time this class of error has
+# turned up in a furnished room.
+edge	31	8	V	open	dl	area 27: drawn furnishing on the east side read as a door (thick=13 hole=283)
+edge	31	9	V	open	dl	area 27: the same furnishing, second glyph read as a door (thick=14 hole=95)
+# The same drawn object, north and south arcs. Found 2026-08-26 when dmap.py
+# path reported the party "crossing a door" walking across open floor inside
+# area 27. THICKNESS 2 -- that is printed-ruling territory (B1 rulings measure
+# 0-3, walls 7-18), so these are not even wall segments, let alone doors. The
+# neighbouring boundaries without the drawing over them read thickness 1 'open'.
+# The oval was read as a door on ALL FOUR sides; the first pass caught only the
+# two on its west face.
+edge	32	9	H	open	dl	area 27: north arc of the drawn dais read as a door (thick=2 hole=95)
+edge	32	7	H	open	dl	area 27: south arc of the drawn dais read as a door (thick=2 hole=69)
+#
+# --- area 28: a fourth fabricated door, same signature -------------------------
+# Found in play 2026-08-27. Classified 'door' at THICKNESS 2 with a hole of 60.
+# Two is printed-ruling territory (B1 rulings 0-3, walls 7-18); the genuine door
+# ten feet away at (26,8,V) measures thickness 9. It also fails the architecture
+# test: it would be an internal door between two squares that BOTH already open
+# straight into the worship area, which is not a door, it is a doorway with a
+# line drawn across it.
+# Area 28 has now produced TWO false doors from its drawings -- this one and the
+# sacrifice pit at (25,8,H) -- which makes it the third furnished room in a row
+# to do so, after areas 9 and 27.
+edge	26	8	H	open	dl	area 28: printed ruling read as a door (thick=2 hole=60); an internal door between two squares both open to the same room
+# --- area 27, a fifth fabricated door, found by walking through it -------------
+# dmap.py path reported the party "crossing a door" between two squares that are
+# BOTH inside the throne room. Thickness 1 -- a printed grid ruling, not a wall.
+# That is the fifth of this session and the second caught by the path command
+# rather than by any classifier.
+edge	27	8	H	open	dl	area 27: printed ruling read as a door (thick=1 hole=54), between two squares of the same room
+#
+# --- area 25: the LOBED OUTLINE read as five doors ----------------------------
+# Player-corrected 2026-08-28. Rogahn's Chamber is a four-lobed clover and its
+# curving walls cross grid lines constantly; every crossing that enclosed white
+# fired the door test. The room's ONLY entrances are its three secret doors --
+# one mid-west, two in the south wall -- which the player reads directly off the
+# sheet and which the three S markers confirm.
+# (34,13) is a near-solid outcrop between two lobes: open=0.18 with rock on all
+# four sides. It cannot be a doorway to anywhere.
+# (31,13) is the square where the west corridor ends at a DIAGONAL wall carrying
+# the S marker; the corridor must reach the room through that secret door and
+# nowhere else, so its other two boundaries are wall.
+edge	31	12	V	wall	dl	area 25: lobe outline read as an opening; the west corridor reaches the room ONLY through the secret door at (31,12,H)
+edge	31	13	H	wall	dl	area 25: lobe outline read as a door (thick=10 hole=140)
+edge	33	13	V	wall	dl	area 25: lobe outline read as a door (thick=7 hole=136)
+edge	34	13	H	wall	dl	area 25: lobe outline round the (34,13) outcrop read as a door (thick=11 hole=136)
+edge	34	12	H	wall	dl	area 25: same outcrop, south side (thick=23 hole=145)
+edge	31	13	V	wall	dl	area 25: the west corridor reaches the room ONLY through the secret door at (31,12,H) — this was the edge I meant to correct and I indexed the wrong one
+edge	31	11	V	wall	dl	area 25: lobe outline on the north-west, read as an opening
+#
+# --- area 24: furniture read as walls, halving the room ------------------------
+# Player-corrected 2026-08-28. The MISTRESS' CHAMBER is 20 ft by 40 (x32-33,
+# y3-6). The extraction gave it 20 by 20 because the drawn bed against the west
+# wall was read as rock: (32,4) came out 'mixed' at open=0.64 with rock on its
+# north and west sides, which fabricated a wall on two boundaries and a door on
+# a third, and the 2x2 extent test then stopped at y=5.
+# NOTE: (32,6) is left as 'mixed' DELIBERATELY. That is the north-west corner,
+# and the module says the water basin there "is sculpted from the same rock
+# which forms the wall of the room... this protrusion is an integral part of the
+# wall itself." The classifier is RIGHT about that square — it really is part
+# rock. Good check on the method.
+cell	32	4	-	open	dl	area 24: the drawn walnut bed read as rock (open=0.64, sides=NW)
+edge	32	4	H	open	dl	area 24: bed read as a wall (thick=7 hole=27)
+edge	32	4	V	open	dl	area 24: same bed, read as a wall (thick=6 hole=0)
+edge	32	3	H	open	dl	area 24: furniture read as a door (thick=6 hole=41)
+#
+# --- area 24: furniture that is INDISTINGUISHABLE from a door -----------------
+# Player-corrected 2026-08-28, and this pair is the important one. The sheet has
+# exactly ONE door in area 24's south wall, on the east side, at (33,2,H). The
+# extraction also produced a door in the middle of the south wall and one in the
+# west wall. Both are the drawn nightstand/chest furniture beside the bed.
+# THESE TWO WOULD NOT HAVE BEEN CAUGHT BY THE THICKNESS FLAG. They measure 9 and
+# 10 with holes of 134 -- dead centre of the genuine 4-11 door band, and holes
+# in the normal 62-187 range. Nothing in the classifier's own output separates
+# them from a real door. Only the page render and the player's reading did.
+edge	32	2	H	wall	dl	area 24: drawn furniture read as a door in the south wall (thick=9 hole=134) — indistinguishable by measurement
+edge	31	3	V	wall	dl	area 24: drawn furniture read as a door in the west wall (thick=10 hole=134) — indistinguishable by measurement
+edge	29	2	H	wall	dl	south corridor: furniture drawn on the room side only, read as a door — see the one-sided test in lab_notebook.md
+#
+# --- area 23: the SIXTH furnished room to be mis-extracted ---------------------
+# 2026-08-28. STORAGE ROOM is 20 ft by 30 (x29-30, y3-5) on the sheet. The
+# extraction gave it TWO squares. It is a furniture store -- three oak tables, a
+# pile of chairs, fourteen stools stacked against the walls, a workbench with a
+# vise -- and essentially all of it read as structure: one interior wall, two
+# interior doors and a part-rock square, none of which exist.
+# Every one of these fails the one-sided test: the drawn objects sit inside the
+# room and never cross a wall band.
+cell	30	3	-	open	dl	area 23: stacked furniture read as rock (open=0.66, sides=SE)
+edge	29	5	V	open	dl	area 23: a drawn table read as an interior wall (thick=7 hole=12)
+edge	30	3	H	open	dl	area 23: furniture read as an interior door (thick=2 hole=80)
+edge	29	3	V	open	dl	area 23: furniture read as an interior door (thick=3 hole=80)
+edge	21	11	H	wall	claude	area 30 stair limb: the LANDING at the head of the stairs read as a door (hole=347 aspect=2.2 vs 95-187 for a real B1 door; wall=2 offset=0.23). Flagged by doorcheck. The limb is closed at its north end -- the stairway is reached only from area 30.
+edge	21	11	V	wall	claude	area 30 stair limb: east wall read as `stairs` because the tread ladder inside (21,11) put slots+hole on the boundary (thick=12 gap=0 slots=1). The 200 dpi render shows an unbroken bar at x=22 from y=10 to y=12. The limb is entered ONLY from area 30 via (21,9)->(21,10).
+edge	26	5	V	wall	claude	area 29: a small drawn furnishing against the INSIDE of the east wall read as a door (hole=69 vs 95-187 for a real B1 door; offset=0.22 cells off the bar). Flagged by doorcheck before the party saw it. The south corridor (27,4)-(27,6) has NO door in its west wall.
+edge	25	4	H	wall	claude	area 29 CAPTAIN'S CHAMBER: a drawn chest/bench against the INSIDE of the south wall read as `stairs` (thick=13 slots=1 hole=89, offset 0.15 off the bar). The south wall is an unbroken bar from x=23 to x=27 on the 200 dpi render.
+edge	26	4	H	wall	claude	area 29: more drawn furniture against the inside of the same south wall read as a door (hole=160 -- door-sized! -- but offset 0.22 cells off the bar). Only the one-sided test catches this one; hole and thickness both look like a genuine door.
+edge	26	5	H	open	claude	area 29 INTERIOR: a small furnishing read as a door in the middle of the room (thick=1.0, wall=1.0 -- a graph-paper ruling, no wall there at all).
+cell	26	5	-	open	claude	area 29 floor, read as `mixed` because furniture is drawn on it. The room is 30x20 (x24-26, y5-6); the label "29" straddles x=26 and (26,5)/(26,6) are inside the drawn outline.
+edge	25	13	H	wall	claude	area 31 ROOM OF POOLS: the circled letter "b" — a POOL MARKER printed just inside the room — read as a door (hole=62 vs 95-187 real; offset 0.21 off an unbroken bar). Same failure as the secret-door markers: the circle is drawn astride the wall, touches the rock mass and is never separated into the ink layer. The real door off this corridor is (28,13,H): hole 145, offset 0.11. Calibration: (27,12,H), physically walked through, is hole 174 offset 0.04.
+edge	22	22	H	wall	claude	a small drawn object in the SW corner of (22,23) read as a door. thick 9.0, gap 0.00 — the boundary is fully blocked — against gap 0.75 for the real door at (27,12,H). hole 66 vs 95-193 for genuine B1 doors, offset 0.16 off the bar.
+edge	21	23	V	wall	claude	the SAME glyph as (22,22,H): both report hole 66 because the object sits in the corner where the two boundary boxes overlap, so one piece of furniture was counted as two doors. thick 8.5, gap 0.00, offset 0.23.
+# --- area 34 ARMORY, documented from the printed map by the player 2026-08-29 ---
+# The room is a DIAGONAL chamber and its walls do not lie on grid lines.
+# NW side is solid rock cells (already correct). SE side is drawn THINNER
+# than a normal wall -- 2-5 px against the 6.0 threshold -- so it measured
+# open and the extent flooded into the Room of Pools. See lab_notebook.md.
+edge	26	23	H	wall	dl+claude	area 34 SE wall, drawn thin (thick 3.0 gap 0.62) so it fell under t-thick 6.0 and leaked. Player documented the room outline from the printed map.
+edge	27	24	H	wall	dl+claude	area 34 SE wall, drawn thin (thick 5.0 gap 0.20) so it fell under t-thick 6.0 and leaked. Player documented the room outline from the printed map.
+edge	27	25	V	wall	dl+claude	area 34 SE wall, drawn thin (thick 2.5 gap 0.60) so it fell under t-thick 6.0 and leaked. Player documented the room outline from the printed map.
+edge	28	25	H	wall	dl+claude	area 34 SE wall, drawn thin (thick 3.0 gap 0.55) so it fell under t-thick 6.0 and leaked. Player documented the room outline from the printed map.
+edge	29	27	V	wall	dl+claude	area 34 SE wall, drawn thin (thick 2.0 gap 0.65) so it fell under t-thick 6.0 and leaked. Player documented the room outline from the printed map.
+# The 31 squares of area 34, by hand -- extents.py cannot flood a diagonal.
+member	22	19	-	34	dl+claude	area 34 ARMORY, player-documented outline
+member	23	19	-	34	dl+claude	area 34 ARMORY, player-documented outline
+member	23	20	-	34	dl+claude	area 34 ARMORY, player-documented outline
+member	23	21	-	34	dl+claude	area 34 ARMORY, player-documented outline
+member	24	21	-	34	dl+claude	area 34 ARMORY, player-documented outline
+member	24	22	-	34	dl+claude	area 34 ARMORY, player-documented outline
+member	25	22	-	34	dl+claude	area 34 ARMORY, player-documented outline
+member	24	23	-	34	dl+claude	area 34 ARMORY, player-documented outline
+member	25	23	-	34	dl+claude	area 34 ARMORY, player-documented outline
+member	24	24	-	34	dl+claude	area 34 ARMORY, player-documented outline
+member	25	24	-	34	dl+claude	area 34 ARMORY, player-documented outline
+member	26	24	-	34	dl+claude	area 34 ARMORY, player-documented outline
+member	25	25	-	34	dl+claude	area 34 ARMORY, player-documented outline
+member	26	25	-	34	dl+claude	area 34 ARMORY, player-documented outline
+member	27	25	-	34	dl+claude	area 34 ARMORY, player-documented outline
+member	26	26	-	34	dl+claude	area 34 ARMORY, player-documented outline
+member	27	26	-	34	dl+claude	area 34 ARMORY, player-documented outline
+member	28	26	-	34	dl+claude	area 34 ARMORY, player-documented outline
+member	27	27	-	34	dl+claude	area 34 ARMORY, player-documented outline
+member	28	27	-	34	dl+claude	area 34 ARMORY, player-documented outline
+member	29	27	-	34	dl+claude	area 34 ARMORY, player-documented outline
+member	28	28	-	34	dl+claude	area 34 ARMORY, player-documented outline
+member	29	28	-	34	dl+claude	area 34 ARMORY, player-documented outline
+member	30	28	-	34	dl+claude	area 34 ARMORY, player-documented outline
+member	29	29	-	34	dl+claude	area 34 ARMORY, player-documented outline
+member	30	29	-	34	dl+claude	area 34 ARMORY, player-documented outline
+member	31	29	-	34	dl+claude	area 34 ARMORY, player-documented outline
+member	30	30	-	34	dl+claude	area 34 ARMORY, player-documented outline
+member	31	30	-	34	dl+claude	area 34 ARMORY, player-documented outline
+member	30	31	-	34	dl+claude	area 34 ARMORY, player-documented outline
+member	31	31	-	34	dl+claude	area 34 ARMORY, player-documented outline
+edge	29	30	V	wall	dl+claude	area 34: a THIRD door on the room boundary, which the player says does not exist — the room has exactly two exits. doorcheck agrees: offset 0.23 off the bar against 0.08 and 0.13 for the two genuine doors, hole 113 vs 139/133. Fabrication.
+feature	22	19	-	none	dl+claude	area 34 SW corner: the TWO LOCKED CHESTS the module puts here, drawn as parallel rectangles, tripped the stair detector at exactly threshold (slots=5 of 5). There are no stairs in area 34. Player documented this square as furniture.
+# --- area 33 BARRACKS, player-confirmed 2026-08-29: ONE door, NO stairways ---
+# 39 fabricated `door` edges and 15 fabricated `stairs` features, all drawn
+# from the module's forty BEDS. Ranks of bed frames are ranks of small
+# rectangles (a door glyph) and parallel bars (a stair tread). Room read off
+# the 200 dpi render as x32-34, y21-31 = 33 squares, 30ft x 110ft, which
+# matches "about 40 common beds". The printed `33` appears TWICE and b1_key
+# carries only one anchor.
+member	32	21	-	33	dl+claude	area 33 BARRACKS, 30x110
+feature	32	22	-	none	dl+claude	area 33: bed frames read as stair treads. Player confirms NO stairways in this room.
+member	32	22	-	33	dl+claude	area 33 BARRACKS, 30x110
+edge	32	22	V	open	dl+claude	area 33: fabricated door from a drawn bed; interior of the room
+edge	31	22	V	wall	dl+claude	area 33: fabricated door from a drawn bed; this is the room WALL — the only door is (31,31,V)
+edge	32	22	H	open	dl+claude	area 33: fabricated door from a drawn bed; interior of the room
+member	32	23	-	33	dl+claude	area 33 BARRACKS, 30x110
+edge	32	23	V	open	dl+claude	area 33: fabricated door from a drawn bed; interior of the room
+edge	31	23	V	wall	dl+claude	area 33: fabricated door from a drawn bed; this is the room WALL — the only door is (31,31,V)
+edge	32	23	H	open	dl+claude	area 33: fabricated door from a drawn bed; interior of the room
+feature	32	24	-	none	dl+claude	area 33: bed frames read as stair treads. Player confirms NO stairways in this room.
+member	32	24	-	33	dl+claude	area 33 BARRACKS, 30x110
+edge	32	24	V	open	dl+claude	area 33: fabricated door from a drawn bed; interior of the room
+edge	31	24	V	wall	dl+claude	area 33: fabricated door from a drawn bed; this is the room WALL — the only door is (31,31,V)
+edge	32	24	H	open	dl+claude	area 33: fabricated door from a drawn bed; interior of the room
+member	32	25	-	33	dl+claude	area 33 BARRACKS, 30x110
+edge	32	25	H	open	dl+claude	area 33: fabricated door from a drawn bed; interior of the room
+member	32	26	-	33	dl+claude	area 33 BARRACKS, 30x110
+edge	32	26	V	open	dl+claude	area 33: fabricated door from a drawn bed; interior of the room
+edge	31	26	V	wall	dl+claude	area 33: fabricated door from a drawn bed; this is the room WALL — the only door is (31,31,V)
+edge	32	26	H	open	dl+claude	area 33: fabricated door from a drawn bed; interior of the room
+member	32	27	-	33	dl+claude	area 33 BARRACKS, 30x110
+edge	32	27	H	open	dl+claude	area 33: fabricated door from a drawn bed; interior of the room
+member	32	28	-	33	dl+claude	area 33 BARRACKS, 30x110
+member	32	29	-	33	dl+claude	area 33 BARRACKS, 30x110
+feature	32	30	-	none	dl+claude	area 33: bed frames read as stair treads. Player confirms NO stairways in this room.
+member	32	30	-	33	dl+claude	area 33 BARRACKS, 30x110
+edge	32	30	H	open	dl+claude	area 33: fabricated door from a drawn bed; interior of the room
+member	32	31	-	33	dl+claude	area 33 BARRACKS, 30x110
+member	33	21	-	33	dl+claude	area 33 BARRACKS, 30x110
+edge	33	21	H	open	dl+claude	area 33: fabricated door from a drawn bed; interior of the room
+member	33	22	-	33	dl+claude	area 33 BARRACKS, 30x110
+feature	33	23	-	none	dl+claude	area 33: bed frames read as stair treads. Player confirms NO stairways in this room.
+member	33	23	-	33	dl+claude	area 33 BARRACKS, 30x110
+edge	33	23	V	open	dl+claude	area 33: fabricated door from a drawn bed; interior of the room
+edge	33	23	H	open	dl+claude	area 33: fabricated door from a drawn bed; interior of the room
+member	33	24	-	33	dl+claude	area 33 BARRACKS, 30x110
+edge	33	24	H	open	dl+claude	area 33: fabricated door from a drawn bed; interior of the room
+member	33	25	-	33	dl+claude	area 33 BARRACKS, 30x110
+member	33	26	-	33	dl+claude	area 33 BARRACKS, 30x110
+edge	33	26	V	open	dl+claude	area 33: fabricated door from a drawn bed; interior of the room
+edge	33	26	H	open	dl+claude	area 33: fabricated door from a drawn bed; interior of the room
+member	33	27	-	33	dl+claude	area 33 BARRACKS, 30x110
+edge	33	27	H	open	dl+claude	area 33: fabricated door from a drawn bed; interior of the room
+member	33	28	-	33	dl+claude	area 33 BARRACKS, 30x110
+member	33	29	-	33	dl+claude	area 33 BARRACKS, 30x110
+edge	33	29	V	open	dl+claude	area 33: fabricated door from a drawn bed; interior of the room
+edge	33	29	H	open	dl+claude	area 33: fabricated door from a drawn bed; interior of the room
+member	33	30	-	33	dl+claude	area 33 BARRACKS, 30x110
+member	33	31	-	33	dl+claude	area 33 BARRACKS, 30x110
+member	34	21	-	33	dl+claude	area 33 BARRACKS, 30x110
+edge	34	21	H	open	dl+claude	area 33: fabricated door from a drawn bed; interior of the room
+edge	34	20	H	wall	dl+claude	area 33: fabricated door from a drawn bed; this is the room WALL — the only door is (31,31,V)
+feature	34	22	-	none	dl+claude	area 33: bed frames read as stair treads. Player confirms NO stairways in this room.
+member	34	22	-	33	dl+claude	area 33 BARRACKS, 30x110
+feature	34	23	-	none	dl+claude	area 33: bed frames read as stair treads. Player confirms NO stairways in this room.
+member	34	23	-	33	dl+claude	area 33 BARRACKS, 30x110
+feature	34	24	-	none	dl+claude	area 33: bed frames read as stair treads. Player confirms NO stairways in this room.
+member	34	24	-	33	dl+claude	area 33 BARRACKS, 30x110
+edge	34	24	H	open	dl+claude	area 33: fabricated stairs from a drawn bed; interior of the room
+feature	34	25	-	none	dl+claude	area 33: bed frames read as stair treads. Player confirms NO stairways in this room.
+member	34	25	-	33	dl+claude	area 33 BARRACKS, 30x110
+edge	34	25	H	open	dl+claude	area 33: fabricated door from a drawn bed; interior of the room
+feature	34	26	-	none	dl+claude	area 33: bed frames read as stair treads. Player confirms NO stairways in this room.
+member	34	26	-	33	dl+claude	area 33 BARRACKS, 30x110
+feature	34	27	-	none	dl+claude	area 33: bed frames read as stair treads. Player confirms NO stairways in this room.
+member	34	27	-	33	dl+claude	area 33 BARRACKS, 30x110
+edge	34	27	H	open	dl+claude	area 33: fabricated door from a drawn bed; interior of the room
+feature	34	28	-	none	dl+claude	area 33: bed frames read as stair treads. Player confirms NO stairways in this room.
+member	34	28	-	33	dl+claude	area 33 BARRACKS, 30x110
+edge	34	28	H	open	dl+claude	area 33: fabricated door from a drawn bed; interior of the room
+feature	34	29	-	none	dl+claude	area 33: bed frames read as stair treads. Player confirms NO stairways in this room.
+member	34	29	-	33	dl+claude	area 33 BARRACKS, 30x110
+edge	34	29	H	open	dl+claude	area 33: fabricated door from a drawn bed; interior of the room
+feature	34	30	-	none	dl+claude	area 33: bed frames read as stair treads. Player confirms NO stairways in this room.
+member	34	30	-	33	dl+claude	area 33 BARRACKS, 30x110
+edge	34	30	H	open	dl+claude	area 33: fabricated door from a drawn bed; interior of the room
+feature	34	31	-	none	dl+claude	area 33: bed frames read as stair treads. Player confirms NO stairways in this room.
+member	34	31	-	33	dl+claude	area 33 BARRACKS, 30x110
+edge	34	31	H	wall	dl+claude	area 33: fabricated door from a drawn bed; this is the room WALL — the only door is (31,31,V)
+# extents.py put three squares on the FAR side of the barracks north wall.
+member	31	32	-	none	dl+claude	NOT area 33: the barracks north wall runs between y=31 and y=32 on the render. Over-assigned by extents.
+member	32	32	-	none	dl+claude	NOT area 33: the barracks north wall runs between y=31 and y=32 on the render. Over-assigned by extents.
+member	33	32	-	none	dl+claude	NOT area 33: the barracks north wall runs between y=31 and y=32 on the render. Over-assigned by extents.
+# --- area 33 BARRACKS, outline CONFIRMED by the player 2026-08-29 ---
+# x32-34, y20-31 = 36 squares, 30ft x 120ft. Southernmost row is y=20 (my
+# render read stopped a row short). North edge is y=31, the same max y as
+# area 34 which leads into it. EXACTLY ONE exit: the door at (31,31,V).
+member	32	20	-	33	dl+claude	area 33 BARRACKS, player-confirmed outline
+edge	31	20	V	wall	dl+claude	area 33 PERIMETER (was open); the room has ONE door and it is (31,31,V)
+edge	32	20	H	open	dl+claude	area 33 interior (was wall); the room has ONE door and it is (31,31,V)
+edge	32	19	H	wall	dl+claude	area 33 PERIMETER (was open); the room has ONE door and it is (31,31,V)
+member	32	21	-	33	dl+claude	area 33 BARRACKS, player-confirmed outline
+edge	31	21	V	wall	dl+claude	area 33 PERIMETER (was open); the room has ONE door and it is (31,31,V)
+edge	32	21	H	open	dl+claude	area 33 interior (was wall); the room has ONE door and it is (31,31,V)
+member	32	22	-	33	dl+claude	area 33 BARRACKS, player-confirmed outline
+member	32	23	-	33	dl+claude	area 33 BARRACKS, player-confirmed outline
+member	32	24	-	33	dl+claude	area 33 BARRACKS, player-confirmed outline
+member	32	25	-	33	dl+claude	area 33 BARRACKS, player-confirmed outline
+member	32	26	-	33	dl+claude	area 33 BARRACKS, player-confirmed outline
+member	32	27	-	33	dl+claude	area 33 BARRACKS, player-confirmed outline
+edge	32	27	V	open	dl+claude	area 33 interior (was wall); the room has ONE door and it is (31,31,V)
+member	32	28	-	33	dl+claude	area 33 BARRACKS, player-confirmed outline
+edge	32	28	V	open	dl+claude	area 33 interior (was wall); the room has ONE door and it is (31,31,V)
+edge	32	28	H	open	dl+claude	area 33 interior (was wall); the room has ONE door and it is (31,31,V)
+member	32	29	-	33	dl+claude	area 33 BARRACKS, player-confirmed outline
+cell	32	29	-	open	dl+claude	area 33 floor read as solid
+edge	32	29	V	open	dl+claude	area 33 interior (was wall); the room has ONE door and it is (31,31,V)
+edge	32	29	H	open	dl+claude	area 33 interior (was wall); the room has ONE door and it is (31,31,V)
+member	32	30	-	33	dl+claude	area 33 BARRACKS, player-confirmed outline
+member	32	31	-	33	dl+claude	area 33 BARRACKS, player-confirmed outline
+edge	32	31	H	wall	dl+claude	area 33 PERIMETER (was open); the room has ONE door and it is (31,31,V)
+member	33	20	-	33	dl+claude	area 33 BARRACKS, player-confirmed outline
+edge	33	20	V	open	dl+claude	area 33 interior (was wall); the room has ONE door and it is (31,31,V)
+edge	33	20	H	open	dl+claude	area 33 interior (was wall); the room has ONE door and it is (31,31,V)
+edge	33	19	H	wall	dl+claude	area 33 PERIMETER (was open); the room has ONE door and it is (31,31,V)
+member	33	21	-	33	dl+claude	area 33 BARRACKS, player-confirmed outline
+member	33	22	-	33	dl+claude	area 33 BARRACKS, player-confirmed outline
+edge	33	22	V	open	dl+claude	area 33 interior (was wall); the room has ONE door and it is (31,31,V)
+edge	33	22	H	open	dl+claude	area 33 interior (was wall); the room has ONE door and it is (31,31,V)
+member	33	23	-	33	dl+claude	area 33 BARRACKS, player-confirmed outline
+member	33	24	-	33	dl+claude	area 33 BARRACKS, player-confirmed outline
+edge	33	24	V	open	dl+claude	area 33 interior (was wall); the room has ONE door and it is (31,31,V)
+member	33	25	-	33	dl+claude	area 33 BARRACKS, player-confirmed outline
+member	33	26	-	33	dl+claude	area 33 BARRACKS, player-confirmed outline
+member	33	27	-	33	dl+claude	area 33 BARRACKS, player-confirmed outline
+member	33	28	-	33	dl+claude	area 33 BARRACKS, player-confirmed outline
+edge	33	28	H	open	dl+claude	area 33 interior (was wall); the room has ONE door and it is (31,31,V)
+member	33	29	-	33	dl+claude	area 33 BARRACKS, player-confirmed outline
+member	33	30	-	33	dl+claude	area 33 BARRACKS, player-confirmed outline
+member	33	31	-	33	dl+claude	area 33 BARRACKS, player-confirmed outline
+edge	33	31	H	wall	dl+claude	area 33 PERIMETER (was open); the room has ONE door and it is (31,31,V)
+member	34	20	-	33	dl+claude	area 33 BARRACKS, player-confirmed outline
+edge	34	20	H	open	dl+claude	area 33 interior (was wall); the room has ONE door and it is (31,31,V)
+edge	34	19	H	wall	dl+claude	area 33 PERIMETER (was open); the room has ONE door and it is (31,31,V)
+member	34	21	-	33	dl+claude	area 33 BARRACKS, player-confirmed outline
+member	34	22	-	33	dl+claude	area 33 BARRACKS, player-confirmed outline
+edge	34	22	H	open	dl+claude	area 33 interior (was wall); the room has ONE door and it is (31,31,V)
+member	34	23	-	33	dl+claude	area 33 BARRACKS, player-confirmed outline
+edge	34	23	H	open	dl+claude	area 33 interior (was wall); the room has ONE door and it is (31,31,V)
+member	34	24	-	33	dl+claude	area 33 BARRACKS, player-confirmed outline
+member	34	25	-	33	dl+claude	area 33 BARRACKS, player-confirmed outline
+member	34	26	-	33	dl+claude	area 33 BARRACKS, player-confirmed outline
+edge	34	26	H	open	dl+claude	area 33 interior (was wall); the room has ONE door and it is (31,31,V)
+member	34	27	-	33	dl+claude	area 33 BARRACKS, player-confirmed outline
+member	34	28	-	33	dl+claude	area 33 BARRACKS, player-confirmed outline
+member	34	29	-	33	dl+claude	area 33 BARRACKS, player-confirmed outline
+member	34	30	-	33	dl+claude	area 33 BARRACKS, player-confirmed outline
+member	34	31	-	33	dl+claude	area 33 BARRACKS, player-confirmed outline
+# --- area 5 WIZARD'S CHAMBER, outline documented by the player 2026-08-29 ---
+# Upper section 20 ft N-S by 90 ft E-W: x17-25, y27-28 (18 squares), NW corner
+# (17,28). Plus (21,26)(22,26)(23,26)(21,25) hanging below on the south side.
+# 22 squares. THREE doors, all on south sides: (21,24,H) the way the party came
+# in, (18,26,H), and (23,25,H).
+# The DB was missing the ENTIRE WEST HALF (x17-20) and (21,25), which is why
+# (20,28) read as a corridor junction and "doors" appeared at (20,27) -- those
+# are the drawn TABLE and PEWTER MUGS the module puts in this room.
+member	17	27	-	5	dl+claude	area 5, player-documented outline
+member	17	28	-	5	dl+claude	area 5, player-documented outline
+member	18	27	-	5	dl+claude	area 5, player-documented outline
+member	18	28	-	5	dl+claude	area 5, player-documented outline
+member	19	27	-	5	dl+claude	area 5, player-documented outline
+member	19	28	-	5	dl+claude	area 5, player-documented outline
+member	20	27	-	5	dl+claude	area 5, player-documented outline
+edge	20	27	V	open	dl+claude	area 5 interior (was door); the room has THREE doors, all on its south side
+edge	20	27	H	open	dl+claude	area 5 interior (was door); the room has THREE doors, all on its south side
+member	20	28	-	5	dl+claude	area 5, player-documented outline
+cell	20	28	-	open	dl+claude	area 5 floor read as mixed
+member	21	27	-	5	dl+claude	area 5, player-documented outline
+member	21	28	-	5	dl+claude	area 5, player-documented outline
+member	22	27	-	5	dl+claude	area 5, player-documented outline
+member	22	28	-	5	dl+claude	area 5, player-documented outline
+member	23	27	-	5	dl+claude	area 5, player-documented outline
+member	23	28	-	5	dl+claude	area 5, player-documented outline
+member	24	27	-	5	dl+claude	area 5, player-documented outline
+member	24	28	-	5	dl+claude	area 5, player-documented outline
+member	25	27	-	5	dl+claude	area 5, player-documented outline
+member	25	28	-	5	dl+claude	area 5, player-documented outline
+member	21	26	-	5	dl+claude	area 5, player-documented outline
+member	22	26	-	5	dl+claude	area 5, player-documented outline
+member	23	26	-	5	dl+claude	area 5, player-documented outline
+member	21	25	-	5	dl+claude	area 5, player-documented outline
+#
+# --- area 3, DINING ROOM -- found in live play 2026-09-03 --------------------
+# The player called it before any tool did: "there isn't a door at (18,19). There
+# is furniture in area 3 -- the door you have detected is probably the furniture
+# just on the north side of the wall in (18,20)." Confirmed off a 5x grid-
+# annotated page render. The module text says "a number of tables and chairs",
+# and the map draws TWO LONG TABLES with stools ranged around them, several of
+# them hard against the room's south wall.
+#
+# (18,19,H) measured thick=17 -- squarely in B1's WALL band (7-18) and nowhere
+# near its DOOR band (4-11). The classic signature, and the seventh fabricated
+# door found in this map. The wall runs unbroken; the stools sit wholly on the
+# room side, which is the one test that separates furniture from a door.
+edge	18	19	H	wall	dl+claude	area 3: stools/table drawn against the SOUTH wall, read as a door (thick=17, hole=44). No opening here at all.
+edge	18	20	H	open	dl+claude	area 3: interior grid line between the two tables, read as a door (thick=12, hole=75)
+edge	19	20	H	open	dl+claude	area 3: interior grid line, read as a door (thick=4, hole=74 -- 4 is the printed-ruling band)
+#
+# --- area 2, KITCHEN -- found in live play 2026-09-03, player again ----------
+# THE THICKNESS TEST DID NOT CATCH THIS ONE. (13,20,H) measured thick=9, which is
+# INSIDE B1's genuine door band (4-11), and confidence 9. What gave it away was
+# the player knowing area 2 is a furnished kitchen. At 10x zoom the wall between
+# rows 20 and 21 is thick, solid and unbroken across the full width, and a long
+# COUNTER is drawn hard against its south face inside the kitchen, leaving a thin
+# white gap above the furniture line. That gap is the "hole=200".
+#
+# LESSON: an in-band thickness does NOT clear a door that opens off a furnished
+# room. Furnished rooms in B1 so far: 2, 3, 9, 18, 24, 27, 28.
+edge	13	20	H	wall	dl+claude	area 2 KITCHEN: counter drawn against the north wall, read as a door (thick=9 IN BAND, hole=200). Wall is unbroken at 10x.
+edge	14	22	V	open	dl+claude	area 8 region: a table with a pot on it drawn ACROSS an interior boundary that has no wall (thick=1, the printed-ruling band). Interior, not a door.
+
+#
+# ============================================================================
+# LEVEL 1 DOOR AUDIT — applied 2026-09-03. 60 audit changes + 4 player calls.
+#
+# ROOT CAUSE, found during the audit and the reason for all of it:
+# THE B1 MAP SHEET PRINTS ITS OWN LEGEND and nobody had read it. It defines
+# DOOR (a box STRADDLING the wall, floor both sides), SECRET DOOR, ONE-WAY
+# SECRET DOOR, and -- decisively -- **FALSE DOOR** (a box on ONE side of an
+# unbroken wall), plus STAIRS UP/DOWN, STATUE and PITS, COVERED.
+# CHECKLIST section 10 already said "read the map's own legend before writing any
+# classifier". It was done for the DMG sample dungeon and never for B1.
+#
+# A FALSE DOOR is drawn exactly like furniture-against-a-wall, so "one-sided"
+# alone cannot separate them -- only the legend can.
+#
+# NEW OBJECTIVE TEST used throughout: a perpendicular INK PROFILE sampled at 19
+# points across the boundary at 200 dpi.
+#   genuine door -> wall value held, with TWO NARROW SPIKES flanking (the box edges)
+#   plain wall   -> flat
+#   furniture    -> flat but ELEVATED +3 to +8 over the same wall either side
+# This catches what thickness cannot: (13,20,H) measured thick=9, inside the
+# genuine 4-11 band, at confidence 9, and was still fabricated.
+#
+# NOT APPLIED, deliberately -- the five edges in the strip east of area 31:
+#   (30,23,V) (30,24,V) (31,25,H) (31,23,H) (31,24,H)
+# They were the only reason the audit's reachability went 6 -> 9. The player
+# identifies the cause as FURNITURE IN THE BARRACKS -- the same bed frames already
+# corrected above on 2026-08-29. That strip is already broken ((31,22) was
+# unreachable before this audit) and needs its own pass.
+# ============================================================================
+edge	10	4	V	wall	dl+claude	area 21: drawn furnishing against the INSIDE of the west wall read as a door (thick=10 hole=306). Bar unbroken 9-11 px the whole length; the flanking walls read 7-9.
+edge	10	7	V	wall	dl+claude	area 21: same west wall, second furnishing read as a door (thick=7 hole=182). Bar unbroken.
+edge	11	4	V	open	dl+claude	area 21 INTERIOR: furnishing drawn across a printed ruling (thick=6). No wall on this boundary.
+edge	12	4	H	open	dl+claude	area 21 INTERIOR: furnishing across a printed ruling (thick=4).
+edge	12	5	H	open	dl+claude	area 21 INTERIOR: furnishing across a printed ruling (thick=4).
+edge	11	7	V	open	dl+claude	area 21 INTERIOR: furnishing across a printed ruling (thick=12 measured on the drawing, not a wall).
+edge	12	8	H	open	dl+claude	area 21 INTERIOR (thick=6).
+edge	11	9	V	open	dl+claude	area 21 INTERIOR (thick=1 -- printed-ruling band).
+edge	12	9	H	open	dl+claude	area 21 INTERIOR (thick=4).
+edge	11	10	V	open	dl+claude	area 21 INTERIOR (thick=3 -- printed-ruling band).
+edge	12	10	H	wall	dl+claude	area 22: a drawn feature against the INSIDE of the south wall read as a door (thick=8 hole=83). Profile 18-19 px under the feature against 7-8 px on the same bar either side.
+edge	15	21	H	wall	dl+claude	area 8: drawn furnishing against the INSIDE of the south wall read as a door (thick=8 hole=154 -- BOTH in the genuine door band). Bar unbroken at 10x; only the render separates it.
+edge	11	25	H	wall	dl+claude	area 8: furnishing against the inside of the north wall read as a door (thick=22 hole=41). Profile median 23 px vs 8 px for the door beside it.
+edge	12	25	H	wall	dl+claude	area 8: the same run of furnishing (thick=12 hole=51). Profile 12 vs 8.
+edge	13	23	H	open	dl+claude	area 8 INTERIOR: a drawn furnishing across a printed ruling (thick=2 hole=356).
+edge	15	26	V	wall	dl+claude	area 9: furnishing against the INSIDE of the east wall read as a door (thick=9 hole=287). Bar unbroken y25-28.
+edge	15	27	V	wall	dl+claude	area 9: same east wall (thick=12 hole=309).
+edge	13	28	H	wall	dl+claude	area 9: furnishing against the INSIDE of the north wall read as a door (thick=9 hole=134 -- both in band). The bar runs unbroken to the S marker at (14,28,H).
+edge	24	14	V	open	dl+claude	area 31 INTERIOR: a printed circled floor-marker crossing a ruling read as a door (thick=6 hole=62).
+edge	23	15	H	open	dl+claude	area 31 INTERIOR: circled floor-marker over a ruling (thick=5 hole=82).
+edge	25	15	H	open	dl+claude	area 31 INTERIOR: circled floor-marker over a ruling (thick=5 hole=79).
+edge	25	19	H	open	dl+claude	area 31 INTERIOR: circled floor-marker over a ruling (thick=4 hole=99; doorcheck: no wall, 2.0 px).
+edge	24	20	V	open	dl+claude	area 31 INTERIOR: circled floor-marker over a ruling (thick=5 hole=84).
+edge	25	20	H	open	dl+claude	area 31 INTERIOR: circled floor-marker over a ruling (thick=4 hole=84).
+edge	29	20	V	open	dl+claude	area 31 INTERIOR: circled floor-marker over a ruling (thick=4 hole=216; doorcheck: no wall, 1.5 px).
+edge	27	23	H	open	dl+claude	area 31 INTERIOR: circled floor-marker over a ruling (thick=5 hole=102; doorcheck: no wall, 2.0 px).
+edge	29	26	V	open	dl+claude	area 31 INTERIOR: circled floor-marker over a ruling (thick=5 hole=139; doorcheck: no wall, 1.0 px).
+edge	32	19	V	open	dl+claude	area 32 INTERIOR: a drawn furnishing on a ruling read as a door (thick=5 hole=202; doorcheck: no wall, 4.0 px). Opening it gives area 32 the x31-33, y18-19 extent the drawn outline shows.
+edge	17	20	V	open	dl+claude	area 3 INTERIOR: a long drawn furnishing crossing a ruling read as a door (thick=14 measured on the drawing, hole=75).
+edge	18	20	V	open	dl+claude	area 3 INTERIOR: the same furnishing (thick=8 hole=145).
+edge	18	21	V	open	dl+claude	area 3 INTERIOR (thick=2; doorcheck: no wall, 3.0 px).
+edge	20	21	V	open	dl+claude	area 3 INTERIOR: drawn furnishings over a gap with no wall bar (thick=5 hole=107). Lower confidence -- see the uncertain list.
+edge	21	16	H	open	dl+claude	area 4 INTERIOR: drawn wall-fittings read as a door (thick=6 hole=43; doorcheck: no wall, 2.0 px). Area 4 runs y14-17, not y14-16.
+edge	8	21	H	open	dl+claude	area 10 INTERIOR: a stack of drawn objects, plus the room's own diagonal wall clipping the corner, read as a door (thick=18 hole=120). Both squares are area 10.
+edge	4	26	H	wall	dl+claude	area 11: the room's SW diagonal wall crossing the boundary read as a door (thick=24 hole=66). Profile median 31 px -- far above any door.
+edge	4	27	V	open	dl+claude	area 11 INTERIOR: drawn stores crossing an interior ruling (thick=7 hole=99). Profile dips to 2-3 px.
+edge	4	28	H	open	dl+claude	area 11 INTERIOR: the NW diagonal clips this boundary but the first fifth of it profiles at 2-3 px, i.e. open. Walling it would strand (4,29).
+edge	17	23	V	open	dl+claude	area 7 INTERIOR: the room widens here; the outline crossing the ruling read as a door (thick=2 hole=264).
+edge	9	33	H	open	dl+claude	area 12 INTERIOR: the drawn floor outline plus furnishings over a printed ruling (thick=17 measured on the drawing, hole=54).
+edge	9	33	V	open	dl+claude	area 12 INTERIOR (thick=5 hole=81).
+edge	10	33	H	open	dl+claude	area 12 INTERIOR (thick=2 hole=77).
+edge	10	33	V	open	dl+claude	area 12 INTERIOR (thick=2 hole=146).
+edge	11	33	H	open	dl+claude	area 12 INTERIOR (thick=6 hole=190).
+edge	17	31	H	wall	dl+claude	area 37: the drawn floor covering runs up to the INSIDE of the south wall and was read as a door (thick=10 hole=40). Profile flat 9-11 px; the genuine door at (20,31,H) profiles as a box (spikes at 20-22 flanking a 6-7 run).
+edge	19	31	H	wall	dl+claude	area 37: a drawn furnishing against the same wall (thick=12 hole=241). Profile flat 11-13 px.
+edge	16	32	V	open	dl+claude	area 37 INTERIOR: the floor covering's edge over a ruling (thick=5 hole=40).
+edge	18	32	V	open	dl+claude	area 37: interior boundary called `wall` at thick=6 (threshold); profile min 2 px. The room is x16-21, y32-33, matching the stated 20x20 floor covering inside it.
+edge	18	33	V	open	dl+claude	area 37: same, thick=6, profile min 3 px.
+edge	13	39	H	wall	dl+claude	area 13: furnishing against the INSIDE of the south wall read as a door (thick=7 hole=100). Profile 7 px bar with the drawing spiking to 27-36 at one end. The room's door is (13,40,V), on the east, which the text places there.
+edge	5	11	H	open	dl+claude	corridor: a drawn feature over a printed ruling (thick=3 hole=134).
+edge	4	14	H	open	dl+claude	cave channel: the channel itself read as a door (thick=2 hole=556).
+edge	6	35	V	open	dl+claude	curved corridor: floor crosses this boundary; no wall, no door box (thick=8 hole=241).
+edge	7	36	H	open	dl+claude	curved corridor, same (thick=12 hole=165).
+edge	9	35	V	open	dl+claude	corridor interior (thick=2 hole=254).
+edge	12	35	V	open	dl+claude	curved corridor: floor on both sides (thick=6 hole=331).
+edge	13	35	H	open	dl+claude	curved corridor: the passage crosses this boundary as a narrow channel (thick=18 hole=139).
+edge	29	31	H	false_door	dl+claude	the sheet draws the LEGEND's FALSE DOOR symbol here -- a box on ONE side of an unbroken bar, not a box straddling it. Profile median 15 px against 7 px for the bar below; the three false doors the text names measure the same way (+4 to +8 px over their own wall). The two squares below it carry the legend's covered-pit symbol.
+edge	29	30	H	open	dl+claude	the two covered-pit symbols' outlines crossing the interior ruling between them, read as a door (thick=10 hole=77).
+edge	32	17	H	open	dl	PLAYER-CONFIRMED: open corridor, not a door. Resolves the audit's uncertainty #1; the 83-square region stays reachable.
+edge	28	30	V	open	dl	PLAYER-CONFIRMED: not a door. The corridor from (27,30) runs east through here to (29,30). Resolves uncertainty #2.
+member	27	31	-	36	dl	PLAYER-CONFIRMED: area 36 includes this square
+member	28	31	-	36	dl	PLAYER-CONFIRMED: area 36 includes this square
+#
+# --- area 2 KITCHEN: the false STAIRS, player-confirmed 2026-09-03 -----------
+# "no stairs in this room." The module describes TWO COOKING PITS at the room's
+# south-west corner and a chimney -- no stairway anywhere in area 2.
+feature	11	20	-	none	dl+claude	area 2: false `stairs` feature. Player confirms no stairs in this room; the module gives two cooking pits and a chimney.
+edge	11	20	H	wall	dl+claude	area 2 north wall at x=11, read as stairs. Same wall verified solid at x=12-15 during the (13,20,H) correction.
+#
+# STILL OPEN, deliberately left alone: (11,19,H) is also classified `stairs` and is
+# also wrong, but whether it should be `wall` or `open` depends on whether (11,19)
+# lies INSIDE area 2 -- the pits sit at the room's south-west corner. Settle it off
+# a render in the feature audit; do not guess.
+#
+# --- area 36 UTILITY ROOM -- found in live play 2026-09-04, player again -----
+# (24,31,H) was classified `stairs` at THICK=20 -- above even B1's wall band
+# (7-18) and nowhere near its door band (4-11). Its two neighbours along the
+# same boundary measure 6 and 7 and are plain `wall`. The stairs GLYPH sits in
+# (24,32), on the far side, and the classifier stamped its name on the wall
+# beside it. Same failure as area 2's cooking pits.
+#
+# The player called it from the printed map: "they are not in the room, there is
+# a wall separating them from this room."
+#
+# CONSEQUENCE: area 36 has exactly ONE exit, the door at (24,29,H). Every other
+# boundary is wall, and there is no secret or concealed edge anywhere in
+# x20-31/y28-34. That matches the module, which calls the room "empty and
+# unused". A dead end.
+edge	24	31	H	wall	dl+claude	area 36 north wall, read as stairs from the glyph in (24,32) beyond it (thick=20 -- above the wall band entirely)
+

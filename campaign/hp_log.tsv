@@ -1,0 +1,64 @@
+# Hit points. APPEND ONLY — one row per wound, heal or rest.
+#
+# Current hp is COMPUTED from this file by `python tools/hp.py`. It is not
+# stored anywhere, for the same reason experience totals are not: the roster's
+# hp block has been two expeditions out of date more than once, and it was
+# quoted as fact both times.
+#
+# kind
+#   anchor   sets hp outright and supersedes every row above it. Use one at the
+#            start of an expedition, or whenever the log cannot be reconstructed
+#            further back.
+#   damage   a wound. `delta` is NEGATIVE.
+#   heal     a cure spell, a potion, bandaging.
+#   rest     natural healing, 1 hp per day of complete rest (DMG p.82).
+#
+# delta is applied to the running total; hp is capped at hp_max from
+# characters.tsv, and there is no floor — negative hp is meaningful in 1e and
+# the tools report it rather than clamping to 0.
+#
+when	exped	turn	who	kind	delta	reason
+2026-08-25	4	0	Dave	anchor	9	in town after expedition 3, full week of rest served
+2026-08-25	4	0	Torsat	anchor	6	in town after expedition 3
+2026-08-25	4	0	Tristle	anchor	3	in town after expedition 3
+2026-08-25	4	0	Blartho	anchor	2	in town after expedition 3
+2026-08-25	4	0	Yrtone	anchor	7	in town after expedition 3
+2026-08-25	4	0	Frython	anchor	2	in town after expedition 3
+2026-08-26	4	65	Torsat	damage	-6	troglodyte claw 2 + bite 4, simultaneous round as it died
+2026-08-26	4	66	Torsat	heal	2	Yrtone, cure light wounds, 1d8=2
+2026-08-26	4	68	Torsat	heal	4	Yrtone, second cure light wounds, 1d8=4 — her last one
+2026-08-28	4	397	Torsat	damage	-1	giant rat bite, round 397
+2026-08-28	4	398	Dave	damage	-1	giant rat bite, round 398
+2026-08-28	4	398	Torsat	damage	-1	giant rat bite, round 398
+2026-08-28	4	399	Dave	damage	-1	giant rat bite, round 399
+2026-08-28	4	399	Torsat	damage	-2	giant rat bite, round 399
+2026-08-28	4	401	Torsat	heal	1	Blartho, cure light wounds, 1d8=1
+2026-08-28	4	418	Torsat	damage	-2	kobold, round 418
+2026-08-28	4	419	Torsat	heal	5	Blartho, cure light wounds, 1d8=5 — the party's last cure
+2026-08-28	4	959	Dave	heal	3	Yrtone, cure light wounds, 1d8=3
+2026-08-29	4		Tristle	damage	-1	pin trap in the brass drawer handle, area 5 nightstand
+2026-08-29	4		Tristle	heal	1	Yrtone, cure light wounds (rolled high, but he was only 1 down)
+2026-09-04	6		Yrtone	damage	-2	troglodyte bite, surprise round out of the east passage at (16,22)
+2026-09-04	6		Dave	damage	-3	troglodyte bite, melee round 2 at (16,22)
+2026-09-04	6		Torsat	damage	-3	orc, surprise round in the y=29 corridor at (24,29)
+2026-09-04	6		Torsat	heal	3	Blartho cure light wounds, y=29 corridor round 367 (rolled 5, capped at max 6)
+2026-09-04	6		Yrtone	heal	2	Blartho cure light wounds, area 36 round 377 (rolled 8, capped at max 7)
+2026-09-04	6		Dave	heal	3	Yrtone cure light wounds, area 36 round 378 (rolled 7, capped at max 9)
+2026-09-04	6		Frython	damage	-1	40-ft fall through the area 36 pit trap into the pool in room 50, level 2
+2026-09-04	6		Yrtone	damage	-1	40-ft fall through the area 36 pit trap into the pool in room 50, level 2
+2026-09-04	6		Blartho	damage	-4	40-ft fall through the area 36 pit trap into the pool in room 50, level 2
+2026-09-04	6		Tristle	damage	-2	40-ft fall through the area 36 pit trap into the pool in room 50, level 2
+2026-09-04	6		Dellie	damage	-4	40-ft fall through the area 36 pit trap into the pool in room 50, level 2
+2026-09-04	6		Ista	damage	-4	40-ft fall through the area 36 pit trap into the pool in room 50, level 2
+2026-09-04	6		Ista	heal	4	Yrtone cure light wounds at the pool edge, room 50 (rolled 5, capped at max 4)
+2026-09-04	6		Blartho	damage	-1	bleeding out at -2, one more round before he was hauled clear of the water (DMG p.82)
+2026-09-04	6		Ista	heal	0	no-op
+2026-09-05	6		Dellie	heal	3	Yrtone cure light wounds in room 50
+2026-09-05	6		Frython	damage	-2	slammed into the shaft wall when the chewed rope's knot slipped; the second rope caught him
+2026-09-05	6		Frython	damage	-1	one more round bleeding at -1 while he was hauled the last twenty feet
+2026-09-05	6		Tristle	heal	2	Yrtone CLW (rolled 6, capped at max 3)
+2026-09-05	6		Frython	heal	1	Yrtone CLW, rolled 1 -- a whole spell for a single point; still unconscious at -1
+2026-09-05	6		Blartho	heal	5	Yrtone CLW (rolled 5, capped at max 2). Conscious, but the week still applies
+2026-09-05	6		Frython	heal	3	Yrtone CLW (rolled 7, capped at max 2). Conscious. He stopped at -2, so the WEEK applies: walking only
+2026-09-05	6		Dellie	heal	1	Yrtone CLW (rolled 8, capped at max 5)
+2026-09-05	6		Yrtone	heal	1	Yrtone CLW on herself (rolled 3, capped at max 7)

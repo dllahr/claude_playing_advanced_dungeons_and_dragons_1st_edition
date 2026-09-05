@@ -1,0 +1,91 @@
+# Memorised spells. APPEND ONLY — one row per event; the current loadout is COMPUTED.
+#
+# Why this file exists: Frython's memorised spell lived only in narration for the
+# whole of expeditions 1-4, and the clerics' remaining cures lived only in prose
+# and in the DM's head. That is the same failure as the stale XP line and the
+# stale equipment list in party_roster.md, both of which were quoted as fact
+# after going wrong. A spell slot is state, and state belongs in a log.
+#
+# event
+#   anchor     sets the loadout outright, ignoring everything before it
+#   memorised  the spell went into a slot after rest and study
+#   cast       the slot was spent
+#
+# A SPELL STAYS MEMORISED UNTIL IT IS CAST. It is not lost to time — only to
+# casting, or to memorising something else after a rest. Player's standing
+# instruction, 2026-08-29.
+#
+# 1e slots: Frython is a 1st-level magic-user with INT 17 — ONE 1st-level spell
+# per day. Yrtone (WIS 16) and Blartho (WIS 15) each get 1 base + 2 bonus = THREE
+# 1st-level clerical spells per day.
+#
+# The rows below are an ANCHOR, not a replay. Expedition 4's casting history was
+# recorded only in prose and the two accounts disagreed — a naive replay left
+# Yrtone with no cures while the running state had her holding one. Rather than
+# invent a history, the state as played is anchored here and the log runs
+# forward from this point.
+when	exped	round	who	spell	event	note
+2026-08-29	4	1460	Frython	shocking grasp	anchor	his single slot, still unspent. Confirmed by the player 2026-08-29: it STAYS memorised until cast. 2-9 damage, touch delivery.
+2026-08-29	4	1460	Yrtone	cure light wounds	anchor	1 remaining of her 3 slots
+2026-08-29	4	1460	Yrtone	command	anchor	1 remaining
+2026-08-29	4	1460	Blartho	cure light wounds	anchor	2 remaining
+2026-08-29	4	1460	Blartho	cure light wounds	anchor	the second of the two
+2026-08-29	4	1460	Blartho	command	anchor	1 remaining
+2026-08-29	4	1577	Yrtone	cure light wounds	cast	on Tristle after the pin trap. He was only 1 hp down; the rest of the spell is wasted. Yrtone now holds only *command*.
+2026-08-29	4	1666	Yrtone	cure light wounds	cast	on Sarn, a bandit of area 7, for his broken leg and the two days he has spent on a dungeon floor. Yrtone now holds NOTHING. Her three slots are spent.
+# ---------------------------------------------------------------------------
+# LEDGER CORRECTION, 2026-08-29 (found at round 1674).
+# The r1460 anchor gave Yrtone ONE cure + command. She then cast a cure at
+# r1577 (Tristle) and another at r1666 (Sarn) -- two cures out of one slot.
+# The ANCHOR was the thing that was wrong: at r1662 the table state, as told to
+# the player, was "Yrtone has ONE cure left and Blartho has TWO", which only
+# works if Yrtone held TWO cures at r1460. Re-anchored below to the state the
+# player was actually given. Nothing the player was told changes.
+# ---------------------------------------------------------------------------
+2026-08-29	4	1674	Yrtone	command	anchor	CORRECTED. Yrtone holds *command* and nothing else. Both her cures are spent (r1577 Tristle, r1666 Sarn). The r1666 note claiming she holds NOTHING was wrong.
+2026-08-29	4	1674	Blartho	cure light wounds	anchor	CORRECTED. 1 of 2.
+2026-08-29	4	1674	Blartho	cure light wounds	anchor	CORRECTED. 2 of 2.
+2026-08-29	4	1674	Blartho	command	anchor	CORRECTED. Unspent.
+2026-08-29	4	1674	Frython	shocking grasp	anchor	CORRECTED. Unspent since r1460; an unspent spell stays memorised (DMG p.40).
+2026-08-29	4	2206	Yrtone	cure light wounds	regained	30 minutes' prayer after 8 hours' rest (DMG p.40: 4 h rest for 1st level, then 1/4 hour per spell level EACH). 1 of 2.
+2026-08-29	4	2206	Yrtone	cure light wounds	regained	the second. Yrtone now holds cure, cure, *command* -- her full three. She kept *command* rather than re-select it, which is why this cost 30 minutes and not 45.
+2026-08-30	4	town-d4	Blartho	command	dropped	traded out for detect magic during the week's rest in town. 15 minutes' prayer (DMG p.40).
+2026-08-30	4	town-d4	Blartho	detect magic	memorised	cast on the whole of the party's recovered gear.
+2026-08-30	4	town-d4	Frython	shocking grasp	dropped	traded out for read magic — which is REQUIRED to read a scroll (PHB), so it is the prerequisite for transcribing the sleep scroll, not merely a way to look at the runed book.
+2026-08-30	4	town-d4	Frython	read magic	memorised	15 minutes' study.
+2026-08-30	5	draycot-d13	Yrtone	command	memorised	setting out for Draycot, day 13.
+2026-08-30	5	draycot-d13	Yrtone	cure light wounds	memorised	1 of 2.
+2026-08-30	5	draycot-d13	Yrtone	cure light wounds	memorised	2 of 2.
+2026-08-30	5	draycot-d13	Blartho	command	memorised	setting out for Draycot, day 13.
+2026-08-30	5	draycot-d13	Blartho	cure light wounds	memorised	1 of 2.
+2026-08-30	5	draycot-d13	Blartho	cure light wounds	memorised	2 of 2.
+2026-08-30	5	draycot-d13	Frython	sleep	memorised	FIRST TIME EVER. 2-16 hit dice of creatures under 4+1 HD, no saving throw.
+2026-08-31	5	299	Frython	sleep	cast	FIRST CASTING EVER. On a lone kobold watcher at FORTY FEET — exactly the spell's 1st-level range (3" + 1"/level = 4" = 40 ft indoors, PHB p.68). No saving throw. It dropped. Nothing else in the 3" circle fell, which confirms the watcher was alone. Frython now holds nothing.
+2026-09-03	6	quas-d36	Yrtone	command	memorised	Setting out for expedition 6, day 36. SAME LOADOUT AS EVERY TRIP - player's standing choice. Cleric 1 gets 1 spell; WIS 16 adds +2 first level (PHB Wisdom table) = three.
+2026-09-03	6	quas-d36	Yrtone	cure light wounds	memorised	1 of 2.
+2026-09-03	6	quas-d36	Yrtone	cure light wounds	memorised	2 of 2.
+2026-09-03	6	quas-d36	Blartho	command	memorised	WIS 15 adds +2 first level = three.
+2026-09-03	6	quas-d36	Blartho	cure light wounds	memorised	1 of 2.
+2026-09-03	6	quas-d36	Blartho	cure light wounds	memorised	2 of 2.
+2026-09-03	6	quas-d36	Frython	sleep	memorised	RE-LEARNED from his own spellbook - he cast his only sleep on the kobold watcher at exp.5 round 299. M-U 1 gets ONE first-level spell; INT 17 gives no bonus slots (only a know-chance and a max per level).
+2026-09-04	6	367	Blartho	cure light wounds	cast	on Torsat in the y=29 corridor, rolled 5, capped to full (3 healed). 1 of his 2 gone.
+2026-09-04	6	367	Frython	sleep	cast	THE FIGHT-WINNER. Four orcs in contact with the front rank; circle centred 15 ft east of Dave so the 15-ft radius took all four orcs, Dave (in by construction) and YRTONE (d6=1, caught by five inches). Torsat clear (d6=3). 4d4=8 affected, six creatures in the circle, all six down. Frython now holds nothing.
+2026-09-04	6	377	Blartho	cure light wounds	cast	on Yrtone in area 36, rolled 8, capped to full (2 healed). BLARTHO IS NOW DOWN TO *command* ONLY.
+2026-09-04	6	378	Yrtone	cure light wounds	cast	on Dave in area 36, rolled 7, capped to full (3 healed). Yrtone holds *command* and ONE cure light wounds.
+2026-09-04	6	648	Frython	sleep	regained	4 hours' rest in area 36 plus 15 minutes' study (DMG p.40: rest set by the HIGHEST spell level, then 1/4 hour PER SPELL). His only spell.
+2026-09-04	6	648	Blartho	cure light wounds	regained	1 of 2. 30 minutes' prayer - he was the binding constraint on the whole rest.
+2026-09-04	6	648	Blartho	cure light wounds	regained	2 of 2. He now holds *command* + 2 CLW, his full three.
+2026-09-04	6	648	Yrtone	cure light wounds	regained	15 minutes' prayer. She kept *command* and one CLW unspent, so only one needed re-acquiring. Full three again.
+2026-09-05	6	695	Yrtone	command	dropped	released so the slot could be re-prayed as a third cure. She had no use for it in a sealed empty room and every use for another cure.
+2026-09-05	6	978	Yrtone	cure light wounds	regained	1 of 3. Second rest in area 36: 4 hours plus 45 minutes' prayer (DMG p.40, 1/4 hour per spell).
+2026-09-05	6	978	Yrtone	cure light wounds	regained	2 of 3.
+2026-09-05	6	978	Yrtone	cure light wounds	regained	3 of 3. THREE CURES AND NOTHING ELSE - this is the party's entire magical capacity. Frython and Blartho recover no spells while the week runs.
+2026-09-05	6	980	Yrtone	cure light wounds	cast	on Tristle, rolled 6, capped to full 3/3.
+2026-09-05	6	980	Yrtone	cure light wounds	cast	on Frython, ROLLED 1. -2 to -1. Still unconscious. A whole spell for one point.
+2026-09-05	6	980	Yrtone	cure light wounds	cast	on Blartho, rolled 5, capped to 2/2. Conscious - but he stopped at -3, so the WEEK still applies: shuffling only, no fighting, no casting, no carrying.
+2026-09-05	6	1265	Yrtone	cure light wounds	cast	on Frython, rolled 7, capped to 2/2. CONSCIOUS - but he stopped at -2, so the week applies: walking only, no casting.
+2026-09-05	6	1265	Yrtone	cure light wounds	cast	on Dellie, rolled 8, capped to 5/5.
+2026-09-05	6	1265	Yrtone	cure light wounds	cast	on herself, rolled 3, capped to 7/7.
+2026-09-05	6	1550	Yrtone	command	regained	fourth rest in area 36. She goes back to command + 2 cures rather than three cures - a deliberate change of loadout for the walk out.
+2026-09-05	6	1550	Yrtone	cure light wounds	regained	1 of 2.
+2026-09-05	6	1550	Yrtone	cure light wounds	regained	2 of 2.

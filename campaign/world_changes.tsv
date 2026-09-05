@@ -1,0 +1,498 @@
+# What the PARTY has DONE to the dungeon. APPEND ONLY — one row per event.
+#
+# This file is the SOURCE OF RECORD. The map database is a cache: it is rebuilt
+# from the scanned page whenever the extractor changes, and a rebuild wipes
+# every one of these changes along with `cells.seen`. After ANY rebuild:
+#
+#     python tools/world.py replay --db mapdb/output/b1/b1.sqlite --level 1
+#
+# Rows are EVENTS, NOT STATES, so everything here is reversible: spiking a door
+# open is one row, pulling the spikes back out later is a second row that
+# supersedes it. Current state is the replay of the whole file in GAME order —
+# expedition, then turn — the same way tools/xp.py recomputes experience rather
+# than storing a total.
+#
+# ORDER IS BY exped/turn, NOT BY POSITION IN THE FILE. The log is append-only,
+# so a row backfilled later lands at the bottom: the expedition-1 spiking of
+# the pair-2 door was written after the expedition-3 row that reopened it, and
+# under file order the older action would have superseded the newer one and
+# left the door shut. FILL IN `exped` AND `turn` — they are the sort key, not
+# decoration. A blank turn sorts last within its expedition.
+#
+# Do not put map CORRECTIONS here. "The extractor misread the page" belongs in
+# mapdb/b1_corrections.tsv and is timeless; this file is only for "the page is
+# right and the world changed", and every row is timestamped.
+#
+# map + level
+#   `map` names the dungeon: b1 (Quasqueton) or dmg (the practice sheet).
+#   `level` alone is NOT enough to identify a database — both maps have a
+#   level 1, and filtering on level only once replayed all of Quasqueton's
+#   changes onto the DMG sample dungeon, which reported 73 cheerful successes.
+#
+# scope + target
+#   edge    x,y,O    boundary; O is V (east side of x,y) or H (north side)
+#   cell    x,y      one 10' square
+#   area    N        a keyed area number
+#   seen    x,y  or  area:N     what the party has verified with its own eyes
+#
+# change
+#   edge    spiked_open spiked_shut wedged broken barred locked unlocked
+#           stuck open closed revert
+#   cell    burned flooded blocked pit_sprung searched cleared revert
+#   area    cleared looted occupied burned revert
+#   seen    yes no
+#   `revert` clears the state, returning the target to what the map says.
+#
+# item / qty
+#   RECOVERABLE gear left in the world. POSITIVE qty = emplaced, NEGATIVE =
+#   taken back. `world.py deployed` nets these per item, and that is what the
+#   restocking check reads — campaign/inventory.tsv counts only what is
+#   CARRIED. Recovery must be logged explicitly; nothing is inferred from a
+#   `revert`, because a door can be un-spiked by a monster with the spikes left
+#   lying on the floor.
+#
+#   CONSUMABLES DO NOT GO HERE. A burned flask of oil, a spent torch, an eaten
+#   week of rations — those come off campaign/inventory.tsv and nowhere else.
+#   Logging them as emplaced would put them on the `deployed` list and imply
+#   the party could walk back and pick them up.
+#
+when	map	exped	turn	level	scope	target	change	item	qty	who	note
+2026-08-25	b1	3		1	edge	17,13,V	spiked_open	iron spike	2	Tristle	opened from the dead-end side and spiked open, two at the bottom; the party left through it
+# UNRESOLVED, expedition 1: the player's own notes (dlwork/B1_DL_notes.md) say
+# "second set of alcoves had secret doors that swung open, could not be opened
+# from the corridor side. We spiked them shut". That spiking has never been
+# tied to a map edge and its spikes are not in any count. It is deliberately
+# NOT logged as a guess — a fabricated coordinate here would be worse than a
+# gap, because replay would write it into the map as fact. Ask the player.
+# Backfill of what the party has verified, from map_known.md, 2026-08-25.
+# AREAS ONLY. The corridors the party has walked -- the entrance corridor, the
+# crossroads, the east and south corridors, the west arm and the crossing --
+# carry no area number, so marking them needs an explicit cell list and is not
+# done here. map_known.md remains authoritative for what the party has seen;
+# cells.seen is the convenience copy, and it is INCOMPLETE by exactly the
+# corridors.
+2026-08-25	b1	3		1	seen	area:1	yes				backfilled from map_known.md
+2026-08-25	b1	3		1	seen	area:3	yes				backfilled from map_known.md
+2026-08-25	b1	3		1	seen	area:4	yes				backfilled from map_known.md
+2026-08-25	b1	3		1	seen	area:25	yes				backfilled from map_known.md
+2026-08-25	b1	3		1	seen	area:31	yes				backfilled from map_known.md
+2026-08-25	b1	3		1	seen	area:32	yes				backfilled from map_known.md
+2026-08-16	b1	1		1	edge	17,13,V	spiked_shut			party	found the pair-2 doors swinging open from the corridor side and spiked the EAST alcove's door shut; spike count unrecorded. Player-confirmed 2026-08-25. SUPERSEDED by the exp.3 row below, which reopened it.
+2026-08-25	b1	4	0	1	edge	16,6,H	oiled			party	hinges of the outer wooden door oiled and left to soak, 5 rounds. Roughly 2 turns' worth of oil off a broached flask, NOT a whole flask (DM ruling). The door was forced long ago, cannot be barred, and groaned loudly on every previous entry
+# The ENTRANCE CORRIDOR, walked on every one of the first three
+# expeditions and never marked. Corridors carry no area number, so
+# the map_known.md backfill missed them entirely -- `dmap.py at` was
+# reporting the square the party was standing on as NOT SEEN.
+2026-08-25	b1	4	0	1	seen	16,0	yes				entrance corridor, walked on expeditions 1-3
+2026-08-25	b1	4	0	1	seen	16,1	yes				entrance corridor, walked on expeditions 1-3
+2026-08-25	b1	4	0	1	seen	16,2	yes				entrance corridor, walked on expeditions 1-3
+2026-08-25	b1	4	0	1	seen	16,3	yes				entrance corridor, walked on expeditions 1-3
+2026-08-25	b1	4	0	1	seen	16,4	yes				entrance corridor, walked on expeditions 1-3
+2026-08-25	b1	4	0	1	seen	16,5	yes				entrance corridor, walked on expeditions 1-3
+2026-08-25	b1	4	0	1	seen	16,6	yes				entrance corridor, walked on expeditions 1-3
+2026-08-25	b1	4	0	1	seen	16,7	yes				entrance corridor, walked on expeditions 1-3
+2026-08-25	b1	4	0	1	seen	16,8	yes				entrance corridor, walked on expeditions 1-3
+2026-08-25	b1	4	0	1	seen	16,9	yes				entrance corridor, walked on expeditions 1-3
+2026-08-25	b1	4	0	1	seen	16,10	yes				entrance corridor, walked on expeditions 1-3
+2026-08-25	b1	4	0	1	seen	16,11	yes				entrance corridor, walked on expeditions 1-3
+2026-08-25	b1	4	0	1	seen	16,12	yes				entrance corridor, walked on expeditions 1-3
+2026-08-25	b1	4	0	1	seen	16,13	yes				entrance corridor, walked on expeditions 1-3
+2026-08-25	b1	4	0	1	seen	16,14	yes				entrance corridor, walked on expeditions 1-3
+2026-08-25	b1	4	0	1	seen	16,15	yes				entrance corridor, walked on expeditions 1-3
+2026-08-25	b1	4	0	1	seen	16,16	yes				entrance corridor, walked on expeditions 1-3
+2026-08-25	b1	4	0	1	seen	16,17	yes				entrance corridor, walked on expeditions 1-3
+2026-08-25	b1	4	0	1	seen	16,18	yes				entrance corridor, walked on expeditions 1-3
+2026-08-25	b1	4	0	1	seen	16,19	yes				entrance corridor, walked on expeditions 1-3
+# Expedition 4: through the spiked door to the crossing at (19,13),
+# and what the lantern showed up each arm from there.
+2026-08-25	b1	4	9	1	seen	17,13	yes				exp.4 round 9, seen by lantern light from the crossing
+2026-08-25	b1	4	9	1	seen	18,13	yes				exp.4 round 9, seen by lantern light from the crossing
+2026-08-25	b1	4	9	1	seen	19,13	yes				exp.4 round 9, seen by lantern light from the crossing
+2026-08-25	b1	4	9	1	seen	19,14	yes				exp.4 round 9, seen by lantern light from the crossing
+2026-08-25	b1	4	9	1	seen	19,15	yes				exp.4 round 9, seen by lantern light from the crossing
+2026-08-25	b1	4	9	1	seen	19,16	yes				exp.4 round 9, seen by lantern light from the crossing
+2026-08-25	b1	4	9	1	seen	19,12	yes				exp.4 round 9, seen by lantern light from the crossing
+2026-08-25	b1	4	9	1	seen	19,11	yes				exp.4 round 9, seen by lantern light from the crossing
+2026-08-25	b1	4	9	1	seen	19,10	yes				exp.4 round 9, seen by lantern light from the crossing
+2026-08-25	b1	4	9	1	seen	20,13	yes				exp.4 round 9, seen by lantern light from the crossing
+2026-08-25	b1	4	9	1	seen	21,13	yes				exp.4 round 9, seen by lantern light from the crossing
+2026-08-25	b1	4	9	1	seen	22,13	yes				exp.4 round 9, seen by lantern light from the crossing
+2026-08-25	b1	4	15	1	seen	19,17	yes				exp.4 round 15, north arm from the crossing
+2026-08-25	b1	4	15	1	seen	19,18	yes				exp.4 round 15, north arm from the crossing
+2026-08-25	b1	4	15	1	seen	19,19	yes				exp.4 round 15, north arm from the crossing
+2026-08-25	b1	4	23	1	seen	22,14	yes				exp.4 round 23, lantern light up the north-wall opening east of the crossing
+2026-08-25	b1	4	23	1	seen	22,15	yes				exp.4 round 23, lantern light up the north-wall opening east of the crossing
+2026-08-25	b1	4	23	1	seen	22,16	yes				exp.4 round 23, lantern light up the north-wall opening east of the crossing
+2026-08-25	b1	4	28	1	seen	23,13	yes				exp.4 round 28, corridor east of the crossing
+2026-08-25	b1	4	28	1	seen	24,13	yes				exp.4 round 28, corridor east of the crossing
+2026-08-25	b1	4	28	1	seen	25,13	yes				exp.4 round 28, corridor east of the crossing
+2026-08-25	b1	4	28	1	seen	26,13	yes				exp.4 round 28, corridor east of the crossing
+2026-08-25	b1	4	28	1	seen	27,13	yes				exp.4 round 28, corridor east of the crossing
+2026-08-25	b1	4	28	1	seen	28,13	yes				exp.4 round 28, corridor east of the crossing
+2026-08-25	b1	4	30	1	edge	27,12,H	open			Torsat	south door pushed open on the first shove (d6=1, STR 13 opens on 1-2); it opens AWAY from the corridor, southward
+2026-08-25	b1	4	30	1	seen	27,12	yes				exp.4 round 30, seen through the opened south door
+2026-08-25	b1	4	30	1	seen	27,11	yes				exp.4 round 30, seen through the opened south door
+2026-08-25	b1	4	32	1	seen	27,10	yes				exp.4 round 32, lantern light from the chamber mouth
+2026-08-25	b1	4	32	1	seen	28,10	yes				exp.4 round 32, lantern light from the chamber mouth
+2026-08-25	b1	4	32	1	seen	29,10	yes				exp.4 round 32, lantern light from the chamber mouth
+2026-08-25	b1	4	32	1	seen	30,10	yes				exp.4 round 32, lantern light from the chamber mouth
+2026-08-25	b1	4	32	1	seen	27,9	yes				exp.4 round 32, lantern light from the chamber mouth
+2026-08-25	b1	4	32	1	seen	28,9	yes				exp.4 round 32, lantern light from the chamber mouth
+2026-08-25	b1	4	32	1	seen	29,9	yes				exp.4 round 32, lantern light from the chamber mouth
+2026-08-25	b1	4	32	1	seen	30,9	yes				exp.4 round 32, lantern light from the chamber mouth
+2026-08-25	b1	4	32	1	seen	27,8	yes				exp.4 round 32, lantern light from the chamber mouth
+2026-08-25	b1	4	32	1	seen	28,8	yes				exp.4 round 32, lantern light from the chamber mouth
+2026-08-25	b1	4	32	1	seen	29,8	yes				exp.4 round 32, lantern light from the chamber mouth
+2026-08-25	b1	4	32	1	seen	30,8	yes				exp.4 round 32, lantern light from the chamber mouth
+2026-08-25	b1	4	38	1	seen	28,10	yes				exp.4 round 38, walking the north wall of area 27 east
+2026-08-25	b1	4	38	1	seen	28,9	yes				exp.4 round 38, walking the north wall of area 27 east
+2026-08-25	b1	4	38	1	seen	28,8	yes				exp.4 round 38, walking the north wall of area 27 east
+2026-08-25	b1	4	38	1	seen	28,7	yes				exp.4 round 38, walking the north wall of area 27 east
+2026-08-25	b1	4	38	1	seen	29,10	yes				exp.4 round 38, walking the north wall of area 27 east
+2026-08-25	b1	4	38	1	seen	29,9	yes				exp.4 round 38, walking the north wall of area 27 east
+2026-08-25	b1	4	38	1	seen	29,8	yes				exp.4 round 38, walking the north wall of area 27 east
+2026-08-25	b1	4	38	1	seen	29,7	yes				exp.4 round 38, walking the north wall of area 27 east
+2026-08-25	b1	4	38	1	seen	30,10	yes				exp.4 round 38, walking the north wall of area 27 east
+2026-08-25	b1	4	38	1	seen	30,9	yes				exp.4 round 38, walking the north wall of area 27 east
+2026-08-25	b1	4	38	1	seen	30,8	yes				exp.4 round 38, walking the north wall of area 27 east
+2026-08-25	b1	4	38	1	seen	30,7	yes				exp.4 round 38, walking the north wall of area 27 east
+2026-08-25	b1	4	38	1	seen	31,10	yes				exp.4 round 38, walking the north wall of area 27 east
+2026-08-25	b1	4	38	1	seen	31,9	yes				exp.4 round 38, walking the north wall of area 27 east
+2026-08-25	b1	4	38	1	seen	31,8	yes				exp.4 round 38, walking the north wall of area 27 east
+2026-08-25	b1	4	38	1	seen	31,7	yes				exp.4 round 38, walking the north wall of area 27 east
+2026-08-25	b1	4	38	1	seen	32,10	yes				exp.4 round 38, walking the north wall of area 27 east
+2026-08-25	b1	4	38	1	seen	32,9	yes				exp.4 round 38, walking the north wall of area 27 east
+2026-08-25	b1	4	38	1	seen	32,8	yes				exp.4 round 38, walking the north wall of area 27 east
+2026-08-25	b1	4	38	1	seen	32,7	yes				exp.4 round 38, walking the north wall of area 27 east
+2026-08-25	b1	4	42	1	seen	32,9	yes				exp.4 round 42, east wall and dais of area 27
+2026-08-25	b1	4	42	1	seen	32,8	yes				exp.4 round 42, east wall and dais of area 27
+2026-08-25	b1	4	42	1	seen	32,7	yes				exp.4 round 42, east wall and dais of area 27
+2026-08-25	b1	4	42	1	seen	31,7	yes				exp.4 round 42, east wall and dais of area 27
+2026-08-25	b1	4	42	1	seen	30,7	yes				exp.4 round 42, east wall and dais of area 27
+2026-08-25	b1	4	42	1	seen	31,8	yes				exp.4 round 42, east wall and dais of area 27
+2026-08-25	b1	4	42	1	seen	31,9	yes				exp.4 round 42, east wall and dais of area 27
+2026-08-26	b1	4	48	1	seen	27,7	yes				exp.4 round 48, south wall of area 27
+2026-08-26	b1	4	48	1	seen	28,7	yes				exp.4 round 48, south wall of area 27
+2026-08-26	b1	4	48	1	seen	29,7	yes				exp.4 round 48, south wall of area 27
+2026-08-26	b1	4	48	1	seen	30,7	yes				exp.4 round 48, south wall of area 27
+2026-08-26	b1	4	48	1	seen	31,7	yes				exp.4 round 48, south wall of area 27
+2026-08-26	b1	4	48	1	seen	32,7	yes				exp.4 round 48, south wall of area 27
+2026-08-26	b1	4	78	1	cell	32,9	searched			Tristle	recess under the north lip of the dais opened; slate tile lifted, contents taken
+2026-08-26	b1	4	78	1	area	27	looted			party	dais recess emptied; draperies and thrones searched and clean
+2026-08-26	b1	4	79	1	edge	32,10,H	unlocked			Tristle	SECRET DOOR FOUND — Tristle noticed the seam merely passing within 10 ft (elf, 1 in 6, PHB p.16, rolled 1). North wall of the throne room's NE corner; opens into Rogahn's Chamber. Not yet opened.
+2026-08-26	b1	4	82	1	edge	32,10,H	open			Torsat	secret slab pushed open northward on the first shove (d6=1); left standing open
+2026-08-27	b1	4	87	1	seen	26,10	yes				exp.4 round 87, lantern light west from the throne room NW opening
+2026-08-27	b1	4	87	1	seen	25,10	yes				exp.4 round 87, lantern light west from the throne room NW opening
+2026-08-27	b1	4	87	1	seen	24,10	yes				exp.4 round 87, lantern light west from the throne room NW opening
+2026-08-27	b1	4	90	1	edge	32,10,H	closed			Tristle	secret slab pushed shut again; from either side it is a seam in the wall once more, and the party knows exactly where it is
+2026-08-27	b1	4	96	1	seen	23,10	yes				exp.4 round 96, west corridor off the throne room
+2026-08-27	b1	4	96	1	seen	22,10	yes				exp.4 round 96, west corridor off the throne room
+2026-08-27	b1	4	111	1	edge	25,10,H	open			Dave	north-wall door: FIVE failed attempts (Tristle 3; Dave 6,6,5,4) then Dave opened it on a 1. Hinges oiled first. Opens south into the corridor, hinged west.
+2026-08-27	b1	4	111	1	seen	23,11	yes				exp.4 round 111, trophy room seen from the south doorway
+2026-08-27	b1	4	111	1	seen	24,11	yes				exp.4 round 111, trophy room seen from the south doorway
+2026-08-27	b1	4	111	1	seen	25,11	yes				exp.4 round 111, trophy room seen from the south doorway
+2026-08-27	b1	4	111	1	seen	26,11	yes				exp.4 round 111, trophy room seen from the south doorway
+2026-08-27	b1	4	111	1	seen	23,12	yes				exp.4 round 111, trophy room seen from the south doorway
+2026-08-27	b1	4	111	1	seen	24,12	yes				exp.4 round 111, trophy room seen from the south doorway
+2026-08-27	b1	4	111	1	seen	25,12	yes				exp.4 round 111, trophy room seen from the south doorway
+2026-08-27	b1	4	111	1	seen	26,12	yes				exp.4 round 111, trophy room seen from the south doorway
+2026-08-27	b1	4	114	1	edge	25,10,H	closed			rear rank	door pulled shut from inside the trophy room; NOT spiked — the party stopped on realising the room has no second exit
+2026-08-27	b1	4	117	1	edge	25,10,H	spiked_shut	iron spike	2	Tristle	two spikes eased into the jamb gap from inside the trophy room. Done quietly by hand and mallet-handle rather than hammered, so no extra wandering check. The door swings AWAY from the room, so floor spikes would not have held it — these are wedges in the gap.
+2026-08-27	b1	4	157	1	area	26	looted			party	dragon skin and dwarf skeleton searched, nothing found. The dwarf was taken down from the irons, laid out on the floor and covered with the bearskin off the east wall; Yrtone said a rite over him. The bearskin is therefore no longer a trophy on the wall.
+2026-08-27	b1	4	172	1	edge	25,10,H	spiked_shut	iron spike	2	Tristle	two MORE spikes added under pressure while troglodytes hauled on the far side — four in the jamb now
+2026-08-27	b1	4	177	1	edge	25,10,H	unlocked	iron spike	-4	Tristle	all four spikes prised back out quietly; the troglodyte outside did not hear it (d6=6). Door now unblocked but still shut.
+2026-08-27	b1	4	188	1	edge	25,10,H	spiked_shut	iron spike	2	Tristle	re-spiked after the fight, two this time; lantern hooded behind the dragon skin so no light shows under the door
+2026-08-27	b1	4	256	1	edge	25,10,H	spiked_shut	iron spike	2	Tristle	two more added under pressure with three troglodytes hauling — FOUR in the jamb
+2026-08-27	b1	4	281	1	area	26	looted			party	trophy room worked over: dragon skin, dwarf, antlers, cockatrice, giant shield, crossed swords, ram's horns all settled clean. Two long swords taken. The hung trophy door levered off its brackets and laid down; wall behind it now exposed and searchable. Dragon's paws still unproved.
+2026-08-27	b1	4	297	1	edge	25,10,H	open	iron spike	-4	Tristle	all four spikes recovered; door shoved open (it opens AWAY from the room) and left standing open
+2026-08-27	b1	4	305	1	seen	26,8	yes				exp.4 round 305, entered the worship area
+2026-08-27	b1	4	305	1	seen	26,9	yes				exp.4 round 305, entered the worship area
+2026-08-27	b1	4	305	1	seen	25,8	yes				exp.4 round 305, entered the worship area
+2026-08-27	b1	4	305	1	seen	25,9	yes				exp.4 round 305, entered the worship area
+2026-08-27	b1	4	305	1	seen	24,8	yes				exp.4 round 305, entered the worship area
+2026-08-27	b1	4	305	1	seen	24,9	yes				exp.4 round 305, entered the worship area
+2026-08-27	b1	4	305	1	edge	26,8,V	closed			party	closed behind them on entering the worship area; not spiked
+2026-08-27	b1	4	309	1	edge	26,8,V	spiked_shut	iron spike	2	Tristle	worship area sealed from inside, two spikes, cloaks along the threshold
+2026-08-28	b1	4	384	1	edge	26,8,V	open	iron spike	-2	Tristle	both floor spikes recovered on leaving the worship area
+2026-08-28	b1	4	404	1	seen	21,8	yes				exp.4 round 404, entered the access room
+2026-08-28	b1	4	404	1	seen	21,9	yes				exp.4 round 404, entered the access room
+2026-08-28	b1	4	404	1	seen	22,8	yes				exp.4 round 404, entered the access room
+2026-08-28	b1	4	404	1	seen	22,9	yes				exp.4 round 404, entered the access room
+2026-08-28	b1	4	404	1	seen	23,8	yes				exp.4 round 404, entered the access room
+2026-08-28	b1	4	404	1	seen	23,9	yes				exp.4 round 404, entered the access room
+2026-08-28	b1	4	404	1	edge	22,9,H	closed			party	closed behind them on entering the access room; not spiked
+2026-08-28	b1	4	408	1	edge	22,9,H	spiked_shut	iron spike	2	Tristle	jamb wedges — this door opens OUTWARD into the corridor, so floor spikes would not hold it. Six kobolds hauling on the far ring while it was done.
+2026-08-28	b1	4	412	1	edge	22,9,H	spiked_shut	iron spike	2	Tristle	two more into the jamb — FOUR in this door — and cloaks along the threshold to kill the light
+2026-08-28	b1	4	439	1	edge	32,10,H	spiked_shut	iron spike	2	Tristle	the throne-room secret door, spiked from the Rogahn's Chamber side. No gap under a secret slab, so no cloaks needed and no light shows.
+2026-08-28	b1	4	442	1	edge	31,12,H	spiked_shut	iron spike	2	Tristle	the west secret door of Rogahn's Chamber, spiked from inside. Both doors the party knows about are now spiked.
+2026-08-28	b1	4	472	1	area	25	looted			party	ALL fir planking stripped off every wall. Bare rock exposed all round. Found the THIRD secret door in the south wall, east side — the party had no idea it was there.
+2026-08-28	b1	4	472	1	edge	33,10,H	unlocked			party	THIRD secret door FOUND by stripping the planking — automatic, not a roll. Leads south, not into the throne room.
+2026-08-28	b1	4	476	1	edge	33,10,H	spiked_shut	iron spike	2	Tristle	the newly found third secret door, FLOOR spiked (it opens toward the chamber). All three doors into Rogahn's Chamber are now spiked from inside.
+2026-08-28	b1	4	965	1	edge	32,10,H	closed	iron spike	-2	Tristle	spikes recovered before leaving Rogahn's Chamber
+2026-08-28	b1	4	965	1	edge	31,12,H	closed	iron spike	-2	Tristle	spikes recovered before leaving Rogahn's Chamber
+2026-08-28	b1	4	965	1	edge	33,10,H	closed	iron spike	-2	Tristle	spikes recovered before leaving Rogahn's Chamber
+2026-08-28	b1	4	966	1	edge	33,10,H	open			Tristle	opened on its release catch — no force needed; it pivots toward the chamber
+2026-08-28	b1	4	966	1	seen	33,9	yes				exp.4 round 966, corridor south of Rogahn's Chamber
+2026-08-28	b1	4	966	1	seen	33,8	yes				exp.4 round 966, corridor south of Rogahn's Chamber
+2026-08-28	b1	4	966	1	seen	33,7	yes				exp.4 round 966, corridor south of Rogahn's Chamber
+2026-08-28	b1	4	970	1	edge	33,10,H	closed			party	closed behind them on entering the south corridor; not spiked
+2026-08-28	b1	4	978	1	edge	33,6,H	unlocked			Tristle	SECOND secret door found at the end of the blind corridor — Tristle rolled a 2, needing 1-2. Not yet opened. STOP RULE: narrative halted on discovery.
+2026-08-28	b1	4	1000	1	edge	33,6,H	open			Tristle	opened at arm's length with a ten-foot pole after a failed trap check (d100=100). No trap. Opens south, away from the corridor.
+2026-08-28	b1	4	1000	1	seen	32,5	yes				exp.4 round 1000, the Mistress' Chamber seen from the corridor door
+2026-08-28	b1	4	1000	1	seen	32,6	yes				exp.4 round 1000, the Mistress' Chamber seen from the corridor door
+2026-08-28	b1	4	1000	1	seen	33,5	yes				exp.4 round 1000, the Mistress' Chamber seen from the corridor door
+2026-08-28	b1	4	1000	1	seen	33,6	yes				exp.4 round 1000, the Mistress' Chamber seen from the corridor door
+2026-08-28	b1	4	1010	1	edge	33,6,H	spiked_shut	iron spike	2	Tristle	the corridor secret door, spiked from the Mistress' Chamber side
+2026-08-28	b1	4	1014	1	edge	33,2,H	spiked_shut	iron spike	2	Tristle	south door of the Mistress' Chamber. It opens AWAY, so jamb wedges, not floor spikes. Cloaks along the threshold.
+2026-08-28	b1	4	1024	1	area	24	looted			party	searched clean twice; comb, gold piece and perfume taken. Framed tapestry left on the wall.
+2026-08-28	b1	4	1046	1	edge	33,6,H	closed	iron spike	-2	Tristle	spikes recovered before leaving the Mistress' Chamber
+2026-08-28	b1	4	1046	1	edge	33,2,H	closed	iron spike	-2	Tristle	spikes recovered before leaving the Mistress' Chamber
+2026-08-28	b1	4	1048	1	edge	33,2,H	open			Torsat	Torsat and Tristle shoving in unison, 1-3 in 6 under the new two-man ruling; opened on a 2
+2026-08-28	b1	4	1053	1	seen	33,2	yes				exp.4 round 1053, the south corridor
+2026-08-28	b1	4	1053	1	seen	32,2	yes				exp.4 round 1053, the south corridor
+2026-08-28	b1	4	1053	1	seen	31,2	yes				exp.4 round 1053, the south corridor
+2026-08-28	b1	4	1053	1	seen	30,2	yes				exp.4 round 1053, the south corridor
+2026-08-28	b1	4	1058	1	edge	31,2,H	open			Dave and Torsat	opened on a 4 with both fighters shoving in unison (1-4 under the two-man ruling). Torsat had failed twice alone at 1-2.
+2026-08-28	b1	4	1058	1	seen	31,3	yes				exp.4 round 1058, passage north of the south corridor
+2026-08-28	b1	4	1058	1	seen	31,4	yes				exp.4 round 1058, passage north of the south corridor
+2026-08-28	b1	4	1058	1	seen	31,5	yes				exp.4 round 1058, passage north of the south corridor
+2026-08-28	b1	4	1062	1	edge	31,2,H	closed			party	closed behind them on entering the north passage; not spiked
+2026-08-28	b1	4	1075	1	edge	30,5,V	spiked_shut	iron spike	2	Tristle	storage room sealed from inside; the door opens away, so jamb wedges
+2026-08-28	b1	4	1088	1	edge	30,5,V	closed	iron spike	-2	Tristle	spikes recovered on leaving the storage room
+2026-08-28	b1	4	1093	1	seen	31,6	yes				exp.4 round 1093, corridor north and west of the storage room
+2026-08-28	b1	4	1093	1	seen	30,6	yes				exp.4 round 1093, corridor north and west of the storage room
+2026-08-28	b1	4	1093	1	seen	29,6	yes				exp.4 round 1093, corridor north and west of the storage room
+2026-08-28	b1	4	1093	1	seen	28,6	yes				exp.4 round 1093, corridor north and west of the storage room
+2026-08-28	b1	4	1097	1	seen	28,5	yes				exp.4 round 1097, corridor running south
+2026-08-28	b1	4	1097	1	seen	28,4	yes				exp.4 round 1097, corridor running south
+2026-08-28	b1	4	1097	1	seen	28,3	yes				exp.4 round 1097, corridor running south
+2026-08-28	b1	4	1107	1	seen	27,3	yes				exp.4 round 1107, the long west corridor
+2026-08-28	b1	4	1107	1	seen	26,3	yes				exp.4 round 1107, the long west corridor
+2026-08-28	b1	4	1107	1	seen	25,3	yes				exp.4 round 1107, the long west corridor
+2026-08-28	b1	4	1107	1	seen	24,3	yes				exp.4 round 1107, the long west corridor
+2026-08-28	b1	4	1107	1	seen	23,3	yes				exp.4 round 1107, the long west corridor
+2026-08-28	b1	4	1107	1	seen	22,3	yes				exp.4 round 1107, the long west corridor
+2026-08-28	b1	4	1107	1	seen	21,3	yes				exp.4 round 1107, the long west corridor
+2026-08-28	b1	4	1107	1	seen	20,3	yes				exp.4 round 1107, the long west corridor
+2026-08-28	b1	4	1107	1	seen	19,3	yes				exp.4 round 1107, the long west corridor
+2026-08-28	b1	4	1111	1	seen	19,4	yes				exp.4 round 1111, corridor north with two side openings
+2026-08-28	b1	4	1111	1	seen	19,5	yes				exp.4 round 1111, corridor north with two side openings
+
+# Round 1111 navigation error: the party was walked from (19,5) to (19,6) through
+# a WALL. (19,6) is retracted from seen; the true route turns east at (19,5).
+2026-08-28	b1	4	1111	1	seen	20,5	yes				corrected route: east at (19,5), then north to the 3-way at (20,7)
+2026-08-28	b1	4	1111	1	seen	20,6	yes				corrected route: east at (19,5), then north to the 3-way at (20,7)
+2026-08-28	b1	4	1111	1	seen	20,7	yes				corrected route: east at (19,5), then north to the 3-way at (20,7)2026-08-28	b1	4	112	1	seen	20,8	yes			party	walked the corridor north from the three-way junction
+2026-08-28	b1	4	112	1	seen	20,9	yes			party	walked the corridor north from the three-way junction
+2026-08-28	b1	4	112	1	seen	20,10	yes			party	walked the corridor north from the three-way junction
+2026-08-28	b1	4	112	1	seen	20,11	yes			party	walked the corridor north from the three-way junction
+2026-08-28	b1	4	112	1	seen	20,12	yes			party	walked the corridor north from the three-way junction
+2026-08-28	b1	4	112	1	seen	21,12	yes			party	seen by lantern light from (20,12)
+2026-08-28	b1	4	112	1	seen	22,12	yes			party	seen by lantern light from (20,12)
+2026-08-28	b1	4	112	1	seen	22,11	yes			party	seen south from (22,12) — closes the loop back to the access-room corridor
+2026-08-28	b1	4	113	1	edge	22,9,H	wrecked_open	iron spike	-4	Tristle	all four spikes prised back out of the jamb; the leaf was already broken apart by the kobolds so they came free easily. Noise d6=4, unheard. Door is WRECKED and stands open.
+2026-08-28	b1	4	113	1	seen	27,6	yes			party	south corridor out of the throne room, by lantern
+2026-08-28	b1	4	113	1	seen	27,5	yes			party	south corridor out of the throne room, by lantern
+2026-08-28	b1	4	113	1	seen	27,4	yes			party	south corridor out of the throne room, by lantern
+2026-08-28	b1	4	113	1	seen	26,4	yes			party	seen west from the turn at (27,4) by lantern
+2026-08-28	b1	4	113	1	seen	25,4	yes			party	seen west from the turn at (27,4) by lantern
+2026-08-28	b1	4	113	1	seen	24,4	yes			party	seen west from the turn at (27,4) by lantern
+2026-08-29	b1	4	115	1	seen	26,4	yes			party	west corridor south of the throne room, by lantern
+2026-08-29	b1	4	115	1	seen	25,4	yes			party	west corridor south of the throne room, by lantern
+2026-08-29	b1	4	115	1	seen	24,4	yes			party	west corridor south of the throne room, by lantern
+2026-08-29	b1	4	115	1	seen	23,4	yes			party	west corridor south of the throne room, by lantern
+2026-08-29	b1	4	115	1	seen	22,4	yes			party	west corridor south of the throne room, by lantern
+2026-08-29	b1	4	115	1	seen	21,4	yes			party	west corridor south of the throne room, by lantern
+2026-08-29	b1	4	115	1	seen	20,4	yes			party	west corridor south of the throne room, by lantern
+2026-08-29	b1	4	115	1	seen	21,5	yes			party	west corridor south of the throne room, by lantern
+2026-08-29	b1	4	115	1	seen	21,6	yes			party	north branch off the west corridor, by lantern
+2026-08-29	b1	4	115	1	seen	22,6	yes			party	north branch off the west corridor, by lantern
+2026-08-29	b1	4	115	1	seen	23,6	yes			party	north branch off the west corridor, by lantern
+2026-08-29	b1	4	115	1	edge	23,6,V	unlocked			Tristle	lock sprung on the first and only attempt, d100=24 vs 35 (PHB p.28, one try per lock ever at this level). Door is UNLOCKED but still shut; it opens AWAY into the room.
+2026-08-29	b1	4	115	1	edge	23,6,V	open			Torsat	pushed open, stands open into the chamber
+2026-08-29	b1	4	115	1	edge	23,6,V	spiked_shut	iron spike	2	Tristle	sealed from INSIDE area 29. The door opens into the room, so FLOOR spikes — the strong method (rules/exploration.md). Two spikes, driven gently; noise d6=5, unheard. Cloaks laid along the sill to kill the light.
+2026-08-29	b1	4	115	1	seen	24,6	yes			party	area 29 Captain's Chamber entered
+2026-08-29	b1	4	115	1	seen	25,6	yes			party	area 29 Captain's Chamber entered
+2026-08-29	b1	4	115	1	seen	26,6	yes			party	area 29 Captain's Chamber entered
+2026-08-29	b1	4	115	1	seen	24,5	yes			party	area 29 Captain's Chamber entered
+2026-08-29	b1	4	115	1	seen	25,5	yes			party	area 29 Captain's Chamber entered
+2026-08-29	b1	4	115	1	seen	26,5	yes			party	area 29 Captain's Chamber entered
+2026-08-29	b1	4	115	1	area	29	entered			party	entered, door spiked from inside, cloaks on the sill; room not yet searched
+2026-08-29	b1	4	117	1	area	29	searched			party	two turns: furnishings worked over (crock opened, 5 gp), walls searched clean for secret doors (Tristle d6=1, Blartho d6=1 — both CLEAN, nothing hidden). The CHEST remains LOCKED and unopened; the barrel is sealed and untapped.
+2026-08-29	b1	4	117	1	seen	23,5	yes			party	area 29's western alcove — lit from inside the room
+2026-08-29	b1	4	117	1	seen	22,5	yes			party	area 29's western alcove — lit from inside the room
+2026-08-29	b1	4	117	1	edge	23,6,V	closed_unlocked	iron spike	-2	Tristle	both floor spikes recovered, cloaks picked up, door pulled shut behind the party on the way out. The lock was SPRUNG by Tristle and cannot be re-locked without a key — this door is now merely closed. The chest and the SD keg are left in place for a return trip with a pack animal.
+2026-08-29	b1	4	117	1	area	29	looted, chest left			party	5 gp, two large shields and a footman's mace taken. LEFT BEHIND: the locked chest (Tristle's one Open Locks failed 36 vs 35, trap search failed 52 vs 25) and the full untapped SD keg. Party intends to return with a mule.
+2026-08-29	b1	4	120	1	seen	22,17	yes			party	north side passage off the y=13 hall
+2026-08-29	b1	4	120	1	seen	22,18	yes			party	north side passage off the y=13 hall
+2026-08-29	b1	4	120	1	seen	21,18	yes			party	the dog-leg north of the pools corridor
+2026-08-29	b1	4	120	1	seen	21,19	yes			party	the dog-leg north of the pools corridor
+2026-08-29	b1	4	120	1	seen	21,20	yes			party	the dog-leg north of the pools corridor
+2026-08-29	b1	4	121	1	seen	22,20	yes			party	the zigzag north of the pools corridor
+2026-08-29	b1	4	121	1	seen	22,21	yes			party	the zigzag north of the pools corridor
+2026-08-29	b1	4	121	1	seen	22,22	yes			party	the zigzag north of the pools corridor
+2026-08-29	b1	4	121	1	seen	23,22	yes			party	stub off the crossing, with a door east
+2026-08-29	b1	4	121	1	seen	23,23	yes			party	stub off the crossing, with a door east
+2026-08-29	b1	4	122	1	edge	23,23,V	unlocked			Tristle	armoury door lock sprung on his one and only attempt, d100=9 vs 35. Door UNLOCKED but still shut; it opens AWAY into the armoury. The lock cannot be re-set without a key.
+2026-08-29	b1	4	122	1	edge	23,23,V	open			Torsat	pushed open; it opens away, into the room. Party still in the corridor, has NOT entered.
+2026-08-29	b1	4	122	1	edge	23,23,V	spiked_shut	iron spike	2	Tristle	spiked shut from inside area 34 — which CLOSED THE SECOND EXIT and triggered the howling wind; Torsat's lantern blew out (d100=41 vs 50). Door opens away from the room so these are JAMB wedges, the weaker method.
+2026-08-29	b1	4	122	1	seen	24,22	yes			party	area 34 antechamber and the south limb, by lantern
+2026-08-29	b1	4	122	1	seen	25,22	yes			party	area 34 antechamber and the south limb, by lantern
+2026-08-29	b1	4	122	1	seen	24,23	yes			party	area 34 antechamber and the south limb, by lantern
+2026-08-29	b1	4	122	1	seen	25,23	yes			party	area 34 antechamber and the south limb, by lantern
+2026-08-29	b1	4	122	1	seen	24,21	yes			party	area 34 antechamber and the south limb, by lantern
+2026-08-29	b1	4	122	1	seen	23,21	yes			party	area 34 antechamber and the south limb, by lantern
+2026-08-29	b1	4	122	1	seen	23,20	yes			party	area 34 antechamber and the south limb, by lantern
+2026-08-29	b1	4	123	1	seen	23,19	yes			party	the south-west corner of area 34
+2026-08-29	b1	4	123	1	seen	22,19	yes			party	the south-west corner of area 34
+2026-08-29	b1	4	123	1	area	34	SW corner opened			Tristle	both chests in the south-west corner unlocked (d100 4 and 12 vs 35). BOTH EMPTY — module text, not a DM call. Trap checks: chest A 84 vs 25 FAILED (never cleared), chest B 19 vs 25 clean.
+2026-08-29	b1	4	126	1	seen	24,24	yes			party	the first row of the diagonal chamber
+2026-08-29	b1	4	126	1	seen	25,24	yes			party	the first row of the diagonal chamber
+2026-08-29	b1	4	126	1	seen	26,24	yes			party	the first row of the diagonal chamber
+2026-08-29	b1	4	127	1	seen	25,25	yes			party	the diagonal chamber of area 34
+2026-08-29	b1	4	127	1	seen	26,25	yes			party	the diagonal chamber of area 34
+2026-08-29	b1	4	127	1	seen	26,26	yes			party	the diagonal chamber of area 34
+2026-08-29	b1	4	127	1	seen	27,26	yes			party	the diagonal chamber of area 34
+2026-08-29	b1	4	127	1	seen	27,27	yes			party	the diagonal chamber of area 34
+2026-08-29	b1	4	127	1	seen	28,27	yes			party	the diagonal chamber of area 34
+2026-08-29	b1	4	127	1	seen	28,28	yes			party	the diagonal chamber of area 34
+2026-08-29	b1	4	127	1	seen	29,28	yes			party	the diagonal chamber of area 34
+2026-08-29	b1	4	127	1	seen	29,29	yes			party	the diagonal chamber of area 34
+2026-08-29	b1	4	127	1	seen	30,29	yes			party	the diagonal chamber of area 34
+2026-08-29	b1	4	127	1	seen	27,25	yes			party	the diagonal chamber of area 34
+2026-08-29	b1	4	127	1	seen	28,26	yes			party	the diagonal chamber of area 34
+2026-08-29	b1	4	127	1	seen	29,27	yes			party	the diagonal chamber of area 34
+2026-08-29	b1	4	127	1	seen	30,28	yes			party	the diagonal chamber of area 34
+2026-08-29	b1	4	127	1	seen	31,29	yes			party	the diagonal chamber of area 34
+2026-08-29	b1	4	128	1	seen	30,30	yes			party	the NE chamber of area 34 and its far door
+2026-08-29	b1	4	128	1	seen	31,30	yes			party	the NE chamber of area 34 and its far door
+2026-08-29	b1	4	128	1	seen	30,31	yes			party	the NE chamber of area 34 and its far door
+2026-08-29	b1	4	128	1	seen	31,31	yes			party	the NE chamber of area 34 and its far door
+2026-08-29	b1	4	128	1	edge	31,31,V	unlocked			party	tried and found unlocked (d6=6). Opens WEST, into area 34 — pull, not push. Not yet opened.
+2026-08-29	b1	4	128	1	edge	31,31,V	open			Tristle	hinges oiled and left to soak, then pulled open. Opening it ENDED THE WIND (module: the wind ceases whenever either exit is opened).
+2026-08-29	b1	4	129	1	edge	31,31,V	spiked_shut	iron spike	2	Tristle	sealed from the BARRACKS side. The door opens west into area 34, i.e. AWAY from the party here, so JAMB wedges — the weaker method. Driven quietly; no noise check per the standing ruling. NOTE: closing it re-seals area 34 and the wind there has started again.
+2026-08-29	b1	4	145	1	area	33	searched exhaustively			party	twelve turns, four searchers, the whole 30x110 room worked bed by bed. NOTHING FOUND — the module gives area 33 no treasure at all. Walls clean on a positive roll (Tristle d6=1). Lantern ran dry mid-search at round 1384 and was refilled, one flask.
+2026-08-29	b1	4	146	1	edge	31,31,V	open			Tristle	jamb wedges recovered on leaving the barracks; door left standing open
+2026-08-29	b1	4	146	1	edge	23,6,V	open			Tristle	area 29 door — untouched this trip
+2026-08-29	b1	4	148	1	seen	21,22	yes			party	west arm of the crossing
+2026-08-29	b1	4	148	1	seen	21,23	yes			party	north passage off the west arm of the crossing
+2026-08-29	b1	4	148	1	seen	21,24	yes			party	north passage off the west arm of the crossing
+2026-08-29	b1	4	148	1	edge	21,24,H	unlocked			party	tried and found unlocked (B1 door rule d6=3). Hinges on the far side: opens AWAY, push not pull. Tristle listened, d100=40 vs 15 — FAILED, which proves nothing.
+2026-08-29	b1	4	148	1	edge	21,24,H	open			Torsat	pushed open; it opens away, north into the passage beyond
+2026-08-29	b1	4	149	1	edge	21,24,H	spiked_shut	iron spike	2	Tristle	sealed from the north side. The door opens away from (21,24), i.e. TOWARD the party here, so FLOOR spikes — the strong method. Driven quietly; no noise check per the standing ruling.
+2026-08-29	b1	4	149	1	seen	21,26	yes			party	crossed at speed pursuing the carrion crawler
+2026-08-29	b1	4	149	1	seen	22,26	yes			party	crossed at speed pursuing the carrion crawler
+2026-08-29	b1	4	149	1	seen	23,26	yes			party	crossed at speed pursuing the carrion crawler
+2026-08-29	b1	4	149	1	seen	21,27	yes			party	crossed at speed pursuing the carrion crawler
+2026-08-29	b1	4	149	1	seen	22,27	yes			party	crossed at speed pursuing the carrion crawler
+2026-08-29	b1	4	149	1	seen	21,28	yes			party	crossed at speed pursuing the carrion crawler
+2026-08-29	b1	4	149	1	seen	22,28	yes			party	crossed at speed pursuing the carrion crawler
+2026-08-29	b1	4	149	1	seen	20,28	yes			party	crossed at speed pursuing the carrion crawler
+2026-08-29	b1	4	150	1	edge	21,24,H	spiked_shut	iron spike	0	Tristle	the two wedges holding it OPEN prised out and re-set to hold it SHUT. Net spikes unchanged: 2 still in this door, 14 carried. Quiet work, no noise check per the standing ruling.
+2026-08-29	b1	4	152	1	edge	18,26,H	spiked_shut	iron spike	2	Tristle	jamb wedges — it opens AWAY from area 5, so floor spikes would not hold. Quiet work.
+2026-08-29	b1	4	153	1	edge	23,25,H	open			troglodyte	opened from the far side by the troglodyte, which died in it. Stands open.
+2026-08-29	b1	4	155	1	area	6	searched			party	closet worked over by four searchers. Walls CLEAN (Tristle d6=1, positive result). Found: 5 garments (one pewter-studded, ~15 gp), bolts of cloth (worthless), 4 books on a stand, an empty but serviceable oil lantern, a table of mundane papers under a stone Z paperweight.
+2026-08-29	b1	4	158	1	area	5	partly searched			party	bed, nightstand and table searched. Tristle's trap check on the nightstand drawer FAILED (42 vs 25) and is spent. Carving not yet searched.
+2026-08-29	b1	4	161	1	area	5	looted			Tristle	nightstand drawer picked open (d100=28 vs 35) after the pin trap had already fired. THE SCROLL OF SLEEP was inside — area 5's rolled treasure. Pewter pitcher and 3 mugs taken (30 gp). The bed and the carving remain.
+2026-08-29	b1	4	165	1	area	5	searched, carving worked			party	70 ft of carving worked in three stretches. MIDDLE 25 ft proven clean (Tristle d6=2, positive). West 25 ft and east 20 ft searched but unproven — all rolls failed. There is in fact nothing in the carving.
+2026-08-29	b1	4	166	1	edge	18,26,H	closed_unlocked	iron spike	-2	Tristle	jamb wedges recovered; door closed but no longer held. About to be opened.
+2026-08-29	b1	4	166	1	edge	18,26,H	open			Torsat	pushed open; opens south, away from area 5
+2026-08-29	b1	4	167	1	edge	18,26,H	spiked_shut	iron spike	2	Tristle	spiked SHUT again, this time from the annex side and with the bandits' leave ("spike it twice" — Hask). Jamb wedges, driven gently. Quiet work, no noise check per the standing ruling. 14 -> 12 carried.
+2026-08-29	b1	4	168	1	area	7	illusion dispelled			party	the "hoard" prodded with a 10-ft pole from 10 ft back (Dave's plan, three poles, everyone clear). DM RULING: a pole in a creature's hand is contact — B1 p.10's "touched by any creature" trips. The permanent illusion vanished. Reappears within 24 hours, i.e. by ~round 2600. Charred, part-melted floor of the wizard's practice range now visible. NOTHING is there; the module recommends no treasure be placed.
+2026-08-29	b1	4	169	1	edge	18,26,H	closed_unlocked	iron spike	-2	Tristle	both jamb wedges recovered on withdrawing from the annex. 12 -> 14 carried. Area 7 is a dead end and needs no spike; the pocket is still sealed by (21,24,H).
+2026-08-29	b1	4	169	1	area	7	abandoned			party	party and the four bandits withdrew to area 5 to camp. The annex is left empty, the illusion still dispelled, the burned floor exposed. It comes back by ~round 2600.
+2026-08-29	b1	4	170	1	area	5	camped			party	eight hours' rest, rounds 1696-2176, six PCs and four bandits. Four watches of two hours: Yrtone+Blartho, Tristle, Dave, Torsat+Frython, each of the last three joined by a bandit. Hooded lantern at the watch position throughout; 2 flasks burned. Sarn on the bed.
+2026-08-29	b1	4	181	1	edge	21,24,H	tried from outside			kobolds	TWO kobolds came up the corridor at round 1816, shoved the spiked door, could not shift it, and moved on. They HEARD people through it (d6=2). The door held on 2 spikes. See PENDING EVENTS — the kobolds of this level now know something is camped behind that door.
+2026-08-29	b1	4	182	1	edge	21,24,H	spiked_shut	iron spike	2	Tristle	TWO MORE driven after the kobolds shoved it at round 1816 — the door now holds FOUR spikes. Gently done, no noise check. 14 -> 12 carried; 4 of them are in this door and must be recovered before the party leaves the pocket.
+2026-08-29	b1	4	218	1	area	5	spells regained			Yrtone	30 minutes' prayer, 2 x cure light wounds regained (DMG p.40). She holds cure, cure, command. Blartho and Frython kept what they had, which costs nothing.
+2026-08-29	b1	4	222	1	edge	21,24,H	open	iron spike	-4	Tristle	all four wedges recovered on moving out. 12 -> 16 carried. The pocket is open again.
+2026-08-29	b1	4	222	1	cell	21,23	monster killed			Tristle	one giant centipede, killed in the surprise round by his second arrow (1d6=4 on a 2 hp creature). Carcass and three spent arrows on the corridor floor. XP 32, pending.
+2026-08-29	b1	4	222	1	cell	20,22	monster killed			Tristle	one kobold of three, two arrows (2 then 5) at AC 9 — AC 7 with +2 for 50% concealment, shooting into the dark past the lantern's edge (DMG p.64). XP 9 (5 + 1/hp on 4 hp), pending. Body and two arrows at the mouth of the west passage.
+2026-08-29	b1	4	222	1	area	west passage from (21,22)	monsters fled			kobolds	the surviving two broke (morale d100=92+5=97 vs 50, flee in panic) and ran WEST down Hask's passage. They are alive, unhurt, panicked, and they now know exactly what is in this corridor. Second kobold group to carry word.
+2026-08-29	b1	4	222	1	cell	20,22	looted			Tristle	dead kobold searched: 17 cp in a belt pouch (MM treasure type J, individuals) and a crude short spear, left. Tristle's two arrows recovered from the body; Torsat's two NOT found (d6=6) and remain somewhere down the dark west passage.
+2026-08-29	b1	4	226	1	area	entrance	party exited			party	OUT. Round 2263, ~37.7 hours after entering — which by the arithmetic is about 10-11 pm on the second day, NOT morning. They slept through the afternoon; the dungeon has no sun in it. Four bandits (Hask, Dellie, Corm, Sarn on a litter) came out with them. Two spikes deliberately LEFT in the one-way alcove door at (17,13,V) to keep the shortcut open.
+2026-08-31	b1	5	2	1	edge	25,10,H	spiked_shut	iron spike	2	Tristle	shut and jamb-wedged from INSIDE the trophy room (it opens away from the room, so wedges not floor spikes). Cloaks along the threshold to kill the light line. 16 -> 14 carried.
+2026-08-31	b1	5	2	1	area	26	robbed by kobolds			kobolds	SIXTEEN DAYS after the party left it standing open. A worn kobold trail in the dust, several visits. ELEVEN of the twelve stashed spears taken; one left, split-shafted, under the dragon skin. The dwarf's bearskin dragged off, the body turned and gone through, and the IRONS he hung in prised out and carried away. Door pulled shut behind them.
+2026-08-31	b1	5	4	1	edge	23,6,V	spiked_shut	iron spike	2	Tristle	sealed from inside area 29, cloaks along the threshold. 12 -> 10 carried.
+2026-08-31	b1	5	4	1	area	29	untouched			-	d6=5: nothing has been into area 29 in the sixteen days since the party left. Only their own boot-prints in the dust. The chest and the barrel exactly as left.
+2026-08-31	b1	5	10	1	cell	26,10	monster killed			Dave	ONE ORC, drawn by the barrel. First orc the party has seen in Quasqueton. It was carrying ONE OF THE ELEVEN SPEARS taken from the trophy room stash (d6=1) — so the orcs and the kobolds are connected, or the orcs took them off the kobolds. 12 ep on the body (MM treasure type L). It broke and ran and did NOT get away, so nothing has been reported.
+2026-08-31	b1	5	29	1	area	26	dragon skin stripped			party	the whole north-wall skin taken scale by scale over ~26 turns — Hask and Dellie alone for the first quarter, then all eight. Two sacks of brass, ~130 gp. The bare hide left nailed to the wall. The BARREL from area 29 stashed here in the corner; nobody can lift it and it needs the mule and help.
+2026-08-31	b1	5	30	1	cell	22,19	monster killed			party	a kobold WATCHER, posted in a wall recess with a long view of the spine corridor. Slept by Frython at 40 ft, killed with a sword thrust while helpless, and put back in the recess. 20 cp. ITS WEAPON WAS KOBOLD-MADE, not one of the party's stolen spears (d6=4) — so the ten good spears went to somebody who rates higher than a lookout. NOTHING ELSE ON IT. The body is hidden, but the WATCH will be relieved or missed at some point and that is a clock now running.
+2026-08-31	b1	5	31	1	area	5	sealed	iron spike	6	party	all THREE of area 5's doors spiked, two apiece — (21,24,H), (18,26,H) and (23,25,H). 12 -> 6 carried. A dead troglodyte and its nest dragged off Zelligar's bed; the bedding fit only for burning, the headboard sound and the gold leaf unmarked.
+2026-09-01	b1	5	2	1	edge	25,10,H	spiked_shut	iron spike	2	Hask	BACKFILLED 2026-09-01 — the two EXTRA spikes handed to Hask and Dellie to drive home behind the party. Four in that jamb, not two. Deducted from inventory at the time but never logged here.
+2026-09-01	b1	5	28	1	edge	25,10,H	closed_unlocked	iron spike	-4	party	BACKFILLED 2026-09-01 — all four recovered when the party left the trophy room with the scales and the barrel. They could not have left the room without pulling them, and this was never logged or credited. Door closed behind them, unspiked.
+2026-09-01	b1	5	20	1	edge	23,6,V	open	iron spike	-2	Tristle	BACKFILLED 2026-09-01 — area 29's two recovered on leaving. Credited in inventory at the time but never logged here.
+2026-09-01	b1	5	33	1	area	5	unspiked and left	iron spike	-6	party	all six recovered from the three doors; cloaks picked up; doors CLOSED behind them per the standing rule. 10 -> 16 carried. Zelligar's bed gone — headboard, two rails and baseboard, 800 gp. The troglodyte's carcass and its nest left where they lie. The 70-ft carving untouched.
+2026-09-01	b1	5	34	1	area	route	ROUTE CORRECTION			party	tools/party.py auto-routed the exit WEST along y=22 and down the x=16 corridor — 290 ft, shorter, and straight past (17,21) where Kell is buried. THE PARTY DID NOT GO THAT WAY. The player declared: south to the crossing, south down the spine to the four-way at (22,13), west along y=13, through the spiked-open one-way door at (17,13,V), south to the entrance. ~330 ft. The endpoint is the same; the trail is not. Do not let the pathfinder pick a route the player has named.
+2026-09-03	b1	6	2	1	seen	17,19	yes			party	expedition 6, first new ground: the y=19 link and the square north of the crossing
+2026-09-03	b1	6	2	1	seen	18,19	yes			party	expedition 6, first new ground: the y=19 link and the square north of the crossing
+2026-09-03	b1	6	2	1	seen	16,20	yes			party	expedition 6, first new ground: the y=19 link and the square north of the crossing
+2026-09-03	b1	6	1	1	cell	16,19	searched	wrought hanging iron	-1	Dave	prised out of the trophy room wall by the kobolds and dropped here; trodden into the packed dirt for days. Dave recovered it. Scrap value only.
+2026-09-03	b1	6	2	1	edge	15,20,V	examined, opens WEST			Ista	DM RULING, recorded so it stays consistent: this door opens AWAY from the x=16 corridor, i.e. west into (15,20). Spiking it from the corridor side therefore needs JAMB WEDGES, the weaker method (rules/exploration.md). Ista's joinery read: no wear arc on the floor either side, dust undisturbed in the jamb sweep - NOT OPENED IN A LONG TIME.
+2026-09-03	b1	6	2	1	edge	15,20,V	closed			Torsat	pulled shut behind the party from inside the kitchen. Unlocked (B1 lock roll spent, d6=5) and unbarrable. Opens WEST into the room.
+2026-09-03	b1	6	2	1	seen	15,20	yes			party	area 2 kitchen, entered exp.6
+2026-09-03	b1	6	2	1	seen	14,20	yes			party	area 2 kitchen, entered exp.6
+2026-09-03	b1	6	2	1	seen	13,20	yes			party	area 2 kitchen, entered exp.6
+2026-09-03	b1	6	3	1	seen	12,20	yes			party	area 2, west run
+2026-09-03	b1	6	3	1	seen	11,20	yes			party	area 2, west run
+2026-09-03	b1	6	3	1	seen	10,20	yes			party	area 2, west end
+2026-09-03	b1	6	3	1	seen	9,20	yes			party	area 2, west end
+2026-09-03	b1	6	3	1	edge	9,21,H	locked			Tristle	B1 lock roll spent, d6=2 = LOCKED. DM ruling on swing, d6=2: it opens TOWARD the party, south into the stub - so the hinge knuckles are on the party's side, in reach. That makes it oilable AND removable, and floor-spikeable if they ever want it held shut.
+2026-09-03	b1	6	3	1	edge	9,21,H	spiked_shut	iron spike	2	Tristle	FLOOR SPIKES - the strong method - because this door opens TOWARD the party (rules/exploration.md). Driven gently by hand and mallet-handle, no hammering; quiet work, no extra wandering check per the standing ruling. The door was already locked; this makes it fast against anything with a key. 16 -> 14 carried.
+2026-09-03	b1	6	3	1	edge	9,21,H	lock UNTRIED			Tristle	CORRECTION 2026-09-03: Tristle examined this door and tried the LATCH only. He has NOT attempted to pick the lock. His Open Locks (35%) on this door is UNSPENT and remains available. The d6=2 logged earlier was the DOOR'S B1 lock roll (is it locked - yes), NOT a pick attempt. Do not assume it was burned.
+2026-09-03	b1	6	4	1	edge	15,20,V	spiked_shut	iron spike	2	Tristle	FLOOR SPIKES, the strong method: this door opens WEST into the kitchen, so from INSIDE it opens toward the party. (From the corridor side it would have been jamb wedges - the weak way. Same door, opposite strength, depending which side you stand on.) Driven gently by hand and mallet-handle; quiet work, no extra check. 14 -> 12 carried. AREA 2 IS NOW SEALED AT BOTH ENDS WITH THE PARTY INSIDE.
+2026-09-04	b1	6	20	1	edge	9,21,H	locked, unspiked	iron spike	-2	Tristle	both floor spikes prised out on leaving area 2. The door is still LOCKED (B1 roll spent, d6=2) and Tristle has never attempted the lock. 12 -> 14 carried.
+2026-09-04	b1	6	21	1	edge	15,20,V	open, unspiked	iron spike	-2	Tristle	both floor spikes prised out and the door opened from inside area 2. It swung quietly when first opened at round 18 and is freer now. 14 -> 16 carried. AREA 2 LEFT UNSPIKED at both ends; the north door is still locked.
+2026-09-04	b1	6	21	1	seen	16,21	yes			party	north of the crossing, exp.6
+2026-09-04	b1	6	21	1	seen	16,22	yes			party	the east-side junction north of the crossing
+2026-09-04	b1	6	22	1	cell	16,22	monster killed			party	ONE TROGLODYTE, hp 6, wandering check at round 211 (anchor 210 + jitter 1). Came out of the EAST side passage at (17,22) - it has infravision 90 ft and had watched the lantern come up the corridor. Surprised the party on a 4 (chameleon skin). Its bite took Yrtone 7->5 in the surprise round and Dave 9->6 the round after; both claws missed both rounds. STENCH: Yrtone saved 16v10, Dave saved 14v14 EXACTLY, Torsat FAILED 11v14 - one round of -1 STR, 13->12, restored 10 rounds after. Killed in one round: Dave natural 20 for 10, Torsat natural 20 for 5, Tristle 19v19 with a non-proficient spear for 3. It carried no weapon. XP 36 + 2/hp = 48, PENDING until the party emerges.
+2026-09-04	b1	6	23	1	seen	16,23	yes			party	the north corridor, exp.6
+2026-09-04	b1	6	23	1	seen	16,24	yes			party	the north corridor, exp.6
+2026-09-04	b1	6	23	1	seen	16,25	yes			party	the north corridor, exp.6
+2026-09-04	b1	6	23	1	seen	16,26	yes			party	the north corridor, exp.6
+2026-09-04	b1	6	23	1	seen	16,27	yes			party	the north corridor, exp.6
+2026-09-04	b1	6	23	1	seen	16,28	yes			party	the north corridor, exp.6
+2026-09-04	b1	6	23	1	seen	16,29	yes			party	the north corridor, exp.6
+2026-09-04	b1	6	24	1	seen	17,29	yes			party	the y=29 corridor behind area 5, exp.6
+2026-09-04	b1	6	24	1	seen	18,29	yes			party	the y=29 corridor behind area 5, exp.6
+2026-09-04	b1	6	24	1	seen	19,29	yes			party	the y=29 corridor behind area 5, exp.6
+2026-09-04	b1	6	24	1	seen	20,29	yes			party	the y=29 corridor behind area 5, exp.6
+2026-09-04	b1	6	24	1	seen	21,29	yes			party	the y=29 corridor behind area 5, exp.6
+2026-09-04	b1	6	24	1	seen	22,29	yes			party	the y=29 corridor behind area 5, exp.6
+2026-09-04	b1	6	24	1	seen	23,29	yes			party	the y=29 corridor behind area 5, exp.6
+2026-09-04	b1	6	24	1	seen	24,29	yes			party	the y=29 corridor behind area 5, exp.6
+2026-09-04	b1	6	24	1	edge	24,29,H	oiled, open			Ista	hinges oiled with 2 turns of oil off the broached flask and left to soak 5 rounds; it now swings silently. B1 lock roll spent, d6=3 = NOT locked. Opens TOWARD the y=29 corridor, so the pins are on the party's side - which is the only reason oiling it was possible at all. Tristle's Open Locks still UNSPENT.
+2026-09-04	b1	6	25	1	edge	24,29,H	spiked_shut	iron spike	2	Tristle	JAMB WEDGES - the weak method - because from INSIDE the room this door opens AWAY from the party, into the y=29 corridor. The player identified that correctly unprompted. Driven gently; quiet work, no extra check. 16 -> 14 carried. The hinges are oiled so it is silent either way now.
+2026-09-04	b1	6	25	1	seen	24,30	yes			party	the empty room north of the y=29 corridor
+2026-09-04	b1	6	25	1	seen	24,31	yes			party	the empty room north of the y=29 corridor
+2026-09-04	b1	6	25	1	seen	25,30	yes			party	the empty room north of the y=29 corridor
+2026-09-04	b1	6	25	1	seen	25,31	yes			party	the empty room north of the y=29 corridor
+2026-09-04	b1	6	25	1	edge	24,29,H	spiked shut, sill blocked			party	CLOAKS JAMMED ALONG THE LOWER EDGE at round 245. There is a REAL GAP under this door (d6=2) - so the lit lantern inside had been showing a line of light out into the y=29 corridor, which is almost certainly how FOUR GIANT RATS found the party at round 244. Same technique the party used on area 29's sill in expedition 4. The rats worked at the bottom corner for about three turns (d6=3) and drifted off. The door never moved.
+2026-09-04	b1	6	36	1	edge	24,29,H	open, unspiked, sill clear			Tristle	both jamb wedges recovered and the cloaks pulled out of the gap on leaving. 14 -> 16 carried. Door is oiled, unlocked and silent; the gap under it is open again, so the lantern will show a line of light under it whenever it is shut with a light inside.
+2026-09-04	b1	6	37	1	cell	24,29	monster killed			party	FOUR GIANT RATS, wandering check fired round 244 while the party was sealed in area 36 - they found the light leaking under the spiked door and worked at the sill for three turns before drifting off. Still in the corridor at round 360; SURPRISED (d6=1) when the oiled door opened onto them at 20 ft east. Killed to the last in the free round by five missiles: Dave short bow 13v13 for 6, Tristle natural 20 for 4 and 18v10 for 1, Yrtone sling 18v13 for 3; Dave's second arrow a natural 1. NO BITES LANDED - no disease exposure at all. XP 7+1/hp each = 38, PENDING.
+2026-09-04	b1	6	37	1	cell	24,29	monster killed			party	FOUR ORCS, wandering check round 365, closed out of the dark from the east - they saw the lantern with infravision and covered the ground at a run, so the party was SURPRISED (d6=2). None carried the party's stolen spears (d6=5). Surprise round: two blows wide, one took Torsat 6->3. Round 367: party won initiative 6v5, FRYTHON'S SLEEP ended it - centred 15 ft east of Dave so the 15-ft radius caught all four orcs; Torsat clear by five inches (d6=3), YRTONE CAUGHT (d6=1), Dave in by construction. 4d4=8 affected, six creatures in the circle, all six down. Torsat slew one sleeping orc (PHB: 1 per slayer per round). Blartho healed Torsat 5 rolled, capped to full.
+2026-09-04	b1	6	37	1	cell	25,29	looted			party	FOUR ORC BODIES in the y=29 corridor. Round 368: Torsat, Tristle and Dellie each slew one sleeping orc (1 per slayer per round, PHB p.68). Pockets, MM treasure type L individually: 10 + 5 + 6 + 7 = 28 ELECTRUM = 14 gp. NOT YET PICKED UP. XP 10 + 1/hp each (DMG App.E p.208, the expedition-5 precedent) = 40 + 14 hp = 54, PENDING.
+2026-09-04	b1	6	38	1	edge	24,29,H	spiked_shut	iron spike	4	Tristle	FOUR jamb wedges this time, not two - from inside the room the door opens AWAY, so jamb is the only option and the party doubled up. Driven gently by hand and mallet-handle; quiet work, no extra check. CLOAKS JAMMED UNDER THE LOWER EDGE again: there is a real gap and a lit lantern shows a line of light through it, which is how four giant rats found them at round 244. 14 -> 10 carried.
+2026-09-04	b1	6	65	1	edge	24,29,H	open, unspiked, sill clear			Tristle	all FOUR jamb wedges recovered and the cloaks pulled from the sill after the 4.5-hour rest. 10 -> 14 carried.
+2026-09-04	b1	6	65	1	cell	24,29	bodies removed			orcs	THE FOUR ORC BODIES ARE GONE. Retrieved during the party's rest by others of their kind - Tristle heard several sets of feet and then prolonged dragging, going away EAST, and chose not to wake the party. Drag marks east. The giant rats were left and have been partly eaten. THE ORCS NOW KNOW something killed four of them in this corridor, and they came within ten feet of a spiked door with the party behind it. They did not try the door.
+2026-09-04	b1	6	66	1	area	36	cached	sack of prised ironwork	1	party	CACHED on the floor of the empty room, door closed behind (not spiked). ~15-20 lb of hinge pins, nails, brackets and two trophy-room wall-irons, taken off an orc at round 371. Left because it is heavy and near worthless as scrap; the information it carried has been taken. NOTE: it is recognisably ORC-COLLECTED and their own - anything that opens this door finds its dead men's sack on the floor.
+2026-09-04	b1	6	66	1	seen	25,29	yes			party	east end of the y=29 corridor
+2026-09-04	b1	6	66	1	seen	26,29	yes			party	east end of the y=29 corridor
+2026-09-04	b1	6	66	1	seen	27,29	yes			party	east end of the y=29 corridor
+2026-09-04	b1	6	66	1	seen	27,30	yes			Dave	seen by lantern-light from the corner at (27,29); nobody has walked it
+2026-09-04	b1	6	66	1	seen	28,30	yes			Dave	seen by lantern-light from the corner at (27,29); nobody has walked it
+2026-09-04	b1	6	66	1	seen	29,30	yes			Dave	seen by lantern-light from the corner at (27,29); nobody has walked it
+2026-09-04	b1	6	66	1	seen	28,30	revert			party	RETRACTED 2026-09-04. Marked seen on the strength of Dave 'peeking round the corner' - but I had moved him INTO (27,30) to make that description work. The player meant him to lean out from (27,29), and from there the rock at (28,29) blocks the line down the east arm entirely. He never saw these squares.
+2026-09-04	b1	6	66	1	seen	29,30	revert			party	RETRACTED 2026-09-04. Marked seen on the strength of Dave 'peeking round the corner' - but I had moved him INTO (27,30) to make that description work. The player meant him to lean out from (27,29), and from there the rock at (28,29) blocks the line down the east arm entirely. He never saw these squares.
+2026-09-04	b1	6	67	1	seen	27,30	yes			party	the east arm, seen from (27,30)
+2026-09-04	b1	6	67	1	seen	28,30	yes			party	the east arm, seen from (27,30)
+2026-09-04	b1	6	67	1	seen	29,30	yes			party	the east arm, seen from (27,30)
+2026-09-04	b1	6	67	1	seen	29,31	yes			party	the east arm, seen from (27,30)
+2026-09-04	b1	6	67	1	seen	29,31	revert			party	RETRACTED 2026-09-04, second time in three exchanges. Marked seen from (27,30), but (29,31) is round a SECOND corner - the arm runs east along y=30 and turns north at (29,30). Nothing at (29,31) or its north wall is visible from (27,30).
+2026-09-05	b1	6	70	1	cell	29,31	trap JAMMED OPEN	iron spike	2	Dave and Torsat	THE AREA 36 PIT TRAP IS HELD OPEN. Third attempt. Torsat, stripped of mail and roped, triggered it and caught himself on a 10-ft pole laid ACROSS the 10-ft corridor (sides against the rising slabs, not ends bridging the 4-ft gap - the player's own construction). He braced with his legs to buy a window; Dave dropped the rope on seeing him safe and drove TWO iron spikes into the seam on the east side. The counterweights came up against the iron and stopped. Attempts 1 and 2 failed: the brace alone loses to the counterweights (they do not tire), and on attempt 2 the pole skidded and went down the shaft - IT IS FLOATING IN THE POOL, so the party below now has two poles. NOT PERMANENT: two spikes against a counterweighted stone floor.
+2026-09-05	b1	6	70	1	area	36	cache recovered	sack of prised ironwork	-1	Dave	CORRECTION: the sack did NOT stay cached here. Dave fetched it out to weight himself down as Torsat's anchor at the pit trap, and it came back with the party. It is carried.
+2026-09-05	b1	6	70	1	edge	24,29,H	spiked_shut	iron spike	4	Tristle	FOUR jamb wedges from inside area 36 again (it opens away from the room). Dave's and Torsat's cloaks jammed under the sill to kill the light-line - the same gap that brought four giant rats to this door earlier. 12 -> 8 carried.
+2026-09-05	b1	6	155	1	edge	24,29,H	open, unspiked	iron spike	-4	Tristle	four jamb wedges and both cloaks recovered on leaving area 36 for the last time. 8 -> 12 carried. THE THREE SPIKES HOLDING THE PIT TRAP OPEN AT (29,31) ARE STILL THERE - 60 ft east, not retrieved.
+2026-09-05	b1	6	155	1	edge	24,29,H	ledger correction	iron spike	-2	claude	LEDGER CORRECTION 2026-09-05, player-prompted audit. The turn-36 recovery row ('open, unspiked, sill clear') was logged WITHOUT --item/--qty, so the two jamb wedges from the party's first stay in area 36 were never credited back. They were recovered; the narration says so. This row books them.
+2026-09-05	b1	6	155	1	edge	24,29,H	ledger correction	iron spike	-4	claude	LEDGER CORRECTION 2026-09-05. Same fault at turn 65: four jamb wedges recovered, row logged with no qty. Books them. (24,29,H) now nets to ZERO, which is correct - the party recovered every spike it ever put in that door.
+2026-09-05	b1	6	70	1	cell	29,31	trap JAMMED OPEN	iron spike	1	Dave	LEDGER CORRECTION 2026-09-05. Dave seated a THIRD spike in the trap seam once the jam held and there was no time pressure (1d4=1 extra). Only the first two were logged. THREE spikes hold that trap open, not two.

@@ -1,0 +1,20 @@
+number	locations	notes
+38	straddles: (21,12) (22,12)	ACCESS ROOM; "3" in (21,12), "8" spans the 21/22 ruling
+39	(27,11)	NOT PRINTED ON THE SHEET. Only 18 of the 19 lower-level areas carry a number; 39 (MUSEUM) has none. Anchor inferred from the text: the level has exactly TWO finished rectilinear rooms ("except for the two rooms on this level which are more like those in the upper portion"), 38 is the western one, so 39 is the 4x2 room at x=26-29 y=10-11 entered from the south at (27,9). Confidence 6, not 10.
+40	(31,5)	SECRET CAVERN; both digits inside x=31
+41	straddles: (19,4) (20,4)	CAVERN
+42	straddles: (15,8) (16,8)	WEBBED CAVE
+43	(8,13)	CAVERN; both digits inside x=8
+44	straddles: (17,11) (18,11)	CAVERN
+45	straddles: (15,15) (16,15)	CAVERN OF THE MYSTICAL STONE
+46	(13,16)	SUNKEN CAVERN; both digits inside x=13, the "6" reaching the 13/14 ruling
+47	straddles: (19,16) (20,16)	CAVERN
+48	(15,26)	ARENA CAVERN; both digits inside x=15
+49	straddles: (25,16) (26,16)	PHOSPHORESCENT CAVE
+50	straddles: (27,34) (28,34)	WATER PIT
+51	(31,27)	SIDE CAVERN
+52	(32,34)	RAISED CAVERN
+53	(23,40)	GRAND CAVERN OF THE BATS; both digits inside x=23
+54	straddles: (8,28) (9,28)	TREASURE CAVE
+55	straddles: (4,37) (5,37)	EXIT CAVE
+56	(3,20)	CAVERN OF THE STATUE

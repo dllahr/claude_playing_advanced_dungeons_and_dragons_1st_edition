@@ -1,0 +1,46 @@
+# Human corrections to the extracted map. APPLIED LAST by build_dmg.py, so these
+# always win over whatever the classifier decided.
+#
+# This file exists because build_dmg.py rebuilds dmg.sqlite from scratch every
+# run. A correction made directly in the database is destroyed by the next
+# build; a correction recorded here survives, and doubles as a regression set --
+# after any threshold change, re-run and confirm none of these had to move.
+#
+# what   x   y   orient  value    who      note
+#   what:  cell | edge | room
+#   orient: V (east side of x,y) | H (north side of x,y) | - for cells
+#   value:  cell -> open|solid|mixed     edge -> open|wall|door|secret|archway
+#           room -> the label text, with x,y its anchor cell
+#   who:    initials, so a disputed call can be traced back
+#
+# Tile numbers below refer to images/10_review_sheet.png (see review_index.txt).
+#
+# --- resolved from the contact sheet: a printed numeral overlapping the rock,
+#     which merges into the rock mass and makes an open square read as mixed ---
+cell	4	5	-	open	claude	tile #17: the "32" numeral, not rock
+cell	29	14	-	open	claude	tile #19: the "35" numeral, not rock
+cell	9	21	-	open	claude	tile #20: the "29" numeral, not rock
+cell	5	24	-	open	claude	tile #22: an "S" secret-door marker, not rock
+#
+# --- from dlwork/archive/2026-08-23_dmg_lv1_notes.txt, reviewed against the sheet ---
+# concealed doors: the legend defines C = CONCEALED DOOR; the C is drawn into the wall
+edge	19	28	H	concealed	dl	room 9 south wall, C drawn into the wall
+edge	18	16	V	concealed	dl	C in the east wall
+edge	22	12	H	concealed	dl	C in the north wall
+edge	32	9	V	concealed	dl	read as a plain door, is concealed
+edge	31	9	V	concealed	dl	read as a plain door, is concealed
+# secret doors marked by a printed S, which no rock-based classifier can see
+edge	15	38	H	secret	dl	the S drawn in (15,39) marks its SOUTH wall
+edge	31	4	V	secret	dl	west side of (32,4); read as a plain door
+# walls fabricated by a numeral or marker bridging into the rock
+edge	4	4	H	open	dl	spurious: the "32" numeral bridged the south wall
+edge	4	5	V	open	dl	spurious: same numeral, east wall
+edge	29	13	H	open	dl	spurious: the "35" numeral bridged the south wall
+edge	29	14	V	open	dl	spurious: same numeral, east wall
+edge	9	21	V	open	dl	spurious: the "29" numeral, east wall
+edge	9	20	H	open	dl	spurious: the "29" numeral, south wall
+# the hand-inked heavy graph-square border round the trap door at (23,18)
+edge	22	17	V	open	dl	spurious west wall on the "18" square
+# the stream drawing read as doors in the west wall of room 2
+edge	6	38	V	open	dl	stream drawing, not a door
+edge	6	39	V	open	dl	stream drawing, not a door

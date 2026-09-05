@@ -1,0 +1,358 @@
+# Human corrections for B1 Quasqueton LOWER level (level 2).
+#
+# SEPARATE FILE ON PURPOSE. build.apply_corrections(db, file, level) stamps
+# EVERY row at the level it is passed -- there is no level column -- so sharing
+# b1_corrections.tsv between the two sheets would silently write level 1's
+# coordinates onto level 2. Keep them apart.
+#
+# columns: what<TAB>x<TAB>y<TAB>orient<TAB>value<TAB>who<TAB>note
+#   what   = cell | edge | feature | member | room
+#   orient = V (east side of x,y) | H (north side of x,y) | - for cells
+#
+# Applied THREE times by the rebuild: after build, after markers.py --apply,
+# and after extents.py --apply (which clears cells.room).
+
+# ---------------------------------------------------------------------------
+# 1. FALSE WALLS: the middle-half window misses an oblique cave opening
+#
+# extract._edge samples the middle HALF of a boundary (trim=0.25) and takes the
+# MEDIAN of that window. On the upper level, where a doorway is cut in the
+# middle of a straight wall, that is right. On a CAVERN sheet it is not: the
+# floor crosses a grid line wherever the cave happens to run, and very often
+# that is within a couple of feet of the cell CORNER. The window then sees
+# nothing but rock, `gap` is 0, and the boundary falls through to `wall`.
+#
+# Measured instead over the FULL boundary length: perpendicular rock thickness
+# at every pixel, and the longest RUN of positions thinner than 4.5 px (the
+# printed-ruling band). That run is, in feet, how wide the opening actually is.
+#
+#   wall edges between two walkable squares      268
+#     clear run 0-2 px   (rock spans it)         100   left alone
+#     clear run 3-7 px   (ambiguous)              43   left alone
+#     clear run >= 8 px  (>= 2 ft of open floor) 125   OPENED, below
+#
+# Validated by eye: all 125 were rendered as crops of the printed page with the
+# boundary drawn on (scratchpad lv2/runs8_0..2.png) and in every one the white
+# cave floor visibly crosses the line. A stratified control sample of 18 more
+# at run 0-7 (lv2/val_runs.png) showed rock spanning the boundary in each.
+#
+# Three sub-causes are worth naming, because they are the same class of error
+# the upper level's audit found and they will recur:
+#   * an AREA LABEL straddling a cell boundary. label_boxes shields a cell's
+#     INTERIOR (inset 0.15) but not its border, so the half of a straddling
+#     numeral that sits near the boundary joins the rock mass and fabricates a
+#     wall between the two squares of its own room: (4,37,V) under "55",
+#     (8,28,V) under "54", (17,11,V) under "44", (19,16,V) under "47",
+#     (21,12,V) under "38", (15,15,V) under "45", (15,8,V) under "42".
+#   * a drawn SYMBOL doing the same: the statue at (3,18,H), the covered pit
+#     at (7,22)-(8,23), the pool contours at (29,33)-(29,35).
+#   * mining gear drawn inside area 38.
+edge	9	43	H	open	claude-2026-09-03	full-boundary clear run 13 px = 3.2 ft; thick=24 hole=0
+edge	24	43	V	open	claude-2026-09-03	full-boundary clear run 9 px = 2.2 ft; thick=22 hole=0
+edge	27	43	V	open	claude-2026-09-03	full-boundary clear run 14 px = 3.5 ft; thick=18 hole=0
+edge	29	43	H	open	claude-2026-09-03	full-boundary clear run 9 px = 2.2 ft; thick=10 hole=0
+edge	13	40	H	open	claude-2026-09-03	full-boundary clear run 12 px = 3.0 ft; thick=24 hole=0
+edge	13	39	H	open	claude-2026-09-03	full-boundary clear run 13 px = 3.2 ft; thick=24 hole=0
+edge	4	37	V	open	claude-2026-09-03	full-boundary clear run 9 px = 2.2 ft; thick=8 hole=0
+edge	9	37	V	open	claude-2026-09-03	full-boundary clear run 13 px = 3.2 ft; thick=14 hole=0
+edge	11	37	V	open	claude-2026-09-03	full-boundary clear run 11 px = 2.7 ft; thick=24 hole=0
+edge	18	36	H	open	claude-2026-09-03	full-boundary clear run 12 px = 3.0 ft; thick=10 hole=0
+edge	15	35	V	open	claude-2026-09-03	full-boundary clear run 8 px = 2.0 ft; thick=16 hole=0
+edge	30	35	H	open	claude-2026-09-03	full-boundary clear run 8 px = 2.0 ft; thick=24 hole=14
+edge	12	34	V	open	claude-2026-09-03	full-boundary clear run 12 px = 3.0 ft; thick=14 hole=0
+edge	14	34	V	open	claude-2026-09-03	full-boundary clear run 10 px = 2.5 ft; thick=10 hole=0
+edge	16	34	H	open	claude-2026-09-03	full-boundary clear run 12 px = 3.0 ft; thick=16 hole=0
+edge	17	34	H	open	claude-2026-09-03	full-boundary clear run 8 px = 2.0 ft; thick=24 hole=0
+edge	21	34	V	open	claude-2026-09-03	full-boundary clear run 13 px = 3.2 ft; thick=8 hole=0
+edge	23	34	H	open	claude-2026-09-03	full-boundary clear run 11 px = 2.7 ft; thick=18 hole=0
+edge	27	34	V	open	claude-2026-09-03	full-boundary clear run 8 px = 2.0 ft; thick=8 hole=9
+edge	10	33	V	open	claude-2026-09-03	full-boundary clear run 8 px = 2.0 ft; thick=24 hole=0
+edge	11	33	V	open	claude-2026-09-03	full-boundary clear run 9 px = 2.2 ft; thick=24 hole=0
+edge	15	33	V	open	claude-2026-09-03	full-boundary clear run 8 px = 2.0 ft; thick=16 hole=0
+edge	21	33	H	open	claude-2026-09-03	full-boundary clear run 11 px = 2.7 ft; thick=18 hole=0
+edge	5	32	H	open	claude-2026-09-03	full-boundary clear run 13 px = 3.2 ft; thick=24 hole=0
+edge	26	32	V	open	claude-2026-09-03	full-boundary clear run 12 px = 3.0 ft; thick=24 hole=0
+edge	5	31	H	open	claude-2026-09-03	full-boundary clear run 8 px = 2.0 ft; thick=24 hole=0
+edge	26	31	H	open	claude-2026-09-03	full-boundary clear run 12 px = 3.0 ft; thick=15 hole=0
+edge	13	30	V	open	claude-2026-09-03	full-boundary clear run 13 px = 3.2 ft; thick=24 hole=0
+edge	14	29	V	open	claude-2026-09-03	full-boundary clear run 12 px = 3.0 ft; thick=18 hole=0
+edge	25	29	H	open	claude-2026-09-03	full-boundary clear run 11 px = 2.7 ft; thick=20 hole=0
+edge	7	28	V	open	claude-2026-09-03	full-boundary clear run 11 px = 2.7 ft; thick=7 hole=0
+edge	8	28	V	open	claude-2026-09-03	full-boundary clear run 9 px = 2.2 ft; thick=7 hole=0
+edge	14	28	V	open	claude-2026-09-03	full-boundary clear run 10 px = 2.5 ft; thick=10 hole=0
+edge	7	27	H	open	claude-2026-09-03	full-boundary clear run 11 px = 2.7 ft; thick=21 hole=0
+edge	7	27	V	open	claude-2026-09-03	full-boundary clear run 10 px = 2.5 ft; thick=15 hole=0
+edge	8	27	V	open	claude-2026-09-03	full-boundary clear run 12 px = 3.0 ft; thick=11 hole=0
+edge	9	27	H	open	claude-2026-09-03	full-boundary clear run 9 px = 2.2 ft; thick=15 hole=0
+edge	14	27	H	open	claude-2026-09-03	full-boundary clear run 10 px = 2.5 ft; thick=19 hole=0
+edge	29	27	V	open	claude-2026-09-03	full-boundary clear run 14 px = 3.5 ft; thick=18 hole=0
+edge	10	26	H	open	claude-2026-09-03	full-boundary clear run 9 px = 2.2 ft; thick=24 hole=0
+edge	15	26	V	open	claude-2026-09-03	full-boundary clear run 14 px = 3.5 ft; thick=7 hole=9
+edge	19	26	H	open	claude-2026-09-03	full-boundary clear run 11 px = 2.7 ft; thick=24 hole=0
+edge	10	25	H	open	claude-2026-09-03	full-boundary clear run 13 px = 3.2 ft; thick=24 hole=0
+edge	27	25	H	open	claude-2026-09-03	full-boundary clear run 10 px = 2.5 ft; thick=24 hole=0
+edge	8	24	H	open	claude-2026-09-03	full-boundary clear run 14 px = 3.5 ft; thick=10 hole=0
+edge	15	24	V	open	claude-2026-09-03	full-boundary clear run 9 px = 2.2 ft; thick=24 hole=0
+edge	9	23	H	open	claude-2026-09-03	full-boundary clear run 11 px = 2.7 ft; thick=14 hole=0
+edge	9	23	V	open	claude-2026-09-03	full-boundary clear run 12 px = 3.0 ft; thick=13 hole=0
+edge	5	22	V	open	claude-2026-09-03	full-boundary clear run 8 px = 2.0 ft; thick=24 hole=0
+edge	30	21	V	open	claude-2026-09-03	full-boundary clear run 11 px = 2.7 ft; thick=16 hole=0
+edge	7	20	V	open	claude-2026-09-03	full-boundary clear run 8 px = 2.0 ft; thick=12 hole=0
+edge	14	20	V	open	claude-2026-09-03	full-boundary clear run 8 px = 2.0 ft; thick=24 hole=0
+edge	15	20	V	open	claude-2026-09-03	full-boundary clear run 12 px = 3.0 ft; thick=16 hole=0
+edge	22	20	V	open	claude-2026-09-03	full-boundary clear run 12 px = 3.0 ft; thick=12 hole=0
+edge	27	20	H	open	claude-2026-09-03	full-boundary clear run 12 px = 3.0 ft; thick=12 hole=0
+edge	4	19	V	open	claude-2026-09-03	full-boundary clear run 9 px = 2.2 ft; thick=7 hole=0
+edge	6	19	V	open	claude-2026-09-03	full-boundary clear run 12 px = 3.0 ft; thick=24 hole=0
+edge	10	19	V	open	claude-2026-09-03	full-boundary clear run 12 px = 3.0 ft; thick=24 hole=0
+edge	11	19	V	open	claude-2026-09-03	full-boundary clear run 9 px = 2.2 ft; thick=24 hole=0
+edge	12	19	V	open	claude-2026-09-03	full-boundary clear run 9 px = 2.2 ft; thick=24 hole=0
+edge	15	19	H	open	claude-2026-09-03	full-boundary clear run 14 px = 3.5 ft; thick=6 hole=0
+edge	23	19	H	open	claude-2026-09-03	full-boundary clear run 8 px = 2.0 ft; thick=11 hole=0
+edge	3	18	H	open	claude-2026-09-03	full-boundary clear run 11 px = 2.7 ft; thick=18 hole=9
+edge	8	18	H	open	claude-2026-09-03	full-boundary clear run 13 px = 3.2 ft; thick=24 hole=0
+edge	12	18	V	open	claude-2026-09-03	full-boundary clear run 9 px = 2.2 ft; thick=22 hole=0
+edge	13	18	H	open	claude-2026-09-03	full-boundary clear run 9 px = 2.2 ft; thick=7 hole=0
+edge	23	18	V	open	claude-2026-09-03	full-boundary clear run 12 px = 3.0 ft; thick=24 hole=0
+edge	26	18	V	open	claude-2026-09-03	full-boundary clear run 11 px = 2.7 ft; thick=24 hole=0
+edge	8	17	V	open	claude-2026-09-03	full-boundary clear run 12 px = 3.0 ft; thick=23 hole=0
+edge	15	17	V	open	claude-2026-09-03	full-boundary clear run 8 px = 2.0 ft; thick=24 hole=0
+edge	16	17	V	open	claude-2026-09-03	full-boundary clear run 9 px = 2.2 ft; thick=24 hole=0
+edge	17	17	V	open	claude-2026-09-03	full-boundary clear run 10 px = 2.5 ft; thick=25 hole=0
+edge	5	16	V	open	claude-2026-09-03	full-boundary clear run 11 px = 2.7 ft; thick=11 hole=0
+edge	19	16	V	open	claude-2026-09-03	full-boundary clear run 13 px = 3.2 ft; thick=10 hole=0
+edge	23	16	H	open	claude-2026-09-03	full-boundary clear run 12 px = 3.0 ft; thick=22 hole=0
+edge	5	15	H	open	claude-2026-09-03	full-boundary clear run 14 px = 3.5 ft; thick=8 hole=0
+edge	7	15	H	open	claude-2026-09-03	full-boundary clear run 13 px = 3.2 ft; thick=8 hole=0
+edge	7	15	V	open	claude-2026-09-03	full-boundary clear run 14 px = 3.5 ft; thick=25 hole=0
+edge	10	15	V	open	claude-2026-09-03	full-boundary clear run 12 px = 3.0 ft; thick=15 hole=0
+edge	11	15	V	open	claude-2026-09-03	full-boundary clear run 12 px = 3.0 ft; thick=10 hole=0
+edge	13	15	H	open	claude-2026-09-03	full-boundary clear run 11 px = 2.7 ft; thick=8 hole=0
+edge	15	15	V	open	claude-2026-09-03	full-boundary clear run 15 px = 3.7 ft; thick=7 hole=0
+edge	20	15	V	open	claude-2026-09-03	full-boundary clear run 9 px = 2.2 ft; thick=24 hole=0
+edge	4	14	H	open	claude-2026-09-03	full-boundary clear run 15 px = 3.7 ft; thick=12 hole=0
+edge	12	14	H	open	claude-2026-09-03	full-boundary clear run 11 px = 2.7 ft; thick=13 hole=0
+edge	5	13	H	open	claude-2026-09-03	full-boundary clear run 11 px = 2.7 ft; thick=24 hole=0
+edge	8	13	V	open	claude-2026-09-03	full-boundary clear run 12 px = 3.0 ft; thick=8 hole=0
+edge	10	13	V	open	claude-2026-09-03	full-boundary clear run 10 px = 2.5 ft; thick=8 hole=0
+edge	12	13	H	open	claude-2026-09-03	full-boundary clear run 13 px = 3.2 ft; thick=8 hole=0
+edge	12	13	V	open	claude-2026-09-03	full-boundary clear run 11 px = 2.7 ft; thick=22 hole=0
+edge	13	12	V	open	claude-2026-09-03	full-boundary clear run 12 px = 3.0 ft; thick=24 hole=0
+edge	14	12	V	open	claude-2026-09-03	full-boundary clear run 13 px = 3.2 ft; thick=10 hole=0
+edge	21	12	V	open	claude-2026-09-03	full-boundary clear run 10 px = 2.5 ft; thick=12 hole=9
+edge	14	11	V	open	claude-2026-09-03	full-boundary clear run 9 px = 2.2 ft; thick=14 hole=0
+edge	17	11	V	open	claude-2026-09-03	full-boundary clear run 10 px = 2.5 ft; thick=6 hole=0
+edge	27	11	V	open	claude-2026-09-03	full-boundary clear run 9 px = 2.2 ft; thick=19 hole=0
+edge	16	10	V	open	claude-2026-09-03	full-boundary clear run 11 px = 2.7 ft; thick=24 hole=0
+edge	3	9	V	open	claude-2026-09-03	full-boundary clear run 11 px = 2.7 ft; thick=12 hole=0
+edge	7	9	V	open	claude-2026-09-03	full-boundary clear run 10 px = 2.5 ft; thick=24 hole=0
+edge	4	8	H	open	claude-2026-09-03	full-boundary clear run 11 px = 2.7 ft; thick=20 hole=0
+edge	15	8	V	open	claude-2026-09-03	full-boundary clear run 12 px = 3.0 ft; thick=10 hole=0
+edge	4	7	H	open	claude-2026-09-03	full-boundary clear run 13 px = 3.2 ft; thick=13 hole=0
+edge	18	7	V	open	claude-2026-09-03	full-boundary clear run 13 px = 3.2 ft; thick=12 hole=0
+edge	22	7	V	open	claude-2026-09-03	full-boundary clear run 12 px = 3.0 ft; thick=12 hole=0
+edge	24	7	V	open	claude-2026-09-03	full-boundary clear run 10 px = 2.5 ft; thick=24 hole=0
+edge	27	7	V	open	claude-2026-09-03	full-boundary clear run 12 px = 3.0 ft; thick=20 hole=0
+edge	11	6	V	open	claude-2026-09-03	full-boundary clear run 9 px = 2.2 ft; thick=13 hole=0
+edge	13	6	V	open	claude-2026-09-03	full-boundary clear run 11 px = 2.7 ft; thick=14 hole=0
+edge	18	6	H	open	claude-2026-09-03	full-boundary clear run 13 px = 3.2 ft; thick=9 hole=0
+edge	21	6	H	open	claude-2026-09-03	full-boundary clear run 9 px = 2.2 ft; thick=10 hole=0
+edge	23	6	H	open	claude-2026-09-03	full-boundary clear run 11 px = 2.7 ft; thick=11 hole=0
+edge	24	6	H	open	claude-2026-09-03	full-boundary clear run 10 px = 2.5 ft; thick=8 hole=0
+edge	25	6	H	open	claude-2026-09-03	full-boundary clear run 12 px = 3.0 ft; thick=8 hole=0
+edge	5	5	H	open	claude-2026-09-03	full-boundary clear run 11 px = 2.7 ft; thick=20 hole=0
+edge	10	5	V	open	claude-2026-09-03	full-boundary clear run 10 px = 2.5 ft; thick=22 hole=0
+edge	11	5	H	open	claude-2026-09-03	full-boundary clear run 11 px = 2.7 ft; thick=11 hole=0
+edge	18	5	H	open	claude-2026-09-03	full-boundary clear run 10 px = 2.5 ft; thick=18 hole=0
+edge	5	4	V	open	claude-2026-09-03	full-boundary clear run 12 px = 3.0 ft; thick=12 hole=0
+edge	6	4	H	open	claude-2026-09-03	full-boundary clear run 9 px = 2.2 ft; thick=14 hole=0
+edge	9	4	H	open	claude-2026-09-03	full-boundary clear run 10 px = 2.5 ft; thick=14 hole=0
+edge	8	3	H	open	claude-2026-09-03	full-boundary clear run 13 px = 3.2 ft; thick=24 hole=0
+edge	12	3	V	open	claude-2026-09-03	full-boundary clear run 14 px = 3.5 ft; thick=24 hole=0
+edge	13	3	V	open	claude-2026-09-03	full-boundary clear run 10 px = 2.5 ft; thick=24 hole=0
+edge	16	3	H	open	claude-2026-09-03	full-boundary clear run 12 px = 3.0 ft; thick=8 hole=0
+edge	16	3	V	open	claude-2026-09-03	full-boundary clear run 11 px = 2.7 ft; thick=14 hole=0
+
+# ---------------------------------------------------------------------------
+# 2. The nine regions reachability still could not reach after section 1.
+# Each was adjudicated on a render of the printed page (scratchpad lv2/q*.png,
+# u*.png) and gets its own reason. Two verdicts are used:
+#   - the square's floor is part of a passage    -> open the boundary it crosses
+#   - the square's floor is a wedge the grid clipped, and the real passage runs
+#     round it                                   -> the square is not floor
+# The second follows level 1's (34,13) precedent: a square that is not floor
+# should not be reachable.
+
+# (a) area 50, the WATER PIT -- 9 squares, the biggest sealed region left.
+# The POOL symbol's concentric contour strokes cross this boundary and merge
+# into the rock mask; the profile reads 6-17 px the whole way. On the page the
+# white floor runs continuously south out of the pool chamber into (29,32) and
+# on to area 51's north arm at (29,31). Without this, 50 is reachable ONLY by
+# falling through the trap in upper-level area 36, which is not what the sheet
+# draws.
+edge	29	32	H	open	claude-2026-09-03	pool contour ink read as wall; floor continuous 50 -> 51
+
+# (b) a 5 ft cave passage drawn ALONG the y=17/18 grid line, west of area 47.
+# The ruling under it measures 5-9 px UNIFORMLY over the whole boundary -- no
+# rock spans it anywhere -- which is a heavy printed line, not a drawn wall.
+# Each square holds half the passage, so the two halves came out as an island.
+edge	16	17	H	open	claude-2026-09-03	heavy ruling under a passage that runs along the grid line
+edge	17	17	H	open	claude-2026-09-03	heavy ruling under a passage that runs along the grid line
+
+# (c) the alcove at the foot of area 44. Floor continuous with 44 above; the
+# 5-9 px along the boundary is the ruling plus the ragged cave edge.
+edge	18	10	H	open	claude-2026-09-03	alcove floor continuous with area 44
+
+# (d) area 38's south-east corner. The mining rubble the text describes ("piles
+# of rock and rubble, as well as mining equipment") is drawn as a stipple that
+# the rock mask keeps, so a floor square inside the room read 23% open and
+# fenced itself off from the two room squares beside it.
+cell	24	10	-	open	claude-2026-09-03	floor of area 38 with drawn rubble on it
+edge	24	10	H	open	claude-2026-09-03	drawn rubble inside area 38 read as wall
+edge	23	10	V	open	claude-2026-09-03	drawn rubble inside area 38 read as wall
+
+# (e) the covered pit at the three-way junction east of area 56. The legend
+# symbol (upper-level sheet: PITS, COVERED) is a heavy circled X drawn across
+# the junction; its strokes merge into the rock mask and wall the junction off.
+edge	7	22	V	open	claude-2026-09-03	covered-pit symbol read as wall at the junction it marks
+
+# (f) four squares that are rock nubs, not floor: 5-8% open with rock touching
+# all four sides, and in every case the real passage runs round them.
+cell	13	43	-	solid	claude-2026-09-03	6% open wedge of area 53's floor clipped by the grid line
+cell	30	28	-	solid	claude-2026-09-03	6% open nub between area 51's two lobes
+cell	8	29	-	solid	claude-2026-09-03	7% corner clip of the area 54 corridor; it runs (8,30)-(9,30)-(9,29)
+cell	6	26	-	solid	claude-2026-09-03	8% sliver east of the area 54 approach corridor, which lies in x=5
+
+# ---------------------------------------------------------------------------
+# 3. FALSE `stairs` cell features. The stair detector counts thin parallel
+# slots across a square, which is what treads look like -- and also what the
+# door glyph, the covered-pit spokes, a secret-door S and the pool contours
+# look like. A false `stairs` invents a way off the level and `dmap.py at`
+# prints it. The two real staircases, (20,14) up to upper-level area 30 and
+# (30,36) up to area 52, are set from the key module and are left alone.
+feature	5	27	-	none	claude-2026-09-03	the rotated DOOR glyph, not treads
+feature	8	23	-	none	claude-2026-09-03	the covered-pit spokes, not treads
+feature	9	36	-	none	claude-2026-09-03	the secret-door S at the east end of the 54 corridor
+feature	22	8	-	none	claude-2026-09-03	a drawn glyph in the area 38 corridor, not treads
+feature	29	35	-	none	claude-2026-09-03	the pool contour lines in area 50
+
+# ---------------------------------------------------------------------------
+# 4. The two boundaries the mis-placed secret doors used to sit on. With the
+# doors moved to the rock bars they are actually drawn on (see b1_lv2_key.py,
+# SECRET_EDGES), these two are ordinary cave floor and must be open, or area
+# 53's west arm and the hidden corridor's east half are sealed for no reason.
+edge	13	39	V	open	claude-2026-09-03	area 53's floor reaches west into (13,39); the S is on a bar inside the square
+edge	9	36	V	open	claude-2026-09-03	the corridor runs on east into the cave; the S is on a bar inside the square
+
+# ---------------------------------------------------------------------------
+# 5. THE DOOR AUDIT. All 37 `door` edges and all 4 `secret` edges were examined
+# on a crop of the printed page with the boundary drawn on
+# (scratchpad lv2/doors_0.png, doors_1.png), and 41 of them were additionally
+# measured with the INK PROFILE -- perpendicular ink thickness at 19 points
+# along the boundary, spanning 1.5 squares so the wall either side of the glyph
+# is in view (CHECKLIST.md section 10).
+#
+# FOUR door glyphs are printed on this sheet. That is all. The other 33 `door`
+# calls are the enclosed-white test firing on something else, and on a CAVERN
+# sheet that something else is nearly always a drawn annotation:
+#
+#   13  the VEGETATION north of the map frame -- foliage encloses white by the
+#       hundred. All outside the drawn frame, so none of them was ever
+#       load-bearing, but `dmap.py at` would have printed them.
+#    3  area 53's alcove of rock PILLARS, the "very meager catacomb"
+#    3  area 50's POOL contour lines
+#    2  the COVERED PIT symbol at the junction east of area 56
+#    2  area 38's drawn mining equipment
+#    1  area 54's drawn chests
+#    1  the MYSTICAL STONE drawn in area 45
+#    2  scenery east of the frame
+#    5  plain irregular cave wall with no glyph on the page at all
+#    1  the FOUR UPWARD STEPS to area 52, which is a way through but not a door
+#
+# KEPT AS DOORS -- the four printed glyphs, each the sheet's double-leaf
+# rectangle, each in a neck between two rock masses:
+#   (5,27,H)   rotated 45 deg, on the corridor west of area 54
+#   (16,20,H)  rotated 45 deg, on the diagonal neck south of area 47
+#   (27,26,H)  upright, straddling the boundary at the neck north of area 51
+#   (21,8,V)   upright, in the corridor south of area 39   *** LEAST CERTAIN:
+#              see the report. It is drawn 0.34 squares east of the boundary,
+#              in open corridor floor with no wall to straddle, and area 38's
+#              contents include "rock carts". Kept because the glyph is the
+#              sheet's door glyph and because door and open are both passable,
+#              so nothing about the route depends on the call.
+#
+# NO FALSE DOOR (a box on one side of an unbroken wall) is printed anywhere on
+# this sheet, and no covered pit but the one at (8,22).
+edge	7	47	V	wall	claude-2026-09-03	NOT A DOOR: the VEGETATION drawing north of the map frame; its enclosed white reads as a door glyph (run=0px)
+edge	8	47	V	wall	claude-2026-09-03	NOT A DOOR: the VEGETATION drawing north of the map frame; its enclosed white reads as a door glyph (run=7px)
+edge	10	47	V	wall	claude-2026-09-03	NOT A DOOR: the VEGETATION drawing north of the map frame; its enclosed white reads as a door glyph (run=0px)
+edge	11	47	V	wall	claude-2026-09-03	NOT A DOOR: the VEGETATION drawing north of the map frame; its enclosed white reads as a door glyph (run=3px)
+edge	13	47	V	wall	claude-2026-09-03	NOT A DOOR: the VEGETATION drawing north of the map frame; its enclosed white reads as a door glyph (run=4px)
+edge	9	46	H	wall	claude-2026-09-03	NOT A DOOR: the VEGETATION drawing north of the map frame; its enclosed white reads as a door glyph (run=5px)
+edge	10	46	H	wall	claude-2026-09-03	NOT A DOOR: the VEGETATION drawing north of the map frame; its enclosed white reads as a door glyph (run=3px)
+edge	10	46	V	wall	claude-2026-09-03	NOT A DOOR: the VEGETATION drawing north of the map frame; its enclosed white reads as a door glyph (run=0px)
+edge	11	46	V	wall	claude-2026-09-03	NOT A DOOR: the VEGETATION drawing north of the map frame; its enclosed white reads as a door glyph (run=0px)
+edge	12	46	H	wall	claude-2026-09-03	NOT A DOOR: the VEGETATION drawing north of the map frame; its enclosed white reads as a door glyph (run=0px)
+edge	11	45	H	wall	claude-2026-09-03	NOT A DOOR: the VEGETATION drawing north of the map frame; its enclosed white reads as a door glyph (run=4px)
+edge	11	45	V	wall	claude-2026-09-03	NOT A DOOR: the VEGETATION drawing north of the map frame; its enclosed white reads as a door glyph (run=11px)
+edge	11	44	H	wall	claude-2026-09-03	NOT A DOOR: the VEGETATION drawing north of the map frame; its enclosed white reads as a door glyph (run=0px)
+edge	30	36	V	stairs	claude-2026-09-03	the FOUR UPWARD STEPS from area 53 up to area 52 (B1 p.24); even hatching, the upper-level legend's STAIRS UP
+edge	30	35	V	wall	claude-2026-09-03	NOT A DOOR: the stair hatching / pool contours beside area 50 (run=4px)
+edge	16	34	V	open	claude-2026-09-03	NOT A DOOR: plain cave wall; no glyph on the page (run=11px)
+edge	22	34	V	open	claude-2026-09-03	NOT A DOOR: plain cave wall; no glyph on the page (run=15px)
+edge	13	33	H	wall	claude-2026-09-03	NOT A DOOR: area 53's alcove of rock PILLARS ("a very meager catacomb") (run=0px)
+edge	15	33	H	wall	claude-2026-09-03	NOT A DOOR: area 53's alcove of rock PILLARS; ink profile lift +18, the flat-and-elevated furniture signature (run=2px)
+edge	16	33	H	wall	claude-2026-09-03	NOT A DOOR: area 53's alcove of rock PILLARS (run=4px)
+edge	27	33	V	open	claude-2026-09-03	NOT A DOOR: inside room 50; area 50's POOL contour lines, an annotation the rock mask kept (run=5px)
+edge	28	33	V	open	claude-2026-09-03	NOT A DOOR: inside room 50; area 50's POOL contour lines, an annotation the rock mask kept (run=0px)
+edge	32	31	V	wall	claude-2026-09-03	NOT A DOOR: scenery outside the drawn map frame (run=8px)
+edge	10	29	H	open	claude-2026-09-03	NOT A DOOR: a drawn CHEST in area 54 ("three locked chests") (run=10px)
+edge	32	25	V	wall	claude-2026-09-03	NOT A DOOR: scenery outside the drawn map frame (run=4px)
+edge	7	23	V	open	claude-2026-09-03	NOT A DOOR: the COVERED PIT symbol, whose heavy strokes wall off the junction it marks; the corridor runs straight through (run=0px, but the ink is the glyph)
+edge	8	22	H	open	claude-2026-09-03	NOT A DOOR: the COVERED PIT symbol; the south arm of the junction runs through it (run=0px, but the ink is the glyph)
+edge	7	19	H	open	claude-2026-09-03	NOT A DOOR: plain cave wall; no glyph on the page (run=13px)
+edge	18	18	V	open	claude-2026-09-03	NOT A DOOR: plain cave wall; no glyph on the page (run=8px)
+edge	15	16	V	open	claude-2026-09-03	NOT A DOOR: the MYSTICAL STONE drawn in area 45, plus the "45" label (run=8px)
+edge	19	12	V	open	claude-2026-09-03	NOT A DOOR: drawn mining equipment inside area 38; both squares are room floor (run=6px)
+edge	22	12	H	open	claude-2026-09-03	NOT A DOOR: drawn mining equipment in area 38 (run=11px)
+edge	15	11	H	open	claude-2026-09-03	NOT A DOOR: plain cave wall; no glyph on the page (run=15px)
+
+# ---------------------------------------------------------------------------
+# WHERE THIS LEFT THE LEVEL, 2026-09-03
+#
+#   corrections applied            177
+#   cells   solid 754   open 556   mixed 418   (of 1,728; 451 are outside the
+#                                               drawn frame -- the vegetation
+#                                               drawing and the sheet border)
+#   edges   wall 2069  open 1378  door 4  secret 4  stairs 1
+#   walkable 923   reached 925*   UNREACHED 0     from the level-1 stairs (20,13)
+#
+#   * `reached` exceeds `walkable` by 2 because dmap.reachable's corner step for
+#     passage='diagonal' does not re-check that the destination is walkable, so
+#     it counts two squares this file has set to `solid`. Pre-existing in
+#     dmap.py, harmless here, worth knowing before the number is compared.
+#
+# THE SECRET-DOOR SEAL TEST. Seal each secret edge in a COPY and re-flood:
+#
+#   (30,6,H)   area 40 -> 13 squares cut off, area 40 among them.  LOAD-BEARING
+#   (7,36,V)   nothing                                             not load-bearing
+#   (9,35,H)   nothing                                             not load-bearing
+#   (13,38,H)  nothing                                             not load-bearing
+#
+# That is a finding about the MAP, not about the extraction. Only area 40 is
+# actually sealed behind its secret door on the printed sheet. The hidden
+# corridor 55 - 54 - 53 is a SHORTCUT: the caverns loop, and areas 54, 55 and
+# 56 are all reachable the long way round, through the covered-pit junction at
+# (7,23)-(8,22). Do not tell a player that the treasure cave can only be found
+# through a secret door; the map does not say so.
+#
+# ROOM EXTENTS ARE THE WEAK PART OF THIS LEVEL AND SHOULD NOT BE QUOTED.
+# extents.py splits room from corridor on "a room contains a 2x2 block of open
+# floor and a corridor does not", and grows areas from their labels by nearest-
+# seed BFS. On a stronghold that is right. On a cavern nothing is rectilinear,
+# every wide bulge in a winding passage passes the 2x2 test, and the growth
+# runs until it meets another label. The result: area 51 gets 96 squares and
+# area 53 gets 180, while 44 gets 2 and 50 gets 4. 175 squares come out "wide
+# but unlabelled". The module gives no room dimension anywhere on this level,
+# so there is nothing to cross-check against either. Treat `cells.room` here as
+# "nearest numbered area", not as "this square is inside room N".

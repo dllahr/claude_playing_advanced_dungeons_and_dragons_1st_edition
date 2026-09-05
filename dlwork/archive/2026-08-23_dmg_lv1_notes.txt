@@ -1,0 +1,46 @@
+Notes on comparing ASCII art rendering of evaluation of DMG p95 map to original.
+
+# corrections
+* in the ASCII there is "sec" in the square at (15,39) but this should be a secret door on the wall to the south of this square - wall that is the boundary between (15,39) and (15,38)
+* (7,36) is annotated as a stair but it is not - this is tough I believe the text says it is a pool connected to the stream
+* (7,38) and (7,39) are annotated as having doors on their west side, but they do not - this is tricky, this is a drawing of the stream that runs through this room that is mentioned in the text and appears in the level key on the previous page
+* (6,37) (6,38), (6,39) are labeled as uncertain this is because they are next to the stream (on their east side) and are partially open partially rock, and the rock is uneven, not a straight line
+* in room 9 - (19,29) in the south wall there is a concealed door, the wall in the map has the letter "C" drawn into it.  This symbol is mentioned in the legend key.  
+* (23,18) there should be an "X" indicating a trap door.  The walls that are present around this square are not real, they are artifacts of someone drawing the original map by handand making a heavier line around the border of the graph paper square.  The square immediately to the south (23,17) has the number "18" in it (correct) but a wall on the west side of the square which is incorrect.
+* (12,24) has "sec" written in it but there is already a secret door annotated on the north wall of this square and the map is empty
+* (9,21) is annotated as having walls and doors on it's east and south sides, it does not
+* (5,24) is annotated at stairs with door to the north and wall to the east.  It's tricky:  on the real map it has a wall cutting through the square at 45 degrees (northwest to southeast) and a secret door in that wall.  This is not described in the text so there's no help for you to catch it.
+* starting at (5,27) on the real map there is a diagonal (southwest to northeast) stairway going down - another tricky one.  You've annotated this as uncertain and doorways.  FYI The full set of squares containing this diagonal stairway are: (5,27) (6,27) (6,28) (7,28) (7,29)
+* (4,5) is labeled with the number "32" - correct - but has walls on its south and east sides which is not correct
+* (18,16) has a concealed door in the wall on the east side of this square
+* (22,12) has a concealed door in the wall on the north side of this square
+* there are stairs in (17,3)
+* there is a half-width corridor heading north-south with stairs at (16,2)
+* (29,14) is labelled with "35" which is correct but is also surrounded by walls on all 4 sides which is incorrect, it does not have walls on the south and east sides
+* (32,9) has doors on its east and west side but these should be concealed doors
+* (32,4) should a secret door in its west side instead of a regular door
+
+# things to check and confirm
+* stairs at (12,43) do not connect to (12,44).  This might be tough to pick up from the map but should be clear from the text
+* (12,39) says "1" but is actually "1A" - maybe that doesn't fit in the ASCII art
+* the room labeled 38 is drawn as a circle on the map leading to the uncertain/part filled squares at: (32,7) (33,8)
+* the square labeled 39 is correct, matches the map, but it is not a real room, this is the map maker just labeling the nearby corridor with a 39
+* these are regions that you have marked uncertain which is understandable because they are rock for half or more of the width/area of the square:
+  * (16,19) (15,19) (14,19) (14,20) 
+  * (19,16) (19,15) (20,15) (21,15) (22,15) (22,14) (22,13)
+  * (16,3) (17,3) (18,3) 
+  * (19,3) (20,3) (20,4) (21,4) (21,5) (22,5)
+  * (29,17) (29,18)
+  * (27,17) (27,18)
+  * (32,17) (33,17) (34,17)
+  * (26,4) (25,4)
+
+* these squares you've annotated as uncertain are diagonal passageways or where the rock otherwise cuts across the square at ~45 degree angle:  
+  * (5,14) (4,14) (4,15) (3,15) 
+  * (3,24)
+  * (5,7) (5,8) (4,8) (4,9)
+  * (9,12) (9,10) (10,11), (10,9) (11,8) (12,9) (12,7) (13,8) (13,6) (14,7) (14,5)
+  * (19,9), (18,8).  This diagonal passage actually inclues half of each of these squares:  (16,7) (17,7) (17,8) (18,8) (18,9) (19,9)
+
+* these are diagonal and half width corridors - there each entry is continuous / connected even though many entries only touch on their diagonals:
+  * (22,7) (23,8) (24,9) (24,10) (25,10)

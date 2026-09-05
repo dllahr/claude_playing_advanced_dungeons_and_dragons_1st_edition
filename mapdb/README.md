@@ -1,0 +1,747 @@
+# mapdb — reading dungeon maps off scanned pages
+
+Turns a scanned graph-paper dungeon map into a queryable grid: one row per 10'×10'
+square, one row per boundary between squares, with a confidence score on every call.
+
+Built as a practice run on the **DMG sample dungeon** (DMG pdf page 96, printed 95)
+before applying the same pipeline to B1.
+
+```bash
+conda activate advanced_dnd_1e
+python -m pytest -q                    # 134 tests
+```
+
+Outputs live under `output/<map>/`; code, key modules and correction files stay
+at the top level. Every tool takes `--help`.
+
+## Running it on each map
+
+The same code drives both sheets. Nothing is forked -- the differences are all
+options, and each was **measured on the sheet** rather than guessed. Run
+`build.py --help` for the full set.
+
+| option | DMG | B1 | why |
+|---|---|---|---|
+| `--channel` | `mean` | **`r`** | B1 is printed in blue. Blue ink absorbs red, so the red channel roughly doubles the ink/paper contrast (5th percentile 12 vs 109). |
+| deskew | none applied | **-0.37 deg applied** | B1's sheet is genuinely rotated: +0.37 deg, monotonic across 3, 5 and 7 bands. The DMG reports -0.015 deg *non*-monotonic, which is fit noise, and is correctly left alone. Automatic either way. |
+| `--t-thick` | `4.5` | **`6.0`** | Where a boundary stops being a printed ruling and starts being a drawn wall. DMG: rulings 0-3 px, walls 6+. B1's heavier blue line: rulings 0-3 px, walls 7-18, empty gap at 4-6. |
+| `--key` | `dmg_key` | `none` yet | The DMG's key module carries hand-verified labels and the node graph from the module text. B1's is not written yet. |
+| `--max-off-line` (markers) | not needed | **`0.30`** | B1 draws every table, bed and barrel, all in thin strokes, which swamps the marker detector (213 candidates). A door marker annotates a *wall*, so requiring it near a grid line cuts that to 103; furniture sits mid-room. |
+| symbols | `S` secret, `C` concealed, boxed `X`/`S` traps | `S` secret, one-way secret, false door | Different legends. B1 has no concealed door. B1 draws doors as white shapes *reversed out of* the wall band but secret doors as dark `S` glyphs *on* it, so the two need different detectors. |
+
+### Rebuild both maps
+
+**Use `./rebuild.sh` rather than the commands below.** The step order is
+load-bearing and `extents.py --apply` was being left out of the by-hand
+sequence, which leaves `cells.room` covering only the label squares -- 58 of
+B1's 1,196 -- while everything still looks fine.
+
+```bash
+./rebuild.sh both        # build -> markers -> extents -> world replay -> check
+./rebuild.sh b1
+```
+
+It ends by printing the two reachability counts as regression checks: DMG **21**
+unreached of 641, B1 **4** of 1,196.
+
+The individual commands, for reference:
+
+### DMG sample dungeon (the validated practice case)
+
+```bash
+python build.py --plots                                  # -> output/dmg/
+python dmap.py render output/dmg/dmg.sqlite 1
+python dmap.py reach  output/dmg/dmg.sqlite 1 --from-room 1
+python review.py                                         # contact sheet for QC
+python markers.py --db output/dmg/dmg.sqlite             # secret-door detector
+```
+
+### B1, Quasqueton upper level
+
+```bash
+B1="../modules/tsr09023 -In Search of the Unknown .pdf"
+python build.py --pdf "$B1" --page 1 --channel r --t-thick 6.0 --boxr 0.50 \
+    --key b1_key --corrections b1_corrections.tsv \
+    --db output/b1/b1.sqlite --level 1 \
+    --name "B1 Quasqueton, upper level" --images output/b1/images
+python markers.py --db output/b1/b1.sqlite --key none --pdf "$B1" --page 1 \
+    --from-cell 16 1 --max-off-line 0.30 \
+    --sheet output/b1/images/20_markers.png --apply
+python highlight.py --db output/b1/b1.sqlite --pdf "$B1" --page 1 --channel r \
+    --from-cell 16 1 --out output/b1/images/21_unreachable.png \
+    --index output/b1/unreachable.txt
+python dmap.py reach output/b1/b1.sqlite 1 --from-cell 16 1
+```
+
+`b1_key` supplies the label positions and the extent cross-checks, but it has
+no `MARKERS` block, so `markers.py` runs with `--key none` and proposes them
+itself. Reachability starts from an explicit cell rather than a room anchor:
+(16,1), just inside the ENTRANCE, which the sheet prints across (15,0)-(17,0).
+
+## Coordinates
+
+`x` increases **east**, `y` increases **north**, origin at the south-west corner of
+the map sheet. Edges are stored once, canonically: `orient='V'` is the **east** side
+of `(x,y)`, `orient='H'` the **north** side. The cell↔edge relation is the `cell_edges`
+VIEW, computed rather than stored, so it cannot drift out of sync.
+
+## Why it is not just a brightness threshold
+
+Four things all look like "dark pixels" and each needed its own discriminator.
+
+**1. Rock vs printed annotation — connectivity.**
+Room numbers are black marks sitting inside white rooms; a naive threshold reads the
+numeral "10" as half a square of rock. But the rock is one huge connected mass while a
+numeral is a blob of a few hundred pixels, so keeping only dark components of ≥900 px
+yields the rock and the discarded remainder is the annotation layer (0.47% of the page).
+This moved ~20 numbered rooms from "mixed" to "open".
+
+**2. Ruling vs drawn wall — stroke thickness.**
+The sheet is printed graph paper, so a ruling runs along *every* boundary and joins the
+rock mass; coverage cannot separate them. Thickness can. Measured perpendicular to the
+boundary and taken as a median along it, rulings are 0–3 px at 200 dpi and drawn wall
+bars are 6+ px, with the 4–5 px range essentially empty (323 vs 21 of 357 open–open
+boundaries). Threshold 4.5 px.
+
+**3. Door vs wall — topology.**
+Doors are drawn as small outlined rectangles straddling a boundary, so in the rock mask
+they are thick too. But an outline *encloses white* and a filled bar does not. The
+largest enclosed-white region in a box on the boundary midpoint is either 0 or ≥50 px —
+nothing in between.
+
+**4a. Wall vs partial square — does the rock SPAN the boundary?**
+Median thickness answers "how thick is the rock here", which is the wrong
+question where two half-filled squares meet: rock covering part of a boundary
+still leaves a way through. `gap` measures the fraction of the boundary length
+the rock does *not* block, and a boundary with a quarter of it clear is open.
+Using the median alone severed seven passages that plainly connect on the page.
+
+**4. Door vs staircase — hole shape.**
+Stair treads are a ladder of slots and also enclose white. They are long and thin
+(4–5 px × 30 px, aspect 5.6–7.8) where a door leaf is compact (~15×8, aspect ≤ 2.8).
+Filtering on aspect ≤ 3.5 removed four phantom doors stacked in the stairwell at (12,41–43).
+Stairs are picked up separately by counting rock/void alternations across a square.
+
+## Grid registration
+
+Pitch and phase come from maximising gradient energy on candidate grid lines:
+**40.45 px × 40.65 px at 200 dpi** = 0.2 inch = standard 5-squares-per-inch graph paper.
+The fit is verified by drawing it back onto the page (`images/01_grid_overlay.png`).
+
+Rotation is checked by fitting the x-phase in three horizontal bands; a *monotonic*
+drift means the sheet is skewed. The DMG sheet gives −0.015°, i.e. square. **B1's sheet
+is visibly rotated and will need the correction applied**, not just measured.
+
+## Terrain classes
+
+| class | meaning | confidence |
+|---|---|---|
+| `solid` | rock fills the square | 10 (8 if not quite pure) |
+| `open`  | floor fills the square | 10 (8 if not quite pure) |
+| `mixed` | rock covers part of it — diagonal passage, cave wall, irregular chamber edge | **3, always** |
+
+`t_solid` is **0.05**, not a round number. A full-width 45-degree corridor
+leaves only about a quarter of a square open, and at the original 0.25 those
+squares were called solid and the corridor came out in disconnected pieces.
+1006 of 1680 squares measure *exactly* 0.000, so anything with measurable floor
+in it is not rock.
+
+`mixed` is not a failure; the 10' grid genuinely cannot express a diagonal. These 76
+cells are exactly what `lowconf` surfaces for a human to check, and they cluster where
+they should: the staircases, the cave and stream by area 2, and the long diagonal
+corridors in the south.
+
+## Two independent readings
+
+`dmg_key.py` holds the node graph built from the **key text alone**, never from the
+image. `build_dmg.py` then cross-checks the two. This is the point of the exercise: a
+disagreement means one of the readings is wrong, and it is much easier to find that way
+than by re-deriving geometry ad hoc under narrative pressure.
+
+The check already paid: the text says area 3 "appears to be a dead end" with a secret
+door in its **south** wall leading to 24. The grid independently shows a passage running
+south from area 3 at x=12 — correct topology — but had classified that boundary as
+ordinary open floor, because the secret door is marked by a printed `S` that lives in the
+annotation layer, invisible to a rock-based classifier. The `S` at (12,24) confirms it.
+
+**Secret doors cannot be read from the rock mask and must come from the text or from the
+`S` markers.** That is a standing limitation, not a bug to fix.
+
+## Labels
+
+`ocr_labels.py` separates digits into whole labels and runs tesseract over each. On the
+DMG map it got roughly 70% right: it misses numerals printed over the rock (29, 32, 35 —
+they merge into the rock mass and never reach the ink layer), reads partial numbers
+("11"→"1", "14"→"4", "36"→"6"), and calls the boxed secret-door `S` an "18". So OCR
+**bootstraps** the label table and the results are then checked by eye against a QA
+montage (`images/09_label_qa.png`). The corrected table lives in `dmg_key.py`.
+
+Room anchors are the cell holding the printed label, **not** the room's extent: on these
+maps rooms and corridors are both plain white, so the boundary between them is a reading
+of the key text rather than a drawn feature.
+
+## Images
+
+| file | what |
+|---|---|
+| `01_grid_overlay.png` | fitted grid drawn back onto the page |
+| `02/03_zoom_*.png` | magnified corners confirming registration |
+| `04_ecdf_white.png` | ECDF + histogram of cell openness |
+| `05_bimodality.png` | Otsu separability vs openness |
+| `06_classified.png` | terrain classes tinted over the map |
+| `07_rock_vs_ink.png` | rock (blue) vs annotation (red) |
+| `08_final.png` | final classification |
+| `09_label_qa.png` | montage for checking OCR by eye |
+
+## Legend symbols, and rotation
+
+`symbols.py` crops templates from the map's own LEVEL KEY and matches them over
+the annotation layer. Two things make it work:
+
+**A negative class.** Matching S and C against nothing but each other makes
+every digit score as one or the other — a rotated "2" resembles an S more than
+it resembles a C, so it wins by default. 23 of 59 marks came back as secret
+doors. The verified ROOMS table supplies labelled examples for free (the marks
+in area 23's anchor square are, left to right, a "2" and a "3"), so digit
+templates are *learned from the map itself*. False positives fell to one.
+
+**Asymmetric rotation.** Printed numbers are never rotated; legend symbols
+routinely are, and one S on this sheet stands at 45° against a diagonal wall.
+So digits are matched upright only and symbols swept through 24 angles. That
+asymmetry is what stops an upright "5" being claimed by a rotated S — the digit
+matches its own template near 1.0. The winning angle is kept, since it says
+which wall a marker belongs to.
+
+Glyphs are normalised (cropped to ink, scaled to a common canvas, centred)
+before comparison, so the score measures shape rather than size or position.
+
+## The stream
+
+Water is drawn as a winding band through the rock and is not a corridor. Its
+squares have a distinctive signature — `sides=NSWE`, rock touching all four
+borders, because the thread never reaches an edge cleanly — which is exactly
+the opposite of a diagonal passage (rock on two *adjacent* sides). It is
+excluded from the walkable network; without that it contributes fourteen
+unreachable squares that are not rooms at all.
+
+## Reachability — the strongest single check
+
+Every non-solid square should be reachable from the entrance, through doors,
+secret doors and trap doors. A square that is not is either genuinely isolated
+or, far more often, evidence of a wall the extractor invented or a door it
+missed.
+
+```bash
+python dmap.py reach dmg.sqlite 1 --from-room 1
+```
+
+It is a *global* check, which is what makes it valuable: it needs no reference
+map and it catches errors anywhere on the sheet, including ones sitting in
+squares the confidence score was happy about.
+
+On the DMG sheet it went 70 unreachable -> 24 across Phase 1, and the 24 that
+remain are all correct:
+
+| squares | why unreachable |
+|---|---|
+| 11 | area 29, the treasury — behind the secret door at 28, which the map draws as a **door in a 45° wall inside one square**. The schema has no way to say that. |
+| 6+1 | the area 39 corner: stairs and a half-width corridor. The sole exception predicted in advance. |
+| 4 | the stairwell between areas 4 and 5, reached only through the two **secret trap doors** flanking it. |
+| 2 | two squares of a half-width diagonal whose rock sides are not the adjacent-pair pattern. |
+
+The first and last are honest modelling gaps rather than misreadings, and both
+are about geometry finer than a 10' square.
+
+A corner step is allowed between two cells that both carry `passage='diagonal'`.
+Full-width diagonals do not need it -- they clip the neighbouring squares and
+the chain is orthogonally contiguous -- but a **half-width** 45-degree corridor
+connects only at the corner, and the squares that would bridge it orthogonally
+measure 0-3% open. Marking those walkable would invent floor that is not on the
+page.
+
+## Tests
+
+```bash
+python -m pytest -q            # everything
+python -m pytest -q -m "not integration"    # skip the real-PDF tests
+```
+
+`tests/synth.py` draws maps with planted ground truth -- known pitch, known
+skew, a numeral overlapping rock, stair hatching, door glyphs, wall bars. Tests
+that only ever compare against the real DMG page can check that today's output
+matches yesterday's; they cannot check that the output is *right*. The
+synthetic maps can.
+
+The suite found four real bugs on first run: `concealed` and `trap_door` were
+missing from the schema's edge-kind constraint, `reachable()` accepted a
+`diagonal` flag it never honoured, and the synthetic generator itself painted
+rock across the whole sheet so `find_field` saw the page as the map.
+
+## B1 (Quasqueton) — what differs from the DMG sheet
+
+```bash
+python build.py --pdf "../modules/tsr09023 -In Search of the Unknown .pdf" \
+    --page 1 --channel r --t-thick 6.0 --db b1.sqlite --level 1 \
+    --name "B1 Quasqueton, upper level"
+python markers.py --db b1.sqlite --pdf "<same>" --page 1 \
+    --from-cell 16 1 --max-off-line 0.30 --apply
+```
+
+Five things had to change, and each was measured rather than guessed:
+
+**Blue ink.** B1 is printed in blue. Blue absorbs red, so the RED channel
+separates ink from paper about twice as well as the mean does (5th percentile
+12 vs 109). `--channel r`.
+
+**The sheet is rotated.** +0.37 degrees, monotonic across 3, 5 and 7 bands --
+unmistakable next to the DMG's non-monotonic -0.015. That is ~10 px of drift
+over the height of the map, a quarter of a square, so it is corrected rather
+than merely noted. After `-0.37` the residual is -0.03 and non-monotonic.
+
+**Heavier line weight.** Rulings 0-3 px, walls 7-18 px, gap at 4-6. The DMG
+separates at 4.5; B1 needs 6.0. Always plot the histogram on a new sheet.
+
+**Different symbol scheme.** B1's legend has no concealed door; it has FALSE
+DOOR and ONE-WAY SECRET DOOR instead. More importantly its doors are drawn as
+white shapes REVERSED OUT of the wall band, while its secret doors are dark S
+glyphs drawn ON the band -- so the hole test finds the first pair and the
+thin-stroke detector finds the second.
+
+**The rooms are furnished.** B1 draws every table, bed and barrel, all in thin
+strokes, so the marker detector's precision collapses without a positional
+constraint: 213 candidates. A door marker annotates a WALL, so requiring it to
+lie within 0.30 of a square of a grid line cuts that to 103 while keeping the
+markers -- furniture sits out in the middle of a room.
+
+## Stairs are a way through
+
+Found while chasing B1's entrance corridor, which came out sealed off from the
+other 1200 squares of the level. A staircase is drawn as a ladder of treads,
+which reads as *thick* to the thickness test and as a *stack of doors* to the
+hole test, so both rejected it and the boundary fell through to `wall`.
+
+Adding `stairs` as a passable edge kind took B1 from **30 reachable squares to
+1161**, and the DMG from 24 unreachable to 21. It is the single largest
+correctness fix in the project, and the reachability check is what surfaced it.
+
+## Two bugs worth remembering
+
+**A tool must reproduce the build's grid exactly.** `markers.py` re-rendered the
+page with its own defaults -- mean channel, no deskew -- while B1's database had
+been built from a red-channel, deskewed render. The grids disagreed by up to a
+quarter of a square, so every marker it found was attributed to the wrong edge.
+It looked like success: the run reported markers applied and regions opened.
+
+The fix is structural rather than a flag: `levels` now stores `pdf`, `page`,
+`dpi`, `channel` and `deskew_deg`, and every tool that reopens the page reads
+them back. Re-running the marker pass afterwards applied *four* markers instead
+of seven and reached MORE squares -- three of the original seven were spurious.
+
+**`--apply` mutates the database, so it is not idempotent.** Running it twice
+gives different answers, because the second run sees the regions the first one
+opened. Always rebuild before applying.
+
+## What the image cannot tell you
+
+B1 draws some interior features -- floor mats, a raised stage, a rock outcrop --
+as **dotted rectangles**, and the dots have merged in the scan. Measured against
+the whole population of genuine walls between two open squares:
+
+| | min thickness |
+|---|---|
+| real walls (n=545) | p25 = 8, p50 = 8, p75 = 8 |
+| the dotted features | 6 - 8 |
+
+They are indistinguishable, and rendering at 400 dpi does not separate them
+either -- the source scan has already merged the dots. This is not a threshold
+that needs tuning; it is information the image does not carry. It has to come
+from the module text, which describes area 37's mats as "20' by 20'" -- exactly
+the 2x2 footprint the extractor sealed off.
+
+## Drawn furniture reads as a door — run `doorcheck.py` and look at the sheet
+
+The single most damaging error this pipeline makes. Six of B1's furnished rooms
+-- 9, 23, 24, 25, 27, 28 -- shipped **fabricated doors**: a drawn bed cut area 24
+in half, area 25's lobes came out as five doors, area 27's dais as four. Every
+one was found *during play*, by the player noticing the printed map did not match
+what the DM had narrated. A fabricated door invents a passage the party can be
+walked down.
+
+No threshold separates them. Area 24's two fabrications measured thickness 9 and
+10 with hole 134, against the genuine door beside them at 7 and 187 -- the fakes
+sat closer to the middle of the door band than the real door did. `thick` cannot
+work here, because with `half=0.30, trim=0.25` it samples a band 0.5 cell long
+centred on the boundary, which is **entirely inside the door glyph**: it has
+always measured the drawing, never the wall.
+
+What does separate them is structural, and the player supplied it:
+
+> *"the furniture lines only exist on one side of the wall, unlike the doors
+> that go through the wall"*
+
+`extract.door_suspect` measures exactly that, in two parts:
+
+- **`wall`** -- median perpendicular rock on the boundary *beside* the glyph
+  (0.55-1.05 cells either side). A drawn wall bar is 8-26 px; furniture inside a
+  room sits on a 2-4 px graph-paper ruling. No wall, no door.
+- **`offset`** -- how far the glyph's enclosed-white centroid lies from that
+  measured bar, in cells. Doors the party has walked through: <= 0.13.
+  Fabrications abutting a real wall: 0.14-0.35.
+
+Both are measured against the **bar found on the flanks**, not the nominal grid
+line -- a few px of grid-fit and deskew error is a large fraction of an 8 px
+glyph, and two earlier attempts that split about the grid line failed completely
+(see `lab_notebook.md`).
+
+```bash
+python doorcheck.py --pdf "$B1_PDF" --page 1 --channel r --t-thick 6.0 \
+    --boxr 0.50 --key b1_key --sheet output/b1/images/30_doors.png
+```
+
+On B1 level 1 it keeps **7 of 7** doors the party has physically walked through
+and rejects **9 of 16** confirmed fabrications. It is a **sieve, not a
+classifier**: it misses about a third, and the `ok` list still contains scenery
+curves and shelving.
+
+**A `no wall` flag alone is weak; `one-sided` is strong.** `_flank` samples the
+boundary 0.55-1.05 cells either side of the glyph, so where a wall is only ONE
+SQUARE long -- a stub of jamb between two openings -- both flanks land in open
+floor and a genuine door is flagged "no wall". Area 29's real door `(23,6,V)`
+does exactly this: flank 2.0 px, but `offset` 0.09 and `hole` 193, both
+door-perfect. When only `no wall` fires and `offset` is under about 0.10, look at
+the crop: that is a door in a short wall more often than it is furniture.
+
+**So it flags and draws; it never reclassifies.** The contact sheet is the
+deliverable -- every door call as a crop of the printed page with the boundary
+marked -- because reading that sheet is what actually found all six rooms, and it
+found them faster than any number did. The verdict is human and goes in
+`b1_corrections.tsv`, which always wins. `rebuild.sh` runs it as a review step.
+
+## A 45-degree wall is invisible to an edge model — run `diagcheck.py`
+
+`edge_stats` asks *"how much rock lies along this grid boundary"*, and a wall
+drawn at 45 degrees answers *"none"* while completely blocking passage: the rock
+sits **inside** the square. So `extents.py` floods straight through it. B1's
+area 34 came out as 41 squares holding the Room of Pools' own markers, and it
+was found **in live play**, with the party standing in it.
+
+The full study, including the model options that were rejected, is in
+`DIAGONAL_WALLS.md`. The one general rule:
+
+> A diagonal wall is invisible to a boundary-based model precisely when the space
+> on the far side of it is FLOOR rather than ROCK.
+
+That is why the DMG sheet never showed this and B1 did — every DMG diagonal is
+the flank of a corridor cut through rock, so the neighbouring cells read `solid`
+and `classify_edge` short-circuits to `wall` on terrain alone.
+
+**Lowering `--t-thick` cannot reach these.** The twelve partition cells sit on 47
+boundaries whose median thickness is 2.0 px — dead centre of the printed-ruling
+band. They are not walls measured thin; there is no wall on the boundary at all.
+
+`extract.diagonal_stat` measures instead a **Radon transform restricted to the
+two angles the sheet uses**: project the cell's rock along constant `row+col` and
+constant `col-row` and take the strongest line over the cell side. A band drawn
+corner to corner projects onto one diagonal index for its whole length, so the
+peak reaches 1.0; furniture is short, curved or off 45 degrees. Gated on rock
+fraction 0.15–0.45, because a corner wedge's hypotenuse is a 45-degree line too
+and only gets long enough to score by filling the square.
+
+| B1 level 1, 1,358 in-frame cells | peak / cell side |
+|---|---|
+| the 12 adjudicated diagonal walls | **0.90 – 1.00** |
+| the 7 adjudicated false positives | 0.33 – 0.83 |
+| control cells, rock 10–45% (n=295) | p50 0.23, p90 0.50 |
+
+Precision 0.92, recall 1.00. `extract.side_classes` asks the independent
+topological question — *which of the square's four sides are mutually reachable
+through its own floor* — and 0.85 / 0.92; the conjunction is 1.00 / 0.92, and the
+one it drops, (5,27), is a real wall. So the detector reports both.
+
+```bash
+python diagcheck.py --pdf "$B1_PDF" --page 1 --channel r --t-thick 6.0 \
+    --boxr 0.50 --key b1_key --db output/b1/b1.sqlite \
+    --sheet output/b1/images/31_diagonals.png
+```
+
+**It flags and draws; it never reclassifies**, for `doorcheck.py`'s reason. It
+prints the hits, the topology verdict, the room on each side of the wall (the
+same area on both sides is a room that has flooded through it) and the `edge`
+corrections each hit implies — for a human to accept. `--db` is opened
+**read-only**; nothing here writes to a database. `rebuild.sh` runs it as a
+review step.
+
+Two things the image cannot supply: **which side of the wall owns the square**
+(the band runs through the centre, so the offset carries no signal — it is a
+reading of the room), and the extents themselves, which still need `member` rows.
+
+## Rooms versus corridors
+
+An anchor says where a label is printed; it does not say which squares are the
+room. Nothing in the image says either -- rooms and corridors are both plain
+white. But a corridor is narrow and a room is not, and on a grid that has an
+exact form:
+
+> **a corridor never contains a 2x2 block of open floor, and a room does.**
+
+Testing for the block rather than measuring a width needs no threshold and
+behaves at junctions, where a T of 1-wide corridors gives cells three open
+neighbours but still no block. Rooms then grow from their labels by
+multi-source breadth-first search inside that mask, nearest seed winning, with
+sub-locations folded into their base area so 1, 1A and 1B stay one room.
+
+Only `open` boundaries conduct. A door or a staircase is a way through but it is
+also a boundary between spaces, so a room cannot grow through one.
+
+Corridor and room are kept strictly separate -- a doorway square is corridor --
+which keeps "which squares are area 12" unambiguous, and makes the wide areas
+that end up with no label informative rather than noise.
+
+| | DMG | B1 |
+|---|---|---|
+| areas given an extent | 39 of 39 | 37 of 37 |
+| median room | 6 squares | 6 squares |
+| corridor squares | 268 of 641 | 829 of 1196 |
+| wide but unlabelled | 0 | 92 |
+
+`extents.py` must run **after** `markers.py --apply`: applying a secret door
+changes which boundaries are open, and extents depend on that.
+
+### Why both checks are needed
+
+Reachability and the size check catch **different** faults, and neither subsumes
+the other:
+
+- a fabricated **wall** seals squares off, so reachability sees it;
+- a fabricated **door** is still passable, so connectivity is undisturbed and
+  reachability is blind to it — only the room coming out the wrong size reveals it.
+
+B1's areas 17 and 18 supplied one of each, both from furniture drawn inside the
+room. Area 18's fabricated door would not have been found by any connectivity
+argument.
+
+### The size cross-check
+
+Descriptions state room dimensions, so an extent can be checked rather than
+trusted -- and this is the independent reading B1's node graph could not supply,
+since its text says how big things are but not what they connect to.
+
+Beware which dimension. Taking the first one in a description is wrong:
+B1 sizes area 37's floor mats ("measuring 20' by 20'") and an outcropping in
+area 22 before it ever sizes a room. `stated_squares()` only accepts a dimension
+with a room word within 45 characters of it.
+
+On B1 it flags three of the four areas that state a size, and the three are
+different in kind: area 22's stated 2 squares against an extracted 16 says the
+*dimension* is a feature, not the room; areas 17 and 18 disagree by 2 squares
+each and are worth a look at the walls.
+
+## Playing from the database
+
+```bash
+python dmap.py at    output/b1/b1.sqlite 1 32 13     # where am I, what are the exits
+python dmap.py path  output/b1/b1.sqlite 1 16 1 32 13   # squares, feet, turns, rounds
+python dmap.py seen  output/b1/b1.sqlite 1 --room 25 # record what the party verified
+```
+
+`seen` is DM-side only. It exists because describing geography the party has not
+verified is the specific mistake this database was built to prevent.
+
+**Rebuilding clears it.** `seen` lives in the extracted tables, so a rebuild
+wipes it, exactly like a correction made directly in SQLite. Re-run the `seen`
+calls after any rebuild, or move them into a key module if they become numerous.
+
+---
+
+# READ THE MAP'S LEGEND FIRST — B1 prints one, and it was missed
+
+**This cost 60 wrong door calls on B1 level 1.** The instruction already existed
+(`CHECKLIST.md` §10, *"Read the map's own legend before writing any classifier"*);
+it was followed for the DMG sample dungeon and **never for B1**, whose sheet
+carries its own legend at the foot of the map page (pdf page index 1).
+
+| symbol | meaning |
+|---|---|
+| a box **STRADDLING** the wall, floor showing both sides | **DOOR** |
+| an `S` set into the wall | **SECRET DOOR** |
+| an `S` with an arrow | **ONE-WAY SECRET DOOR** |
+| **a box on ONE side of an UNBROKEN wall** | **FALSE DOOR** |
+| even hatching / tapering | **STAIRS, UP / STAIRS, DOWN** |
+| a star in a circle | **STATUE** |
+| a boxed `X` | **PITS, COVERED** |
+
+### The trap in that table
+
+**A FALSE DOOR is drawn exactly like furniture-against-a-wall.** Both are a
+one-sided box on an unbroken wall. So `door_suspect`'s "one-sided" flag finds
+*both* and cannot tell them apart — **only the legend can**, and only by eye.
+B1 level 1 contains one genuine false door, at `(29,31,H)`, at the dead end of a
+corridor with two covered pits in the floor in front of it.
+
+## The ink profile — the test that works where thickness does not
+
+Thickness bands (**B1: doors 4-11, walls 7-18, printed rulings 0-3**) are a net,
+not a verdict. `(13,20,H)` measured **thick=9 at confidence 9** — dead inside the
+door band — and was a kitchen counter drawn against a solid wall.
+
+**Sample a perpendicular ink profile at ~19 points across the boundary, 200 dpi:**
+
+| | signature |
+|---|---|
+| **genuine door** | the wall value held (7-8 px) with **two narrow spikes** flanking it — the drawn box's edges |
+| **plain wall** | flat 7-8 px |
+| **furniture / false door** | flat but **ELEVATED by +3 to +8 px** over the same wall bar either side |
+
+The three doors B1's own text calls false measure the same way (+4 to +8 over
+their own wall), which is what identified a fourth.
+
+**This belongs in `extract.py`.** A working implementation is in the audit
+scratchpad as `profile.py`, alongside `crop_edge.py` (grid-annotated crops),
+`perim.py`, `border.py` and `reach2.py` (per-change reachability delta).
+
+## The 2026-09-03 audit
+
+All **106** `door` edges on level 1 examined on a rendered crop; **61** measured
+additionally with the profile. **43 kept, 62 corrected, 5 held back.**
+
+- Every kept edge was cross-checked against `campaign/world_changes.tsv` — **no
+  edge the party has physically walked through was changed.** 21 of the 43 keeps
+  are doors they have opened themselves.
+- Causes: **27 furniture**, 17 printed rulings, **9 circled floor-markers in area
+  31**, 4 floor outlines and cave channels, 2 diagonal room walls, 2 legend
+  symbols, 2 inverse errors (`wall` at exactly the 6.0 threshold, cutting area 37
+  in half).
+- **Held back:** the five edges in the strip east of area 31 — the only reason the
+  audit's reachability moved 6 → 9. The cause is the **area 33 barracks bed
+  frames**, already corrected once on 2026-08-29 for the same class of error.
+  That strip was already broken and needs its own pass.
+- Artefacts: `mapdb/output/b1/audit/` — 65 crops, `BY_CAUSE.md`, and the
+  paste-ready `proposed_corrections.tsv`.
+
+---
+
+# LEVEL 2, THE CAVERNS — built 2026-09-04, and what it taught
+
+`b1.sqlite` now holds **both** levels. Level 1: 1,665 cells, **48 doors**, 9 secret,
+**6 unreached of 1,197**. Level 2: 1,728 cells, **4 doors**, 4 secret,
+**0 unreached of 923**. Page index **2** of the module PDF, grid
+`x0=127.1 px=40.30 nx=36 | y0=89.2 py=40.05 ny=48` at 200 dpi, **no deskew** —
+the lower sheet is square on the page where level 1 has a genuine +0.37 deg skew.
+
+## THE MERGE IS PART OF `rebuild.sh` AND MUST STAY THERE
+
+**`build.py` deletes and recreates its target database.** Every run of
+`rebuild_b1` therefore destroys level 2, and **nothing fails when it does** —
+level 1's reachability, extents and door counts all still check out, so the loss
+is silent. `rebuild_b1` now rebuilds and re-merges the lower level before its
+reachability check. `merge_lv2.sql` deletes level 2 first, so it is idempotent.
+
+**`b1_corrections.tsv` has NO LEVEL COLUMN.** `apply_corrections(db, file, level)`
+stamps every row at the level you pass. Level 2 therefore has its own
+`b1_lv2_corrections.tsv` (177 rows) and its own key module `b1_lv2_key.py`.
+
+## THE SHEET HAS A SECOND LEGEND
+
+Page 1 prints DOOR / SECRET DOOR / FALSE DOOR / ONE-WAY SECRET DOOR / STAIRS /
+STATUE / PITS COVERED. **Page 2 prints a DIFFERENT one: POOL, DEPRESSION, WEBS.**
+Two legends in one module. **Check every map page for its own legend** — that is
+now twice this map has explained itself and been ignored.
+
+## `extract._edge` SAMPLES THE MIDDLE HALF OF A BOUNDARY
+
+**This is the single biggest finding of the level-2 build.** `_edge` trims 25% off
+each end of a boundary and takes the median of what remains.
+
+- **On a stronghold that is correct.** A doorway is cut in the middle of a wall.
+- **On a cavern it is wrong.** The floor crosses a grid line wherever the cave
+  happens to run — very often within a couple of feet of the cell **corner**. The
+  sampling window then sees nothing but rock and calls a wall.
+
+Measured over the **full** boundary instead (perpendicular rock thickness at every
+pixel, longest run thinner than the printed-ruling band):
+
+| `wall` edges between two walkable squares | 268 |
+|---|---|
+| clear run 0-2 px — rock genuinely spans it | 100, left alone |
+| clear run 3-7 px — ambiguous | 43, **left alone and still uncertain** |
+| **clear run >= 8 px (2+ ft of open floor)** | **125, OPENED** |
+
+That one pass took the unreached count from **90 in 28 regions to 18**. All 125
+were rendered and confirmed by eye; a stratified control of 18 more at run 0-7
+showed rock spanning the boundary every time.
+
+### A real bug inside that: `label_boxes` does not shield a cell's BORDER
+
+It insets by 0.15, so an area numeral **straddling two squares** has the half near
+the boundary join the rock mask, and **fabricates a wall between two squares of
+its own room.** Seven cases on level 2 — under the labels for areas 38, 42, 44,
+45, 47, 54 and 55. Drawn symbols do the same: the statue at (3,18,H), the covered
+pit at (7,22)-(8,23), area 50's pool contours.
+
+## SECRET DOORS ON A CAVERN SHEET ARE NOT ON GRID LINES
+
+The module says the secret doors *"are either rock or disguised by rock so as to
+appear unnoticeable"*, **and that is literally how they are drawn: each `S` sits
+on a plug of rock INSIDE a square.** Placing them on the boundary the glyph looks
+nearest leaves them bypassable, because the cave floor runs round through the
+corner of the next square.
+
+**How it was caught: sealing all three changed reachability by ZERO squares.**
+Sample the rock mask at 16 points per square, find which row or column of the
+square is solid across, and put the door on the boundary the blocked passage
+actually crosses.
+
+And a fact about the map rather than the extraction: **only one of the four
+secret doors seals anything.** (30,6,H) cuts off 13 squares; the other three are
+shortcuts, because the caverns loop.
+
+## DO NOT QUOTE LEVEL 2'S ROOM EXTENTS
+
+`extents.py` grows a room from "contains a 2x2 block of open floor". **On a cavern
+every bulge in a winding passage passes that test**, and nearest-seed growth runs
+until it meets another label: area 51 gets 96 squares, area 53 gets 180, area 44
+gets 2, area 50 gets 4, and 175 squares come out "wide but unlabelled".
+
+**Treat `cells.room` on level 2 as "nearest numbered area", NOT "inside room N".**
+
+**And the lower-level text states no room dimension anywhere**, so the
+extent-vs-stated-size cross-check — one of CHECKLIST section 7's three
+independent checks — **does not exist on this level.** Reachability and the text
+sweep carry the whole load.
+
+## No 45-degree walls at all on level 2
+
+`diagcheck.py` returns **0**: `diag_peak` max 0.83 over all 1,277 in-frame cells,
+against level 1's twelve true partitions at 0.90-1.00. The non-orthogonal
+geometry here is **curved**, which `DIAGONAL_WALLS.md` puts explicitly out of
+scope. **Different sheet, different failure mode** — do not go looking for the
+last map's bug.
+
+## KNOWN BUG in `dmap.py reach`
+
+On level 2 it reports `walkable 923 reached 925` — **reached exceeds walkable.**
+The corner step for `passage='diagonal'` does not re-check that the destination
+is walkable, so it counts two squares that are now `solid`. Pre-existing and
+harmless to routing, but it makes the headline number nonsense and will confuse
+the next reader. **Worth fixing.**
+
+## Still uncertain on level 2 — itemised
+
+1. **(21,8,V)** kept as a door: the glyph is the sheet's door glyph but sits 0.34
+   squares off the boundary in open floor with nothing to straddle, and area 38's
+   contents include *"rock carts"*. No route depends on it.
+2. The three western secret doors' **exact** boundaries — the plugs are 0.3-0.5
+   squares from the line the door was placed on.
+3. **The 43 boundaries at a 3-7 px clear run**, left as `wall`. Some are probably
+   squeezes.
+4. **The WEBS glyph** could not be found printed anywhere, though the legend
+   defines it and area 42 is the WEBBED CAVE. Left unplaced rather than guessed.
+5. Four squares called `solid` at 5-8% open: (13,43), (30,28), (8,29), (6,26).
+6. **Area 39, the MUSEUM, carries no printed number** — 18 of 19 areas are
+   labelled and it is not. Position inferred from the text, then confirmed
+   independently; recorded at **confidence 6**, not 10.
+7. `markers.py` corroborates only **one** of the four `S` glyphs; its thin-stroke
+   detector is much weaker on this sheet.
+
+*(Module typo, for the record: area 55's heading is printed "35. EXIT CAVE".)*
+

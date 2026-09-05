@@ -1,0 +1,605 @@
+# Named NPCs — Wethersby and the north road
+
+Everything here was played at the table; **none of it is DM-side secret.** It is a
+file because twenty named people appeared in nine days and a cleared context loses
+them all at once. Day numbers are per `campaign/calendar.md`, which wins any
+disagreement.
+
+**Update it when any of them does something.**
+
+---
+
+## WHERE TO FIND A PERSON — index
+
+**This file is APPEND-STRUCTURED BY DAY, so most people have two or three entries
+in different places.** Search the **bold heading** given below, not the name.
+
+| person | search for | what's there |
+|---|---|---|
+| **Ista** | `## ISTA` | **her full expedition sheet** — AC 8, hp 4, hand axe at −2, the lantern duty. Her earlier entry is in the *Wethersby* table |
+| **Hask** | `## The four off the road`, then `### HASK PUT HIS SHARE` | stats, AC 3, the shears stake, *he will not choose in an audience* |
+| **Dellie, Corm, Sarn** | `### Gear and how to run them` | the stat table for all four ex-bandits |
+| **Wend** | *Wethersby* table, then `## DAY 32` | the factorship, and why three neutral rolls in one night |
+| **Coll** | `## DAY 32`, then `### COLL — 99` | his authority, and the two men still owed |
+| **Marrow, Sim** | `## Marrow's holding`, then `## DAY 33` | the whole thread, closed |
+| **Gyll** *(= "Rell's brother")* | `### GYLL` | the restitution, and his name |
+| **Ancel** | `## DAY 32`, then `### ANCEL'S FOUR NAMES` | the four buyers |
+| **Bern, Toller, Ottir, Halm, Osk, Nan** | *Wethersby* table, then `## DAY 32` | |
+| **who is actually travelling** | `## THE LUDBURY CARAVAN` | **check this before putting anyone in a scene** |
+
+**Stats and hit points are NOT authoritative here — `campaign/characters.tsv` is,
+and `tools/hp.py` computes the current number.** This file is the *why*.
+
+---
+
+## DAVE'S TWO STANDING OBLIGATIONS
+
+### 1. Surety — day 4, before Reeve Ottir, by name and aloud
+
+Dave is **answerable for Hask, Dellie, Corm and Sarn** — his purse and his good
+name. If any of the four offends again it lands on Dave. In exchange Ottir wrote
+nothing down and tells anyone who asks that he knows all about it and it is dealt
+with. **There is nothing on paper either way.**
+
+**The condition: the four must be visibly WORKING.** Ottir's words — *"idle men in
+a market town is how this starts again."* Standing, not one-off.
+
+### 2. "Not down the hole" — day 11, to Ferd and Ged, heard by Coll and Wat
+
+*"I'll not ask that of anybody who isn't paid to take that kind of risk."*
+
+**Dave will not ask any of the hired men into the caves.** Entrance-to-town
+hauling only. A promise, not a preference; it constrains every plan involving
+them.
+
+---
+
+## The four off the road (ex-bandits)
+
+Sworn off the road **whatever happens** — the condition Dave set before offering
+anything. Met in area 7 of Quasqueton, expedition 4.
+
+| name | who | notes |
+|---|---|---|
+| **Hask** | grey-stubbled, **41**. Leader and speaker. **A road-robber since he was 19 — twenty-two years**, but never on *this* road until a week before the party met him | Confessed to Halm's face unprompted, before any money was offered. Returned 4 of the 6 gp he took from Bern out of his own boot. Reads a road like his own handwriting. Went flat and directionless once the crisis passed — *"you keep handing me the reins and I've got nothing to steer with"* |
+| **Dellie** | the woman. Spear. Sharp, says little, means it | First of the four to accept giving up the road, instantly. Decides for Hask when he can't |
+| **Corm** | quiet. Hand axe. Father was a wheelwright | Asked the one question nobody could answer: *"You can vouch for us. Can you make them take it?"* Now works Bern's bench and that satisfies Ottir's condition for him indefinitely |
+| **Sarn** | broken leg | Yrtone's last *cure light wounds* took the fever out of it; **Corvie** set the bone on night 3. On crutches Corm made him |
+| *Kell* | **dead** | Killed by the carrion crawler three days before the party met them, in the west passage off (21,22), and buried under stones at **(17,21)**. **The party killed that crawler and has never told them.** |
+
+### Gear and how to run them — **REARMOURED AT LUDBURY, day 27**
+
+**Hask and Dellie are in BANDED MAIL, bought for them at Ludbury for 180 gp the
+pair** *(d6 = 3, both gladly)*. **AC 8 → AC 4.** They were standing there and it
+was bought for them, not as cargo. `campaign/characters.tsv` now says 4.
+
+**And the two large shields off Erig's armoury wall (area 29) have been GIVEN to
+them** — day 28. **AC 4 → AC 3.** They were kept off the sale list for two
+expeditions for exactly this. No longer salvage; they are issued kit.
+
+| | AC | hp | melee | missile | mounted |
+|---|---|---|---|---|---|
+| **Hask** | **3** (banded mail + large shield) | **7** | **short sword 1-6**, or Torsat's borrowed **spear 1-6** — **no penalty on either** | **sling**, bullet **2-5**, **−2** | **yes** — the horse bought at Ludbury, ~40 gp with tack. Scouts ahead |
+| **Dellie** | **3** (banded mail + large shield) | **5** | her **spear 1-6** | **sling**, bullet **2-5**, **−2** | **yes** — the light bay bought at Marchford, 25 gp + 11 gp 5 sp tack |
+| **Corm** | 8 | 4 | hand axe 1-6 | — | in Wethersby |
+| **Sarn** | 8 | 2 | knife 1-3 | — | in Wethersby |
+
+**AC 3 is the party's own front-rank number.** Hask and Dellie are now armoured
+exactly as well as Dave and Torsat, which is worth saying out loud in the fiction
+at some point: four months ago he was robbing carters on this road in battered
+leather.
+
+**Dellie's spear and shield:** a spear is normally two hands, but 1e has no rule
+forbidding a one-handed thrust and the DMG never addresses it. **Ruled: she
+carries both and takes no penalty**, consistent with how Dave and Torsat are run.
+Recorded so it does not get re-decided differently mid-fight.
+
+**Damage from `rules/combat.md`** (PHB p.38): short sword 1-6 / 1-8 vs large,
+spear 1-6 / 1-8 and **double when set to receive a charge**, sling bullet 2-5 /
+2-7, hand axe 1-6 / 1-4, dagger-or-knife 1-4 / 1-3.
+
+### What they need to roll
+
+> ## SUPERSEDED — ALL THREE BECAME 1st-LEVEL CHARACTERS ON DAY 39
+>
+> They are no longer normal men and **no longer need hand-rolling.** They sit in
+> `campaign/characters.tsv` with classes, prime requisites and proficiencies, so
+> `tools/combat.py round --attack Hask:"short sword"` resolves them off the right
+> matrix with the right penalties. Scores were **rolled in the open** by the
+> DMG p.11 henchman method; the dice are in `rolls.tsv`.
+>
+> The 0-level tables they *used* to use — and the fact that they were on the
+> wrong one for two expeditions — are kept in **`rules/zero-level.md`**, because
+> the next NPC who joins will be 0-level too.
+
+| | **Hask** | **Dellie** | **Ista** |
+|---|---|---|---|
+| **class** | **Fighter** | **Cleric** | **Thief** |
+| STR | 11 | 11 | 12 |
+| INT | 12 | 10 | 13 |
+| WIS | 12 | **16** | 12 |
+| DEX | 11 | **4** | 13 |
+| CON | 10 | **6** | **3** |
+| CHA | 8 | 5 | 10 |
+| **AC** | 3 | **6** *(was 3 — DEX 4 costs her +3)* | 7 |
+| **hp** | 7 | 5 | 4 |
+| **hit die** | d10 | d8, −1/die | d6, −2/die |
+| **to hit AC 3** | 17 | 17 | 18 |
+| **proficiencies** | 4: short sword, spear, sling, **one open** | 2: footman's flail, sling | 2: dart, spear |
+| **non-prof. penalty** | −2 | −3 | −3 |
+| **prime req. bonus** | none | **+10% (WIS 16)** | none |
+| **next level** | 2,000 | 1,501 | 1,251 |
+
+**Dellie may not use edged weapons.** The cleric prohibition (PHB p.20) applies in
+full — **the spear she carried for two expeditions is gone.** Flail, sling, club,
+mace, staff, war hammer.
+
+**Dellie's DEX 4 also costs −2 on every missile**, applied automatically by
+`combat.py` off `rules/abilities.md`. Her sling is proficient now but still −2.
+
+**Ista's CON 3** is the lowest score in the campaign: −2 hp per die, **system
+shock 35%**, **resurrection survival 40%** — and PHB p.12 makes initial
+constitution the maximum number of times she can ever be raised. **Three.**
+
+*Why each is the class they are, and the three printed rules that left Dellie no
+choice at all, is in `rules/zero-level.md`.*
+
+### The bows are gone; the shields are still spare
+
+**Both bows went back to Torsat and Tristle on day 12** when the party left for
+Draycot. Hask and Dellie bought **slings** instead, 15 sp each with a dozen
+bullets — 3 gp the pair.
+
+**Still no helmets.**
+
+### HASK PUT HIS SHARE BACK IN — day 27
+
+**Dellie took her ~19 gp half-share in coin at Ludbury. Hask did not — he pooled
+his into the goods going north.** Not wages, not a share of somebody else's
+venture: **part-ownership of the stock, at the same risk and reward as the
+party's own money.**
+
+**Asked on day 28 which of the freight it was buying, he put it ALL IN THE
+SHEARS** *(d6 = 4)* — **19 of the 136 gp tool line, near enough one part in
+seven, about four pair.** Not spread across the cargo.
+
+**But the asking landed badly — d100 = 24.** Being made to pick in front of Wend
+and Fenn read to him as a test he could only fail, and his first answer was a
+defensive *"Same as yours. Three in the hundred of the lot. That's the answer
+that doesn't make me a fool."* He rode two hours ahead before he came back with
+the real one.
+
+> **HOW TO ASK HIM ANYTHING: he will not choose in an audience.** Give him the
+> question and then give him the road. Wend saw it instantly — *"He's not wrong
+> that it was a test. He's wrong about who was being tested."*
+
+**His reason, and he never quite says it out loud:** *"I've stood in a lot of
+yards at night. You get to know a holding by the look of it — what's kept up,
+what's let go. A man making do with a worn pair of shears has a particular kind
+of gate. I'd sooner my money went to fixing that than to spices."*
+
+**Wend told him to his face that it is the best line on the cart**, precisely so
+he could not think he had been handed a kindness. *"That wasn't why." "I know.
+That's why I said it."*
+
+Full working in `campaign/cargo_manifest.md`. **It is still only on the back of
+something in Wend's hand** — for a man who gave twenty-two years to the other
+side of unwritten promises, getting it into the fair copy matters more than the
+sum does.
+
+Set against his own line from the week they met — *"you keep handing me the reins
+and I've got nothing to steer with"* — this is the first thing he has actually
+owned. Do not make a speech about it.
+
+**Hask and Dellie ARE in `campaign/characters.tsv` with `share=half`** — DMG p.85
+halves a non-player character's experience. `earned_by: all` deliberately does
+*not* include them; they must be named on awards they were present for. See
+`rules/experience.md`.
+
+---
+
+## The four off the farms (hired on patrol)
+
+**No crime, no surety needed, and their story checks easily** (d6=1) — Rell's name
+is known and other turned-off hands are scattered about who would confirm them.
+
+| name | who | how found |
+|---|---|---|
+| **Coll** | ~40. Eleven years a hired hand for **Rell** | **Day 10.** Confessed unasked that they were waiting to rob somebody and had not, only because the road was empty. Handed Dave his billhook handle-first before walking into town. **Spotted the second pair himself next morning** |
+| **Wat** | 18, Coll's sister's boy, three years on the same land | With Coll. Would go anywhere; Coll is the one who asks the hard questions for him |
+| **Ferd** | ~30, shepherd, off a holding eight miles the far side of town | **Day 11.** Went to ground on seeing the party. **A natural 5** — the violently-hostile band — pulled to 50 by an unarmed approach and to **129 by Dave sitting down in his mail** |
+| **Ged** | ~30, Ferd's neighbour, not kin | With Ferd. *"I'd have gone down the hole and all, for a wage."* |
+
+---
+
+## Wethersby
+
+| name | who | standing |
+|---|---|---|
+| **Halm** | carter, ~50. One cart, and the mule was his whole living | Robbed by Hask's crew. Party bought him a mule (20 gp) and paid for the cloth (5 gp). Walked out to the thicket at night to face Hask, then fetched the bonesetter for Sarn unasked. **Will not lay a complaint.** Wants a load in his cart, not just hope |
+| **Bern** | joiner, ~30. Doors, stairs, cabinet work | Robbed of 6 gp and his kit, thrown in a ditch because it was heavy. Party bought a new kit (30 gp) and set him up (22 gp). **Will not go near the caves, without shame.** Teaches the party to dismantle furniture free. **Has no room for more hands** (d6=6) — one wedding commission and Corm is all he can carry |
+| **Ista** | Bern's partner, steadier than he is. **→ FULL EXPEDITION SHEET at `## ISTA`, bottom of this file** | ~~Wants to come to the dungeon and has not been answered.~~ **ANSWERED day 31. She is on the expedition from day 36** — AC 8, hp 4, and the lantern is her duty. Not a fighter: no armour, no weapon, no training. Took to Bern's tools faster than Tristle did |
+| **Reeve Ottir** | ~50. Pragmatic; answers to Sir Aymer, has no men | Wants no trouble and no expense. Took the surety with relief. Gave good advice on how to run the patrol and was right. **Frightened of Sir Aymer** — Wend's word, and he doesn't deny it |
+| **Wend** | cloth and wool trader, off the market square | Spent a fortnight demanding the road be patrolled and somebody hanged. **Refused the party twice in private.** Came round on **day 12, before anyone spoke** — not for the money and not for the argument, but because they walked the road publicly for six days. *"I got it from watching."* Now all the way in on the wool venture. **Knows the trade cold and does NOT know where the staple went** |
+| **Toller** | book and curio dealer; fences the party's salvage at full value | Priced the diary at 50 gp, then **78 gp** once Frython proved it was Zelligar's. Warned he would not be able to keep quiet. **Frython declined to sell and offered him a cut instead** — so Toller now has an arithmetic reason to say nothing, and said so |
+| **Osk** | carrier. **Wethersby to Marchford and back, three days each way, every fortnight** | Met on the road, half-day 1 of the patrol. Neutral until Dave named Ottir, then **123**. Had driven the whole lonely stretch and **seen nothing in six days** — and told the market so, unprompted, naming the party. **His run ENDS at Marchford**; beyond it the load goes to other carriers and he does not know where |
+| **Corvie** | bonesetter | Fetched out to Sarn by Halm at midnight. Did not ask who he was |
+| **Bircher** | offered Halm 9 gp for his cart | Did not get it |
+| **Nan** | dairywoman off Ferd's old holding, with a boy of 9 and a girl of 5 | Walked in on day 15 having heard there was work. Sorting fleeces in Wend's barn; her children carry water. **Ferd named her to Dave on the road and Dave said "then bring her."** |
+| **two men off Ellery's** | turned off at Michaelmas | Walked in the same week. **Seven on wages now** |
+
+---
+
+## Draycot — day 14
+
+| name | who | standing |
+|---|---|---|
+| **the two gatemen** | Sir Aymer's, and good at it | Reacted **hostile (25)** to eight armed strangers unannounced, then **69** once Dave put his hands up and confirmed the crag rumour instead of denying it — but **resolved negative: no message carried.** *"It isn't mine to carry."* The second one, unofficially and quickly, gave two routes in. Then **82** after Yrtone pointedly pretended not to have heard him |
+| **Master Wace** | **steward.** Hears petitions on his days; if Wace thinks the lord wants it, the lord hears it | **His next day is the best part of a WEEK off** (d6 = 6). He reads what is put in front of him, and *"paper waits better than people do"* |
+| **Father Cuddy** | **almoner**, keeps the chapel **outside the wall**. Old. Talks to anybody. In the hall most evenings and nobody minds what he says over supper | Reacted **48 — neutral, incurious.** He has seen a great many travellers. He will give them the chapel and water and go back to what he was doing. **He must be drawn out; the door does not swing open on its own** |
+
+**What Draycot has heard about the party: d6 = 1, word HAS travelled — and d6 = 4,
+it is GARBLED.** *"Six armed strangers grubbing about that old ruin past Wethersby,
+and throwing money about the town."* In a hundred where the lord has not mended a
+bridge in fifteen years, **a stranger with money is not a reassuring rumour.**
+
+**Sign on the Draycot road**, half-day 2 outbound: a cold camp thirty yards off,
+**four people** (1d4=4), **a fortnight old** (d6=5), made where the fire could not
+be seen from the road. Hask: *"Folk travelling make their fire where they can watch
+the road. These were hiding from it."* **Not his crew** — they came up the north
+road nine days ago. The trouble is not confined to one road.
+
+---
+
+## Marrow's holding — day 16
+
+| name | who | |
+|---|---|---|
+| **Marrow** | 64, biggest flock in the hundred, stone barn stuffed with **two years of fleece** — very nearly half the district's clip | Bought up Rell's ewes cheap *"because I couldn't stand to watch them go for nothing"* and became the man holding all of it. Held out on signing not for money but **for his son**. Signed at the floor with the others once Dave offered a route rather than a promise |
+| **Sim** | **16**, Marrow's son | Knows that flock and that hill better than anyone alive. Forty sentences about a roof joint; none about himself. **d6 = 6: he wants to STAY and has been dreading being sent away — and he would not say it.** Asked directly, gave *"whatever father thinks is best."* **Coming to Ludbury** with the carts, framed as a journey and a job with an end date on it, and said yes before his father finished the sentence. Somebody goes up from town to cover his chores |
+
+**Marrow has never once asked the boy what he wants** — *"I suppose I thought if
+he said he wanted to stay, I'd have to let him."* He asked **Dave** to ask, because
+he could not. Dave reported it straight and did not interpret it, and **that is
+the first real information Marrow has had about his own son in two years.**
+
+~~**Sim's answer is still unknown and the party knows something Marrow does not.**~~
+**RESOLVED DAY 33** — Dave quoted Sim to his father word for word, Marrow asked the
+boy directly for the first time in two years, and got his *"Aye."* See `## DAY 33`
+below. **Marrow knows. Do not play him as though he does not.**
+
+## Offstage — named but not yet met
+
+| name | who | why they matter |
+|---|---|---|
+| **Sir Aymer** | the lord, at **DRAYCOT** — **a long day's ride** south-west, on the road the PCs first came in by | Not distant. **He simply does not come.** Ottir sees him twice a year and will not ask him for anything. **He has his own flocks and is selling his clip SOMEWHERE**, which makes him the nearest lead on the staple. The waste and the woods are his: any assart or timber licence is his to grant and nobody else's |
+| **Rell** | landowner east of the farms. **Died in the spring** | Coll gave him eleven years |
+| **Rell's brother** | took the land | Turned off half the hands after they got the harvest in. **Nothing was written down**, so nothing was owed. This is why Coll asks for terms before he walks anywhere |
+| **Ellery** | holder | Turned off three at Michaelmas |
+| **Marrow** | holder | Bought up half of Rell's flock cheap because he wouldn't watch good ewes go for nothing. **Now sits on twice as much unsellable wool as last year.** Wend says he will deal, desperate |
+| **the wool buyer** | came up every summer for **twelve years** with money and two carts, and bought the district's clip standing | **Came late two summers back. Did not come at all last summer.** Nobody in Wethersby can name where he goes now. This one absence is the cause of everything |
+
+---
+
+## Money the party has spent on people
+
+| | |
+|---|---|
+| Halm — mule 20, cloth 5 | 25 gp |
+| Bern — kit 30, coin balance 2, shop and bench 22 | 54 gp |
+| **total** | **79 gp** |
+
+Funds stood at **630 gp 3 sp 25 cp** after the day-4 sale of the expedition-4 haul.
+
+---
+
+## THE DRAYCOT PARTY — decided in the common room, day 12
+
+| going | staying |
+|---|---|
+| All six PCs | **Corm** (Bern's bench) |
+| **Hask** and **Dellie** | **Sarn** (leg) |
+| **Wend** — d100 = 35, +35 = 70, resolved **72 positive.** She shuts the shop for it | **Coll, Wat, Ferd, Ged** — d6 = 5 and d6 = 5, both pairs **stay** |
+| **Halm and the cart** — d100 = 70, +30 = **100, enthusiastic** | **Bern, Ista** |
+
+**Coll and Ferd both chose to stay** and the reason is the same one Coll gave on
+the road: they were hired to work, they have not seen a day's work yet, and
+walking three days to a lord's gate and back is not work. They want to be *seen*
+earning. Let them say so.
+
+### OTTIR REFUSED THE SUPERVISION — d100 = 42, +25 = 67, resolved 48 NEGATIVE
+
+He will not take charge of four hired strangers, and his objection is fair rather
+than obstructive:
+
+- **He is a reeve, not a foreman.** He collects dues and keeps the peace.
+- **Dave's surety covers Hask, Dellie, Corm and Sarn — NOT these four.** Ottir has
+  no wish to be the man holding people nobody has pledged for.
+- And the real one: **"I've no work to give them that isn't already somebody's."**
+  That is the district's whole problem restated, and he is right.
+
+**The answer is standing in the room and the party has not looked at him.**
+**COLL** is the natural foreman — forty years old, eleven of them on one holding,
+already the man who thinks and asks terms and counts. **Do not suggest it.**
+
+## THE LUDBURY CARAVAN — who is actually on it
+
+**Thirteen out of Wethersby.** Checked and pinned 2026-09-02 after I twice put
+people in a scene who were five days away.
+
+| on the road | in Wethersby |
+|---|---|
+| All six PCs | **Corm** — Bern's bench |
+| **Hask** (scout, mounted) and **Dellie** (mounted) | **Coll** — foreman of the wool store |
+| **Wend** — the trade | **Wat, Ferd, Ged** — Coll's crew |
+| **Halm** — lead cart | **Sarn** — the leg |
+| **Osk** — second cart, and the guide as far as Marchford | **Bern, Ista's shop** |
+| **Tam** — third cart, hired in Wethersby for the trip | **Nan** and her two children |
+| **Ista** — camp and cooking | |
+| **Sim** — Marrow's son, 16 | |
+
+**Picked up on the road:** **Fenn**, and his two sons, and at his holding his wife
+**Bec**.
+
+### THE COUNT — corrected 2026-09-02
+
+**The table above enumerates FOURTEEN on the road**, not thirteen: six PCs, Hask,
+Dellie, Wend, Halm, Osk, Tam, Ista, Sim. **"Thirteen out of Wethersby" is right
+— Sim joined at Marrow's holding, outside the town.** So the "sixteen people" said
+in play out of Ludbury was one short; it was **seventeen** with Fenn and his two
+sons. Bec cooked for seventeen.
+
+### NORTHBOUND from Fenn's holding, day 29 — **FOURTEEN**
+
+**Fenn, Bec and the two sons stay at their holding.** The barn is paid for and
+the sons are the labour on it; Fenn's teamster wage ended when the carts reached
+his gate.
+
+**On the road north: the fourteen.** Three carts (Halm, Osk, Tam), two horses
+(Hask scouting ahead, Dellie), and **229 gp in a strongbox that belongs to six
+other men.**
+
+**If a name appears in a scene, check this table first.**
+
+## Picked up on the road south — day 27-28
+
+| name | who | standing |
+|---|---|---|
+| **Fenn** | ~45, four acres of **FLAX** four miles east of the Ludbury road, a day short of Ludbury. Prices iron, nails, salt and cloth from memory | His **barn burned in August** with the whole year's crop in it. Land and house intact, nothing to eat off them. Refused to walk into Ludbury with the party — *"a man who arrives with somebody is somebody's man"* — then took **paid work at a teamster's wage** (Wend insisted on the rate). **Sold the party a share of the CROP, not the land**, for a barn, seed and a winter: **90 gp from the party, 5 from Wend**, paid back in **fibre not coin**, with his right to buy out at a price set in writing |
+| **Bec** | Fenn's wife | Told the whole thing in one go and believed it (97). *"There's a well behind the byre and it's good. Don't use the one by the hedge."* Cooked for sixteen on the party's flour, and nobody said a word about it |
+| **Fenn's two sons** | on the carts at a shilling a day | |
+| **EDE** | **the spinner**, 53, two villages from Fenn. Has spun his flax for nine years and **has had no work since his barn burned** | Reaction 36 then **56 by one point**, then **61 by one point** on Dave's offer. **Coming to Wethersby on a WAGE** — *"a stake is a thing you take when you've time to wait for it."* Keeps her cottage and the right to return. Wants **a door she can shut**. Will teach anybody who sits down. **SHE DOES NOT WEAVE** |
+| **the weaver at LYDE** | ~40, wife, three children, a house. **A day off the road each way** | Will not move. *"But he might take a lad. Or two."* Unmet |
+| **Tam** | third cart driver, hired in Wethersby for the trip | |
+
+## Open — as of day 28, on the road home
+
+- **Ista** wants to come underground. Still unanswered, and she is *on the
+  caravan* — she has been cooking for sixteen for a week.
+- **Zelligar's diary, Rogahn's silver plaque and the gold-leafed headboard** are
+  all with **Toller** on open terms. He judges when and to whom. ~1,025 as a set,
+  ~603 apart.
+- **Twenty turned-off hands in the district. Eight are the party's.** Bern has no
+  room, town work is thin, and Coll said the thing nobody has answered:
+  *"there's twenty out there, and none of that's fixed by six of you going
+  anywhere."* **The loom, Ede, and the weaver at Lyde are the answer being built.**
+- ~~Nobody knows where the wool goes.~~ **ANSWERED day 14 by Father Cuddy:
+  LUDBURY. Walked day 21-27. The clip sold for 1,200.**
+- **A place for SIM** — owed to Marrow since day 16, not delivered. The boy has
+  since told the party, without being asked, that **he wants the hill.** Marrow
+  does not know.
+- **Marrow has not been told his son's answer.** It resolves at Wethersby or it
+  does not resolve.
+- **A lad or two for the weaver at LYDE.** Offered, not sent.
+- **Whether Coll, Wat, Ferd and Ged get shares as well as wages.** Never raised.
+
+
+---
+
+## DAY 32 — the caravan home. New and changed
+
+| name | who | standing |
+|---|---|---|
+| **Ancel** | small trader out of the country east of Marchford. One cart of oddments, two hired men he can barely afford | Met on the road four miles short of town, **reaction 11 — badly frightened**, pulled to **81** when Dave took his mail off in the road where the crossbowman could watch. **Came north to BUY, on a rumour.** Asked Osk *"what about your wool? Next summer. **Who do I speak to?**"* — the first outside buyer to ask that in this hundred in two years. **Unanswered.** He will not sit in the square forever |
+| **Hew** | worked beside Coll on Rell's land for nine years | Walked into the store on the fifth day. Unlisted, unpaid until day 32 |
+| **Meg**, **Tibb** | mother and grown son | Same |
+| **Odo** | nearer sixty than fifty; carries water, cannot lift a fleece | Same |
+| **Sarn** | *(update)* | **d6 = 6 — mending far better than expected.** Corvie's setting held clean, no shortening, **he will not limp.** Three more weeks on crutches. Has been keeping the store tally with Nan's nine-year-old writing for him — **the most accurate document in Wethersby.** His hit point maximum is still **2** |
+| **Coll** | *(update)* | Ran the store **exactly as instructed** — brought in six unlisted hands as told, worked them, fed them from stock, and **wrote down what each was owed**, because the party had taken every coin to Ludbury. Paid in arrears, 3 gp 2 sp. **Wants his authority in writing** for the next absence. Reaction **75** |
+| **Bern** | *(update)* | Reaction **8** to the 25 gp of Ludbury tools — *"That's the third time… I've been made by you."* Then **68** when Yrtone showed him the accounts (25 gp out of a chest, 350 for the rosewood, a thousand for the set) and offered him **ongoing paid work**: twenty spindles in twenty cottages that will break, and looms to build and maintain. **He took the work, not the comfort.** Asked whether the loom frame is pegged or wedged and said he'd ask Ista |
+| **Toller** | *(update)* | Sold nothing, deliberately. **An enquiry on the gold-leafed headboard has come out of DRAYCOT** — a household man, not Sir Aymer. Toller warns: selling it breaks the set (1,000 for three, ~600 apart) and **gentry don't pay — "not don't-pay like a thief, don't-pay like weather."** Told not to pursue it; will answer if written to again and quote no price. **Reaction 91 to Tristle asking to learn the trade** — standing free tuition, evenings, no charge, *"and then bring the things to me, which isn't charity, obviously"* |
+| **Wend** | *(update)* | **Accepted the FACTORSHIP of the hundred** — a shilling in the pound from the holders, nothing from the party, and **the party bids in the yard like anybody else.** She argued for it against her own interest and made Dave count the cost out loud (~150 gp a summer, forever, with one competitor). **Her price was the succession document**, not money. Three neutral reactions in one night (44/55/50) — she is exhausted and was not warmed by being told the trade is a sideline for people who'd rather be in a cave |
+| **Ista** | *(update)* | **Going underground.** One line in Wend's hand. **The lantern and fuel are her duty.** Wants leather not mail, a lantern of her own, and a small set of joiner's tools. **Told Bern herself on the night of day 32 and asked that nobody help** |
+| **Hask** | *(update)* | **Sell the shears NOW** — his call as a partner, reaction 100, and his reasoning overturned Wend's: *"October is the only month in seven years that man can buy a decent pair of shears."* **Asked to do the selling himself** — the first job he has ever asked for. Wend coaches three days. Reaction **109**, the highest in the campaign, for being told he needed coaching |
+
+
+## DAY 33 — MARROW'S HILL. The thread closes
+
+**Reaction 19 → 64 → 114.** He was braced: his son arriving home on a horse with
+the man who took him read as *he's being returned*, and being sent for to collect
+his own money read as a slight after two years of silence from Draycot.
+
+**Sim could not say it — d100 = 3, +25 = 28.** He got out *"I don't want a
+trade"*, heard how it landed, locked up, and then filled the silence with ninety
+seconds of fluent expert talk about **fleece grading** — which was the whole
+answer in his father's own trade, and which Marrow could not hear.
+
+**Marrow stood and listened to all of it** *(d6 = 5 — held it in, said nothing
+irreparable)*. Then: *"I'm obliged to you for trying."*
+
+**What worked was Dave quoting the boy verbatim** — supplying the second half of
+the sentence — **and asking Marrow to judge the fairness himself**: would it be
+fair to have Ottir ride out to him alone and not to the other five? *"No. No, it
+wouldn't be fair."* The one man in the hundred who refused two shares and signed
+at the floor cannot argue with that and knows it.
+
+### He asked his son a question. Out loud. Himself.
+
+*"Is it true?"* — *"Aye."*
+
+**The first question Marrow has put to Sim about Sim in two years**, and on day 16
+he said the reason he never asked was *"I suppose I thought if he said he wanted
+to stay, I'd have to let him."*
+
+### What the news did — and it was the THIRD clause, not the money
+
+Twelve hundred: nothing. Thirty-eight gold: nothing. **"There's already a merchant
+in town asking about next summer's wool"**: he sat down on a trough.
+
+> *"Two summers I've been telling myself it's finished. Not bad — **finished.**
+> I've said it in that barn to my own sheep."*
+
+And then the arithmetic: **he has half the wool in the hundred**, bought cheap off
+Rell's estate *"because I couldn't stand to watch them go for nothing"*, and has
+called himself an old fool for it every month since.
+
+### CONSEQUENCES — both large
+
+| | |
+|---|---|
+| **MARROW WILL HIRE** | *"I'll want people… Send me some of yours. **I'll pay a wage and I'll pay it every week**, and it'll be written down, and you can tell them I said that in front of you."* He turned off five at Michaelmas and has done the work of three himself since, at 64. **The biggest flock in the hundred going back onto a wage roll** — the first real answer to Coll's *"there's twenty out there"* |
+| **THE APPRENTICESHIP IS DISCHARGED** | Marrow released it unprompted: *"He's had it. You took a boy who could tell you every stone on that hill and showed him what a fleece is worth five days off… **I asked you for a trade because I thought the hill was worth nothing. I was wrong about the hill.**"* |
+
+**SIM STAYS ON THE HILL** — and it is the first thing in this story anybody chose
+freely.
+
+### The afternoon — d6 = 2
+
+Dave took the mail off and was **comically bad at moving sheep**: he planted, he
+advanced steadily, he closed distance, and forty yards of ewe went round him
+three times. *"You're PUSHING them… You don't drive a ewe. You make everywhere
+but where you want her slightly worse, and then stand still and let her have the
+idea."*
+
+**Marrow laughed**, and it took everyone including Marrow a second to identify
+the noise.
+
+**And Sim taught him** — unasked, fluent, naming individual ewes at eighty yards
+by how they moved, *"all them fourteen down the dip are Rell's, they still bunch
+different."* He has been telling his father the answer for two years in that
+register and neither of them knew it counted as talking.
+
+**Marrow talked the whole way down about nothing.** He has not had anybody to walk
+a hill with in two years. Bread, bacon, small beer, and **a chair by the fire that
+nobody sits in and nobody mentions.**
+
+**He comes to town on day 35** for the money, *"and I'll want a word with that
+merchant of yours if he's still about."*
+
+
+## DAY 34-35 — the market comes back, and an old debt is paid
+
+### ANCEL'S FOUR NAMES — the most valuable thing anyone has given this hundred
+
+**Reaction 127** to being introduced to Wend as factor. He was honest first —
+*"I can't buy it. I've one cart and forty gold and you've half a hundred's wool"*
+— and then:
+
+> *"But I know four men who can. **And not one of them knows this place exists.**"*
+
+**Two raw-wool buyers** east of Marchford, **a FULLER who takes cloth as well as
+fleece** (Wend's head came up), and **a factor's man who buys for somebody bigger
+and goes wherever he's told there's a clip.**
+
+*"They don't come because nobody's ever said there's anything to come for. It's
+not a conspiracy — this hundred fell off the end of everybody's list two summers
+back and nobody's put it back on."*
+
+**Terms: a penny in the pound on anything that comes of it, for THREE years**
+(he asked two, Wend haggled him up, he took it as the compliment it was).
+**He returns in spring with a purse.**
+
+### MARROW AND ANCEL — 114
+
+Marrow made him say the four names twice, then where they were, what they bought,
+and which took fleece unsorted. His instruction:
+
+> *"Tell them there's half a hundred's clip on one hill and a factor in this town
+> who knows what a fleece is worth. **And tell them if only one comes, he'll get
+> it cheap, and if all four come, they won't.**"*
+
+Wend wrote that down in her own hand. **Marrow bought Ancel his dinner.**
+
+### GYLL — "Rell's brother" has a name and nobody has used it in two years
+
+**d6 = 1** brought him in last, to be paid 38 gp under the party's own contract,
+in a square containing **Coll** (nine years his) and **Hew** (nine more). He came
+wanting to hire for the spring and discovered **nobody would work for him** —
+which he had not understood was a thing he did to himself.
+
+**Dave took him aside and ASKED him how he'd earn it back — reaction 116.** He had
+no defence and had been waiting two years for someone to ask.
+
+> *"They worked a whole season. They got the harvest in. And I gave them nothing,
+> because nothing was written down, and so nothing was owed. That's what I did,
+> and I've had two year to find something else to say and there isn't anything."*
+
+**He found the answer himself: eleven men, 4 gp 10 sp apiece, fifty gold.** He had
+38. **He is selling the grey mare to cover the twelve** — and said, unprompted,
+that if he only paid because it turned out cheap it wouldn't count.
+
+**He never asked the party for the shortfall.** It should not be offered: money
+the party puts in is money Gyll didn't, and the entire value is that it costs him.
+
+**He said it ALOUD IN THE SQUARE — reaction 100** — using Dave's technique from
+the Marrow yard: *speak to one man in the crowd, in the words you already found,
+and let the rest overhear.* **Ottir witnessed it on the same table the wool money
+came off** and has wanted this for two years.
+
+### COLL — 99, and it does not make him forgive
+
+*"Nine year and a hundred and four days. That's what I was owed. **You said four
+and a half; mine's four and eleven.** I'll take the four and a half. I'm telling
+you the number so you know I've got it, and so you know I'll always have it."*
+
+> *"I'll have my money and I'll be square with you and **I'll not think about you
+> again**, and that's the best either of us is getting."*
+
+**And then the thing nobody knew he was carrying:**
+
+> *"Eleven of us. **Two went south and nobody's heard.** Ned Tapp and a lad they
+> called Wisp. If you pay nine men and call it done then them two are still owed,
+> forever, and you'll have bought yourself out cheap. **So you'll write their
+> names and set their money aside and keep it set aside. And if they never come,
+> it sits there. That's what owing is.**"*
+
+**Agreed in front of the town. NINE PAID, TWO SHARES SET ASIDE.**
+**NED TAPP and WISP are now live NPCs who may walk back into this hundred.**
+
+**Coll does not return to Gyll's** — he is foreman of the wool store. Being paid
+did not return him; it closed the wound, which was all that was on offer.
+
+
+## ISTA — expedition member from day 36
+
+**In `campaign/characters.tsv` as a Normal Man, share=half**, same as Hask and
+Dellie (DMG p.85 halves a non-player character's experience).
+
+| | |
+|---|---|
+| **AC** | **8** — leather. She refused mail: *"I've watched Torsat get up off the floor in that stuff. I'd be no use and I'd be slow"* |
+| **hp** | **4** *(d8 = 4)*. Third most fragile in the party — only Blartho and Frython are lower |
+| **weapon** | **hand axe, 1-6** *(1-4 vs large)*. **At −2**, a DM call: she has never held a weapon in her life, and this is the same call already applied to Hask's and Dellie's slings |
+| **to hit** | **1st-level THIEF** as of day 39 — matrix I.D, AC 7 needs **16**. Her scores, and why thief, are in the table above and in `rules/zero-level.md` |
+| **the hand axe** | now **−3**, not −2 — the thief's non-proficiency penalty is a real rule and it is worse than the DM call it replaced. Her two slots went to **dart and spear** |
+| **carries** | backpack, waterskin, **her own lantern** (the area 6 closet one, filled), oil, and a small joiner's set |
+
+### HER JOB IS THE LIGHT, and it is a real one
+
+**Lantern and fuel discipline.** She counted the whole stock by hand before they
+left and asked the right question — *does hooding stop the burn?* It does not, and
+this party once slept a night in area 5 and woke down eight hours of oil nobody
+had counted.
+
+**`tools/light.py` is now Ista's instrument.** Log her lightings, hoodings and
+refills; do not let the party burn fuel she would have been tracking.
+
+### The second pair of hands
+
+*"You've a thief who can take a bed apart. There's four of you standing about
+while he does it. **I can be a second pair of hands on a frame** — and that's a
+real thing, not a made-up job."*
+
+**She learned joinery off Bern and took to the tools faster than Tristle did.**
+On the road she went over the dismantled broad loom by hand and found a missing
+peg nobody else had looked for.

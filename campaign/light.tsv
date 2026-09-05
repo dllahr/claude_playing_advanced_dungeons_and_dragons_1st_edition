@@ -1,0 +1,137 @@
+# Light sources and their fuel. APPEND ONLY — one row per event.
+#
+# Turns of fuel left are COMPUTED from this file by `python tools/light.py`.
+# Nothing here is a running total, for the same reason hp and XP are not stored:
+# a written-down "18 turns left" is correct for exactly one round and silently
+# wrong afterwards. Before this file existed the party had infinite light —
+# 1,146 rounds of expedition 4 were run without a single flask being charged.
+#
+# THE BURN TIMES ARE NOT IN THIS FILE AND NOT IN THE CODE. They come from
+# rules/exploration.md, "Light sources (PHB p. 102, verified)", through
+# tools/rules.py — torch 6 turns, lantern 24 turns per pint of oil.
+#
+# ORDER IS BY exped/round, NOT BY POSITION IN THE FILE, exactly as
+# world_changes.tsv is ordered by exped/turn. The log is append-only, so a row
+# backfilled later lands at the bottom; if file order decided the replay, a
+# forgotten refill written down afterwards would put the oil in before it was
+# burnt. FILL IN `exped` AND `round` — they are the sort key. Ties fall back to
+# file order.
+#
+# round
+#   The ABSOLUTE clock round from campaign/clock.tsv, the same counter
+#   tools/clock.py advances. Fuel burns against DUNGEON time, never wall time:
+#   10 rounds = 1 turn.
+#
+# source
+#   A stable id for one physical light source — `lantern-torsat`,
+#   `lantern-yrtone`, `torch-3`. Not the carrier: a lantern handed to somebody
+#   else is the same lantern and keeps its id and its half-burnt flask.
+#
+# kind
+#   anchor    sets fuel outright and SUPERSEDES every row above it in game
+#             order. Use one when the log cannot be reconstructed further back.
+#   new       a source enters play; fuel starts full unless `fuel` says otherwise
+#   lit       it is burning
+#   hooded    the shutter is closed. IT IS STILL BURNING — rules/exploration.md,
+#             "Hooding does not stop the burn". Hooding changes what the dungeon
+#             can see, not what the wick consumes.
+#   unhooded  the shutter is open again. Also does not change the burn.
+#   out       extinguished. THIS is what stops the fuel clock — and it is the row
+#             that must be logged before a rest, or the party sleeps through
+#             eight hours of lamp oil.
+#   refill    a fresh pint goes in. Refusing this on a torch is deliberate: the
+#             rules table says "6 turns (1 hour)", naming no fuel, so a torch is
+#             a consumed item.
+#   spent     fuel written down to nothing by hand (a lamp smashed, oil spilled)
+#   lost      dropped, left behind, taken away — it stops being the party's
+#
+# what
+#   The row it is priced from in rules/exploration.md: "Torch",
+#   "Lantern (hooded)", "Bullseye lanthorn", "Magic long sword"…
+#
+# fuel
+#   TURNS, on anchor/new/refill/spent rows only. Blank on new/refill means "a
+#   full one". A literal `?` means UNKNOWN and is reported as unknown — it is
+#   never quietly treated as full or as empty.
+#
+# certainty
+#   `known` (or blank) if the row is a recorded fact. `uncertain` if it is a
+#   reconstruction or an assumption; it marks the source uncertain from that
+#   point on and every report says so out loud.
+#
+when	exped	round	source	kind	what	who	fuel	certainty	note
+#
+# --- SEED, written 2026-08-29 -------------------------------------------------
+# Two rows of recorded fact, then two anchors that say the truth is unknown.
+#
+# The ONLY light event in this campaign with a round number attached is the one
+# in campaign/inventory.tsv: "The first flask of this trip is spent (entrance
+# hinges, trophy-room hinges, ~18 turns of lantern); a fresh one went in at
+# round 173". That is rows 1 and 2.
+#
+2026-08-29	4	173	lantern-torsat	refill	Lantern (hooded)	Torsat	24	known	fresh flask went in at round 173 — campaign/inventory.tsv. The first flask of expedition 4 went on the entrance hinges, the trophy-room hinges and ~18 turns of lantern
+2026-08-29	4	173	lantern-torsat	lit	Lantern (hooded)	Torsat		uncertain	ASSUMED burning from here. Nobody wrote down when this lamp was lit, hooded or shut. The party has been underground in the dark since round 0, so it was burning most of the time — but "most of the time" is not a number
+#
+# Everything above is superseded by the next row, which is where honesty runs
+# out. Rounds 173 -> 1146 is 973 rounds, 97 turns. One flask is 24 turns. Had
+# Torsat's lantern burned continuously it would have needed FOUR more flasks
+# after the one that went in at 173, and only ONE refill was ever mentioned in
+# play — Frython, in the trophy room — with THE ROUND NEVER WRITTEN DOWN. So
+# either the lamp spent long stretches out (likely: the party has a second
+# lantern, eight torches, and has rested) or refills went unlogged. There is no
+# way to tell from the record which, and inventing a number here would put a
+# confident falsehood into the one file that is supposed to be authoritative.
+# The 26 flasks in campaign/inventory.tsv are NOT in doubt; what is in doubt is
+# how much of a flask is in each lamp right now.
+#
+# FOR THE DM: this resolves the first time somebody looks at a lantern in play.
+# Rule the level, log an `anchor` with certainty=known, and this uncertainty is
+# gone for good.
+#
+2026-08-29	4	1146	lantern-torsat	anchor	Lantern (hooded)	Torsat	?	uncertain	FUEL UNKNOWN — see the comment above. 97 turns burned since the round-173 flask; one refill (Frython, trophy room) recorded with no round. Supersedes every row above. Still treated as BURNING, which is also an assumption
+2026-08-29	4	1146	lantern-yrtone	anchor	Lantern (hooded)	Yrtone	?	uncertain	FUEL UNKNOWN and never once recorded. No light event for Yrtone's lantern exists in any log. Treated as NOT lit because nothing says it was; if she has been carrying it burning, log a `lit` row and this gets worse, not better
+#
+# The replay of rows 1 and 2 ALONE has Torsat's lantern guttering at round 413 —
+# 24 turns after the round-173 flask — and the party demonstrably still had
+# light at round 1146. That is the arithmetic proof that refills went unlogged;
+# it is not a reason to guess how many. The row below only restores the state
+# the fiction requires, that something is lit, and flags it as the assumption
+# it is.
+#
+2026-08-29	4	1146	lantern-torsat	lit	Lantern (hooded)	Torsat		uncertain	ASSUMED still burning at round 1146. The party is 114 turns into a lightless dungeon and can see, so SOMETHING is lit; that it is this lamp rather than Yrtone's or a torch is an assumption, and how much oil is behind the assumption is unknown
+2026-08-29	4	1150	lantern-torsat	anchor		Torsat	23	known	DM+player reconciliation at round 1150. Burn = 1150 elapsed MINUS the 480-round rest at r956 (clock log says 'lantern doused') = 670 rounds = 67 turns. Flask 1 gave ~18 turns (rest to hinges, spent by r173); flasks 2 and 3 gave 24 each; flask 4 has burned 1 turn. FOUR flasks committed in total.
+2026-08-29	4	1215	lantern-torsat	out				known	BLOWN OUT by the howling wind in area 34: both exits shut, d100=41 vs 50 (B1 p.19). Fuel preserved at whatever remained.
+2026-08-29	4	1219	lantern-torsat	lit				known	relit from cold behind a five-body windbreak, d6=4 (fails only on 6). Two rounds of work.
+2026-08-29	4	1384	lantern-torsat	refill				known	guttered mid-search; Frython poured a fresh flask in. No wind in this room, so the relight was routine.
+2026-08-29	4	1385	lantern-torsat	lit				known	relit from cold in still air, one round, unhurried (rules/exploration.md)
+2026-08-29	4	1624	lantern-torsat	out				known	Frython doused it with about a minute of oil left, as planned, rather than letting it gutter
+2026-08-29	4	1624	lantern-torsat	refill				known	fresh flask, in still air, unhurried
+2026-08-29	4	1625	lantern-torsat	lit				known	relit from cold, one round, no wind
+2026-08-29	4	1864	lantern-torsat	refill				known	topped up on Tristle's watch as the flame began to sink; flask 5 of the trip
+2026-08-29	4	2103	lantern-torsat	refill				known	topped up again on the last watch; flask 6
+2026-08-29	4	2220	lantern-torsat	anchor		Frython	16.3	known	Torsat has taken up his bow and cannot hold a lantern; the lamp is in Frython's hand, which is where the standing marching order puts it anyway
+2026-08-30	4	2263	lantern-torsat	out				known	emerged from Quasqueton into daylight; lamp shut down at the entrance
+2026-08-31	5	0	lantern-torsat	lit		Frython	24	known	fresh flask, expedition 5
+2026-08-31	5	0	lantern-torsat	refill				known	topped off at the cave mouth before going in — it was doused with 12 turns still in it, so a whole flask goes in and a little is wasted
+2026-08-31	5	26	lantern-yrtone	anchor		Hask and Dellie	24	known	DM RULING, settled 2026-08-31: a lantern is sold DRY. The PHB prices the fitting and the oil flask as separate lines, and the oil is sold by the flask because the oil is the consumable. Yrtone's spare has been EMPTY since she bought it new, which is why it has never been lit and why light.py has flagged it as UNKNOWN for two expeditions. Filled from a flask now and handed to Hask and Dellie in the trophy room, with a second flask as a refill.
+2026-08-31	5	26	lantern-yrtone	lit		Hask and Dellie		known	handed over lit in the trophy room; the anchor set its fuel but never its state, so the log had it OUT while two people worked by it for 138 rounds
+2026-08-31	5	164	lantern-yrtone	out				known	shut down once the party rejoined Hask and Dellie — one room, one lamp. 10.2 turns banked
+2026-08-31	5	238	lantern-torsat	refill				known	topped up mid-scale-work; flask 2 of expedition 5
+2026-09-01	5	358	lantern-torsat	out				known	out at the cave mouth, expedition 5 over
+2026-09-03	6	1	lantern-ista	new	Lantern (hooded)	Ista	24	known	the dry lantern out of the area 6 closet, filled fresh in town. ISTA'S OWN and the fuel is her duty
+2026-09-03	6	1	lantern-torsat	refill		Torsat		known	topped to a full flask in town before setting out, day 36
+2026-09-03	6	1	lantern-yrtone	refill		Yrtone		known	topped to a full flask in town, day 36. Carried by Yrtone; Hask is not on this trip
+2026-09-03	6	1	lantern-ista	lit		Ista		known	lit at the outer door. Single source, rank 3, middle of the column
+2026-09-04	6	0	oil	oil		party	25	known	flasks carried into Quasqueton for expedition 6 (day 37). Ten were bought at Ludbury; inventory.tsv had the count.
+2026-09-04	6	0	oil	oil		Ista	-1	known	the flask poured into the area 6 lantern to make it ready in town. It was logged as `new --fuel 24`, which ASSERTS a level and correctly draws nothing, so the flask is debited here instead.
+2026-09-04	6	197	lantern-ista	refill		Ista		known	topped up at round 197 in area 2, with 4.4 turns still in the lamp. She pours from the already-broached flask rather than opening a fresh one.
+2026-09-04	6	233	oil	draw		Ista	2	known	oiling the hinges of the north door at (24,29) and letting it soak. Roughly 2 turns' worth off the broached flask, per the expedition-4 precedent - NOT a whole flask.
+2026-09-04	6	360	lantern-ista	refill		Ista		known	topped up in the y=29 corridor at round ~364, with the rats dead and the party in formation. Her charge, her call - she had asked twice.
+2026-09-04	6	378	lantern-ista	out		Ista		known	EXTINGUISHED for the 4.5-hour rest in area 36 - not hooded, OUT. Hooding does not stop the burn; the party slept through eight hours of oil in expedition 4 by getting this wrong. Also lets Tristle's infravision work.
+2026-09-04	6	648	lantern-ista	lit		Ista		known	relit at the end of the rest, round 648
+2026-09-04	6	666	lantern-ista	out		Frython		known	GOES INTO THE POOL with Frython at exp.6 round ~667. A lit lantern dropped into eight feet of cold water is out. It is at the bottom of the pool along with anything else dropped.
+2026-09-05	6	693	lantern-ista	out		Ista		known	OUT for the second rest in area 36, round ~695. Not hooded - out.
+2026-09-05	6	978	lantern-ista	lit		Ista		known	relit at the end of the second rest
+2026-09-05	6	978	lantern-ista	out		Ista		known	out for the third rest
+2026-09-05	6	1263	lantern-ista	out		Ista		known	out for the fourth rest
+2026-09-05	6	1548	lantern-ista	lit		Ista		known	relit after the fourth rest

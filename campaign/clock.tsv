@@ -1,0 +1,546 @@
+# The dungeon clock. APPEND ONLY — written by tools/clock.py.
+#
+# Time is tracked in ROUNDS; 10 rounds = 1 turn. `round` is the ABSOLUTE round
+# count since the expedition entered the dungeon, so every row states where the
+# clock stood after the event rather than a delta that has to be summed by eye.
+#
+# kind
+#   start    an expedition entered; resets the count to 0
+#   jitter   the whole series of anchor offsets, rolled in advance and HIDDEN.
+#            Each is reported to the player only when its check fires.
+#   advance  time passed
+#   check    a wandering check fired, with its result
+#
+# This file exists because the round count, the anchor positions and the
+# pre-rolled jitter previously lived only in the DM's context, and a context
+# clear lost all three at once.
+#
+when	exped	round	kind	anchor	detail	note
+2026-08-25	4	0	start			passed the outer wooden door at (16,6,H), newly oiled; the door is the threshold
+2026-08-25	4	0	jitter		20:1,40:1,60:4,80:1,100:4,120:1,140:2,160:5,180:1,200:0,220:4,240:3,260:1,280:1,300:1,320:4,340:4,360:1,380:0,400:4,420:3,440:4,460:3,480:2,500:5,520:0,540:4,560:3,580:3,600:0,620:3,640:1,660:3,680:1,700:5,720:3,740:1,760:3,780:2,800:1,820:2,840:1,860:3,880:5,900:5,920:4,940:4,960:2,980:2,1000:1,1020:2,1040:2,1060:3,1080:4,1100:4,1120:0,1140:1,1160:3,1180:5,1200:3	rolled in advance and HIDDEN; each is reported when its check fires
+2026-08-25	4	5	advance		5	60 ft north from the door to alcove pair 2, known ground, not mapping
+2026-08-25	4	9	advance		4	30 ft east through the alcove and the spiked door to the crossing, then a look up both arms
+2026-08-25	4	15	advance		6	50 ft north up the unexplored arm, cautious, mapping
+2026-08-25	4	20	advance		5	50 ft back south to the crossing, known ground now, not mapping
+2026-08-25	4	23	advance		3	30 ft east along the known corridor toward the opening in the north wall
+2026-08-25	4	21	check	20	d6=6	anchor 20 + 1
+2026-08-25	4	28	advance		5	60 ft east past the Pools door to the pair of doors at (27,13) and (28,13)
+2026-08-25	4	29	advance		1	Tristle listens at the south door
+2026-08-25	4	30	advance		1	Torsat pushes the south door open; it gives on the first shove
+2026-08-25	4	32	advance		2	20 ft south down the passage to the mouth of the chamber
+2026-08-25	4	38	advance		6	50 ft east along the north wall of area 27, cautious, mapping
+2026-08-25	4	42	advance		4	30 ft south along the east wall of area 27, over the dais and down to the SE corner
+2026-08-25	4	41	check	40	d6=6	anchor 40 + 1
+2026-08-26	4	48	advance		6	50 ft west along the south wall of area 27, cautious, mapping
+2026-08-26	4	53	advance		5	back east down the central lane between the pillars to the foot of the dais
+2026-08-26	4	63	advance		10	three searching the wall behind the draperies, one turn
+2026-08-26	4	64	advance		1	searching the dais and the thrones — INTERRUPTED after 1 round by the round-60 wandering check; the turn was NOT completed and yields nothing
+2026-08-26	4	64	check	60	d6=1 -> Troglodytes (1-2)-AC 5, HD 2', hp 6,5, #AT 3, D 1-4/1-4/ 1-4, MV 120' (40'), Save F2, ML 9	anchor 60 + 4
+2026-08-26	4	65	advance		1	surprise segment: the troglodyte reaches the dais and attacks Torsat
+2026-08-26	4	66	advance		1	round 1 of melee with the troglodyte
+2026-08-26	4	67	advance		1	Yrtone casts cure light wounds on Torsat
+2026-08-26	4	68	advance		1	Yrtone casts her second cure light wounds
+2026-08-26	4	78	advance		10	Tristle, Blartho and Yrtone search the dais; Dave and Torsat guard
+2026-08-26	4	79	advance		1	one square west off the dais to the throne room NE corner — STOPPED THERE: Tristle found a secret door and the rest of the declared move is void
+2026-08-26	4	81	advance		2	examining the secret door in the throne room's NE corner
+2026-08-26	4	81	check	80	d6=5	anchor 80 + 1
+2026-08-26	4	82	advance		1	Torsat pushes the secret door open
+2026-08-27	4	87	advance		5	back into the hall and west along the north wall to its west edge
+2026-08-27	4	90	advance		3	Tristle runs 50 ft back across the hall, closes the secret slab, and returns
+2026-08-27	4	96	advance		6	50 ft west down the new corridor, exploring and mapping, past the door in the north wall
+2026-08-27	4	100	advance		4	20 ft back east (known route), examine the north-wall door, Tristle listens
+2026-08-27	4	105	advance		5	Tristle oils the hinges of the north-wall door and lets it soak
+2026-08-27	4	104	check	100	d6=2	anchor 100 + 4
+2026-08-27	4	106	advance		1	Tristle pulls the north-wall door open
+2026-08-27	4	106	check	extra	d6=4	extra
+2026-08-27	4	107	advance		1	Dave pulls the north-wall door
+2026-08-27	4	108	advance		1	Dave hauls on the north-wall door a second time
+2026-08-27	4	109	advance		1	Dave hauls on the north-wall door a third time
+2026-08-27	4	110	advance		1	Dave hauls on the north-wall door a fourth time
+2026-08-27	4	111	advance		1	Dave hauls on the north-wall door a fifth time
+2026-08-27	4	114	advance		3	advance into the trophy room in formation and close the door behind
+2026-08-27	4	117	advance		3	Tristle spikes the trophy room door shut, gently — pressed into the jamb rather than hammered, so no extra wandering check
+2026-08-27	4	127	advance		10	three searching the dragon skin and the wall behind it, first turn — three of the four 10-ft sections
+2026-08-27	4	121	check	120	d6=3	anchor 120 + 1
+2026-08-27	4	137	advance		10	searching the last 10 ft of the dragon skin, where the tail is folded back
+2026-08-27	4	147	advance		10	searching the hanging dwarf skeleton, its irons and the wall behind it
+2026-08-27	4	142	check	140	d6=1 -> Kobolds (1 -6)-AC 7, HDV 2 , hp4,3,3,2,2,1,#AT 1, D 1-4 or weapon -1, MV 90’ (30’), Save NM, ML 6	anchor 140 + 2
+2026-08-27	4	157	advance		10	taking the dwarf down from the irons, laying him out, Yrtone says a rite over him, covered with the bearskin
+2026-08-27	4	167	advance		10	searching the petrified basilisk, its base and the wall behind it
+2026-08-27	4	165	check	160	d6=1 -> Troglodytes (1-2)-AC 5, HD 2', hp 6,5, #AT 3, D 1-4/1-4/ 1-4, MV 120' (40'), Save F2, ML 9	anchor 160 + 5
+2026-08-27	4	169	advance		2	the troglodytes try the spiked door; the search is interrupted before it begins
+2026-08-27	4	172	advance		3	Tristle works two more spikes into the jamb while the troglodytes haul on the far side
+2026-08-27	4	177	advance		5	Frython refills the lantern; Tristle quietly prises the four spikes out; everyone but Dave takes up missile weapons
+2026-08-27	4	178	advance		1	Dave slams the door open; the party looses everything it has
+2026-08-27	4	182	advance		4	recovering the nine missiles from the corridor, then back inside and the door closed
+2026-08-27	4	181	check	180	d6=4	anchor 180 + 1
+2026-08-27	4	188	advance		6	two spikes into the jamb, lantern hooded and set behind the dragon skin, Tristle's eyes adjusting for infravision
+2026-08-27	4	198	advance		10	Tristle searches the moose antlers by touch in the dark; Frython at the hooded lantern; the rest standing ready and blind
+2026-08-27	4	208	advance		10	Tristle searches the four mounted dragon's paws by touch
+2026-08-27	4	200	check	200	d6=4	anchor 200 + 0
+2026-08-27	4	218	advance		10	Tristle searches the stuffed cockatrice
+2026-08-27	4	219	advance		1	cloaks rolled and jammed along the threshold, lantern unhooded
+2026-08-27	4	229	advance		10	three searching in lantern light: dragon's paws, cockatrice, giant's shield
+2026-08-27	4	224	check	220	d6=2	anchor 220 + 4
+2026-08-27	4	239	advance		10	three searching: the hung trophy door, the ram's horns, the crossed swords
+2026-08-27	4	249	advance		10	Tristle checks the hung door for traps; Yrtone and Blartho search the dragon's paws
+2026-08-27	4	243	check	240	d6=3	anchor 240 + 3
+2026-08-27	4	252	advance		3	Tristle on the crossed swords, Yrtone and Blartho on the ram's horns — three rounds in
+2026-08-27	4	253	advance		1	the troglodytes try the spiked door — the search is interrupted
+2026-08-27	4	256	advance		3	Tristle drives two more spikes home while they haul; the party forms a firing arc 10 ft back
+2026-08-27	4	257	advance		1	they start on the door
+2026-08-27	4	258	advance		1	Dave and Torsat back to sword and shield, taking station either side of the doorway out of the firing line
+2026-08-27	4	263	advance		5	five rounds of battering, no progress on the door
+2026-08-27	4	261	check	260	d6=2	anchor 260 + 1
+2026-08-27	4	265	advance		2	the party waits; the troglodytes finish conferring
+2026-08-27	4	275	advance		10	re-searching the crossed swords and the ram's horns, in lantern light, Dave and Torsat on the door
+2026-08-27	4	281	advance		6	taking the two long swords off the wall, then levering the hung trophy door down off its brackets
+2026-08-27	4	281	check	280	d6=5	anchor 280 + 1
+2026-08-27	4	291	advance		10	all three searching the strip of wall exposed behind the trophy door
+2026-08-27	4	297	advance		6	four spikes out, cloaks pulled clear, formation set with melee weapons, Tristle shoves the door open
+2026-08-27	4	299	advance		2	east to the throne room, then south along the inside of its west wall to the middle door
+2026-08-27	4	300	advance		1	Torsat tries the throne room's west door
+2026-08-27	4	300	check	extra	d6=4	extra
+2026-08-27	4	301	advance		1	Torsat shoves the west door a second time
+2026-08-27	4	301	check	300	d6=6	anchor 300 + 1
+2026-08-27	4	302	advance		1	Torsat shoves the west door a third time
+2026-08-27	4	305	advance		3	entering the worship area in formation and closing the door behind
+2026-08-27	4	309	advance		4	two spikes gently into the worship-area door, cloaks along the threshold
+2026-08-27	4	319	advance		10	Tristle checks the sacrifice pit for traps
+2026-08-27	4	329	advance		10	general search of the sacrifice pit, sifting the ash
+2026-08-27	4	324	check	320	d6=4	anchor 320 + 4
+2026-08-27	4	339	advance		10	second search of the sacrifice pit
+2026-08-27	4	349	advance		10	third search of the sacrifice pit
+2026-08-27	4	344	check	340	d6=1 -> Troglodytes (1-2)-AC 5, HD 2', hp 6,5, #AT 3, D 1-4/1-4/ 1-4, MV 120' (40'), Save F2, ML 9	anchor 340 + 4
+2026-08-27	4	350	advance		1	two troglodytes cross the throne room and try the worship-area door
+2026-08-27	4	351	advance		1	Dave to the wall beside the door opposite the hinges; the rest form a firing arc
+2026-08-27	4	361	advance		10	Tristle checks the idol carving for traps
+2026-08-27	4	361	check	360	d6=2	anchor 360 + 1
+2026-08-27	4	371	advance		10	all three on a general search of the idol and its runed surround
+2026-08-27	4	381	advance		10	second general search of the idol
+2026-08-27	4	380	check	380	d6=5	anchor 380 + 0
+2026-08-28	4	384	advance		3	two spikes out of the worship-area door, cloaks gathered up, formation set
+2026-08-28	4	386	advance		2	north out of the throne room and west down the corridor to the corner
+2026-08-28	4	394	advance		8	examining the corner door, Tristle listens, hinges oiled
+2026-08-28	4	395	advance		1	Tristle pulls the corner door open
+2026-08-28	4	395	check	extra	d6=1 -> Giant Rats (2-5)-AC 7, HD7 2 , hp 4,3,2,1,1, #AT 1, D 1 -3 + disease, MV 120' (40') swimming 60' (20'), Save NM, ML 8	extra
+2026-08-28	4	396	advance		1	Tristle hauls on the corner door a second time
+2026-08-28	4	397	advance		1	round 1 against the giant rats
+2026-08-28	4	398	advance		1	round 2 against the giant rats
+2026-08-28	4	399	advance		1	round 3 against the giant rats
+2026-08-28	4	400	advance		1	round 4 against the giant rats
+2026-08-28	4	404	advance		4	Blartho casts cure light wounds; the party moves into the access room and closes the door
+2026-08-28	4	404	check	400	d6=1 -> Kobolds (1 -6)-AC 7, HDV 2 , hp4,3,3,2,2,1,#AT 1, D 1-4 or weapon -1, MV 90’ (30’), Save NM, ML 6	anchor 400 + 4
+2026-08-28	4	405	advance		1	kobolds come along the corridor from the east and stop at the lit door
+2026-08-28	4	408	advance		3	holding the door on the inner ring while Tristle wedges two spikes into the jamb
+2026-08-28	4	412	advance		4	cloaks along the threshold, two more spikes into the jamb, firing arc formed
+2026-08-28	4	416	advance		4	kobolds battering the spiked door — THREE successes on rounds 413, 415 and 416, so the door breaches at 416. The rolls for 417 and 418 were made in error and are void; the door was already in.
+2026-08-28	4	417	advance		1	round 1 against the kobolds — the volley, then they come through
+2026-08-28	4	418	advance		1	round 2 against the kobolds
+2026-08-28	4	422	advance		4	Blartho's last cure on Torsat; the others gather up the spent ammunition
+2026-08-28	4	434	advance		12	110 ft east from the access room to the throne room's NE corner and the secret door
+2026-08-28	4	423	check	420	d6=5	anchor 420 + 3
+2026-08-28	4	439	advance		5	through the secret door, closed and gently spiked behind them
+2026-08-28	4	442	advance		3	Tristle gently spikes the west secret door as well
+2026-08-28	4	442	check	extra	d6=2	extra
+2026-08-28	4	472	advance		30	five stripping the planking off all fourteen sections of Rogahn's Chamber, three turns
+2026-08-28	4	444	check	440	d6=6	anchor 440 + 4
+2026-08-28	4	463	check	460	d6=2	anchor 460 + 3
+2026-08-28	4	473	advance		1	examining the mechanism of the newly found secret door
+2026-08-28	4	476	advance		3	Tristle spikes the third secret door into the floor — it opens toward the room, so floor spikes hold it hard
+2026-08-28	4	956	advance		480	REST 8.0 h — camped in Rogahn's Chamber, all three secret doors spiked, lantern doused, watches set
+2026-08-28	4	482	check	480	not rolled	inside a long rest; the module gives 3 checks per night instead of the normal schedule
+2026-08-28	4	505	check	500	not rolled	inside a long rest; the module gives 3 checks per night instead of the normal schedule
+2026-08-28	4	520	check	520	not rolled	inside a long rest; the module gives 3 checks per night instead of the normal schedule
+2026-08-28	4	544	check	540	not rolled	inside a long rest; the module gives 3 checks per night instead of the normal schedule
+2026-08-28	4	563	check	560	not rolled	inside a long rest; the module gives 3 checks per night instead of the normal schedule
+2026-08-28	4	583	check	580	not rolled	inside a long rest; the module gives 3 checks per night instead of the normal schedule
+2026-08-28	4	600	check	600	not rolled	inside a long rest; the module gives 3 checks per night instead of the normal schedule
+2026-08-28	4	623	check	620	not rolled	inside a long rest; the module gives 3 checks per night instead of the normal schedule
+2026-08-28	4	641	check	640	not rolled	inside a long rest; the module gives 3 checks per night instead of the normal schedule
+2026-08-28	4	663	check	660	not rolled	inside a long rest; the module gives 3 checks per night instead of the normal schedule
+2026-08-28	4	681	check	680	not rolled	inside a long rest; the module gives 3 checks per night instead of the normal schedule
+2026-08-28	4	705	check	700	not rolled	inside a long rest; the module gives 3 checks per night instead of the normal schedule
+2026-08-28	4	723	check	720	not rolled	inside a long rest; the module gives 3 checks per night instead of the normal schedule
+2026-08-28	4	741	check	740	not rolled	inside a long rest; the module gives 3 checks per night instead of the normal schedule
+2026-08-28	4	763	check	760	not rolled	inside a long rest; the module gives 3 checks per night instead of the normal schedule
+2026-08-28	4	782	check	780	not rolled	inside a long rest; the module gives 3 checks per night instead of the normal schedule
+2026-08-28	4	801	check	800	not rolled	inside a long rest; the module gives 3 checks per night instead of the normal schedule
+2026-08-28	4	822	check	820	not rolled	inside a long rest; the module gives 3 checks per night instead of the normal schedule
+2026-08-28	4	841	check	840	not rolled	inside a long rest; the module gives 3 checks per night instead of the normal schedule
+2026-08-28	4	863	check	860	not rolled	inside a long rest; the module gives 3 checks per night instead of the normal schedule
+2026-08-28	4	885	check	880	not rolled	inside a long rest; the module gives 3 checks per night instead of the normal schedule
+2026-08-28	4	905	check	900	not rolled	inside a long rest; the module gives 3 checks per night instead of the normal schedule
+2026-08-28	4	924	check	920	not rolled	inside a long rest; the module gives 3 checks per night instead of the normal schedule
+2026-08-28	4	944	check	940	not rolled	inside a long rest; the module gives 3 checks per night instead of the normal schedule
+2026-08-28	4	596	check	rest watch 1	d6=1 -> GiantCentipedes(1-2)-AC9, HDV 2 , hp2,2,#AT 1, Dpoi¬ son, MV 60' (20'), Save NM, ML 7	rest watch 1
+2026-08-28	4	716	check	rest watch 2	d6=2	rest watch 2
+2026-08-28	4	836	check	rest watch 3	d6=5	rest watch 3
+
+2026-08-28	4	958	advance		2	the centipede fight, two rounds inside the rest; the night is otherwise as already rolled2026-08-28	4	959	advance		1	Yrtone casts cure light wounds on Dave
+2026-08-28	4	964	advance		6	pulling all six spikes out of the three secret doors, forming up, opening the south-east door
+2026-08-28	4	962	check	960	d6=5	anchor 960 + 2
+2026-08-28	4	968	advance		4	into the corridor, secret door closed behind, walk to the far end
+2026-08-28	4	978	advance		10	three searching the corridor's blank end wall
+2026-08-28	4	988	advance		10	Tristle checks the secret door for traps
+2026-08-28	4	982	check	980	d6=5	anchor 980 + 2
+2026-08-28	4	998	advance		10	Tristle works out how the slab opens
+2026-08-28	4	1000	advance		2	party back 10 ft; Tristle trips the catch and shoves the slab with the ten-foot pole
+2026-08-28	4	1010	advance		10	spiking the secret door behind them, moving 40 ft down the chamber to the south wall, examining the door
+2026-08-28	4	1001	check	1000	d6=2	anchor 1000 + 1
+2026-08-28	4	1014	advance		4	spiking the south door with jamb wedges and packing cloaks along the threshold
+2026-08-28	4	1024	advance		10	four searching the Mistress' Chamber — bed, nightstand, chest, dish, basin, mirror, tapestry
+2026-08-28	4	1022	check	1020	d6=5	anchor 1020 + 2
+2026-08-28	4	1034	advance		10	Tristle checks the coin and the chest top for traps; the others examine the mirror and the tapestry mounting
+2026-08-28	4	1042	advance		8	cutting the tapestry out of its frame, lifting the mirror to check behind it, then the coin from ten feet with the pole
+2026-08-28	4	1042	check	1040	d6=3	anchor 1040 + 2
+2026-08-28	4	1046	advance		4	pulling the four spikes out of both doors and forming up
+2026-08-28	4	1047	advance		1	Torsat opens the south door
+2026-08-28	4	1047	check	extra	d6=5	extra
+2026-08-28	4	1048	advance		1	Torsat and Tristle shove the south door together
+2026-08-28	4	1053	advance		5	20 ft west along the south corridor to the door, and examining it
+2026-08-28	4	1056	advance		3	Tristle listens, formation set, Torsat shoves the door
+2026-08-28	4	1056	check	extra	d6=5	extra
+2026-08-28	4	1057	advance		1	Torsat shoves the door a second time
+2026-08-28	4	1058	advance		1	Dave and Torsat shove the door together
+2026-08-28	4	1062	advance		4	through the door, closed behind, 20 ft north to the door in the west wall
+2026-08-28	4	1067	advance		5	Tristle oils the hinges of the west door
+2026-08-28	4	1063	check	1060	d6=6	anchor 1060 + 3
+2026-08-28	4	1068	advance		1	Tristle listens at the west door
+2026-08-28	4	1069	advance		1	Tristle pulls the west door
+2026-08-28	4	1075	advance		6	into the storage room, door closed, two jamb wedges, cloaks along the threshold
+2026-08-28	4	1085	advance		10	four searching the storage room — tables, stools, workbench, tools, floor
+2026-08-28	4	1084	check	1080	d6=6	anchor 1080 + 4
+2026-08-28	4	1088	advance		3	spikes out of the storage room door, cloaks gathered, back into the passage
+2026-08-28	4	1093	advance		5	north to the turn, then 30 ft west along the corridor
+2026-08-28	4	1097	advance		4	30 ft south down the corridor to the next turn
+2026-08-28	4	1107	advance		10	90 ft west along the corridor to where it turns north
+2026-08-28	4	1104	check	1100	d6=3	anchor 1100 + 4
+2026-08-28	4	1111	advance		4	30 ft north up the corridor to the two side openings
+2026-08-28	4	1117	advance		6	explore north 50 ft, corridor (20,7)->(20,12)
+2026-08-28	4	1119	advance		2	explore east 20 ft (20,12)->(22,12)
+2026-08-28	4	1121	advance		2	south 20 ft (22,12)->(22,10)
+2026-08-28	4	1120	check	1120	d6=3	anchor 1120 + 0
+2026-08-28	4	1131	advance		10	prising four spikes out of the wrecked access-room jamb
+2026-08-28	4	1132	advance		1	east 40 ft along a known corridor (22,10)->(26,10)
+2026-08-28	4	1135	advance		3	throne room crossing + step into the south corridor
+2026-08-28	4	1137	advance		2	south 20 ft to the turn (27,6)->(27,4)
+2026-08-29	4	1144	advance		7	west 60 ft along the corridor (27,4)->(21,4)
+2026-08-29	4	1141	check	1140	d6=4	anchor 1140 + 1
+2026-08-29	4	1146	advance		2	north 20 ft (21,4)->(21,6)
+2026-08-29	4	1148	advance		2	east 20 ft to the door (21,6)->(23,6)
+2026-08-29	4	1149	advance		1	Tristle works the lock on the area 29 door
+2026-08-29	4	1150	advance		1	formation set; Torsat pushes the area 29 door open
+2026-08-29	4	1155	advance		5	enter area 29, close the door, floor-spike it, cloaks along the sill
+2026-08-29	4	1165	advance		10	area 29: Torsat, Tristle, Yrtone, Blartho work over the bed, table, crock, chest, barrel and pegs; Dave on guard, Frython on the lamp
+2026-08-29	4	1163	check	1160	d6=4	anchor 1160 + 3
+2026-08-29	4	1175	advance		10	area 29: second turn, the four searchers work the walls for secret doors
+2026-08-29	4	1177	advance		2	take the 5 gp, the mace and two shields off the alcove wall; Tristle examines the chest for traps
+2026-08-29	4	1178	advance		1	Tristle works the chest lock
+2026-08-29	4	1179	advance		1	Dave and Torsat test the weight of the chest
+2026-08-29	4	1184	advance		5	spikes out, cloaks up, door shut; retrace 140 ft to the throne room
+2026-08-29	4	1186	advance		2	north 60 ft (27,7)->(27,13)
+2026-08-29	4	1185	check	1180	d6=3	anchor 1180 + 5
+2026-08-29	4	1188	advance		2	west 50 ft along the y=13 corridor (27,13)->(22,13)
+2026-08-29	4	1194	advance		6	north 50 ft (22,13)->(22,18)
+2026-08-29	4	1198	advance		4	dog-leg west 10 ft then north 20 ft (22,18)->(21,20)
+2026-08-29	4	1202	advance		4	east 10 ft, north 20 ft (21,20)->(22,22)
+2026-08-29	4	1204	advance		2	east 10 ft, north 10 ft (22,22)->(23,23)
+2026-08-29	4	1203	check	1200	d6=1 -> Giant Rats (2-5)-AC 7, HD7 2 , hp 4,3,2,1,1, #AT 1, D 1 -3 + disease, MV 120' (40') swimming 60' (20'), Save NM, ML 8	anchor 1200 + 3
+2026-08-29	4	1205	advance		1	combat round 1204: 3 darts, 3 melee attacks, 2 rat bites — every one a miss
+2026-08-29	4	1206	advance		1	combat round 1205: Torsat kills one rat, the other breaks and falls back fighting
+2026-08-29	4	1207	advance		1	round 1206: Frython's third dart wounds the last rat, it routs completely
+2026-08-29	4	1213	advance		6	recover 9 darts down the corridor, look the dead rat over, examine the armoury door
+2026-08-29	4	1214	advance		1	Tristle works the armoury door lock
+2026-08-29	4	1215	advance		1	formation set; Torsat pushes the door at (23,23,V) open
+2026-08-29	4	1217	advance		2	enter the room, swing the door to — the wind hits and the lamp goes out
+2026-08-29	4	1219	advance		2	the party forms a body-and-cloak windbreak around Frython; he works flint and steel on the lantern wick
+2026-08-29	4	1221	advance		2	Tristle finishes the jamb wedges on the door; party turns south
+2026-08-29	4	1223	advance		2	south 20 ft (24,23)->(24,21)
+2026-08-29	4	1228	advance		5	west 10 ft, south 20 ft, west 10 ft to the end of the limb (24,21)->(22,19)
+2026-08-29	4	1234	advance		6	Tristle checks both chests for traps and works both locks
+2026-08-29	4	1246	advance		12	search both chest interiors for false bottoms; then shift both chests off the wall
+2026-08-29	4	1248	advance		2	return 60 ft up the limb (22,19)->(24,23), known ground
+2026-08-29	4	1260	advance		12	examine the wall display and the ceiling; trace the airflow
+2026-08-29	4	1271	advance		11	north-east up the diagonal chamber, 100 ft (25,24)->(30,29)
+2026-08-29	4	1275	advance		4	cross the top chamber and examine the far door
+2026-08-29	4	1281	advance		6	oil the hinges of (31,31,V) and let it soak; formation; Tristle pulls it open
+2026-08-29	4	1285	advance		4	enter the barracks, close and jamb-wedge the door behind
+2026-08-29	4	1305	advance		20	barracks sweep, first two turns: the bed ranks, the ticks, the stools and chairs
+2026-08-29	4	1325	advance		20	barracks sweep, turns 3-4: the tables, the chest of drawers on the south wall, the pegs and sconces
+2026-08-29	4	1325	jitter		1220:3,1240:4,1260:2,1280:5,1300:2,1320:2,1340:3,1360:4,1380:4,1400:5,1420:0,1440:2,1460:4,1480:3,1500:4,1520:3,1540:0,1560:2,1580:1,1600:2	EXTENDED past the original horizon; rolled in advance and HIDDEN
+2026-08-29	4	1223	check	1220	d6=2	anchor 1220 + 3
+2026-08-29	4	1244	check	1240	d6=1 -> Kobolds (1 -6)-AC 7, HDV 2 , hp4,3,3,2,2,1,#AT 1, D 1-4 or weapon -1, MV 90’ (30’), Save NM, ML 6	anchor 1240 + 4
+2026-08-29	4	1262	check	1260	d6=3	anchor 1260 + 2
+2026-08-29	4	1285	check	1280	d6=1 -> Ores (1 -4)-AC 6, HD 1, hp 6,4,3,1, #AT 1, D1 -6 or by wea¬ pon, MV 90' (30'), Save FI, ML 8	anchor 1280 + 5
+2026-08-29	4	1302	check	1300	d6=6	anchor 1300 + 2
+2026-08-29	4	1322	check	1320	d6=1 -> GiantCentipedes(1-2)-AC9, HDV 2 , hp2,2,#AT 1, Dpoi¬ son, MV 60' (20'), Save NM, ML 7	anchor 1320 + 2
+2026-08-29	4	1326	advance		1	combat round 1326: both giant centipedes killed outright
+2026-08-29	4	1366	advance		40	barracks search continues: work south down the bed ranks, four searchers
+2026-08-29	4	1343	check	1340	d6=5	anchor 1340 + 3
+2026-08-29	4	1364	check	1360	d6=4	anchor 1360 + 4
+2026-08-29	4	1406	advance		40	full barracks search, turns 5-8: the south half of the bed ranks
+2026-08-29	4	1384	check	1380	d6=4	anchor 1380 + 4
+2026-08-29	4	1405	check	1400	d6=3	anchor 1400 + 5
+2026-08-29	4	1446	advance		40	full barracks search, turns 9-12: the last ranks and the SW corner with the floor drain
+2026-08-29	4	1420	check	1420	d6=6	anchor 1420 + 0
+2026-08-29	4	1442	check	1440	d6=5	anchor 1440 + 2
+2026-08-29	4	1448	advance		2	examine the chain and the bearskin on the pegs
+2026-08-29	4	1460	advance		12	unspike both doors, carry 410 ft of known route back to the trophy room
+2026-08-29	4	1467	advance		7	trophy room to the crossing (220 ft known), then one square west into new ground
+2026-08-29	4	1464	check	1460	d6=2	anchor 1460 + 4
+2026-08-29	4	1469	advance		2	north 20 ft (21,22)->(21,24)
+2026-08-29	4	1472	advance		3	Tristle examines the door and listens at it
+2026-08-29	4	1473	advance		1	Torsat pushes the door at (21,24,H) open
+2026-08-29	4	1477	advance		4	advance into the passage, close and floor-spike the door, then look into the chamber from the threshold
+2026-08-29	4	1484	advance		7	Tristle unspikes the door, wedges it OPEN, and returns; party holds still
+2026-08-29	4	1483	check	1480	d6=1 -> GiantCentipedes(1-2)-AC9, HDV 2 , hp2,2,#AT 1, Dpoi¬ son, MV 60' (20'), Save NM, ML 7	anchor 1480 + 3
+2026-08-29	4	1485	advance		1	the volley; the crawler breaks and flees west
+2026-08-29	4	1489	advance		4	pursuit west out of area 5; Blartho fighting-retreats before the centipede
+2026-08-29	4	1491	advance		2	regroup on Blartho; the centipede is killed outright
+2026-08-29	4	1498	advance		7	reform, re-equip missiles, Tristle closes and re-spikes the south door and returns
+2026-08-29	4	1502	advance		4	advance west along area 5 scanning ceiling and walls
+2026-08-29	4	1503	advance		1	second volley: the carrion crawler is killed
+2026-08-29	4	1517	advance		14	recover 12 arrows, 6 darts, 3 stones; prod the crawler with the 10-ft pole; examine it without touching
+2026-08-29	4	1504	check	1500	d6=3	anchor 1500 + 4
+2026-08-29	4	1526	advance		9	jamb-wedge the west south-wall door; move east across area 5 in formation
+2026-08-29	4	1523	check	1520	d6=1 -> Troglodytes (1-2)-AC 5, HD 2', hp 6,5, #AT 3, D 1-4/1-4/ 1-4, MV 120' (40'), Save F2, ML 9	anchor 1520 + 3
+2026-08-29	4	1527	advance		1	the south-east door opens; a troglodyte and the party surprise each other
+2026-08-29	4	1528	advance		1	the volley kills the troglodyte in the doorway
+2026-08-29	4	1530	advance		2	step up to the doorway in formation and look through
+2026-08-29	4	1554	advance		24	search the troglodyte; four searchers work over the closet
+2026-08-29	4	1540	check	1540	d6=5	anchor 1540 + 0
+2026-08-29	4	1557	advance		3	gather the books, papers, garment and lantern; return to the main chamber
+2026-08-29	4	1573	advance		16	recover ammunition; search the bed, the nightstand and the table
+2026-08-29	4	1562	check	1560	d6=4	anchor 1560 + 2
+2026-08-29	4	1576	advance		3	pole test on the nightstand handle, then Tristle grasps it and springs the pin trap
+2026-08-29	4	1576	jitter		1620:2,1640:0,1660:5,1680:4,1700:2,1720:0,1740:4,1760:1,1780:1,1800:5,1820:2,1840:1,1860:3,1880:4,1900:2,1920:3,1940:3,1960:5,1980:3,2000:5	EXTENDED past the original horizon; rolled in advance and HIDDEN
+2026-08-29	4	1606	advance		30	the party rests three turns waiting for Tristle's hand to come back
+2026-08-29	4	1581	check	1580	d6=5	anchor 1580 + 1
+2026-08-29	4	1602	check	1600	d6=1 -> Giant Rats (2-5)-AC 7, HD7 2 , hp 4,3,2,1,1, #AT 1, D 1 -3 + disease, MV 120' (40') swimming 60' (20'), Save NM, ML 8	anchor 1600 + 2
+2026-08-29	4	1609	advance		3	pack the pewter; Tristle works the nightstand lock
+2026-08-29	4	1624	advance		15	begin working the 70 ft of carving section by section
+2026-08-29	4	1622	check	1620	d6=1 -> GiantCentipedes(1-2)-AC9, HDV 2 , hp2,2,#AT 1, Dpoi¬ son, MV 60' (20'), Save NM, ML 7	anchor 1620 + 2
+2026-08-29	4	1649	advance		25	work the remaining 45 ft of carving
+2026-08-29	4	1640	check	1640	d6=6	anchor 1640 + 0
+2026-08-29	4	1655	advance		6	pole the crawler's body clear of the doorway; recover the wedges; formation on the west south-wall door
+2026-08-29	4	1656	advance		1	Torsat pushes the west south-wall door open
+2026-08-29	4	1657	advance		1	step into the corridor south of area 5
+2026-08-29	4	1658	advance		1	Dave calls out; the party holds on missiles
+2026-08-29	4	1660	advance		2	parley across thirty feet of dark corridor
+2026-08-29	4	1662	advance		2	Dave's offer; the bandits confer
+2026-08-29	4	1664	advance		2	Dave names the trick and asks their names
+2026-08-29	4	1667	advance		3	advance into the annex; Yrtone treats Sarn; Dave asks leave to spike the door
+2026-08-29	4	1665	check	1660	d6=1 -> Giant Rats (2-5)-AC 7, HD7 2 , hp 4,3,2,1,1, #AT 1, D 1 -3 + disease, MV 120' (40') swimming 60' (20'), Save NM, ML 8	anchor 1660 + 5
+2026-08-29	4	1671	advance		4	names exchanged; Tristle spikes (18,26,H); party sets up to prod the hoard with 10-ft poles
+2026-08-29	4	1674	advance		3	Dave offers to escort the bandits out; Hask's answer
+2026-08-29	4	1696	advance		22	litter lashed from 2 ten-foot poles, 2 cloaks and rope; Sarn moved; party and bandits withdraw from area 7 into area 5
+2026-08-29	4	1684	check	1680	d6=3	anchor 1680 + 4
+2026-08-29	4	1696	jitter		2020:5,2040:1,2060:1,2080:4,2100:5,2120:4,2140:2,2160:1,2180:3,2200:0	EXTENDED past the original horizon; rolled in advance and HIDDEN
+2026-08-29	4	2176	advance		480	REST 8.0 h — camping in area 5 with the four bandits; four watches of two hours
+2026-08-29	4	1702	check	1700	not rolled	inside a long rest; the module gives 3 checks per night instead of the normal schedule
+2026-08-29	4	1720	check	1720	not rolled	inside a long rest; the module gives 3 checks per night instead of the normal schedule
+2026-08-29	4	1744	check	1740	not rolled	inside a long rest; the module gives 3 checks per night instead of the normal schedule
+2026-08-29	4	1761	check	1760	not rolled	inside a long rest; the module gives 3 checks per night instead of the normal schedule
+2026-08-29	4	1781	check	1780	not rolled	inside a long rest; the module gives 3 checks per night instead of the normal schedule
+2026-08-29	4	1805	check	1800	not rolled	inside a long rest; the module gives 3 checks per night instead of the normal schedule
+2026-08-29	4	1822	check	1820	not rolled	inside a long rest; the module gives 3 checks per night instead of the normal schedule
+2026-08-29	4	1841	check	1840	not rolled	inside a long rest; the module gives 3 checks per night instead of the normal schedule
+2026-08-29	4	1863	check	1860	not rolled	inside a long rest; the module gives 3 checks per night instead of the normal schedule
+2026-08-29	4	1884	check	1880	not rolled	inside a long rest; the module gives 3 checks per night instead of the normal schedule
+2026-08-29	4	1902	check	1900	not rolled	inside a long rest; the module gives 3 checks per night instead of the normal schedule
+2026-08-29	4	1923	check	1920	not rolled	inside a long rest; the module gives 3 checks per night instead of the normal schedule
+2026-08-29	4	1943	check	1940	not rolled	inside a long rest; the module gives 3 checks per night instead of the normal schedule
+2026-08-29	4	1965	check	1960	not rolled	inside a long rest; the module gives 3 checks per night instead of the normal schedule
+2026-08-29	4	1983	check	1980	not rolled	inside a long rest; the module gives 3 checks per night instead of the normal schedule
+2026-08-29	4	2005	check	2000	not rolled	inside a long rest; the module gives 3 checks per night instead of the normal schedule
+2026-08-29	4	2025	check	2020	not rolled	inside a long rest; the module gives 3 checks per night instead of the normal schedule
+2026-08-29	4	2041	check	2040	not rolled	inside a long rest; the module gives 3 checks per night instead of the normal schedule
+2026-08-29	4	2061	check	2060	not rolled	inside a long rest; the module gives 3 checks per night instead of the normal schedule
+2026-08-29	4	2084	check	2080	not rolled	inside a long rest; the module gives 3 checks per night instead of the normal schedule
+2026-08-29	4	2105	check	2100	not rolled	inside a long rest; the module gives 3 checks per night instead of the normal schedule
+2026-08-29	4	2124	check	2120	not rolled	inside a long rest; the module gives 3 checks per night instead of the normal schedule
+2026-08-29	4	2142	check	2140	not rolled	inside a long rest; the module gives 3 checks per night instead of the normal schedule
+2026-08-29	4	2161	check	2160	not rolled	inside a long rest; the module gives 3 checks per night instead of the normal schedule
+2026-08-29	4	1816	check	rest watch 1	d6=1 -> Kobolds (1 -6)-AC 7, HDV 2 , hp4,3,3,2,2,1,#AT 1, D 1-4 or weapon -1, MV 90’ (30’), Save NM, ML 6	rest watch 1
+2026-08-29	4	1936	check	rest watch 2	d6=5	rest watch 2
+2026-08-29	4	2056	check	rest watch 3	d6=3	rest watch 3
+2026-08-29	4	2176	jitter		2220:2,2240:2,2260:1,2280:2,2300:4,2320:3,2340:5,2360:5,2380:2,2400:5,2420:0,2440:2,2460:1,2480:1,2500:4,2520:5,2540:4,2560:0,2580:1,2600:2	EXTENDED past the original horizon; rolled in advance and HIDDEN
+2026-08-29	4	2216	advance		40	Yrtone's 30 minutes of prayer; breakfast shared with the bandits; packing to move out
+2026-08-29	4	2183	check	2180	d6=1 -> GiantCentipedes(1-2)-AC9, HDV 2 , hp2,2,#AT 1, Dpoi¬ son, MV 60' (20'), Save NM, ML 7	anchor 2180 + 3
+2026-08-29	4	2200	check	2200	d6=4	anchor 2200 + 0
+2026-08-29	4	2220	advance		4	formation set; four spikes prised out of (21,24,H); the door opened
+2026-08-30	4	2222	advance		2	gathering the four spent arrows at (21,23)
+2026-08-30	4	2222	check	2220	d6=1 -> Kobolds (1 -6)-AC 7, HDV 2 , hp4,3,3,2,2,1,#AT 1, D 1-4 or weapon -1, MV 90’ (30’), Save NM, ML 6	anchor 2220 + 2
+2026-08-30	4	2237	advance		15	south down the spine corridor, known ground at 90 ft/turn with a litter: (21,23) to the four-way at (22,13), 130 ft
+2026-08-30	4	2237	check	2240	not rolled	RETIRED unfired at round 2237, interval changed to 30: B1 p.4 says a wandering check every THIRD turn; the clock had been anchoring every 20 rounds, i.e. every second turn, for the whole campaign
+2026-08-30	4	2237	check	2260	not rolled	RETIRED unfired at round 2237, interval changed to 30: B1 p.4 says a wandering check every THIRD turn; the clock had been anchoring every 20 rounds, i.e. every second turn, for the whole campaign
+2026-08-30	4	2237	check	2280	not rolled	RETIRED unfired at round 2237, interval changed to 30: B1 p.4 says a wandering check every THIRD turn; the clock had been anchoring every 20 rounds, i.e. every second turn, for the whole campaign
+2026-08-30	4	2237	check	2300	not rolled	RETIRED unfired at round 2237, interval changed to 30: B1 p.4 says a wandering check every THIRD turn; the clock had been anchoring every 20 rounds, i.e. every second turn, for the whole campaign
+2026-08-30	4	2237	check	2320	not rolled	RETIRED unfired at round 2237, interval changed to 30: B1 p.4 says a wandering check every THIRD turn; the clock had been anchoring every 20 rounds, i.e. every second turn, for the whole campaign
+2026-08-30	4	2237	check	2340	not rolled	RETIRED unfired at round 2237, interval changed to 30: B1 p.4 says a wandering check every THIRD turn; the clock had been anchoring every 20 rounds, i.e. every second turn, for the whole campaign
+2026-08-30	4	2237	check	2360	not rolled	RETIRED unfired at round 2237, interval changed to 30: B1 p.4 says a wandering check every THIRD turn; the clock had been anchoring every 20 rounds, i.e. every second turn, for the whole campaign
+2026-08-30	4	2237	check	2380	not rolled	RETIRED unfired at round 2237, interval changed to 30: B1 p.4 says a wandering check every THIRD turn; the clock had been anchoring every 20 rounds, i.e. every second turn, for the whole campaign
+2026-08-30	4	2237	check	2400	not rolled	RETIRED unfired at round 2237, interval changed to 30: B1 p.4 says a wandering check every THIRD turn; the clock had been anchoring every 20 rounds, i.e. every second turn, for the whole campaign
+2026-08-30	4	2237	check	2420	not rolled	RETIRED unfired at round 2237, interval changed to 30: B1 p.4 says a wandering check every THIRD turn; the clock had been anchoring every 20 rounds, i.e. every second turn, for the whole campaign
+2026-08-30	4	2237	check	2440	not rolled	RETIRED unfired at round 2237, interval changed to 30: B1 p.4 says a wandering check every THIRD turn; the clock had been anchoring every 20 rounds, i.e. every second turn, for the whole campaign
+2026-08-30	4	2237	check	2460	not rolled	RETIRED unfired at round 2237, interval changed to 30: B1 p.4 says a wandering check every THIRD turn; the clock had been anchoring every 20 rounds, i.e. every second turn, for the whole campaign
+2026-08-30	4	2237	check	2480	not rolled	RETIRED unfired at round 2237, interval changed to 30: B1 p.4 says a wandering check every THIRD turn; the clock had been anchoring every 20 rounds, i.e. every second turn, for the whole campaign
+2026-08-30	4	2237	check	2500	not rolled	RETIRED unfired at round 2237, interval changed to 30: B1 p.4 says a wandering check every THIRD turn; the clock had been anchoring every 20 rounds, i.e. every second turn, for the whole campaign
+2026-08-30	4	2237	check	2520	not rolled	RETIRED unfired at round 2237, interval changed to 30: B1 p.4 says a wandering check every THIRD turn; the clock had been anchoring every 20 rounds, i.e. every second turn, for the whole campaign
+2026-08-30	4	2237	check	2540	not rolled	RETIRED unfired at round 2237, interval changed to 30: B1 p.4 says a wandering check every THIRD turn; the clock had been anchoring every 20 rounds, i.e. every second turn, for the whole campaign
+2026-08-30	4	2237	check	2560	not rolled	RETIRED unfired at round 2237, interval changed to 30: B1 p.4 says a wandering check every THIRD turn; the clock had been anchoring every 20 rounds, i.e. every second turn, for the whole campaign
+2026-08-30	4	2237	check	2580	not rolled	RETIRED unfired at round 2237, interval changed to 30: B1 p.4 says a wandering check every THIRD turn; the clock had been anchoring every 20 rounds, i.e. every second turn, for the whole campaign
+2026-08-30	4	2237	check	2600	not rolled	RETIRED unfired at round 2237, interval changed to 30: B1 p.4 says a wandering check every THIRD turn; the clock had been anchoring every 20 rounds, i.e. every second turn, for the whole campaign
+2026-08-30	4	2237	jitter		2250:1,2280:3,2310:5,2340:3,2370:2,2400:2,2430:4,2460:5,2490:2,2520:5,2550:1,2580:1,2610:0	RE-ANCHORED at interval 30; rolled in advance and HIDDEN. B1 p.4 says a wandering check every THIRD turn; the clock had been anchoring every 20 rounds, i.e. every second turn, for the whole campaign
+2026-08-30	4	2238	advance		1	the volley; one kobold down, two break and run west
+2026-08-30	4	2241	advance		3	Tristle jogs 20 ft into the west passage, searches the dead kobold, recovers arrows, jogs back
+2026-08-30	4	2254	advance		13	south down the spine to the four-way at (22,13): 120 ft of known ground, litter-paced
+2026-08-30	4	2251	check	2250	d6=4	anchor 2250 + 1
+2026-08-30	4	2256	advance		2	west along the y=13 corridor to the dead-end stub at (18,13), 40 ft, litter-paced
+2026-08-30	4	2263	advance		7	through the one-way alcove door and south to the entrance, 140 ft, litter-paced. The route emerges BELOW the magic mouths
+2026-08-31	5	0	start			day 18. Six PCs plus Hask and Dellie. Mule tethered by the spring outside. Two full days available; must be back in Wethersby by the evening of day 20
+2026-08-31	5	0	jitter		30:1,60:5,90:4,120:4,150:3,180:2,210:4,240:3,270:2,300:1,330:2,360:3,390:0,420:0,450:0,480:3,510:4,540:1,570:3,600:3,630:1,660:4,690:1,720:1,750:3,780:5,810:4,840:5,870:1,900:0,930:3,960:1,990:3,1020:1,1050:1,1080:5,1110:2,1140:0,1170:0,1200:5,1230:0,1260:0,1290:5,1320:1,1350:1,1380:5,1410:2,1440:5,1470:5,1500:2,1530:0,1560:4,1590:5,1620:2,1650:4,1680:1,1710:4,1740:1,1770:5,1800:4	rolled in advance and HIDDEN; each is reported when its check fires
+2026-08-31	5	10	advance		10	in through the entrance, up the hall, east through area 1 and the spiked-open one-way door, then east along the y=13 corridor to (27,13)
+2026-08-31	5	16	advance		6	south through the open door at (27,13), down to the throne room, west along the corridor to the trophy-room door at (25,10)
+2026-08-31	5	26	advance		10	door shut and jamb-spiked from inside the trophy room, cloaks laid along the threshold; the dwarf re-laid; the dragon skin looked over
+2026-08-31	5	36	advance		10	trophy room door to area 29, 200 ft of known corridor, six in the older formation without Hask and Dellie
+2026-08-31	5	31	check	30	d6=3	anchor 30 + 1
+2026-08-31	5	39	advance		3	area 29 door spiked from inside, cloaks down; Tristle sets to the chest
+2026-08-31	5	99	advance		60	Tristle drives the corner pins and takes the chest apart — six turns
+2026-08-31	5	65	check	60	d6=5	anchor 60 + 5
+2026-08-31	5	94	check	90	d6=6	anchor 90 + 4
+2026-08-31	5	99	check	extra	d6=1 -> Ores (1 -4)-AC 6, HD 1, hp 6,4,3,1, #AT 1, D1 -6 or by wea¬ pon, MV 90' (30'), Save FI, ML 8	extra
+2026-08-31	5	139	advance		40	the barrel rolled from area 29 back to the trophy room, standing it up at every corner and the one door
+2026-08-31	5	124	check	120	d6=5	anchor 120 + 4
+2026-08-31	5	164	advance		25	the barrel rolled the last 120 ft to the trophy room door — noisy, but the extra check for it has already been fired; one extra, not one per action
+2026-08-31	5	153	check	150	d6=1 -> Troglodytes (1-2)-AC 5, HD 2', hp 6,5, #AT 3, D 1-4/1-4/ 1-4, MV 120' (40'), Save F2, ML 9	anchor 150 + 3
+2026-08-31	5	234	advance		70	six working the dragon skin, Dave and Torsat alternating door and room
+2026-08-31	5	182	check	180	d6=1 -> GiantCentipedes(1-2)-AC9, HDV 2 , hp2,2,#AT 1, Dpoi¬ son, MV 60' (20'), Save NM, ML 7	anchor 180 + 2
+2026-08-31	5	214	check	210	d6=3	anchor 210 + 4
+2026-08-31	5	238	advance		4	the lamp sinks; Frython calls it
+2026-08-31	5	284	advance		46	the last five turns of the dragon skin
+2026-08-31	5	243	check	240	d6=2	anchor 240 + 3
+2026-08-31	5	272	check	270	d6=3	anchor 270 + 2
+2026-08-31	5	299	advance		15	trophy room to area 5 — 250 ft north up the spine, hauling two sacks of brass
+2026-08-31	5	300	advance		1	Frython casts sleep
+2026-08-31	5	308	advance		8	the last hundred feet up the spine and through the open door into area 5
+2026-08-31	5	301	check	300	d6=4	anchor 300 + 1
+2026-09-01	5	358	advance		50	out of area 5 laden with 800 gp of rosewood and two sacks of brass — south to the crossing, down the spine to the four-way, west along y=13, through the spiked-open one-way door and south to the entrance
+2026-09-01	5	332	check	330	d6=2	anchor 330 + 2
+2026-09-03	6	0	start			entered the dungeon
+2026-09-03	6	0	jitter		30:1,60:1,90:4,120:2,150:0,180:4,210:1,240:4,270:1,300:3,330:3,360:5,390:1,420:5,450:4,480:4,510:0,540:2,570:2,600:0,630:0,660:3,690:4,720:5,750:0,780:5,810:1,840:4,870:3,900:2,930:2,960:0,990:0,1020:0,1050:4,1080:5,1110:0,1140:2,1170:5,1200:5,1230:4,1260:1,1290:2,1320:1,1350:0,1380:0,1410:0,1440:0,1470:4,1500:0,1530:5,1560:5,1590:1,1620:0,1650:5,1680:4,1710:4,1740:1,1770:3,1800:2	rolled in advance and HIDDEN; each is reported when its check fires
+2026-09-03	6	4	advance		4	exp.6 entry: 140 ft known route (3 rounds) plus the outer door (1)
+2026-09-03	6	6	advance		2	70 ft known route to (19,19)
+2026-09-03	6	9	advance		3	20 ft explore pace west along y=19 (unexplored), plus a round spent looking into the intersection from short of it
+2026-09-03	6	11	advance		2	Dave steps into the (16,19) crossing, retrieves the object, steps back
+2026-09-03	6	16	advance		5	party into the (16,19) crossing and up to (16,20); Tristle and Ista examine and listen at the west door
+2026-09-03	6	17	advance		1	Tristle tries the latch of the west door at (16,20)
+2026-09-03	6	18	advance		1	Torsat pushes the west door open at (16,20)
+2026-09-03	6	21	advance		3	20 ft into area 2 at explore pace, and the door pulled shut behind
+2026-09-03	6	24	advance		3	20 ft west down area 2 at explore pace, moving carefully
+2026-09-03	6	27	advance		3	20 ft further west down area 2, carefully
+2026-09-03	6	29	advance		2	10 ft to the kitchen's west end and a look north
+2026-09-03	6	31	advance		2	Tristle and Ista examine the north door and try the latch
+2026-09-03	6	31	check	30	d6=2	anchor 30 + 1
+2026-09-03	6	33	advance		2	Tristle spikes the north door of area 2, quietly, floor spikes
+2026-09-03	6	37	advance		4	back east 60 ft on known ground, and the east door floor-spiked quietly
+2026-09-03	6	177	advance		140	systematic thorough search of area 2, seven squares, DOUBLED for containers and furniture (DMG p.97)
+2026-09-03	6	61	check	60	d6=3	anchor 60 + 1
+2026-09-03	6	94	check	90	d6=3	anchor 90 + 4
+2026-09-03	6	122	check	120	d6=3	anchor 120 + 2
+2026-09-03	6	150	check	150	d6=5	anchor 150 + 0
+2026-09-03	6	197	advance		20	probing both fire pits with ten-foot poles, a turn each
+2026-09-03	6	184	check	180	d6=6	anchor 180 + 4
+2026-09-04	6	207	advance		10	west to unspike the north door and back (140 ft known), form up three abreast, listen, unspike and open the east door, step into the crossing
+2026-09-04	6	210	advance		3	20 ft north out of the crossing onto new ground, carefully
+2026-09-04	6	212	advance		2	10 ft north to the east-side junction
+2026-09-04	6	211	check	210	d6=1 -> Troglodytes (1-2)-AC 5, HD 2', hp 6,5, #AT 3, D 1-4/1-4/ 1-4, MV 120' (40'), Save F2, ML 9	anchor 210 + 1
+2026-09-04	6	212	advance		0	
+2026-09-04	6	213	advance		1	melee round: party stows bows, draws sword and shield, swaps rank 2; trog attacks Dave
+2026-09-04	6	214	advance		1	melee round: the troglodyte is killed
+2026-09-04	6	214	check	extra	d6=3	extra
+2026-09-04	6	223	advance		9	reform to missile order, then 70 ft north at explore pace to (16,29)
+2026-09-04	6	232	advance		9	80 ft east along y=29 at explore pace
+2026-09-04	6	238	advance		6	Torsat stows his bow for sword and shield; hinges oiled and left to soak (5 rounds); latch tried
+2026-09-04	6	239	advance		1	Frython pulls the oiled door open from the side
+2026-09-04	6	243	advance		4	into the room, close and jamb-spike the door, cross to the north-west corner
+2026-09-04	6	323	advance		80	thorough search of area 36, 8 squares at 1 turn each, undoubled (bare room, no containers or furniture); Tristle tapping walls and floor at the elven 2-in-6
+2026-09-04	6	244	check	240	d6=1 -> Giant Rats (2-5)-AC 7, HD7 2 , hp 4,3,2,1,1, #AT 1, D 1 -3 + disease, MV 120' (40') swimming 60' (20'), Save NM, ML 8	anchor 240 + 4
+2026-09-04	6	271	check	270	d6=4	anchor 270 + 1
+2026-09-04	6	303	check	300	d6=5	anchor 300 + 3
+2026-09-04	6	355	advance		32	RECONCILIATION: the 80-round search was charged before the round-244 rat encounter fired. This adds the ~32 rounds the interruption actually cost - cloaks jammed, the party silent while the rats worked at the sill for about three turns, then the search resumed and finished.
+2026-09-04	6	333	check	330	d6=3	anchor 330 + 3
+2026-09-04	6	360	advance		5	form up, recover the cloaks from the sill, prise both jamb wedges out, open the door
+2026-09-04	6	365	advance		5	into the corridor, recover ammunition, examine the rats, top up the lantern, re-form
+2026-09-04	6	365	check	360	d6=1 -> Ores (1 -4)-AC 6, HD 1, hp 6,4,3,1, #AT 1, D1 -6 or by wea¬ pon, MV 90' (30'), Save FI, ML 8	anchor 360 + 5
+2026-09-04	6	366	advance		1	orc surprise round
+2026-09-04	6	367	advance		1	Frython's sleep drops four orcs, Dave and Yrtone; Torsat slays one sleeping orc; Blartho heals Torsat
+2026-09-04	6	368	advance		1	three sleeping orcs slain; Frython slaps Dave, Blartho slaps Yrtone
+2026-09-04	6	376	advance		8	search four orc bodies, gather 28 ep and the sack, back into the room, four jamb wedges driven quietly, cloaks under the sill
+2026-09-04	6	378	advance		2	Blartho cures Yrtone; Yrtone cures Dave
+2026-09-04	6	648	advance		270	REST 4.5 h — 4 hours' rest plus 30 minutes' prayer and study to recover spells; area 36 sealed with four jamb wedges and cloaks under the sill, lantern OUT, Tristle on watch throughout with infravision
+2026-09-04	6	391	check	390	not rolled	inside a long rest; the module gives 2 checks per night instead of the normal schedule
+2026-09-04	6	425	check	420	not rolled	inside a long rest; the module gives 2 checks per night instead of the normal schedule
+2026-09-04	6	454	check	450	not rolled	inside a long rest; the module gives 2 checks per night instead of the normal schedule
+2026-09-04	6	484	check	480	not rolled	inside a long rest; the module gives 2 checks per night instead of the normal schedule
+2026-09-04	6	510	check	510	not rolled	inside a long rest; the module gives 2 checks per night instead of the normal schedule
+2026-09-04	6	542	check	540	not rolled	inside a long rest; the module gives 2 checks per night instead of the normal schedule
+2026-09-04	6	572	check	570	not rolled	inside a long rest; the module gives 2 checks per night instead of the normal schedule
+2026-09-04	6	600	check	600	not rolled	inside a long rest; the module gives 2 checks per night instead of the normal schedule
+2026-09-04	6	630	check	630	not rolled	inside a long rest; the module gives 2 checks per night instead of the normal schedule
+2026-09-04	6	468	check	rest watch 1	d6=5	rest watch 1
+2026-09-04	6	558	check	rest watch 2	d6=4	rest watch 2
+2026-09-04	6	653	advance		5	recover cloaks, form up three abreast with Dave and Torsat on sword and shield, prise four jamb wedges, open the door, step into the corridor
+2026-09-04	6	655	advance		2	stash the sack of ironwork in area 36, close the door behind
+2026-09-04	6	659	advance		4	30 ft east at explore pace, following the drag marks
+2026-09-04	6	661	advance		2	Dave sheathes his sword, takes the lantern and looks round the corner at (27,29)
+2026-09-04	6	663	advance		2	party round the corner into (27,30), facing east
+2026-09-04	6	663	check	660	d6=2	anchor 660 + 3
+2026-09-04	6	666	advance		3	20 ft east along the arm at explore pace
+2026-09-04	6	667	advance		1	room 50: Ista handed off and cured, Blartho hauled out of the pool by Tristle and Frython
+2026-09-05	6	673	advance		6	three attempts at the pit trap; on the third the pole caught, Torsat braced, and Dave seated two spikes in the seam. THE TRAP IS JAMMED OPEN
+2026-09-05	6	685	advance		12	haul Frython clear, Tristle binds him, then Dellie and Yrtone up the sound rope
+2026-09-05	6	693	advance		8	60 ft back to area 36's door and inside, slowed by carrying two unconscious men
+2026-09-05	6	978	advance		285	REST 4.8 h — second rest in area 36: the hour of cold recovery, then 4 hours plus 45 minutes' prayer for Yrtone to re-memorise three cure light wounds. Door four-spiked, cloaks under the sill, lantern out, Dave and Torsat splitting the watch listening at the door
+2026-09-05	6	694	check	690	not rolled	inside a long rest; the module gives 2 checks per night instead of the normal schedule
+2026-09-05	6	725	check	720	not rolled	inside a long rest; the module gives 2 checks per night instead of the normal schedule
+2026-09-05	6	750	check	750	not rolled	inside a long rest; the module gives 2 checks per night instead of the normal schedule
+2026-09-05	6	785	check	780	not rolled	inside a long rest; the module gives 2 checks per night instead of the normal schedule
+2026-09-05	6	811	check	810	not rolled	inside a long rest; the module gives 2 checks per night instead of the normal schedule
+2026-09-05	6	844	check	840	not rolled	inside a long rest; the module gives 2 checks per night instead of the normal schedule
+2026-09-05	6	873	check	870	not rolled	inside a long rest; the module gives 2 checks per night instead of the normal schedule
+2026-09-05	6	902	check	900	not rolled	inside a long rest; the module gives 2 checks per night instead of the normal schedule
+2026-09-05	6	932	check	930	not rolled	inside a long rest; the module gives 2 checks per night instead of the normal schedule
+2026-09-05	6	960	check	960	not rolled	inside a long rest; the module gives 2 checks per night instead of the normal schedule
+2026-09-05	6	788	check	rest watch 1	d6=6	rest watch 1
+2026-09-05	6	883	check	rest watch 2	d6=6	rest watch 2
+2026-09-05	6	1263	advance		285	REST 4.8 h — third rest in area 36 for three more cures; Ista and Dellie split the watch, lantern out
+2026-09-05	6	990	check	990	not rolled	inside a long rest; the module gives 2 checks per night instead of the normal schedule
+2026-09-05	6	1020	check	1020	not rolled	inside a long rest; the module gives 2 checks per night instead of the normal schedule
+2026-09-05	6	1054	check	1050	not rolled	inside a long rest; the module gives 2 checks per night instead of the normal schedule
+2026-09-05	6	1085	check	1080	not rolled	inside a long rest; the module gives 2 checks per night instead of the normal schedule
+2026-09-05	6	1110	check	1110	not rolled	inside a long rest; the module gives 2 checks per night instead of the normal schedule
+2026-09-05	6	1142	check	1140	not rolled	inside a long rest; the module gives 2 checks per night instead of the normal schedule
+2026-09-05	6	1175	check	1170	not rolled	inside a long rest; the module gives 2 checks per night instead of the normal schedule
+2026-09-05	6	1205	check	1200	not rolled	inside a long rest; the module gives 2 checks per night instead of the normal schedule
+2026-09-05	6	1234	check	1230	not rolled	inside a long rest; the module gives 2 checks per night instead of the normal schedule
+2026-09-05	6	1261	check	1260	not rolled	inside a long rest; the module gives 2 checks per night instead of the normal schedule
+2026-09-05	6	1073	check	rest watch 1	d6=4	rest watch 1
+2026-09-05	6	1168	check	rest watch 2	d6=5	rest watch 2
+2026-09-05	6	1548	advance		285	REST 4.8 h — fourth rest in area 36: Yrtone re-prays command + 2 cure light wounds; Dave and Torsat take the watch
+2026-09-05	6	1292	check	1290	not rolled	inside a long rest; the module gives 2 checks per night instead of the normal schedule
+2026-09-05	6	1321	check	1320	not rolled	inside a long rest; the module gives 2 checks per night instead of the normal schedule
+2026-09-05	6	1350	check	1350	not rolled	inside a long rest; the module gives 2 checks per night instead of the normal schedule
+2026-09-05	6	1380	check	1380	not rolled	inside a long rest; the module gives 2 checks per night instead of the normal schedule
+2026-09-05	6	1410	check	1410	not rolled	inside a long rest; the module gives 2 checks per night instead of the normal schedule
+2026-09-05	6	1440	check	1440	not rolled	inside a long rest; the module gives 2 checks per night instead of the normal schedule
+2026-09-05	6	1474	check	1470	not rolled	inside a long rest; the module gives 2 checks per night instead of the normal schedule
+2026-09-05	6	1500	check	1500	not rolled	inside a long rest; the module gives 2 checks per night instead of the normal schedule
+2026-09-05	6	1535	check	1530	not rolled	inside a long rest; the module gives 2 checks per night instead of the normal schedule
+2026-09-05	6	1358	check	rest watch 1	d6=4	rest watch 1
+2026-09-05	6	1453	check	rest watch 2	d6=5	rest watch 2
+2026-09-05	6	1560	advance		12	unspike and leave area 36, 80 ft west along y=29 at reduced pace with two men who cannot run
+2026-09-05	6	1574	advance		14	withdrawal at reduced pace: south to the crossing, east along y=19, south down x=19, west through the spiked-open slab into the alcove corridor at (16,13)
+2026-09-05	6	1565	check	1560	d6=2	anchor 1560 + 5
+2026-09-05	6	1580	advance		6	120 ft south to the outer door at reduced pace

@@ -1,0 +1,48 @@
+# Encounter and experience log. APPEND ONLY — one row per award.
+# Totals are computed by tools/xp.py; do not keep running totals here, they rot.
+#
+# kind:     monster | treasure | anchor
+# xp:       total awarded, BEFORE the prime-requisite bonus
+# earned_by: 'all' = every FULL-SHARE character, i.e. the six PCs, and nobody
+#            else.  A comma-separated list of names for anything narrower.
+# HALF-SHARE NPCs MUST BE NAMED. 'all' deliberately does not include them:
+#   they are not at every fight, and if 'all' picked them up automatically
+#   then every new ally would retroactively re-divide a hundred past awards.
+#   DMG p.85 halves the share of a non-player character; campaign/characters.tsv
+#   carries that in its `share` column.
+#            A solo kill goes entirely to whoever was still standing.
+# An 'anchor' row sets a character's total outright and supersedes everything
+# above it. Use one when the log cannot be reconstructed further back.
+#
+exped	kind	encounter	xp	earned_by	source	notes
+1-2	anchor	verified running totals at return to town	0	-	transcript line 9219	Dave 240 / Tristle 208 / Yrtone 156 / Frython 156 / Torsat 142 / Blartho 142 — stated per character, bonuses already applied
+3	monster	troglodyte, corridor 3	50	all	transcript +246	Torsat healed from 0 and got the kill
+3	monster	berserkers (first pair), commanded	60	all	transcript +594	Blartho's *command* landed — berserkers are men and speak common
+3	treasure	11 gp from the berserkers	11	all	transcript +611	plus a broad sword and a long sword, salvage
+3	monster	giant rats x3 of 5	21	all	transcript +892	two broke and fled
+3	monster	kobolds x3	25	all	transcript +1345	seven rounds to kill the last one
+3	treasure	19 cp and salvage from the kobolds	13	all	transcript +1396	logged in play as "~4 apiece"; the coin alone is 11 gp + 48 cp for the trip. UNCERTAIN — see notes
+3	monster	berserkers (second pair)	29	all	this session	Torsat killed one with a natural 20, Tristle's spear the other
+3	treasure	four tapestries at 100 gp	400	all	this session	sold in town at full value
+3	treasure	20 sp off the berserkers	2	all	this session	MM treasure type K, individuals
+4	monster	troglodyte, area 27	60	all	exp.4 round 65	hp NOT recorded at the time; rolled openly on emerging, 2d8 = 12. 36 + 2/hp.
+4	monster	troglodyte, trophy room doorway	48	all	exp.4 round 178	hp 6. 36 + 2/hp.
+4	monster	giant rats x4 of 5	35	all	exp.4 round ~400	group hp 4,3,2,1,1; WHICH one fled was never recorded, rolled openly on emerging (1d5=1) — the hp-4 rat fled. Dead total 3+2+1+1 = 7. 7 + 1/hp each.
+4	monster	kobolds x6	45	all	exp.4 rounds ~405-412	hp 4,3,3,2,2,1 = 15. 5 + 1/hp.
+4	monster	giant centipede, Rogahn's Chamber	32	all	exp.4 round 596	hp 2 (B1's own wandering entry prints hp 2,2). 30 + 1/hp. Dave's kill.
+4	monster	carrion crawler, area 5	640	all	exp.4 rounds 1484-1500	hp 15. 580 + 4/hp — the largest single award of the campaign by a factor of nine.
+4	monster	giant centipede, spine corridor	32	all	exp.4 round 2220	hp 2. Tristle's second arrow in the surprise round.
+4	monster	kobold, west passage mouth	9	all	exp.4 round 2222	hp 4. 5 + 1/hp. Tristle again, two arrows at AC 5.
+4	treasure	scroll of sleep, transcribed into Frython's book	100	all	exp.4, area 5 nightstand	DM RULING — the DMG prints NO xp value for a scroll of spells (table III.B has no experience column; only protection scrolls carry one). 100 set below the cheapest potion, sweet water at 200. Consumed to transcribe, which counts as KEEPING, not selling.
+4	treasure	expedition 4 haul fenced in town, at full value	170	all	day 4 in town	1 gp = 1 xp (DMG p.85; the guardians were of comparable or greater strength than a 1st-level party, so 1:1). Tapestry, pewter, garment, three books, arms salvage, bearskin, chain, perfume, comb, paperweight. Zelligar's diary deliberately NOT sold.
+4	treasure	5 gp from the crock, area 29	5	all	exp.4 turn 117	coin carried out of the dungeon.
+5	monster	orc, corridor between areas 29 and 26	16	all	exp.5 round 99	hp 6. 10 + 1/hp (DMG Appendix E p.208, transcribed this session). Drawn by the noise of a rolling barrel; surprised; both charge attacks missed; killed by Dave's free attack at +6 as it broke off to flee (DMG p.70).
+5	monster	kobold watcher, spine corridor	8	all	exp.5 round 300	hp 3. 5 + 1/hp. Posted as a lookout, dropped by Frython's first-ever sleep at exactly 40 ft, killed helpless and hidden back in its own recess. 20 cp on it.
+5	monster	troglodyte denning in area 5	48	all	exp.5 round 308	hp 6. 36 + 2/hp. Surprised asleep on Zelligar's bed and killed in the free round by BOTH CLERICS — Yrtone a natural 20 for 5, Blartho 6 — after Dave, Torsat and Tristle all missed (Tristle a natural 1). It never roused, so the revulsion stench never fired and nobody rolled a save.
+5	treasure	dragon scales, clothes and coin, sold in Wethersby	120	all,Hask,Dellie	day 19	110 scales + 4 clothes + 12 ep + 20 cp. 1:1 — the guardian was the expedition, not any one creature.
+5	treasure	Zelligar's bed, sold at Ludbury	315	all,Hask,Dellie	day 5 south	350 less 10% foreigner sales tax. 1:1 RULING: B1 guarded the bed by making it immovable, and PHB p.106 names an OBSTACLE as a guardian. The obstacle was overcome by a week's apprenticeship at Bern's bench — DMG p.84's "overcoming tricks placed to guard treasure, balanced against the degree of difficulty." Not discounted for the troglodyte, which was not the guardian.
+6	monster	troglodyte, out of the east side passage at (16,22)	48	all,Dellie,Ista	exp.6 rounds 211-213	hp 6. 36 + 2/hp (MM p.97 via bestiary). Wandering. Surprised the party on a 4 (chameleon skin); its infravision had watched the lantern come up the corridor. Killed in one round: Dave natural 20, Torsat natural 20, Tristle 19v19 with a non-proficient spear.
+6	monster	4 giant rats, y=29 corridor	38	all,Dellie,Ista	exp.6 round 361	hp 4,3,2,1. 7 + 1/hp. They found the party by the light leaking under a spiked door. Killed to the last in one surprise round by five missiles; NO BITES LANDED, so no disease.
+6	monster	4 orcs, y=29 corridor	54	all,Dellie,Ista	exp.6 rounds 366-368	hp 6,4,3,1. 10 + 1/hp (DMG App.E p.208). Closed out of the dark at a run and surprised the party. Ended by Frython's SLEEP, which also took Dave and Yrtone; three slain sleeping.
+6	treasure	28 electrum off the orc bodies	14	all,Dellie,Ista	exp.6 round 371	28 ep = 14 gp at 2 ep = 1 gp. MM treasure type L individually.
+6	anchor	day 39 — Hask, Dellie and Ista become 1st-level characters	0	-	day 39, Wethersby	Dave 673 / Tristle 641 / Yrtone 589 / Frython 589 / Torsat 535 / Blartho 535 / Dellie 42 / Hask 31 / Ista 11 — bonuses already applied. ALL NINE anchored deliberately: from this row on, monster xp is a FULL share for the three (DM prerogative, DMG p.85 "strictly your prerogative"), while treasure xp stays proportional to their HALF share of the coin. Changing the weights without an anchor would have recomputed every past award and silently REDUCED the six PCs, because the pot divisor goes 7 -> 8.
