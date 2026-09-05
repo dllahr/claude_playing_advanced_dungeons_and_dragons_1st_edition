@@ -71,8 +71,17 @@ the right boundary and mention it in a line if it is worth knowing.
 
 **What that authorization does NOT cover:**
 
-- **`git push`** — there is no remote, and adding one publishes the campaign.
-  Ask first, always.
+- **`git push`** — **there IS a remote**: `origin` →
+  `github.com:dllahr/claude_playing_advanced_dungeons_and_dragons_1st_edition`.
+  Pushing publishes. **Ask first, every time.** Committing is local and safe;
+  pushing is not the same act.
+
+  > **Tracked and therefore published: `modules/B1_DM_NOTES_DO_NOT_READ.md`**,
+  > `modules/private/b1_wandering.tsv`, and the B1 level-1 map PNG. The first is
+  > the campaign's spoiler file — the rolled stocking key that must never be
+  > shown to the player. **If the repo is public, it is readable by anyone,
+  > including the player.** The scanned rulebooks and module PDFs are gitignored
+  > and are NOT published. Flagged 2026-09-05; the player's call, not mine.
 - **Anything that rewrites history** — `reset --hard`, `rebase`, `commit
   --amend` on an existing commit, force-anything.
 - **Reverting a campaign TSV.** See the box above. Standing permission to
