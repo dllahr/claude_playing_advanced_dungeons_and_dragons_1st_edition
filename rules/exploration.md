@@ -624,3 +624,72 @@ capabilities** of the gnome and the halfling, don't you?"*
 
 *source: **DMG p. 97**.*
 
+
+
+## TRACKING — it is a RANGER ability, and this party has no ranger
+
+**Looked up 2026-09-06 after the player asked whether 1e has strict tracking
+rules. It does, and the DM had been giving the party ranger-grade reads for
+free.**
+
+> **3.** *"Tracking is possible both outdoors and underground in dungeons and
+> like settings:*
+> **a.** *Underground the ranger must have **observed the creature to be tracked
+> within 3 turns (30 minutes)** of the commencement of tracking, and the ranger
+> must **begin tracking at a place where the creature was observed**:"*
+
+| Creature's action | Chance to track |
+|---|---|
+| going along normal passage or room | **65%** |
+| passes through normal door or uses stairs | 55% |
+| goes through a trap door | 45% |
+| chimney or concealed door | 35% |
+| passes through a **secret door** | **25%** |
+
+> **b.** *Outdoors: base **90%**, **+2%** per creature above 1, **−10% per 24
+> hours** elapsed, **−25%** per hour of precipitation.*
+
+*source: **PHB p. 25**, CHARACTER CLASSES (RANGER), 300 dpi page render 2026-09-06.*
+
+### THE TWO THINGS THAT MATTER
+
+1. **Underground, even a ranger cannot follow COLD tracks.** He must have *seen*
+   the creature within 30 minutes and must *start where he saw it*. Tracking
+   underground is **pursuit**, not detective work.
+2. **No other class gets it.** Not thieves. **This party has no ranger and
+   therefore cannot track at all.**
+
+### THE INFRAVISION ROUTE IS ALSO CLOSED
+
+> *"Monsters of a very cold or very warm sort (such as a human) can be **tracked
+> infravisually by their footprints. Such tracking must occur within 2 rounds of
+> their passing**, or the temperature difference where they had trodden will
+> dissipate."*
+>
+> *"**Light sources which give off heat absolutely prevent normal infravision
+> from functioning** within their sphere of illumination."*
+>
+> — **DMG p. 59**, INFRAVISION & ULTRAVISION, 2026-09-06
+
+**Two rounds, and not while the lantern is lit.** Tristle's elf infravision is a
+pursuit tool for a fight in the dark, not a way to read a corridor.
+
+### WHERE THE LINE SITS — what the party MAY observe
+
+**Presence and absence of traffic is environment, not tracking**, and B1's own
+text invites it: *"in some portions of the complex, a layer of dust lies upon
+everything, undisturbed for years"* (module p. 4) — which only means anything if
+disturbance elsewhere is visible.
+
+| **Legitimate for anyone with a lamp** | **RANGER ONLY — do not narrate** |
+|---|---|
+| "the dust here is packed into a path" | how many made it |
+| "the dust here is undisturbed wall to wall" | what size, bare or shod |
+| "something has been dragged along here" | which direction they were travelling |
+| "this sill has not been opened in months" | "and they came back" |
+| | "somebody stands at this exact spot, repeatedly" |
+
+**PROSPECTIVE ONLY.** Everything already in `campaign/journal.md` from
+expeditions 4-6 — the churned threshold, the small bare feet, the hard-soled boot
+— was called at the table and stands as the party's knowledge. *A rules
+correction is prospective, never retroactive.*
