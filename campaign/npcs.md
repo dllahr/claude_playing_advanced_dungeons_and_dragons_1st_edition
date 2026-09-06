@@ -981,3 +981,72 @@ not me. I'll sit at Fenn's with the cart and you can ride over and back."*
 
 > *"One load's a load. What I'd want, someday, is a **RUN.** Osk's got a run. He
 > knows where he is on a Tuesday."*
+
+---
+
+## DAY 41 — PERRIN, usher of Sir Aymer's hall. Met on the Draycot road
+
+**Reactions 92, then 98.** Met riding north as Yrtone and Ottir rode south; Ottir
+placed him at once — *"That's Sir Aymer's. Household, not a man-at-arms."*
+
+| | |
+|---|---|
+| **who** | **PERRIN**, ~40, **usher of the hall** at Draycot — answers for how the hall looks and what is in it |
+| **his errand** | **He is the household man who has written to Toller twice about the headboard.** Had a *"very civil nothing"* both times and came in person |
+| **why** | **A MARRIAGE at Draycot in the spring.** A kinswoman of Sir Aymer's; people are coming who have not come in fifteen years. **The hall has not been furnished in a generation and has "one good chair in it"** |
+| **what he does NOT know** | Where the headboard came from. **He has not wondered.** No sign he was sent to find out. He is a man buying a bed for a wedding |
+
+### WHY MASTER WACE WROTE — he gave it away for free, and it defuses everything
+
+Ottir asked, and it cost him something to ask.
+
+> *"That? That's **FATHER CUDDY.** He'd been at supper a month back saying he was
+> ashamed of himself — something about your town never being told a thing it ought
+> to have been told. And then a fortnight after, word comes up that the north
+> hundred's sold two years of wool and cleared its own road with no help from
+> anybody, and Master Wace heard both those things inside a month."*
+>
+> *"**He always asks for an account.** It's not a summons, it's how the man
+> thinks — he reads what's put in front of him and trusts paper more than people,
+> and **if nothing's put in front of him he assumes the worst out of habit.**"*
+
+**NOTHING IS WRONG AT DRAYCOT.** An old almoner was ashamed at supper and a
+steward who trusts paper asked for some. **Ottir rode a hundred yards without
+speaking after hearing it.**
+
+### YRTONE TOLD HIM IT IS A SET — and it turned the deal
+
+She explained Toller's hesitation honestly: historical significance, held as a set.
+
+> *"A **set.** He's not being coy, he's being **careful**… Mistress, I don't want a
+> bed. **I want a hall.**"*
+
+**He is the one buyer for whom the set is worth MORE whole than in pieces** —
+exactly what Toller has been protecting (1,000 for three, ~600 apart) and could
+not find a reason to hope for. He would not name a figure on a road.
+
+> ### ⚠ THE LIVE RISK, created honestly and knowingly
+>
+> **He asked *"significant how?"* — not to haggle.** *"Someone will stand in front
+> of it at that wedding with a cup in his hand and ask me what it is, and I'd
+> sooner know than say 'it's a bed, my lord.'"*
+>
+> **He wants a STORY TO TELL THE GUESTS.** A hall full of Sir Aymer's people being
+> told the provenance of that furniture is **the *whose is the crag* question
+> walking into Draycot on its own legs**, months before the party would choose to
+> raise it. **Unanswered as of the parting.** Toller may answer it instead — and
+> Toller has already said he will not be able to keep quiet about the diary.
+
+### BERN — d6 = 3. A real opening and no more
+
+Yrtone named Bern as an alternative. *"I'll call on him. I'll not promise more —
+I've not seen a stick of his work and I'll not hand my lord's money to a name I
+got on a road. **But I've a hall to fill and a spring to fill it by.**"*
+
+**A hall furnishing is far more than Bern can carry** — he already has no room for
+more hands (d6=6: one wedding commission and Corm is all he can take). **Winning it
+would force him to hire**, and there are roughly a dozen turned-off hands in this
+district who are not yet anybody's.
+
+**PERRIN REACHES WETHERSBY ON DAY 42.** The party is not there. **Bern earns it
+himself or not at all**, which given Bern is the only way he would take it.
