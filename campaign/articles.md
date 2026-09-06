@@ -311,5 +311,40 @@ hole by people who fall forty feet."* **A floor the party cannot honour is worse
 than no floor**, because the holders will have turned down real buyers on the
 strength of it.
 
-**NOT YET WRITTEN. The price, the cap and the term are unset** — those are the
-party's to name and Ottir should witness it as he did the succession.
+### AGREED IN FULL — day 39. Fair copy to Ottir on day 40
+
+| | |
+|---|---|
+| **THE FLOOR** | **8 gold the TOD**, published — chalked where the at-cost board is and read out to every holder |
+| **THE CAP** | **500 gp in any one season** — the party raised it from the 400 Wend asked for |
+| **THE TERM** | **One season, renewable, reviewed BEFORE shearing** — *"a man decides whether to shear on what he thinks he'll get for it. He needs the number in March, not June."* |
+
+**Where 8 comes from.** Wend's register carries every fleece by weight. The six
+holders' clip as bought was **60 tods** for **450 gp = 7½ gp the tod**. The party
+asked for a rate that would have paid **80 a share** on that same volume — 480 gp
+— which is **8 gp the tod.** Rate-based, so it does not care what next year's
+volume turns out to be.
+
+**Exposure, and why the cap is comfortable.** The 450 bought **two years** of a
+district that had not been able to sell since Draycot stopped coming; **that
+backlog is cleared.** Next summer is one year's growth:
+
+| | |
+|---|---|
+| Six holders, one year, at 8 the tod | **~240 gp** |
+| Nine holders (the pool is growing) | **~360 gp** |
+| **The cap** | **500 gp** — ~62 tods, more than the whole two-year clip |
+| Chest at the time of agreeing | 595 gp 6 sp, plus ~312 of small goods still to move |
+
+**The cap is deliberately non-binding at current volumes**, which is the point:
+Wend never has to interrupt a season to come and ask. She asked for 400 and was
+given 500 — *"then I'll not be knocking on your door in June about it, which
+suits me."*
+
+**It remains a real floor, not a monopoly bid.** Wend's own figure for a
+competitive bid is **10 the tod** (her *"600 with one other man stood in the
+barn"*). The floor sits **a fifth under** that, so Ancel's four buyers still have
+room to outbid it — which is the entire purpose. **The party is the buyer when
+nobody comes, not the buyer who stops anyone coming.**
+
+**Ottir witnesses. A copy stays in Wethersby**, as with articles 1 and 2.

@@ -802,9 +802,17 @@ conflict she resigned the buying seat to avoid:** *"If it's a favour I do at my
 discretion, then every summer I'm choosing, and choosing is the thing that ends
 me here. If it's a price on the door, I never choose again."*
 
-**She requires a price, a cap and a season before she will write it**, and warns
-that a floor the party cannot honour is worse than none, because holders will
-have turned down real buyers on the strength of it.
+**AGREED IN FULL the same night: 8 gold the tod, 500 gp the season, reviewed
+before shearing.** She asked for a 400 cap and was given 500. Fair copy to Ottir
+day 40. Full terms and the arithmetic behind the 8 are in `articles.md` art. 7.
+
+> **DM — READ THIS BEFORE THE NEXT WEND SCENE.** The three objections she raised
+> on the way to this number were **manufactured by me and are retracted**; the
+> player had already answered all three in his own words. See CHECKLIST §8,
+> *"do not manufacture an NPC objection."* **Wend is sharp about REAL things** —
+> being one woman deep, the conflict of sitting on both sides of a fleece, what a
+> floor costs if it cannot be honoured. She is not sharp at the party for sport,
+> and she does not score points off them.
 
 ### Custody of the money — art. 6
 

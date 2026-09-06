@@ -865,7 +865,11 @@ distance table gives Wethersby↔Fenn's as **4 days by cart** plus 8 miles
 cross-country to her door; "2½ days on horseback" was also mine. Derive it before
 quoting it.)* · send a lad to the
 weaver at **Lyde** · **Wat's terms** · Ottir's report to **Master Wace** ·
-**Draycot's second letter** about the headboard.
+**Draycot's second letter** about the headboard · **art. 7 fair copy to Ottir,
+day 40** · **the floor chalked on the board and read to every holder** · **Sarn
+onto Coll's standing roll at a clerk's wage** (Wend and Coll are doing it; the
+party is not to be involved, and *nobody tells Sarn it is because he was owed
+it*) · **Wat's terms — Coll's to settle, the party has stood back**.
 
 ### Dungeon threads
 
