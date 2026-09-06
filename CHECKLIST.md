@@ -616,6 +616,22 @@ only the text found it.
       *"not in the log; I'm inferring"* — so the player can veto in one word
       instead of after a page of prose. **The player has been doing this QA and
       it should not be their job.**
+- [ ] **AN `open` EDGE BETWEEN TWO OPEN SQUARES MEANS THE SPACE IS WIDER — NOT
+      THAT THERE IS A DOORWAY.** *(2026-09-06, the passage north of (10,21).)*
+      I read `(10,22) W=open` as *"an opening in the west wall"* and narrated two
+      side passages and tracks turning into them. **There are no openings.** The
+      passage is simply **20 feet wide** — x=9 and x=10 are the same corridor —
+      and its real west wall is the `W=wall` on the x=9 column, with **area 10's
+      secret door** the only thing in it.
+      **The test: look at the square BEYOND the open edge.** If it is open floor
+      with its own outer wall, you are inside one wide space. A doorway needs a
+      `door`/`secret`/`archway` edge, or open floor that leads somewhere else.
+      **`cells.width_ft` and `cells.passage` are NULL throughout B1**, so the
+      database will not tell you the width — you must read the neighbours.
+      *(This is the same root cause CLAUDE.md names for six earlier geometry
+      errors: re-deriving layout ad hoc under narrative pressure. The player has
+      the printed map; when he says a wall is a wall, check the neighbour columns
+      before arguing.)*
 - [ ] **NEVER TELL THE PLAYER WHEN THE NEXT WANDERING CHECK FALLS.** *(Standing
       instruction, given 2026-09-06.)* `clock.py status` prints *"next check falls
       between round X and Y"* and it is right to keep that in the log — **it is
