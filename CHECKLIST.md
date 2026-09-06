@@ -577,6 +577,13 @@ only the text found it.
       him and his father), and Cuddy (ran him cold off a reaction score that
       described eight armed strangers at a gate, ignoring an evening of shared
       offices that followed).
+      > **`rules/*.md` IS EVIDENCE TOO — it is not the prose category.** Those
+      > files carry page citations, are parsed by `tools/rules.py`, and record
+      > rulings already made. **Read the cache before re-deriving anything.**
+      > *(2026-09-06: I spread nine people over three corridor squares by
+      > re-reasoning about formation depth, when `rules/combat.md` already held
+      > the ruling — made 2026-09-04 on the player's own argument — that three
+      > ranks stand inside 10-11 ft, i.e. one square and a little.)*
       > **`python tools/recall.py <name>`** prints every logged event for a
       > character across all seven TSVs, in order. **Run it before narrating
       > anyone's past.** It exists because checking used to be awkward, and
@@ -609,6 +616,15 @@ only the text found it.
       *"not in the log; I'm inferring"* — so the player can veto in one word
       instead of after a page of prose. **The player has been doing this QA and
       it should not be their job.**
+- [ ] **NEVER TELL THE PLAYER WHEN THE NEXT WANDERING CHECK FALLS.** *(Standing
+      instruction, given 2026-09-06.)* `clock.py status` prints *"next check falls
+      between round X and Y"* and it is right to keep that in the log — **it is
+      wrong to put it in the reply.** The exact round was already hidden; the
+      WINDOW must be hidden too. Knowing there is half an hour of safety before
+      the dice look at you is the same as being told there is nothing in the
+      corridor, and it lets the party spend risk it has not actually bought.
+      **Track it carefully. Say nothing.** Report a check only when it FIRES, and
+      then only through what the characters perceive.
 - [ ] **IF A CLASS FUNCTION COVERS THE QUESTION, ROLL THE CLASS FUNCTION.**
       *(2026-09-06, the jammed pit trap.)* Tristle got a proper **Find/Remove
       Traps 25%** check. For Ista I improvised a **d6** "observation" roll instead
