@@ -544,3 +544,6 @@ when	exped	round	kind	anchor	detail	note
 2026-09-05	6	1574	advance		14	withdrawal at reduced pace: south to the crossing, east along y=19, south down x=19, west through the spiked-open slab into the alcove corridor at (16,13)
 2026-09-05	6	1565	check	1560	d6=2	anchor 1560 + 5
 2026-09-05	6	1580	advance		6	120 ft south to the outer door at reduced pace
+2026-09-06	7	0	start			Expedition 7, day 46. Nine underground for the first time: six PCs plus Hask, Dellie and Ista, all 1st-level characters. In via area 1's alcove pair 2 and the one-way secret door at (17,13,V), spiked open since expedition 3 -- NOT up the x=16 corridor under the magic mouths.
+2026-09-06	7	0	jitter		30:1,60:5,90:1,120:4,150:3,180:1,210:5,240:4,270:2,300:5,330:1,360:4,390:4,420:1,450:2,480:2,510:1,540:2,570:1,600:3,630:5,660:5,690:1,720:3,750:3,780:4,810:3,840:1,870:4,900:0,930:2,960:2,990:4,1020:0,1050:3,1080:4,1110:1,1140:0,1170:4,1200:0,1230:3,1260:5,1290:1,1320:2,1350:4,1380:4,1410:3,1440:5,1470:0,1500:1,1530:1,1560:0,1590:0,1620:5,1650:3,1680:0,1710:1,1740:3,1770:3,1800:3	rolled in advance and HIDDEN; each is reported when its check fires
+2026-09-06	7	9	advance		9	

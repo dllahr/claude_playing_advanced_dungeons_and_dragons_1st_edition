@@ -87,3 +87,5 @@ when	map	level	x	y	exped	turn	squares	feet	rate	why	route
 2026-09-05	b1	1	19	13	6		6	60	known	withdrawal: the long way, avoiding the magic mouths	19,19 19,18 19,17 19,16 19,15 19,14 19,13
 2026-09-05	b1	1	16	13	6		3	30	known	withdrawal: the long way, avoiding the magic mouths	19,13 18,13 17,13 16,13
 2026-09-05	b1	1	16	1	6		12	120	known	south down the entrance corridor to the door	16,13 16,12 16,11 16,10 16,9 16,8 16,7 16,6 16,5 16,4 16,3 16,2 16,1
+2026-09-06	b1	1	17	13	7	16	13	130	known	expedition 7 entry: north up the x=16 corridor from the threshold, through the door at (16,6,H), past alcove pair 1, to the mouth of alcove pair 2. The route the player named, NOT the pathfinder's.	16,1 16,2 16,3 16,4 16,5 16,6 16,7 16,8 16,9 16,10 16,11 16,12 16,13 17,13
+2026-09-06	b1	1	18	13	7	9	1	10	known	through the one-way secret door at (17,13,V), spiked open since expedition 3. Two of Tristle's spikes still in it.	17,13 18,13

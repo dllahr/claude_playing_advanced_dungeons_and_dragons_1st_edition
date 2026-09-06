@@ -20,7 +20,7 @@ The complete list. Clerics pray for any of these; no roll to know.
 | **Cure Light Wounds** | Touch | Permanent | 5 segments | None | Heals **1–8 hp**. Reverse: *cause light wounds*, 1–8 damage, requires a to-hit roll. |
 | **Detect Evil** | 12" | 1 turn + ½ turn/level | 1 round | None | 1" wide path. Detects evil *emanations* — a trap or an unintelligent viper does **not** radiate evil. |
 | **Detect Magic** | 3" | 1 turn | 1 round | None | 1" wide, 3" long path. Blocked by 1' stone, 1/12" metal, 3' wood. |
-| **Light** | 12" | 6 turns + 1 turn/level | 4 segments | None | 2" radius globe, torch-bright. Cast on a creature: magic resistance and save apply. Reverse: *darkness*, half duration. |
+| **Light** | 12" | 6 turns + 1 turn/level | 4 segments | None | 2" radius globe, torch-bright, sphere limited to 4" diameter. **7 turns at 1st level.** Cast on a creature: magic resistance and save apply; **success means the globe appears BEHIND it instead**. Reverse: *darkness*, **half** duration. **IT BLINDS — see below.** |
 | **Protection From Evil** | Touch | 3 rounds/level | 4 segments | None | −2 on evil creatures' attacks, +2 on recipient's saves vs them. Bars bodily contact by conjured/enchanted creatures. Needs holy water circle. |
 | **Purify Food & Drink** | 3" | Permanent | 1 round | None | 1 cubic foot per level. Reverse spoils, and spoils holy water. |
 | **Remove Fear** | Touch | Special | 4 segments | None | +4 vs magical fear for 1 turn; if already afraid, a new save at +1 per caster level. Reverse: *cause fear*. |
@@ -28,6 +28,35 @@ The complete list. Clerics pray for any of these; no roll to know.
 | **Sanctuary** | Touch | 2 rounds + 1 round/level | 4 segments | None | Opponents must save vs magic to attack the cleric at all. Cleric may **not** take offensive action — healing and *bless* are fine. |
 
 **Blartho** (WIS 15) and **Yrtone** (WIS 16) each memorize **3** of these per day.
+
+### LIGHT BLINDS — DMG p. 45, and the PHB does not say so
+
+**Found 2026-09-06 by the player after the DM had checked only the PHB and told
+him the blinding tactic was not in 1e.** It is, and it is in the book that wins:
+**DMG over PHB for adjudication.**
+
+> *"**Light:** It should be noted that if this spell is cast upon the visage or
+> before the visual organs of a creature, **it will tend to blind it** (rather as
+> if a strong light were placed before its eyes), and its attacks and defenses
+> will be a **−4 on 'to hit', saving throws, and even armor class.** Note also
+> that the spell is **not mobile**, although it can be cast upon a movable or
+> mobile object or creature."*
+>
+> — **DMG p. 45**, SPELL EXPLANATIONS, cleric first level, 300 dpi render 2026-09-06
+
+| | |
+|---|---|
+| **On a failed save** | **−4 to hit, −4 on saving throws, and 4 WORSE armour class** (AC 5 becomes AC 9), for the full duration |
+| **On a successful save** | PHB p. 44: the globe *"affects the area immediately behind the creature, rather than the creature itself"* — so it still lights the thing up from behind. **A save is not a wasted spell** |
+| **Duration at 1st level** | **7 turns** |
+| **Mobility** | The globe does **not** move — unless cast on a mobile object or creature, in which case it goes where they go |
+
+**This makes *light* a first-level attack spell, not a lamp.** Seven turns of −4
+on everything is better than most things a 1st-level party can do to a single
+opponent, and it costs no material component.
+
+*source: **PHB p. 44** for the spell, **DMG p. 45** for the blinding. Both read
+from page renders 2026-09-06. The cache carried only the PHB half for weeks.*
 
 ---
 

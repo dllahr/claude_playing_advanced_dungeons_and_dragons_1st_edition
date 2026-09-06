@@ -135,3 +135,6 @@ when	exped	round	source	kind	what	who	fuel	certainty	note
 2026-09-05	6	978	lantern-ista	out		Ista		known	out for the third rest
 2026-09-05	6	1263	lantern-ista	out		Ista		known	out for the fourth rest
 2026-09-05	6	1548	lantern-ista	lit		Ista		known	relit after the fourth rest
+2026-09-06	7	1	lantern-ista	new	Lantern (hooded)	Ista	24	known	filled in town before setting out day 45. ISTA'S OWN, and the fuel is her duty. Expedition 7.
+2026-09-06	7	1	lantern-ista	lit				known	lit at the outer door. Nine going in. Single lit source, rank 2 left, spear in her other hand.
+2026-09-06	7	0	oil	draw			6	uncertain	TOWN TOP-UP, expedition 7. All three lanterns filled to full in Wethersby day 45 and logged as new --fuel 24, which ASSERTS a level and draws nothing -- the same fault the exp.6 log corrected with a compensating draw. This debits the oil actually poured. SIX TURNS IS DERIVED, NOT MEASURED: roughly what lantern-ista had burned since its last refill at exp.6 round 360, net of the four periods it was out. Marked uncertain deliberately -- the pool is ~500 turns so the error cannot change a decision, but it should not be invisible.
