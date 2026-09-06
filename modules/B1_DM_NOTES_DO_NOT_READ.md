@@ -3965,3 +3965,42 @@ most-talked-about object across town to a sickroom.
 2. Tristle may read it *there*, evenings, during tuition.
 3. **Toller will do the date-work himself** — he reads, dates are his trade, and
    it is his cut too. This is the one he actually wants.
+
+---
+
+## AREAS 10 AND 11 CORRECTED — 2026-09-06, and a MAP/TEXT tension to hold
+
+Player walked both boundaries square by square off the printed map. The
+extraction corroborated him independently: **every square he called diagonal
+came out `mixed`** — (6,26) (7,27) (8,28) (4,27) (3,28) (4,29) (6,29) (6,28)
+(5,27), **seven for seven** — and the printed labels sit inside his boundaries,
+**"10" at (7,24)** and **"11" at (5,28)**. Corrections are in
+`mapdb/b1_corrections.tsv`, so they survive a rebuild.
+
+**Area 10** ≈ x=5-9, y=21-28. Diagonal SW and NW walls. **Secret door in the east
+wall of (8,25) — you stand at (9,25) to reach it**, which is the west side of the
+20-ft passage. **The party walked past it on day 46 and Tristle's elf 1-in-6
+passive came up 3. He did not notice it.**
+
+**Area 11** ≈ x=3-6, y=27-30. Sealed. Diagonal SE wall with the secret door
+centred on the corner where (5,28) (6,28) (5,27) (6,27) meet.
+
+### ⚠ THE TENSION — do not resolve it by deleting the stairs
+
+**The printed map shows STAIRS running SE-NW through (4,29) (4,30) (5,29)
+(5,30), not tapering — B1's own legend means STAIRS UP.**
+
+**B1's key entry for area 11 does not mention them.** Zero occurrences of
+"stair" or "step" in that block; the room is described only as a supply room
+with construction supplies.
+
+**The map is what the party can see, so the stairs stay.** Where they go is
+undetermined and must be decided before anyone climbs them. Note that B1 already
+plays a game of this kind near area 36 — the FALSE STEPS, where a deliberately
+unnoticeable upward slant plus eight downward steps fakes a level change. **An
+unkeyed stair on this map is not necessarily a way out.**
+
+*(Also confirmed from the module text the same day: the area 36 pit trap opens
+"the entire 20' section of floor between the false door and the wall opposite" —
+which is why the trap covers BOTH (29,30) and (29,31). The player was right and
+the world_changes rows were incomplete.)*

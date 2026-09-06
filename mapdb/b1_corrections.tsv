@@ -547,3 +547,55 @@ edge	11	20	H	wall	dl+claude	area 2 north wall at x=11, read as stairs. Same wall
 # unused". A dead end.
 edge	24	31	H	wall	dl+claude	area 36 north wall, read as stairs from the glyph in (24,32) beyond it (thick=20 -- above the wall band entirely)
 
+
+# --- AREAS 10 and 11, 2026-09-06. From the PLAYER'S reading of the printed map,
+# --- which is the established fix path for what the extractor cannot do.
+# The player: "10 and 11 are only accessible through secret doors. The west walls
+# of area 10 are diagonal which might be why there were problems. The south east
+# wall of area 11 is diagonal with a secret door for access, and then the other
+# walls are more solid, thicker stone."
+#
+# DIAGONAL_WALLS.md has said since 2026-08-29 that "no correction has been
+# entered for areas 10 and 11". This is that correction, as far as membership
+# goes. The diagonal itself still has no edge to carry it.
+#
+# (10,29) and (10,30) are the x=10 CORRIDOR running north past both sealed
+# rooms. extents.py flooded room-11 membership across them because a diagonal
+# wall measures thin and open on every grid boundary it crosses.
+member	10	29	-	none	dl+claude	x=10 corridor, NOT area 11; area 11 is sealed behind a secret door in a diagonal SE wall
+member	10	30	-	none	dl+claude	x=10 corridor, NOT area 11; the corridor runs north past area 11 to the door at (10,31,H)
+
+# --- STAIRS IN AREA 11, and the room-11 flood. 2026-09-06, player's map reading.
+# The player walked both boundaries square by square off the printed map. The
+# extraction corroborates him independently: every square he calls diagonal came
+# out `mixed` -- (6,26) (7,27) (8,28) (4,27) (3,28) (4,29) (6,29) (6,28) (5,27),
+# seven for seven -- and the printed LABELS sit inside his boundaries: "10" at
+# (7,24), "11" at (5,28).
+#
+# STAIRS: he reads stairs running SE->NW through (4,29) (4,30) (5,29) (5,30),
+# NOT tapering, which is B1's own legend for STAIRS UP. The classifier called
+# (4,30) and (5,30) SOLID -- stair treads are tight parallel hatching and heavy
+# hatching reads as rock. This is the mirror of the known false-`stairs` bug that
+# the `feature` scope was built for.
+# *** NOTE THE TENSION: B1's key entry for area 11 does NOT mention stairs. Map
+# *** and text disagree; the MAP is what the party can see. Recorded in the DM
+# *** notes. Do not resolve it by deleting the stairs.
+cell	4	30	-	open	dl	area 11 stairs, read as solid rock -- stair hatching measures as ink
+cell	5	30	-	open	dl	area 11 stairs, read as solid rock -- stair hatching measures as ink
+feature	4	29	-	stairs	dl	stairs UP, running SE-NW; legend: not tapering
+feature	4	30	-	stairs	dl	stairs UP, running SE-NW; legend: not tapering
+feature	5	29	-	stairs	dl	stairs UP, running SE-NW; legend: not tapering
+feature	5	30	-	stairs	dl	stairs UP, running SE-NW; legend: not tapering
+#
+# ROOM 11 FLOODED EAST across the diagonals. Area 11 is x=3-6, y=27-30. Anything
+# east of x=6 assigned to it is wrong. (9,28) and (8,28) belong to AREA 10 -- the
+# player's boundary runs the NW diagonal (5,25)(6,26)(7,27)(8,28) then east to
+# (9,28), which has walls north and east.
+member	8	28	-	10	dl+claude	area 10's NW diagonal boundary, not area 11
+member	9	28	-	10	dl+claude	area 10 boundary, walls on north and east
+member	7	28	-	none	dl+claude	outside area 10's NW diagonal and east of area 11; membership unresolved
+member	7	29	-	none	dl+claude	flooded from area 11 across a diagonal
+member	8	29	-	none	dl+claude	flooded from area 11 across a diagonal
+member	9	29	-	none	dl+claude	flooded from area 11 across a diagonal
+member	8	30	-	none	dl+claude	flooded from area 11 across a diagonal
+member	9	30	-	none	dl+claude	flooded from area 11 across a diagonal

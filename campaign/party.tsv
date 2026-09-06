@@ -100,3 +100,4 @@ when	map	level	x	y	exped	turn	squares	feet	rate	why	route
 2026-09-06	b1	1	11	21	7	44	3	30	explore	west along the y=21 corridor at cautious pace, halting one square short of the corner at (10,21)	14,21 13,21 12,21 11,21
 2026-09-06	b1	1	10	21	7	48	1	10	explore	round the corner in formation; the corridor turns north	11,21 10,21
 2026-09-06	b1	1	10	24	7	50	3	30	explore	north up the 20-ft passage at cautious mapping pace, holding three abreast	10,21 10,22 10,23 10,24
+2026-09-06	b1	1	10	28	7	54	4	40	explore	north up the passage; it narrows from 20 ft to 10 ft at y=26. Halted at (10,28), the last square before area 11, which is flagged mis-mapped	10,24 10,25 10,26 10,27 10,28
