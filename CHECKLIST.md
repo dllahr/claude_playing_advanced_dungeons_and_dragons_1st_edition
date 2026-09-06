@@ -566,6 +566,30 @@ only the text found it.
       > in front of me."*
       **The player gets the number AND the scene.** This is the standing
       technique for every case where a character's reasoning is mechanical.
+- [ ] **DO NOT MANUFACTURE AN NPC OBJECTION.** *(Caught by the player
+      2026-09-05, Wend and the wool floor. The worst NPC failure of the campaign
+      so far, and it took three exchanges to notice.)* **A sharp NPC generates
+      sharpness whether or not there is anything to be sharp about**, and the
+      material gets manufactured by **ignoring what the player already said.**
+      What went wrong, concretely:
+      - The player said *"I don't know the amount of wool"*, then *"as I said…
+        **you'll need to calculate that**."* I had Wend object that **a share is
+        not a unit of wool** — chastising him for the exact thing he had twice
+        handed her as her job.
+      - His price was anchored to *"what would have been 80 gold per share **in
+        the last round**"* — rate-based, and therefore already immune to the
+        two-years-vs-one-year volume question. I had Wend "catch" it anyway.
+      - **Wend** raised the affordability worry; **Dave answered it flatly.** I
+        then had Wend say *"you were frightening yourself over six hundred"* —
+        putting her own anxiety in the player's mouth and having her be gracious
+        about it. **Never hand an NPC a rhetorical win the player never conceded.**
+      **THE TEST, before any NPC pushes back: re-read the player's own words and
+      find the sentence that already answers it.** If it is there, the objection
+      does not exist. An NPC may supply information, do arithmetic the player
+      asked for, price a risk, or say what it costs — **all of that is texture
+      and none of it requires the player to be wrong.**
+      *(And when this does happen: fix it in DM voice as a retraction. Do NOT
+      make the player spend a scene correcting an NPC for the DM's mistake.)*
 - [ ] **How the one-attempt thief rules read IN THE FICTION.** Open Locks and
       Find Traps may not be retried until the thief gains a level. The character
       does not know that and must not act like it. **A failed roll means he
