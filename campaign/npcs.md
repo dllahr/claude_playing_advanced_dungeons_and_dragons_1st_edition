@@ -386,9 +386,7 @@ other men.**
   anywhere."* **The loom, Ede, and the weaver at Lyde are the answer being built.**
 - ~~Nobody knows where the wool goes.~~ **ANSWERED day 14 by Father Cuddy:
   LUDBURY. Walked day 21-27. The clip sold for 1,200.**
-- **A place for SIM** — owed to Marrow since day 16, not delivered. The boy has
-  since told the party, without being asked, that **he wants the hill.** Marrow
-  does not know.
+- **~~A place for SIM.~~ CLOSED DAY 33 — DO NOT REOPEN.** Marrow discharged the apprenticeship himself, unprompted: *"I asked you for a trade because I thought the hill was worth nothing. **I was wrong about the hill.**"* **SIM STAYS ON THE HILL**, and he chose it — he rode to Ludbury with the carts, came home with them, and learned on the road what a fleece is worth. He wants to farm like his father. *(The "two years" in the day-33 record is the SILENCE between them, not time Sim spent away. He was never away. Corrected 2026-09-06, player-caught, after I nearly offered him a weaving apprenticeship at Lyde and undid the one thing in this story anybody chose freely.)*
 - **Marrow has not been told his son's answer.** It resolves at Wethersby or it
   does not resolve.
 - **A lad or two for the weaver at LYDE.** Offered, not sent.

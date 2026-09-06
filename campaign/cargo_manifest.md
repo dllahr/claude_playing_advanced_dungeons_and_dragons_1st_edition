@@ -278,7 +278,7 @@ out of your own — worth knowing before you set out rather than after."*
 - **Hask's three in a hundred, written down** — and the at-cost wrinkle explained
   to him rather than discovered by him.
 - **The iron and salt sold at cost, with the price visible.**
-- **A place for Sim** — owed to Marrow since day 16.
+- **~~A place for SIM.~~ CLOSED DAY 33 — DO NOT REOPEN.** Marrow discharged the apprenticeship himself, unprompted: *"I asked you for a trade because I thought the hill was worth nothing. **I was wrong about the hill.**"* **SIM STAYS ON THE HILL**, and he chose it — he rode to Ludbury with the carts, came home with them, and learned on the road what a fleece is worth. He wants to farm like his father. *(The "two years" in the day-33 record is the SILENCE between them, not time Sim spent away. He was never away. Corrected 2026-09-06, player-caught, after I nearly offered him a weaving apprenticeship at Lyde and undid the one thing in this story anybody chose freely.)*
 - **Ede fetched from her cottage in a month**, on the way back down.
 - **A lad or two to the weaver at Lyde**, a day off the road each way.
 - **Bern's new tools** and the loom to rebuild.

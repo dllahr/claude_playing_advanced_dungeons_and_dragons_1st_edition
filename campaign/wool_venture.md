@@ -118,7 +118,7 @@ inheritance."*
 **All six holders. Near enough two years of the hundred's wool.** The remaining
 **300 gp** goes out as the carts come in. **Funds ~474 → ~174 gp.**
 
-### Owed: a place for Sim
+### ~~Owed: a place for Sim~~ — CLOSED DAY 33, see below
 
 **Bern has no room until spring** and Dave said so rather than promising. Two
 routes offered: check whether Corm still wants the bench, or take the boy to
@@ -353,7 +353,7 @@ so nobody thinks he was rushed.** Wend conceded and wrote it down.
 ## Open — as of day 28
 
 - **The 229 gp reaches the six holders.** Four days of road first.
-- **A place for SIM**, owed since day 16 and still owed.
+- **~~A place for SIM.~~ CLOSED DAY 33 — DO NOT REOPEN.** Marrow discharged the apprenticeship himself, unprompted: *"I asked you for a trade because I thought the hill was worth nothing. **I was wrong about the hill.**"* **SIM STAYS ON THE HILL**, and he chose it — he rode to Ludbury with the carts, came home with them, and learned on the road what a fleece is worth. He wants to farm like his father. *(The "two years" in the day-33 record is the SILENCE between them, not time Sim spent away. He was never away. Corrected 2026-09-06, player-caught, after I nearly offered him a weaving apprenticeship at Lyde and undid the one thing in this story anybody chose freely.)*
 - **The weaving venture has a loom, a spinner and no weaver.** Lyde is a day off
   the road each way.
 - **Coll, Wat, Ferd and Ged: wages or shares?** Still not raised, now with a
@@ -372,7 +372,7 @@ so nobody thinks he was rushed.** Wend conceded and wrote it down.
   **Nan**, the dairy woman off Ferd's old holding, with two children.
 - **The caravan to Ludbury is not planned.** Five days each way. Who goes, how
   many carts, who guards two years of wool on a road, and who stays.
-- **A place for SIM.** Owed, not delivered.
+- **~~A place for SIM.~~ CLOSED DAY 33 — DO NOT REOPEN.** Marrow discharged the apprenticeship himself, unprompted: *"I asked you for a trade because I thought the hill was worth nothing. **I was wrong about the hill.**"* **SIM STAYS ON THE HILL**, and he chose it — he rode to Ludbury with the carts, came home with them, and learned on the road what a fleece is worth. He wants to farm like his father. *(The "two years" in the day-33 record is the SILENCE between them, not time Sim spent away. He was never away. Corrected 2026-09-06, player-caught, after I nearly offered him a weaving apprenticeship at Lyde and undid the one thing in this story anybody chose freely.)*
 - Whether Coll, Wat, Ferd and Ged get shares as well as wages. **Still not raised.**
 - **Quasqueton has not been touched since day 2.** Area 29's chest and barrel are
   still there and Tristle can now take a chest apart without the lock.

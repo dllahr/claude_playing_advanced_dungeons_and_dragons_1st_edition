@@ -237,6 +237,41 @@ these quarters contain a bed and like necessities."*
 > directed. Each is able to carry **up to 50 pounds** individually, or **double
 > that with a carrying pole or litter** or the like."* — DMG p. 28
 
+### WHAT EACH OCCUPATION ACTUALLY COVERS — DMG p. 28, verbatim
+
+**These descriptions sit under the table and the cache had dropped them. They
+matter: the answer to "what does a MESSENGER cost" is not a missing row, it is
+inside the valet/lackey note.**
+
+| occupation | what the book says it subsumes |
+|---|---|
+| **valet / lackey — 3 s.p./day** | *"the various forms of body servants **AND MESSENGERS**"* |
+| **teamster — 5 s.p./day** | *"basically **drivers of carts and wagons**. They will also load and unload their vehicles. They are expert animal handlers with respect to their particular specialty of draft animal only"* |
+| **pack handler — 2 s.p./day** | *"trained at loading, handling, and unloading beasts of burden such as donkeys, mules, horses"* |
+| **linkboy — 1 s.p./day** | *"a torch or lantern bearer. They are often **youngsters**, but mature men also will so serve"* |
+| **carpenter — 3 s.p./day** | *"most woodworking jobs… might be hired to secure a portal, fashion a chest"* |
+| **mason — 4 s.p./day** | *"any stonework must be done by a mason, and this occupation subsumes plasterers"* |
+| **leather worker — 2 s.p./day** | *"leather goods such as back packs, belts, straps, **horse tack**"* |
+| **tailor — 2 s.p./day** | *"makes and repairs clothing, bags, **shield covers**… also subsumes hatters"* |
+| **limner — 10 s.p./day** | *"all sign painting, drawing of heraldic devices"* |
+
+**SO: A MESSENGER IS 3 s.p. A DAY.** *(First needed day 41, for Wat's ride to Ede
+and Lyde.)*
+
+**And note what a TEAMSTER is, because it bears on Halm.** A teamster at 5 s.p./day
+is a man hired to drive somebody else's cart. **Halm owns his cart**, which makes
+him not a hireling but a business — and it is why *"one load's a load; what I'd
+want is a run"* is a different ask from a wage.
+
+> *"**Location Of Standard Hirelings:** In general the various occupations
+> represented here are common to most settlements of **village-size and above**,
+> although each and every village will not be likely to furnish each and every
+> sort of common hireling. Towns and cities will have many available."*
+> — DMG p. 28
+
+*source: **DMG p. 28**, the occupation notes beneath the STANDARD HIRELINGS
+TABLE, 300 dpi page render 2026-09-06.*
+
 **That is the answer to an encumbrance problem, and it is almost free** — a
 shilling a day. Two porters with a carrying pole move **200 lb** that nobody in
 the party has to carry.
