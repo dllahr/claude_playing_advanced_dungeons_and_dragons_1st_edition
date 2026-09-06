@@ -348,3 +348,63 @@ room to outbid it — which is the entire purpose. **The party is the buyer when
 nobody comes, not the buyer who stops anyone coming.**
 
 **Ottir witnesses. A copy stays in Wethersby**, as with articles 1 and 2.
+
+---
+
+## 8 · WEND'S AUTHORITY TO HIRE — day 41. The first one she asked for herself
+
+**Granted by Dave, open, unprompted:** *"if there's anyone else you can hire to
+help you please go ahead and do that."*
+
+**Reaction 116** — the top of the table, and the second-highest of the campaign
+after Hask's 109 for being told he needed coaching. It came **immediately after a
+26**, which is the lowest anyone has rolled at this party, and the two together
+are the whole story of the day.
+
+### WHY THE 26 HAPPENED — read this before running Wend again
+
+Across one evening she rolled **101 → 60 → 57 → 26**. Nothing in that is about
+the party. **It is a woman running down over five hours**, and it broke on a
+perfectly good request:
+
+> *"Fine. Yes. It'll pay. And I'll pay it, and I'll find the third with Coll, and
+> I'll write the terms for Wat, and I'll chalk your floor on the board, and I'll
+> have Ottir's fair copy witnessed, and I'll keep three books, and I will do **all
+> of it**, because every one of those is a good idea and I have not got one
+> argument against any of them."*
+>
+> *"**You've given me four things tonight, Dave. I asked you for one.**"*
+
+She named it as unfair herself, in the same breath, because she does that:
+*"I'm tired. That's the whole of it. I've been tired since Ludbury and I keep
+finding out there's another floor under the one I'm standing on."*
+
+**Nothing was refused. Everything was agreed.** The 26 was capacity, not consent.
+
+### WHAT FIXED IT — authority, not sympathy
+
+> *"That's what I gave **COLL.** In writing. On day thirty-four, because he asked
+> for it, and I thought at the time it was the most sensible thing anybody had
+> asked me for all year. **And it never once occurred to me to ask for it
+> myself.**"*
+
+### THE TERMS
+
+| | |
+|---|---|
+| **What she may do** | Hire whatever help she needs, her judgement, without asking |
+| **The cap** | **She set one on herself before anyone suggested it** — enough for a clerk and one pair of hands in the barn. Figure to be named when she has done the sums; reviewed like everything else |
+| **Why it is written** | *"Not for me — for whoever comes after me. That's the whole point of the file and I'd be a fool to be the one exception in it."* |
+
+### WHO SHE IS HIRING — Sarn and TAM, and they are one clerk between them
+
+**Nan's Tam, nine.** He has been holding the pen for Sarn's tally for a month.
+
+> *"Sarn can count and can't read; Tam can write and can't count. **Between the
+> pair of them there's already a clerk in that barn and I've been walking past it
+> twice a day.**"*
+
+**Sarn learns his letters off Frython from day 40. Tam learns his numbers off
+Sarn.** In three years Tam is the best-schooled child in the hundred. And it puts
+a wage into a house that walked into Wethersby on day 15 with two children and
+nothing.
