@@ -566,6 +566,49 @@ only the text found it.
       > in front of me."*
       **The player gets the number AND the scene.** This is the standing
       technique for every case where a character's reasoning is mechanical.
+- [ ] **THE TSVs ARE EVIDENCE. THE PROSE FILES ARE AN INDEX.** *(2026-09-06,
+      after NINE factual errors in one session, all caught by the player.)*
+      CLAUDE.md already forbids quoting a running **total** from a prose file.
+      **This is the same rule for EVENTS, and it is the big one.** `npcs.md`,
+      `articles.md`, `journal.md` and every scene write-up are **summaries the
+      DM wrote**. Three of the nine errors were believing one of those instead
+      of the log underneath it: Kell's death (read my own note backwards), Sim's
+      history (read "two years" as time away when it meant the SILENCE between
+      him and his father), and Cuddy (ran him cold off a reaction score that
+      described eight armed strangers at a gate, ignoring an evening of shared
+      offices that followed).
+      > **`python tools/recall.py <name>`** prints every logged event for a
+      > character across all seven TSVs, in order. **Run it before narrating
+      > anyone's past.** It exists because checking used to be awkward, and
+      > awkward is why the rule kept getting broken.
+- [ ] **PAST-TENSE GUARD — the single biggest tell.** Present-tense play has
+      never been the problem: rolls, saves, encumbrance and rules lookups all go
+      to the books and hold up. **Every error was retrospective colour** — *"she
+      remembers…", "he'd been…", "when you fell…"*. Three were pure invention: a
+      distance to Ede, a **sealed causeway report that never existed**, and Ista
+      going under twice in the pool while nobody noticed *(the log says she was
+      pulled out and given the party's FIRST cure, and that Blartho bled an
+      extra round after her)*.
+      **If you are writing a past-tense sentence about something that happened
+      at the table and you have not opened the log, STOP.** Either check, or be
+      unspecific. Vague is recoverable; a confident wrong detail is not.
+- [ ] **A LOW ROLL DOES NOT LICENSE INVENTED BACKSTORY.** Rolled a **1** for
+      Ista, went looking for a wound that would explain it, and **invented one.**
+      **Reaction rolls describe MOOD, not history.** Find the reason in the
+      record; if the record hasn't got one, a bad reaction is *mundane* — tired,
+      distracted, a long day, bad news an hour ago. Wend's 26 and Toller's 36
+      were both correctly played that way and both were better for it.
+- [ ] **ESTABLISH IT IN DM VOICE BEFORE PUTTING IT IN A MOUTH.** Retracting a
+      line of narration costs a sentence. Retracting a **speech** costs the
+      character's coherence — Ista said *"what I want is the second one in a
+      hand… not in a sack"*, and two messages later I offered the sack back as a
+      compromise, which made her look like she didn't know her own mind.
+      **Put the load-bearing claim in DM voice first. Let the character speak
+      only once it has survived.**
+- [ ] **MARK THE REACH.** When going past the record, say so inline —
+      *"not in the log; I'm inferring"* — so the player can veto in one word
+      instead of after a page of prose. **The player has been doing this QA and
+      it should not be their job.**
 - [ ] **DO NOT MANUFACTURE AN NPC OBJECTION.** *(Caught by the player
       2026-09-05, Wend and the wool floor. The worst NPC failure of the campaign
       so far, and it took three exchanges to notice.)* **A sharp NPC generates

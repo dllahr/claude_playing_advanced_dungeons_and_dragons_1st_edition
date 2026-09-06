@@ -319,6 +319,21 @@ rules into a 1e answer without flagging the swap.
 in `party_roster.md` went stale by two expeditions and were cited as fact, once leading the
 DM to tell the player their spikes were in a door they had already recovered them from.
 
+> ### AND NEVER QUOTE AN **EVENT** FROM ONE EITHER — added 2026-09-06
+>
+> Same rule, and it took nine caught errors in one session to see that it
+> generalised. **`campaign/npcs.md`, `articles.md`, `journal.md` and every scene
+> write-up are summaries the DM wrote. They are an INDEX. The TSVs are the
+> evidence.** Believing my own summary produced three wrong facts in one day —
+> how Kell died, whether Sim had been away for two years, and how cold Father
+> Cuddy is to Yrtone.
+>
+> **`python tools/recall.py <name>` prints every logged event for a character
+> across all seven logs, in order.** Run it before narrating anyone's past.
+> `tools/tests/test_recall.py` carries the regression: Ista was hauled out of
+> the pool and given the party's **first** cure light wounds, and Blartho bled an
+> extra round *after* that. The DM once narrated the exact opposite.
+
 - `campaign/encounters.tsv` — append-only award log; `anchor` rows set totals outright
 - `campaign/characters.tsv` — prime requisites, AC, hp_max, proficiencies, and the
   Strength/Dexterity adjustments, so every modifier is applied consistently
@@ -373,6 +388,7 @@ DM to tell the player their spikes were in a door they had already recovered the
 | `tools/bestiary.py` | reads `bestiary/` — the campaign's own Monster Manual, one file per creature |
 | `tools/treasure.py` | the MM treasure-type appendix; the per-creature letters come from `bestiary/` |
 | `tools/party.py` | where the party is; **`move` refuses to cross a wall**, which freehand narration once did |
+| `tools/recall.py` | **every logged event for one character, across all seven TSVs, in order.** `python tools/recall.py Ista --exped 6`. **Run it before narrating anybody's past** — the prose files are an index, the TSVs are the evidence |
 | `tools/tsvlog.py` | the shared TSV reader every other tool uses; not run directly |
 
 `bestiary/` holds one markdown file per creature in the same pipe-table format, with
