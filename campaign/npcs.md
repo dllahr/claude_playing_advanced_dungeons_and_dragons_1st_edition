@@ -1217,3 +1217,50 @@ Dave offered it back unprompted. **Toller would not hear of it.**
 > **Toller got frightened.** I'd rather be frightened and keep it to myself."*
 
 **He is staying in. He is not going to be cheerful about it for nine days.**
+
+### TOLLER WILL NOT RIDE TO DRAYCOT — 36, then 45. And he is right
+
+Dave put it to him plainly: Cuddy answers at Draycot on the evening of the 51st,
+Wethersby is a long day's ride, **so there is no way to get the answer back before
+the petition** — come with us, or learn it on the 53rd.
+
+**His refusal is better than a flat no, and it stands:**
+
+> *"**My risk is in the selling. It is not in the knowing.** If that hill is Sir
+> Aymer's, the thing that ruins me is the moment I take his household's money for
+> his own bed — not the moment I find out. And I'm not selling anything before the
+> fifty-second… so the worst that happens is I have two more bad nights. I've had
+> thirty. I can do two."*
+
+**What is actually stopping him — the trade, not cowardice:**
+
+> *"I'd be a curio dealer from Wethersby, at Draycot, in the same week the
+> household is buying from him. I have spent thirty years being a man nobody in a
+> great house has ever heard of. **That is not modesty, that's the trade** — the
+> moment gentry know your name you're either their creature or you're in the way."*
+
+**The shop is a second real problem** *(d6 = 2)*: no apprentice, no boy, nobody.
+The only person who has stood behind that counter is **Tristle**, ten evenings in,
+*"very good, and also, forgive me, an elf with a lockpick."*
+
+**Dave told him about the chapel outside the wall and about getting Wace's hand on
+paper, in full, explicitly to inform and not to press — and then agreed with him
+and released him.** *"That's a kindness, telling me that. It'd have annoyed me to
+find out afterwards there'd been a way to do it quietly. But no."*
+
+> ## ⚠ THE CONDITION OF SALE — Toller's own correction, and it is the operative term
+>
+> Dave suggested a deal in writing from **Perrin** would solve it. Toller fixed it:
+>
+> *"**Perrin's paper is worth what Perrin can spend, which he told us to our faces
+> is a bed.** It wants **WACE'S OWN HAND** on it, or it wants **COIN.** One of the
+> two, and I'll take either gladly."*
+>
+> **NOTHING SELLS BEFORE DAY 52. The price of the set is coin or the steward's
+> signature.** And his closing thought: *"your reeve is going to be stood in that
+> hall — a man who witnesses things for a living, who has known me twenty years,
+> and who is going there anyway. If I can't get a bargain witnessed with **him** in
+> the room, I've no business calling myself a trader."*
+
+**AFTERNOON ARC: 110 → 48 → 36 → 45.** Not souring on the party — a man absorbing
+bad news across four hours. **Read it the same way as Wend's 101→26 on day 41.**
