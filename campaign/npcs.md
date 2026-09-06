@@ -748,3 +748,65 @@ non-magical consulting asset the party has been sitting on.
   Sarn is not the one to ask; he was there, and he is the one on the crutches.
 - He half-started a sentence about Hask and Dellie and stopped it. It is still in
   him.
+
+---
+
+## DAY 39, late — WEND. Check-in two, and she asked for a clerk
+
+**Reactions: 59 on the check-in, then 101 on Dave's three items.** The gap is the
+whole lesson again — 59 was a man arriving, 101 was a man arriving **with work**.
+
+### Where she is
+
+**Coping, and no longer bracing** *(d6 = 4)*. Seven days as factor. **Three
+ledgers now, her own idea** — the pool, the party's stock at cost, the barn wages
+— *"because I will not have anybody able to say I mixed them, least of all me."*
+
+**Her first question was Frython's number, and she got it.** She did not say *I
+told you so*: *"I'd have rather been wrong. I want that said out loud, because I
+know how I sound."* **The succession document came within two hit points of firing
+in its first week.**
+
+### The trade moved while the party was under *(d6 = 5)*
+
+**Holders from outside the original six are asking to join the pool** — one, then
+two more, then a man who sent his son to ask without committing himself. **Cause:
+not the money, the COAT.** Marrow paid in the square in his good coat, and Gyll
+counting out four and ten to eleven people with Ottir standing there. She has
+signed nobody and told every one of them plainly they may join or sell elsewhere.
+
+**Her worry, and it is the right one:** more fleece is more of the party's money
+standing still between shearing and Ludbury.
+
+### WHAT SHE NEEDS — d6 = 6, and she had been putting off asking
+
+**A second person who can WRITE.** Not a partner, not a decision-maker — a clerk.
+She cannot be in the barn and the square at once, she is doing three ledgers by
+lamplight after the shop shuts, and **the factorship's weakness is that it is one
+woman deep.** This is the same argument she made about the party in article 1,
+turned on herself, and she knows it.
+
+### SARN — SHE DOES NOT KNOW. d6 = 1
+
+**She had no idea he has been keeping the store tally.** A month of it, forty
+yards from her own door, and she asked for a clerk in the sentence before she
+found out she had one.
+
+Dave routed the hire through **Coll** — which is the advice she gave about Wat on
+day 32 and which nobody took. **She noticed.**
+
+### The buyer of last resort — see `articles.md` art. 7
+
+**101**, and not out of gratitude. **A published floor is the cure for the exact
+conflict she resigned the buying seat to avoid:** *"If it's a favour I do at my
+discretion, then every summer I'm choosing, and choosing is the thing that ends
+me here. If it's a price on the door, I never choose again."*
+
+**She requires a price, a cap and a season before she will write it**, and warns
+that a floor the party cannot honour is worse than none, because holders will
+have turned down real buyers on the strength of it.
+
+### Custody of the money — art. 6
+
+Stated aloud for the first time and written down: **the coin stays with Wend.**
+It always had; nothing else made sense of the succession document.

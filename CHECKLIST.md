@@ -806,7 +806,7 @@ scene:
 
 | | and the thing they are actually waiting on |
 |---|---|
-| **Wend** | factor. Holds the succession document, the at-cost board, the Ancel connection, and **Wat's terms are still not agreed** — she said ask **Coll**, not Wat |
+| ~~**Wend**~~ | **DONE day 39 late.** 59, then **101** on Dave's three items. See `npcs.md` `## DAY 39, late — WEND` and `articles.md` arts. **6** (the money lives with her) and **7** (buyer of last resort, **price/cap/season still unnamed**). **She asked for a CLERK and did not know Sarn existed as one.** New holders want into the pool. **Wat's terms still not agreed** |
 | **Ottir** | witnessed everything. His **sealed causeway report to Master Wace is still undelivered**; Draycot has now written a *second* time about the headboard |
 | **Bern** | the loom. **May or may not have started it** — the party left Wend in charge and did not say. Ista told him about the caves herself and asked that nobody help; **outcome unknown, do not resolve it for her** |
 | **Coll** | basecamp and the barn. Has his authority in writing now. All six unlisted hands went to Marrow's with a written right of return |
@@ -832,7 +832,14 @@ adjustment said aloud first, and remember the standing finding in
 
 ### Owed in the fiction
 
-Fetch **Ede** (~17 days out; 2½ days each way on horseback) · send a lad to the
+Fetch **Ede** — **due about DAY 58** *(CORRECTED 2026-09-05, player-caught. This
+line said "~17 days out" and I wrote it myself earlier the same day; it does not
+follow from anything attested and I could not reconstruct it. The attested fact is
+`calendar.md` day 28: **she wants a MONTH to shut up her cottage**, so day 28 + 30
+= **day 58**, which is **19 days from day 39**. Travel is NOT attested either — the
+distance table gives Wethersby↔Fenn's as **4 days by cart** plus 8 miles
+cross-country to her door; "2½ days on horseback" was also mine. Derive it before
+quoting it.)* · send a lad to the
 weaver at **Lyde** · **Wat's terms** · Ottir's report to **Master Wace** ·
 **Draycot's second letter** about the headboard.
 

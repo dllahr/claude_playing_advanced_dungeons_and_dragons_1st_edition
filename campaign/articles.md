@@ -255,3 +255,61 @@ that a price feels like a demand.
 
 **Do not fix this with a rule.** He gets better at it or he doesn't, and Wend has
 another two days of coaching she is now going to spend entirely on this.
+
+---
+
+## 6 · CUSTODY OF THE MONEY — stated day 39, and it was always true
+
+**The party's coin lives with WEND, in Wethersby.** It is not carried into
+Quasqueton and never has been; the party takes a working purse and leaves the
+chest behind.
+
+**This was never written down and it should have been on day 21.** It is not a
+new decision — it is the reading the record already required:
+
+- Receipts came in on **days 34, 35 and 37** while the party was on the road or
+  underground, and were added to the total. Somebody was holding the money and
+  taking the money in, and it was her.
+- **Hask's ring-fenced seventh** of the tool receipts is recorded, twice, as
+  *"kept separate **by Wend**."*
+- **Article 1 requires it.** Wend cannot manage the party's capital for two years
+  after they fail to come back if the capital was in a pack at the bottom of a
+  shaft. The succession document is unenforceable under any other arrangement.
+
+`campaign/inventory.tsv` now says so in the location column. **Do not let a
+future scene have the party "bring the money" anywhere without moving it first.**
+
+---
+
+## 7 · BUYER OF LAST RESORT — Dave's undertaking, day 39
+
+**The offer, in Dave's words:** *if there are other buyers willing to pay a fair
+price, sell to them, and sell for as much as you can. Our money is around to keep
+things moving when those buyers aren't around.*
+
+**Wend's reaction: 101.** And her reason is not gratitude — it is that a
+**published** floor is the cure for the exact conflict she resigned the buying
+seat to avoid:
+
+> *"If it's a favour I do at my discretion, then every summer I'm choosing, and
+> choosing is the thing that ends me here. **If it's a price on the door, I never
+> choose again.** I just read it out."*
+
+### What she requires before it is written
+
+She will not take it as a sentiment. Three things, or it is a blank cheque:
+
+| | |
+|---|---|
+| **A PRICE, published** | Stated per fleece, chalked up where the at-cost board is, and read out to every holder. Not "fair" — a number |
+| **A CAP** | A maximum the party commits in any one season. *"Only one of us knows what's in that chest, and it isn't me any more than it's them."* |
+| **A SEASON, renewable** | Next summer's clip. Not perpetual. Reviewed each year or it becomes a thing the hundred plans around and cannot survive losing |
+
+**And her warning, given in the same breath and unprompted:** the floor is only
+worth the money behind it, and *"your money is currently being carried down a
+hole by people who fall forty feet."* **A floor the party cannot honour is worse
+than no floor**, because the holders will have turned down real buyers on the
+strength of it.
+
+**NOT YET WRITTEN. The price, the cap and the term are unset** — those are the
+party's to name and Ottir should witness it as he did the succession.

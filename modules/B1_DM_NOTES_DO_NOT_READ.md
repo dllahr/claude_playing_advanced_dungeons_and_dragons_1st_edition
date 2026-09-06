@@ -3924,3 +3924,44 @@ DEX 16), leaving her 0-level forever. It contradicts the class descriptions on
 PHB pp. 20-28, none of which set any constitution minimum for those three.
 **Ruled: the "General Information" column is shorthand; the class minimums
 govern.** The stricter reading was offered and not taken.
+
+---
+
+## THE 86 MARKS — Frython's research task. Sealed d6 = 3, day 39
+
+**The player proposed it:** does the count of eighty-six under the area 2 kitchen
+table line up with anything in Zelligar's diary or the area 6 papers?
+
+**Existence check, d6 = 3** — rolled in the open, value recorded here only, same
+treatment as the second troglodyte return timer. **Partial.** There is something
+to find and it does not close the question:
+
+- The **papers** (party's own salvage, area 6, exp.4 turn 156) are mundane
+  household and construction records. **Most recent date: 30+ years ago.** They
+  carry *dates*, which is what an 86-day count needs and what nothing else the
+  party holds provides.
+- **A run can be reconstructed but not anchored.** The household records thin and
+  then stop; the stopping is datable to within a season, not to a day. Eighty-six
+  days back from a season is a season.
+- **What it CANNOT do is name the counter.** No name, no room, no reason. It can
+  tell them *roughly when the household stopped being a household*, which is the
+  question behind the question, and it will make the eighty-six marks worse
+  rather than better.
+
+**Do not deliver this until the work is actually done.** It needs the diary
+(Toller has it, and see below) plus days of Frython's time. Roll Frython's INT
+when he sits down to it; INT 17 is 75% territory but the *ceiling* is the d6 = 3
+above — a good roll finds all of the partial answer, not more than it.
+
+### TOLLER WILL NOT RELEASE THE DIARY — d6 = 1, day 39
+
+Flat refusal to let it leave the shop, and he has three good reasons, all true:
+he has a **cut** in it (Frython declined to sell and gave him a share), there is a
+**Draycot enquiry** already sniffing at his stock, and a dealer does not send his
+most-talked-about object across town to a sickroom.
+
+**But he is not refusing to help.** Offer, in this order, only if pressed:
+1. Frython is welcome in the shop the moment he is off his back — **day 45**.
+2. Tristle may read it *there*, evenings, during tuition.
+3. **Toller will do the date-work himself** — he reads, dates are his trade, and
+   it is his cut too. This is the one he actually wants.
