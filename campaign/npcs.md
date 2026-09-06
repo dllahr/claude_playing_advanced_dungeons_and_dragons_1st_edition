@@ -912,3 +912,72 @@ reads the account that evening** and gives his take, and it is handed to Wace th
 next day. The party stands beside him and says nothing unless spoken to —
 **not as men accounting for themselves.** *"Men who turn up to account for
 themselves have done something. You'd come as the men who cleared his road."*
+
+---
+
+## DAY 40 — the three social calls, and Ottir has no horse
+
+**Player's framing: these were social calls, no agenda.** Bern **81**, Coll
+**104**, Halm **69**, then Halm **60** on the actual news. Deliberately not used to
+push anything.
+
+### OTTIR HAS NO RIDING HORSE — d6 = 5
+
+**He walks his hundred and always has.** Draycot is *a long day's ride*; on foot
+it is two days there and two back, or he borrows a beast off a holder and owes
+somebody for it.
+
+**This does not replace the fear — both are true, and the small one is the one
+that actually stopped him.**
+
+> *"I'd have had to go and ask Ellery for his cob. Which is a small thing. It's
+> just that it's a small thing I'd have had to do first, every time, for eleven
+> years."*
+
+**The party owns exactly TWO riding horses** (Hask's, Dellie's) plus the mule, so
+three riders was never possible. **YRTONE rides with Ottir** — and that is the
+better pairing anyway: **Cuddy is an almoner and a priest**, he reacted **48,
+neutral and incurious**, and he *"must be drawn out; the door does not swing open
+on its own."* **A cleric calling on a churchman does not have to be drawn out.**
+
+### BERN — 81. Nothing was offered and that was the point
+
+Braced when Dave came through the door, then: *"You've not brought anything. No —
+that's not a complaint. **That's the first time.**"* More work than hands; a
+wedding commission and a stack of spindle blanks. Corm at the far bench.
+
+**On ISTA he says nothing, and it is not a bad nothing.** Something happened on
+the night of day 32 and he is not telling Dave what, and he is carrying no
+grievance. **STILL HERS. Do not resolve it, and do not ask him again.**
+
+### COLL — 104, the highest of the day, and the shortest scene
+
+**He had already entered Sarn on the roll at a clerk's wage before Dave arrived**
+— Wend told him at first light and he did it the same hour.
+
+> *"She told me the pool's grown and we want a man on the books. Which is true.
+> She also told me not to say the other thing, and I'd not have said it anyway."*
+
+**More unasked work at the basecamp:** trail re-graded where the autumn rain cut
+it, second course of turf on the lean-to, and **a second board on the post under
+KEEP DRY. FILL WOOD. It reads WATER'S GOOD.**
+
+### HALM — 69, then 60 on the load
+
+He asked once, carefully, and said he would not ask twice: *"Is there a load
+coming?"* **Told about Ede (day 58) and Lyde.** Pleased, and straight about its
+size: *"Eighteen days… that's a fortnight's work and it's the best fortnight I've
+had offered since the spring."*
+
+**HIS QUESTION, which nobody in the party can answer:** *how much is Ede
+bringing?* She keeps the cottage and the right to return, so it is likely a
+wheel, her tools and a box — but **nobody has asked her, and Halm would rather ask
+than arrive.**
+
+**On Lyde:** *"That's not carting, that's talking. You'll want a horse for that,
+not me. I'll sit at Fenn's with the cart and you can ride over and back."*
+
+**AND THE STANDING WANT, restated and still unmet:**
+
+> *"One load's a load. What I'd want, someday, is a **RUN.** Osk's got a run. He
+> knows where he is on a Tuesday."*
