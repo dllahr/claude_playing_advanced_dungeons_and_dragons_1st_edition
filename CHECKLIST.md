@@ -609,6 +609,24 @@ only the text found it.
       *"not in the log; I'm inferring"* — so the player can veto in one word
       instead of after a page of prose. **The player has been doing this QA and
       it should not be their job.**
+- [ ] **IF A CLASS FUNCTION COVERS THE QUESTION, ROLL THE CLASS FUNCTION.**
+      *(2026-09-06, the jammed pit trap.)* Tristle got a proper **Find/Remove
+      Traps 25%** check. For Ista I improvised a **d6** "observation" roll instead
+      — and she is a **thief with Find/Remove Traps 20%.** The improvised die
+      quietly **denied her a roll she was entitled to**, and printing a bare "a 1"
+      next to a percentile check made it read as a failed 20% when 1 would have
+      been a *success*.
+      - **The once-per-level limit on Open Locks and Find Traps is per THIEF, not
+        per TRAP.** Two thieves get two attempts. That is part of what a second
+        thief is FOR.
+      - **Don't invent a d6 for something the rules already price.** Ad-hoc dice
+        look like fairness and are actually the DM choosing the odds.
+      - **Label the die when two kinds are in play.** "d6 = 1" beside "d100 = 38"
+        is unreadable, and the player has to ask.
+      **And when a roll fails, give the failure a REASON in DM voice or the
+      character's** — *"she is nowhere near the mechanism"*, *"he has years and it
+      wasn't enough; she has a week"*. A bare "nothing" is a worse scene than a
+      stated one, and the player asked for this explicitly.
 - [ ] **DO NOT MANUFACTURE AN NPC OBJECTION.** *(Caught by the player
       2026-09-05, Wend and the wool floor. The worst NPC failure of the campaign
       so far, and it took three exchanges to notice.)* **A sharp NPC generates
