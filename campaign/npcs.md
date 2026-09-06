@@ -818,3 +818,97 @@ day 40. Full terms and the arithmetic behind the 8 are in `articles.md` art. 7.
 
 Stated aloud for the first time and written down: **the coin stays with Wend.**
 It always had; nothing else made sense of the succession document.
+
+---
+
+## DAY 40, morning — REEVE OTTIR. Check-in three, and the account of the hundred
+
+**Reactions: 81 · 87 · 93.** He came and found Dave, which for a man who has spent
+forty days avoiding trouble is the whole thing in one image.
+
+### THE SURETY IS SATISFIED — he will not raise it again
+
+All four visibly working: Corm at Bern's bench, Hask selling and now underground,
+Dellie the same, **Sarn onto Coll's roll as a paid clerk** (Wend told him at first
+light). His own words, unprompted and uncomfortable:
+
+> *"I said a thing to you on day four that I've not been comfortable with since.
+> **Idle men in a market town.** I said it in front of the four of them, and I
+> meant it as advice to you and they heard it as what I thought of **them**. And
+> the one of them who couldn't stand up has been keeping your books for a month."*
+
+**Careful with the wording — he was:** *"A surety's not a thing that finishes,
+it's a thing that stops mattering."*
+
+### MASTER WACE HAS WRITTEN — the account of the hundred, day 52
+
+Arrived from Draycot ~day 36 while the party was underground. Short, polite,
+routine on its face. **The reeve is to render an account of the hundred at the
+next petition day: its YIELD, its HANDS, and WHAT TRAFFIC PASSES ON THE NORTH
+ROAD.** *"That's a steward doing his work. I've had one before, years back. It
+means nothing. — I have read it forty times."*
+
+**Ottir is NOT behind on the district** *(d6 = 6)*. He has the wage roll, the
+pool, Gyll's mare, Marrow hiring and Ede coming north, all counted. He is a reeve;
+counting is the job. *"I'm not behind on any of it. I'd not sleep if I were."*
+
+**His offer, and it is the reason he came:** *"I'd rather write it WITH you than
+ABOUT you."*
+
+### THE PARTY TOLD HIM EVERYTHING ABOUT QUASQUETON — day 40, unprompted
+
+**He weighed deniability out loud first** *(d6 = 4)* and rejected it: *"There's a
+version of my life where I don't know… I'd be a reeve who doesn't know what
+happens in his own hundred, and I've been one of those for two years."*
+
+Told: four expeditions, the way in, the bandits found below and Kell buried in a
+passage, rats and orcs and the thing on the ceiling, the trophy room, and **the
+pit trap four days ago — forty feet into cold water with Dellie and Ista among
+them.** He said only: *"And you're going back. Aye. Well. I'd not have picked it
+either."*
+
+**Two things he worked out unled:**
+
+1. **"That's where your four hundred and fifty came from."** He had wondered for a
+   month and deliberately not wondered aloud.
+2. **"WHOSE IS IT?"** — asked honestly, not as an accusation. A ruin on the waste,
+   and the waste is Sir Aymer's. **He does not know and will not ask the question
+   in the wrong room.** He named the man who would know: **FATHER CUDDY**, who has
+   read the writings in the Draycot chest and gave the toll-and-franchise answer
+   unasked, for nothing. **Nobody has claimed the place in thirty years.**
+
+### WHAT GOES IN THE ACCOUNT — his craft, and he is very good at it
+
+> *"Wace asked me three things. **Yield, hands, and what traffic passes on the
+> north road.** I answer those three, fully and truthfully, and I do not answer a
+> fourth he didn't ask. **That's not lying to a steward. That's being a reeve.**"*
+
+| asked | the answer, all of it true and all of it good news |
+|---|---|
+| **Yield** | The clip sold. Six holders paid in coin. Three more asking to join a pool |
+| **Hands** | Eleven on wages where there were none. A spinner coming north. Marrow hiring |
+| **North road** | Robbed a fortnight, patrolled six days, **quiet since** — Osk drove it and told the market unprompted. **Carts go up to a ruin on the waste and come back** |
+
+*"If he wants to know what's in the carts he can ask, and then I'll tell him, and
+I'll not enjoy it, but I'll tell him."*
+
+### THE CAUSEWAY — CLOSED BY DAVE, and this is the 93
+
+**Dave withdrew it entirely and gave the reason: he only ever raised it to make
+work for people, and that problem is solved.** He will help if Ottir ever wants
+it and will not mention it again unless there are idle hands.
+
+**Ottir had been carrying it as a private shame** — Wend's word is that he is
+frightened of Sir Aymer and he does not deny it. **Do not make him pay for this
+again. It is settled and it was settled generously.**
+
+### HE WAS GOING TO SEND PAPER — d6 = 2
+
+**He did not intend to attend the day-52 petition in person.** He was going to
+post the account and stay home. **Dave's offer to ride with him changed that.**
+
+**AGREED:** the party rides to Draycot with him, arrives a day early, **Cuddy
+reads the account that evening** and gives his take, and it is handed to Wace the
+next day. The party stands beside him and says nothing unless spoken to —
+**not as men accounting for themselves.** *"Men who turn up to account for
+themselves have done something. You'd come as the men who cleared his road."*

@@ -831,7 +831,7 @@ scene:
 | | and the thing they are actually waiting on |
 |---|---|
 | ~~**Wend**~~ | **DONE day 39 late.** 59, then **101** on Dave's three items. See `npcs.md` `## DAY 39, late — WEND` and `articles.md` arts. **6** (the money lives with her) and **7** (buyer of last resort, **price/cap/season still unnamed**). **She asked for a CLERK and did not know Sarn existed as one.** New holders want into the pool. **Wat's terms still not agreed** |
-| **Ottir** | witnessed everything. His **sealed causeway report to Master Wace is still undelivered**; Draycot has now written a *second* time about the headboard |
+| ~~**Ottir**~~ | **DONE day 40 morning.** 81 · 87 · 93. See `npcs.md` `## DAY 40, morning — REEVE OTTIR`. **THE SURETY IS SATISFIED.** **MASTER WACE HAS WRITTEN: account of the hundred at Draycot, DAY 52** — yield, hands, and traffic on the north road. **The party told him everything about Quasqueton** and he asked the one hard question: *whose is it?* **Causeway CLOSED by Dave — do not reopen it** |
 | **Bern** | the loom. **May or may not have started it** — the party left Wend in charge and did not say. Ista told him about the caves herself and asked that nobody help; **outcome unknown, do not resolve it for her** |
 | **Coll** | basecamp and the barn. Has his authority in writing now. All six unlisted hands went to Marrow's with a written right of return |
 | **Halm** | the guide. **Genuinely does not know about the barrel** (d6=1, answered honestly) |
