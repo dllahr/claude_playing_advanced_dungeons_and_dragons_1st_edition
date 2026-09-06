@@ -1133,3 +1133,87 @@ rather than the morning of."*
 
 **This is what coming early bought.** One trip would have got an old man's
 off-the-cuff recollection over supper.
+
+---
+
+## DAY 42 — PERRIN IN WETHERSBY, and Toller learns what he is holding
+
+### Sarn, third morning with Frython — d6 = 5, far better than expected
+
+**He can write his own name.** *"That's the first thing I've ever put down that
+stays."* Wend was right that he was not starting from nothing — numerals cold, a
+dozen words by shape, and he had decided none of it counted.
+
+**Frython is unexpectedly good at this**, and the reason is the useful one: he
+cracked a thirty-year-old diary by working out which marks repeated. **That is the
+same skill run backwards.** He is also flat on his back, barred by DMG p.82 from
+attacking, defending, casting, carrying, running, studying or researching, and
+bored out of his mind. *(Talking is not research. The lessons are allowed.)*
+
+### BERN — 78 +10 = 88. Nobody has ever asked him how many men
+
+Perrin knows wood: turned the wedding commission over, asked whether the frame is
+pegged or wedged, and spent a while on the **spindle blanks** — *"a man who can't
+turn a spindle straight can't do anything."*
+
+**He did NOT commission anything.** What he did was worse and better: he asked
+Bern **what he could deliver by spring, and how many hands he'd need.**
+
+> *"He asked me **how many men.** Nobody's ever asked me how many men."*
+
+### TOLLER AND PERRIN — 110, and then two walls
+
+**Perrin understood the set in ninety seconds, better than the party ever has:**
+*"Oh. **Oh.** It's the book that does it, isn't it."*
+
+> ### WHY BREAKING THE SET COSTS 400 GOLD — write this down
+>
+> **The diary is the DOCUMENTATION.** The headboard alone is a gilded bed; the
+> plaque alone is a bit of silver. **The diary is what proves the other two are
+> what they are.** A household furnishing a hall for people who have not come in
+> fifteen years is buying **provenance**, not furniture. That is the whole of the
+> ~1,025-as-a-set / ~603-apart gap.
+
+| wall | |
+|---|---|
+| **Perrin cannot spend it** *(d6 = 3)* | Authority for a bed, not for six hundred to a thousand gold. **Must refer to MASTER WACE**, who hears things on his days. He asked for the pieces to be held while he asks |
+| **Gentry don't pay** | Toller said it to his face, courteously: *"Not don't-pay like a thief — don't-pay like **weather.** I'd hold these on a word and in two years I'd be writing my third letter and there'd be nobody at all who was ever unkind to me."* **Perrin did not argue.** *"No. That's fair. I've seen it done."* |
+
+### DAVE BRIEFED TOLLER IN FULL — reaction 48
+
+Told him about Wace's account, Cuddy's search on who owns the crag, and how it
+bears on the pieces. **48 is not ingratitude — it is the weight of the news.**
+
+> *"Thank you for that. I don't think I'm going to enjoy the next nine days, but
+> thank you."*
+
+1. **HIS EXPOSURE, which he saw before Dave finished.** *"If that hill is Sir
+   Aymer's, then I am a dealer in his hundred, holding his property, **selling it
+   to his own usher.** That's not a suit at law. There's no suit. There's a man
+   deciding I'm not to trade here any more, and it takes him an afternoon."*
+2. **THE CLOCKS ALREADY MATCH.** Perrin must refer upward (weeks); Cuddy answers
+   day 51; the petition is day 52. **Toller will not move a single piece out of
+   that room until the title is settled** — and telling Perrin *"I'll hold them
+   while you ask your steward"* costs him nothing but nerve.
+3. **THE DEALER'S THOUGHT, which he disliked making and made anyway.** *"**The
+   safest place in the world for a doubtful title is the lord's own hall.** Once a
+   thing is standing in a great man's chamber and his guests have admired it,
+   nobody ever again asks where he got it. That is a dealer's thought. I'm not
+   recommending it."*
+4. **WHAT HE ASKS FOR, and it is small.** *"Tell me what the old priest finds. On
+   the fifty-first, **before** your reeve goes into that hall. Not after."*
+
+**On provenance:** say nothing until the title is settled — the same call Yrtone
+made on the road. *"He'll wait. He's got a wedding in the spring, not next
+Tuesday."*
+
+### THE 30 GP ADVANCE — d6 = 1, refused flat
+
+Dave offered it back unprompted. **Toller would not hear of it.**
+
+> *"That thirty is the only visible thing that says I'm **in** this. If I hand it
+> back today, the next man who asks me about that diary will hear that Toller
+> handed his advance back, and he'll draw the correct conclusion, which is that
+> **Toller got frightened.** I'd rather be frightened and keep it to myself."*
+
+**He is staying in. He is not going to be cheerful about it for nine days.**
