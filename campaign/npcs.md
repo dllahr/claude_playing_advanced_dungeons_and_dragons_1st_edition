@@ -237,7 +237,7 @@ is known and other turned-off hands are scattered about who would confirm them.
 |---|---|---|
 | **the two gatemen** | Sir Aymer's, and good at it | Reacted **hostile (25)** to eight armed strangers unannounced, then **69** once Dave put his hands up and confirmed the crag rumour instead of denying it — but **resolved negative: no message carried.** *"It isn't mine to carry."* The second one, unofficially and quickly, gave two routes in. Then **82** after Yrtone pointedly pretended not to have heard him |
 | **Master Wace** | **steward.** Hears petitions on his days; if Wace thinks the lord wants it, the lord hears it | **His next day is the best part of a WEEK off** (d6 = 6). He reads what is put in front of him, and *"paper waits better than people do"* |
-| **Father Cuddy** | **almoner**, keeps the chapel **outside the wall**. Old. Talks to anybody. In the hall most evenings and nobody minds what he says over supper | Reacted **48 — neutral, incurious.** He has seen a great many travellers. He will give them the chapel and water and go back to what he was doing. **He must be drawn out; the door does not swing open on its own** |
+| **Father Cuddy** | **almoner**, keeps the chapel **outside the wall**. Old. Talks to anybody. In the hall most evenings and nobody minds what he says over supper | **48 on the DOORSTEP — that was his reaction to eight armed strangers, not to the evening.** *(Corrected 2026-09-06, player-caught: the party broke bread with him and **YRTONE SAID THE EVENING PRAYERS AND THE OFFICES WITH HIM**. He knows her, and knows her as a fellow religious. Do NOT run him cold at her again — the "must be drawn out" note describes a stranger at his gate, not a priest he has prayed beside.)* Full entry: `## DAY 41, evening — FATHER CUDDY` |
 
 **What Draycot has heard about the party: d6 = 1, word HAS travelled — and d6 = 4,
 it is GARBLED.** *"Six armed strangers grubbing about that old ruin past Wethersby,
@@ -1050,3 +1050,88 @@ district who are not yet anybody's.
 
 **PERRIN REACHES WETHERSBY ON DAY 42.** The party is not there. **Bern earns it
 himself or not at all**, which given Bern is the only way he would take it.
+
+
+---
+
+## DAY 41, evening — FATHER CUDDY. 102, and the chest gets read
+
+**He knows Yrtone.** Bread broken and the **evening prayers and offices said
+together** on day 14. The old *"neutral, incurious, must be drawn out"* note was
+his reaction to armed strangers at the gate and **must not be used to run him cold
+at her.** He warmed on almost nothing: she simply told him what happened.
+
+### WHAT MOVED HIM — he did not know either of these
+
+1. **LUDBURY WORKED.** 1,200 for the clip; six holders paid in coin in their own
+   square; the road quiet; eleven on wages; a pool with three more asking; a
+   spinner coming north. *"I told you that in about forty seconds. Standing in a
+   doorway. Because I was ashamed of myself. **And you went and did it.**"*
+2. **HIS OWN SUPPER REMARK CAUSED WACE'S LETTER** — Perrin's account, given on
+   the road that afternoon. *"I talk at that table every evening of my life.
+   Thirty years of it. **I have never once known anything I said to leave the
+   room.**"*
+
+> **An incurious old man who has decided he no longer matters is a completely
+> different animal from one who has just been shown that he does.** That is the
+> whole of how to run Cuddy from here.
+
+### HIS THREE NOTES ON OTTIR'S ACCOUNT — take them, they are good
+
+- **"Put the NAMES in."** Not *eleven on wages* — the eleven names. *"A list of
+  eleven names is a thing he cannot argue with. 'Eleven' is a number a man can
+  decide he doubts."*
+- **"Lead with the ROAD, not the wool."** The wool figure invites the question of
+  whose it was; a cleared road invites nothing. *"Nobody ever begrudged a man a
+  safe road."*
+- **"Don't apologise anywhere in it."** Ottir had written *if it please the
+  steward* three times. *"Twice is manners. Three times is a man who's done
+  something."*
+
+**On the party attending:** *"Say nothing, as he's told you. But **be there** —
+Wace will look at you and want to know what you are, and the answer he arrives at
+on his own will be better than any answer you give him."*
+
+### THE CRAG — d6 = 4. He recalls a PUZZLE, not an answer
+
+> *"I read those writings for **one question.** You asked me about tolls and
+> market franchise, I found your answer, and I stopped reading. That's what a man
+> does. I'm sorry for it now."*
+
+**Two things he noted at the time and passed over:**
+
+1. **THE PERAMBULATION.** The bounds of Sir Aymer's waste are set out the old way,
+   landmark to landmark, and **he is fairly sure the crag is named in it.** But —
+   *"a thing named in a perambulation is a **MARKER**. And a marker may be the
+   middle of a man's land or it may be the **EDGE** of it, and the writing does not
+   always trouble to say which, because everyone alive at the time knew."*
+2. **THE CHEST IS NOT ALL ONE AGE.** Under the lord's charter there is **older
+   material he never touched.** And somebody built a stronghold up there once, and
+   *"men did not generally build strongholds without something on parchment."*
+
+> *"'**Nobody's**' is what a district says. It is not what a chest says. And I'd
+> rather you heard the second one from me in a chapel than from a steward in a
+> hall."*
+
+### THE PARTY'S STANDING CLAIM — and where it actually stands
+
+The party's position, said at the table, is that **the crag was reckoned nobody's,
+which is why Coll graded a cart-passable trail up it without anyone objecting.**
+Nothing in the written record contradicts that and nothing records who authorised
+it; what the record *does* carry is `npcs.md`: *"the waste and the woods are his:
+any assart or timber licence is his to grant and nobody else's."*
+
+**Those are not in conflict — they are custom and charter, and the gap between
+them is the whole question.** Nobody has been up that crag in thirty years and no
+one has ever claimed it. That is the party's ground and it is real. It is simply
+not the same thing as a line in a chest.
+
+### THE ANSWER COMES ON THE EVENING OF DAY 51
+
+He has the run of the chest, nobody minds an almoner reading, and **ten days**,
+because the party came early. Deliberately timed to the night **before** the
+petition: *"if the answer is one you don't like, you'll have it the night before
+rather than the morning of."*
+
+**This is what coming early bought.** One trip would have got an old man's
+off-the-cuff recollection over supper.
