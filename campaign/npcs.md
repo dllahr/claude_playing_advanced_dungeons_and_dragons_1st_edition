@@ -1946,3 +1946,97 @@ almoner at a chapel outside the wall.
 > **Wace's 45 is a flat roll and this is not a hidden warmth.** He wants his own
 > paper arriving on his own desk on time. **It serves him.** It is simply also the
 > single most useful thing anybody said in that room.
+
+
+## DAY 52, after the hall — CUDDY TOLD, AND IT DOES NOT LAND THE WAY IT SHOULD
+
+**Reaction 25.** They walk straight down to the chapel and tell him everything:
+licence granted as asked, backdated to Michaelmas last, the basecamp written into
+the grant, the fair copy never produced — **and that Master Wace has never read the
+perambulation and does not intend to.**
+
+**He is glad. He says so and means it.** Then he sits down on the bench.
+
+> **THIS IS NOT COLDNESS AT THE PARTY AND IT IS NOT A REBUKE. He gave the advice,
+> it worked, and he stands by every word of it.** The sting is aimed entirely at
+> himself.
+
+> *"Ten nights. I was ten nights at that chest with a candle. And I got to the end
+> of it and I could tell you the record does not settle it — **which is a true thing
+> and a hard-won thing and I'd not take it back.**"*
+>
+> *"And the steward of this hall, whose whole office **is** the writings, has never
+> once opened the book I nearly went blind in. **And it did not matter.** Your hill
+> is settled because nobody reads anything. That's — "*
+>
+> *"No. Don't. **I'm not asking to be told it wasn't a waste.** I know what it was
+> worth. I'm only saying it's a poor joke and I'm the one it's on."*
+
+**And the second thing, which he sees before anyone else does and says out loud:**
+
+> *"I have spent thirty years ashamed that this town was never told what it ought
+> to have been told. **And last night I sat at that table and advised you to keep
+> something back.** And I was right to. **Both of those are true and I don't much
+> like standing where they meet.**"*
+
+> **DO NOT RESOLVE THIS AND DO NOT LET AN NPC RESOLVE IT.** He is clear-eyed and he
+> is not asking for comfort — he refused it explicitly. Leave him holding it.
+> **What he does next is the only comfort available to him and he does it himself.**
+
+### What he does — and it is the almoner's whole way of caring
+
+**He gets his paper and enters it.** *Licence granted, 25 gp the year, three years
+from Michaelmas last, Master Wace's hand.* **One of the four things he asked to be
+told, and it was brought to him in person by eight people who walked down a hill to
+do it.**
+
+> *"Well. **That's one of my four and I've not had to wait a day for it.** Go on
+> then. Three to go."*
+
+## OTTIR RIDES AHEAD — d6 = 5
+
+**He wants to be home**, and says so plainly. He and **Yrtone** take the party's two
+horses back the way they came — **one long day, out at first light on the 53rd, in
+by dusk.** The other seven walk it in two.
+
+**What he carries home:** the hall's book has his account in it in the steward's own
+hand, eleven names in it, road first — and **a standing appointment for next
+Michaelmas, in this form.**
+
+**He has the licence too.** Not by argument: the party handed it to him without
+discussion, because he is the one man in the district who will still have a copy of
+it in three years' time when it comes up for renewal, and because he witnessed it.
+
+## DAY 53, the Draycot road — WORD HAS ALREADY GONE
+
+**One hit in six checks, on the walkers' first half-day out.** *(Ottir and Yrtone's
+two checks were empty.)*
+
+**Local traffic on foot** — a holder's man walking a few head to Draycot market,
+coming the other way. **Reaction 70, friendly and talkative.**
+
+> ### AND HE KNOWS EXACTLY WHO THEY ARE BEFORE ANYONE SAYS A WORD — d6 = 6
+
+**The hall's yard had it by breakfast**: strangers, the reeve of the north hundred,
+a sealed licence, **and gold counted out on a table.** Word does not stay in a
+household.
+
+| | |
+|---|---|
+| **what this costs** | **the party is now a KNOWN QUANTITY in Sir Aymer's country.** They have spent the whole campaign being nobody in particular, on purpose. That is over, in this hundred at least |
+| **and it is the exact thing Toller named** | *"a dealer seen at the hall in the week the household is buying from him stops being nobody."* **Toller was not there and is not touched. But the principle has just come true for the party themselves** |
+| **what it buys** | *"You'll be the ones took the licence off Master Wace, then."* Said with interest and no edge at all. **A man who has a licence off the steward is a man with a place in the order of things** — which is precisely what the licence was for |
+
+**And one passing sentence he does not press — d6 = 3.** He has wool in a barn and
+nobody has come for it, and he mentions it the way a man mentions weather, because
+he takes them for gentry-adjacent and it does not occur to him that they buy.
+
+> **THAT IS THE SECOND SUCH MENTION IN FOUR DAYS** — Rud on the 50th could name
+> holdings sitting on unsold clip, and now one of them has walked up to the party
+> on its own legs. **The constraint on the venture is volume and the answer keeps
+> introducing itself.**
+>
+> **NOT the party's decision to make on a road.** Art. 7 is a *buyer of last
+> resort for the six holders' pool*, capped at 500 gp the season. **Buying clip out
+> of Sir Aymer's own hundred is trade, it is new, and art. 8 makes new ventures
+> WEND'S to structure.** Take the name home. Do not offer a price on a road.
