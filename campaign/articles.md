@@ -408,3 +408,77 @@ finding out there's another floor under the one I'm standing on."*
 Sarn.** In three years Tam is the best-schooled child in the hundred. And it puts
 a wage into a house that walked into Wethersby on day 15 with two children and
 nothing.
+
+---
+
+## 9 · THE DRAYCOT LETTERS — written day 48, to be used day 52
+
+**Two letters, one of which will be burned.** Wend wrote them the night of day 48,
+because Cuddy answers on the 51st and Wace hears the hundred on the 52nd, and
+that is **one night, in a chapel outside a wall, with no notary and no time.**
+
+> *"I did the succession in the good week rather than the bad one and I'd do this
+> the same way."*
+
+| | |
+|---|---|
+| **LETTER A — if the crag is NOT Sir Aymer's** | says nothing at all. The party hands over Ottir's account and goes home |
+| **LETTER B — if the crag IS his** | **a petition for a licence to quarry stone and take timber off the crag.** **25 gp a year, three years, renewable.** Coin ready on the day. Ottir to witness |
+
+### WHY IT IS A QUARRY LICENCE AND NOT A LEASE OF THE RUIN
+
+**Wend's reasoning, and the party must be able to defend it without her:**
+
+> *"Don't price the ruin. Price the thing he already knows how to sell."* Cuddy
+> read it in the same chest: **the waste and the woods are his, and any assart or
+> timber licence is his to grant and nobody else's.** He has granted them before.
+> **There is already a figure in that chest for what a man pays to take timber off
+> his waste.**
+
+**And it is the dullest request that will cross that steward's desk this year** —
+which is the whole point. *"Nobody asks what's inside a quarry licence."*
+
+> ### THE REAL VALUE, and it is not the stone
+>
+> *"If it ever does come out what you've been carrying down that road, then you
+> are not a **trespasser** — you're a **tenant who exceeded his terms**, and those
+> are two completely different conversations. One of them ends with a man deciding
+> you don't trade in his hundred. **The other ends with a bill.**"*
+
+### WHY 25 AND NOT 10 OR 100
+
+| | |
+|---|---|
+| **10 gp** | a cottage garden. Insulting, **and worse than insulting** — it says the crag is worth nothing, so he wonders why you'd bother, and sends somebody to look |
+| **100 gp** | **far more dangerous than 10.** A third of the whole hundred's annual wool for a rock. He does not think *how generous*; he thinks *what is on that rock* — and sends somebody to look |
+| **25 gp/yr, 3 years** | dull, respectable, more than nothing and nothing like a fortune. Reads as a man who wants building stone and will pay for it properly |
+
+**Pay in coin on the day it is signed** — *"the single most respectable thing a
+stranger can do in front of a steward."*
+
+### ⚠ THE EXPOSURE WEND NAMED AND NOBODY ELSE HAD
+
+**If anyone rides out to look at that crag they will find a graded, cart-passable
+trail, a cleared and levelled flat, a fire pit, a latrine, a boxed spring that
+runs clear, and a turf-and-pole lean-to that sleeps eight.** Coll's crew built all
+of it while the party was at Ludbury, and nobody asked them to build the spring.
+
+**It is not possible to pretend nobody has been using that hill.** The licence has
+to be the explanation, or there isn't one.
+
+### AND THE THING SHE BUILT WITHOUT MEANING TO
+
+**The pool is the holders', not the party's** — a shilling in the pound from them,
+nothing from the party, and the party bids in the yard like anybody else. **She
+argued for that on day 32 against her own interest** and made Dave count the ~150
+gp a summer it costs him.
+
+**It now means this district's trade does not stand or fall with the party's
+title.** Eleven wages, six holders and three more asking are on the far side of a
+wall she built for a completely different reason.
+
+> *"That was luck. I'll take it."*
+
+**AND: the holders are safe regardless.** They sold wool and were paid in coin in
+their own square with the reeve watching. *"Nobody unpicks that, whatever's in
+that chest."*
