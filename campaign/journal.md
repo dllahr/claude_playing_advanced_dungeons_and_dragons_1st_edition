@@ -132,3 +132,30 @@ area 26 and go to the chapel outside Draycot's wall.**
 
 **The trip is not a special one.** Area 26 is cleared and on the route already
 required for the ~97 gp of glass and forty jars cached in area 8.
+
+
+---
+
+## THE LICENCE — GRANTED, day 52
+
+**Master Wace granted it as asked.** 25 gp the year, three years, quarry and
+timber, the crag and the waste about it, his own hand and the hall's seal, 25 gp
+paid in coin on the day with Ottir witnessing.
+
+**And he backdated it to Michaelmas last, unasked**, which puts the year the party
+carried ~450 gp off that hill inside the term. **Two years run forward; 25 gp is
+due at Michaelmas.**
+
+**The basecamp is written into the grant** as works erected by the licensee — the
+trail, the flat, the fire pit, the latrine, the boxed spring and the lean-to.
+Everything Coll's crew built is now lawful, and it is lawful *because* the party
+described it unasked.
+
+**Nothing about the title was settled and nobody asked it to be.** Wace assumes
+the crag is in his lord's waste and has never read the perambulation. **The party
+holds Cuddy's fair copy of the grant to Rogahn and Zelligar and did not produce
+it.**
+
+**Still unmet:** Toller's condition of sale — coin, or Master Wace's own hand.
+Perrin's headboard was not on the day's business, the party did not raise it, and
+the set has not moved.

@@ -1779,3 +1779,142 @@ into hall tactics, and it fixes the RUNNING ORDER:**
 **Still up at four, still nervous.** But the nervousness has nothing left in it to
 decide, which is a completely different quality of nervous, and Yrtone says so to
 him and he does not argue.
+
+
+---
+
+# DAY 52 — THE HALL AT DRAYCOT. MASTER WACE, AND THE LICENCE IS GRANTED
+
+**Sir Aymer is not there and never was going to be.** It is a steward, a clerk, a
+table, and a window that faces the wrong way.
+
+| | |
+|---|---|
+| **MASTER WACE** | ~55, Sir Aymer's steward. **Reads for a living and trusts paper more than people; assumes the worst when nothing is put in front of him** (Perrin's account, day 41). Sits from after the household's morning business until dinner and **then does not sit again.** Writes down what you say **while you are saying it** |
+
+## 1 · OTTIR IS HEARD FIRST — reaction 54
+
+**Professional. Unimpressed-looking. Correct.** He does not praise the account and
+he does not thank Ottir for it. **He reads it in front of him, with a pen in his
+hand, and asks about the road first** — because the road is what Ottir led with, on
+Cuddy's advice, and **it worked**: it is the one item in the whole account that
+invites no further question, and Wace goes through it in two minutes.
+
+> **OTTIR FINDS THIS HARD, and it must be played as hard.** He came for approval
+> and got **business.** Nobody in that room tells him he did well. `articles.md`'s
+> whole finding is running in reverse on him and there is nothing to be done about
+> it — a steward's 54 is not a snub, it is a Tuesday.
+
+**The eleven names do exactly what Cuddy said they would.** Wace reads them down
+the left-hand side, one at a time, out loud, and does not argue with any of them.
+*"Eleven is a number a man can decide he doubts. A list of eleven names is a thing
+he cannot argue with."*
+
+## 2 · AND THEN HE PUSHES — d6 = 5, near the top of the range
+
+He goes after the money and he does not stop at one step. **Ottir tells the truth
+at every one of them, as he was told to, and does not decide anything.**
+
+> *"Who paid them?"* — the party.
+> *"Out of what?"* — the sale of the hundred's clip at Ludbury.
+> *"And what did they buy the clip **with**?"*
+
+**THIS IS WHERE OTTIR'S RUNNING ORDER HAPPENS.** Before the answer:
+
+> **the petition goes on the table, and twenty-five gold pieces are counted out on
+> top of it, by the party, with the reeve of the north hundred witnessing.**
+
+**Then Dave answers it.** About 450 gp of goods carried out of the ruin on the crag
+over four expeditions, sold at Wethersby and at Ludbury, and that is what bought
+the clip. **Said once, slowly enough to be written, in the same words when asked
+again.**
+
+## 3 · REACTION 67 — OTTIR WAS RIGHT AND IT IS NOT CLOSE
+
+**A man who ran 54 at his own reeve runs 67 at eight strangers who have just
+confessed to stripping his lord's hill** — and the whole difference is what was
+already lying under his hand when they said it.
+
+> *"You understand that if you had told me that with nothing in front of me, I
+> should have had to do something about it."*
+>
+> *"**I don't assume the worst because I think badly of people.** I assume it
+> because nobody ever writes to me. You have now written to me twice before
+> breakfast."*
+
+**What he arrives at on his own — and Cuddy called this exactly:** he asks what is
+actually inside the hill. **They tell him the truth about that too, which is that
+it is an expensive hole.** Four expeditions, a forty-foot fall, a woman taken to
+nothing twice, a cleric bleeding at −2, three spikes lost in a trap that is still
+open, undead behind a sealed door, and 450 gold to show for the lot of it.
+
+> **THE STEWARD'S ARITHMETIC, and it is why the 6 came up.** He has no men to send
+> and no appetite for the expense of finding some. **A hill that nearly kills armed
+> parties is a cost, not an asset** — and twenty-five gold a year for letting
+> somebody else do the dying is the best line item on his page. He never says this.
+> He does not have to.
+
+## 4 · THE LICENCE — d6 = 6. GRANTED AS ASKED
+
+**A licence to quarry stone and take timber off the crag and the waste about it.
+25 gp the year. Three years. Renewable. Master Wace's own hand and the hall's
+seal.** Coin taken on the day, receipted, **Ottir witnessing.**
+
+### The one charge he makes — d6 = 4, and it is a token
+
+> **HE BACKDATES IT TO MICHAELMAS LAST.**
+
+So the year in which the goods were carried down that hill is **inside the term**.
+
+| | |
+|---|---|
+| **cost to the party** | **25 gp today for a twelvemonth already elapsed**, and only **TWO years running forward** instead of three |
+| **what it buys** | **everything already taken off the crag is retrospectively licensed.** Wend's *"a tenant who exceeded his terms"* is now not even that — it is a tenant who paid |
+| **why he did it** | it makes the paper tidy, and Wace is a man who cannot bear an untidy page. **He does not present it as a mercy and it is one** |
+
+### And the basecamp goes INTO the licence — d6 = 4
+
+**No rider is sent to look.** Instead he asks what is up there, and **writes down
+what they tell him**: a graded cart-passable trail, a levelled flat, a fire pit, a
+latrine, **a boxed spring**, and a turf-and-pole lean-to that sleeps eight.
+
+> **THE EXPOSURE WEND NAMED IS NOW A CLAUSE IN THE GRANT.** *Works erected by the
+> licensee.* It has stopped being the thing that cannot be explained and become
+> part of the thing that explains it. **This is the single largest practical win of
+> the day and it came from telling him, unasked, what Coll's crew built.**
+
+## 5 · WHAT HE NEVER DOES — d6 = 4, and it vindicates Cuddy completely
+
+**HE DOES NOT ASSERT THE TITLE. HE ASSUMES IT.** He has never read the
+perambulation and it does not cross his mind to. The waste is Sir Aymer's; the crag
+is in the waste; done; next item.
+
+> **CUDDY WAS RIGHT AND IT WAS NOT CLOSE.** *"It is the one paper in the world that
+> proves the hill was a lord's to give away, and the man you'd be handing it to is
+> the lord's steward. **You'd be arming him.**"* Producing that fair copy would have
+> replaced a two-minute assumption with a six-month enquiry, and the party would
+> have walked out with nothing.
+>
+> **THE PARTY NOW KNOWS SOMETHING THE HOLDER OF THE TITLE DOES NOT.** Written down
+> here because it will matter later and because nobody should have to rediscover
+> it: **Sir Aymer's claim runs by reversion off a grant to Rogahn and Zelligar, and
+> the hall does not know the grant exists.**
+
+## 6 · PERRIN'S HEADBOARD — d6 = 2. NOT GIVEN, AND NOT RAISED
+
+**It is not on the day's business and the party does not raise it** — raising a
+furniture commission inside a petition hearing is exactly the cleverness Cuddy
+warned against. Wace does not touch it.
+
+**So Toller's condition of sale is still unmet:** coin, or Master Wace's own hand.
+**Perrin's paper is still worth a bed.** The set does not move.
+
+## 7 · WHAT OTTIR WALKS OUT WITH
+
+Nobody said he did well. **But the account is in the hall's book in the steward's
+own hand, with eleven names in it, and the road first** — and Wace's last word to
+him was the only thing a steward has to give:
+
+> *"I shall want the same next Michaelmas. **In this form.**"*
+
+**Which is a standing appointment, and Ottir has never had one.**

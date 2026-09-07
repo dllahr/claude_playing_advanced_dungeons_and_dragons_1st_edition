@@ -505,3 +505,57 @@ wall she built for a completely different reason.
 **AND: the holders are safe regardless.** They sold wool and were paid in coin in
 their own square with the reeve watching. *"Nobody unpicks that, whatever's in
 that chest."*
+
+
+---
+
+## 10 · THE DRAYCOT LICENCE — GRANTED day 52, in Master Wace's own hand
+
+**The single most important piece of paper the party owns.**
+
+| | |
+|---|---|
+| **what** | **a licence to quarry stone and take timber off the crag and the waste about it** |
+| **from** | **Master Wace**, steward, for Sir Aymer. His own hand, the hall's seal. *(Sir Aymer was not present and does not come to business)* |
+| **price** | **25 gp the year** |
+| **term** | **THREE YEARS FROM MICHAELMAS LAST** — Wace backdated it, unasked, to make the page tidy |
+| **paid** | **25 gp in coin on the day, receipted, Ottir witnessing** |
+| **owing** | **25 gp at Michaelmas next**, and 25 the Michaelmas after. **Two years run forward** |
+| **and** | **the basecamp is written into it** as *works erected by the licensee* — the graded trail, the levelled flat, the fire pit, the latrine, **the boxed spring** and the lean-to that sleeps eight |
+
+### WHY THE BACKDATING IS THE WHOLE PRIZE
+
+**The year in which the party carried ~450 gp of goods down that hill is INSIDE
+THE TERM.** Wend's *"better charged as a tenant than found as a trespasser"* has
+been overtaken by something better: **a tenant who has paid.**
+
+It cost 25 gp for a twelvemonth already gone and one year off the forward term.
+**Wace did not present it as a mercy and it is one.**
+
+### WHAT WAS DISCLOSED, DELIBERATELY, AND WHY IT WORKED
+
+**Everything.** Ottir told the truth at every step of the money question because
+the party told him to and told him they would back him. Then — **before the last
+answer, per Ottir's own refinement** — the petition and the coin went on the table,
+by the party's hand, with the reeve witnessing. **Then** Dave said where the 450
+came from.
+
+> *"You understand that if you had told me that with nothing in front of me, I
+> should have had to **do something about it**."*
+>
+> *"I don't assume the worst because I think badly of people. **I assume it because
+> nobody ever writes to me.**"*
+
+### ⚠ WHAT THE PARTY KNOWS AND THE HALL DOES NOT
+
+**Wace has never read the perambulation** (d6 = 4). He assumes the crag is in the
+waste and never checks. **He does not know the grant to Rogahn and Zelligar
+exists**, nor that his lord's claim runs by reversion off it.
+
+**Cuddy's fair copy of the operative words stays in the pack, unproduced, exactly
+as he instructed.** Producing it would have swapped a two-minute assumption for a
+six-month enquiry.
+
+> **A licence does not settle title and nobody should ever write in this file that
+> it does.** It settles the only thing the party needed settled: **that they are
+> lawfully on that hill and were lawfully on it last year.**
