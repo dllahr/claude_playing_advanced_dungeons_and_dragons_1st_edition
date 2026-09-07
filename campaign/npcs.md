@@ -1918,3 +1918,31 @@ him was the only thing a steward has to give:
 > *"I shall want the same next Michaelmas. **In this form.**"*
 
 **Which is a standing appointment, and Ottir has never had one.**
+
+
+## DAY 52, the close — AND WACE GIVES ONE THING, WHICH IS PROCEDURE
+
+**Dave's thanks: Wace 45, Ottir 47, and the credit to Ottir does not register with
+Wace at all (d6 = 2).** Full analysis in `articles.md`, *The third finding*.
+
+**Wace declines the premise rather than the thanks**, and it is the most
+characterful thing he does all morning:
+
+> *"I did not indulge you. **Your tale was not long, it was complete**, which is
+> the thing I asked for and the thing I almost never get. If you want to thank me,
+> do that again."*
+
+**And then, because he is tidy rather than because he is kind, he gives them a
+channel** — which is worth more than the sentiment it replaces:
+
+> *"The renewal is **my** business and not the hall's. When Michaelmas comes,
+> **write to me.** Not to Sir Aymer. He will hand it to me and I shall be a
+> fortnight later reading it than I need to have been."*
+
+**A NAMED CORRESPONDENT AT DRAYCOT.** The party has never had one. Every previous
+approach to this household went through Ottir, through Perrin, or through an old
+almoner at a chapel outside the wall.
+
+> **Wace's 45 is a flat roll and this is not a hidden warmth.** He wants his own
+> paper arriving on his own desk on time. **It serves him.** It is simply also the
+> single most useful thing anybody said in that room.

@@ -559,3 +559,45 @@ six-month enquiry.
 > **A licence does not settle title and nobody should ever write in this file that
 > it does.** It settles the only thing the party needed settled: **that they are
 > lawfully on that hill and were lawfully on it last year.**
+
+
+---
+
+## THE THIRD FINDING — day 52. **CREDIT IN FRONT OF A SUPERIOR IS NOT THE SAME GIFT**
+
+Dave closed the audience well and generously: thanks to Master Wace, and then
+**thanks to Reeve Ottir by name, in the steward's hearing** — deliberately putting
+the credit where it would do Ottir the most good.
+
+| | | |
+|---|---|---|
+| **Wace, thanked** | **45** | flat. He does not do gratitude, and he rejects the framing |
+| **Ottir, thanked BY NAME in front of Wace** | **47** | **flat — and this is the finding** |
+| **Does the credit register with Wace?** | **d6 = 2** | **No.** He hears the closing courtesy it grammatically is and goes back to the page |
+
+**Nothing was lost. The licence was already sealed.** But the gesture did not do
+the work it was meant to do, and the reason is worth having:
+
+> **Ottir did not want to be NOTICED by that household. He wanted to be READ.**
+> Those are different things and only one of them was on offer. He is frightened of
+> Sir Aymer — his own admission, Wend's word — and eleven years of being invisible
+> to that hall is not a wound praise closes. **Being singled out in front of the
+> man he fears made him self-conscious, not proud.**
+
+**This is NOT the gifts/work axis** — it was credit for real work, not a kindness,
+so it did not crater to a 24 the way Osk's apology in the full yard did. It is a
+third mechanism:
+
+| | |
+|---|---|
+| **the first finding** | gifts land badly, **work lands** — because a gift deepens a debt and a job cancels it |
+| **the second finding** | approval without a day and a name in it reads as a polite no. **Name the hour.** *(And its other half, day 51: a CREDITOR only needs to be thanked properly — Cuddy 81)* |
+| **THE THIRD** | **credit is worth what the recipient thinks of the audience.** Praise a man in front of somebody he fears and you have handed him exposure, not recognition. **Ask whose good opinion he actually wants** |
+
+**Compare the same sentence in the right room.** Coll, thanked on day 48 for the
+boxed spring and the lean-to specifically, ran **78** — and Coll is not frightened
+of anybody. **The words were not the problem. The witness was.**
+
+> **THE SAME THANKS, SAID TO OTTIR ON THE ROAD HOME, IS A DIFFERENT EVENT.** Not
+> written here as a hint about what to do — written here because a future session
+> will otherwise read the 47 as *Ottir didn't care*, and he cared a great deal.
