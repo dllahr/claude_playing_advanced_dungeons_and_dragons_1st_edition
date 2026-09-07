@@ -819,3 +819,66 @@ for **spells** and for the cold; it is worth **nothing** in hit points. A party 
 
 **The only thing that puts points back inside an expedition is a cure spell.**
 
+
+## Turning undead — the matrix, and the two things the books do not say
+
+### III. MATRIX FOR CLERICS AFFECTING UNDEAD (DMG p. 75)
+
+| Type of Undead | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9-13 | 14+ |
+|---|---|---|---|---|---|---|---|---|---|---|
+| **Skeleton** | **10** | 7 | 4 | T | T | D | D | D* | D* | D* |
+| Zombie | 13 | 10 | 7 | T | T | D | D | D | D* | D* |
+| Ghoul | 16 | 13 | 10 | 4 | T | T | D | D | D | D* |
+| Shadow | 19 | 16 | 13 | 7 | 4 | T | T | D | D | D* |
+| Wight | 20 | 19 | 16 | 10 | 7 | 4 | T | T | D | D |
+| Ghast | - | 20 | 19 | 13 | 10 | 7 | 4 | T | T | D |
+| Wraith | - | - | 20 | 16 | 13 | 10 | 7 | 4 | T | D |
+| Mummy | - | - | - | 20 | 16 | 13 | 10 | 7 | 4 | T |
+| Spectre | - | - | - | - | 20 | 16 | 13 | 10 | 7 | 4 |
+| Vampire | - | - | - | - | - | 20 | 16 | 13 | 10 | 4 |
+| Ghost | - | - | - | - | - | - | 20 | 16 | 13 | 7 |
+| Lich | - | - | - | - | - | - | - | 19 | 16 | 10 |
+| Special | - | - | - | - | - | - | - | 20 | 19 | 13 |
+
+*source: **DMG p. 75**, III. MATRIX FOR CLERICS AFFECTING UNDEAD, 300 dpi page render 2026-09-06.*
+
+**A number is a d20 score to beat. `T` = turned automatically. `D` = destroyed
+(dispelled) automatically.** † *Paladins turn as a cleric two levels below.*
+
+> **PARSER TRAP, hit on this very table 2026-09-06.** `rules.py` closes a table at
+> the first line that does not begin with `*`, so a **wrapped** bold paragraph
+> whose second line starts with anything else eats the association and the
+> `*source:*` line below it is never attached. **Put the source line immediately
+> after the table, before any prose.** `test_every_combat_table_is_cited` caught
+> it, which is the guard working.
+
+**A 1st-level cleric needs 10 on d20 against skeletons.** This party has three
+1st-level clerics, so three attempts.
+
+### The procedure, in the book's own words (DMG p. 65)
+
+> *"this function may be attempted **only once by each cleric.** Of course, if
+> there are two, both may attempt the function, each trying once… **Any failure
+> to turn undead disallows a further attempt by the same cleric.** Turning can
+> occur at the same time as missile discharge, magical device attacks, and/or
+> spell casting. **It also is subject to initiative determination.**"*
+>
+> *"**Mindless undead, skeletons and zombies, cannot be considered**"* — for the
+> mixed-group rule only. Skeletons are on the table and **are turnable**;
+> "attack until destroyed" is a MORALE fact, not a turning exemption.
+
+### ⚠ TWO GAPS — these are DM CALLS, not book rules
+
+**Neither the PHB nor the DMG states how many undead a success affects, or for
+how long.** Searched both, 2026-09-06. DMG p. 65's *"to the maximum number
+indicated by the dice roll or otherwise indicated by the rules"* points at a rule
+that is not in either book.
+
+| | DM call, set 2026-09-06 |
+|---|---|
+| **How many** | **2d6 of that type.** The near-universal convention, and the table is organised *by type* rather than per creature, which implies a group effect |
+| **For how long** | **3d4 rounds.** They turn away and will not voluntarily approach the turning cleric while it lasts |
+| **What breaks it** | the cleric attacking them, or being cut off from retreat. **Turned undead in a dead-end room have nowhere to go** — they cower rather than flee |
+
+*source: **NOT A BOOK RULE.** Recorded so it is the same every time. If a printed
+1e figure is ever found, it wins.*

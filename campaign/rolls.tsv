@@ -4844,3 +4844,181 @@ when	exped	turn	notation	dice	modifier	total	hidden	reason
 2026-09-06			d20	20	0	20		giant centipede attacks AC 9
 2026-09-06			d20	20	0	20		orc attacks AC 9
 2026-09-06			1-8 (1d8)	8	0	8		orc damage
+2026-09-06			d6	3	0	3		wandering check, anchor extra
+2026-09-06			d6	3	0	3		wandering check, anchor extra
+2026-09-06			d6	3	0	3		day 46 rd 87: party surprise as the slab grinds open at (14,29,H)
+2026-09-06			d6	3	0	3		day 46 rd 87: what is behind the door - are they roused, and how fast?
+2026-09-06			d20	2	0	2		Yrtone attacks with sling
+2026-09-06			d20	14	0	14		Torsat attacks with short bow
+2026-09-06			1-6 (1d6)	2	0	2		Torsat damage, short bow
+2026-09-06			d20	17	0	17		Tristle attacks with short bow
+2026-09-06			1-6 (1d6)	4	0	4		Tristle damage, short bow
+2026-09-06			d20	15	0	15		Blartho attacks with sling
+2026-09-06			2-5 (1d4+1)	2	1	3		Blartho damage, sling
+2026-09-06			d20	4	0	4		Hask attacks with sling
+2026-09-06			d20	16	0	16		Frython attacks with dart
+2026-09-06			1-3 (1d3)	1	0	1		Frython damage, dart
+2026-09-06			d20	11	0	11		Ista attacks with dart
+2026-09-06			d20	12	0	12		Yrtone attacks with sling
+2026-09-06			d20	19	0	19		Torsat attacks with short bow
+2026-09-06			1-6 (1d6)	6	0	6		Torsat damage, short bow
+2026-09-06			d20	16	0	16		Tristle attacks with short bow
+2026-09-06			1-6 (1d6)	3	0	3		Tristle damage, short bow
+2026-09-06			d20	16	0	16		Blartho attacks with sling
+2026-09-06			2-5 (1d4+1)	2	1	3		Blartho damage, sling
+2026-09-06			d20	13	0	13		Hask attacks with sling
+2026-09-06			2-5 (1d4+1)	4	1	5		Hask damage, sling
+2026-09-06			d20	9	0	9		Frython attacks with dart
+2026-09-06			d20	18	0	18		Ista attacks with dart
+2026-09-06			1-3 (1d3)	2	0	2		Ista damage, dart
+2026-09-06	7	87	VOID	0	0	0		*** VOID -- DM ERROR. The 12 rows immediately above this one (Yrtone 12, Torsat 19/6, Tristle 16/3, Blartho 16/3, Hask 13/5, Frython 9, Ista 18/2) are a DUPLICATE of the round-87 readied volley. combat.py was run a second time to re-read output that had scrolled, which re-rolled the dice. THE FIRST VOLLEY STANDS: Yrtone 2 miss, Torsat 14 hit for 2, Tristle 17 hit for 4, Blartho 15 hit for 3, Hask 4 miss, Frython 16 hit for 1, Ista 11 miss. Do not reconstruct this fight from the voided rows. LESSON: combat.py rolls when it runs -- never re-run it to see output again, read rolls.tsv instead.
+2026-09-06			d6	3	0	3		initiative, party
+2026-09-06			d6	2	0	2		initiative, monsters
+2026-09-06			d20	12	0	12		Dave attacks with long sword
+2026-09-06			1-8 (1d8)	6	0	6		Dave damage, long sword
+2026-09-06			d20	20	0	20		Yrtone attacks with footman's flail
+2026-09-06			2-7 (1d6+1)	1	1	2		Yrtone damage, footman's flail
+2026-09-06			d20	6	0	6		Blartho attacks with footman's flail
+2026-09-06			d20	15	0	15		Hask attacks with spear
+2026-09-06			1-6 (1d6)	4	0	4		Hask damage, spear
+2026-09-06			d20	5	0	5		Ista attacks with spear
+2026-09-06			d20	19	0	19		skeleton in the gap attacks AC 3
+2026-09-06			d20	17	0	17		skeleton in the gap attacks AC 3
+2026-09-06			1-6 (1d6)	5	0	5		skeleton in the gap damage
+2026-09-06			d6	5	0	5		wandering check, anchor 20
+2026-09-06			d6	1	0	1		wandering check, anchor 20
+2026-09-06			d6	2	0	2		wandering table, level 1
+2026-09-06			d6	5	0	5		wandering check, anchor extra
+2026-09-06			d20	1	0	1		Y save vs Paralyze/Poison/Death
+2026-09-06			d20	12	0	12		F save vs Spell
+2026-09-06			d100	62	0	62		morale
+2026-09-06			d100	63	0	63		morale
+2026-09-06			d100	50	0	50		morale
+2026-09-06			d100	51	0	51		morale
+2026-09-06			d100	51	0	51		morale
+2026-09-06			d100	66	0	66		morale
+2026-09-06			d100	81	0	81		morale
+2026-09-06			d100	100	0	100		morale
+2026-09-06			d100	100	0	100		morale
+2026-09-06			d100	100	0	100		morale
+2026-09-06			d6	5	0	5		initiative, party
+2026-09-06			d6	2	0	2		initiative, monsters
+2026-09-06			d6	3	0	3		initiative, party
+2026-09-06			d6	3	0	3		initiative, monsters
+2026-09-06			d6	3	0	3		surprise check, party
+2026-09-06			d6	3	0	3		surprise check, party
+2026-09-06			d6	2	0	2		surprise check, party
+2026-09-06			d6	2	0	2		surprise check, party
+2026-09-06			d20	20	0	20		giant centipede attacks AC 9
+2026-09-06			d20	20	0	20		giant centipede attacks AC 9
+2026-09-06			d20	20	0	20		giant centipede attacks AC 9
+2026-09-06			d20	20	0	20		giant centipede attacks AC 9
+2026-09-06			d20	20	0	20		giant centipede attacks AC 9
+2026-09-06			d20	20	0	20		orc attacks AC 9
+2026-09-06			1-8 (1d8)	8	0	8		orc damage
+2026-09-06			d6	5	0	5		wandering check, anchor 20
+2026-09-06			d6	1	0	1		wandering check, anchor 20
+2026-09-06			d6	2	0	2		wandering table, level 1
+2026-09-06			d6	5	0	5		wandering check, anchor extra
+2026-09-06			d20	1	0	1		Y save vs Paralyze/Poison/Death
+2026-09-06			d20	12	0	12		F save vs Spell
+2026-09-06			d100	62	0	62		morale
+2026-09-06			d100	63	0	63		morale
+2026-09-06			d100	50	0	50		morale
+2026-09-06			d100	51	0	51		morale
+2026-09-06			d100	51	0	51		morale
+2026-09-06			d100	66	0	66		morale
+2026-09-06			d100	81	0	81		morale
+2026-09-06			d100	100	0	100		morale
+2026-09-06			d100	100	0	100		morale
+2026-09-06			d100	100	0	100		morale
+2026-09-06			d6	5	0	5		initiative, party
+2026-09-06			d6	2	0	2		initiative, monsters
+2026-09-06			d6	3	0	3		initiative, party
+2026-09-06			d6	3	0	3		initiative, monsters
+2026-09-06			d6	3	0	3		surprise check, party
+2026-09-06			d6	3	0	3		surprise check, party
+2026-09-06			d6	2	0	2		surprise check, party
+2026-09-06			d6	2	0	2		surprise check, party
+2026-09-06			d20	20	0	20		giant centipede attacks AC 9
+2026-09-06			d20	20	0	20		giant centipede attacks AC 9
+2026-09-06			d20	20	0	20		giant centipede attacks AC 9
+2026-09-06			d20	20	0	20		giant centipede attacks AC 9
+2026-09-06			d20	20	0	20		giant centipede attacks AC 9
+2026-09-06			d20	20	0	20		orc attacks AC 9
+2026-09-06			1-8 (1d8)	8	0	8		orc damage
+2026-09-06			d6	5	0	5		wandering check, anchor 20
+2026-09-06			d6	1	0	1		wandering check, anchor 20
+2026-09-06			d6	2	0	2		wandering table, level 1
+2026-09-06			d6	5	0	5		wandering check, anchor extra
+2026-09-06			d20	1	0	1		Y save vs Paralyze/Poison/Death
+2026-09-06			d20	12	0	12		F save vs Spell
+2026-09-06			d100	62	0	62		morale
+2026-09-06			d100	63	0	63		morale
+2026-09-06			d100	50	0	50		morale
+2026-09-06			d100	51	0	51		morale
+2026-09-06			d100	51	0	51		morale
+2026-09-06			d100	66	0	66		morale
+2026-09-06			d100	81	0	81		morale
+2026-09-06			d100	100	0	100		morale
+2026-09-06			d100	100	0	100		morale
+2026-09-06			d100	100	0	100		morale
+2026-09-06			d6	5	0	5		initiative, party
+2026-09-06			d6	2	0	2		initiative, monsters
+2026-09-06			d6	3	0	3		initiative, party
+2026-09-06			d6	3	0	3		initiative, monsters
+2026-09-06			d6	3	0	3		surprise check, party
+2026-09-06			d6	3	0	3		surprise check, party
+2026-09-06			d6	2	0	2		surprise check, party
+2026-09-06			d6	2	0	2		surprise check, party
+2026-09-06			d20	20	0	20		giant centipede attacks AC 9
+2026-09-06			d20	20	0	20		giant centipede attacks AC 9
+2026-09-06			d20	20	0	20		giant centipede attacks AC 9
+2026-09-06			d20	20	0	20		giant centipede attacks AC 9
+2026-09-06			d20	20	0	20		giant centipede attacks AC 9
+2026-09-06			d20	20	0	20		orc attacks AC 9
+2026-09-06			1-8 (1d8)	8	0	8		orc damage
+2026-09-06			d6	5	0	5		wandering check, anchor 20
+2026-09-06			d6	1	0	1		wandering check, anchor 20
+2026-09-06			d6	2	0	2		wandering table, level 1
+2026-09-06			d6	5	0	5		wandering check, anchor extra
+2026-09-06			d20	1	0	1		Y save vs Paralyze/Poison/Death
+2026-09-06			d20	12	0	12		F save vs Spell
+2026-09-06			d100	62	0	62		morale
+2026-09-06			d100	63	0	63		morale
+2026-09-06			d100	50	0	50		morale
+2026-09-06			d100	51	0	51		morale
+2026-09-06			d100	51	0	51		morale
+2026-09-06			d100	66	0	66		morale
+2026-09-06			d100	81	0	81		morale
+2026-09-06			d100	100	0	100		morale
+2026-09-06			d100	100	0	100		morale
+2026-09-06			d100	100	0	100		morale
+2026-09-06			d6	5	0	5		initiative, party
+2026-09-06			d6	2	0	2		initiative, monsters
+2026-09-06			d6	3	0	3		initiative, party
+2026-09-06			d6	3	0	3		initiative, monsters
+2026-09-06			d6	3	0	3		surprise check, party
+2026-09-06			d6	3	0	3		surprise check, party
+2026-09-06			d6	2	0	2		surprise check, party
+2026-09-06			d6	2	0	2		surprise check, party
+2026-09-06			d20	20	0	20		giant centipede attacks AC 9
+2026-09-06			d20	20	0	20		giant centipede attacks AC 9
+2026-09-06			d20	20	0	20		giant centipede attacks AC 9
+2026-09-06			d20	20	0	20		giant centipede attacks AC 9
+2026-09-06			d20	20	0	20		giant centipede attacks AC 9
+2026-09-06			d20	20	0	20		orc attacks AC 9
+2026-09-06			1-8 (1d8)	8	0	8		orc damage
+2026-09-06			d6	6	0	6		initiative, party
+2026-09-06			d6	6	0	6		initiative, monsters
+2026-09-06			d20	12	0	12		day 46 rd 89: BLARTHO turns undead, 1st-level cleric vs skeleton, needs 10 (DMG p.75). Once only - a failure ends his attempts this encounter
+2026-09-06			2-12 (2d6)	6,4	0	10		day 46 rd 89: how many skeletons Blartho's turn affects (DM call, 2d6)
+2026-09-06			3-12 (3d4)	1,3,2	0	6		day 46 rd 89: how long the turn holds, in rounds (DM call, 3d4)
+2026-09-06			1-8 (1d8)	2	0	2		day 46 rd 89: DELLIE cure light wounds on Dave - her first spell ever cast
+2026-09-06			d20	19	0	19		Dave attacks with long sword
+2026-09-06			1-8 (1d8)	5	0	5		Dave damage, long sword
+2026-09-06			d20	1	0	1		Yrtone attacks with footman's flail
+2026-09-06			d20	2	0	2		Torsat attacks with long sword
+2026-09-06			d20	19	0	19		Hask attacks with spear
+2026-09-06			1-6 (1d6)	1	0	1		Hask damage, spear
+2026-09-06			d20	6	0	6		Ista attacks with spear

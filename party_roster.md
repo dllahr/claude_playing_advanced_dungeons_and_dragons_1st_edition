@@ -226,10 +226,24 @@ and level enough with the front to throw its 30 ft usefully forward.
   **Dellie's spear does not reach a front-rank fight from rank 3, and that is an
   accepted cost, not an oversight.** She is back there for her armour class. Do
   not flag it again.
-- **The lane rule still applies**: allies filling a 10-ft corridor between
-  shooter and target is **−4 with a 50% chance of hitting the ally in front**
-  (`rules/exploration.md`). Three abreast means rank 1 fills the corridor
-  completely, so ranks 2 and 3 mostly cannot shoot down it. In a room they can.
+- **The lane rule applies ONLY IN MELEE — this paraphrase used to omit that and
+  misled the DM again on 2026-09-06.** `rules/exploration.md` is the authority
+  and it is unambiguous:
+  > | **No melee** — enemies at a distance, nobody in contact | **no penalty at
+  > all.** Range modifiers only. **Allies merely *standing* in front are not a
+  > melee.** |
+  >
+  > **The test is CONTACT, not geometry.** Ask *"is anyone actually engaged?"*
+  > before asking *"who is in the lane?"*
+
+  **So:** if the front rank is **in contact**, a shot past them down a filled
+  10-ft corridor is **−4 with a 50% chance of hitting the ally in front**. If
+  nothing is engaged — enemies at a distance, the party standing ready — **every
+  missile in the column fires with range modifiers only.**
+
+  *(Caught by the player at round 1203 of expedition 4 and cached then; caught
+  again on day 46 of expedition 7, when this line made the DM tell the party that
+  only rank 1 could shoot at a doorway with nobody in contact.)*
 
 ---
 
