@@ -725,6 +725,13 @@ only the text found it.
       possible commission -- were weakened by a fifth that was there to make the
       list look four-square.)* **Every row in a consequences table must have a
       traceable path through the log. If it only rhymes, cut it.**
+      **AND CHECK WHICH WAY THE ARROW POINTS.** The same table listed Perrin's
+      possible commission and the loom-and-spindle work as things the rupture
+      cost the PARTY. They are **business the party GAVE Bern** -- his income,
+      not their exposure, and the loom work is the very PAID WORK he accepted
+      at 68 when every gift landed at 8. **Before writing a consequence, ask
+      whose asset it is.** Of four rows, three were Bern's and one -- Ista
+      living there -- was awkwardness rather than cost.
       **THE TEST, before any NPC pushes back: re-read the player's own words and
       find the sentence that already answers it.** If it is there, the objection
       does not exist. An NPC may supply information, do arithmetic the player
