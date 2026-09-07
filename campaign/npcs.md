@@ -1726,3 +1726,56 @@ what makes a man send somebody to look.**
 
 > **THIS IS THE PARTY'S DECISION AND IT IS THE HINGE OF THE WHOLE ARC.** Do not
 > make it for them.
+
+
+### OTTIR BRIEFED, night of day 51 — *"just tell the truth, and we'll back you up"*
+
+**Reaction 81.** The party's line: tell the truth, we stand behind you, **and if he
+asks where the money came from, WE will tell him.**
+
+**The load-bearing part is the last clause and it is not the reassurance — it is
+the TRANSFER.** Ottir has spent eleven years being the man who has to decide what
+to say to a household he is frightened of, and the party has just taken the one
+decision he could not make off him entirely. **Same mechanism as the surety he
+"took with relief" on day 4.** He does not make a speech about it.
+
+> *"Right. **Right.** That's — yes. I can do the truth. I've been doing the truth
+> for eleven years, it's the deciding that I've never once been any good at."*
+
+**He checks once, because he is a reeve and he has to:** do they understand that
+they are offering to stand in a lord's hall and say they carried goods off the
+lord's hill. **They do.** He does not ask twice.
+
+### HIS REFINEMENT — d6 = 5, and nobody in the party could have known it
+
+> **THE PETITION AND THE COIN GO ON THAT TABLE *BEFORE* THE MONEY QUESTION IS
+> ANSWERED. NOT AFTER.**
+
+> *"Listen. **It's the same sentence either way and it lands two different ways.**
+> If you tell him what you took off that hill and there's nothing in front of him
+> but your face, you're a man **confessing.** If you tell him the same words and
+> his own petition's under his hand with five-and-twenty gold counted out on top of
+> it, you're a man **putting his affairs in order** — and stewards **like** that,
+> it's the whole of what they do all day."*
+
+**This is Wend's *"better charged as a tenant than found as a trespasser"* turned
+into hall tactics, and it fixes the RUNNING ORDER:**
+
+| | |
+|---|---|
+| **1** | Ottir gives the account and takes the road, the yield and the hands |
+| **2** | **The party's petition and the 25 gp go on the table** — handed over by the PARTY, not by the reeve, with Ottir witnessing as article 9 says. *A reeve presenting it makes the hundred the petitioner; strangers presenting it makes it what it is, men buying stone* |
+| **3** | **Then**, if Wace goes there, Dave answers the money question himself |
+
+### And one small thing he knows from eleven years of twice-a-year
+
+> *"He writes down what you say. **While you're saying it.** So say it once, say it
+> slow enough to be written, and if he asks it again **say it in the same words** —
+> because a man with a pen notices when the words change and he'll not tell you
+> he's noticed."*
+
+### Morning — d6 = 3
+
+**Still up at four, still nervous.** But the nervousness has nothing left in it to
+decide, which is a completely different quality of nervous, and Yrtone says so to
+him and he does not argue.
