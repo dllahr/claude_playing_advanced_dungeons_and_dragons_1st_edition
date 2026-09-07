@@ -1528,3 +1528,77 @@ third he did ten days' work and came back with *"it does not say."*
 > YEARS.** An unclear answer that he can prove is unclear is worth more than a
 > confident wrong one, and it is the entire reason the party gets to walk into
 > that hall tomorrow and ask for the small thing instead of the large one.
+
+
+### DAY 51, last thing — HE IS THANKED, AND THEN THE ALMONER ASKS
+
+*"Thank you Cuddy, we really appreciate all the work you did to figure this out.
+If there's anything we can do to help you anytime, let us know."*
+
+**Reaction 81 — the THANKS land.** And there is a reason they land when the
+identical shape of offer has flopped repeatedly in this campaign:
+
+> **REFINEMENT OF THE SECOND FINDING (`articles.md`).** *"Anything we can do,
+> anytime"* is **approval without a day and a name in it** — the exact shape that
+> got Sarn's **42** on day 39. It got **81** here, and the difference is not the
+> room and not the wording. **Sarn was indebted. Cuddy is OWED.** He had just done
+> ten days of work these people watched him do, so being thanked settles an account
+> instead of opening one, and the vague offer rides along on the thanks rather than
+> carrying the scene. **The finding stands: a debtor needs an hour and a job. A
+> CREDITOR just needs to be thanked properly, and this was.**
+
+### AND HE ASKS FOR SOMETHING — d6 = 6, clearly, without hedging
+
+**This is a reversal of type and should be played as one.** He has been the man who
+gives for sixty years; it is the office. He puts his hands flat on the table.
+
+> *"Yes. There is. I'd not have said so a fortnight ago and I'm going to say it
+> now, so let me get it out in one go."*
+>
+> *"**Send me word.** In writing, here, to the chapel. Four things and I'll not
+> ask for a fifth: **when you know about Marchford. When the dwarf is in the
+> ground. When the spinner comes north. And when the licence is granted or it
+> isn't.** I'll answer every one of them, which is worth nothing to you, but I'll
+> answer them."*
+>
+> *"I sat at that table thirty years and never once knew anything I said to leave
+> the room. **Something did. I should like to know how it comes out.** That's the
+> whole of the ask and I know it's a great deal to put on people with a road to
+> walk."*
+
+**IT COSTS THE PARTY ALMOST NOTHING AND IT IS THE ONE THING HE ACTUALLY LACKS.**
+Take it seriously in the log: **four named notifications, and he is owed all four.**
+
+### The hope he says once and does not press
+
+**He would like to be at the dwarf's burial** — and says in the same breath that
+he cannot walk it, that he knows what it would cost them to fetch an old man four
+days north and four days back, and that they are to forget he mentioned it if it
+does not fit.
+
+> *"I'd not ask. I'm only telling you I'd come."*
+
+### What he does NOT ask for — d6 = 4, and it is visible to anyone who looks
+
+**The chapel roof is bad** at the north end, patched with turf, and it is going to
+be a wet winter. **And an almoner's burial purse comes from the hall and is empty
+by Candlemas most years** — he has buried people at his own cost and does not
+mention it, and it took no detective work to see it: the man had no supper in the
+house.
+
+**HE DID NOT ASK FOR EITHER AND WILL NOT.** If the party moves on it, remember
+what `articles.md` says: **money handed to a man who cannot repay it deepens the
+debt.** A roof mended by Coll's crew on a passing job, or a standing sum entered on
+Wend's books as *the Draycot burial account* with his name on it as the man who
+DISBURSES it, is work. **A purse pressed across a table is a gift.**
+
+### AND HE DOES NOT THINK OF THE MARCHFORD LETTER — d6 = 2
+
+**A letter of introduction from one priest to another is the single most valuable
+thing he owns and it does not occur to him.** He gave them the name and considers
+that discharged.
+
+> **DM: DO NOT HAND THIS OVER.** If the party wants an introduction to the
+> Marchford priest — and it is very likely the difference between being heard and
+> being a stranger at a door — **they have to ask for it.** He would write it
+> gladly and instantly. He simply will not think of it himself.
