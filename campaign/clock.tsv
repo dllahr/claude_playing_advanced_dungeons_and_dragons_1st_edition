@@ -567,3 +567,14 @@ when	exped	round	kind	anchor	detail	note
 2026-09-06	7	85	advance		10	
 2026-09-06	7	85	check	extra	d6=3	extra
 2026-09-06	7	85	check	extra	d6=3	extra
+2026-09-06	7	94	advance		9	
+2026-09-06	7	91	check	90	d6=4	anchor 90 + 1
+2026-09-06	7	134	advance		40	
+2026-09-06	7	124	check	120	d6=4	anchor 120 + 4
+2026-09-06	7	174	advance		40	
+2026-09-06	7	153	check	150	d6=4	anchor 150 + 3
+2026-09-06	7	214	advance		40	
+2026-09-06	7	181	check	180	d6=5	anchor 180 + 1
+2026-09-06	7	254	advance		40	
+2026-09-06	7	215	check	210	d6=5	anchor 210 + 5
+2026-09-06	7	244	check	240	d6=5	anchor 240 + 4

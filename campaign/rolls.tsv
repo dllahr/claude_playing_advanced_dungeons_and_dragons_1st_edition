@@ -5022,3 +5022,115 @@ when	exped	turn	notation	dice	modifier	total	hidden	reason
 2026-09-06			d20	19	0	19		Hask attacks with spear
 2026-09-06			1-6 (1d6)	1	0	1		Hask damage, spear
 2026-09-06			d20	6	0	6		Ista attacks with spear
+2026-09-06			d20	5	0	5		Yrtone attacks with sling
+2026-09-06			d20	4	0	4		Hask attacks with sling
+2026-09-06			d20	8	0	8		Ista attacks with dart
+2026-09-06			d20	14	0	14		Ista attacks with dart
+2026-09-06			1-3 (1d3)	2	0	2		Ista damage, dart
+2026-09-06			d20	9	0	9		Ista attacks with dart
+2026-09-06			d20	2	0	2		Frython attacks with dart
+2026-09-06			d20	8	0	8		Frython attacks with dart
+2026-09-06			d20	20	0	20		Frython attacks with dart
+2026-09-06			1-3 (1d3)	3	0	3		Frython damage, dart
+2026-09-06			d20	10	0	10		Dave attacks with short bow
+2026-09-06			d20	10	0	10		Dave attacks with short bow
+2026-09-06			d20	2	0	2		Torsat attacks with short bow
+2026-09-06			d20	4	0	4		Torsat attacks with short bow
+2026-09-06			d20	12	0	12		Tristle attacks with short bow
+2026-09-06			1-6 (1d6)	2	0	2		Tristle damage, short bow
+2026-09-06			d20	19	0	19		Tristle attacks with short bow
+2026-09-06			1-6 (1d6)	4	0	4		Tristle damage, short bow
+2026-09-06			d20	5	0	5		Yrtone attacks with sling
+2026-09-06			d20	19	0	19		Hask attacks with sling
+2026-09-06			2-5 (1d4+1)	4	1	5		Hask damage, sling
+2026-09-06			d20	16	0	16		Ista attacks with dart
+2026-09-06			1-3 (1d3)	1	0	1		Ista damage, dart
+2026-09-06			d20	20	0	20		Ista attacks with dart
+2026-09-06			1-3 (1d3)	2	0	2		Ista damage, dart
+2026-09-06			d20	1	0	1		Ista attacks with dart
+2026-09-06			d20	6	0	6		Frython attacks with dart
+2026-09-06			d20	6	0	6		Frython attacks with dart
+2026-09-06			d20	9	0	9		Frython attacks with dart
+2026-09-06			d20	4	0	4		Dellie attacks with sling
+2026-09-06			1-8 (1d8)	2	0	2		day 46 rd 91: YRTONE cure light wounds on Dave
+2026-09-06			d100	4	0	4		day 46 rd 92: TRISTLE Find Traps 25% on the (13,25,H) door - new object, fresh attempt
+2026-09-06			d100	56	0	56		day 46 rd 92: ISTA Find Traps 20% on the (13,25,H) door - new object, fresh attempt
+2026-09-06			d100	17	0	17		day 46 rd 93: TRISTLE Hear Noise 15% at the (13,25,H) door
+2026-09-06			d100	17	0	17		day 46 rd 93: ISTA Hear Noise 10% at the (13,25,H) door
+2026-09-06			d6	4	0	4		wandering check, anchor 90
+2026-09-06			d6	4	0	4		wandering check, anchor 120
+2026-09-06			d6	4	0	4		wandering check, anchor 150
+2026-09-06			d6	6	0	6		day 46: state and salvage value of Zelligar's laboratory apparatus after 30 years
+2026-09-06			d6	5	0	5		wandering check, anchor 180
+2026-09-06			100-500 (1d401+99)	248	99	347		day 46: what Zelligar's intact laboratory apparatus is worth to Toller (DM call, d6=6 condition)
+2026-09-06			d6	1	0	1		day 46: does the thorough search of area 9 turn up anything the casual pass missed?
+2026-09-06			d6	5	0	5		wandering check, anchor 210
+2026-09-06			d6	5	0	5		wandering check, anchor 240
+2026-09-06			d6	3	0	3		day 46 rd 255: nudging the smoked-glass bottle a few inches with the end of a 10-ft pole - does it stay upright?
+2026-09-06			d6	4	0	4		day 46 rd 256: are area 8's occupants alert after the party spent 16 turns working next door behind a cloaked door?
+2026-09-06			d6	2	0	2		surprise check, party
+2026-09-06			d6	6	0	6		day 46 rd 256: area 8's occupants' surprise as the door is pushed open (alertness d6=4)
+2026-09-06			d6	6	0	6		initiative, party
+2026-09-06			d6	6	0	6		initiative, monsters
+2026-09-06			d6	3	0	3		day 46 rd 256: how many giant rats get through the south doorway before Dave and Torsat haul it shut (tied initiative)
+2026-09-06			d6	1	0	1		day 46 rd 257: does Tristle get the spikes seated while the door is held?
+2026-09-06			d20	11	0	11		rat through the gap (1) attacks AC 3
+2026-09-06			d20	16	0	16		rat through the gap (2) attacks AC 7
+2026-09-06			1-3 (1d3)	3	0	3		rat through the gap (2) damage
+2026-09-06			d100	81	0	81		day 46 rd 256: giant rat DISEASE check on Ista's wound - 5% per wound (bestiary/giant-rat.md)
+2026-09-06			d6	6	0	6		initiative, party
+2026-09-06			d6	2	0	2		initiative, monsters
+2026-09-06			1-8 (1d8)	1	0	1		day 46 rd 258: BLARTHO cure light wounds on Ista, capped at her max of 4
+2026-09-06			d20	10	0	10		Yrtone attacks with footman's flail
+2026-09-06			d20	17	0	17		Hask attacks with short sword
+2026-09-06			1-6 (1d6)	5	0	5		Hask damage, short sword
+2026-09-06			d20	11	0	11		Dellie attacks with footman's flail
+2026-09-06			d20	12	0	12		Tristle attacks with long sword
+2026-09-06			d20	6	0	6		Ista attacks with spear
+2026-09-06			d20	12	0	12		Frython attacks with dart
+2026-09-06			d20	6	0	6		Frython attacks with dart
+2026-09-06			d20	12	0	12		Frython attacks with dart
+2026-09-06			d20	15	0	15		the rat on Ista attacks AC 7
+2026-09-06			1-3 (1d3)	2	0	2		the rat on Ista damage
+2026-09-06			d100	62	0	62		day 46 rd 258: giant rat DISEASE check on Ista's second wound - 5% per wound
+2026-09-06			d6	3	0	3		initiative, party
+2026-09-06			d6	2	0	2		initiative, monsters
+2026-09-06			d20	1	0	1		Yrtone attacks with footman's flail
+2026-09-06			d20	7	0	7		Hask attacks with short sword
+2026-09-06			d20	13	0	13		Dellie attacks with footman's flail
+2026-09-06			2-7 (1d6+1)	2	1	3		Dellie damage, footman's flail
+2026-09-06			d20	10	0	10		Tristle attacks with long sword
+2026-09-06			d20	6	0	6		Frython attacks with dart
+2026-09-06			d20	1	0	1		Frython attacks with dart
+2026-09-06			d20	5	0	5		Frython attacks with dart
+2026-09-06			d6	5	0	5		wandering check, anchor 20
+2026-09-06			d6	1	0	1		wandering check, anchor 20
+2026-09-06			d6	2	0	2		wandering table, level 1
+2026-09-06			d6	5	0	5		wandering check, anchor extra
+2026-09-06			d20	1	0	1		Y save vs Paralyze/Poison/Death
+2026-09-06			d20	12	0	12		F save vs Spell
+2026-09-06			d100	62	0	62		morale
+2026-09-06			d100	63	0	63		morale
+2026-09-06			d100	50	0	50		morale
+2026-09-06			d100	51	0	51		morale
+2026-09-06			d100	51	0	51		morale
+2026-09-06			d100	66	0	66		morale
+2026-09-06			d100	81	0	81		morale
+2026-09-06			d100	100	0	100		morale
+2026-09-06			d100	100	0	100		morale
+2026-09-06			d100	100	0	100		morale
+2026-09-06			d6	5	0	5		initiative, party
+2026-09-06			d6	2	0	2		initiative, monsters
+2026-09-06			d6	3	0	3		initiative, party
+2026-09-06			d6	3	0	3		initiative, monsters
+2026-09-06			d6	3	0	3		surprise check, party
+2026-09-06			d6	3	0	3		surprise check, party
+2026-09-06			d6	2	0	2		surprise check, party
+2026-09-06			d6	2	0	2		surprise check, party
+2026-09-06			d20	20	0	20		giant centipede attacks AC 9
+2026-09-06			d20	20	0	20		giant centipede attacks AC 9
+2026-09-06			d20	20	0	20		giant centipede attacks AC 9
+2026-09-06			d20	20	0	20		giant centipede attacks AC 9
+2026-09-06			d20	20	0	20		giant centipede attacks AC 9
+2026-09-06			d20	20	0	20		orc attacks AC 9
+2026-09-06			1-8 (1d8)	8	0	8		orc damage

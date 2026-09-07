@@ -64,3 +64,8 @@ when	exped	turn	who	kind	delta	reason
 2026-09-05	6		Yrtone	heal	1	Yrtone CLW on herself (rolled 3, capped at max 7)
 2026-09-06	7	88	Dave	damage	-5	rusted sword, skeleton in the (14,29,H) doorway, expedition 7 round 88. It rolled 17 vs the 16 it needed on DMG p.75 monster matrix column 1.
 2026-09-06	7	89	Dave	heal	2	DELLIE cure light wounds -- HER FIRST SPELL EVER CAST, expedition 7 round 89, from rank 3. Rolled 2 on 1d8. 4 -> 6 of 9.
+2026-09-06	7	91	Dave	heal	2	Yrtone cure light wounds, area 9, rolled 2 on 1d8. 6 -> 8 of 9.
+2026-09-06	7	256	Ista	damage	-3	giant rat bite, area 9, one of two that got through the south doorway as Dave and Torsat hauled it shut. 4 -> 1 of 4. CON 3.
+2026-09-06	7	258	Ista	heal	1	Blartho cure light wounds, rolled 1 on 1d8. 1 -> 2 of 4.
+2026-09-06	7	258	Ista	damage	-2	giant rat bite, area 9. 2 -> ZERO. UNCONSCIOUS AND BLEEDING 1/round to -10 (DMG p.82). SECOND TIME SHE HAS BEEN TAKEN TO 0 IN TWO EXPEDITIONS -- the first was the pool at exp.6 round ~667, which she has no memory of and which is the thing she told Dave she was frightened of on day 45. Bleeding stops the instant ANY friendly creature binds wounds: no roll, no check. If revived: coma 1-6 TURNS, then A WEEK MINIMUM of no fighting, no casting, no carrying -- and a cure spell does NOT lift it, only heal does.
+2026-09-06	7	259	Ista	anchor	0	BLEEDING STOPPED. Blartho bound her wounds in round 259 -- DMG p.82, ceases immediately on any round a friendly creature administers aid, no roll. STABLE AT 0, unconscious. She has NOT been revived: the moment she is brought above 0 she is in a COMA for 1-6 turns and then owes A WEEK MINIMUM with no fighting, casting or carrying, which a cure spell does not lift.

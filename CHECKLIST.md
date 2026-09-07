@@ -641,6 +641,18 @@ only the text found it.
       corridor, and it lets the party spend risk it has not actually bought.
       **Track it carefully. Say nothing.** Report a check only when it FIRES, and
       then only through what the characters perceive.
+- [ ] **`earned_by=all` MEANS THE SIX PCs. NAME HASK, DELLIE AND ISTA.**
+      *(2026-09-06 — I wrote the guard in `xp.py` on day 39 and fell into it on
+      day 46.)* `'all'` is **deliberately** the six full-share PCs, so the three
+      cannot be swept into awards they were not present for. **When all nine
+      fight, write `all,Hask,Dellie,Ista`.**
+      Both expedition-7 monster rows went in as bare `all`, so the six were each
+      **5 xp over** and the three got **nothing** — including Dellie, who killed
+      the rat standing over Ista. **Fixed by an anchor computed with `xp.py`'s own
+      arithmetic**, not by hand.
+      > **The tell:** log an award, then run `python tools/xp.py` and **look at
+      > the bottom three rows.** If Hask, Dellie and Ista did not move and they
+      > were in the fight, the row is wrong.
 - [ ] **OPEN LOCKS AND FIND TRAPS: THE LIMIT IS PER *OBJECT*, NOT PER LEVEL.**
       *(Misapplied 2026-09-06, player-caught.)* I told the party that because
       both thieves had used Find/Remove Traps on the pit trap, **neither could
