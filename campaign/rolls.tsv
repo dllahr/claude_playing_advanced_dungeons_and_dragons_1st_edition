@@ -4799,3 +4799,48 @@ when	exped	turn	notation	dice	modifier	total	hidden	reason
 2026-09-06			1-8 (1d8)	8	0	8		orc damage
 2026-09-06			d6	2	0	2		day 46 rd 58: what the party observes in the 40 ft north from (10,24) to (10,28)
 2026-09-06			d6	3	0	3		day 46 rd 53-58: TRISTLE elf passive secret-door detection, 1 in 6, walking the length of the 20-ft passage past area 10's secret door at (8,25,V)
+2026-09-06			d6	1	0	1		day 46 rd 60: what the party sees from the junction at (10,29)
+2026-09-06			d6	5	0	5		wandering check, anchor 60
+2026-09-06			d6	5	0	5		day 46 rd 65: what the party observes along the y=29 corridor east
+2026-09-06			d6	5	0	5		day 46 rd 65: TRISTLE elf passive 1 in 6, passing the secret door in the south wall at (14,29,H)
+2026-09-06			d6	1	0	1		search (15,29) south wall: TRISTLE elf active 2 in 6
+2026-09-06			d6	6	0	6		search (15,29) south wall: Yrtone and Ista, non-elf 1 in 6
+2026-09-06			d6	5	0	5		search (15,29) south wall: Yrtone and Ista, non-elf 1 in 6
+2026-09-06			d6	1	0	1		search (14,29) south wall: Frython, Dellie, Blartho - non-elf 1 in 6
+2026-09-06			d6	1	0	1		search (14,29) south wall: Frython, Dellie, Blartho - non-elf 1 in 6
+2026-09-06			d6	2	0	2		search (14,29) south wall: Frython, Dellie, Blartho - non-elf 1 in 6
+2026-09-06			d100	29	0	29		day 46 rd 75: TRISTLE Find Traps 25% on the (14,29,H) secret door - a NEW object, fresh attempt
+2026-09-06			d100	66	0	66		day 46 rd 75: ISTA Find Traps 20% on the (14,29,H) secret door - a NEW object, fresh attempt
+2026-09-06			d6	3	0	3		day 46: does the door's opening mechanism yield to a turn's thorough examination (DMG p.97)?
+2026-09-06			d6	5	0	5		day 46 rd 86: can Tristle engage the jamb catch with the END of a 10-ft pole from 10 ft, rather than by hand?
+2026-09-06			d6	5	0	5		wandering check, anchor 20
+2026-09-06			d6	1	0	1		wandering check, anchor 20
+2026-09-06			d6	2	0	2		wandering table, level 1
+2026-09-06			d6	5	0	5		wandering check, anchor extra
+2026-09-06			d20	1	0	1		Y save vs Paralyze/Poison/Death
+2026-09-06			d20	12	0	12		F save vs Spell
+2026-09-06			d100	62	0	62		morale
+2026-09-06			d100	63	0	63		morale
+2026-09-06			d100	50	0	50		morale
+2026-09-06			d100	51	0	51		morale
+2026-09-06			d100	51	0	51		morale
+2026-09-06			d100	66	0	66		morale
+2026-09-06			d100	81	0	81		morale
+2026-09-06			d100	100	0	100		morale
+2026-09-06			d100	100	0	100		morale
+2026-09-06			d100	100	0	100		morale
+2026-09-06			d6	5	0	5		initiative, party
+2026-09-06			d6	2	0	2		initiative, monsters
+2026-09-06			d6	3	0	3		initiative, party
+2026-09-06			d6	3	0	3		initiative, monsters
+2026-09-06			d6	3	0	3		surprise check, party
+2026-09-06			d6	3	0	3		surprise check, party
+2026-09-06			d6	2	0	2		surprise check, party
+2026-09-06			d6	2	0	2		surprise check, party
+2026-09-06			d20	20	0	20		giant centipede attacks AC 9
+2026-09-06			d20	20	0	20		giant centipede attacks AC 9
+2026-09-06			d20	20	0	20		giant centipede attacks AC 9
+2026-09-06			d20	20	0	20		giant centipede attacks AC 9
+2026-09-06			d20	20	0	20		giant centipede attacks AC 9
+2026-09-06			d20	20	0	20		orc attacks AC 9
+2026-09-06			1-8 (1d8)	8	0	8		orc damage

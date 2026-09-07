@@ -101,3 +101,6 @@ when	map	level	x	y	exped	turn	squares	feet	rate	why	route
 2026-09-06	b1	1	10	21	7	48	1	10	explore	round the corner in formation; the corridor turns north	11,21 10,21
 2026-09-06	b1	1	10	24	7	50	3	30	explore	north up the 20-ft passage at cautious mapping pace, holding three abreast	10,21 10,22 10,23 10,24
 2026-09-06	b1	1	10	28	7	54	4	40	explore	north up the passage; it narrows from 20 ft to 10 ft at y=26. Halted at (10,28), the last square before area 11, which is flagged mis-mapped	10,24 10,25 10,26 10,27 10,28
+2026-09-06	b1	1	10	29	7	59	1	10	explore	north one square to the junction where the passage opens out; north is walled at y=30	10,28 10,29
+2026-09-06	b1	1	14	29	7	61	4	40	explore	east along the y=29 corridor at cautious mapping pace, to the point where a way opens north	10,29 11,29 12,29 13,29 14,29
+2026-09-06	b1	1	14	30	7	86	1	10	known	everyone 10 ft back from the found secret door before opening it; Tristle works the catch with a 10-ft pole from the boundary	14,29 14,30

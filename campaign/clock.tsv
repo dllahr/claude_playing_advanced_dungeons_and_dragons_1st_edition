@@ -560,3 +560,8 @@ when	exped	round	kind	anchor	detail	note
 2026-09-06	7	49	advance		2	
 2026-09-06	7	53	advance		4	
 2026-09-06	7	58	advance		5	
+2026-09-06	7	60	advance		2	
+2026-09-06	7	65	advance		5	
+2026-09-06	7	65	check	60	d6=5	anchor 60 + 5
+2026-09-06	7	75	advance		10	
+2026-09-06	7	85	advance		10	

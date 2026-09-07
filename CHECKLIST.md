@@ -641,6 +641,23 @@ only the text found it.
       corridor, and it lets the party spend risk it has not actually bought.
       **Track it carefully. Say nothing.** Report a check only when it FIRES, and
       then only through what the characters perceive.
+- [ ] **OPEN LOCKS AND FIND TRAPS: THE LIMIT IS PER *OBJECT*, NOT PER LEVEL.**
+      *(Misapplied 2026-09-06, player-caught.)* I told the party that because
+      both thieves had used Find/Remove Traps on the pit trap, **neither could
+      check a secret door found an hour later.** Wrong, and badly so — a
+      per-level budget would make a thief useless in any dungeon with two traps
+      in it.
+      > PHB p. 28, locks: *"once per **lock**… no amount of trying will ever
+      > enable him or her to succeed **with that lock**."*
+      > Traps: *"accomplished **in exactly the same manner as opening locks**…
+      > **One try only per thief** is allowed."*
+      **"One try only per thief" means one try at THAT trap.** A failed pick on
+      the armoury door does not spend Open Locks; it spends *that door*.
+      **The player's worked example is the rule:** Tristle searched the side
+      table in the wizard's bedroom and found nothing, so he never gets another
+      try **at that table** — every other table in Quasqueton is a fresh roll.
+      **And a FAILED trap check is not a clean bill of health.** It means the
+      thief cannot tell. Say that, rather than "no trap".
 - [ ] **IF A CLASS FUNCTION COVERS THE QUESTION, ROLL THE CLASS FUNCTION.**
       *(2026-09-06, the jammed pit trap.)* Tristle got a proper **Find/Remove
       Traps 25%** check. For Ista I improvised a **d6** "observation" roll instead

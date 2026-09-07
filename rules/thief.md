@@ -93,3 +93,27 @@ it must be called out **before** the dice, not after.
 
 Note the contrast: Hear Noise **may be repeated as often as desired**; Open Locks
 and Find Traps may not.
+
+> ## ⚠ THE LIMIT IS PER **OBJECT**, NOT A PER-LEVEL BUDGET
+>
+> **Misapplied 2026-09-06 and caught by the player.** The DM told the party that
+> because Tristle and Ista had each used Find/Remove Traps on the area 36 pit
+> trap, **neither could check a secret door found an hour later.** That is wrong.
+>
+> **Read the PHB's own words for locks, which traps explicitly follow "in exactly
+> the same manner":** *"once per **lock**… no amount of trying will ever enable
+> him or her to succeed **with that lock**."* **Per lock. Per trap. Per object.**
+> *"One try only per thief is allowed"* means one try at **that** trap.
+>
+> A per-level budget would make a thief useless in any dungeon containing more
+> than one trap, which is every dungeon.
+>
+> | | |
+> |---|---|
+> | Tristle fails on the pit trap at (29,31) | he may never try **that trap** again until 2nd level |
+> | A different trap, ten minutes later | **fresh attempt, full percentage** |
+> | Ista fails on the same pit trap | same — **her own** attempt at that trap is spent, nothing else is |
+>
+> **The player's own worked example, which is the rule:** Tristle searched the
+> side table in the wizard's bedroom and found nothing; he never gets another try
+> **at that table**. Every other table in Quasqueton is a new roll.
