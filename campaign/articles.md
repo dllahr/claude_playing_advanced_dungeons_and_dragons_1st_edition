@@ -422,8 +422,31 @@ that is **one night, in a chapel outside a wall, with no notary and no time.**
 
 | | |
 |---|---|
-| **LETTER A — if the crag is NOT Sir Aymer's** | says nothing at all. The party hands over Ottir's account and goes home |
-| **LETTER B — if the crag IS his** | **a petition for a licence to quarry stone and take timber off the crag.** **25 gp a year, three years, renewable.** Coin ready on the day. Ottir to witness |
+| **LETTER A — if the crag is NOT Sir Aymer's** | says nothing at all. The party hands over Ottir's account and goes home. **~~BURNED, night of day 51.~~** |
+| **LETTER B — if the crag IS his** | **a petition for a licence to quarry stone and take timber off the crag.** **25 gp a year, three years, renewable.** Coin ready on the day. Ottir to witness. **✔ CHOSEN AND DELIVERED, day 52** |
+
+> ### THE CHOICE, day 51 night — AND THE BINARY DID NOT FIT
+>
+> **Cuddy's answer was NEITHER: the record does not settle the title** (perambulation
+> names the crag as a *marker* and never says which side lies within; and under the
+> charter a grant of the crag to **Rogahn and Zelligar**, held of the lord **for the
+> keeping of the north way**). So on its own terms article 9 offered no answer.
+>
+> **The party chose B, on the ground that both advisers reached it independently:**
+>
+> - **Wend's own exposure paragraph kills A.** A graded cart trail, a levelled flat,
+>   a fire pit, a latrine, a boxed spring and a lean-to that sleeps eight are on that
+>   hill. *"The licence has to be the explanation, or there isn't one."* **Silence
+>   stopped being a neutral act the day Coll's crew built the basecamp.**
+> - **Cuddy's counsel on the night of the 51st**: a licence concedes it is his to
+>   license, which is the cheapest concession available, and *"a steward asked to
+>   rule on a thing he'd have to research will say no while he researches, and he'll
+>   say it for a year."*
+>
+> **What it costs: the party concedes in writing that the crag is Sir Aymer's to
+> license**, against a claim that in fact runs only by reversion. **They know that
+> and are paying it deliberately.** Cuddy's fair copy of the grant stays in the pack
+> and is NOT produced — *"you'd be arming him."*
 
 ### WHY IT IS A QUARRY LICENCE AND NOT A LEASE OF THE RUIN
 
