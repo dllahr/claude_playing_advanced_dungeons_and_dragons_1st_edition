@@ -72,7 +72,7 @@ stalk, hide or ambush — MV 12" and no stealth of any kind.
 | **Yrtone, Blartho, DELLIE — footman's flails** | **FULL DAMAGE.** The three clerics are the party's best weapons here |
 | Frython — **his only spell is *sleep*** | **NO EFFECT. He is carrying a dead card** |
 | Yrtone's and Blartho's ***command*** | **undead are immune** (PHB p. 43). Also dead |
-| **Holy water** | **the party has NONE** — the question of where to get it was raised on day 45 and the answer was *ask Cuddy at Draycot on day 51* |
+| **Holy water** | **the party has NONE, AND CANNOT GET ANY** — asked of Cuddy on day 51 as planned, and the answer is a flat no. **DMG p.114 requires a cleric of not less than 5th level**; Cuddy is **3rd**, Yrtone and Blartho are **1st**, and his chapel has no font. It also needs a precious-metal basin in a made-to-order font (**copper: 330-380 gp and 4-10 weeks for six vials a week**) and blessed crystal vials. **The PHB's 25 gp a vial is a city price.** Full rule and the receptacle table: `rules/equipment.md`, *Holy water*. The only lead is **the priest at MARCHFORD** |
 | **Oil flasks** | fire scores **normal** damage, and Ista is carrying the fuel |
 
 > **The cleric prohibition that took Dellie's spear on day 39 — and that she was

@@ -620,3 +620,74 @@ back end.**
 
 **The duty is assessed on the TOWN'S valuation, not the seller's**, and the
 assessor's interest runs the other way from yours.
+
+
+## Holy water — WHO CAN MAKE IT AND WHAT IT TAKES (DMG pp. 114-115)
+
+**The 25 gp on the Religious items list above is a CITY price for a finished
+vial.** It is not a thing a country chapel can sell you, and the reason is here.
+
+> *"Only clerics, excluding druids, are able to prepare holy water — or unholy
+> water in the case of evil clerics. **As a third level spell is involved, it
+> requires a cleric of not less than 5th level of experience** to manage to create
+> such fluid."*
+
+**Three hard gates, all of them.**
+
+| gate | requirement |
+|---|---|
+| **THE PRIEST** | a cleric of **5th level or better**. Not 4th. Druids never |
+| **THE FONT** | a blessed basin of **precious metal** (copper, silver, electrum, gold or platinum), engraved with the holy symbols, set inside a **font** of finely worked rare wood with base, pedestal, chest-like holder and lid. **Made to special order, 2d4+2 = 4-10 weeks.** **ONE FONT PER RELIGIOUS EDIFICE** — deities *"look upon anything other as unworthy and excessive"* |
+| **THE VIALS** | once made, holy water **cannot leave the font for more than a turn without losing its efficacy** unless it is in specially **blessed vials of crystal — rock crystal or special leaded glass.** Each empty vial is worth **2-5 gp** |
+
+*source: **DMG pp. 114-115**, same section as the receptacle table below.*
+
+**The ritual**, robed in formal vestments, casts in succession: **create water ·
+purify food & drink · bless · chant (1 full turn) · prayer.**
+
+**LIMIT: once per week and no more** — a full day of prayers and meditation for
+the ritual, then **not less than 8 hours of rest** after it.
+
+### Holy/unholy water receptacles
+
+| Metal | Capacity for creation | Basin cost | Font cost |
+|---|---|---|---|
+| copper | **6 vials** | 130 - 180 gp | **200 gp** |
+| silver | 10 vials | 1,900 - 2,400 gp | 500 gp |
+| electrum | 18 vials | 8,000 - 12,000 gp | 1,000 gp |
+| gold | 32 vials | 19,000 - 22,000 gp | 1,500 gp |
+| platinum | 50 vials | 110,000 - 200,000 gp | 2,000 gp |
+
+*source: **DMG pp. 114-115**, "MAGICAL RESEARCH — CREATION OF HOLY/UNHOLY WATER", 150 dpi page renders 2026-09-07.*
+
+**Combination vessels are allowed** by interpolation — a copper basin chased with
+silver and set with a silver rim and handles holds 8 vials and costs 50% of the
+copper price plus 50% of the silver price.
+
+**Capacity is deliberately a supply limit**, and the book says so: *"Capacities
+are designed for game purposes so as to limit supplies of holy/unholy water."*
+
+### Two more clauses worth knowing
+
+- **DEFILEMENT.** If a non-believer blesses/curses the opposite kind of font, or
+  uses *"less refined means such as excreting wastes into a font or basin"*, the
+  whole thing is **desecrated and unfit and must be smelted down and remade**, at
+  20-50% of the costs above and 4-6 weeks. **Requires actual contact** — blessing
+  or cursing at a distance is wasted.
+- **DRINKING IT.** Ingesting or bathing with holy water **slows the onset of
+  lycanthropy or of becoming undead by 1-4 turns per vial**, secretly determined.
+
+### What this means for THIS party — day 51
+
+**Nobody the party can reach can make holy water.**
+
+- **Yrtone and Blartho are 1st level.** They are four levels short.
+- **Father Cuddy is 3rd** (rolled day 51, d6=3). He is two levels short and says
+  so himself.
+- **His chapel has no font** (d6=5) and never has — but it is a consecrated
+  edifice in its own right, so it is **eligible** for one.
+- **The cheapest working arrangement in the book is copper: 130-180 for the basin
+  + 200 for the font = 330-380 gp, 4-10 weeks to build, six vials a week
+  thereafter.** The party can afford that today.
+- **And it would be worth nothing without a 5th-level cleric to use it.** That is
+  the ordering problem: **the font is the cheap half.**

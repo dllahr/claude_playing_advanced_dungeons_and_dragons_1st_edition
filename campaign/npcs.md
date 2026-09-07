@@ -1289,3 +1289,70 @@ over. He walks the same circuit four times a year and has done for years.
 
 **He does not know where the wool staple is and was not asked to.** That is
 answered (Ludbury) and a drover does not get to unsettle it.
+
+
+---
+
+## DAY 51, afternoon — THE SKELETONS TOLD TO CUDDY, AND HOLY WATER REFUSED
+
+**Reaction 53 — sober, and NOT warm, and that is the right result.** Telling an
+almoner there are animated dead four days up the north road is grave news and it
+lands as grave news. He does not thank them for it. He goes very still and asks
+short, exact questions: **how many, in what room, was the room sealed, was there
+a grave, was there a stone with writing on it, and did they lie as though they had
+been laid out.**
+
+**FATHER CUDDY IS A CLERIC OF THE THIRD LEVEL** *(d6 = 3, rolled in the open)*.
+He says the number himself, without being asked, because it is the answer to the
+question they came with and he knows it before they finish putting it.
+
+### THE HOLY WATER — a flat no, and it is the BOOK'S no (DMG pp. 114-115)
+
+**Full rule and the receptacle table now cached in `rules/equipment.md`,
+*Holy water*.** The three gates:
+
+| gate | and where the party stands |
+|---|---|
+| **a cleric of not less than the 5th level** | **Cuddy is 3rd. Yrtone and Blartho are 1st.** Nobody within reach is close |
+| **a font** — precious-metal basin in a made-to-order font, **4-10 weeks**, one per edifice | **His chapel has no font and never had one** *(d6 = 5)* — but it is a consecrated edifice in its own right, so it is **ELIGIBLE** for one. Copper is the floor: **basin 130-180 + font 200 = 330-380 gp, six vials a week** |
+| **blessed crystal or leaded-glass vials**, 2-5 gp each | trivial money, and **Frython spotted that the party is sitting on ninety-seven gp of laboratory glass in area 8.** Cuddy's answer: the glass is the easy part, *the blessing is not* |
+
+> *"Five. Not four. I have been third these eleven years and I will be third when
+> they put me in the ground, and **that is not modesty, it is arithmetic.**"*
+
+**The PHB's 25 gp a vial is a CITY price for a finished vial.** It is not
+something a country chapel sells, and nothing between here and Ludbury has any.
+
+### THE ONE LEAD — the priest at MARCHFORD
+
+*(d6 = 3 — he can name one man and is unsure of the particulars; d6 = 5 — of the
+particulars, the man's **standing** is the part he is fairly confident of.)*
+
+**Marchford is already on the party's map**: three days south by cart, the far end
+of Osk's run, where Dellie's horse was bought on day 23. Cuddy met the priest
+there once, years back, and believes him to be **of standing** — fifth degree or
+better.
+
+**What he cannot vouch for is whether Marchford has a FONT.** A font is a thing a
+church either has or has never been able to afford, and Marchford is a market
+town, not a cathedral city. **So: a lead, not an answer.**
+
+### AND HE WILL WRITE TO SOMEBODY — d6 = 4
+
+**Not urgently, and NOT to the hall.** He is clear that Ottir's account and the
+crag's title are the party's business and tomorrow's, and he will not put walking
+dead in front of Master Wace on the morning of a petition.
+
+**But he cannot un-know it, and he says so before anyone asks him to.** He will
+write to his own superior. **He offers to show the party exactly what he writes**,
+and he means the offer — this is not a threat and must not be run as one.
+
+> *"You've told me a thing I'd rather be told than not told. I'll not repay that
+> by being clever about it. **You'll read what I send.**"*
+
+> **THE REVERSAL, and it is the whole point of the day.** He came to the morning
+> office not slept and lost his place in the psalm. Then eight people asked him
+> the one question only a priest can answer, and he could not answer it — and he
+> was **more use in that hour than he has been in eleven years**, because he knew
+> the rule, he knew his own standing, and he knew a man three days south. **A
+> useless old man cannot do any of that.**
