@@ -104,3 +104,12 @@ when	map	level	x	y	exped	turn	squares	feet	rate	why	route
 2026-09-06	b1	1	10	29	7	59	1	10	explore	north one square to the junction where the passage opens out; north is walled at y=30	10,28 10,29
 2026-09-06	b1	1	14	29	7	61	4	40	explore	east along the y=29 corridor at cautious mapping pace, to the point where a way opens north	10,29 11,29 12,29 13,29 14,29
 2026-09-06	b1	1	14	30	7	86	1	10	known	everyone 10 ft back from the found secret door before opening it; Tristle works the catch with a 10-ft pole from the boundary	14,29 14,30
+2026-09-06	b1	1	13	24					PLACED	LEDGER CORRECTION: the party entered area 9 at round 90 and area 8 at round 255 and was never moved with the tool -- party.tsv still read (14,30), in the corridor outside. They are in AREA 8, having just finished searching it and rested there. Placed, not walked.	
+2026-09-06	b1	1	10	21	7	762	6	60	known	OUT: through the newly found secret door at (10,24,V), closed behind them, then south down the 20-ft passage. Litter borne by Frython and Tristle; ~200 lb of laboratory glass distributed among the other six	13,24 12,24 11,24 10,24 10,23 10,22 10,21
+2026-09-07	b1	1	16	19	7	770	8	80	known	east along the y=21 corridor and south to the crossing; loaded, litter borne, moving at 9in	10,21 11,21 12,21 13,21 14,21 15,21 16,21 16,20 16,19
+2026-09-07	b1	1	17	13	7	782	7	70	known	east along y=19, south down the x=19 corridor, west along y=13 and through the spiked-open one-way slab at (17,13,V) into the alcove -- the long dogleg that avoids the magic mouths	16,19 16,18 16,17 16,16 16,15 16,14 16,13 17,13
+2026-09-07	b1	1	16	19					PLACED	route correction: rewinding to the crossing to walk the named dogleg instead of the pathfinder's route through the magic mouths	
+2026-09-07	b1	1	19	19	7	784	3	30	known	named dogleg round the mouths: east along y=19 from the crossing	16,19 17,19 18,19 19,19
+2026-09-07	b1	1	19	13	7	786	6	60	known	south down the x=19 corridor	19,19 19,18 19,17 19,16 19,15 19,14 19,13
+2026-09-07	b1	1	17	13	7	788	2	20	known	west along y=13 and through the spiked-open one-way slab at (17,13,V) into alcove pair 2 -- BELOW the magic mouths	19,13 18,13 17,13
+2026-09-07	b1	1	16	1	7	790	13	130	known	OUT: west out of alcove pair 2 into the x=16 corridor at y=13, then straight south to the threshold. Never touches y=17 and the mouths	17,13 16,13 16,12 16,11 16,10 16,9 16,8 16,7 16,6 16,5 16,4 16,3 16,2 16,1

@@ -594,3 +594,23 @@ when	exped	round	kind	anchor	detail	note
 2026-09-06	7	421	check	420	d6=2	anchor 420 + 1
 2026-09-06	7	468	advance		45	
 2026-09-06	7	452	check	450	d6=6	anchor 450 + 2
+2026-09-06	7	708	advance		240	REST 4.0 h — area 9, both secret doors spiked, watches split between the four non-casters two at a time, one listening at each secret door
+2026-09-06	7	482	check	480	not rolled	inside a long rest; the module gives 2 checks per night instead of the normal schedule
+2026-09-06	7	511	check	510	not rolled	inside a long rest; the module gives 2 checks per night instead of the normal schedule
+2026-09-06	7	542	check	540	not rolled	inside a long rest; the module gives 2 checks per night instead of the normal schedule
+2026-09-06	7	571	check	570	not rolled	inside a long rest; the module gives 2 checks per night instead of the normal schedule
+2026-09-06	7	603	check	600	not rolled	inside a long rest; the module gives 2 checks per night instead of the normal schedule
+2026-09-06	7	635	check	630	not rolled	inside a long rest; the module gives 2 checks per night instead of the normal schedule
+2026-09-06	7	665	check	660	not rolled	inside a long rest; the module gives 2 checks per night instead of the normal schedule
+2026-09-06	7	691	check	690	not rolled	inside a long rest; the module gives 2 checks per night instead of the normal schedule
+2026-09-06	7	548	check	rest watch 1	d6=4	rest watch 1
+2026-09-06	7	628	check	rest watch 2	d6=4	rest watch 2
+2026-09-06	7	738	advance		30	
+2026-09-06	7	723	check	720	d6=5	anchor 720 + 3
+2026-09-06	7	758	advance		20	
+2026-09-06	7	753	check	750	d6=1 -> Kobolds (1 -6)-AC 7, HDV 2 , hp4,3,3,2,2,1,#AT 1, D 1-4 or weapon -1, MV 90’ (30’), Save NM, ML 6	anchor 750 + 3
+2026-09-06	7	762	advance		4	
+2026-09-07	7	771	advance		9	
+2026-09-07	7	784	advance		13	
+2026-09-07	7	784	check	780	d6=6	anchor 780 + 4
+2026-09-07	7	800	advance		16	
