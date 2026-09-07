@@ -1412,3 +1412,119 @@ was an hour ago. **The offer stands unchanged — the party reads what he sends.
 **Same rule about tomorrow, and he restates it himself:** none of this goes in
 front of Master Wace on the morning of a petition. *"Tomorrow is the road and the
 account. It is not the hill."*
+
+
+---
+
+## DAY 51, EVENING — THE CRAG. THE ANSWER, AND IT IS NOT AN ANSWER
+
+**He eats first.** Yrtone puts it in front of him and stands there until he does.
+Then he washes, puts on the vestments he has not worn since the last burial, and
+sits them down at the chapel table — because he said *sitting down, properly,
+once*, and he meant every word of it. **Reaction 74. He does this WELL.**
+
+### 1 · THE PERAMBULATION — d6 = 4. His own warning, come true exactly
+
+**The crag IS named in the perambulation of Sir Aymer's waste.** Landmark to
+landmark, the old way, as he said on day 41.
+
+**And the writing does not say which side of it lies within.**
+
+> *"I told you on the road what a marker is. I told you it may be the middle of a
+> man's land or the edge of it and that the writing doesn't always trouble to say
+> which. **Ten days and I have not made it say which.** I've read it forwards, I've
+> read it against the two before it, and it names your hill and then it goes on to
+> the next thing and it does not care, because **every man who walked those bounds
+> is four hundred years dead and all of them knew.**"*
+
+**THIS IS THE ANSWER: THE TITLE IS NOT SETTLED AND CANNOT BE SETTLED FROM THAT
+CHEST.** Not his, not the party's, not nobody's. *Unresolved on the record.*
+
+### 2 · THE OLDER MATERIAL — d6 = 5. A GRANT, AND IT NAMES THEM
+
+Under the lord's charter, in the material he never touched, there is **a grant**.
+It is legible. It is substantive. And it is the reason he could not eat today.
+
+**It was made after the barbarians were turned back at the narrow pass** — the
+battle the whole valley still half-remembers. A lord of Draycot, in his own hand,
+rewarding the two men who did it.
+
+> **ROGAHN. AND ZELLIGAR. BY NAME, IN THE LORD'S OWN CHEST.**
+
+**The crag and the waste about it, to hold OF THE LORD, FOR THE KEEPING OF THE
+NORTH WAY.**
+
+> *"Your stories are true. That's the first thing. **The wizard and the warrior
+> are not a tale, they are a line of writing in my lord's chest** and I have had
+> my thumb on it for two days."*
+
+### 3 · WHY THAT IS BOTH WORSE AND BETTER THAN *"it is his"*
+
+| | |
+|---|---|
+| **WORSE** | **It proves the crag was a lord's to GRANT.** So it was never *"nobody's."* The party's whole standing position — reckoned nobody's, which is why Coll graded a cart trail up it and no one objected — **is now contradicted by a document.** `district.md` and `articles.md` both need correcting, and they now are |
+| **BETTER** | **Sir Aymer's claim is by REVERSION**, not by original right. Two grantees, gone without heirs, and the land falls back in. **A reversion has to be ESTABLISHED, not assumed** — and Master Wace is precisely the sort of man who knows the difference |
+| **AND** | **the grant is held FOR THE KEEPING OF THE NORTH WAY** *(d6 = 4 — the one thing in the chest that helps them)*. **Nobody has kept that way in forty years.** The party has kept it since day 6, and Ottir's account has **eleven names down the left-hand side** to prove it |
+
+> **DO NOT MUDDLE THE CAUSATION.** The unperformed service is a **legal** fact.
+> The robberies are still downstream of the layoffs, which are downstream of the
+> staple moving — `district.md` stands. Two separate things that happen to point
+> the same direction.
+
+### 4 · HIS COUNSEL — and it is the same counsel as day 14, inverted
+
+On day 14 he said *"never ask a great man for what he cannot deny you."* Tonight:
+
+> *"**Do not raise the title.** Not a word of it, not tomorrow, not to Wace, not to
+> Perrin, not in that hall at all. **A steward asked to rule on a thing he'd have
+> to research will say no while he researches**, and he'll say it for a year."*
+>
+> *"Ask for the **licence**. The quarry and the timber, the five-and-twenty a year,
+> the three years, the coin on the day, exactly as your Wend has written it. **A
+> licence concedes it is his to license** — and that is the cheapest thing you will
+> ever be asked to concede, and you get a paper in his hand that says you may be
+> up there. **Lead with the road.** I told you that too."*
+
+*(d6 = 5 — and he is likely right. Wace trusts paper, the paper is genuinely
+unclear, and a steward facing an unclear record, a cleared road and 25 gp a year
+offered in writing takes the licence rather than opens a suit.)*
+
+### 5 · THE HARD THING, said plainly
+
+**They have taken about 450 gp of goods off a hill that may be the lord's**, and
+that money bought the clip. **The licence is retrospective cover** and Wend's
+second letter already names the position exactly: *a tenant who exceeded his
+terms.* He does not soften it.
+
+> *"You'll not be hanged for it. You may be **charged** for it. Better charged as
+> a tenant than found as a trespasser, and better this year than next."*
+
+### 6 · WHAT HE HAS MADE THEM — and what he says to do with it
+
+**He has copied the operative words of the grant out in his own hand**, on his own
+paper, with the names and the service in it. Ten days and a pen and an almoner.
+
+**AND HE TELLS THEM NOT TO USE IT TOMORROW.**
+
+> *"You'll want to put that on the table. **Don't.** It's the one paper in the
+> world that proves the hill was a lord's to give away, and the man you'd be
+> handing it to is the lord's steward. **You'd be arming him.**"*
+>
+> *"Keep it. Read it. **Know a thing without spending it** — you're better at that
+> than most, I've watched you do it with the dealer. But know it."*
+
+### 7 · WHAT HE CANNOT DO, and says so for the third time today
+
+> *"I can read. **I cannot rule.** I'm an almoner and there is a difference between
+> a man who has read the writings and a man who is entitled to say what they mean,
+> and everything I've told you tonight is the first kind."*
+
+**Three questions asked of him today by people who treated him as a priest, and
+he could answer none of them cleanly: the holy water, the dwarf, and the hill.**
+He knew the rule on the first, he knew his own limits on the second, and on the
+third he did ten days' work and came back with *"it does not say."*
+
+> **AND THAT IS THE MOST USEFUL DAY ANYONE HAS HAD OUT OF FATHER CUDDY IN ELEVEN
+> YEARS.** An unclear answer that he can prove is unclear is worth more than a
+> confident wrong one, and it is the entire reason the party gets to walk into
+> that hall tomorrow and ask for the small thing instead of the large one.

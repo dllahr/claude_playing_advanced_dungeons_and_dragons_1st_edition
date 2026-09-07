@@ -78,3 +78,39 @@ and was certain.
   at the crossing it turns **north**, not east or west.
 - **Seventy feet of the y=19 corridor and the whole of area 2 are clean.** Their
   road is one line and the party has come in behind it.
+
+
+---
+
+## THE CRAG — what the party now knows, day 51
+
+**Father Cuddy read the whole of Sir Aymer's chest in ten days and the answer is
+that the record does not settle it.**
+
+- **The crag is named in the perambulation of the waste** — as a **marker**, and
+  the writing never says which side of the marker lies within the bounds.
+- **There is an older grant, and it names ROGAHN and ZELLIGAR.** Made by a lord of
+  Draycot after the barbarian invasion was turned back at the narrow pass: **the
+  crag and the waste about it, to hold of the lord, for the keeping of the north
+  way.** The stories the district tells are true and there is paper.
+- **So the crag was never "nobody's."** It was a lord's to grant, and he granted
+  it. That was the party's standing position and a document now contradicts it.
+- **Sir Aymer's claim is therefore by REVERSION** — two grantees dead without
+  heirs — and a reversion is a thing that must be established rather than assumed.
+- **The service in the grant is the keeping of the north way.** Nobody has kept it
+  for forty years. **The party has kept it since day 6**, and Ottir's account
+  carries eleven names.
+
+**Cuddy's counsel: do not raise the title. Ask for the licence.** 25 gp a year,
+three years, quarry and timber, coin on the day. A licence concedes the crag is
+his to license, which is the cheapest concession available, and it buys a paper in
+Master Wace's hand saying the party may be up there.
+
+**The party holds Cuddy's own fair copy of the operative words — and has been told
+not to produce it.** It is the only document that proves the hill was a lord's to
+give away, and the man across the table tomorrow is the lord's steward.
+
+**Still open:** whether Marchford's priest is of the fifth degree and whether
+Marchford owns a font *(no holy water is obtainable anywhere nearer)*; the ring,
+magical since day 4 and nameless *(Wraye)*; and **the dwarf in irons in area 26,
+who has had a rite and has not had a burial.**

@@ -161,3 +161,29 @@ Michaelmas. Marrow's, some. Coll and Ferd got to roughly **twenty** and stopped.
 
 **Eight are now the party's:** Hask, Dellie, Corm, Sarn, Coll, Wat, Ferd, Ged.
 Roughly a dozen are not.
+
+
+---
+
+## THE CRAG WAS NEVER "NOBODY'S" — CORRECTED day 51
+
+**The district's belief, and the party's standing position, was that the crag was
+reckoned nobody's — which is why Coll graded a cart-passable trail up it and
+nobody objected.** That belief is *what a district says.* It is now contradicted
+by a document.
+
+**Cuddy's ten days in the chest (day 51):**
+
+- The crag **is** named in the perambulation of Sir Aymer's waste, as a **marker**,
+  and the writing does not say which side lies within. **Genuinely unresolved.**
+- **Beneath the charter there is a GRANT naming ROGAHN and ZELLIGAR** — the crag
+  and the waste about it, **to hold of the lord, for the keeping of the north
+  way** — made after the barbarians were turned back at the narrow pass.
+- **Therefore the crag was a lord's to grant.** Sir Aymer's claim runs by
+  **reversion** (grantees dead without heirs), which must be established.
+
+> **THE CAUSATION IN THIS FILE STANDS UNCHANGED.** The robberies are downstream
+> of the layoffs, which are downstream of **the wool staple moving** (d6 = 1, day
+> 6). The forty-year lapse of the grant's *service* is a **legal** fact and is NOT
+> a second cause of the robberies. Two separate things that happen to point the
+> same way. Do not merge them.
