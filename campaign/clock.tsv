@@ -578,3 +578,7 @@ when	exped	round	kind	anchor	detail	note
 2026-09-06	7	254	advance		40	
 2026-09-06	7	215	check	210	d6=5	anchor 210 + 5
 2026-09-06	7	244	check	240	d6=5	anchor 240 + 4
+2026-09-06	7	254	check	extra	d6=4	extra
+2026-09-06	7	254	check	extra	d6=1 -> GiantCentipedes(1-2)-AC9, HDV 2 , hp2,2,#AT 1, Dpoi¬ son, MV 60' (20'), Save NM, ML 7	extra
+2026-09-06	7	257	advance		3	
+2026-09-06	7	263	advance		6	

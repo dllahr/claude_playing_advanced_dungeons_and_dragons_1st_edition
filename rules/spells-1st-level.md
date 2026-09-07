@@ -112,6 +112,30 @@ against the printed columns.*
 
 **Undead and certain other creatures are excluded** — see the Monster Manual.
 
+### WHAT TO DO WITH SLEEPERS — PHB p. 68, the same entry
+
+> *"The area of effect is determined by the range and **area center decided upon
+> by the spell caster**. **Slapping or wounding will awaken affected creatures**,
+> but noise will not do so. **Awakening requires 1 complete melee round.** Note
+> that **sleeping creatures can be slain automatically at a rate of 1 per slayer
+> per melee round**."*
+
+| | |
+|---|---|
+| **Slaying a sleeper** | **automatic. 1 per slayer per melee round.** No roll, no damage dice |
+| **Shooting a sleeper** | **wounds it, which WAKES it.** It is up one full round later |
+| **Noise** | does not wake them |
+| **The centre is the caster's choice** | so a 30-ft circle can be placed to catch a doorway and stop short of your own line |
+
+**The tactical consequence is the opposite of instinct: do NOT shoot them.** A
+missile volley into a heap of sleeping enemies wakes the ones it hits and kills
+none of them outright. **Walk in and cut throats** — every able body accounts for
+one a round, automatically.
+
+*source: **PHB p. 68**, SLEEP, text layer read 2026-09-06 and the rate confirmed
+word for word. The campaign had been citing "1 per slayer per round, PHB p.68"
+from expedition 6 onward; that citation is exactly right.*
+
 ### SLEEP DOES NOT DISTINGUISH FRIEND FROM FOE
 
 **Read the PHB's own words, verified from the page 2026-09-04:**

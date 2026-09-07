@@ -5134,3 +5134,43 @@ when	exped	turn	notation	dice	modifier	total	hidden	reason
 2026-09-06			d20	20	0	20		giant centipede attacks AC 9
 2026-09-06			d20	20	0	20		orc attacks AC 9
 2026-09-06			1-8 (1d8)	8	0	8		orc damage
+2026-09-06			1-8 (1d8)	2	0	2		day 46 rd 260: YRTONE cure light wounds on Ista, her last cure, capped at Ista's max of 4
+2026-09-06			1-6 (1d6)	1	0	1		day 46 rd 260: Ista's COMA duration in TURNS once revived (DMG p.82)
+2026-09-06			d6	1	0	1		day 46 rd 260: Tristle spiking the south door, HAMMERED not gentle, Dave and Torsat bracing it
+2026-09-06			d6	4	0	4		wandering check, anchor extra
+2026-09-06			d6	1	0	1		wandering check, anchor extra
+2026-09-06			d6	2	0	2		wandering table, level 1
+2026-09-06	7	260	VOID	0	0	0		*** VOID -- DM ERROR. The two d6=1 rolls for Tristle spiking (13,25,H) at rounds 257 and 260 are void. Both were rolled against "a jamb being shoved by five rats", and THE DOOR OPENS INTO AREA 8 -- Torsat pushed it open from area 9 -- so rats on the far side can only press it SHUT. It was never being forced. Dave and Torsat did not need to hold it and the jamb was never moving. The door is shut and takes spikes normally. Note the mapdb records opens_toward for 0 of 48 level-1 doors, so swing direction is established by PLAY ONLY and must be written down the first time a door is opened.
+2026-09-06			d6	3	0	3		day 46 rd 261: is TORSAT clear of the sleep circle after shoving the door and running back? 1 = caught
+2026-09-06			4-16 (4d4)	1,2,2,3	0	8		day 46 rd 261: creatures affected by Frython's sleep, 4d4 at HD up to 1
+2026-09-06			d6	5	0	5		wandering check, anchor 20
+2026-09-06			d6	1	0	1		wandering check, anchor 20
+2026-09-06			d6	2	0	2		wandering table, level 1
+2026-09-06			d6	5	0	5		wandering check, anchor extra
+2026-09-06			d20	1	0	1		Y save vs Paralyze/Poison/Death
+2026-09-06			d20	12	0	12		F save vs Spell
+2026-09-06			d100	62	0	62		morale
+2026-09-06			d100	63	0	63		morale
+2026-09-06			d100	50	0	50		morale
+2026-09-06			d100	51	0	51		morale
+2026-09-06			d100	51	0	51		morale
+2026-09-06			d100	66	0	66		morale
+2026-09-06			d100	81	0	81		morale
+2026-09-06			d100	100	0	100		morale
+2026-09-06			d100	100	0	100		morale
+2026-09-06			d100	100	0	100		morale
+2026-09-06			d6	5	0	5		initiative, party
+2026-09-06			d6	2	0	2		initiative, monsters
+2026-09-06			d6	3	0	3		initiative, party
+2026-09-06			d6	3	0	3		initiative, monsters
+2026-09-06			d6	3	0	3		surprise check, party
+2026-09-06			d6	3	0	3		surprise check, party
+2026-09-06			d6	2	0	2		surprise check, party
+2026-09-06			d6	2	0	2		surprise check, party
+2026-09-06			d20	20	0	20		giant centipede attacks AC 9
+2026-09-06			d20	20	0	20		giant centipede attacks AC 9
+2026-09-06			d20	20	0	20		giant centipede attacks AC 9
+2026-09-06			d20	20	0	20		giant centipede attacks AC 9
+2026-09-06			d20	20	0	20		giant centipede attacks AC 9
+2026-09-06			d20	20	0	20		orc attacks AC 9
+2026-09-06			1-8 (1d8)	8	0	8		orc damage
