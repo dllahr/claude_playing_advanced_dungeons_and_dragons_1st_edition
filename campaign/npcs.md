@@ -2040,3 +2040,97 @@ he takes them for gentry-adjacent and it does not occur to him that they buy.
 > resort for the six holders' pool*, capped at 500 gp the season. **Buying clip out
 > of Sir Aymer's own hundred is trade, it is new, and art. 8 makes new ventures
 > WEND'S to structure.** Take the name home. Do not offer a price on a road.
+
+
+---
+
+# DAY 54 — WEND. THANKED, TOLD EVERYTHING, AND SHE FINDS THE HOLE
+
+**Yrtone went to her on the 53rd** *(d6 = 5)*, so **Wend has had the headline for a
+full day** before the seven walk in off the road: *the licence is granted.* She has
+spent that day doing what she always does with good news, which is look for what is
+wrong with it.
+
+**Reaction 46 — flat, and it is NOT coldness.** She is **working.** Compare her own
+pattern: 101 on day 39 came after she had been *asked a question*, 127 on day 34
+came in the middle of solving something. **A win handed to her finished produces a
+46 and a pencil.**
+
+### The thanks — specific, and deflected
+
+Dave names the two things exactly: **her exposure paragraph is what killed Letter
+A**, and **her own instruction that the coin be ready on the day** is the only
+reason Ottir's running order was possible at all.
+
+> *"Mm. Yes. That's — yes, thank you."* Then, immediately: *"Read me the licence
+> again. The **words** of it, not what he said."*
+
+## ⚠ AND SHE FINDS IT — d6 = 5. NOBODY ELSE SAW THIS
+
+> ### **The licence is to QUARRY STONE and TAKE TIMBER.**
+> ### **It does not say one word about carrying movable goods out of a stronghold.**
+
+**The ~450 gp was household stuff.** Pewter, books, a dragon skin, glassware, coin,
+a ring. **Wace backdated the licence so the year those things came off the hill sits
+inside the term — and what the term makes lawful for that year is stone and timber.**
+
+**She states the mitigation herself, unprompted, because she is fair:**
+
+> *"He was told. **Out loud, to his face, by Dave, and he wrote it down in his own
+> hand while it was being said.** In front of a reasonable man that is the whole
+> ballgame and I'd not lose a night's sleep over it."*
+>
+> *"**But it is not on the paper.** And the paper is what's left when the
+> conversation isn't. **That man will not be steward for ever**, and Sir Aymer has
+> got an heir somewhere the same as everybody has, and neither of them was in that
+> room."*
+
+### HER FIX — cheap, quiet, and it uses Wace's own invitation
+
+**He told them to write to him directly at Michaelmas with the renewal money.**
+
+> *"Then **tell him in the letter.** Every year, with the money: *this is what we
+> took off the hill this twelvemonth.* Don't ask him for anything, don't ask him to
+> change the licence — **asking makes him look at it.** Just say it, and send it,
+> and let him do the one thing that man does, which is **read what's put in front
+> of him.**"*
+>
+> *"Do that three years running and you're not people who had a licence. **You're
+> people who never once failed to tell him.** And that is worth more than the
+> wording, because the wording can be argued and a habit can't."*
+
+> **THIS IS THE SAME MOVE AS THE SUCCESSION AND THE ARTICLES: build the paper
+> BEFORE it is wanted, and never at the moment it would be conspicuous.** It costs
+> a sheet and a rider they are sending anyway.
+
+## The two wool leads — d6 = 2, and the honest answer is *not yet*
+
+**Rud on the 50th could name holdings sitting on unsold clip; the holder's man on
+the 53rd is one of them.** She writes both down, carefully, and then does not
+pretend:
+
+> *"I'll take the names and I'm glad of them. **But I can't do anything with them
+> and I'd be lying if I said I could.** Our money's committed, the carts are
+> committed, and it's the back end of the year — **that's last summer's wool in
+> those barns and it'll keep, and so will they, because nobody's coming for it.**"*
+>
+> *"**Ask me again before shearing.** That's when a name in a barn is worth
+> something. Right now it's a name in a barn."*
+
+**And she flags the thing the party half-knew:** Sir Aymer's own country is not the
+six holders' pool and it is not art. 7. **It is new trade, which art. 8 makes hers
+to structure** — and she is not structuring anything in October.
+
+## WAT IS BACK — d6 = 6, in on the 52nd, and he did the job exactly
+
+| | |
+|---|---|
+| **EDE** — *d6 = 2* | **She is bringing far more than anybody assumed.** Not a wheel, her tools and a box: **more than Halm's cart takes in one trip.** *This is the precise question Halm asked on day 40 and nobody could answer, and the answer is bad for him* |
+| **LYDE** — *d6 = 3* | **TWO apprentices, not three. A YEAR, not six months. Premium paid in advance.** He will not move and he will not take three |
+
+> **Lyde's two maps exactly onto what already existed**: Meg and Tibb were certain
+> and the third was to follow from Coll. **The third does not follow.** And a year
+> instead of six months **doubles the board and wages** the party undertook to find.
+
+**Nothing else moved in six days** *(d6 = 1)*. Sarn, Toller, Bern and Coll all
+steady, no news, no trouble.

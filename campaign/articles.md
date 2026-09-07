@@ -601,3 +601,28 @@ of anybody. **The words were not the problem. The witness was.**
 > **THE SAME THANKS, SAID TO OTTIR ON THE ROAD HOME, IS A DIFFERENT EVENT.** Not
 > written here as a hint about what to do — written here because a future session
 > will otherwise read the 47 as *Ottir didn't care*, and he cared a great deal.
+
+
+### ⚠ ART. 10 — THE DEFECT WEND FOUND, day 54
+
+**The licence is to QUARRY STONE and TAKE TIMBER. It says nothing about carrying
+MOVABLE GOODS out of a stronghold** — and the ~450 gp was pewter, books, a dragon
+skin, glassware, coin and a ring. **Backdating it made the stone and timber lawful
+for that year. Not the pewter.**
+
+**The mitigation is real and Wend named it herself:** Wace was told, out loud, and
+wrote it down in his own hand while it was being said. In front of a reasonable man
+that is sufficient.
+
+> *"But it is not on the paper. **And the paper is what's left when the
+> conversation isn't.** That man will not be steward for ever."*
+
+**THE STANDING REMEDY, adopted day 54 — do this every year without fail:**
+
+> **With the Michaelmas renewal money, in the same letter, to Master Wace by name:
+> state what was taken off the crag that twelvemonth. Ask for nothing. Do not ask
+> him to amend the licence — asking makes him look at it.**
+
+**Three years of that and the party are not people who held a licence; they are
+people who never once failed to tell him.** The wording can be argued. A habit
+cannot.
