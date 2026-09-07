@@ -1264,3 +1264,28 @@ find out afterwards there'd been a way to do it quietly. But no."*
 
 **AFTERNOON ARC: 110 → 48 → 36 → 45.** Not souring on the party — a man absorbing
 bad news across four hours. **Read it the same way as Wend's 101→26 on day 41.**
+
+
+---
+
+## DAY 50 — RUD, drover. Met on the last stretch into Draycot
+
+**Reaction 69.** A hired drover of about forty-five, a grown son and a hired lad,
+and **forty draft ewes going north** — bought cheap for a holder two hundreds
+over. He walks the same circuit four times a year and has done for years.
+
+| | |
+|---|---|
+| **what he is** | **A HIREABLE INSTRUMENT**, like Osk and Halm. He moves stock for a fee on a schedule. He has not joined anything and 69 does not mean he has |
+| **WHAT HE IS WORTH** | **He can name holdings still sitting on unsold wool** — every flock on his circuit, by name and by number. He is the first man the party has met who can |
+| **his limit** | **His circuit runs south and west.** He is no use at all in the north hundred, which the party knows better than he does |
+| **the crag** | the stories and nothing else. He does not know the party has been up it, and nobody told him |
+
+> **This is the answer to a problem the party has not finished naming.** *Where*
+> to sell is settled — Ludbury, since day 14. *Whether* they can buy is settled —
+> 8 gold the tod, 500 gp the season, art. 7. **What is not settled is VOLUME**, and
+> Wend has been guessing at everything past the original six holders. Rud is a
+> list of sellers walking up the road in the opposite direction.
+
+**He does not know where the wool staple is and was not asked to.** That is
+answered (Ludbury) and a drover does not get to unsettle it.

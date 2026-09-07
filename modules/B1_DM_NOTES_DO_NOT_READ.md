@@ -4004,3 +4004,66 @@ unkeyed stair on this map is not necessarily a way out.**
 "the entire 20' section of floor between the false door and the wall opposite" —
 which is why the trap covers BOTH (29,30) and (29,31). The player was right and
 the world_changes rows were incomplete.)*
+
+
+---
+
+## THE LEVEL-0 ROAD TABLE — WRITTEN DOWN AT LAST, day 50
+
+**It was never written down.** The patrol note at "THE PATROL — week of day 5"
+says *"Level-0 road table, 1 in 6 per half-day"* and then cites **table 4** (a
+merchant's cart) and **table 6** (desperate men) — and those two numbers are the
+only surviving evidence of what the table was. It has been re-rolled from memory
+twice since. **Reconstructed here so the same road gives the same answers.**
+
+| d6 | on a settled road in this district |
+|---|---|
+| **1** | **Local traffic on foot** — a holder walking to market, a carter's boy, a shepherd shifting a few head |
+| **2** | **A drover with stock** — a hired man moving somebody's flock or beasts along a circuit |
+| **3** | **Other travellers** — a tinker, pilgrims, a family moving with a handcart |
+| **4** | **A merchant's cart or a carrier** *(this is Osk's slot — the day-5 half-day-1 hit)* |
+| **5** | **The lord's household** — a rider on an errand, a bailiff, an usher *(Perrin, day 41)* |
+| **6** | **Desperate men**, 1d3 *(the day-5 half-day-9 and half-day-11 hits)* |
+
+**1 in 6 per half-day. ROLL IT, LOG IT, SAY NOTHING** — an empty check must be
+indistinguishable from no check at all.
+
+*Reconstruction, not a book table. The only fixed points are 4 = merchant's cart
+and 6 = desperate men, which are attested in the patrol log; the rest is built to
+fit the district described in `campaign/district.md` (uplands are sheep, lower
+ground grain, a market town on the north road, a lord seen twice a year).*
+
+## DAY 49-50 — THE DRAYCOT ROAD, and RUD the drover
+
+**Six checks: four for the seven on foot (49 AM/PM, 50 AM/PM), two for Ottir and
+Yrtone riding on the 50th. TWO HITS, and both fell in the same half-day** — the
+afternoon of the 50th.
+
+**They are ONE encounter, and the convergence is arithmetic, not convenience.**
+The walkers make half the distance a day; the riders make the whole of it. At
+dawn on the 50th the walkers are at the halfway point and the riders are at
+Wethersby, so the riders close the gap at exactly the rate the walkers open it and
+**the two columns meet at the far end and not before** — i.e. on the last stretch
+into Draycot, at dusk. Worth keeping: it is a nice piece of table honesty that the
+"lucky" meeting is forced by the numbers.
+
+**d6 = 2 — a drover with stock. d3 = 3 men. Reaction 69.**
+
+| | |
+|---|---|
+| **who** | **RUD**, ~45, a hired drover on a circuit he walks four times a year. With him a grown son and a hired lad |
+| **what** | about forty draft ewes, moving **north**, bought cheap and going to a holder two hundreds over |
+| **his value** | **d6 = 4 — he knows every flock on his own circuit by name and number, and can name holdings still sitting on unsold wool.** But his circuit runs SOUTH and WEST of Wethersby: he cannot help in the north hundred, which the party already knows better than he does |
+| **the crag** | **d6 = 2 — the stories and nothing else.** He has heard of the wizard and the warrior like everyone else. He knows nothing about the title and does not know the party has been up it |
+| **NOT the staple** | He was NOT used to answer where the wool goes. **That is answered and it is Ludbury** (`district.md`, Cuddy, day 14). Do not let a drover contradict a settled fact |
+
+> **Why he matters, and it is not colour.** The party's constraint is no longer
+> *where to sell* — it is **VOLUME.** They have a route, a factor, a cap of 500 gp
+> a season and a pool of six holders that is already growing. **Rud is the first
+> man they have met who can name sellers.** Wend has been guessing at everything
+> past the six.
+
+**He is a hireable instrument, not a friend.** Moves stock for a fee, on a
+schedule, and would move it for the party next summer if paid. Reaction 69 means
+he will talk over a fire and take a drink; it does not mean he has joined
+anything.
