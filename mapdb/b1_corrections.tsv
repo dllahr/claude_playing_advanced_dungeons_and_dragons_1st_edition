@@ -599,3 +599,35 @@ member	8	29	-	none	dl+claude	flooded from area 11 across a diagonal
 member	9	29	-	none	dl+claude	flooded from area 11 across a diagonal
 member	8	30	-	none	dl+claude	flooded from area 11 across a diagonal
 member	9	30	-	none	dl+claude	flooded from area 11 across a diagonal
+
+# --- SECRET DOOR INTO AREA 8, 2026-09-06, from the player's printed map.
+# In the wall between (10,24) and (11,24) -- i.e. the EAST wall of the 20-ft
+# x=10 passage, opening into the Wizard's Workroom.
+#
+# WHY THE PIPELINE MISSED IT -- worth keeping, because it is not a threshold bug:
+#
+# 1. Thickness is not a signal. (10,24,V) measured thick=16 against neighbours of
+#    8,9,8,8 -- but across level 1 the MEDIAN PLAIN WALL IS 15 and the median
+#    secret is 14.5, and 70% of walls sit in the "secret" band. Local excess is no
+#    better: the ten known secret edges rank from 128th to 1442nd of 1469 on
+#    own-minus-neighbour-median, and half are NEGATIVE.
+# 2. CLAUDE.md and mapdb/README.md already say the true reason: "Secret doors
+#    cannot be read from the image. They are marked by a printed S in the
+#    annotation layer, not by anything structural."
+# 3. markers.py exists to do exactly that, and CORROBORATES each candidate glyph
+#    against a region sealed off from the entrance. It found 2 of 10 on this
+#    level; the other 8 are human.
+# 4. *** AND HERE IS THE REAL DEFECT: areas 8 and 9 are ONE POCKET WITH TWO
+#    SECRET ENTRANCES. The moment (14,28,H) was hand-corrected to `secret` the
+#    pocket became REACHABLE -- `secret` is in markers.PASSABLE -- so the isolated
+#    region disappeared and a candidate at (10,24,V) had nothing to corroborate
+#    against. Fixing the first secret door destroyed the signal that would have
+#    found the second. Any pocket with two secret ways in yields at most ONE to
+#    reachability corroboration, and the more diligent the human the more
+#    thoroughly the second is buried. ***
+#
+# THE FIX FOR NEXT TIME: run marker candidacy against the RAW extraction, before
+# human edge corrections are applied, and keep the candidate list even where
+# reachability no longer corroborates it. See DIAGONAL_WALLS.md for the sibling
+# problem.
+edge	10	24	V	secret	dl	secret door from the 20-ft x=10 passage EAST into area 8, the Wizard's Workroom; read off the printed map
