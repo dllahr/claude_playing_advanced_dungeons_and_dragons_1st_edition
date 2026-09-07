@@ -1635,3 +1635,94 @@ found nothing, and there is not a name to be had.
 > or made there**, and the crag has a cart-passable graded trail, Coll's crew at
 > the basecamp, and a carter who wants a run. **It is now one of the four things
 > Cuddy is owed word about.**
+
+
+---
+
+## NIGHT OF DAY 51 — WACE SENDS WORD BACK, AND HE SENDS A QUESTION
+
+**Ottir carries the account up to the hall himself** and gives it to the usher, and
+does not hang about, and does not explain it. Fourth draft, eleven names down the
+left, the road before the wool, *if it please the steward* exactly once.
+
+**d6 = 5 — Wace reads it that evening and answers the same night.** The usher's boy
+comes down to the chapel about nine with two lines of it by heart:
+
+| | |
+|---|---|
+| **1** | **The steward will hear the reeve of the north hundred FIRST**, at the top of the morning, before the hall's own business. **This is precisely what Ottir bought by arriving early and it worked exactly as he said it would** |
+| **2** | **ONE QUESTION, sent ahead, to be answered in the hall and not on paper:** *"**Who paid the eleven, and on what terms?**"* |
+
+> **THE FAVOURABLE PART OF A 5 IS THE TIMING, NOT THE CONTENT.** That is the
+> single most dangerous question in the account and they have it **the night
+> before** instead of across a table. It is also exactly the question Cuddy's
+> *lead with the road, not the wool* was designed to stop — and it did not stop
+> it, because eleven wages in a hundred that shed every hand at Michaelmas is the
+> most surprising line on the page and a man who reads for a living went straight
+> to it.
+
+**The thread, and how many steps it is:** who paid the eleven → the party → out of
+what → the wool venture → what seeded it → about 450 gp of goods sold at Wethersby
+and Ludbury → where the goods came from → **the hill.** **Four steps.** A steward
+may take one and stop. He may not.
+
+**What Ottir can say and stand behind, all of it witnessed by him personally:** the
+party pays the wages; Coll holds written authority; the roll is on Wend's books
+with a clerk on it; the six unlisted hands went to Marrow's with a written right of
+return; and Gyll made restitution to the turned-off men in the square, aloud, with
+Ottir standing there.
+
+### Sir Aymer is NOT there — d6 = 2
+
+**Consistent with everything on record: he does not come to business.** It is
+**Wace**, and that is better for this party than the alternative. A steward can be
+moved by paper. A lord has moods.
+
+### Perrin keeps away — d6 = 2
+
+**And he is right to.** He is usher of the hall, tomorrow is hall business, and he
+will not mix his own errand about a headboard into it. **A nod in the yard and
+nothing else.** *(His problem is unchanged and unsolved: he cannot spend without
+Wace, and Toller will take coin or Master Wace's own hand and nothing else.)*
+
+### Ottir overnight — d6 = 3
+
+**Sleeps badly, not wrecked.** Up at four with a candle, reads the whole thing
+through once. **Changes nothing.**
+
+> *"He's read it. **He's read it before I'm in the room.** That's — that's all I
+> wanted, that's the whole of what I wanted."*
+
+---
+
+## ⚠ THE LETTER PROBLEM — WEND WROTE A BINARY AND THE ANSWER IS NEITHER
+
+**Article 9 offers LETTER A (*the crag is NOT his* — say nothing) or LETTER B
+(*the crag IS his* — petition the licence). Cuddy's answer is that it is NOT
+SETTLED.** So on its own terms neither letter fits, and one of them burns tonight.
+
+**The case for B is strong and comes from BOTH advisers independently:**
+
+- **Wend's own exposure paragraph kills A.** Anybody who rides out to that crag
+  finds a graded cart trail, a levelled flat, a fire pit, a latrine, **a boxed
+  spring** and a lean-to that sleeps eight. *"It is not possible to pretend nobody
+  has been using that hill. The licence has to be the explanation, or there isn't
+  one."* **Saying nothing is not a neutral act any more.**
+- **Cuddy said take it tonight.** A licence concedes it is his to license — the
+  cheapest concession available — and a steward asked to *rule* on an unclear
+  record says no for a year while he researches.
+- **And the record is now known to be unclear, which is a reason to settle rather
+  than to argue.** Ambiguity favours whoever is holding the paper at the end.
+
+**The case against B:** it concedes a point that is **not proven**, in writing,
+against a claim that runs only by **reversion** — and it does so the morning after
+learning the crag was granted out once already, for a service the party is the only
+people in forty years to have performed.
+
+**A third road nobody wrote:** petition for a licence over *the waste about the
+crag* without naming the crag as within it. **Cuddy's likely view, unrolled and
+therefore not his word yet: a steward smells that, and cleverness in a petition is
+what makes a man send somebody to look.**
+
+> **THIS IS THE PARTY'S DECISION AND IT IS THE HINGE OF THE WHOLE ARC.** Do not
+> make it for them.
