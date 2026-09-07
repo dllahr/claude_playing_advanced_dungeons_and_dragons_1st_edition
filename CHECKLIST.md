@@ -716,6 +716,15 @@ only the text found it.
         then had Wend say *"you were frightening yourself over six hundred"* —
         putting her own anxiety in the player's mouth and having her be gracious
         about it. **Never hand an NPC a rhetorical win the player never conceded.**
+      **AND DO NOT PAD A CONSEQUENCES LIST.** *(2026-09-07: after Dave broke with
+      Bern I tabled "what the rupture touches" and put **Toller** in it, on the
+      strength of Toller teaching Tristle for nothing and Bern teaching the party
+      furniture for nothing. **An echo is not a consequence.** Bern and Toller
+      have no recorded relationship whatsoever. The four real rows -- Ista's bed,
+      Corm's bench and Ottir's surety, Wend's looms and spindles, Perrin's
+      possible commission -- were weakened by a fifth that was there to make the
+      list look four-square.)* **Every row in a consequences table must have a
+      traceable path through the log. If it only rhymes, cut it.**
       **THE TEST, before any NPC pushes back: re-read the player's own words and
       find the sentence that already answers it.** If it is there, the objection
       does not exist. An NPC may supply information, do arithmetic the player

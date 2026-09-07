@@ -37,7 +37,7 @@ weapon	dagger	1	Frython	non-proficient at -5, a last resort
 # expedition 4 for 29 gp 5 sp, at half PHB list. The four unspecified
 # swords were priced as short swords; the known broad and long sword at
 # their own list prices.
-treasure	plain metal ring	1	Tristle	found exp.4 in a recess under the north lip of the dais, area 27. UNIDENTIFIED — no detect magic cast, no test made
+treasure	plain metal ring	1	Tristle	found exp.4 in a recess under the north lip of the dais, area 27. *** CORRECTED 2026-09-07, player-caught: THIS LINE SAID 'no detect magic cast' AND THAT IS WRONG. spells.tsv line 53 records Blartho trading command for detect magic during the week's rest in town on DAY 4 and casting it on the whole of the party's recovered gear. IT REGISTERED AS MAGICAL. The RESULT was never written down anywhere, which is the actual gap -- the spell was logged and its finding was not. *** SO: KNOWN MAGICAL SINCE DAY 4. Still UNIDENTIFIED as to what it DOES -- a cleric's detect magic reports only that a dim or strong magic exists (DMG p.45). Nobody in Ludbury could name it; the only remaining lead is the library at WRAYE, three days east of Ludbury.
 salvage	long sword	0 — SOLD	Dave, Torsat	SOLD in town day 4 after expedition 4, part of the 170 gp haul. taken off the trophy room wall exp.4 round 276. Ordinary steel, unedged for years. 60 gp weight each.
 treasure	tapestry, small (3' x 4')	1	Torsat	cut out of its frame in the Mistress' Chamber. 40 gp — the module's damaged value; it could not come away whole. ~100 gp weight
 treasure	silver-plated comb	1	Yrtone	from the cedar chest, Mistress' Chamber. 5 gp

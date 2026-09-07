@@ -95,3 +95,14 @@ when	exped	round	who	spell	event	note
 2026-09-06	7	738	Blartho	cure light wounds	regained	Back to command + 2 cures. He cast one on Ista at round 258 and kept command -- which turned out to be the useless card twice over, undead being immune and rats having no language.
 2026-09-06	7	738	Dellie	cure light wounds	regained	Her spent slot re-prayed. SHE STILL HOLDS BOTH CASTINGS OF LIGHT, never used -- so her loadout is unchanged from the one she chose on day 45: 2 light + 1 cure. She could have dropped the lights for two more cures and did not.
 2026-09-06	7	738	Frython	sleep	regained	RE-LEARNED from his own spellbook. He cast it through the area 8 doorway at round 261 and it ended that fight without a blow struck.
+2026-09-07	-	overnight day 47-48	Yrtone	command	memorised	standing loadout, night of day 47 in Wethersby
+2026-09-07	-	overnight day 47-48	Yrtone	cure light wounds	memorised	1 of 2
+2026-09-07	-	overnight day 47-48	Yrtone	cure light wounds	memorised	2 of 2
+2026-09-07	-	overnight day 47-48	Blartho	detect magic	memorised	*** LOADOUT CHANGE. He DROPPED command for detect magic. Command has been dead weight twice in two days -- undead are immune (PHB p.43) and giant rats have no language. Prayed specifically to test the sealed vial from area 9 in the morning.
+2026-09-07	-	overnight day 47-48	Blartho	cure light wounds	memorised	1 of 2
+2026-09-07	-	overnight day 47-48	Blartho	cure light wounds	memorised	2 of 2
+2026-09-07	-	overnight day 47-48	Dellie	light	memorised	1 of 2 -- unchanged from the loadout she chose herself on day 45, and she has still never cast one
+2026-09-07	-	overnight day 47-48	Dellie	light	memorised	2 of 2
+2026-09-07	-	overnight day 47-48	Dellie	cure light wounds	memorised	her one cure
+2026-09-07	-	overnight day 47-48	Frython	sleep	memorised	his only spell
+2026-09-07	4	town-d4	Blartho	detect magic	result	LEDGER CORRECTION 2026-09-07, logged three weeks late. The day-4 sweep of the recovered gear found ONE thing: THE PLAIN METAL RING out of the area 27 dais recess registers magic. Zelligar's diary does NOT, nor did anything else in the haul. The casting was logged at the time and its finding never was, so inventory.tsv ended up saying no detect magic had been cast at all -- and the DM spent most of day 48 offering the party a sweep they had already done in expedition 4.
