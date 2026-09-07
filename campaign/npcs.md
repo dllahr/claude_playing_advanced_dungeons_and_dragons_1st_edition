@@ -1602,3 +1602,36 @@ that discharged.
 > Marchford priest — and it is very likely the difference between being heard and
 > being a stranger at a door — **they have to ask for it.** He would write it
 > gladly and instantly. He simply will not think of it himself.
+
+
+### THE DWARF, ANSWERED — *"would you like us to bring his remains HERE?"*
+
+**Reaction 71, and d6 = 5: YES — bring him, and Cuddy takes the arranging on
+himself.** The party's inversion is the obvious one and he had not got to it: do
+not carry an old man eight days, carry the bones.
+
+**THE ARRANGEMENT, in four parts, and all four are his:**
+
+| | |
+|---|---|
+| **1 · The ground** | **His.** The chapel ground outside the wall is where he has put four hundred people and **it is an almoner's ground, not the hall's.** *(d6 = 5 — no objection, because there is nobody to object.)* And he will **not ask permission**, on his own day-14 principle: *"a man asked will want to think about it, and then he'll want a reason, and then he'll have an opinion. **I'll not go looking for one.**"* |
+| **2 · NOT YET IN THE GROUND** | **He will not bury a man under a rite he has invented.** He said this afternoon he knows nothing of dwarven rites and he has not changed his mind in four hours. So: **bring him and he will KEEP him** — in the chapel, above ground, properly, for as long as it takes to find out what is owed |
+| **3 · AND HE CAN FIND OUT — d6 = 6** | **The letter to his superior is going anyway.** He will put the question in it. *"That house has books in it and it has men older than me, and one of them will have buried a dwarf or will know a man who did. **I'm asking about the walking dead already. I may as well ask about the one that had the decency to lie still.**"* And the party still reads what he sends |
+| **4 · HOW HE TRAVELS** | **Boarded and nailed into a box, not loose and not carried in anything that was a sack first** — and *"whoever's got the end of it knows what he's carrying."* He is specific about this and does not explain why, and nobody asks him to |
+
+**He asks one thing back and it is not a condition, it is a question:** does anybody
+know **how the dwarf died**, or what he was called?
+
+**They don't.** He was in irons in a trophy room, three people searched him and
+found nothing, and there is not a name to be had.
+
+> *"Then I'll bury a man with no name and no story and nothing said over him but
+> the general words, **and that is what an almoner does, and it is not nothing.**
+> Bring him when you can. He's waited forty years, he'll wait a season."*
+
+> **PENDING — THE PARTY OWES THIS.** The dwarf is in **area 26**, the trophy room:
+> cleared, looted, walked, and on the route the party must take anyway for the ~97
+> gp of glass and the forty jars cached in area 8. **A box has to be got up there
+> or made there**, and the crag has a cart-passable graded trail, Coll's crew at
+> the basecamp, and a carter who wants a run. **It is now one of the four things
+> Cuddy is owed word about.**

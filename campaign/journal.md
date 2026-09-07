@@ -114,3 +114,21 @@ give away, and the man across the table tomorrow is the lord's steward.
 Marchford owns a font *(no holy water is obtainable anywhere nearer)*; the ring,
 magical since day 4 and nameless *(Wraye)*; and **the dwarf in irons in area 26,
 who has had a rite and has not had a burial.**
+
+
+### THE DWARF — AN UNDERTAKING GIVEN, day 51
+
+**The party has offered and Cuddy has accepted: the dwarf's remains come out of
+area 26 and go to the chapel outside Draycot's wall.**
+
+- **Boarded and nailed into a box**, not loose, and whoever carries him knows what
+  he is carrying.
+- **He is NOT buried on arrival.** Cuddy keeps him above ground in the chapel until
+  he has found out what a dwarf is owed — he has never seen one and will not invent
+  a rite. He is putting the question into the letter he is already writing.
+- **The ground is the almoner's own** and he is not asking the hall's leave for it.
+- **There is no name and no story.** He was in irons; three people searched him on
+  expedition 4 and found nothing.
+
+**The trip is not a special one.** Area 26 is cleared and on the route already
+required for the ~97 gp of glass and forty jars cached in area 8.
