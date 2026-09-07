@@ -1055,3 +1055,23 @@ hard rule: **never revert a campaign TSV to undo play.**
 
 `tools/xp.py` now weights **monster xp full and treasure xp by share**; the
 day-39 anchor row in `encounters.tsv` is what keeps that prospective.
+
+
+## SAY WHICH NUMBER IT IS — a bare number in a mouth reads as a COUNT
+
+Day 51. Yrtone told Cuddy about **six** skeletons, and two lines later the DM had
+him ask *"on what number?"* and Blartho answer *"**Twelve.**"* — meaning the d20
+turning roll. **The player read it as twelve skeletons and was right to**, because
+nothing in the sentence said otherwise and the last number in play was a count.
+
+**A number spoken in dialogue attaches to whatever was just being counted.** If an
+NPC says a bare figure, name what it is in the same breath — *"twelve on the
+turning"*, *"twelve on the die"* — or keep the die out of the dialogue entirely
+and put it in the DM-voice line above.
+
+**And the related half of the same error:** the DM told Cuddy about the six
+skeletons and **left out the dwarf who had been hanging in irons in area 26 since
+expedition 4** — which is the thing an almoner cares about most, and which the
+party's own cleric had already said a rite over. `world_changes.tsv` had it all
+along. **When telling an NPC about something, run `tools/recall.py` or grep the
+log for the WHOLE class of thing, not the most recent instance of it.**

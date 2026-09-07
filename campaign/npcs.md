@@ -1356,3 +1356,59 @@ and he means the offer — this is not a threat and must not be run as one.
 > was **more use in that hour than he has been in eleven years**, because he knew
 > the rule, he knew his own standing, and he knew a man three days south. **A
 > useless old man cannot do any of that.**
+
+
+### THE DWARF IN IRONS — told second, and it should have been told FIRST
+
+*(Player-caught 2026-09-07. The DM's scene had Cuddy ask **"on what number?"** two
+lines after "six of them" and Blartho answer **"twelve"** — which reads as a count.
+**IT IS NOT. The count is SIX** (`encounters.tsv:49`, hp 4,4,3,3,2,1 = 17 hp, 59
+xp) **and the twelve is Blartho's TURNING ROLL** (`rolls.tsv:5014`, d20=12 against
+the 10 a 1st-level cleric needs, DMG p.75). The DM also left the dwarf out
+entirely, and the player put it back.)*
+
+**`world_changes.tsv:201` — area 26, expedition 4, turn 157.** A **DWARF**
+skeleton **hanging in irons** in the trophy room. **Never animated.** Searched by
+Tristle, Yrtone and Blartho — three separate 1-in-6 rolls, all 2s, nothing found,
+**no name on him and nothing to give him one.** Then **taken down from the irons,
+laid out on the floor, and covered with the bearskin off the east wall, and
+YRTONE SAID A RITE OVER HIM.**
+
+**Reaction 5** *(and read this the way the morning's 6 must be read: **not
+coldness at the party**. It is the roll saying the scene goes badly. He cannot be
+gracious about it and does not try.)*
+
+He is quiet for a long time. Then:
+
+> *"Say that again. **In irons.**"*
+
+> *"I've buried, I don't know, four hundred people. Paupers, mostly, that's what
+> an almoner is for. **I have never once had to be told about a man forty years
+> late.**"*
+
+### The two questions, and he can answer neither — d6 = 1 and d6 = 2
+
+| | |
+|---|---|
+| **Did Yrtone's rite settle it?** | **d6 = 1 — NO**, and he is careful that this is not a reproach of her: *"It was the right thing, said by the right person, at the only moment anybody had. **And the man is still lying on a floor in a hill.** A rite isn't a burial. You know that or you'd not have asked me."* |
+| **What is a DWARF owed?** | **d6 = 2 — he does not know.** *"I have never seen a dwarf. Not once, in sixty-odd years, in this district. I'll not invent a rite for a people I've never met and call it respect."* |
+
+**THE ONE THING HE SAYS FLATLY, and it costs him no doctrine at all:**
+
+> *"**Bring him out.** Whatever's owed him past that, I can't tell you and I'll
+> not pretend. But no man of any people is owed a cave floor, and you're going
+> back up there anyway for your glass."*
+
+**ACTIONABLE, and cheap.** The party is already committed to returning to the crag
+for the ~97 gp of glass and forty jars cached in area 8. **Area 26 is the trophy
+room, already cleared, already looted, on a route they know.**
+
+### And it changes the letter — his own initiative, not an objection
+
+Animated dead is one thing. **A man kept in irons as an ornament is another**, and
+he says so before anyone asks: the letter to his superior is now heavier than it
+was an hour ago. **The offer stands unchanged — the party reads what he sends.**
+
+**Same rule about tomorrow, and he restates it himself:** none of this goes in
+front of Master Wace on the morning of a petition. *"Tomorrow is the road and the
+account. It is not the hill."*
