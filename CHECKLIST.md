@@ -632,6 +632,17 @@ only the text found it.
       errors: re-deriving layout ad hoc under narrative pressure. The player has
       the printed map; when he says a wall is a wall, check the neighbour columns
       before arguing.)*
+- [ ] **RESOLVE A WANDERING CHECK SILENTLY, THEN REPORT ONLY PERCEPTION.**
+      *(2026-09-06, twice in one hour, the second time badly.)* First I wrote
+      *"the hammering brought something"* before verifying an approach existed.
+      Then I wrote **"four orcs in that passage again"** into the player-facing
+      reply — **naming the creature and the count** for an encounter the party
+      could not perceive: it was behind a spiked slab, Tristle's Hear Noise
+      failed at 73 vs 15%, and nobody else was listening.
+      **The sequence is: fire the check -> decide WHERE -> decide whether the
+      characters perceive anything -> narrate ONLY that.** Very often the honest
+      answer is *nothing happens* and the player never learns a check fired at
+      all. `clock.py` prints **THE DIE SAYS WHAT, NOT WHERE** for exactly this.
 - [ ] **NEVER TELL THE PLAYER WHEN THE NEXT WANDERING CHECK FALLS.** *(Standing
       instruction, given 2026-09-06.)* `clock.py status` prints *"next check falls
       between round X and Y"* and it is right to keep that in the log — **it is

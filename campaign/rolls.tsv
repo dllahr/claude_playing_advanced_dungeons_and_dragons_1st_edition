@@ -5181,3 +5181,9 @@ when	exped	turn	notation	dice	modifier	total	hidden	reason
 2026-09-06			d6	2	0	2		search area 8 west wall at (11,24): TRISTLE elf active 2 in 6
 2026-09-06			d6	1	0	1		search area 8 west wall at (11,24): Dellie and Hask, non-elf 1 in 6
 2026-09-06			d6	2	0	2		search area 8 west wall at (11,24): Dellie and Hask, non-elf 1 in 6
+2026-09-06	7	323	VOID	0	0	0		*** RELABEL + VOID. The d6=3 rolled at rounds 53-58 and captioned "past area 10's secret door at (8,25,V)" was actually for (10,24,V), THE DOOR INTO AREA 8. The player named (10,24) at the time, off his printed map, and the DM overrode him and rolled it against the wrong door. THE d6=3 STANDS as Tristle's passive on (10,24,V) -- a miss. Today's d6=6, captioned as an OWED check on (10,24,V), is a DUPLICATE OF THE SAME EVENT and is VOID. Both failed so nothing in play turns on it. CONSEQUENCE: Tristle has never had a passive on AREA 10's door at (8,25,V) and is not owed one -- that edge lies between (8,25) and (9,25), more than 10 ft from the x=10 file he walked in, so the passing rule never triggered. AREA 10 REMAINS UNFOUND.
+2026-09-06			d6	2	0	2		day 46: does Tristle find the means to open (10,24,V) in one turn's thorough examination (DMG p.97)?
+2026-09-06			d6	4	0	4		day 46: (10,24,V) MECHANISM AND SWING. 6 = one-way like (17,13,V); 1-2 central pivot both sides; 3-4 swings into area 8; 5 swings into the passage
+2026-09-06			d6	1	0	1		wandering check, anchor 330
+2026-09-06			d6	1	0	1		wandering table, level 1
+2026-09-06			d100	73	0	73		day 46 rd 331-333: TRISTLE Hear Noise 15% - he has had hands and ear on the (10,24,V) slab for a full turn examining it, while something moves in the passage beyond

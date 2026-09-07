@@ -585,3 +585,5 @@ when	exped	round	kind	anchor	detail	note
 2026-09-06	7	323	advance		60	
 2026-09-06	7	272	check	270	d6=6	anchor 270 + 2
 2026-09-06	7	305	check	300	d6=1 -> Ores (1 -4)-AC 6, HD 1, hp 6,4,3,1, #AT 1, D1 -6 or by wea¬ pon, MV 90' (30'), Save FI, ML 8	anchor 300 + 5
+2026-09-06	7	333	advance		10	
+2026-09-06	7	331	check	330	d6=1 -> Ores (1 -4)-AC 6, HD 1, hp 6,4,3,1, #AT 1, D1 -6 or by wea¬ pon, MV 90' (30'), Save FI, ML 8	anchor 330 + 1
