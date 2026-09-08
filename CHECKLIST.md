@@ -1107,3 +1107,25 @@ approval is not delegated; and a party that approves it has taken it back.
 asking. "Let me spend it" is a trader's idiom for *I am going to, and you're
 hearing it from me first.* She conceded the separate "capable hands" point in
 full. **But the DM should not have needed the player to find that.**)*
+
+
+## DO NOT PUT A CLOCK ON A THING THE NPC EXPLICITLY UNCLOCKED
+
+**Day 54, player-caught.** Cuddy accepted the dwarf's remains and said, unprompted
+and twice over, that there was no hurry: ***"Bring him when you can. He's waited
+forty years, he'll wait a season."*** He also said he would not bury the man until
+his letter came back telling him what a dwarf is owed — **so the burial is blocked
+on HIS correspondence and arriving early buys nothing.**
+
+The DM then listed the dwarf's box in a "collision" of competing pressures against
+the eleven-day southern trip, as one of *"the four things Cuddy is owed."*
+
+> **He is owed WORD when it happens. He is not owed a date.** Being told about a
+> thing is not the same as being promised it by a deadline.
+
+**This is the same error class as `DO NOT MANUFACTURE AN NPC OBJECTION`: inventing
+a pressure the NPC had deliberately removed.** Relieving the party of a clock was
+one of the kindest things Cuddy did, and the DM handed it straight back.
+
+**Before writing the words *deadline*, *owed*, *collision* or *cannot do both*:
+check what the NPC actually said about timing, and quote it.**

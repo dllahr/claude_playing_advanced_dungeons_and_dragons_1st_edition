@@ -130,8 +130,11 @@ area 26 and go to the chapel outside Draycot's wall.**
 - **There is no name and no story.** He was in irons; three people searched him on
   expedition 4 and found nothing.
 
-**The trip is not a special one.** Area 26 is cleared and on the route already
-required for the ~97 gp of glass and forty jars cached in area 8.
+**The trip is not a special one and it has NO DATE ON IT.** Area 26 is cleared and
+on the route already required for the ~97 gp of glass and forty jars cached in
+area 8 — and Cuddy said, unprompted, *"bring him when you can, he's waited forty
+years, he'll wait a season."* **The burial cannot happen until his letter comes
+back with what a dwarf is owed, so arriving early buys nothing.**
 
 
 ---

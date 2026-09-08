@@ -2251,12 +2251,27 @@ the delegation a fiction and any answer a mistake.
 **Hers before they leave:** Lyde's premium in advance, a year's board, Ede's wage,
 the surplus dropped at Fenn's, and the entries.
 
-> ### ⚠ THE COLLISION, flagged day 54 and NOT resolved
+> ### THE ONLY THING WITH A DATE ON IT IS THE SOUTHERN TRIP
 >
-> **The southern trip is about ELEVEN DAYS** — four to Fenn's, a ride over to Lyde
-> and back, Ede eight miles cross-country, four home. **Ede is ready day 58**, so
-> departure around day 55-56 fits.
+> **South is about ELEVEN DAYS** — four to Fenn's, a ride over to Lyde and back,
+> Ede eight miles cross-country, four home. **Ede is ready day 58**, so departure
+> around day 55-56 fits. **This is the one item in the whole campaign with a date
+> attached.**
 >
-> **The crag is the OTHER DIRECTION**: ~97 gp of glass and forty jars cached in
-> area 8, and **the dwarf's box for Cuddy**, which is one of the four things he is
-> owed word about. **Both cannot happen at once and nobody has chosen yet.**
+> **The crag is the other direction and it is NOT competing with it.** The ~97 gp
+> of glass and the forty jars are cached in a sealed pocket behind a secret door
+> that the party spiked shut behind itself; glass does not spoil.
+>
+> > **⚠ AND THE DWARF IS NOT A DEADLINE. CORRECTED 2026-09-07, player-caught.**
+> > The DM listed the dwarf's box as a competing pressure and it is the opposite of
+> > what Cuddy said: ***"Bring him when you can. He's waited forty years, he'll
+> > wait a season."*** He was explicit and unprompted about it.
+> >
+> > **And the burial is BLOCKED ON CUDDY'S OWN LETTER, not on the party's legs** —
+> > he will not put the man in the ground until he knows what a dwarf is owed, and
+> > that answer has to come back from his superior's house. **Bringing the bones
+> > early buys nothing at all.**
+> >
+> > **This is the same error class as manufacturing an objection: inventing a
+> > pressure the NPC had deliberately removed.** Cuddy relieved them of the clock
+> > on purpose, and it was one of the kindest things he did.
