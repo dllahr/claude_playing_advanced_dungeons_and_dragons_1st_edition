@@ -932,7 +932,7 @@ that actually stopped him.**
 > just that it's a small thing I'd have had to do first, every time, for eleven
 > years."*
 
-**The party owns exactly TWO riding horses** — and **NO pack animal**; the mule is HALM'S, bought for him as restitution *(corrected 2026-09-08, player-caught; see `inventory.tsv`)* — so
+**The party owns exactly TWO riding horses**, and — *as of the day-40 scene this note belongs to* — no third mount for Ottir. *(⚠ The DM twice got the pack animals wrong here on 2026-09-08. **The party owns TWO MULES and TWO CARTS**, bought day 17 and day 19-20; Halm's mule was a separate animal bought as restitution on DAY 4. Full audit in `inventory.tsv`. Neither mule is a riding horse, so the day-40 problem stands as written.)* So
 three riders was never possible. **YRTONE rides with Ottir** — and that is the
 better pairing anyway: **Cuddy is an almoner and a priest**, he reacted **48,
 neutral and incurious**, and he *"must be drawn out; the door does not swing open

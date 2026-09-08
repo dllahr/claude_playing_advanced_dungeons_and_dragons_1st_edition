@@ -42,6 +42,35 @@
 | The ring | **unknown** | magical since day 4, unidentified. **Wraye is the only lead** |
 | The vial | **unknown** | non-magical, therefore a chemical. In Coll's store |
 
+## 3b · ⚠ CAPITAL EQUIPMENT — found by audit 2026-09-08, and it was on NO balance sheet
+
+**Roughly 154 gp went out on vehicles and beasts and none of it was ever recorded as
+an asset.** It was expensed correctly — Wend's *"charge it the wear"* rule, 17 gp a
+cart, applied inside the Ludbury share-out — **and the residual was never entered
+anywhere.**
+
+| | | |
+|---|---|---|
+| **2 carts, 2-wheeled** | bought day 19-20, 50 gp each | **~33 gp each resale** (d6=1, two-thirds) = **~66 gp** |
+| **2 harness** | 12 s.p. each | 2 gp 4 sp |
+| **2 mules** | **day 17** (20 gp + 4 gp pack saddle and panniers) and **day 19-20** (20 gp) | ~40 gp |
+| **spares** | wheel, axle-tree, grease, cord | ~8 gp |
+| **residual** | | **~100-110 gp**, plus working value far above that |
+
+**WEND FORBADE SELLING THEM** — *"you'll want your own carts"* — and no sale, loan,
+gift or loss appears in any file after day 32.
+
+> **⚠ TWO THINGS THE RECORD CANNOT ANSWER AND ONLY THE PLAYER CAN RULE ON:** where
+> the carts and the two mules physically are, and whether they belong to **the party**
+> or to **the venture**. Wethersby is inference, not evidence.
+>
+> **AND THE DM'S OWN ERROR IS PART OF THIS.** Halm's mule was bought DAY 4 as
+> restitution (20 gp + 5 gp cloth = the 25 gp in the npcs.md restitution table). The
+> DM merged it with the party's separate day-17 purchase, wrote *"the party has never
+> owned a mule"* into `inventory.tsv`, and cited `rolls.tsv:2611` as proof —
+> **misreading a d6=6 whose declared 5-6 result is "he cannot and there is nobody to
+> spare."** Halm sent nothing to the crag; that mule was the party's.
+
 ## 4 · COMMITTED, WITH A NUMBER
 
 | | | |
@@ -67,8 +96,7 @@ the table, and the first one is the big one.**
 
 ## 6 · THE POSITION IN ONE LINE
 
-**631 gp 6 sp in hand, ~250 gp collectable from Toller the moment somebody walks
-into his shop, and a wage bill that is smaller than it looked** — six of the eleven
+**866 gp 6 sp in hand** *(631 gp 6 sp with Wend, 235 gp carried south as of day 59)*, **~250 gp collectable from Toller the moment somebody walks into his shop, ~100-110 gp of carts and mules that were on nobody's books at all, and a wage bill that is smaller than it looked** — six of the eleven
 are Marrow's, and the rest are the venture's cost set against the venture's
 earnings.
 
