@@ -691,3 +691,22 @@ has been unchanged since day 42 and which he did not move.
 > the party's factor and the custodian of the money. **Nobody has shown it to her
 > and Toller did not raise it.** Recorded as a fact, not a criticism — but it is the
 > kind of thing this file exists to catch.
+
+
+### ART. 11 — SIGNED, SENT, AND THE ANSWER IS IN THE POST
+
+| | |
+|---|---|
+| **signed** | **DAVE.** No witness — Toller's call |
+| **carried** | **WAT**, riding out on the morning of day 56, the same hour the southern cart leaves. **92** on being asked, three days after getting back off the southern road; he asked for nothing and Wend priced him at **3 s.p. a day and the hack** and entered it unasked |
+| **the receipt** | **IT COMES, AND IT COMES SLOWLY** *(d6 = 3)*. A receipt is clerk's work — it must be put before Wace and signed behind the household's own business. Wat waits days for it |
+| **AND IT RECITES THE CONTENTS** | *(d6 = 5)* — **which is the whole of the trick. Toller's day-42 condition is discharged the moment it reaches Wethersby** |
+
+> ### ⚠ AND WEND WILL HAVE THE ANSWER BEFORE SHE HAS SEEN THE LETTER
+>
+> **The party is south from day 56 to about day 66.** The receipt lands in
+> Wethersby with **Wend** — who was never shown the draft, and whose advice on
+> timing it was written against.
+>
+> **Not a punishment. Just what happens when the paper is made in one shop and the
+> money lives in another.**
