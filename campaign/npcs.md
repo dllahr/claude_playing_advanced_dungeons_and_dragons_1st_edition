@@ -932,7 +932,7 @@ that actually stopped him.**
 > just that it's a small thing I'd have had to do first, every time, for eleven
 > years."*
 
-**The party owns exactly TWO riding horses** (Hask's, Dellie's) plus the mule, so
+**The party owns exactly TWO riding horses** — and **NO pack animal**; the mule is HALM'S, bought for him as restitution *(corrected 2026-09-08, player-caught; see `inventory.tsv`)* — so
 three riders was never possible. **YRTONE rides with Ottir** — and that is the
 better pairing anyway: **Cuddy is an almoner and a priest**, he reacted **48,
 neutral and incurious**, and he *"must be drawn out; the door does not swing open
