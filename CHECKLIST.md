@@ -1080,7 +1080,7 @@ log for the WHOLE class of thing, not the most recent instance of it.**
 ## AN NPC WITH DELEGATED AUTHORITY MUST NOT ASK PERMISSION TO USE IT
 
 **Day 54, player-caught, and the error was the DM's phrasing.** Wend holds art. 8 —
-authority to hire, capped at 116 gp **by herself**. The DM then wrote her the line
+authority to hire, self-capped at *"a clerk and one pair of hands in the barn"* — **a scope, never a figure**. The DM then wrote her the line
 **"Let me spend it,"** and the player took it apart correctly:
 
 > *"It sounds like you're asking for permission that is not mine to give — you

@@ -2146,8 +2146,11 @@ steady, no news, no trouble.
 > **factorship**; the pool has grown and three more are asking; she wrote the
 > **succession**, then **two letters in one night** on the 48th; she has just read
 > a licence word by word and found the hole in it; she is training Sarn — and
-> **art. 8, the hiring authority, is the one article she asked for herself and then
-> CAPPED HERSELF ON at 116.**
+> **art. 8, the hiring authority, is the one article she asked for herself — and
+> the self-set cap on it HAS NEVER BEEN GIVEN A FIGURE** *(art. 8: "enough for a
+> clerk and one pair of hands in the barn. Figure to be named when she has done the
+> sums"). The 116 in that article is a REACTION ROLL, not a sum of money — the DM
+> misread it twice on 2026-09-07 and it is corrected here.*
 
 **And the first thing she does is correct one word, briefly and without heat**,
 which is a thing she has done twice before in this campaign:
@@ -2175,7 +2178,7 @@ useful:**
 
 ### AND SHE ASKS — which is the thing to take seriously
 
-**She capped herself at 116 on day 39 and she says now that the cap was too low.**
+**The cap she set on herself was "enough for a clerk and one pair of hands in the barn" — and she never named the figure** (art. 8: *"figure to be named when she has done the sums"*). **What she says now is that the SCOPE was too small**, and she is right that it is: a clerk and one pair of hands does not cover a growing pool, three ledgers, Ottir's fair copies and a southern trip. *(NOT "the 116 was too low" — 116 is a reaction roll. DM error, corrected 2026-09-07.)*
 Not more authority — she has the authority. **More hands, and permission to stop
 apologising for using it.**
 
@@ -2209,7 +2212,10 @@ problem. The consent was never going to be.**
 
 **The player took the DM's own phrasing apart and was right.** Full rule now in
 `CHECKLIST.md`: *an NPC with delegated authority must not ask permission to use
-it.* Art. 8 is Wend's, she capped it herself at 116, and *"let me spend it"* made
+it.* Art. 8 is Wend's, and the cap on it is a SCOPE she set herself — *"enough for
+a clerk and one pair of hands in the barn, figure to be named when she has done the
+sums"* — **never a number.** *(The 116 in art. 8 is a reaction roll; the DM misread
+it as money twice on 2026-09-07 and it is corrected throughout.)* *"Let me spend it"* made
 the delegation a fiction and any answer a mistake.
 
 **She digs in on a NARROW point and it is a fair one:**
