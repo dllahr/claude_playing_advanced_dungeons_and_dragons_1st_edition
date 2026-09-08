@@ -1103,10 +1103,33 @@ approval is not delegated; and a party that approves it has taken it back.
   before defending the NPC.** Here it was. The dice (41, and d6=2 to dig in) were
   honest and the *line they were reacting to* was not.
 
-*(Wend's own resolution was the honest reading of a narrow dig-in: she wasn't
-asking. "Let me spend it" is a trader's idiom for *I am going to, and you're
-hearing it from me first.* She conceded the separate "capable hands" point in
-full. **But the DM should not have needed the player to find that.**)*
+### AND THE SHARPER VERSION, ten minutes later — the player got there again
+
+The DM first defended the line as a trader's idiom (*"let me spend it" = I am going
+to and you're hearing it first*). **The player demolished that in one sentence:**
+
+> *"Just so we're clear — if I say to you 'let me sleep in your house', in trader
+> talk that isn't me asking permission, that's me telling you I'm going to start
+> sleeping in your house?"*
+
+**It isn't the idiom. `"Let me X"` IS a request, always.** Wend laughed (67, d6=6)
+and gave him the words, then took back the substance, correctly:
+
+> **"It's whose thing it is. Hiring's mine — you gave me that and I set the figure.
+> Your bed's yours. Same three words, and one of them's a notice and one of them's
+> a cheek, and the difference isn't in my mouth, it's in what I've already got the
+> right to do."**
+
+**SO THE RULE IS ABOUT POWER, NOT PHRASING:**
+
+- **An NPC who holds the right says *"I'm hiring two."*** Flat indicative. No modal.
+- **An NPC who does not hold the right asks** — and then it is a real request with a
+  real possible no.
+- **If the DM cannot tell which, the delegation is not written down clearly enough.**
+  Go and read the article.
+
+*(She conceded the separate "capable hands" point in full and without a fight.
+**But the DM should not have needed the player to find any of this.**)*
 
 
 ## DO NOT PUT A CLOCK ON A THING THE NPC EXPLICITLY UNCLOCKED
