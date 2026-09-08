@@ -2660,8 +2660,25 @@ appearing to regard it as a decision — two months on a road being the one thin
 this trip he knows from the inside.
 
 **He refused both of Dave's options** and produced a third: **Rowe up on his horse,
-Hask walking them the eight miles in, Dave riding ahead so Ede is not opening her
-door to strangers at dusk.**
+Hask walking them in, Dave riding ahead so Ede is not opening her door to strangers
+unwarned.**
+
+> **⚠ TIMING CORRECTED 2026-09-08, player-caught.** The DM wrote that Dave *"lost
+> his afternoon to the hedge"* and reached Ede at dusk. **The conversation took half
+> an hour.** Both parties left Marchford at first light; riders made Fenn's by
+> midday (a mounted man covers a cart-day in about half), turned cross-country, met
+> the two men two or three miles in, and talked for thirty minutes.
+>
+> **DAVE IS AT EDE'S DOOR IN THE MID-AFTERNOON, IN BROAD DAYLIGHT, and Hask is
+> about TWO hours behind him, arriving in the light.**
+>
+> **So two of the six reasons the DM gave for Ede's 13 were invented: the darkness,
+> and "the cart is a day behind" — Ede's gate is EIGHT MILES from Fenn's yard.** The
+> 13 stands on what is actually dated: she was never sold (36, then 56 by one point,
+> then 61 by one point), it is two days past the month she was promised, the house
+> has been down to the walls since Thursday, she sleeps on a board because the bed is
+> roped up in the yard, she gave notice on the cottage and promised the crock away,
+> and **d6=1 — nothing has changed in 32 days, so she has no fallback at all.**
 
 > *"Don't leave them in a hedge — that's the one thing you don't do. **They've been
 > sat in hedges since August**, and if we ride off and tell them a cart's coming
