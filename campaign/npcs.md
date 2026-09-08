@@ -2329,9 +2329,33 @@ eyes on Ista since they carried her out of the hill on day 47.**
 > the price of not going to a house is that you learn nothing about the person
 > inside it.**
 
-> **`articles.md` bears on this and was not consulted:** Ista's whole record is
-> **9** for a kindness, **45**, then **71 for the lantern given as a DUTY** and
-> **87** for being counted. *"Two months of asking to go underground, never
-> answered"* is the wound. **A message that ends *find us when you're ready*, from
-> people who then leave town for eleven days, is that wound in a new coat** — and
-> nobody meant it that way.
+> ### ⚠ AND THE DM OVERREACHED ON THIS — corrected 2026-09-07, player-caught
+>
+> The DM wrote that a message ending *find us when you're ready*, from people who
+> then leave town for eleven days, was Ista's old wound *"in a new coat."* **That
+> was wrong and the record contradicts it.**
+>
+> **The wound on file is specifically about THE EXPEDITIONS** — *"two months of
+> asking to go underground, never answered"* (day 31, reaction 9 then 45). **A cart
+> to Lyde is not going underground.**
+>
+> **And the party's practice is consistent, documented, and Ista watched it
+> happen:**
+>
+> | | |
+> |---|---|
+> | **days 39-44** | **Frython and Blartho out for a week under the very same DMG p.82 clause.** In those six days the party did Ottir's hearing, three social calls, Wend, the Draycot road, Perrin, Cuddy, Toller, and sent Wat south. **All town and road business** |
+> | **day 45** | **they waited for the week to expire before expedition 7 set out.** All nine were then asked individually whether they wanted to come |
+> | **days 49-54** | the Draycot ride, while Ista was laid up, and nobody proposed waiting |
+>
+> **THE RULE THE PARTY ACTUALLY FOLLOWS: the caves wait for the injured. Nothing
+> else does.** Ista was in the common room for the day-39 debrief — she rolled
+> **87** that night — and she has seen this pattern repeatedly. **She has no
+> grounds to read a southern cart trip as exclusion, and the dice do not say she
+> does: a 21 with `does nothing` is a woman who has decided not to make a fuss, NOT
+> a woman nursing a grievance.**
+>
+> **WHAT REMAINS IS NOT A MORAL POINT, IT IS AN INFORMATION POINT, and it is the
+> only thing here that is actually live:** the party does not know she got the half
+> of the message that mattered, and does not know she cannot walk. **That is a gap,
+> not a fault.**

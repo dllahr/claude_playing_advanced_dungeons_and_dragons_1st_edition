@@ -1152,3 +1152,33 @@ one of the kindest things Cuddy did, and the DM handed it straight back.
 
 **Before writing the words *deadline*, *owed*, *collision* or *cannot do both*:
 check what the NPC actually said about timing, and quote it.**
+
+
+## A LOGGED GRIEVANCE COVERS WHAT IT SAYS AND NOT WHAT IT RHYMES WITH
+
+**Day 54, player-caught.** Ista's file carries a real, specific wound: **two months
+of asking to go underground and never being answered** (day 31 — reaction **9**,
+then **45**). The DM then applied it to the party leaving on an ELEVEN-DAY CART
+TRIP while she was laid up, calling it *"that wound in a new coat."*
+
+**It is not. The wound is about the EXPEDITIONS. A cart to Lyde is not going
+underground** — and the party's actual practice is documented, consistent, and was
+watched by Ista herself:
+
+- **Days 39-44:** Frython and Blartho out for a week under the same DMG p.82
+  clause, and the party did six solid days of town and road business.
+- **Day 45:** they **waited** for the week to expire before the expedition set out,
+  then asked all nine individually.
+- **Days 49-54:** the Draycot ride, while Ista was laid up, and nobody proposed
+  waiting.
+
+> **The rule the party follows is: the caves wait for the injured, nothing else
+> does.** That is a policy, applied evenly, in front of witnesses.
+
+**THE RULE:** *an NPC's logged grievance is evidence for the thing it names and
+nothing else.* Before extending one to a new situation, check whether the party's
+conduct in that situation is already **documented and consistent** — because if it
+is, the NPC has seen it and cannot reasonably be surprised by it. **This is the
+`A LOW ROLL DOES NOT LICENSE INVENTED BACKSTORY` rule wearing a different hat:**
+here the roll was a 21 with *does nothing*, which is *a person deciding not to make
+a fuss* — and the DM inflated it into a reopened injury.
