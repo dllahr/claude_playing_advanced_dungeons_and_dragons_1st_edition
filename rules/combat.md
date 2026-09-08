@@ -498,6 +498,89 @@ henchman of the character speaking"*, and read:
 
 \* *"Or morale check if appropriate."*
 
+### ⚠ THE HALF OF THAT RULE THE DM IGNORED FOR SIXTY GAME DAYS
+
+**Read the sentence above again: adjust for Charisma AND "any applicable loyalty
+adjustment."** `rules/abilities.md` established that **nobody in this party has a
+Charisma reaction adjustment** — and the DM took that to mean reaction rolls here
+are unmodified. **They are not.** The loyalty half is a large, cumulative,
+book-supported bonus and it has never once been applied.
+
+**Player-caught 2026-09-08:** *"I don't think it's realistic that they would have
+such wild shifts in their response to us."* **Correct, and the books agree.**
+
+## Loyalty modifiers — SPECIAL CONSIDERATIONS (DMG p. 37)
+
+**How the party has actually TREATED people. This is the anti-swing mechanism.**
+
+| Special consideration | Modifier |
+|---|---|
+| killed faithful henchman or hireling in front of witness(es) | **−40%** |
+| tortured faithful henchman or hireling in front of witness(es) | **−30%** |
+| reputed to have slain faithful henchmen or hirelings, or actually left them to die | **−20%** |
+| foresworn, oath breaker or deserter | **−15%** |
+| rumored to have tortured faithful henchmen or hirelings | **−10%** |
+| discharged faithful henchmen or hirelings without cause | **−5%** |
+| **given a choice gift or bonus within the last two months (hireling) or three months (henchman)** | **+5%** |
+| **risked life for within the last six months (hireling) or one year (henchman)** | **+10%** |
+| **ransomed or rescued within one year** | **+15%** |
+| **saved life directly or personally** | **+25%** |
+| **uses and diminishes his or her own magic to benefit the NPC (including use of spells, especially cures)** | **+25%** |
+| **returned henchman or hireling to normal state from a death-like state, had raised or resurrected** | **+50%** |
+
+*source: **DMG p. 37**, HENCHMEN (LOYALTY), Special Considerations, 170 dpi page render 2026-09-08.*
+
+> **"Apply only ONE penalty and ONE bonus maximum, whichever of either category is
+> the higher."** — DMG p. 37. **It is bounded. It does not stack into nonsense.**
+
+## Alignment of the liege (DMG p. 37)
+
+| Alignment | Modifier |
+|---|---|
+| lawful good | **+15%** |
+| lawful neutral | **+10%** |
+| lawful evil | +5% |
+| neutral good | 0% |
+| neutral | 0% |
+| chaotic good | −5% |
+| chaotic neutral | −10% |
+| neutral evil | −15% |
+| chaotic evil | −20% |
+
+*source: **DMG p. 37**, HENCHMEN (LOYALTY), Alignment of Liege, 170 dpi page render 2026-09-08.*
+
+> **⚠ NO CHARACTER IN THIS CAMPAIGN HAS A RECORDED ALIGNMENT.** `party_roster.md`
+> has ability scores, race and class and no alignment line. **This is worth up to
+> +15% on every reaction roll in the game and it cannot be applied until the player
+> states it** (alignment is a player declaration, PHB p. 33).
+
+## Situation modifiers (DMG p. 37) — these are for the moment of danger
+
+| | |
+|---|---|
+| liege dead, or surrounded and outnumbered | −25% |
+| liege *hors de combat* | −15% |
+| each henchman dead or *hors de combat* | −5% |
+| each hit die or level dead, friendly | −3% |
+| each hit die or level alive, enemy | −1% |
+| each hit die or level dead, enemy | +1% |
+| each hit die or level alive, friendly | +2% |
+| each henchman present, in sight, alive | +5% |
+| **liege present, in sight, alive** | **+15%** |
+
+*source: **DMG p. 37**, HENCHMEN (LOYALTY), Situation Modifiers, 170 dpi page render 2026-09-08.*
+
+> **"When all modifying factors have been checked, adjust the base loyalty and roll
+> percentile dice as noted above."** — DMG p. 37
+>
+> **HOW THIS CAMPAIGN APPLIES IT.** The Special Considerations and Alignment tables
+> are a **STANDING modifier per NPC**, computed once and carried in
+> `campaign/npcs.md`; the Situation modifiers are **combat-time only** and are not
+> part of a shopkeeper's reaction. **Book-strict for hirelings and henchmen. For
+> independent townspeople who are neither, extending the +5/+10/+15 tiers on a
+> record of fair dealing is a DM CALL and is marked as one wherever it is used.**
+
+
 **This applies to MEN and other intelligent creatures the party talks to** —
 bandits, gnomes, the berserkers had they been hailed. It does not apply to
 animals or the non-intelligent. **Roll it when the party opens with words**, and

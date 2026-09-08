@@ -1214,3 +1214,39 @@ goods"* — came from the player, not from the DM.
 day.** If it is worth 357 gp it is worth a line. **And when a player asks *"are you
 still tracking X?"* — go and look, do not answer from memory.** The answer here was
 no, and it took one grep to find out.
+
+
+## ADJUST THE REACTION ROLL. THE LOYALTY HALF OF DMG p.63 IS NOT OPTIONAL
+
+**Player-caught 2026-09-08 after sixty game days of bare d100s.**
+
+DMG p.63 says to adjust an encounter reaction by the speaker's **Charisma** *and by
+"any applicable **loyalty adjustment**, as if the creature were a henchman of the
+character speaking."* `rules/abilities.md` had established that **nobody in this
+party has a Charisma reaction adjustment** — and the DM read that as *therefore the
+rolls are unmodified.* **The loyalty half was never applied once.**
+
+**The result was exactly what the player named:** *"I don't think it's realistic
+that they would have such wild shifts in their response to us."* Cuddy ran 102 → 6
+→ 53 → 5 → 71 → 81 → 25 in three days. **Some of that is real and some of it was a
+missing modifier.**
+
+- **Tables now cached** in `rules/combat.md` (DMG p.37: Special Considerations,
+  Alignment of Liege, Situation Modifiers).
+- **A STANDING PER-NPC MODIFIER TABLE is in `campaign/npcs.md`.** Look it up. Add
+  it. Say the adjusted number.
+- **DMG p.37 caps it: one penalty and one bonus maximum, the higher of each.**
+- **Situation modifiers are combat-time only** and are not part of a shopkeeper's
+  reaction.
+- **Book-strict for hirelings and henchmen.** For independent townspeople,
+  extending the tiers on a record of fair dealing is a **DM call and must be marked
+  as one.**
+
+> **AND THE SECOND HALF OF THE SAME FAILURE: don't invent a story for a low roll.**
+> The same day, Hask rolled 23 on being offered a job and the DM built a whole beat
+> out of it — that he was being asked to tell a woman what to leave behind — **when
+> the player's own words had been *"with her willing, of course."* The player's
+> explicit safeguard was turned into the source of the problem.** `CHECKLIST` already
+> forbids this under `DO NOT MANUFACTURE AN NPC OBJECTION` and `A LOW ROLL DOES NOT
+> LICENSE INVENTED BACKSTORY`. **Read the player's sentence again before explaining
+> a number.**

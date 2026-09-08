@@ -2545,3 +2545,54 @@ for now.** 330-380 gp, 4-10 weeks, six vials a week for ever, and they had 631 g
 > **DO NOT RE-RAISE IT UNPROMPTED.** It was weighed and declined. If holy water
 > becomes urgent — and against undead it will — the party knows exactly what it
 > costs and who can make it, which is more than they knew on day 45.
+
+
+---
+
+# ⚠ STANDING REACTION MODIFIERS — apply these to EVERY roll. Built 2026-09-08
+
+**The DM rolled bare d100s for sixty game days.** DMG p.63 says to adjust encounter
+reactions by Charisma **and by "any applicable loyalty adjustment, as if the
+creature were a henchman of the character speaking."** Nobody in this party has a
+Charisma adjustment, so the DM treated the rolls as unmodified. **The loyalty half
+was never applied at all**, and the player caught it:
+
+> *"I don't think it's realistic that they would have such wild shifts in their
+> response to us."*
+
+**Full tables now cached in `rules/combat.md`.** DMG p.37 caps it: **one penalty and
+one bonus maximum, the higher of each.**
+
+## THE TABLE — add to every reaction roll with a known NPC
+
+| NPC | standing | basis | mod |
+|---|---|---|---|
+| **the four ex-bandits** (Corm, +3) | party's, via surety | **Dave stood surety before the reeve by name and aloud, which kept them out of the reeve's hands** — read as *ransomed or rescued within one year* | **+15%** *(DM call on the category)* |
+| **Coll** | hireling, foreman | written authority day 34, arrears paid, a roll to run — *choice gift or bonus within two months* | **+5%** |
+| **Wat** | hireling | paid rider's work twice, priced fairly, entered on the books | **+5%** |
+| **Ferd, Ged** | hirelings | wages where there were none | **+5%** |
+| **Sarn** | hireling, clerk | put on the roll at a clerk's wage; a teacher found | **+5%** |
+| **Nan** | hireling | brought in on Ferd's word, work, and her son learning his numbers | **+5%** |
+| **Wend** | **partner, not hireling** | the factorship, the succession, arts. 6-8, and the money in her keeping | **+10%** *(DM CALL — she is not a hireling; extended on a record of fair dealing)* |
+| **Ottir** | independent, reeve | surety satisfied, a horse found for him, and backed in the hall in front of the steward | **+10%** *(DM CALL)* |
+| **Halm** | independent, carter | given the work he had been asking for since day 40 | **+5%** *(DM CALL)* |
+| **Toller** | independent, dealer | traded at full value, and **Frython gave him a cut rather than sell the diary out from under him** | **+5%** *(DM CALL)* |
+| **Cuddy** | independent, almoner | told everything unprompted, twice, and shown that what he said mattered | **+5%** *(DM CALL)* |
+| **Marrow** | independent | the apprenticeship discharged, paid in the square, his son's question answered | **+5%** *(DM CALL)* |
+| **Fenn** | independent | 90 gp for a barn, seed and a winter, with his right to buy out **in writing** | **+10%** *(DM CALL)* |
+| **Ancel** | independent | a penny in the pound for three years, honoured | **+5%** *(DM CALL)* |
+| **Bern** | independent | **NO MODIFIER EITHER WAY.** No book penalty fits the day-48 rupture — he was never a hireling and was not discharged. **Do not invent a number for it; the rupture is its own fact and is on the record** |
+| **strangers** | — | **0%.** A man met on a road has no history with them, which is exactly why Rud, Pell and Ossery rolled where they rolled |
+
+> ### WHAT THIS MEANS IN PRACTICE
+>
+> **Cuddy's 25 becomes 30. Wend's 12 becomes 22. Trebb was a stranger and stays a
+> 41.** The modifier does not turn a bad day into a good one — **it stops a
+> ten-year relationship reading like a first meeting**, which is precisely the
+> complaint.
+>
+> **AND IT IS ABOUT TO GET BIGGER.** *(1)* **Alignment is unrecorded for every
+> character in this campaign** and lawful good is worth **+15% on every roll in the
+> game** (DMG p.37). *(2)* Any NPC the party heals with a spell jumps to **+25%**,
+> and **Ista already qualifies** — four *cure light wounds* were spent on her in
+> area 9.
