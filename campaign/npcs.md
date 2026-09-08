@@ -2596,3 +2596,80 @@ one bonus maximum, the higher of each.**
 > game** (DMG p.37). *(2)* Any NPC the party heals with a spell jumps to **+25%**,
 > and **Ista already qualifies** — four *cure light wounds* were spent on her in
 > area 9.
+
+
+---
+
+# DAY 60 — DILL AND ROWE, on the cross-country leg to Ede
+
+**The desperate-men line on the level-0 road table, for the FOURTH time.** The
+previous three gave the party **Coll and Wat** (patrol half-day 9) and **Ferd and
+Ged** (half-day 11). **Its entire workforce came off this one line.** *(d6=5 on the
+cause: not Wethersby's layoffs — this is Fenn's country, flax, and the barn that
+burned in August.)*
+
+**Reaction 81, unmodified, because strangers carry no standing modifier** — and it
+was **not re-rolled** once settled. *(New rule, `CHECKLIST.md`: a friendly
+disposition is not re-diced three sentences later.)*
+
+| | |
+|---|---|
+| **DILL** | ~40. **A FLAX DRESSER — retting, scutching, heckling, nineteen years.** *"I'm not a labourer, I'm a dresser, and I'll grant you I look like a labourer just now."* **Knows Ede's yarn by sight** — *"I've dressed flax that came back to me as her thread and I could pick it out of a bundle of six"* |
+| **ROWE** | ~20. **No trade.** *"I've not got a trade. I carried things."* A foot that has been wrong for weeks and that he will not mention. **d6=4: it needs to be off the ground and will then mend.** He can ride in a cart; he cannot walk four days |
+| **what they are** | **STRANGERS**, fallen in together on this road about a fortnight ago because two is safer than one. Hask had read them as *"a man and the one who wouldn't leave him"* and **was wrong, and said so in front of them** |
+
+## ⚠ DILL IS THE MISSING LINK IN THE PARTY'S OWN CLOTH CHAIN
+
+**Nobody had noticed it was missing.** They bought **hackles** at Ludbury — 100 gp
+of cloth-making plant sitting in Wend's barn. **Fenn grows flax. Ede spins. Lyde
+weaves.** And between the field and the spinner is a skilled job that **the party
+owns the tools for and has never had a person to do.**
+
+> *"You've hackles? **Nobody buys hackles.** Barns have hackles. You buy hackles if
+> you mean to be doing it in ten years."*
+
+## WHAT DAVE DID, AND IT IS THE STRONGEST VERSION OF THE FILE'S OWN RULE
+
+**He promised nothing.** He named a hole and let the man see he was the shape of it,
+then said outright that he does not run the operation and cannot price the work.
+
+**And then he offered Dill FENN FIRST** — *"maybe you don't need to make that four
+day journey"* — which is putting Dill's interest ahead of the party's, to a
+stranger, unprompted.
+
+> *"You've just told me I might not have to come with you. ...Right. **I'll talk to
+> Fenn and I'll tell you straight what he says and I'll not play you off one against
+> the other, because you've not tried it on me.**"*
+
+**ART. 8 HELD.** Dave could not set a wage and did not. **Two days after defending
+Wend's authority at her own counter, he applied it to himself four days from home
+with nobody watching.**
+
+## OUTSTANDING, AND ALL THREE ARE CHEAP
+
+| | |
+|---|---|
+| **DILL'S TOOLS** | scutching knife and **three grades of his own hackles**, twenty years of finding them, held by a man called **TRASK** two days back down the Ludbury road against **ELEVEN SHILLINGS.** *"He'll want the eleven and he'll want to be smug about it, and he can have both."* **Redeeming a craftsman's kit is not a wage and not charity** |
+| **ROWE'S FOOT** | the party's three clerics are with the cart. **A cure spell will not fix a chronic foot — rest will** — but see the new standing-modifier table: *uses and diminishes his or her own magic to benefit the NPC* is **+25%** |
+| **WHOSE MAN DILL IS** | **Fenn lost his barn, grows the flax, and has two sons for labour.** A flax dresser in Fenn's yard is a man in front of a second employer, and Fenn is a partner with a written right to buy out. **Live, and nobody has to answer it today** |
+
+## AND HASK, who was given the talking and did it well
+
+**He fed them first**, out of his own pack, without asking anybody and without
+appearing to regard it as a decision — two months on a road being the one thing on
+this trip he knows from the inside.
+
+**He refused both of Dave's options** and produced a third: **Rowe up on his horse,
+Hask walking them the eight miles in, Dave riding ahead so Ede is not opening her
+door to strangers at dusk.**
+
+> *"Don't leave them in a hedge — that's the one thing you don't do. **They've been
+> sat in hedges since August**, and if we ride off and tell them a cart's coming
+> they'll believe us and they'll still be sat there at dark thinking it isn't."*
+
+And he named his own motive rather than let anyone praise him for the other one:
+
+> *"I'll not be doing it out of kindness so don't put that on me. **I want four
+> hours with the flax man.** By the time we're at Ede's door I'll know if he's what
+> he says he is — and if he isn't, you'll not have promised him anything, **which is
+> why you were right not to.**"*

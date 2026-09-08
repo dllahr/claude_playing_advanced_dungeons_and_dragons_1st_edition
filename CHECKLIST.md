@@ -1250,3 +1250,21 @@ missing modifier.**
 > forbids this under `DO NOT MANUFACTURE AN NPC OBJECTION` and `A LOW ROLL DOES NOT
 > LICENSE INVENTED BACKSTORY`. **Read the player's sentence again before explaining
 > a number.**
+
+
+## DO NOT RE-ROLL A SETTLED REACTION
+
+**Day 60.** Two desperate men reacted at **81** — DMG p.63, *"friendly, immediate
+action."* Three sentences later the party made them a substantive offer, and the
+temptation was to roll a fresh d100 for it.
+
+**Don't.** A second roll can come up 20, and then the DM is explaining why a man
+who was friendly a moment ago is hostile — which is manufacturing, and which is
+**precisely the wild swing the player objected to on 2026-09-08.**
+
+- **The reaction roll sets the DISPOSITION of an encounter.** Roll it once.
+- **Roll the SPECIFICS instead** — is he free to travel, how bad is the injury, does
+  he name a wage. Those are facts, and a die is the honest way to find them.
+- **Roll a new reaction when something genuinely changes the relationship**: a new
+  scene, a new day, a new offer of a different order, an insult, a rescue.
+- **And add the standing modifier** from `campaign/npcs.md` every time.
