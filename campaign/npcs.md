@@ -2690,3 +2690,173 @@ And he named his own motive rather than let anyone praise him for the other one:
 > hours with the flax man.** By the time we're at Ede's door I'll know if he's what
 > he says he is — and if he isn't, you'll not have promised him anything, **which is
 > why you were right not to.**"*
+
+
+---
+
+# DAYS 61-63 — THE MILL, DILL'S HISTORY, FENN'S NO, AND LYDE
+
+## DAY 61, the mill — EDE SELLS HER OWN HOUSE. 3d6 = 16
+
+**~34 gp 5 sp, and every penny is hers.** The party takes none of it, because Dave
+handed her the choice instead of pointing at her things and **this is what she
+chose.** She arrives in Wethersby with money in her hand instead of nothing, which
+is a different woman turning up at Wend's door.
+
+> *"...I've never had thirty pound."*
+
+**The crock goes to Hesta free** — promised a fortnight ago and honoured unasked,
+which is exactly why Hesta then tries it on about the press (**43**).
+
+### HASK'S ONE MOVE — d6 = 4, and it is the lesson from twelve hours earlier
+
+He does not argue the price and does not defend Ede. **He turns to the yard and
+asks: *"Does anybody else want a press?"*** **Two people did.**
+
+> **That is the precise question he failed to ask Ossery the night before** — Trebb
+> had told him the mercer's lad counts stock, and *"what did you run out of today?"*
+> was sitting there, and he sold the lot in one lump and never asked. **He worked out
+> overnight what the question was for and made a second bidder out of thin air in a
+> mill yard.**
+>
+> **Dave nodded across the yard and said nothing**, which is the right size after the
+> back-slap got a 31. A nod at the far side of a working yard is private inside a
+> public place.
+
+## DAY 61 dusk, FENN'S — 79 +10 = 89, and the whole chain in one yard
+
+**Barn: frame up, roof half on, walls to do** *(d6 = 3)*. *"It'll keep the rain off
+a crop. It'll not keep the rain off a crop in February."*
+
+**Fenn knows neither Dill nor the tale** *(d6 = 2)* — no contradiction of Dill's
+*"they all know,"* which means the growers in his own patch. **And Fenn wants him and
+cannot pay him** *(d6 = 1)*, so **Dave's *Fenn first* offer was real, generous, and
+turned out not to be available.**
+
+### DILL'S OWN CONTRIBUTION, and nobody in the party knew it
+
+> *"You'll not be carting his flax north undressed. **Most of a flax plant is
+> rubbish** — shive, boon, the woody middle. You cart it four days and you're carting
+> rubbish four days and paying a carter to do it. **Whoever's dressing that crop wants
+> to be stood in HIS yard, not in yours.**"*
+
+## ⚠ DAY 61 night — THE SEQUENCE THAT MATTERS, AND THE DM GOT IN THE WAY TWICE
+
+| | |
+|---|---|
+| **At the fire, Dill's own offer** | *"**Ask me again and I'll tell you all of it, and you can decide then.**"* |
+| **Dave made it** | *tell **FENN***. Dill: *"I can't say it in a stranger's kitchen."* **Walked** (36, d6=1) |
+| **Hask made it** | *tell **NOBODY** — work the season and decide when the flax is in.* Dill, chased down a dark track: **10, and refuses.** *"Your first way was better. **Your first way ENDED.** I'd be stood in that man's yard till Christmas with it in my mouth"* |
+| **And he named it** | *"**Neither of you has done the thing I offered.** Not one of you has sat down and asked me"* — **and he was right, in his own words from four hours before** |
+| **Dave apologised for his own wording, restated it in Dill's terms, and RELEASED him** | *"I'll let you go now and won't follow."* **46 — and d6 = 3, he sits down on the track and tells it** |
+
+### WHAT HAPPENED — d6 = 6 on a table declared before the roll: **NOT A DEATH HE CAUSED**
+
+**ANSTY, fourteen, a stranger's boy hired on for the pulling, one of eight** *(d6 =
+1)*. Last week of July, hot. **He drank out of the retting pond.** Dead in four days.
+
+**Retting water is flax rotted in a pond for a fortnight. It kills a beast that
+drinks it. Every man in the trade knows, every lad gets told, and Dill told all
+eight on the first morning.**
+
+> **AND HERE IS WHY HE COULD NOT SAY IT.** *"Listen to it. I told him. Everybody
+> knows. It wasn't my pond. **It's an excuse. It comes out of my mouth as an excuse
+> and I can hear it doing it** — and I'd rather be a man who won't say it than a man
+> stood in your barn explaining himself about a dead boy for the rest of his life."*
+>
+> *"His mother's at Overby. **She's not wrong either.** He was in my charge and she
+> gave him to me and she got him back in a cart."*
+>
+> **Which is exactly why *ask me and YOU decide* was the only shape he could take.**
+> He needed somebody else to weigh it, because he cannot weigh it without hearing a
+> defence.
+
+### AND HE REFUSED THE SURETY — d6 = 1, and asked for less
+
+**Dave offered to stand surety.** Dill refused, consistently with everything he had
+done all night — he did not take the bread, he said don't make it easy, he said
+don't follow.
+
+> *"I'll take the wage and thank you for it every day. **But I'll not have your name
+> under me.** I'll not have another man's neck out for a boy I couldn't keep alive."*
+>
+> **"Stand there while I say it to him. Don't vouch for me — don't say a word for me
+> — just be stood in the room, so that when it sounds like an excuse there's a man
+> there it didn't sound like an excuse to. That's not surety. That's a WITNESS."**
+
+## FENN SAYS NO — 9 +10 = 19, d6 = 2. And there is PLENTY of work (d6 = 6)
+
+**He believes every word** — he is in the trade and knew what retting water does
+before Dill finished the sentence. *"Aye. It kills a beast. **I know.**"*
+
+**And he gives his real reason instead of a polite one, which is more than Dill has
+had from anybody:**
+
+> *"**I've two lads.** They're nine and thirteen and they're out in that yard every
+> hour God sends... and you've just sat at my table and told me about a boy of
+> fourteen who died in a man's care."*
+>
+> *"I believe you. Every word. **And I'm still going to say no, and I'm not going to
+> dress it up as anything else.** It's not justice. **It's my two lads.** You'd not
+> think better of me if I could get past it."*
+
+**Dill shook his hand, which Fenn was not expecting.** *"You're right not to. And
+thank you for saying it out loud."*
+
+> **THE PROMISE FROM THE HEDGE IS HONOURED: "if he says no, you can come with us."**
+> Asked, answered, and Dill goes north. **His tools come with him: eleven shillings
+> LENT, not given** *(d6 = 4 — takes the loan, goes alone: "write it down and I'll pay
+> it out of the first month")*, two days south to a man called Trask and two back.
+>
+> **And Fenn asks for something himself**: write to him when the fibre goes north,
+> because if Dill is dressing it in Wethersby then Fenn wants to know how much boon
+> and shive he is paying a carter to haul four days. **Dill's own argument coming back
+> at him from the man it costs.**
+
+## DAY 62 — LYDE. 67, and d6 = 5: he holds to his terms exactly
+
+**Two not three. A year not six months. Premium in advance.** No wrinkle and no
+reconsideration — **he set those terms to Wat and he meant them, so Wend's
+no-discretion instruction was never tested.**
+
+Not warm, entirely straight. **He looks at Meg a long time and asks one question —
+*"whose idea was this?"* — and when she says it was hers he nods and stops looking
+at Dave altogether.**
+
+**PAID AT HIS DOOR: 25 gp premium + 6 gp first quarter's board = 31 gp.** Two fair
+copies in Wend's plain form, **he signs one and marks the other, Yrtone witnessing.**
+
+### ⚠ AND THE QUESTION NOBODY CAN ANSWER — d6 = 5
+
+> **"What loom have you got up there? — HOW WIDE."**
+>
+> *"Then measure it and send me the figure, because **it changes what I teach them.**
+> A narrow loom's one weaver and one pair of hands. **A broadloom you cannot work
+> alone** — you've two people throwing, it's different in the wrists, and you learn
+> it different from the first week."*
+>
+> *"**If you've bought a broadloom you've bought exactly two weavers' work and you've
+> got exactly two here, which would be a very lucky accident. If you've bought narrow,
+> one of these two is learning a trade you've no use for.**"*
+
+**NOBODY HAS MEASURED THAT LOOM. It has stood in Wend's barn since day 32.**
+
+**Meg and Tibb stay** and are given the loft. *(Meg says goodbye to Dave in about
+four words and Tibb doesn't manage any.)*
+
+## DAY 63 — the road home
+
+**The cart left Fenn's on the morning of the 62nd rather than waiting**, so Dave and
+Yrtone ride after it and catch it at dusk on the 63rd. **Eight empty half-day checks
+behind the cart** — and per the patrol's own lesson that is a result and not a
+nothing.
+
+**One hit for the riders: a drover, 85, and d6 = 1 — NO USE AT ALL** and delightful
+about it. Sixty head, half an hour of talk, flocks four days south whose names are
+worthless to a venture that would have to cart wool north to sell it south. Offered
+to sell Dave a sheep.
+
+> **Dave asked for names and weights and offered no price on a road** — Wend's
+> standing instruction executed exactly, and returning nothing. **Which is the honest
+> shape of a standing instruction: most executions of one return nothing, and that is
+> why it has to be an instruction and not a hunch.**
