@@ -626,3 +626,68 @@ that is sufficient.
 **Three years of that and the party are not people who held a licence; they are
 people who never once failed to tell him.** The wording can be argued. A habit
 cannot.
+
+
+---
+
+## 11 · THE FIRST ACCOUNT TO MASTER WACE — day 55, and the receipt is the point
+
+**Composed by TOLLER, aloud, in about four minutes. Written by FRYTHON. Toller
+would not touch the pen** — *"a letter about the goods in the holder's handwriting
+is a letter about the holder"* — and **his name is nowhere on it.**
+
+### THE TRICK, and it is what squares Wend against Toller
+
+**Wend (day 54):** put it in the Michaelmas letter and **ask for nothing**, because
+*"asking makes him look at it."*
+**Toller (day 55):** ask **now**, because Michaelmas is a year off and the glass is
+in a locked room he does not want it in.
+
+> **BOTH SATISFIED AT ONCE:** the letter asks for **nothing substantive** — no
+> amendment, no permission, no favour — **and then asks for the one thing a steward
+> hands out without thinking, forty times a week: A RECEIPT.**
+>
+> *"A receipt says* I have had your letter, which said thus and so. ***And that is
+> his own hand, on the thus and so.** He'll not weigh it. He'll not even look up."*
+
+**THIS DISCHARGES TOLLER'S CONDITION** — *coin, or Master Wace's own hand* — which
+has been unchanged since day 42 and which he did not move.
+
+### THE TEXT AS SENT
+
+> **To Master Wace, steward at Draycot, by his own direction.**
+>
+> You granted us on the 52nd day a licence to quarry stone and take timber upon the
+> crag and the waste about it, at five-and-twenty gold pieces the year, for three
+> years dated from Michaelmas last, and we paid the first year in coin before you.
+>
+> You bade us write to you and not to Sir Aymer. We do so, and we shall do so every
+> Michaelmas with the money, rendering each year what we have had off that ground.
+> **This is the first such account, and we send it now rather than keep it a year,
+> the first year being already gone.**
+>
+> **Of stone we have quarried none, and of timber we have taken none.**
+>
+> **What we have had off that ground is household stuff out of the ruin upon it** —
+> pewter, books, a stone weight, garments, brass and copper instruments and glass,
+> some coin, and a ring — **which we sold at Wethersby and at Ludbury for about four
+> hundred and fifty gold pieces**, all of it before we sought your licence. **We told
+> you this in the hall on the 52nd and you wrote it down as we said it.** We set it
+> here so that it is in our hand as well as yours.
+>
+> We ask nothing of you but a receipt for this account, for our own keeping.
+
+### THREE DELIBERATE CHOICES IN IT
+
+| | |
+|---|---|
+| **"Of stone we have quarried none"** | **volunteered, and disarming.** They hold a licence to quarry and have quarried nothing, which makes the whole letter read as candour rather than cover |
+| **"You wrote it down as we said it"** | **it invites him to check his own book, where the entry is.** His habit does the work |
+| **OTTIR DOES NOT WITNESS IT** | Toller's call: *"a reeve's name on it makes it an act of the hundred, and then it's business. **Without him it's a tenant being tidy, and nobody reads a tenant being tidy.**"* Note this cuts the opposite way from Ottir's day-52 refinement, and correctly — **there, the party's own hand made it strangers buying stone; here, the reeve's absence keeps it domestic** |
+
+> ### ⚠ WEND HAS NOT SEEN THIS LETTER
+>
+> It was drafted at Toller's shop, against her stated advice on timing, and she is
+> the party's factor and the custodian of the money. **Nobody has shown it to her
+> and Toller did not raise it.** Recorded as a fact, not a criticism — but it is the
+> kind of thing this file exists to catch.
