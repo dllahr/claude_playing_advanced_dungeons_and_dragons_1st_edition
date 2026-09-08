@@ -2200,12 +2200,18 @@ already has a hand in:
 a load. **Two loads to the same place, at known times, is the beginning of a run.**
 *She does not say this out loud and it is not hers to promise.*
 
-### Meg and Tibb's families — d6 = 6
+### Meg and Tibb — d6 = 6
 
-**They take it gladly, and the year is not the obstacle anybody feared.** A year
-living in with a weaver is a **future** for a child in a district that turned off
-every hand it had at Michaelmas. **The premium and the board are the party's
-problem. The consent was never going to be.**
+**They take it gladly, and the year is not the obstacle anybody feared** — and
+there is no parental consent anywhere in this, because they are **a mother and her
+grown son** and it is two adults deciding for themselves. *(DM error corrected
+2026-09-07; see the day-54 entry.)*
+
+**A year living in with a weaver, learning a trade, in a district that turned off
+every hand it had at Michaelmas, is not a burden being accepted. It is the best
+offer either of them has been made.**
+
+**The premium and the board are the party's problem. The willingness never was.**
 
 
 ## DAY 54 — THE DOUBLE BIND, CALLED OUT AND DISSOLVED. 41, and d6 = 2
@@ -2297,9 +2303,21 @@ wants than one ever was. *(He is not promised a run and nobody says the word.)*
 
 ### MEG AND TIBB — d6 = 4. Ready, but not by dawn
 
-**One more day.** Two families getting two children ready to go away for a year is
-not a thing done between supper and first light, and neither family asks for the
-delay so much as visibly needs it.
+> **⚠ CORRECTED 2026-09-07, player-caught. MEG AND TIBB ARE A MOTHER AND HER GROWN
+> SON** — `articles.md` and the roster table in this file both say so. **One family,
+> two adults.** The DM wrote *"two families getting two children ready"* and that is
+> wrong twice over. **This is not a child's apprenticeship consented to by parents;
+> it is a woman and her adult son going to live in with a weaver for a year to learn
+> a trade** — which is a better thing, and precisely what a district that turned off
+> every hand it had actually needs.
+>
+> **AND THEY ARE AT MARROW'S, A DAY'S RIDE OUT.** They were among the six unlisted
+> hands who went there on day 34 with a **written right of return** — so the right
+> of return is the thing being exercised, they need nobody's leave, and **somebody
+> has to ride out and fetch them.**
+
+**One more day, and that is what the day is for:** a rider to Marrow's hill and
+back, and two people packing for a year.
 
 > **DEPARTURE IS DAY 56.** Four days to Fenn's puts them there on the 59th; **Ede is
 > ready on the 58th**, so she will have been waiting a day. A ride over to Lyde and
