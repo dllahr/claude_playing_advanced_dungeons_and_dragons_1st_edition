@@ -2203,3 +2203,60 @@ a load. **Two loads to the same place, at known times, is the beginning of a run
 living in with a weaver is a **future** for a child in a district that turned off
 every hand it had at Michaelmas. **The premium and the board are the party's
 problem. The consent was never going to be.**
+
+
+## DAY 54 — THE DOUBLE BIND, CALLED OUT AND DISSOLVED. 41, and d6 = 2
+
+**The player took the DM's own phrasing apart and was right.** Full rule now in
+`CHECKLIST.md`: *an NPC with delegated authority must not ask permission to use
+it.* Art. 8 is Wend's, she capped it herself at 116, and *"let me spend it"* made
+the delegation a fiction and any answer a mistake.
+
+**She digs in on a NARROW point and it is a fair one:**
+
+> *"**I wasn't asking you.** 'Let me spend it' isn't *may I* — it's a trader's way
+> of saying *I'm going to, and you're hearing it from me first rather than off the
+> wage roll in December.* **If I'd been asking, I'd have asked.**"*
+>
+> *"And you're right it'd be a nonsense the other way. I asked for that article and
+> I set that figure, and if I come to you cap in hand every time I want a man who
+> can count then I've wasted everybody's afternoon. **Nothing to hand over. I've
+> told you. That's the whole transaction.**"*
+
+**SO THE CORRECT RESPONSE TO A DELEGATED-AUTHORITY NOTIFICATION IS *heard*, NOT
+*yes*.** Dave's instinct was right and is why he refused to grant it.
+
+### She takes the "capable hands" correction back in full — no fight
+
+> *"Right. Yes. **That's a fair explanation and I'll take it.** You meant you'd not
+> stand over me. I heard *it's yours now, good luck.* **I'd got the day I'd had in
+> the wrong sentence.**"*
+
+### HER STANDING INSTRUCTION ON LEADS — she was asked to choose and she chose
+
+> **"TELL ME. ALWAYS. AND EXPECT NOTHING."**
+
+- **Do not run off with a lead** and do not sit on one.
+- **Nobody offers a price in anybody's yard.** Not before shearing, and not by any
+  of the party.
+- **Names, and weights if they can be got.** *"I'll bring you a deal or I'll bring
+  you nothing, and I'll tell you which."*
+
+### And the southern trip is agreed
+
+> *"You'll go down with Halm? **Yes. Take them yourselves.** I'd not send two
+> children four days south with a carter and a note — and I'd not have asked you,
+> and I'm glad you offered."*
+
+**Hers before they leave:** Lyde's premium in advance, a year's board, Ede's wage,
+the surplus dropped at Fenn's, and the entries.
+
+> ### ⚠ THE COLLISION, flagged day 54 and NOT resolved
+>
+> **The southern trip is about ELEVEN DAYS** — four to Fenn's, a ride over to Lyde
+> and back, Ede eight miles cross-country, four home. **Ede is ready day 58**, so
+> departure around day 55-56 fits.
+>
+> **The crag is the OTHER DIRECTION**: ~97 gp of glass and forty jars cached in
+> area 8, and **the dwarf's box for Cuddy**, which is one of the four things he is
+> owed word about. **Both cannot happen at once and nobody has chosen yet.**

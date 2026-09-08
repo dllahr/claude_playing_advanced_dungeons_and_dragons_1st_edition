@@ -1075,3 +1075,35 @@ expedition 4** — which is the thing an almoner cares about most, and which the
 party's own cleric had already said a rite over. `world_changes.tsv` had it all
 along. **When telling an NPC about something, run `tools/recall.py` or grep the
 log for the WHOLE class of thing, not the most recent instance of it.**
+
+
+## AN NPC WITH DELEGATED AUTHORITY MUST NOT ASK PERMISSION TO USE IT
+
+**Day 54, player-caught, and the error was the DM's phrasing.** Wend holds art. 8 —
+authority to hire, capped at 116 gp **by herself**. The DM then wrote her the line
+**"Let me spend it,"** and the player took it apart correctly:
+
+> *"It sounds like you're asking for permission that is not mine to give — you
+> already have that permission. If I say yes to that, you'll come back angry that
+> we usurped your authority. **How are we supposed to handle that? It seems like a
+> trap.**"*
+
+**It was a trap, and the DM built it.** A delegated power that comes back for
+approval is not delegated; and a party that approves it has taken it back.
+
+**THE RULE:**
+
+- **An NPC who has been given authority ANNOUNCES, it does not petition.** *"I'm
+  hiring two"* — not *"let me hire two."*
+- **If the NPC genuinely wants something from the party, it is not permission.** It
+  is one of: **indemnity** (*"don't second-guess me if it goes wrong"*), **a
+  higher ceiling** (which, if the NPC set the ceiling, is theirs to raise),
+  **hands**, or **information.** Name which one and have them ask for THAT.
+- **And when a player says a situation is a double bind, check whether it is one
+  before defending the NPC.** Here it was. The dice (41, and d6=2 to dig in) were
+  honest and the *line they were reacting to* was not.
+
+*(Wend's own resolution was the honest reading of a narrow dig-in: she wasn't
+asking. "Let me spend it" is a trader's idiom for *I am going to, and you're
+hearing it from me first.* She conceded the separate "capable hands" point in
+full. **But the DM should not have needed the player to find that.**)*
