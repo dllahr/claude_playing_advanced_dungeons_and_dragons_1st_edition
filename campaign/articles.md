@@ -759,3 +759,62 @@ he's short of before you tell him."*
 
 *"Go when he's shutting, like your carter said. **And don't offer him a favour
 either.**"*
+
+
+---
+
+## ⚠ THE FIRST FINDING WAS INCOMPLETE — THE MISSING VARIABLE IS **WHO OWES WHOM**
+
+**Player-caught, day 59, and the correction is to the FILE and not to the dice.**
+
+> *"Your general rule may be true about gifts but you're always neglecting the free
+> favors and help they're giving us, and we're **paying them back**."*
+
+**Every case that built the first finding had the PARTY giving first, to someone
+with nothing to return** — Bern's tools, Ista's loom, Osk's apology, Sarn's
+teacher, Hask's share. **That is one direction of one axis and the file wrote it up
+as a universal law.**
+
+| direction of the debt | what a discount or a kindness IS | how it lands |
+|---|---|---|
+| **party gives first, NPC has nothing to return** | a **gift** — it deepens a debt that cannot be paid | **badly.** Bern 8, Ista 9, Osk 24 |
+| **NPC gives first, party returns value** | **SETTLEMENT** — it discharges a debt the party owes | **it is owed, and refusing to let a man settle is the insult** |
+
+**Trebb identified the realgar for nothing.** It made the party 35 gp and it kept
+somebody from breathing arsenic in a locked room. **The party was the DEBTOR.** Dye
+at cost was not charity offered downward; it was a payment.
+
+### AND THE ACTUAL FINDING FROM DAY 59 IS A DIFFERENT ONE — **DO NOT ITEMISE A GIFT**
+
+**Dave's reframing was right and Trebb agrees with every word of it.** He rolled
+**5** anyway, and the reason is not the principle:
+
+> **He had closed the account himself, at zero, on his own terms** — *"you've given
+> me a good half hour and something to tell them about, so we're square."* **Dave
+> reopened it and put a figure in it.**
+>
+> *"I looked at a bottle for eight minutes and I told you a word, and the word was
+> worth thirty-five gold pieces... **I'd rather have not been told the figure**, and
+> now I've got it, and I'll be doing sums about it at two in the morning for a
+> fortnight. Thirty years I've been telling people what's in a jar for nothing.
+> **Nobody's ever costed it.**"*
+
+**A craftsman who learns he undercharged by 35 gold is not angry at the customer.
+He is angry at himself** — and this is the third time in one session that a low
+roll has meant exactly that:
+
+| | |
+|---|---|
+| **CUDDY, 6 and 25** | *"I'm not asking to be told it wasn't a waste."* |
+| **TREBB, 5** | *"I'd rather have not been told the figure."* |
+
+> ### THE RULE
+>
+> **Settle the debt. Do not read out the invoice.** Pay a creditor in kind, in
+> trade, in a return favour or in a price — **but do not tell him what his own
+> free help was worth**, because the number is a thing he cannot give back and
+> cannot forget.
+>
+> *(And the transaction stood: 40 gp, cash, all of it, hands shaken. Trebb had
+> already named the mercer, and he will trade next year. **It was one awkward
+> minute and the awkwardness was his.**)*
