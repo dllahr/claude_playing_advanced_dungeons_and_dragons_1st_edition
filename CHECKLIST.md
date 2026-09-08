@@ -1182,3 +1182,35 @@ is, the NPC has seen it and cannot reasonably be surprised by it. **This is the
 `A LOW ROLL DOES NOT LICENSE INVENTED BACKSTORY` rule wearing a different hat:**
 here the roll was a 21 with *does nothing*, which is *a person deciding not to make
 a fuss* — and the DM inflated it into a reopened injury.
+
+
+## A TRADE GOOD WITH NO ROW STOPS EXISTING. THE SMALL GOODS ALMOST DID
+
+**Day 54, player-caught, and the question was simply *"are you still tracking
+them?"* The answer was no.**
+
+357 gp of small goods came up from Ludbury on day 27. **Their only record was a
+sentence inside the notes column of the MONEY row**, plus one clause in
+`calendar.md` day 39. **Last roll: market day 37. Nothing for the seventeen days
+after it.** The player's own day-48 line — *"we've only sold half of the small
+goods"* — came from the player, not from the DM.
+
+> **CLAUDE.md already says this: a fact with no row, no tool and no test does not
+> fail loudly, it rots quietly.** The XP line and the equipment list on
+> `party_roster.md` went stale exactly this way. **`map_known.md` was RETIRED for
+> exactly this.**
+
+**FIXED, and the fix is the shape of every other fix in this project:**
+
+- **`inventory.tsv` now has a `stock` row** with a quantity, a location, a full
+  ledger, and **the sell rule written into the row itself.**
+- **Wethersby market is WEEKLY** (DM call: day 37 was one, so 37 / 44 / 51 / 58 /
+  65 ...). **On every market day the calendar crosses while that row is non-zero,
+  roll it.** d6 quality, 3d6 scale, Wend's margin ×1.75 off the day-37 measurement.
+- **Diminishing returns are part of the rule, not a fudge.** The first market in a
+  town clears the novelty; the same people the next week have already bought.
+
+**AND THE GENERAL RULE:** **when the party buys stock, open a row for it the same
+day.** If it is worth 357 gp it is worth a line. **And when a player asks *"are you
+still tracking X?"* — go and look, do not answer from memory.** The answer here was
+no, and it took one grep to find out.
