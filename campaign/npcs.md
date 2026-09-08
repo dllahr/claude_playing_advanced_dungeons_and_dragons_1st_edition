@@ -2275,3 +2275,63 @@ the surplus dropped at Fenn's, and the entries.
 > > **This is the same error class as manufacturing an objection: inventing a
 > > pressure the NPC had deliberately removed.** Cuddy relieved them of the clock
 > > on purpose, and it was one of the kindest things he did.
+
+
+---
+
+## DAY 54, evening — HALM AND THE CHILDREN, AND THE MESSAGE TO ISTA GOES WRONG
+
+### HALM — d6 = 6, ready and glad
+
+**He has been waiting for a load since day 40** and he can have the cart on the
+road at dawn. He asks one thing and it is the same thing he asked before: how much
+is Ede bringing. **He is told the truth** — more than one cartload — and takes it
+well, because *two* loads to the same place is closer to the thing he actually
+wants than one ever was. *(He is not promised a run and nobody says the word.)*
+
+### MEG AND TIBB — d6 = 4. Ready, but not by dawn
+
+**One more day.** Two families getting two children ready to go away for a year is
+not a thing done between supper and first light, and neither family asks for the
+delay so much as visibly needs it.
+
+> **DEPARTURE IS DAY 56.** Four days to Fenn's puts them there on the 59th; **Ede is
+> ready on the 58th**, so she will have been waiting a day. A ride over to Lyde and
+> back, then Ede, then four days home — **back in Wethersby about day 66.**
+
+---
+
+## ⚠ THE MESSAGE TO ISTA — 21, and it went badly
+
+**The message as sent** was careful and generous: *we will not come to Bern's any
+more; when you are ready you can find us, or leave word at the Inn.* **Wend's lad
+carried it.**
+
+**Three things went wrong and none of them is anybody being wicked.**
+
+| | |
+|---|---|
+| **1 · SHE IS NOT WELL — d6 = 2** | **She is still weak.** `hp_log.tsv` says *"A WEEK MINIMUM"* and *"out until ABOUT day 53"* — **minimum, and about.** DMG p.82 sets a floor, not a date. **She cannot walk across town and she certainly cannot take a cart four days south.** *(This is the rule being applied, not a change of mind: the week was always a minimum)* |
+| **2 · BERN TOOK IT AT THE DOOR — d6 = 2** | **He does not lie. He COMPRESSES.** What he carries to the back room is *"They'll not be coming here again. If you want them, you're to go to the Inn."* **Every word of that is true.** What is gone is *when you're ready* and *she can find us* — **the warmth and the agency, which were the whole point.** He is not scheming; he is repeating a message he found humiliating in the fewest words that discharge it, and being generous about it would require him to be generous about people who told him on day 48 that they were finished with him |
+| **3 · SHE DOES NOTHING — d6 = 1** | **No word back.** Which is what a person does who has decided not to make a fuss — **and the party will read the silence as her choosing Bern's house over them** |
+
+**AND THE COURIER CAN REPORT ALMOST NOTHING — d6 = 2.** Bern took it at the door,
+said he would tell her, and did not ask the lad in. **Nobody in the party has laid
+eyes on Ista since they carried her out of the hill on day 47.**
+
+> **WHAT THE PARTY ACTUALLY KNOWS:** the message was delivered, there is no reply,
+> and she has not appeared. **What it does not know:** that she never got the half
+> of it that mattered, and that she could not have come to the Inn if she had.
+>
+> **PLAY IT STRAIGHT AND DO NOT HINT AT THE FIX.** The party made a reasonable
+> decision on incomplete information, and the incompleteness is the consequence of
+> the decision, not a punishment for it. **They chose not to go to that house, and
+> the price of not going to a house is that you learn nothing about the person
+> inside it.**
+
+> **`articles.md` bears on this and was not consulted:** Ista's whole record is
+> **9** for a kindness, **45**, then **71 for the lantern given as a DUTY** and
+> **87** for being counted. *"Two months of asking to go underground, never
+> answered"* is the wound. **A message that ends *find us when you're ready*, from
+> people who then leave town for eleven days, is that wound in a new coat** — and
+> nobody meant it that way.
