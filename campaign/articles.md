@@ -710,3 +710,52 @@ has been unchanged since day 42 and which he did not move.
 >
 > **Not a punishment. Just what happens when the paper is made in one shop and the
 > money lives in another.**
+
+
+---
+
+## ⚠ THE FIRST FINDING RUNS AGAINST THE PARTY — day 59, Trebb and the dye at cost
+
+**The party offered a dyer 40 gp of dye AT COST, as a kindness, after he had
+identified the vial for nothing. Reaction 41** — from a man who had been at **95**
+an hour earlier.
+
+| | | |
+|---|---|---|
+| **Bern, given better tools** | **8** | badly |
+| **TREBB, offered dye AT COST** | **41** | **flat** |
+
+> ***At cost* is a DISCOUNT. A discount is a gift wearing a trade's clothes.** The
+> party learned this file's first lesson from the receiving end — gifts deepen a
+> debt, jobs cancel it — and then handed a proud craftsman a favour he had not
+> asked for. **`articles.md` predicted the roll before it was made.**
+
+**He took the whole of it and paid cash** *(d6 = 6)* **and then said the useful
+thing:**
+
+> *"I'll pay your cost because you've named it and I'll not haggle a man down off
+> his own price. **But next year I want to buy dye off you and I want it to be
+> BUSINESS.** If the first time you sold to me you did me a favour, then every time
+> after that I'm a man who got a favour once. **Sell me it at your price. I'd have
+> paid it.**"*
+
+**NOTHING WAS LOST — cost was Wend's floor anyway, so the coin is identical.** What
+failed to land was the intention.
+
+> ### THE RULE FOR NEXT TIME
+>
+> **To a TRADESMAN, the kindness is the ORDER, not the price.** Buy from him, sell
+> to him, come back next year. **A discount tells a craftsman you think he needs
+> help.** Coll got **104** for being put on a roll; Bern got **68** for ongoing paid
+> work and an **8** for tools; Hask got **109** for a job with coaching. **Not one
+> of those was a price cut.**
+
+**And he squared his own account in the currency a tradesman actually has** —
+service, not coin. **He named the mercer**, which Pell had refused to do because he
+delivers to all three: **OSSERY**, bottom of the shop street, near side of the
+bridge, blue shutters — *"the one of the three who buys to sell on rather than to
+sit on, and the only one with a lad who counts stock properly, so he'll know what
+he's short of before you tell him."*
+
+*"Go when he's shutting, like your carter said. **And don't offer him a favour
+either.**"*

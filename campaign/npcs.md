@@ -2529,3 +2529,19 @@ road the party travels constantly, with two carriers running it.**
 > 2. **What the party gets for it is whatever is agreed NOW**, before the money
 >    moves. First call on the six vials a week is the obvious ask and it has not
 >    been asked. **DO NOT let this be settled by assumption.**
+
+
+### THE FONT — DECLINED, day 59. Recorded as a DECISION, not an omission
+
+**The party considered it with the full book price in front of them and said no
+for now.** 330-380 gp, 4-10 weeks, six vials a week for ever, and they had 631 gp
+6 sp in hand.
+
+**Nothing about the offer expires.** Father Doule is 5th level and will still be
+5th level; DMG pp.114-115 will still price a copper font at the same figure; and
+**one font per religious edifice means that wherever it eventually goes, it stays.**
+**Cuddy's chapel is still eligible and Cuddy is still 3rd.**
+
+> **DO NOT RE-RAISE IT UNPROMPTED.** It was weighed and declined. If holy water
+> becomes urgent — and against undead it will — the party knows exactly what it
+> costs and who can make it, which is more than they knew on day 45.
