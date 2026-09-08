@@ -82,7 +82,8 @@ be written back into it.*
 | **Wethersby** | **Marchford** | three days by cart |
 | **Marchford** | **Ludbury** | two days |
 | **Ludbury** | **Fenn's holding** | **one day north** on the Ludbury road, then four miles east of it |
-| **Fenn's** | **Ede's cottage** | eight miles cross-country, two villages over |
+| **MARCHFORD** | **Fenn's holding** | **ONE cart-day.** *Derived 2026-09-08 and it checks two independent ways: Fenn's-Wethersby 4 less Wethersby-Marchford 3 = 1; and Marchford-Ludbury 2 less Ludbury-Fenn's 1 = 1.* |
+| **Fenn's** | **Ede's cottage** | **eight miles cross-country, two villages over — A COUPLE OF HOURS, NOT A DAY.** *Player-caught 2026-09-08: the DM twice described the cart as "a day behind at Fenn's" when Ede's gate is eight miles from Fenn's yard. A cart out of Fenn's is at Ede's door before dinner.* |
 | **Fenn's** | **WETHERSBY** | **four days** |
 | **Fenn's / the road** | **LYDE**, the weaver | **a day off the road each way.** He will not move |
 | **Ludbury** | **WRAYE** | **three days east.** It has a library — the only lead on the ring |
