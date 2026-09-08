@@ -2134,3 +2134,72 @@ to structure** — and she is not structuring anything in October.
 
 **Nothing else moved in six days** *(d6 = 1)*. Sarn, Toller, Bern and Coll all
 steady, no news, no trouble.
+
+
+## DAY 54 — *"do you want to make arrangements, or do you want our help?"* — 12
+
+**Reaction 12, and it is the right question asked one job too late.**
+
+> **THIS IS NOT AN OBJECTION AND SHE DOES NOT ACCUSE ANYBODY OF ANYTHING.** The
+> cause is **capacity** and the whole of it is already on the record: day 39 she
+> needed a **clerk** and did not know Sarn had been keeping the tally; she took the
+> **factorship**; the pool has grown and three more are asking; she wrote the
+> **succession**, then **two letters in one night** on the 48th; she has just read
+> a licence word by word and found the hole in it; she is training Sarn — and
+> **art. 8, the hiring authority, is the one article she asked for herself and then
+> CAPPED HERSELF ON at 116.**
+
+**And the first thing she does is correct one word, briefly and without heat**,
+which is a thing she has done twice before in this campaign:
+
+> *"'Capable hands.' — I'd just finished telling you I couldn't do a **thing** with
+> those names. You said 'capable hands' and put them back on the counter."*
+>
+> *"That's not a complaint, it's — **I'd rather be told I'm at the end of what I can
+> carry than told I'm capable.** One of those you can do something about."*
+
+**Then she answers the question honestly, which is the only reason the 12 is
+useful:**
+
+> *"You've asked me the right thing and I don't have a clean answer for you, and
+> **that's the problem, not the question.**"*
+
+### THE SPLIT — d6 = 4, and it is obvious the moment she says it
+
+| **HERS, because nobody else can do it** | **THE PARTY'S, because she cannot leave Wethersby** |
+|---|---|
+| Lyde's premium and the terms · the board arithmetic for **a year instead of six months** · Ede's wage · the entries · the letters | **All of the travelling.** Somebody goes four days south with a cart, hands two children to a weaver, and comes back with a spinner. **That is not a carter's errand and it is not hers — she is the factor, the store, the pool, the ledgers and a clerk in training, and she physically cannot go** |
+
+> *"I'm not short of ability. **I'm short of days, and I can't buy those off
+> anybody.**"*
+
+### AND SHE ASKS — which is the thing to take seriously
+
+**She capped herself at 116 on day 39 and she says now that the cap was too low.**
+Not more authority — she has the authority. **More hands, and permission to stop
+apologising for using it.**
+
+> *"I set that figure myself and I set it to prove I wouldn't run away with it.
+> **I've proved it. Let me spend it.** Sarn's coming on, Tam's coming, and I want
+> one more body that can count and one that can lift, and I'd rather ask you now
+> than be six weeks behind in December."*
+
+### The Ede haulage — d6 = 4, and the answer is hers
+
+**More than Halm's cart takes in one trip** — and the fix uses something the party
+already has a hand in:
+
+> **LEAVE THE SURPLUS AT FENN'S.** Four days down, on the road, in a barn the party
+> paid 90 gp toward. **One cartload comes up now with Ede on it; the rest comes up
+> on a later run whenever a cart is going that way anyway.**
+
+**And it is quietly the thing Halm has been asking for since day 40.** One load is
+a load. **Two loads to the same place, at known times, is the beginning of a run.**
+*She does not say this out loud and it is not hers to promise.*
+
+### Meg and Tibb's families — d6 = 6
+
+**They take it gladly, and the year is not the obstacle anybody feared.** A year
+living in with a weaver is a **future** for a child in a district that turned off
+every hand it had at Michaelmas. **The premium and the board are the party's
+problem. The consent was never going to be.**
