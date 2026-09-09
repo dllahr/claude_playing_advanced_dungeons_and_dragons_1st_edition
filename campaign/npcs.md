@@ -2549,7 +2549,29 @@ for now.** 330-380 gp, 4-10 weeks, six vials a week for ever, and they had 631 g
 
 ---
 
-# ⚠ STANDING REACTION MODIFIERS — apply these to EVERY roll. Built 2026-09-08
+# ⚠ STANDING DISPOSITIONS — and MOST OF THE TIME, DO NOT ROLL AT ALL
+
+> ## READ THIS BEFORE USING THE TABLE BELOW — revised 2026-09-08, player-caught
+>
+> **The DMG p.63 reaction table is a COMBAT-CHAPTER FIRST-CONTACT MECHANIC.** Its
+> running heads are `COMBAT (ENCOUNTER REACTIONS)` / `COMBAT (MISSILE DISCHARGE)`;
+> it sits between initiative and avoiding/parleying/missile discharge; and its
+> hostile results footnote *"or morale check if appropriate."* **It is for something
+> you have just met.**
+>
+> **So for everyone in the table below — Wend, Ottir, Toller, Halm, Cuddy, Coll,
+> Sarn, Marrow, Fenn, Bern — DO NOT ROLL A REACTION IN ORDINARY CONVERSATION.**
+> They have a standing disposition, and it moves **for reasons that are on the
+> record, which the DM states out loud.** Roll only for a **first meeting** or a
+> genuine **step-change** (a rupture, a rescue, a betrayal, an offer of a wholly
+> different order). **And always roll for unknown FACTS, on a table declared before
+> the die.**
+>
+> **Rolled conversationally, Cuddy ran 102 → 6 → 53 → 5 → 71 → 81 → 25 and Wend ran
+> 101 → 60 → 57 → 26 → 46 → 12 → 41 → 37 → 88 → 46. That is a d100 with a name on
+> it.** Full finding in `CHECKLIST.md` and `rules/combat.md`.
+
+## The modifier table — for the rolls that ARE called for
 
 **The DM rolled bare d100s for sixty game days.** DMG p.63 says to adjust encounter
 reactions by Charisma **and by "any applicable loyalty adjustment, as if the

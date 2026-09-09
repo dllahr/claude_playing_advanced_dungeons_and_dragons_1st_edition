@@ -1268,3 +1268,41 @@ who was friendly a moment ago is hostile — which is manufacturing, and which i
 - **Roll a new reaction when something genuinely changes the relationship**: a new
   scene, a new day, a new offer of a different order, an insult, a rescue.
 - **And add the standing modifier** from `campaign/npcs.md` every time.
+
+
+## ⚠⚠ THE p.63 REACTION TABLE IS A FIRST-CONTACT MECHANIC. STOP ROLLING IT AT FRIENDS
+
+**Player-caught 2026-09-08, researched from a 175 dpi render, and the page is
+unambiguous.**
+
+**DMG p. 63's running heads are `COMBAT (ENCOUNTER REACTIONS)` and `COMBAT (MISSILE
+DISCHARGE)`.** The table sits between **initiative** and **avoiding / parleying /
+missile discharge**, and its two hostile results footnote *"or morale check if
+appropriate."* **It is the disposition of something you have just met, in a
+situation that may become a fight.**
+
+**1e's ongoing-relationship mechanic is LOYALTY, DMG pp. 36-37** — modified by
+treatment history, checked at danger and temptation. **p. 63 borrows the loyalty
+adjustment, which proves loyalty is the relationship system and reaction is the
+meeting system.**
+
+> **THE DM MADE THIS ERROR IN THREE LAYERS:**
+> 1. rolled p.63 conversationally with **no modifiers at all** for sixty game days;
+> 2. was corrected, and added the **loyalty modifiers** — better, and still wrong;
+> 3. **the real answer is that most of those rolls should not have been made.**
+
+### THE DISCIPLINE
+
+- **New NPC → roll.** Established NPC in conversation → **do not roll.**
+- **An established NPC's mood moves for a REASON ON THE RECORD**, and the DM says
+  the reason out loud. If there is no reason, the mood does not move.
+- **Step-changes get a roll** — rupture, rescue, betrayal, an offer of a different
+  order of magnitude.
+- **ALWAYS roll for unknown FACTS, on a table declared before the die.** That has
+  been the honest half of this campaign all along.
+- **Loyalty checks per the books**, at danger and hardship — never as small talk.
+
+**And the tell that this was going wrong was available for days:** every low roll
+needed a story invented for it, and `CHECKLIST` already forbade inventing stories
+for low rolls. **When a mechanic keeps forcing you to break another rule, the
+mechanic is being misapplied.**

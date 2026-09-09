@@ -498,7 +498,44 @@ henchman of the character speaking"*, and read:
 
 \* *"Or morale check if appropriate."*
 
-### ⚠ THE HALF OF THAT RULE THE DM IGNORED FOR SIXTY GAME DAYS
+### ⚠⚠ WHAT THIS TABLE IS FOR — AND IT IS **NOT** ONGOING CONVERSATION
+
+**Player-caught 2026-09-08, and the page settles it. THIS IS A COMBAT-CHAPTER
+FIRST-CONTACT MECHANIC.**
+
+**The running heads on DMG p. 63 read `COMBAT (ENCOUNTER REACTIONS)` and
+`COMBAT (MISSILE DISCHARGE)`.** The table's neighbours on that page, in order, are:
+
+> initiative · ties · inflicting damage · **ENCOUNTER REACTIONS** · *Avoiding*
+> (fleeing and pursuit) · *Parleying* · *Awaiting Action* · **MISSILE DISCHARGE**
+
+**That is one procedure for what happens when two parties meet and it might become a
+fight.** *Parleying* says so outright: *"**Upon encountering another party**, the
+party with initiative can always elect to attempt some form of communication."*
+
+**And the footnote clinches it.** The two hostile results carry `*` = *"Or morale
+check if appropriate."* **A morale check belongs to the moment of confrontation. You
+do not morale-check a shopkeeper.**
+
+> ### THE RULE FOR THIS CAMPAIGN — DICE FOR FACTS, JUDGMENT FOR FEELINGS, REACTIONS FOR STRANGERS
+>
+> | situation | what to do |
+> |---|---|
+> | **first meeting with a new NPC** | **roll p. 63.** Correct for Rud, Pell, Trebb, Ossery, Dill, Rowe, Lyde, Father Doule |
+> | **an ESTABLISHED NPC in conversation** | **DO NOT ROLL.** They have a standing disposition; it moves for **reasons that are on the record**, and the DM states the reason |
+> | **a genuine step-change** | **roll** — a rupture, a rescue, a betrayal, an offer of a wholly different order. *Ancel 11 → 81 was legitimate. Wend at her own counter on the ninth conversation was not* |
+> | **an unknown FACT** | **always roll, on a table declared before the die.** This is the honest use and it has carried the campaign: the vial's contents, Dill's history, the loom's width, whether Marchford owned a font |
+> | **loyalty** | **DMG pp. 36-37, when the books call for it** — danger, temptation, hardship. **Never conversationally** |
+>
+> **WHY IT MATTERS:** rolled per-conversation, Cuddy ran 102 → 6 → 53 → 5 → 71 → 81
+> → 25 and Wend ran 101 → 60 → 57 → 26 → 46 → 12 → 41 → 37 → 88 → 46. **That is not
+> a person. That is a d100 with a name on it.**
+
+### THE HALF OF THAT RULE THE DM IGNORED FOR SIXTY GAME DAYS
+
+*(This section stands, and is now SECONDARY: when a reaction roll IS called for, it
+still gets the modifiers below. But most of the rolls that prompted this section
+should never have been made at all.)*
 
 **Read the sentence above again: adjust for Charisma AND "any applicable loyalty
 adjustment."** `rules/abilities.md` established that **nobody in this party has a
