@@ -818,3 +818,55 @@ roll has meant exactly that:
 > *(And the transaction stood: 40 gp, cash, all of it, hands shaken. Trebb had
 > already named the mercer, and he will trade next year. **It was one awkward
 > minute and the awkwardness was his.**)*
+
+
+---
+
+## 12 · THE ELEVEN — written day 65, because the count kept getting corrupted
+
+**The DM got this wrong three times in two days, in three different directions**, and
+the player settled it. **It is written here so it never has to be reconstructed
+again.**
+
+> ### **ELEVEN. TOTAL. GUARANTEED BY THE PARTY.**
+
+| | |
+|---|---|
+| **guaranteed** | **all eleven** |
+| **actively paid by the party right now** | **five** |
+| **currently placed with MARROW** | **six** — and they are still the party's, because they went on **day 34 with a WRITTEN RIGHT OF RETURN** |
+| **the mechanism** | **if Marrow runs out of work, they come back to the party.** That is what the right of return does and that is why they are on the roll |
+| **the hope** | that they never need it. *"Hopefully that keeps going."* |
+
+**So the eleven is a GUARANTEE, of which six are presently somebody else's cost.**
+Both halves are true at once and neither replaces the other:
+
+- **It is wrong to say the party pays eleven.** It pays five.
+- **It is wrong to say six of them are not the party's.** They are all eleven the
+  party's, and the six have a paper that says so.
+
+### ⚠ THE NAMES — AND THE DM MUST NOT RECONSTRUCT THEM
+
+**The composition of the eleven is written down in exactly one place: OTTIR'S
+ACCOUNT OF THE HUNDRED**, where the eleven names run down the left-hand side and
+where **Master Wace read them out one at a time on day 52 and argued with none of
+them.** Ottir rewrote it at his own table on day 43; **the hall holds the fair copy
+and Ottir holds his own.**
+
+> **ACTION: get the eleven names off Ottir's paper and write them into this
+> article.** Until that is done, this article states the STRUCTURE and not the
+> membership, deliberately — **because the DM cannot enumerate them from the record
+> and guessing is how the count got corrupted in the first place.**
+
+**And this is Cuddy's counsel, which is why it works:**
+
+> *"Put the NAMES in. Not *eleven on wages* — **the eleven names.** A list of eleven
+> names is a thing he cannot argue with. **'Eleven' is a number a man can decide he
+> doubts.**"*
+
+### WHY THIS ARTICLE EXISTS AT ALL
+
+`CLAUDE.md`'s standing doctrine: **a fact with no row, no tool and no test does not
+fail loudly — it rots quietly.** The eleven had no row. It lived in three prose
+files as a number in a sentence, and it drifted three times in forty-eight hours.
+**An article with a list in it is a row.**
