@@ -174,11 +174,59 @@ first volley and it is not an oversight.
 **Same people, same ranks. Dave and Torsat now carry SWORD AND SHIELD** instead
 of bows.
 
+> ### ⚠ SUPERSEDED — see the NINE-PERSON ORDER below, adopted day 69
+>
+> **This table has eight slots and no HASK**, and it still gives Dellie a spear the
+> cleric prohibition took off her on day 39. **Player-caught 2026-09-08.**
+
 | rank | | | |
 |---|---|---|---|
 | **1** | **Yrtone** — sling *(free switch to flail; see the weapon-change ruling)* | **Dave** — long sword and large shield | **Torsat** — long sword and large shield |
 | **2** | **Frython** — darts | **Ista** — **THE LANTERN** | **Tristle** — short bow |
 | **3** | **Dellie** — spear, shield | **Blartho** — flail, shield | |
+
+## ★ STANDARD FORMATION — NINE ABREAST-BY-THREE, adopted day 69
+
+**This is the order. It is assumed on every move unless the player changes it.**
+
+| rank | | | |
+|---|---|---|---|
+| **1** | **Yrtone** — sling | **Dave** — long sword, large shield | **Torsat** — long sword, large shield |
+| **2** | **Frython** — darts | **ISTA** — **the lantern**, and a dart or her dagger in the other hand | **HASK** — **SPEAR FROM THE SECOND RANK**, banded mail, large shield, AC 3 |
+| **3** | **Dellie** — **flail**, large shield | **Blartho** — flail, small shield | **Tristle** — short bow |
+
+**WHY HASK AND TRISTLE SWAPPED:** *"a spear reaches from the second rank and a long
+sword does not"* — CHECKLIST §3 and `rules/combat.md`. **Hask in rank 2 with a spear
+fights every round the front rank is engaged**, and it puts an **AC 3** body in what
+used to be the soft centre.
+
+**WHAT IT COSTS, and it is on this file's own record:** *"an ally between shooter and
+target is **−4 with a 50% chance of hitting the ally in front**."* **Tristle now has
+two ranks in front of his bow and the man immediately ahead of him is Hask.** He
+shoots when there is a lane, not as a volley; the rest of the time he is the thief —
+**listening, searching, reading doors.**
+
+**Ista cannot use a two-handed weapon at all while she holds the lantern**, class list
+or no class list. One hand is spoken for.
+
+## ★ HOUSE RULE — CLASS WEAPON LISTS, settled by the player day 69
+
+**PHB p.19 Table II reads, strictly: THIEF — leather armour, NO shield, and club,
+dagger, dart, sling, sword only** *(with the footnote allowing short, broad and long
+swords but not bastard or two-handed)*. **CLERIC — club, flail, hammer, mace,
+staff.**
+
+> **The table was never used in this campaign and the player has ruled it stays that
+> way**, citing **Unearthed Arcana**, which widened the class weapon lists —
+> **thieves may use short bows here, and clerics may use slings.**
+>
+> **SO: Tristle keeps his short bow. Yrtone keeps her sling. Ista keeps her studded
+> leather and her darts.** *(Her spear remains unusable in practice, because she is
+> holding a lantern.)*
+>
+> **DO NOT RE-LITIGATE THIS.** It was raised on 2026-09-08, checked against a 175 dpi
+> render of PHB p.19, and decided. **And it would have been prospective only in any
+> case — a rules correction never reaches backwards.**
 
 **WHY, and it is worth keeping:** the party was surprised at contact range
 **twice** in one expedition — a troglodyte out of a side passage, then four orcs

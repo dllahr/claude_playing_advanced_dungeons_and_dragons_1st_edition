@@ -614,3 +614,6 @@ when	exped	round	kind	anchor	detail	note
 2026-09-07	7	784	advance		13	
 2026-09-07	7	784	check	780	d6=6	anchor 780 + 4
 2026-09-07	7	800	advance		16	
+2026-09-08	8	0	start			Day 69. Nine in: Dave, Torsat, Tristle, Yrtone, Blartho, Frython, Hask, Dellie, Ista. Missile-forward three-abreast order, Ista on the lantern. Above ground: Halm, Ferd, Ged, Wat with two carts and two mules. OBJECTIVES: the barrel in area 26, the dwarf in irons in area 26, ~97 gp of glass in area 9, forty chemical containers in area 8.
+2026-09-08	8	0	jitter		30:3,60:4,90:2,120:4,150:3,180:5,210:0,240:3,270:0,300:5,330:3,360:0,390:0,420:3,450:4,480:2,510:2,540:5,570:2,600:2,630:4,660:2,690:0,720:5,750:3,780:3,810:3,840:4,870:3,900:5,930:4,960:2,990:4,1020:0,1050:2,1080:5,1110:1,1140:5,1170:5,1200:5,1230:4,1260:1,1290:3,1320:0,1350:4,1380:2,1410:4,1440:1,1470:3,1500:0,1530:3,1560:2,1590:1,1620:2,1650:3,1680:1,1710:5,1740:4,1770:3,1800:2	rolled in advance and HIDDEN; each is reported when its check fires
+2026-09-08	8	4	advance		4	day 69: in from the threshold, north up x=16 to y=13, east through the one-way slab into alcove pair 2

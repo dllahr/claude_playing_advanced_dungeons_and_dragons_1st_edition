@@ -142,3 +142,5 @@ when	exped	round	source	kind	what	who	fuel	certainty	note
 2026-09-06	7	334	lantern-ista	refill				known	topped up before finishing the area 8 search
 2026-09-06	7	468	lantern-ista	out				known	OUT for the rest in area 9 -- not hooded, OUT. Hooding does not stop the burn; this party once slept through eight hours of oil in area 5 by getting it wrong. Also restores Tristle's infravision for his watch.
 2026-09-07	7	800	lantern-ista	out				known	out at the cave mouth, expedition 7 over
+2026-09-08	8	0	lantern-ista	refill				known	topped off at the cave mouth before going in -- 10.6 of 24 turns left after expedition 7
+2026-09-08	8	0	lantern-ista	lit		Ista		known	day 69 at the threshold. Rank 2 centre, missile-forward three-abreast order. Her duty since day 34.

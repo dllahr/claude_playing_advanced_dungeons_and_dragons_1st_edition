@@ -113,3 +113,5 @@ when	map	level	x	y	exped	turn	squares	feet	rate	why	route
 2026-09-07	b1	1	19	13	7	786	6	60	known	south down the x=19 corridor	19,19 19,18 19,17 19,16 19,15 19,14 19,13
 2026-09-07	b1	1	17	13	7	788	2	20	known	west along y=13 and through the spiked-open one-way slab at (17,13,V) into alcove pair 2 -- BELOW the magic mouths	19,13 18,13 17,13
 2026-09-07	b1	1	16	1	7	790	13	130	known	OUT: west out of alcove pair 2 into the x=16 corridor at y=13, then straight south to the threshold. Never touches y=17 and the mouths	17,13 16,13 16,12 16,11 16,10 16,9 16,8 16,7 16,6 16,5 16,4 16,3 16,2 16,1
+2026-09-08	b1	1	16	13	8	1	12	120	known	day 69: IN. North up the x=16 corridor from the threshold to y=13. Stops at 13 -- does NOT continue to y=17 and the magic mouths	16,1 16,2 16,3 16,4 16,5 16,6 16,7 16,8 16,9 16,10 16,11 16,12 16,13
+2026-09-08	b1	1	17	13	8	1	1	10	known	east to the spiked-open one-way slab at (17,13,V) and through into alcove pair 2	16,13 17,13
