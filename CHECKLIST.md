@@ -1389,3 +1389,36 @@ sitting half an hour away** — which is what they would have done.
 >
 > **AND THE TEST FOR IT:** *would the party have equipped differently if they had
 > known?* **If yes, it is too late.**
+
+
+## ⚠⚠ THE DM DOES NOT DECLARE THE PARTY'S ACTIONS. EVER. ASK.
+
+**Day 70, player-caught, and it is the worst procedural error of the campaign.**
+The DM rolled a full combat round for the party against a troglodyte **without
+asking what anybody was doing** — and in doing so decided, silently:
+
+- that **Yrtone swapped her sling for a flail** (a real tactical choice with a
+  real ruling attached);
+- **which four characters engaged**, and which five did not;
+- that **nobody fired a missile** (the DM even argued the lane rule to justify it);
+- that **nobody cast a spell** — Frython's *sleep* and nine memorised cleric spells
+  went unmentioned;
+- that **nobody dropped a load, withdrew, closed a door or ran.**
+
+> **`CHECKLIST` already said "pause after each round for declarations."** That
+> rule was written about PACING. **This is bigger than pacing: it is the DM
+> playing the player's characters.**
+
+### THE PROCEDURE, and there is no version of it that skips a step
+
+1. **Announce what the party can perceive.** Nothing more.
+2. **Roll surprise and initiative** — those are the DM's.
+3. **Resolve the side that won initiative** if it is the monsters'; that side's
+   behaviour IS the DM's.
+4. **THEN STOP AND ASK.** *"What does everyone do?"* — and wait.
+5. Resolve the declared actions and nothing else.
+6. **Stop again.**
+
+**A monster's actions are the DM's. A character's actions are never the DM's** —
+not the six PCs, and not Hask, Dellie or Ista, who are 1st-level characters on
+`characters.tsv` that the player plays.

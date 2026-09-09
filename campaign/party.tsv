@@ -135,3 +135,16 @@ when	map	level	x	y	exped	turn	squares	feet	rate	why	route
 2026-09-09	b1	1	10	21	8	20	6	60	known	day 70 IN for areas 8 and 9: west along the y=21 corridor	16,21 15,21 14,21 13,21 12,21 11,21 10,21
 2026-09-09	b1	1	10	24	8	20	3	30	known	day 70 IN for areas 8 and 9: north up the 20-ft passage	10,21 10,22 10,23 10,24
 2026-09-09	b1	1	13	24	8	20	3	30	known	day 70 IN for areas 8 and 9: east through the secret door at (10,24,V) into the area 8 pocket	10,24 11,24 12,24 13,24
+2026-09-09	b1	1	13	26	8	26	2	20	known	day 70: south through the door at (13,25,H) into area 9 for the glass	13,24 13,25 13,26
+2026-09-09	b1	1	14	28	8	26	3	30	known	day 70: across area 9 to the north secret slab at (14,28,H)	13,26 13,27 13,28 14,28
+2026-09-09	b1	1	13	26	8	27	3	30	known	day 70 OUT of the 8/9 pocket with ~200 lb, moving at 6in	14,28 14,27 14,26 13,26
+2026-09-09	b1	1	13	24	8	27	2	20	known	day 70 OUT of the 8/9 pocket with ~200 lb, moving at 6in	13,26 13,25 13,24
+2026-09-09	b1	1	10	24	8	27	3	30	known	day 70 OUT of the 8/9 pocket with ~200 lb, moving at 6in	13,24 12,24 11,24 10,24
+2026-09-09	b1	1	10	21	8	28	3	30	known	day 70 OUT with ~200 lb at 6in, the named dogleg, never x=16 between y=13 and y=19	10,24 10,23 10,22 10,21
+2026-09-09	b1	1	16	21	8	28	6	60	known	day 70 OUT with ~200 lb at 6in, the named dogleg, never x=16 between y=13 and y=19	10,21 11,21 12,21 13,21 14,21 15,21 16,21
+2026-09-09	b1	1	16	19	8	28	2	20	known	day 70 OUT with ~200 lb at 6in, the named dogleg, never x=16 between y=13 and y=19	16,21 16,20 16,19
+2026-09-09	b1	1	19	19	8	28	3	30	known	day 70 OUT with ~200 lb at 6in, the named dogleg, never x=16 between y=13 and y=19	16,19 17,19 18,19 19,19
+2026-09-09	b1	1	19	13	8	28	6	60	known	day 70 OUT with ~200 lb at 6in, the named dogleg, never x=16 between y=13 and y=19	19,19 19,18 19,17 19,16 19,15 19,14 19,13
+2026-09-09	b1	1	17	13	8	28	2	20	known	day 70 OUT with ~200 lb at 6in, the named dogleg, never x=16 between y=13 and y=19	19,13 18,13 17,13
+2026-09-09	b1	1	16	13	8	28	1	10	known	day 70 OUT with ~200 lb at 6in, the named dogleg, never x=16 between y=13 and y=19	17,13 16,13
+2026-09-09	b1	1	16	1	8	28	12	120	known	day 70 OUT with ~200 lb at 6in, the named dogleg, never x=16 between y=13 and y=19	16,13 16,12 16,11 16,10 16,9 16,8 16,7 16,6 16,5 16,4 16,3 16,2 16,1

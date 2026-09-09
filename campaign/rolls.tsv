@@ -6942,3 +6942,87 @@ when	exped	turn	notation	dice	modifier	total	hidden	reason
 2026-09-09			d20	20	0	20		giant centipede attacks AC 9
 2026-09-09			d20	20	0	20		orc attacks AC 9
 2026-09-09			1-8 (1d8)	8	0	8		orc damage
+2026-09-09			d6	1	0	1		wandering check, anchor 270
+2026-09-09			d6	6	0	6		wandering table, level 1
+2026-09-09			d6	2	0	2		surprise check, party
+2026-09-09			d6	2	0	2		surprise check, troglodytes
+2026-09-09			d6	1	0	1		initiative, party
+2026-09-09			d6	3	0	3		initiative, monsters
+2026-09-09			d20	10	0	10		Dave attacks with long sword
+2026-09-09			d20	9	0	9		Torsat attacks with long sword
+2026-09-09			d20	11	0	11		Yrtone attacks with footman's flail
+2026-09-09			d20	10	0	10		Hask attacks with spear
+2026-09-09			d20	10	0	10		troglodyte attacks AC 3
+2026-09-09			d20	15	0	15		troglodyte attacks AC 3
+2026-09-09			1-3 (1d3)	1	0	1		troglodyte damage
+2026-09-09			d20	7	0	7		troglodyte attacks AC 3
+2026-09-09						VOID		day 70 troglodyte: THE PARTY'S FOUR ATTACK ROLLS ARE VOID -- Dave d20=10, Torsat 9, Yrtone 11, Hask 10, all with long sword/flail/spear. THE DM CHOSE THE PARTY'S ACTIONS WITHOUT ASKING. He decided Yrtone swapped sling for flail, decided which four engaged, decided nobody fired a missile, cast, dropped a load or withdrew. None of that is the DM's to declare. The surprise rolls (party 2 vs 1-4 chameleon skin, trog 2 vs 1-2 -- MUTUAL, cancels) and the initiative (party 1, monsters 3 -- TROGLODYTE FIRST) STAND, and so do the troglodyte's three attacks on Yrtone (d3=3 chose the target; 10 miss, 15 HIT for 1, 7 miss). THE PARTY'S ACTION FOR THIS ROUND IS UNDECLARED.
+2026-09-09			d20	15	0	15		Dave attacks with long sword
+2026-09-09			1-8 (1d8)	1	0	1		Dave damage, long sword
+2026-09-09			d20	16	0	16		Torsat attacks with long sword
+2026-09-09			1-8 (1d8)	8	0	8		Torsat damage, long sword
+2026-09-09			d20	15	0	15		Yrtone attacks with footman's flail
+2026-09-09			2-7 (1d6+1)	5	1	6		Yrtone damage, footman's flail
+2026-09-09			d20	12	0	12		Hask attacks with spear
+2026-09-09			d6	5	0	5		wandering check, anchor 20
+2026-09-09			d6	1	0	1		wandering check, anchor 20
+2026-09-09			d6	2	0	2		wandering table, level 1
+2026-09-09			d6	5	0	5		wandering check, anchor extra
+2026-09-09			d20	1	0	1		Y save vs Paralyze/Poison/Death
+2026-09-09			d20	12	0	12		F save vs Spell
+2026-09-09			d100	62	0	62		morale
+2026-09-09			d100	63	0	63		morale
+2026-09-09			d100	50	0	50		morale
+2026-09-09			d100	51	0	51		morale
+2026-09-09			d100	51	0	51		morale
+2026-09-09			d100	66	0	66		morale
+2026-09-09			d100	81	0	81		morale
+2026-09-09			d100	100	0	100		morale
+2026-09-09			d100	100	0	100		morale
+2026-09-09			d100	100	0	100		morale
+2026-09-09			d6	5	0	5		initiative, party
+2026-09-09			d6	2	0	2		initiative, monsters
+2026-09-09			d6	3	0	3		initiative, party
+2026-09-09			d6	3	0	3		initiative, monsters
+2026-09-09			d6	3	0	3		surprise check, party
+2026-09-09			d6	3	0	3		surprise check, party
+2026-09-09			d6	2	0	2		surprise check, party
+2026-09-09			d6	2	0	2		surprise check, party
+2026-09-09			d20	20	0	20		giant centipede attacks AC 9
+2026-09-09			d20	20	0	20		giant centipede attacks AC 9
+2026-09-09			d20	20	0	20		giant centipede attacks AC 9
+2026-09-09			d20	20	0	20		giant centipede attacks AC 9
+2026-09-09			d20	20	0	20		giant centipede attacks AC 9
+2026-09-09			d20	20	0	20		orc attacks AC 9
+2026-09-09			1-8 (1d8)	8	0	8		orc damage
+2026-09-09			d6	5	0	5		wandering check, anchor 20
+2026-09-09			d6	1	0	1		wandering check, anchor 20
+2026-09-09			d6	2	0	2		wandering table, level 1
+2026-09-09			d6	5	0	5		wandering check, anchor extra
+2026-09-09			d20	1	0	1		Y save vs Paralyze/Poison/Death
+2026-09-09			d20	12	0	12		F save vs Spell
+2026-09-09			d100	62	0	62		morale
+2026-09-09			d100	63	0	63		morale
+2026-09-09			d100	50	0	50		morale
+2026-09-09			d100	51	0	51		morale
+2026-09-09			d100	51	0	51		morale
+2026-09-09			d100	66	0	66		morale
+2026-09-09			d100	81	0	81		morale
+2026-09-09			d100	100	0	100		morale
+2026-09-09			d100	100	0	100		morale
+2026-09-09			d100	100	0	100		morale
+2026-09-09			d6	5	0	5		initiative, party
+2026-09-09			d6	2	0	2		initiative, monsters
+2026-09-09			d6	3	0	3		initiative, party
+2026-09-09			d6	3	0	3		initiative, monsters
+2026-09-09			d6	3	0	3		surprise check, party
+2026-09-09			d6	3	0	3		surprise check, party
+2026-09-09			d6	2	0	2		surprise check, party
+2026-09-09			d6	2	0	2		surprise check, party
+2026-09-09			d20	20	0	20		giant centipede attacks AC 9
+2026-09-09			d20	20	0	20		giant centipede attacks AC 9
+2026-09-09			d20	20	0	20		giant centipede attacks AC 9
+2026-09-09			d20	20	0	20		giant centipede attacks AC 9
+2026-09-09			d20	20	0	20		giant centipede attacks AC 9
+2026-09-09			d20	20	0	20		orc attacks AC 9
+2026-09-09			1-8 (1d8)	8	0	8		orc damage
