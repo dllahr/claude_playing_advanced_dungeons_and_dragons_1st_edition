@@ -533,7 +533,32 @@ Appendix O). That is the empty chest — whatever is locked inside it is extra.
 *source: chest **DMG p. 225** (Appendix O); mule load **MM p. 72**; the barrel
 weight and the 550 gp weight of rig are the **DM calls** above. Arithmetic only.*
 
-**Over by better than three to one.** The barrel alone is over. At walking pace it
+**Over by better than three to one.** The barrel alone is over.
+
+> ### ⚠ BUT THAT COMPARISON IS AGAINST THE **NORMAL**-MOVE FIGURE — reread 2026-09-08
+>
+> **MM p.72 gives a mule 2,000 gp weight at normal move and 6,000 AT HALF MOVE.**
+> The barrel is **4,600. One mule carries it on its back at half move**, with 1,400
+> to spare.
+>
+> **The day-34 ruling — *"you do not move a 460 lb barrel off a crag, you TAP it"* —
+> was correct WHEN IT WAS MADE**: one mule, no cart, and the normal-move figure.
+> **The party now has two mules and two carts, and Coll's crew graded a
+> cart-passable trail to the basecamp**, so the arithmetic no longer forbids it.
+>
+> **NO BOOK GIVES A CART'S CAPACITY.** PHB p.36 prices a cart at 50 gp and says
+> nothing about load. **DM CALL, recorded so it is the same number every time: a
+> beast in a cart shifts about FOUR TIMES what it carries on its back**, which is
+> the whole reason wheels exist. So **one mule and a cart ≈ 8,000 gp weight at
+> normal move** — the barrel and the glass and the jars together, comfortably.
+> *(Reasoning, not a book figure: rolling resistance against dead weight. If a
+> better source turns up it wins.)*
+>
+> **AND THE REAL CONSTRAINT IS NOT THE CART.** Halm's own two questions, day 66:
+> **getting 460 lb out of the dungeon**, which no cart helps with; and whether the
+> contents are worth the cart-space, since ~97 gp of glass and forty jars are
+> waiting in area 8. **The keg, spigot and gimlet bought day 34 for ~2 gp still
+> answer the second one: tap it up there and decant what is worth carrying.** At walking pace it
 is not one or the other — it is *neither*, and the biggest cask the mule takes at
 normal speed alongside the empty chest is a **firkin** (1,150 + 250 = 1,400,
 inside 1,450 by 50).

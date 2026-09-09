@@ -2990,3 +2990,80 @@ like that."*
 
 **The party now owns four beasts and two carts and has, for the first time, somebody
 whose job they are.**
+
+
+---
+
+## DAY 66 — SARN TEACHES, COLL BUILDS, AND HALM IS ASKED A CARTER'S QUESTION
+
+*(No reaction rolls in this scene. All three are long-established and their
+dispositions are on the record — see the standing-disposition note at the head of
+this file. The DMG p.63 table is a first-contact mechanic.)*
+
+### SARN — asked to teach Rowe his letters
+
+**His file makes this unambiguous and it needed no die.** He asked for a teacher
+himself on day 39; *"fantastic, let's find someone"* got **42**; being told
+**Frython was laid up and wanted company** got **77**, because it made him the one
+who helps.
+
+**Being asked to TEACH is that mechanism at full strength**, four weeks off not
+being able to read his own name.
+
+> *"...Me. I can't do it like Frython does it. **I don't know the reasons for any of
+> it.** I just know the ones I've had. — **Aye. When?**"*
+
+**AND HE GOT AN ANSWER THIS TIME**, which is the whole of what went wrong on day 39:
+**ledgers first, Wend first, Rowe in his spare time, starting now.** He asks
+carefully whether he is meant to set the books aside for it. **He is not.**
+
+### COLL — the dwarf's casket
+
+**No trouble.** Ferd and Ged boxed a spring in a day and a half unasked; boarded and
+nailed is an afternoon. **And Coll asks the one question nobody thought of:**
+
+> *"**How long is he?**"*
+
+**Nobody knows.** Seen four times across two expeditions — hanging in irons, taken
+down, laid out, covered with a bearskin — **and never measured.** Somebody has to
+say a number or the box gets built long and the difference gets padded.
+
+### HALM — and it is the first carter's question anybody has ever asked him
+
+**On day 40 he said of Lyde *"that's not carting, that's talking."* This is carting**,
+and he listens to the whole plan with his hand over his mouth.
+
+**HE SAYS NO TO ROLLING IT:**
+
+> *"You'll not roll it. **Not down that.** Coll's lads graded that trail for a cart
+> and they graded it well — I've been up it. **So why would you roll a full barrel
+> down a made road when you can drive up it empty and drive down it loaded?** You'd
+> be inventing a hill that isn't there."*
+>
+> *"And a rolling barrel on brake ropes — aye, it's done and I've done it, **and it's
+> done on a bank you can't get a wheel onto.** Once it goes it goes, and there's
+> eight of you on those ropes and four hundredweight between you and the bottom."*
+
+**HE SAYS YES TO THE PLANKS AND TURNS THEM ROUND:**
+
+> *"**You've got them the wrong way up.** You don't ramp a barrel UP onto a cart, not
+> that weight — you'll have it over on somebody. **You back the cart into a cut or a
+> bank until the bed's level with the ground and roll it on flat.** Half an hour with
+> a mattock and you've a loading bank you can use every time you come back."*
+
+**AND THE TWO THINGS HE NAMES THAT NOBODY HAD:**
+
+| | |
+|---|---|
+| **1** | *"**How are you getting it out of the hole?** I can't help you in there. **That's the bit that'll beat you** — a graded trail and a cart's the easy end"* |
+| **2** | *"**What's in it?** Because a cart's a cart. Fill it with that and you're not carrying your glass — and you told me there's a hundred gold of glass up there and forty jars. **I'd want to know I wasn't hauling four hundredweight of water past ninety-seven gold of glass**"* |
+
+**He'll come, gladly, and he wants a day up there beforehand with a mattock to cut
+the loading bank.**
+
+> **AND THE ARITHMETIC HAS MOVED, which is why the plan is even on the table.** The
+> day-34 ruling *"you do not move a 460 lb barrel off a crag, you TAP it"* was made
+> against MM p.72's **normal**-move figure with one mule and no cart. **A mule
+> carries 6,000 gp weight AT HALF MOVE and the barrel is 4,600.** Two mules, two
+> carts and a graded trail now exist. **Full re-reading in `rules/equipment.md`,
+> including a recorded DM call on cart capacity, which no book gives.**
