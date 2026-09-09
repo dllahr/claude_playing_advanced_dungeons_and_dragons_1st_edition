@@ -200,11 +200,17 @@ sword does not"* — CHECKLIST §3 and `rules/combat.md`. **Hask in rank 2 with 
 fights every round the front rank is engaged**, and it puts an **AC 3** body in what
 used to be the soft centre.
 
-**WHAT IT COSTS, and it is on this file's own record:** *"an ally between shooter and
-target is **−4 with a 50% chance of hitting the ally in front**."* **Tristle now has
-two ranks in front of his bow and the man immediately ahead of him is Hask.** He
-shoots when there is a lane, not as a volley; the rest of the time he is the thief —
-**listening, searching, reading doors.**
+**WHAT IT COSTS — AND ONLY WHEN SOMEBODY IS IN CONTACT.** *(The DM stated this
+unconditionally on 2026-09-08 and was corrected for the third time. **Allies merely
+standing in front are not a melee** — `rules/exploration.md`, which is the only
+place the figures live.)*
+
+- **Nothing engaged?** **Tristle shoots normally, range modifiers only**, from rank
+  3 or anywhere else.
+- **Front rank in contact?** **Then the lane rule applies and he is shooting past
+  two ranks** with Hask directly ahead of him. **Read `rules/exploration.md` for the
+  numbers and the second condition on them.** In practice he wants a lane, and the
+  rest of the time he is the thief — **listening, searching, reading doors.**
 
 **Ista cannot use a two-handed weapon at all while she holds the lantern**, class list
 or no class list. One hand is spoken for.
@@ -285,9 +291,17 @@ and level enough with the front to throw its 30 ft usefully forward.
   > before asking *"who is in the lane?"*
 
   **So:** if the front rank is **in contact**, a shot past them down a filled
-  10-ft corridor is **−4 with a 50% chance of hitting the ally in front**. If
-  nothing is engaged — enemies at a distance, the party standing ready — **every
-  missile in the column fires with range modifiers only.**
+  10-ft corridor is penalised and puts the ally in front at risk — **and the
+  figures, plus the SECOND condition on them, are in `rules/exploration.md` and
+  deliberately not repeated here.** If nothing is engaged — enemies at a distance,
+  the party standing ready — **every missile in the column fires with range
+  modifiers only.**
+
+  *(The numbers were stripped out of this paragraph on 2026-09-08 by
+  `tools/tests/test_lane_rule.py`, which flagged it the first time it ran. This was
+  the GOOD paraphrase — it kept the melee trigger — **and it had still dropped the
+  other condition.** That is why the test forbids the figure outside the cache
+  rather than merely requiring the word "melee" beside it.)*
 
   *(Caught by the player at round 1203 of expedition 4 and cached then; caught
   again on day 46 of expedition 7, when this line made the DM tell the party that
@@ -317,10 +331,13 @@ posture, and two things follow from it that the DM must not silently ignore:
 - **NOBODY IN RANK 2 CAN REACH A FIGHT IN A 10-FT CORRIDOR.** The old order put
   spears there for exactly this reason (CHECKLIST §3). **Dellie has her own spear
   on her back** — mention it once when the first melee starts, then drop it.
-- And the standing lane rule still applies: **allies filling a 10-ft corridor
-  between shooter and target is −4 with a 50% chance of hitting the ally in
-  front** (`rules/exploration.md`). In a corridor, ranks 2-4 mostly cannot shoot.
-  In a room they can.
+- And the standing lane rule still applies **BUT ONLY IN MELEE.** **If nobody is in
+  contact, every missile in the column fires with range modifiers only** — *"allies
+  merely standing in front are not a melee."* **Once the front rank is engaged**, a
+  shot past a filled 10-ft corridor is penalised and risks the ally in front; **the
+  figures and the second condition on them are in `rules/exploration.md` and are
+  deliberately not restated here.** *(Every paraphrase of this rule in this repo has
+  dropped a condition at least once — hence `tools/tests/test_lane_rule.py`.)*
 
 **Ista in rank 3 puts the light in the middle of the column**, which is correct
 and is her whole job.

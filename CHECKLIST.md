@@ -202,12 +202,21 @@ spear, so a spear thrust is −3 flat with no racial offset.
 - [ ] **Pause after each round for declarations.** Do not resolve two rounds in
       one go. *(Three rounds were once run without stopping and had to be
       retconned.)*
-- [ ] **Before ANY missile attack, check the lane.** If allies fill a 10' corridor
-      between shooter and target it is **-4 with a 50% chance of hitting the ally
-      in front** (`rules/exploration.md`) — which the party treats as not worth
-      attempting. A natural 1 hits a friendly regardless. *(Three darts were
-      resolved with no penalty and no ally risk in expedition 4 and had to be
-      retracted.)*
+- [ ] **Before ANY missile attack, ASK ONE QUESTION FIRST: IS ANYBODY IN CONTACT?**
+      *(This item used to state the penalty before the trigger, and that is how the
+      DM got it wrong a THIRD time on 2026-09-08. The trigger comes first now.)*
+      - **NOBODY IN CONTACT** — enemies at a distance, the party merely standing in
+        a column — **NO PENALTY AT ALL. Range modifiers only. Every missile in the
+        column fires.** *"Allies merely standing in front are not a melee"*
+        (`rules/exploration.md`).
+      - **SOMEBODY IS IN CONTACT** — then and only then does the lane rule bite,
+        and **the exact figures live in `rules/exploration.md` and nowhere else.
+        GO AND READ THEM.** They carry a second condition as well, which every
+        paraphrase in this repo has dropped at least once.
+      - **A natural 1 hits a friendly regardless**, whenever there is a melee to
+        shoot into.
+      *(Three darts were resolved with no penalty and no ally risk in expedition 4
+      and had to be retracted. Then the opposite error, twice.)*
 - [ ] **Report the result of every declared action.** Every attack, every spell,
       every search — including the misses. *(Tristle's spear attack was silently
       dropped twice.)*
@@ -1330,3 +1339,23 @@ never conversationally.
 needed a story invented for it, and `CHECKLIST` already forbade inventing stories
 for low rolls. **When a mechanic keeps forcing you to break another rule, the
 mechanic is being misapplied.**
+
+
+## THE LANE RULE HAS ITS OWN TEST NOW, BECAUSE PROSE FAILED THREE TIMES
+
+**`tools/tests/test_lane_rule.py`.** It fails if any markdown file outside
+`rules/` and `deprecated/` states the ally-hit figure without the word *melee*
+nearby, and it fails if the authoritative row in `rules/exploration.md` ever loses
+either of its two conditions.
+
+**Why a test and not another warning:** `party_roster.md` already carried a note
+reading *"the lane rule applies ONLY IN MELEE — this paraphrase used to omit that
+and misled the DM again on 2026-09-06."* **The note was there. The DM misquoted a
+different paraphrase in the same file an hour later on 2026-09-08.** A warning that
+has failed twice is not a mechanism.
+
+> **AND THE GENERAL FORM OF THIS FAILURE:** the numbers were correct in
+> `rules/exploration.md` the whole time, **including a row that says in so many
+> words *"allies merely standing in front are not a melee."*** The DM quoted a
+> prose paraphrase instead — **which is the first thing `CLAUDE.md` forbids.**
+> **When a rule has a cached table, quote the table. Paraphrases lose conditions.**
