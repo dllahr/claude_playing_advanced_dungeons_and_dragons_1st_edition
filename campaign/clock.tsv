@@ -617,3 +617,45 @@ when	exped	round	kind	anchor	detail	note
 2026-09-08	8	0	start			Day 69. Nine in: Dave, Torsat, Tristle, Yrtone, Blartho, Frython, Hask, Dellie, Ista. Missile-forward three-abreast order, Ista on the lantern. Above ground: Halm, Ferd, Ged, Wat with two carts and two mules. OBJECTIVES: the barrel in area 26, the dwarf in irons in area 26, ~97 gp of glass in area 9, forty chemical containers in area 8.
 2026-09-08	8	0	jitter		30:3,60:4,90:2,120:4,150:3,180:5,210:0,240:3,270:0,300:5,330:3,360:0,390:0,420:3,450:4,480:2,510:2,540:5,570:2,600:2,630:4,660:2,690:0,720:5,750:3,780:3,810:3,840:4,870:3,900:5,930:4,960:2,990:4,1020:0,1050:2,1080:5,1110:1,1140:5,1170:5,1200:5,1230:4,1260:1,1290:3,1320:0,1350:4,1380:2,1410:4,1440:1,1470:3,1500:0,1530:3,1560:2,1590:1,1620:2,1650:3,1680:1,1710:5,1740:4,1770:3,1800:2	rolled in advance and HIDDEN; each is reported when its check fires
 2026-09-08	8	4	advance		4	day 69: in from the threshold, north up x=16 to y=13, east through the one-way slab into alcove pair 2
+2026-09-08	8	6	advance		2	day 69: east along y=13 from alcove pair 2 to the door at (28,13)
+2026-09-08	8	7	advance		1	day 69: south through the open door to (27,11), outside the trophy room
+2026-09-08	8	8	advance		1	day 69: to the trophy room door at (25,10)
+2026-09-08	8	9	advance		1	day 69: the trophy room door at (25,10,H) opened in formation, nine standing ready
+2026-09-08	8	19	advance		10	day 69: turn 1 of 6 hammering the slack hoop back down -- Tristle and Ista, deliberate noise
+2026-09-08	8	19	check	extra	d6=4	extra
+2026-09-08	8	29	advance		10	day 69: turn 2 of 6 hammering the slack hoop back down -- Tristle and Ista, deliberate noise
+2026-09-08	8	29	check	extra	d6=4	extra
+2026-09-08	8	39	advance		10	day 69: turn 3 of 6 hammering the slack hoop back down -- Tristle and Ista, deliberate noise
+2026-09-08	8	33	check	30	d6=5	anchor 30 + 3
+2026-09-08	8	39	check	extra	d6=6	extra
+2026-09-08	8	49	advance		10	day 69: turn 4 of 6 hammering the slack hoop back down -- Tristle and Ista, deliberate noise
+2026-09-08	8	49	check	extra	d6=6	extra
+2026-09-08	8	59	advance		10	day 69: turn 5 of 6 hammering the slack hoop back down -- Tristle and Ista, deliberate noise
+2026-09-08	8	59	check	extra	d6=1 -> Kobolds (1 -6)-AC 7, HDV 2 , hp4,3,3,2,2,1,#AT 1, D 1-4 or weapon -1, MV 90’ (30’), Save NM, ML 6	extra
+2026-09-08	8	69	advance		10	day 69: turn 6 of 6 hammering the slack hoop back down -- Tristle and Ista, deliberate noise
+2026-09-08	8	64	check	60	d6=3	anchor 60 + 4
+2026-09-08	8	69	check	extra	d6=2	extra
+2026-09-09	8	109	advance		40	day 69: three turns of rats at the spiked door, then a turn of quiet listening -- Tristle 3 attempts (91,21,25 vs 15%), ISTA MAKES IT on a 1 vs 10%: off the door, not gone, two of them sat west along y=10
+2026-09-09	8	92	check	90	d6=2	anchor 90 + 2
+2026-09-09	8	114	advance		5	day 69: five more minutes of quiet waiting, thieves listening in turns
+2026-09-09	8	124	advance		10	day 69: drawing four spikes and lifting the cloaks quietly
+2026-09-09	8	124	check	120	d6=3	anchor 120 + 4
+2026-09-09	8	125	advance		1	day 69: the free volley and the rout
+2026-09-09	8	135	advance		10	day 69: barrel turn 1 of ~6, rolling for the entrance -- party deaf, six hands full
+2026-09-09	8	135	check	extra	d6=5	extra
+2026-09-09	8	145	advance		10	day 69: barrel turn 2 of ~6, rolling for the entrance -- party deaf, six hands full
+2026-09-09	8	145	check	extra	d6=5	extra
+2026-09-09	8	155	advance		10	day 69: barrel turn 3 of ~6, rolling for the entrance -- party deaf, six hands full
+2026-09-09	8	153	check	150	d6=6	anchor 150 + 3
+2026-09-09	8	155	check	extra	d6=3	extra
+2026-09-09	8	165	advance		10	day 69: barrel turn 4 of ~6, rolling for the entrance -- party deaf, six hands full
+2026-09-09	8	165	check	extra	d6=2	extra
+2026-09-09	8	175	advance		10	day 69: barrel turn 5 of ~6, rolling for the entrance -- party deaf, six hands full
+2026-09-09	8	175	check	extra	d6=3	extra
+2026-09-09	8	185	advance		10	day 69: barrel turn 6 of ~6, rolling for the entrance -- party deaf, six hands full
+2026-09-09	8	185	check	180	d6=6	anchor 180 + 5
+2026-09-09	8	185	check	extra	d6=4	extra
+2026-09-09	8	205	advance		20	day 70: in from the threshold by the named dogleg, 380 ft, plus working the (10,24,V) catch and getting nine through
+2026-09-09	8	245	advance		40	day 70: four turns packing the blown glass in cloaks, rope-tied bundles and iron rations -- quiet, unhurried work
+2026-09-09	8	210	check	210	d6=2	anchor 210 + 0
+2026-09-09	8	243	check	240	d6=2	anchor 240 + 3

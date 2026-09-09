@@ -115,3 +115,23 @@ when	map	level	x	y	exped	turn	squares	feet	rate	why	route
 2026-09-07	b1	1	16	1	7	790	13	130	known	OUT: west out of alcove pair 2 into the x=16 corridor at y=13, then straight south to the threshold. Never touches y=17 and the mouths	17,13 16,13 16,12 16,11 16,10 16,9 16,8 16,7 16,6 16,5 16,4 16,3 16,2 16,1
 2026-09-08	b1	1	16	13	8	1	12	120	known	day 69: IN. North up the x=16 corridor from the threshold to y=13. Stops at 13 -- does NOT continue to y=17 and the magic mouths	16,1 16,2 16,3 16,4 16,5 16,6 16,7 16,8 16,9 16,10 16,11 16,12 16,13
 2026-09-08	b1	1	17	13	8	1	1	10	known	east to the spiked-open one-way slab at (17,13,V) and through into alcove pair 2	16,13 17,13
+2026-09-08	b1	1	28	13	8	1	11	110	known	day 69: east along y=13 from alcove pair 2 to the door at (28,13), heading for the trophy room -- the barrel and the dwarf	17,13 18,13 19,13 20,13 21,13 22,13 23,13 24,13 25,13 26,13 27,13 28,13
+2026-09-08	b1	1	27	13	8	1	1	10	known	DM CORRECTION, not movement: the declared destination was (27,13) and the DM walked them one square past it to (28,13). No clock cost -- 10 squares and 11 squares are both 2 rounds at known rate	28,13 27,13
+2026-09-08	b1	1	27	11	8	1	2	20	known	day 69: south through the standing-open door at (27,12,H), then south again to (27,11) -- the square outside the trophy room's open east side at y=11	27,13 27,12 27,11
+2026-09-08	b1	1	25	10	8	1	3	30	known	day 69: south to (27,10) through the throne room edge, then west along y=10 to the trophy room door at (25,10,H) -- the same route as exp.5, party.tsv:59	27,11 27,10 26,10 25,10
+2026-09-08	b1	1	25	11	8	1	1	10	known	day 69: into the trophy room through (25,10,H)	25,10 25,11
+2026-09-09	b1	1	25	10	8	12	1	10	flee	day 69 round 124: OUT of the trophy room at speed through (25,10,H), into the y=10 corridor, missile weapons up, rats 30 ft west at (22,10)	25,11 25,10
+2026-09-09	b1	1	27	10	8	19	2	20	explore	day 69 BARREL OUT: east 20 ft along y=10 (time already charged on the clock at the exp.5 barrel rate of ~50 ft/turn)	25,10 26,10 27,10
+2026-09-09	b1	1	27	13	8	19	3	30	explore	day 69 BARREL OUT: north 30 ft through the standing-open door at (27,12,H) (time already charged on the clock at the exp.5 barrel rate of ~50 ft/turn)	27,10 27,11 27,12 27,13
+2026-09-09	b1	1	17	13	8	19	10	100	explore	day 69 BARREL OUT: west 100 ft along y=13 -- NEVER y=17 and the magic mouths (time already charged on the clock at the exp.5 barrel rate of ~50 ft/turn)	27,13 26,13 25,13 24,13 23,13 22,13 21,13 20,13 19,13 18,13 17,13
+2026-09-09	b1	1	16	13	8	19	1	10	explore	day 69 BARREL OUT: west through the spiked-open one-way slab at (17,13,V) out of alcove pair 2 (time already charged on the clock at the exp.5 barrel rate of ~50 ft/turn)	17,13 16,13
+2026-09-09	b1	1	16	1	8	19	12	120	explore	day 69 BARREL OUT: south 120 ft down x=16 through the door at (16,6,H) to the threshold (time already charged on the clock at the exp.5 barrel rate of ~50 ft/turn)	16,13 16,12 16,11 16,10 16,9 16,8 16,7 16,6 16,5 16,4 16,3 16,2 16,1
+2026-09-09	b1	1	16	13	8	20	12	120	known	day 70 IN for areas 8 and 9: north up x=16 from the threshold to y=13	16,1 16,2 16,3 16,4 16,5 16,6 16,7 16,8 16,9 16,10 16,11 16,12 16,13
+2026-09-09	b1	1	17	13	8	20	1	10	known	day 70 IN for areas 8 and 9: east through the spiked-open one-way slab into alcove pair 2	16,13 17,13
+2026-09-09	b1	1	19	13	8	20	2	20	known	day 70 IN for areas 8 and 9: east along y=13	17,13 18,13 19,13
+2026-09-09	b1	1	19	19	8	20	6	60	known	day 70 IN for areas 8 and 9: north up the x=19 corridor -- THE DOGLEG, staying off x=16 between y=13 and y=19	19,13 19,14 19,15 19,16 19,17 19,18 19,19
+2026-09-09	b1	1	16	19	8	20	3	30	known	day 70 IN for areas 8 and 9: west along y=19 to the crossing	19,19 18,19 17,19 16,19
+2026-09-09	b1	1	16	21	8	20	2	20	known	day 70 IN for areas 8 and 9: north from the crossing	16,19 16,20 16,21
+2026-09-09	b1	1	10	21	8	20	6	60	known	day 70 IN for areas 8 and 9: west along the y=21 corridor	16,21 15,21 14,21 13,21 12,21 11,21 10,21
+2026-09-09	b1	1	10	24	8	20	3	30	known	day 70 IN for areas 8 and 9: north up the 20-ft passage	10,21 10,22 10,23 10,24
+2026-09-09	b1	1	13	24	8	20	3	30	known	day 70 IN for areas 8 and 9: east through the secret door at (10,24,V) into the area 8 pocket	10,24 11,24 12,24 13,24

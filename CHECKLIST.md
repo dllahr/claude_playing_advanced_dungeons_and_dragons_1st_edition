@@ -1359,3 +1359,33 @@ has failed twice is not a mechanism.
 > words *"allies merely standing in front are not a melee."*** The DM quoted a
 > prose paraphrase instead — **which is the first thing `CLAUDE.md` forbids.**
 > **When a rule has a cached table, quote the table. Paraphrases lose conditions.**
+
+
+## DO NOT INVENT A MECHANIC MID-SCENE THAT CHANGES A DECISION ALREADY TAKEN
+
+**Day 70, player-caught.** The party went back into areas 8 and 9 for ~97 gp of
+blown glass. The DM introduced a **fragility mechanic** — a 3d6 for how much
+arrived unbroken, packing materials, spoiled rations — **which has never existed in
+this campaign.**
+
+**Expedition 7 carried ~200 lb of laboratory glass worth ~250 gp out of that exact
+room**, and `world_changes.tsv` records exactly one constraint on it:
+
+> *"Too bulky to carry without dropping the party from 9″ to 6″."*
+
+**It is a WEIGHT problem. It always was.** And the invention came **after** the
+party had walked in, so they could not have brought straw or boxes **from the carts
+sitting half an hour away** — which is what they would have done.
+
+> ### THE RULE
+>
+> **A new mechanic may not be introduced after the players have committed to a
+> course of action based on its absence.** If something has been resolved one way
+> once, it is resolved that way again, or it is raised **before** the party decides
+> — never as a surprise cost on the way out.
+>
+> **This is the same principle as `a rules correction is prospective, never
+> retroactive`**, pointed at the DM's own inventions rather than at the books.
+>
+> **AND THE TEST FOR IT:** *would the party have equipped differently if they had
+> known?* **If yes, it is too late.**

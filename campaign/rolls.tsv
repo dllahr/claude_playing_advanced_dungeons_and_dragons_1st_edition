@@ -6857,3 +6857,88 @@ when	exped	turn	notation	dice	modifier	total	hidden	reason
 2026-09-08			d20	20	0	20		giant centipede attacks AC 9
 2026-09-08			d20	20	0	20		orc attacks AC 9
 2026-09-08			1-8 (1d8)	8	0	8		orc damage
+2026-09-08			d6	4	0	4		wandering check, anchor extra
+2026-09-08			d6	4	0	4		wandering check, anchor extra
+2026-09-08			d6	5	0	5		wandering check, anchor 30
+2026-09-08			d6	6	0	6		wandering check, anchor extra
+2026-09-08			d6	6	0	6		wandering check, anchor extra
+2026-09-08			d6	1	0	1		wandering check, anchor extra
+2026-09-08			d6	3	0	3		wandering table, level 1
+2026-09-08			d6	3	0	3		wandering check, anchor 60
+2026-09-08			d6	2	0	2		wandering check, anchor extra
+2026-09-09			d6	2	0	2		wandering check, anchor 90
+2026-09-09			d6	3	0	3		wandering check, anchor 120
+2026-09-09			d6	1	0	1		surprise check, 3 giant rats
+2026-09-09			d20	2	0	2		Dave attacks with short bow
+2026-09-09			d20	9	0	9		Torsat attacks with short bow
+2026-09-09			d20	19	0	19		Tristle attacks with short bow
+2026-09-09			1-6 (1d6)	2	0	2		Tristle damage, short bow
+2026-09-09			d20	9	0	9		Yrtone attacks with sling
+2026-09-09			d20	6	0	6		Hask attacks with sling
+2026-09-09			d20	18	0	18		Dellie attacks with sling
+2026-09-09			2-5 (1d4+1)	1	1	2		Dellie damage, sling
+2026-09-09			d20	4	0	4		Blartho attacks with sling
+2026-09-09			d20	5	0	5		Frython attacks with dart
+2026-09-09			d20	3	0	3		Ista attacks with dart
+2026-09-09			d100	91	0	91		morale
+2026-09-09			d6	6	0	6		day 69 round ~55: the churned traffic in x=16 has gone QUIET, 23 days on. Their own boot-prints from the 46th are the freshest thing in it
+2026-09-09			d6	3	0	3		day 69: the trophy room -- signs of traffic, nothing gone
+2026-09-09			d6	4	0	4		day 69: nothing alive in the room, but something HAS been in since exp.5
+2026-09-09			d6	1	0	1		day 69: HOW BAD IS THE HOOP DAMAGE. 1 = ONE HOOP PROPERLY LOOSE, the barrel comes apart if rolled
+2026-09-09			d6	5	0	5		day 69: is it obvious? 5 = obvious the moment the lamp is on it. No search, no thief check
+2026-09-09			2-8 (2d4)	4,2	0	6		day 69: turns for Tristle and Ista to drive the slack hoop back down on a FULL 36-gallon barrel with a mallet and no cooper's driver
+2026-09-09			d3	1	0	1		day 69: turns to lash two ten-foot poles and the bearskin into a litter for the dwarf -- done in parallel
+2026-09-09			d6	2	0	2		day 69: did the hoop work take? 2 = SEATED AND THE BARREL IS SOUND
+2026-09-09			d12	8	0	8		day 69 ~round 55: VOID -- wandering monster rolled on a d12 when the B1 level-1 table is 1-6. Out of range, rerolled
+2026-09-09			d6	5	0	5		day 69: B1 level-1 wandering monster, CORRECTED die -- 5 = GIANT RATS (2-5)
+2026-09-09			2-5 (1d4+1)	2	1	3		day 69: number appearing -- THREE giant rats
+2026-09-09			d6	1	0	1		day 69: do they stop at the spiked door or pass? 1 = STOP AT THE DOOR
+2026-09-09			d6	3	0	3		day 69: turns they keep at the door after the hammering stops -- THREE
+2026-09-09			d6	3	0	3		day 69: and then what? 3 = they drift off but NOT FAR
+2026-09-09			d100	1	0	1		day 69: ISTA HEAR NOISE, 10%, MAKES IT ON A 1 -- off the door, not gone, two of them sat west along y=10. Tristle failed three (91, 21, 25 vs 15%)
+2026-09-09			d6	1	0	1		day 69: do they clear off in five more minutes? 1 = STILL THERE
+2026-09-09			d100	12	0	12		day 69: TRISTLE HEAR NOISE, 15%, MAKES IT on his third attempt -- they have moved to the NEXT DOOR, (22,9,H), the one the party spiked with four on exp.4 turn 412 with cloaks in the threshold. THEY ARE WORKING A ROUTE, door to door
+2026-09-09			d6	1	0	1		day 69: turns to draw four jamb spikes and lift the cloaks QUIETLY -- one turn, the gentle method
+2026-09-09			d6	1	0	1		day 69 round 124: SURPRISE, 3 giant rats, surprised on 3 (DM call, widened from the bestiary's 2: absorbed at a door with their backs turned, party comes through a door 30 ft behind them with a lit lantern). SURPRISED. The party could not be surprised -- Tristle had listened them out
+2026-09-09			d6	5	0	5		wandering check, anchor extra
+2026-09-09			d6	5	0	5		wandering check, anchor extra
+2026-09-09			d6	6	0	6		wandering check, anchor 150
+2026-09-09			d6	3	0	3		wandering check, anchor extra
+2026-09-09			d6	2	0	2		wandering check, anchor extra
+2026-09-09			d6	3	0	3		wandering check, anchor extra
+2026-09-09			d6	6	0	6		wandering check, anchor 180
+2026-09-09			d6	4	0	4		wandering check, anchor extra
+2026-09-09			d6	2	0	2		wandering check, anchor 210
+2026-09-09			d6	2	0	2		wandering check, anchor 240
+2026-09-09						VOID		day 70: THE THREE GLASS-PACKING ROLLS ARE VOID -- 3d6=12 for the fraction arriving unbroken, d6=4 for packing turns, d6=3 for spoiled rations. Player-caught. THE DM INVENTED A FRAGILITY MECHANIC THAT HAS NEVER EXISTED IN THIS CAMPAIGN. Expedition 7 carried ~200 lb of laboratory glass worth ~250 gp out of the same room with NO breakage rule and one recorded constraint: 'too bulky to carry without dropping the party from 9in to 6in.' It is a WEIGHT problem and always was. And it was introduced AFTER the party had committed, so they could not have brought straw and boxes from the carts half an hour away. The four turns of clock time stand as time spent loading; nothing was broken and no rations were spoiled.
+2026-09-09			d6	5	0	5		wandering check, anchor 20
+2026-09-09			d6	1	0	1		wandering check, anchor 20
+2026-09-09			d6	2	0	2		wandering table, level 1
+2026-09-09			d6	5	0	5		wandering check, anchor extra
+2026-09-09			d20	1	0	1		Y save vs Paralyze/Poison/Death
+2026-09-09			d20	12	0	12		F save vs Spell
+2026-09-09			d100	62	0	62		morale
+2026-09-09			d100	63	0	63		morale
+2026-09-09			d100	50	0	50		morale
+2026-09-09			d100	51	0	51		morale
+2026-09-09			d100	51	0	51		morale
+2026-09-09			d100	66	0	66		morale
+2026-09-09			d100	81	0	81		morale
+2026-09-09			d100	100	0	100		morale
+2026-09-09			d100	100	0	100		morale
+2026-09-09			d100	100	0	100		morale
+2026-09-09			d6	5	0	5		initiative, party
+2026-09-09			d6	2	0	2		initiative, monsters
+2026-09-09			d6	3	0	3		initiative, party
+2026-09-09			d6	3	0	3		initiative, monsters
+2026-09-09			d6	3	0	3		surprise check, party
+2026-09-09			d6	3	0	3		surprise check, party
+2026-09-09			d6	2	0	2		surprise check, party
+2026-09-09			d6	2	0	2		surprise check, party
+2026-09-09			d20	20	0	20		giant centipede attacks AC 9
+2026-09-09			d20	20	0	20		giant centipede attacks AC 9
+2026-09-09			d20	20	0	20		giant centipede attacks AC 9
+2026-09-09			d20	20	0	20		giant centipede attacks AC 9
+2026-09-09			d20	20	0	20		giant centipede attacks AC 9
+2026-09-09			d20	20	0	20		orc attacks AC 9
+2026-09-09			1-8 (1d8)	8	0	8		orc damage
