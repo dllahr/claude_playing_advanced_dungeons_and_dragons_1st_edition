@@ -546,6 +546,14 @@ weight and the 550 gp weight of rig are the **DM calls** above. Arithmetic only.
 > **The party now has two mules and two carts, and Coll's crew graded a
 > cart-passable trail to the basecamp**, so the arithmetic no longer forbids it.
 >
+> **⚠ BUT THE TRAIL ONLY GOES HALFWAY.** `campaign/calendar.md`: the basecamp *"sits
+> HALFWAY between the road and the cave mouth"* — **road → basecamp is graded and
+> cart-passable; BASECAMP → CAVE ENTRANCE is another half hour of unmade outcrop.**
+> **A cart never reaches the door.** The 460 lb has to come down that half hour by
+> hand, rope or drag. *(DM error 2026-09-08, player-caught: Halm was written
+> objecting to a rope-and-brake descent on the grounds that a made road existed
+> there. It does not.)*
+>
 > **NO BOOK GIVES A CART'S CAPACITY.** PHB p.36 prices a cart at 50 gp and says
 > nothing about load. **DM CALL, recorded so it is the same number every time: a
 > beast in a cart shifts about FOUR TIMES what it carries on its back**, which is

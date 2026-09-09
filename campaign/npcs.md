@@ -3033,33 +3033,43 @@ say a number or the box gets built long and the difference gets padded.
 **On day 40 he said of Lyde *"that's not carting, that's talking."* This is carting**,
 and he listens to the whole plan with his hand over his mouth.
 
-**HE SAYS NO TO ROLLING IT:**
-
-> *"You'll not roll it. **Not down that.** Coll's lads graded that trail for a cart
-> and they graded it well — I've been up it. **So why would you roll a full barrel
-> down a made road when you can drive up it empty and drive down it loaded?** You'd
-> be inventing a hill that isn't there."*
+> ### ⚠ THE DM'S FIRST VERSION OF THIS SCENE WAS WRONG — corrected 2026-09-08, player-caught
 >
-> *"And a rolling barrel on brake ropes — aye, it's done and I've done it, **and it's
-> done on a bank you can't get a wheel onto.** Once it goes it goes, and there's
-> eight of you on those ropes and four hundredweight between you and the bottom."*
+> **The DM had Halm refuse the rope plan on the grounds that Coll's graded trail
+> makes rolling unnecessary. IT DOES NOT.** `calendar.md`'s own distance table:
+> **the crag turning → COLL'S BASECAMP is half an hour and the basecamp "sits
+> HALFWAY between the road and the cave mouth"; BASECAMP → CAVE ENTRANCE is another
+> half hour.** **The graded cart-passable trail runs road-to-basecamp ONLY.** The
+> last half hour up the outcrop is unmade ground, and the DM had Halm say *"why roll
+> it down a made road"* about a stretch with no road on it.
+>
+> **Dave's plan was aimed at precisely the right problem.**
 
-**HE SAYS YES TO THE PLANKS AND TURNS THEM ROUND:**
+**HE TAKES THE ROPE PLAN, and adds the three things that stop it killing somebody:**
 
-> *"**You've got them the wrong way up.** You don't ramp a barrel UP onto a cart, not
-> that weight — you'll have it over on somebody. **You back the cart into a cut or a
-> bank until the bed's level with the ground and roll it on flat.** Half an hour with
-> a mattock and you've a loading bank you can use every time you come back."*
-
-**AND THE TWO THINGS HE NAMES THAT NOBODY HAD:**
+> *"No — you're right and I was arguing with the wrong hill. **Coll's road stops at
+> the flat.** From the flat up to that door there's no wheel going anywhere. **That
+> half hour is the whole job.**"*
 
 | | |
 |---|---|
-| **1** | *"**How are you getting it out of the hole?** I can't help you in there. **That's the bit that'll beat you** — a graded trail and a cart's the easy end"* |
-| **2** | *"**What's in it?** Because a cart's a cart. Fill it with that and you're not carrying your glass — and you told me there's a hundred gold of glass up there and forty jars. **I'd want to know I wasn't hauling four hundredweight of water past ninety-seven gold of glass**"* |
+| **1 · NOT STRAIGHT DOWN. ACROSS** | *"You never let four hundredweight run at the fall of a slope. **You take it across the face and turn it** — long legs, back and forth, and every leg it's going slower than a man walks. **Twice the distance and a tenth of the danger**"* |
+| **2 · NOT FREE — ON A DRAG** | *"Lash it to two planks. **A barrel on a sledge with a rope bridle is a thing you're pulling; a barrel loose on ropes is a thing that's pulling you.** And a mule drags a deal more than a mule carries — **mule in front on the flat bits, the eight of you on the brake ropes behind**"* |
+| **3 · HIS DAY WITH THE MATTOCK, and it is for THAT HALF HOUR** | *"A man with a mattock and a day takes the worst three steps out of a slope — **and it's the three steps that get you, not the slope**"* |
 
-**He'll come, gladly, and he wants a day up there beforehand with a mattock to cut
-the loading bank.**
+**AND THE LOADING BANK SURVIVES, AT THE BOTTOM:** *"Then at the flat you back the
+cart into a cut till the bed's level and **roll it on flat**, same as I said. **That
+bit I had right.**"*
+
+**AND THE TWO THINGS HE NAMES THAT NOBODY HAD, neither of them his to solve:**
+
+| | |
+|---|---|
+| **1** | *"**How are you getting it out of the hole?** From that door inwards I'm no use to you. **That's the bit that'll beat you**"* |
+| **2** | *"**What's in it?** Because that's a cart's worth, and you've ninety-seven gold of glass and forty jars sat up there wanting the same cart"* |
+
+**He'll come, gladly, and he wants his day up there beforehand — on the ungraded
+half hour, with a mattock.**
 
 > **AND THE ARITHMETIC HAS MOVED, which is why the plan is even on the table.** The
 > day-34 ruling *"you do not move a 460 lb barrel off a crag, you TAP it"* was made
