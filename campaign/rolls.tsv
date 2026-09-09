@@ -6734,3 +6734,35 @@ when	exped	turn	notation	dice	modifier	total	hidden	reason
 2026-09-08			d6	2	0	2		day 66: what Bern does. 1-2 obstructs, 3-4 lets them in stiffly, 5-6 lets them in and speaks. ROLLED 2 -- HE OBSTRUCTS, and it is not malice: he does not slam the door and he does not argue, he simply does not move out of it. "She's resting. I'll tell her you called." THE SAME THING HE DID ON THE 54TH, in the same doorway. Told he was finished with, he has decided the way to be finished with is to be CORRECT
 2026-09-08			d100	99	0	124		day 66: ISTA, first seen by anybody in the party in nineteen days. +25 BOOK-STRICT (DMG p.37, "uses and diminishes his or her own magic to benefit the NPC, including use of spells, especially cures" -- four cure light wounds in area 9). 99+25 = 124, off the top of the table
 2026-09-08			d6	4	0	4		day 66: what Ista has been doing for nineteen days. 4 = SHE GOT THE STRIPPED MESSAGE AND BELIEVED IT, waited a fortnight until she could stand, WALKED ACROSS TOWN AND SAT IN THE INN MOST OF A DAY -- and Osk's lad told her the party had gone south with Halm's cart. She went home and told nobody. She has been on her feet about a week. NOBODY LIED TO HER AND NOBODY WAS CRUEL AND THE WHOLE OF IT WENT WRONG ANYWAY
+2026-09-08						VOID		day 66: THE TWO d100 REACTION ROLLS ON BERN (50) AND ISTA (124) ARE VOID. Player-caught. Both are long-established, and one of them is a 1st-level character on characters.tsv. I wrote the 'step-change' exception into my own fix an hour earlier and then used it four times inside the hour -- it is not in DMG p.63 or anywhere else and it is deleted. The two d6 rolls STAND: what Bern does and what Ista has been doing for nineteen days are UNKNOWN FACTS, which is the legitimate use of a die. Neither d100 changed a word of what was written, which is the proof they were noise
+2026-09-08			d6	5	0	5		wandering check, anchor 20
+2026-09-08			d6	1	0	1		wandering check, anchor 20
+2026-09-08			d6	2	0	2		wandering table, level 1
+2026-09-08			d6	5	0	5		wandering check, anchor extra
+2026-09-08			d20	1	0	1		Y save vs Paralyze/Poison/Death
+2026-09-08			d20	12	0	12		F save vs Spell
+2026-09-08			d100	62	0	62		morale
+2026-09-08			d100	63	0	63		morale
+2026-09-08			d100	50	0	50		morale
+2026-09-08			d100	51	0	51		morale
+2026-09-08			d100	51	0	51		morale
+2026-09-08			d100	66	0	66		morale
+2026-09-08			d100	81	0	81		morale
+2026-09-08			d100	100	0	100		morale
+2026-09-08			d100	100	0	100		morale
+2026-09-08			d100	100	0	100		morale
+2026-09-08			d6	5	0	5		initiative, party
+2026-09-08			d6	2	0	2		initiative, monsters
+2026-09-08			d6	3	0	3		initiative, party
+2026-09-08			d6	3	0	3		initiative, monsters
+2026-09-08			d6	3	0	3		surprise check, party
+2026-09-08			d6	3	0	3		surprise check, party
+2026-09-08			d6	2	0	2		surprise check, party
+2026-09-08			d6	2	0	2		surprise check, party
+2026-09-08			d20	20	0	20		giant centipede attacks AC 9
+2026-09-08			d20	20	0	20		giant centipede attacks AC 9
+2026-09-08			d20	20	0	20		giant centipede attacks AC 9
+2026-09-08			d20	20	0	20		giant centipede attacks AC 9
+2026-09-08			d20	20	0	20		giant centipede attacks AC 9
+2026-09-08			d20	20	0	20		orc attacks AC 9
+2026-09-08			1-8 (1d8)	8	0	8		orc damage

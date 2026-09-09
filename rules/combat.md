@@ -523,7 +523,7 @@ do not morale-check a shopkeeper.**
 > |---|---|
 > | **first meeting with a new NPC** | **roll p. 63.** Correct for Rud, Pell, Trebb, Ossery, Dill, Rowe, Lyde, Father Doule |
 > | **an ESTABLISHED NPC in conversation** | **DO NOT ROLL.** They have a standing disposition; it moves for **reasons that are on the record**, and the DM states the reason |
-> | **a genuine step-change** | **roll** — a rupture, a rescue, a betrayal, an offer of a wholly different order. *Ancel 11 → 81 was legitimate. Wend at her own counter on the ninth conversation was not* |
+> | **a “step-change”** | **NO. The DM invented this exception on 2026-09-08 and used it four times inside the hour; it is struck. See `CHECKLIST.md`** |
 > | **an unknown FACT** | **always roll, on a table declared before the die.** This is the honest use and it has carried the campaign: the vial's contents, Dill's history, the loom's width, whether Marchford owned a font |
 > | **loyalty** | **DMG pp. 36-37, when the books call for it** — danger, temptation, hardship. **Never conversationally** |
 >

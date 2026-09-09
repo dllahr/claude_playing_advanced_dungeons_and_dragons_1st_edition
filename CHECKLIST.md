@@ -1291,16 +1291,40 @@ meeting system.**
 > 2. was corrected, and added the **loyalty modifiers** — better, and still wrong;
 > 3. **the real answer is that most of those rolls should not have been made.**
 
-### THE DISCIPLINE
+### ⚠ AND THE "STEP-CHANGE" EXCEPTION IS DELETED — it was the DM's and it lasted an hour
 
-- **New NPC → roll.** Established NPC in conversation → **do not roll.**
-- **An established NPC's mood moves for a REASON ON THE RECORD**, and the DM says
-  the reason out loud. If there is no reason, the mood does not move.
-- **Step-changes get a roll** — rupture, rescue, betrayal, an offer of a different
-  order of magnitude.
-- **ALWAYS roll for unknown FACTS, on a table declared before the die.** That has
-  been the honest half of this campaign all along.
-- **Loyalty checks per the books**, at danger and hardship — never as small talk.
+**The first version of this rule allowed a reaction roll for a "step-change" —
+a rupture, a rescue, an offer of a different order. THAT IS NOT IN DMG p.63 OR
+ANYWHERE ELSE. The DM invented it as part of the fix and then used it four times
+inside the hour** (Bern 50 and Ista 124 on day 66, both long-established, one of
+them a 1st-level character on `characters.tsv`). **Player-caught, both rolls
+voided, and the exception is struck.**
+
+> **The tell: neither d100 changed a single word of what was written.** Bern's
+> behaviour came from his file and Ista's came from hers. **The dice were noise
+> wearing the clothes of rigour.**
+
+### AND THE BOOK ITSELF SAYS TO USE JUDGMENT — DMG p. 37, foot of the loyalty tables
+
+> *"**If you are certain of your DM ability, most of these factors should be apparent
+> without actually checking them out, simply by empathizing with the character or
+> group in question, and having them act accordingly.** Until you are absolutely
+> certain, however, it is urged that you use these tables."*
+
+### THE DISCIPLINE — three cases and no exceptions
+
+| | |
+|---|---|
+| **A CREATURE OR PERSON MET FOR THE FIRST TIME** | **roll DMG p. 63.** This is what the table is: an encounter mechanic in the combat chapter |
+| **ANYONE ALREADY ESTABLISHED** | **NO ROLL, EVER.** Read their file, decide what they do, and **say the reason out loud.** If there is no reason on the record, they do not change |
+| **AN UNKNOWN FACT** | **roll, on a table declared before the die.** *Is he free to travel · how bad is the foot · what has she been doing for nineteen days · how wide is the loom · what is in the vial.* **This is the honest use and it has carried this campaign** |
+
+**LOYALTY** is checked per DMG pp. 36-37 at **danger, temptation and hardship** —
+never conversationally.
+
+> **AND THE GENERAL LESSON, which is bigger than reactions:** when the DM fixes a
+> rule and writes an exception into the fix, **the exception is where the old
+> behaviour goes to live.** Fix the rule without the escape hatch.
 
 **And the tell that this was going wrong was available for days:** every low roll
 needed a story invented for it, and `CHECKLIST` already forbade inventing stories

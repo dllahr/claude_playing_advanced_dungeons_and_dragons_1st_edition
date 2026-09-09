@@ -2563,9 +2563,9 @@ for now.** 330-380 gp, 4-10 weeks, six vials a week for ever, and they had 631 g
 > Sarn, Marrow, Fenn, Bern — DO NOT ROLL A REACTION IN ORDINARY CONVERSATION.**
 > They have a standing disposition, and it moves **for reasons that are on the
 > record, which the DM states out loud.** Roll only for a **first meeting** or a
-> genuine **step-change** (a rupture, a rescue, a betrayal, an offer of a wholly
-> different order). **And always roll for unknown FACTS, on a table declared before
-> the die.**
+> **first meeting ONLY. There is no step-change exception** — the DM invented one on
+> 2026-09-08 and used it four times within the hour, and it is struck. **Always roll
+> for unknown FACTS, on a table declared before the die.**
 >
 > **Rolled conversationally, Cuddy ran 102 → 6 → 53 → 5 → 71 → 81 → 25 and Wend ran
 > 101 → 60 → 57 → 26 → 46 → 12 → 41 → 37 → 88 → 46. That is a d100 with a name on
