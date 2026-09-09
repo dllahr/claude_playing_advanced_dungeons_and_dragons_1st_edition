@@ -87,7 +87,7 @@ the table, and the first one is the big one.**
 
 | | |
 |---|---|
-| **THE WAGE ROLL** | **MUCH SMALLER THAN THE DM FIRST STATED — corrected 2026-09-07, player-caught.** *(1)* **SIX OF THE ELEVEN ARE NOT THE PARTY'S.** Hew, Meg, Tibb, Odo and two more **all went to MARROW'S on day 34** with a written right of return, and **Marrow pays them** — he said so in front of Dave: *"I'll pay a wage and I'll pay it every week, and it'll be written down."* *(2)* **The rest are the VENTURE'S operating cost, not a drain on the 631.** Coll, Wat, Ferd, Ged, Nan, the two men off Ellery's and Sarn work Wend's barn, the store and the basecamp — and `wool_venture.md` is explicit that **costs come off the top with the capital.** They are set against what the trade earns. *(3)* **The rate still has no figure.** The only number on record is **3 gp 2 sp of arrears to Coll on day 32 for six hands.** DMG p.28: bearer/porter 1 s.p./day (1 gp a month with quarters), teamster 5 s.p., valet 3 s.p. — the rate already used for Wat. **Wend has the roll and can name it in one conversation** |
+| **THE WAGE ROLL** | **MUCH SMALLER THAN THE DM FIRST STATED — corrected 2026-09-07, player-caught.** *(1)* **⚠ AND THE DM'S FIRST CORRECTION WAS ALSO WRONG — DOUBLE-SUBTRACTED, player-caught 2026-09-08.** This table previously said six of the eleven were Marrow's. **CHECK THE DATES: the six unlisted hands went to Marrow's on DAY 34. The eleven were counted on DAY 40 and written into Ottir's account on the 43rd — AFTER they had gone.** So **the eleven never included them. THE PARTY PAYS ELEVEN, and Marrow's six are additional and Marrow's.** The wage bill is LARGER than the previous entry claimed, not smaller. *(2)* **The rest are the VENTURE'S operating cost, not a drain on the 631.** Coll, Wat, Ferd, Ged, Nan, the two men off Ellery's and Sarn work Wend's barn, the store and the basecamp — and `wool_venture.md` is explicit that **costs come off the top with the capital.** They are set against what the trade earns. *(3)* **The rate still has no figure.** The only number on record is **3 gp 2 sp of arrears to Coll on day 32 for six hands.** DMG p.28: bearer/porter 1 s.p./day (1 gp a month with quarters), teamster 5 s.p., valet 3 s.p. — the rate already used for Wat. **Wend has the roll and can name it in one conversation** |
 | **Lyde — two apprentices** | **premium in advance + a YEAR's board**, not six months. Wend is doing the sums the night of day 54 |
 | **Ede the spinner** | **comes on a wage.** Never priced |
 | **Wend's new hires** | *"one that can count and one that can lift."* Art. 8's self-set cap is a **SCOPE** — *"enough for a clerk and one pair of hands in the barn"* — and the **figure was never named** |
@@ -96,9 +96,7 @@ the table, and the first one is the big one.**
 
 ## 6 · THE POSITION IN ONE LINE
 
-**866 gp 6 sp in hand** *(631 gp 6 sp with Wend, 235 gp carried south as of day 59)*, **~250 gp collectable from Toller the moment somebody walks into his shop, ~100-110 gp of carts and mules that were on nobody's books at all, and a wage bill that is smaller than it looked** — six of the eleven
-are Marrow's, and the rest are the venture's cost set against the venture's
-earnings.
+**866 gp 6 sp in hand** *(631 gp 6 sp with Wend, 235 gp carried south as of day 59)*, **~250 gp collectable from Toller the moment somebody walks into his shop, ~100-110 gp of carts and mules that were on nobody's books at all, and a wage bill nobody has priced** — **eleven on the roll, none of them Marrow's**, working the barn, the store and the basecamp, and `wool_venture.md` puts their cost off the top with the capital.
 
 > **TWO CORRECTIONS MADE 2026-09-07, both player-caught, both the DM's.** The dragon
 > scales were **sold on day 19 for 110 gp** (`encounters.tsv:42`) and this page had

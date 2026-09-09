@@ -2860,3 +2860,111 @@ to sell Dave a sheep.
 > standing instruction executed exactly, and returning nothing. **Which is the honest
 > shape of a standing instruction: most executions of one return nothing, and that is
 > why it has to be an instruction and not a hunch.**
+
+
+---
+
+## DAY 65 — HOME. FOUR THINGS, AND ONE OF THEM IS THE DM'S ERROR AGAIN
+
+### STANDING ARRANGEMENT, recorded so it stops needing to be said
+**TRISTLE VISITS TOLLER WHENEVER THE PARTY IS IN TOWN.** Free tuition offered day
+32 and taken. *"Send the elf. He asks better questions than you do, and he's the
+only one of you who's ever looked at a book instead of at the price of it."*
+
+### TOLLER PAID — ~250 gp, his full valuation (62, d6=5)
+
+**Wace's receipt did it, and what Toller seized on was the wording:** *"'I have had
+your letter, which said thus and so' — and then he's **written out the thus and
+so.** He's recited it. **He's put my problem in his own hand and doesn't know he's
+done it**, because to him it's a Tuesday and a receipt book."*
+
+**HIS DAY-42 CONDITION IS DISCHARGED AND CLOSED.** Twenty-three days unmoved, and
+satisfied by a clerk's receipt that cost nothing. **The party is over a thousand
+gold for the first time: 1,084 gp 5 sp.**
+
+### ⚠ THE WAGE ROLL — THE DM HAS NOW GOT THIS WRONG TWICE IN OPPOSITE DIRECTIONS
+
+**Player-caught, and the dates settle it.** The six unlisted hands went to
+**MARROW'S on day 34.** The eleven were counted on **day 40** and written into
+Ottir's account on the **43rd** — **after they had gone.**
+
+> **THE ELEVEN NEVER INCLUDED MARROW'S SIX. The party pays ELEVEN. Marrow's six are
+> additional and Marrow's.** `finances.md` corrected: the bill is larger than the
+> previous "correction" claimed, not smaller.
+
+**AND THE PERMANENT FIX IS THE ONE THE PLAYER PROPOSED: PUT THE NAMES IN AN
+ARTICLE.** The list already exists — **Ottir's account carries the eleven names down
+the left-hand side and Wace read them out one at a time.** Ottir rewrote it at his
+own table on day 43 and the hall holds the fair copy. **Copy the eleven names off it
+into an article and the ambiguity dies for good.** Which is Cuddy's own counsel:
+*"a list of eleven names is a thing he cannot argue with; 'eleven' is a number a man
+can decide he doubts."*
+
+*(The fourteen shares are CLOSED — the player's ruling, day 65. One sale, completed,
+paid out days 33-35, nothing lingering. Do not reopen them.)*
+
+### THE CARTS — 98, and d6 = 6: SHE REFUSES THE GIFT AND BUILDS SOMETHING BETTER
+
+> *"**No. They're yours.** I said that when I wouldn't let you charge the venture a
+> hundred gold for them and I'll not swallow my own words a month later."*
+>
+> **"LET them. To me, to the venture, to Halm, to Marrow if he wants one — at a rate,
+> written down, and the rate is the WEAR. Seventeen gold a year a cart, because
+> that's the figure I made you use. Same with the beasts."**
+>
+> *"Then a cart stood in a yard all winter **costs somebody something** and somebody
+> finds a use for it, and you don't have to be generous at anybody, and **when it
+> breaks it's clear whose it is to mend.**"*
+
+**AND SHE TAKES THE WHOLE STRUCTURAL PROBLEM, UNPROMPTED:** *"Fourteen shares in a
+sale that's already happened, eleven people on a wage roll, a licence on a hill, a
+spinner arriving Thursday and a man who dresses flax walking up the road behind her
+— **and not one of those things belongs to anything.** It wants writing. **I'll write
+it. Give me a week and don't help.**"*
+
+### THE LOOM IS NARROW — and Wend turns it round (88, d6 = 6)
+
+**d6 = 1: NARROW.** Sound, complete, second-hand and the wrong width — so on Lyde's
+own warning, **one weaver, one pair of hands.**
+
+**She owns the near-miss first** — *"I bought what was there, in three days, in a
+strange city, while I was selling two years of somebody else's wool"* — **and then
+sees what nobody else does:**
+
+> *"**Broadcloth wants a fulling mill and capital and somebody rich to buy it.**
+> We've none of the three. **Narrow cloth is what a poor hundred wears** — and this
+> hundred buys every yard of it in, at somebody else's price. I lost a bolt of it in
+> my own shop in the first week you knew me."*
+>
+> **"So it isn't one weaver too many. IT'S ONE LOOM TOO FEW."**
+
+**And the narrow loom is the CHEAP one** — the broadloom was always the expensive
+thing. **Two narrow looms, two weavers, and Lyde is training exactly two.**
+
+**Then the flat sentence she will not soften:** *"You'll want a joiner. **There's one
+joiner in this town.** That's not me having an opinion, that's me telling you what a
+loom's made of. **It's your business and I'll not touch it.**" (She means BERN. She
+says nothing else and doesn't look up.)*
+
+**WAT RIDES TO LYDE THAT NIGHT** *(d6 = 4, back from Draycot and free)* with the
+width, because it changes what Lyde teaches from the first week.
+
+### ROWE IS THE PARTY'S GROOM — 60, and d6 = 4
+
+**Yes, and with no enthusiasm at all**, which is what a man looks like who has been
+offered things all week and is still waiting for the catch. *"Aye. I'd do that. I'd
+like that."*
+
+> **AND HE CANNOT READ, and he says it as a disqualification and asks for nothing.**
+>
+> *"You said messenger. **I can't read.** I'm not asking you to fix it — **I'm
+> telling you before you find out**, because you'd send me with a letter and I'd
+> carry it fine and then somebody'd ask me what was in it."*
+>
+> **This is exactly where Sarn stood on day 39, and exactly what Sarn did
+> differently: Sarn ASKED.** And `articles.md`'s second finding is what came out of
+> it — a lesson offered as a kindness is charity and got **42**; offered as a job
+> *("Frython's laid up a week and wants company")* it is a duty and got **77**.
+
+**The party now owns four beasts and two carts and has, for the first time, somebody
+whose job they are.**
