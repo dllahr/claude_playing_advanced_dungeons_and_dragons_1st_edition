@@ -1422,3 +1422,24 @@ asking what anybody was doing** — and in doing so decided, silently:
 **A monster's actions are the DM's. A character's actions are never the DM's** —
 not the six PCs, and not Hask, Dellie or Ista, who are 1st-level characters on
 `characters.tsv` that the player plays.
+
+
+## "FIRST ENCOUNTER" MEANS FIRST ENCOUNTER, NOT FIRST LINE OF DIALOGUE
+
+**Day 71, player-caught.** The DM rolled a p.63 reaction for **HOLT the innkeeper**
+on the grounds that he was unnamed in `npcs.md` and had never spoken on the page —
+**and the party has been paying for his rooms for two months** and had held two
+meetings in his common room.
+
+> **An NPC who has never had a line of dialogue is not therefore a stranger.**
+> The test is not *"is he in the file?"* — it is **"has the party had dealings with
+> him?"** Rooms paid for, goods bought, a road shared, a meeting held in his room:
+> **all of that is dealings.**
+
+**The player's own test settles it:** *"in theory you could go back two months and
+roll the initial reaction, but what does that change?"* **Nothing. So don't roll
+it.** Decide what he does from what is known about him and say why.
+
+**And the useful half:** the FACT rolls in that same scene were correct and
+survived — whether he could name the contents off the bung, and whether he wanted
+it and could pay. **Dice for facts. Judgment for feelings.**
