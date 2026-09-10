@@ -1443,3 +1443,38 @@ it.** Decide what he does from what is known about him and say why.
 **And the useful half:** the FACT rolls in that same scene were correct and
 survived — whether he could name the contents off the bung, and whether he wanted
 it and could pay. **Dice for facts. Judgment for feelings.**
+
+
+## ENTERPRISE MATTERS GO TO WEND BY DEFAULT. DO NOT STAGE THEM AT THE PARTY
+
+**Day 72, player-caught — and the DM had it backwards.** The DM wrote that the party
+had *"nearly forgotten"* to route a new venture through Wend. **The player's answer:**
+
+> *"We didn't nearly forget it twice, we've been reminding you and/or Wend about it.
+> **Nothing would make me happier than if all of this happened automatically.**"*
+
+**And the record is on the player's side.** In one session they told Wat his reports
+go to Wend and not the party; ruled the loom was hers to buy and refused to nag her
+about it; left the wool leads with her; and said to ask Wend and Coll about Dill.
+**The DM kept staging those conversations at the party anyway.**
+
+> ### THE RULE
+>
+> **Art. 8 and art. 13 are real. Play them.** Hiring, stock, prices, ventures, land,
+> the wage roll and anything touching the enterprise's money are **WEND'S** —
+> and the DM should show her **exercising that authority unprompted**, not wait for
+> the party to hand it to her.
+>
+> - **A new commercial idea gets taken to Wend. The DM does not resolve it at the
+>   party first.**
+> - **When information arrives that is hers, it goes to her** — Wat's report, a
+>   drover's names, a price seen in another town.
+> - **She acts between scenes.** She hires, she orders, she writes, she decides —
+>   and the party finds out because she tells them, or because it is done.
+> - **THE TEST: if the party has to remind the DM whose job something is, the DM has
+>   made the party the switchboard again.**
+
+**This is the third form of the same failure in one session** — after *an NPC with
+delegated authority must not ask permission to use it*, and *the DM does not declare
+the party's actions*. **All three are the DM taking back agency that was given away
+in writing.**
