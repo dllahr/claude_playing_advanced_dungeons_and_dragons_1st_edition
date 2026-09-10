@@ -870,3 +870,49 @@ and Ottir holds his own.**
 fail loudly — it rots quietly.** The eleven had no row. It lived in three prose
 files as a number in a sentence, and it drifted three times in forty-eight hours.
 **An article with a list in it is a row.**
+
+
+---
+
+## 13 · THE STANDING STRUCTURE — Wend's six days, signed day 72
+
+**She asked for a week and don't help, and finished in six.** Written at her own
+table with Dave, the party, Coll, Ottir and Sarn in the room. **Fair copy in Sarn's
+hand** — four weeks after he could not read his own name — **witnessed by Ottir on
+the same table the wool money was counted out on.**
+
+### THE FINDING, which nobody in the party could have seen
+
+> **"Eleven people are guaranteed against a purse. That's not a guarantee. That's a
+> promise."**
+
+*"I built the pool so this district's trade doesn't stand or fall with your title —
+a shilling in the pound from the holders, nothing from you, and you bid in the yard
+like anybody else. **And then I sat down on Thursday and worked out what the eleven
+wages stand on.** I protected the holders from you and **I left the eleven standing
+on you.** Nobody made me do that. I just didn't look."*
+
+### THE THREE NUMBERS
+
+| | |
+|---|---|
+| **THE WAGE RESERVE — 300 gp** | **cash, locked, and NO EXCEPTION CLAUSE.** A year of eleven people. *"It sits there being no use to anybody, which is the entire point of it."* **AND IT MAY NOT BE BORROWED FROM** — *"you'd want to borrow it in a thin season when money's tight, and that is the exact season the eleven need it. A reserve you can borrow from in a bad year isn't a reserve, it's a purse with a story attached."* And on exceptions: ***"an exception clause is where the money goes."*** |
+| **ART. 7 — 500 gp, AND IT IS NOT A RESERVE** | *"It's a COMMITMENT and it has a DATE."* Art. 7 is called **at shearing and nowhere else**, so the party does not need 500 in coin — **it needs to be able to FIND 500 by next summer.** **SO THE MONEY TRADES.** One rule, in the clause: **anything bought with it must be SELLABLE BEFORE SHEARING.** Cloth yes. Iron and salt yes. **A loom no. A cart no. Nothing still sat in a barn in June** |
+| **THE RANK — WAGES FIRST** | when both come due in one bad year. *"I can go to six holders and say not this year, not at eight, I'm sorry — and they'll be angry and they'll still have their wool and their farms. **Eleven people on a wage have nothing else.**"* **AND THE COST IS WRITTEN IN THE MARGIN IN HER OWN WORDS: *"that's the end of the pool. You break the floor once and the pool is a thing people used to be in."*** |
+
+> ### WHAT IT DOES TO THE POSITION
+>
+> **The party had reckoned on 244 gp of working capital. It has 744** — because the
+> 500 was never money that had to sit still. **And the eleven now stand on something
+> that cannot be borrowed.**
+
+### THE COSTS SHE PRICED IN THE WEEK — the first time the roll has ever had a number
+
+| | |
+|---|---|
+| the **five** on the books now | **~11 gp a month** *(DMG p.28 monthly column, quarters found)* |
+| all **eleven**, if Marrow's six return on the right of return | **~25 gp a month** |
+| the **Draycot licence** | 25 gp at Michaelmas, 25 the one after |
+| **Lyde's board** | 18 gp left, 6 gp a quarter, **next about day 152** |
+| **still unpriced** | Ede's wage · Dill's wage · her own two hires · the loom |
+| **all in, once everybody is on** | **~30-40 gp a month.** *"That's not what eats money. STOCK eats money."* |
