@@ -1044,3 +1044,72 @@ Wend's word, and he does not deny it.)*
 > being made** — and there are two pending: **the Michaelmas licence payment**, and
 > **the dwarf's burial**, which cannot happen until an answer comes back about what a
 > dwarf is owed.
+
+
+---
+
+## THE FOURTH FINDING — day 77. **"AT COST" MEANT 60 GOLD LESS THAN COST, AND NOBODY KNEW**
+
+**The party sold the district 100 gp of iron, nails and salt AT COST, with the price
+visible, per Wend's day-20 rule: *be open-handed where it is FINITE and where it
+SHOWS.* Dave asked on day 77 whether wages and cart wear ought to go into that price.
+Wend had already found the answer during her week on the articles (d6 = 6) and had not
+raised it, because it is the party's money and the party's gesture.**
+
+### THE ARITHMETIC — and the whole finding is in the second row
+
+| the Ludbury return load, days 25-27 | |
+|---|---|
+| Total | **718 gp of goods, ~1,170 lb, three carts** |
+| **Iron, nails and salt** | **100 gp — and 600 lb** |
+| **CARRIAGE FOLLOWS WEIGHT, NOT VALUE** | so the iron was **14% of the value and 51% of the WEIGHT** |
+| Carriage on that load *(cart wear 17×3=51, gate duty ~33, two hired carts, road costs)* | **~100-140 gp** |
+| **THE IRON'S SHARE** | **50-70 gp** |
+
+> ### **IT COST ~100 AT LUDBURY AND ~160 STANDING IN WETHERSBY. IT WAS SOLD FOR 100.**
+>
+> **The largest single gift in the campaign** — larger than Bern's 25 gp of tools —
+> **and the only one whose size nobody knew, the recipients included.**
+
+### THE RULE THAT COMES OUT OF IT
+
+| | |
+|---|---|
+| **"COST" MEANS LAID-DOWN COST** | purchase + duty + **wages** + **wear**, or the word means nothing. *"Anything short of that isn't a low price, it's a hole in your own book — and in a year you'd be telling me iron doesn't pay, when what doesn't pay is not counting."* |
+| **BUT WAGES BELONG TO THE RUN, NOT TO THE GOOD** | *"Hang the whole of Halm's wage on the iron and the iron looks bad and the cloth looks a marvel — **and then somebody makes a decision off that, and the decision's wrong.**"* **Apportion carriage BY WEIGHT, same as the wear** |
+| **⚠ AND THE OLD PRICE CANNOT BE QUIETLY CORRECTED** | This is the **day-59 Trebb finding running backwards.** *"They'd not see you correcting an error. They'd see you putting your price up half again the moment they got used to you"* |
+
+> ### THE FIX: PRICE THE NEW PROPERLY AND **SHOW THE ROAD IN THE PRICE**
+>
+> *"Two numbers on the board. **What it cost at Ludbury, and what it cost to fetch.**
+> Then it isn't a price rise, it's an education, and the next one's legible before you
+> make it."*
+>
+> **The day-20 rule survives intact.** The first hundredweight was the gift; it was
+> finite; it landed; it is *done*. **A standing line gets a standing price.**
+
+### AND WHY THE GESTURE WORKED IN THE FIRST PLACE, which nobody had articulated
+
+> *"Iron's dear this far from a forge **because of the ROAD, not because of the iron.**
+> That's why there was none. You didn't undercut a smith. **You paid the road for
+> them.**"*
+
+---
+
+## ⚠ ASK WHAT IS *DONE*, NOT WHAT IS *OWED* — two advisers, one day apart, same move
+
+**Day 76, Ottir on the chapel roof:** *"Whose is it — that's the wrong end of it. They
+ask **who mended it last, and who paid the man.**"*
+
+**Day 77, Wend on whether to approach Osk:** *"Don't ask Halm about Osk. **Ask him
+what's DONE** — what does a carrier owe another carrier whose road he starts working?
+That he can answer without it being about him."*
+
+**No contact between them, and neither knows the other was asked.**
+
+> **In this hundred, CUSTOM is the cheap answer.** It costs no letter, concedes no
+> title, puts nobody on the spot, and **nobody can write to a steward about a custom.**
+> A question of right creates a dispute; a question of practice creates an answer.
+>
+> **It also gets a self-interested adviser off the hook** — which is the whole reason
+> Halm can be asked about Osk at all.
