@@ -7152,3 +7152,34 @@ when	exped	turn	notation	dice	modifier	total	hidden	reason
 2026-09-09			d20	20	0	20		giant centipede attacks AC 9
 2026-09-09			d20	20	0	20		orc attacks AC 9
 2026-09-09			1-8 (1d8)	8	0	8		orc damage
+2026-09-09			d6	5	0	5		wandering check, anchor 20
+2026-09-09			d6	1	0	1		wandering check, anchor 20
+2026-09-09			d6	2	0	2		wandering table, level 1
+2026-09-09			d6	5	0	5		wandering check, anchor extra
+2026-09-09			d20	1	0	1		Y save vs Paralyze/Poison/Death
+2026-09-09			d20	12	0	12		F save vs Spell
+2026-09-09			d100	62	0	62		morale
+2026-09-09			d100	63	0	63		morale
+2026-09-09			d100	50	0	50		morale
+2026-09-09			d100	51	0	51		morale
+2026-09-09			d100	51	0	51		morale
+2026-09-09			d100	66	0	66		morale
+2026-09-09			d100	81	0	81		morale
+2026-09-09			d100	100	0	100		morale
+2026-09-09			d100	100	0	100		morale
+2026-09-09			d100	100	0	100		morale
+2026-09-09			d6	5	0	5		initiative, party
+2026-09-09			d6	2	0	2		initiative, monsters
+2026-09-09			d6	3	0	3		initiative, party
+2026-09-09			d6	3	0	3		initiative, monsters
+2026-09-09			d6	3	0	3		surprise check, party
+2026-09-09			d6	3	0	3		surprise check, party
+2026-09-09			d6	2	0	2		surprise check, party
+2026-09-09			d6	2	0	2		surprise check, party
+2026-09-09			d20	20	0	20		giant centipede attacks AC 9
+2026-09-09			d20	20	0	20		giant centipede attacks AC 9
+2026-09-09			d20	20	0	20		giant centipede attacks AC 9
+2026-09-09			d20	20	0	20		giant centipede attacks AC 9
+2026-09-09			d20	20	0	20		giant centipede attacks AC 9
+2026-09-09			d20	20	0	20		orc attacks AC 9
+2026-09-09			1-8 (1d8)	8	0	8		orc damage

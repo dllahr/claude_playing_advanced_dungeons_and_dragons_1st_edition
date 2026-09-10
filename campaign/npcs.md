@@ -3077,3 +3077,134 @@ half hour, with a mattock.**
 > carries 6,000 gp weight AT HALF MOVE and the barrel is 4,600.** Two mules, two
 > carts and a graded trail now exist. **Full re-reading in `rules/equipment.md`,
 > including a recorded DM call on cart capacity, which no book gives.**
+
+
+---
+
+# DAY 72 — THE STRUCTURE SIGNED, AND NAN TURNS OUT TO BE THE VENTURE
+
+**Art. 13 is in `articles.md`.** What follows is the rest of the morning.
+
+## TOLLER WILL NOT GO SOUTH — d6 = 1, and the diary was never the reason
+
+*(d6 = 6: he would have carried it in his coat.)* **His own day-16 argument applies
+to himself and he says so:**
+
+> *"I told you not to go to Ludbury as strangers passing through, and **I'd be a
+> stranger passing through.** Sixty-one years old, no name in that town, three weeks
+> to make one. **I'd be doing to myself the exact thing I told you not to do.**"*
+
+**WHAT HE WANTS INSTEAD, and it is cheap: ONE CORRESPONDENT.** *"Not a buyer for the
+glass — a correspondent. Find me a man who'll write back and I'll trade with him for
+twenty years from that chair."*
+
+**Offered more than one, he asks for SIX — IN SIX TOWNS:** *"Two dealers in one town
+who know each other is **one price** — they'll talk, and they'll talk about me. One
+in Ludbury, one in Marchford, **one in Wraye if you ever get there.**"*
+
+> **The party has watched this instrument work already: ANCEL took a penny in the
+> pound for three years to carry Wethersby's name to four buyers who did not know it
+> existed, and it is why the clip sold at all.** Toller is asking for the same thing
+> in reverse.
+
+## HOW THE WAGE BILL GETS PAID — her answer, and it is what they just signed
+
+**Dave asked the sharpest business question of the campaign: 30-40 gp a month
+starting now, and nothing for anybody to work on.**
+
+> *"**We go and buy wool. Now. This month.** There is last summer's clip sitting in
+> barns across three hundreds because nobody came for it... **And that's what the
+> five hundred is for and it fits my own rule** — wool bought in November and sold at
+> Ludbury in the spring is **sellable before shearing.** It isn't a loom and it isn't
+> a cart. **It's the only thing on the list that pays a wage bill.**"*
+>
+> *"Then Nan has fleeces to grade, Coll has a barn to fill, Sarn has a book to keep
+> on whose wool is whose. **That's how you cover a wage bill. You don't find work for
+> people — you buy something that needs doing.**"*
+
+## AND THE VENTURE THAT DOES NOT NEED THE PARTY
+
+**She cannot go** — store, pool, three books, a clerk half taught. **And she will not
+send men to buy a thing they cannot grade:** *"Hask can hold a price and he can't
+tell a fleece from a doormat."*
+
+> ### **"NAN CAN GRADE IT."**
+>
+> *"She's been sorting fleeces in my barn since the fifteenth day. **Two months.**
+> I've watched her put a fleece down on the wrong side of a line and pick it back up
+> without being told... **Nobody has ever asked her a single question about wool.
+> Including me. I've been paying her to do it and calling it sorting.**"*
+
+**HER METHOD, which is the one that worked on Hask before:** a written schedule —
+grades, weights, **a price a grade** — *"buy to it and don't be clever."* **Buy ONE
+BARN first and bring it back to be looked at.** **And go NOW**, because *"the day it
+gets about that somebody's buying, the price moves"* — and pay the paper's price
+*"because I'll not have this district's first buyer in two years be a man who beat
+them down."*
+
+**WHO ASKS HER:** *"I'll ask her. She's on my roll and she works in my barn, and if
+you go round me to her then next time she's got a question she'll not know whose door
+to knock on. **Same reason I told your Wat to come to me.** But you be stood there,
+and you say the one sentence."*
+
+## NAN — no reaction roll, and d6 = 5: she knows far more than anybody realised
+
+**Fifty-seven days in that barn and Dave is the man who said *"then bring her"* when
+Ferd named her on the road. That is not a first encounter.**
+
+She picks a fleece off the pile without looking and talks for two minutes: shoulder
+against britch, why a fleece rolled wet reads a grade better than it is until you
+open it, a hogget's first clip against a ewe's fourth by the tip, what bad skirting
+hides. **Wend, who taught herself this trade in a shop, stops writing.**
+
+> *"Nine year on Rell's ground, and my father before that. **I've watched our own
+> clip sold nine times and I've watched us get beat down on it eight.**"*
+
+### AND THE THING THAT CHANGES THE WHOLE VENTURE — she knows WHOSE
+
+| | |
+|---|---|
+| **Ellery** | keeps his dry and skirts it honest |
+| **the two the far side of Wettleford** | **roll theirs wet and always have** — offered cheap, opens two grades under |
+| **Marrow** | best in the hundred, and he knows it |
+| **a widow at HOBB'S LANE** | **three years of it in a loft**, because her husband dealt with the buyer and she never did, **and she'd take a fair price off anybody who asked her properly** |
+
+> **Wend spent a month chasing names of holdings sitting on wool. Nan has been
+> standing in her barn the whole time knowing which of them were worth buying.**
+
+### And no obstacle, because she settled it on day fifteen
+
+*(d6 = 1 — and the DM declared that roll badly, without saying which end meant what.
+Taken the natural way, and the reason is better than an obstacle: **a woman who
+walked into a strange town with two children and had work inside a fortnight has
+already arranged who minds them.**)*
+
+> *"**Tam comes.** He writes and I don't, and if there's a paper with prices on it
+> then somebody's got to keep it and it'll not be me. And the little one goes to
+> Hesk's wife two doors down, same as she does every market day. **That's been
+> arranged since the fifteenth day.**"*
+
+> ### THE FIRST OPERATION THAT DOES NOT NEED THE PARTY
+> **NAN grades · TAM writes · HASK holds the price · HALM carts · ROWE minds the
+> beasts.** Five people, one piece of paper, and one of them is nine.
+>
+> **And it runs in parallel with the party's own trip south — the first time
+> anything in this campaign has.** The party has always been the bottleneck.
+
+## AND DILL IS STILL UNSOLVED, and Wend says so plainly
+
+> *"He's a **year early** and there's no arithmetic that fixes it. Wool doesn't want a
+> flax dresser. **And don't go buying flax south and carting it up — he told you
+> himself, you'd be paying a carter to haul rubbish four days.** The only place his
+> trade exists is Fenn's yard, and Fenn said no, and Fenn was honest about why."*
+>
+> *"So it's this: **pay him for a year and find him something that isn't dressing, or
+> lose him.** And if you pay him to be idle you'll break him — **you watched idle do
+> it to Sarn for four months.**"*
+
+**On Rowe she says yes** *(beasts on the trip, and let him learn harness somewhere
+that isn't four days from a bonesetter)*. **On Dill she says no, and why:** *"He told
+you at that hedge — 'I'm not a labourer, I'm a dresser.' Send him to hump fleeces for
+a fortnight and you'll have told him what you think he is, and he'll go, and he'll be
+right to. **Find him his trade or find him something with a skill in it. Don't find
+him a shovel.**"*
