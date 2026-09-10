@@ -916,3 +916,61 @@ on you.** Nobody made me do that. I just didn't look."*
 | **Lyde's board** | 18 gp left, 6 gp a quarter, **next about day 152** |
 | **still unpriced** | Ede's wage · Dill's wage · her own two hires · the loom |
 | **all in, once everybody is on** | **~30-40 gp a month.** *"That's not what eats money. STOCK eats money."* |
+
+
+---
+
+## 14 · THE DRAYCOT ALMONRY ACCOUNT — day 76
+
+**Father Cuddy's burial purse comes from the hall and is empty by Candlemas most
+years. He has buried people at his own cost and has never mentioned it and never
+will.** *(Seen on day 51, d6=4, unasked-for; he is now visibly frail and it is
+November.)*
+
+### THE FORM, and the form is the whole of it
+
+> **NOT a purse across a table. AN ACCOUNT HE DRAWS ON AND RENDERS.**
+
+| | |
+|---|---|
+| **10 gp a year**, on Wend's books, **in his name** | *"Not a sum I send him. **A sum he DRAWS.**"* |
+| **He writes down what he spent it on and sends her the paper** | *"That's not a gift, that's an account — **and he's a man who keeps paper. He'll do it beautifully and he'll be glad of the doing.**"* |
+| **And it makes him what he already is** | *"**You'd be making him an almoner with something in the box.** He's been one with an empty box since Candlemas"* |
+
+**WHY THE FORM MATTERS:** `articles.md`'s first finding. **Money handed to a man who
+cannot repay it deepens a debt. An account he administers and accounts for is a
+JOB.** Bern got an **8** for tools and a **68** for ongoing paid work.
+
+### ⚠ AND WEND'S BOOKKEEPING CONDITION, which is not fussiness
+
+**It comes out of the PARTY'S OWN PURSE and gets a line of its own with a name on
+it. NOT the enterprise, NOT the wage roll, NOT art. 7.**
+
+> *"I spent six days separating your money from the venture's money and **a chapel
+> two days south is neither**... or in three years somebody's looking at my books
+> wondering why a wool venture was paying for a roof in another hundred."*
+
+### THE ROOF IS UNRESOLVED, DELIBERATELY
+
+**Bad at the north end, patched with turf, and it will be a wet winter.** **Nobody
+knows whose roof it is** and the party has ruled that it must be established first.
+
+**Who can answer it:** **OTTIR** (reeve, eleven doors away, twice at Draycot this
+month, answers to Sir Aymer) · **CUDDY** himself · **PERRIN**, usher of the hall,
+who answers for how the hall looks and what is in it.
+
+> ### ⚠ THE RISK WEND NAMED, and it is the reason this is not a simple kindness
+>
+> **If the roof is the HALL'S, then mending it means writing to Master Wace about
+> it** — and that is the one thing both advisers have warned against.
+>
+> **Cuddy, day 51: *"you'd be arming him."*** **Wend, day 54: *"asking makes him
+> look at it."***
+>
+> *"The letter that fixes a roof is the letter that reminds a steward **there's an
+> almoner at his gate who reads his writings and talks to you.**"*
+>
+> **If it is Cuddy's own, or nobody's, it is a job for Coll's crew on a trip already
+> being made** — and there are two pending: **the Michaelmas licence payment**, and
+> **the dwarf's burial**, which cannot happen until an answer comes back about what a
+> dwarf is owed.
