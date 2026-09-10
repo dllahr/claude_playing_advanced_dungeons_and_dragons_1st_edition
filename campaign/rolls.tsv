@@ -1,3 +1,30 @@
+# *** ⚠ THIS FILE WAS POLLUTED BY ITS OWN TEST SUITE. FOUND AND FIXED 2026-09-10. ***
+#
+# `dice.roll()` logs by DEFAULT -- correct for play, because this file is the
+# evidence -- so EVERY `pytest tools/tests` run wrote 31 rows into it. It had been
+# doing that for as long as those tests existed. Found while checking whether the
+# log was current before a compact: the tail held attack rolls for a giant centipede
+# and an orc that no character in this campaign has ever met.
+#
+# SCALE: the test rows include 5 "giant centipede attacks AC 9" and 1 "orc attacks
+# AC 9" per run. Those markers count 625 and 125, which agree exactly: 125 RUNS,
+# about 3,875 rows, in a file of 7,247. MORE THAN HALF THIS FILE IS TEST OUTPUT.
+#
+# HOW TO TELL THEM APART: play rows carry a reason that names the day or the
+# expedition ("day 69: ..."). Test rows are terse and carry no exped and no turn --
+# "morale", "giant centipede attacks AC 9", "F save vs Spell", "wandering check,
+# anchor 20", "initiative, party". Some of those strings DO occur in real play, so
+# no single grep separates them cleanly; the centipede and orc lines are unique to
+# the suite.
+#
+# THE LEAK IS CLOSED: tools/tests/conftest.py redirects dice.ROLLS to a scratch file
+# for the whole session, and tools/tests/test_no_roll_log_leak.py is the alarm --
+# it rolls a die and asserts this file's size did not move.
+#
+# THE EXISTING 3,875 ROWS ARE STILL HERE, DELIBERATELY. This log is append-only by
+# doctrine and purging it is the player's call, not the DM's. Nothing has been
+# deleted.
+#
 # Every die rolled, appended automatically by tools/dice.py and tools/combat.py.
 #
 # This exists so a disputed sequence can be checked without grepping a 60 MB
