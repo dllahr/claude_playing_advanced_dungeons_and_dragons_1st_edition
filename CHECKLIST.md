@@ -1478,3 +1478,47 @@ about it; left the wool leads with her; and said to ask Wend and Coll about Dill
 delegated authority must not ask permission to use it*, and *the DM does not declare
 the party's actions*. **All three are the DM taking back agency that was given away
 in writing.**
+
+
+---
+
+## A ⚠ BOX IS A PROMISE TO COME BACK AND CLOSE IT
+
+**Day 76. Asked when the wool party was due, the DM added a caveat: the Wace receipt
+is still travelling toward a Wend who has never seen the letter.** Player: *"Wend did
+see the receipt."*
+
+**She did — on day 65.** It recited the letter, Toller paid his full ~250 gp against
+it the same day, and his day-42 condition was discharged and closed. **The thing had
+resolved eleven days earlier and the warning was still on the page.**
+
+### WHY IT HAPPENED, and it is not the same failure as quoting a running total
+
+The rule already in force is *never quote a running total or an event from a prose
+file.* **This was neither.** It was a **⚠ FORECAST** — a correct, well-reasoned note
+written on day 55 about something that had not happened yet. It said *"the receipt
+will reach Wend, who never saw the letter, while the party is south."*
+
+> ### A WARNING IS THE ONE KIND OF PROSE THAT NEVER LOOKS STALE
+>
+> A stale total looks like a number and can be checked against a tool. **A stale
+> warning looks like a warning.** There is nothing on its face that says it already
+> fired. It reads as live for ever, and it will be quoted as live for ever.
+
+### THE RULE
+
+1. **When you write a ⚠ box that predicts something, you have opened a loop.**
+2. **When the thing resolves, close the box IN THE SAME EDIT that logs the
+   resolution.** Not later, not "when I next touch the file." The day-65 calendar row
+   recorded the receipt arriving and paying out; the art. 11 box should have been
+   struck in that same commit.
+3. **Close it by REWRITING it, not deleting it** — ✅, what actually happened, and the
+   fact that it was true when written. The old citation must not be orphaned
+   (`deprecated/README.md`, same principle).
+4. **Before offering an unprompted caveat out of a prose file, check the log for the
+   event that discharges it.** `calendar.md` had it in a row the DM had itself
+   written. **One grep.**
+
+**And the general form, which is worth more than the instance:** *the prose files are
+an index, and an index of the FUTURE goes out of date faster than an index of the
+past.*

@@ -702,14 +702,27 @@ has been unchanged since day 42 and which he did not move.
 | **the receipt** | **IT COMES, AND IT COMES SLOWLY** *(d6 = 3)*. A receipt is clerk's work — it must be put before Wace and signed behind the household's own business. Wat waits days for it |
 | **AND IT RECITES THE CONTENTS** | *(d6 = 5)* — **which is the whole of the trick. Toller's day-42 condition is discharged the moment it reaches Wethersby** |
 
-> ### ⚠ AND WEND WILL HAVE THE ANSWER BEFORE SHE HAS SEEN THE LETTER
+> ### ✅ CLOSED ON DAY 65. NOTHING HERE IS OUTSTANDING.
 >
-> **The party is south from day 56 to about day 66.** The receipt lands in
-> Wethersby with **Wend** — who was never shown the draft, and whose advice on
-> timing it was written against.
+> **The receipt came, Wend had it, and it did exactly what Toller said it would.**
+> It recited the letter, so the steward's own hand is on the ~450 gp of movables,
+> and **Toller paid his full ~250 gp valuation the same day** — his day-42
+> condition **discharged and closed**, purse over a thousand gold for the first
+> time (`calendar.md`, day 65).
 >
-> **Not a punishment. Just what happens when the paper is made in one shop and the
-> money lives in another.**
+> The warning that used to sit here read *"Wend will have the answer before she has
+> seen the letter."* **It was true when written on day 55 and it resolved on day
+> 65** — she was never shown the draft, she got the answer first, and it caused no
+> trouble at all.
+>
+> > **⚠ IT WAS LEFT STANDING FOR ELEVEN DAYS AND THE DM QUOTED IT AS LIVE ON DAY
+> > 76** — telling the player the receipt was still travelling toward a Wend who
+> > had never seen the letter. **Player-caught: *"Wend did see the receipt."***
+> >
+> > **A ⚠ box is a promise to come back and close it.** An open warning in a prose
+> > file reads as current for ever, which is the same defect as the prose map and
+> > the stale thief percentage. **Close the box when the thing resolves, in the
+> > same breath as logging the resolution.**
 
 
 ---
@@ -958,6 +971,63 @@ knows whose roof it is** and the party has ruled that it must be established fir
 **Who can answer it:** **OTTIR** (reeve, eleven doors away, twice at Draycot this
 month, answers to Sir Aymer) · **CUDDY** himself · **PERRIN**, usher of the hall,
 who answers for how the hall looks and what is in it.
+
+### ⚠ ASKED OF OTTIR, day 76 evening — and he reframes the whole question
+
+**He does not know** *(d6 = 2)*, says so flat and will not guess. Draycot is not his
+hundred and an almonry's fabric is nothing he has ever had cause to look at.
+
+> ### **"WHOSE IS IT — THAT'S THE WRONG END OF IT."**
+>
+> *"Nobody in this hundred has ever once asked whose a roof is. What they ask is
+> **who mended it last, and who paid the man.** Do that twice and you've got your
+> answer, and you've got it out of **custom**, which nobody can write a letter
+> about. A thing's been mended by whoever's always mended it. **And if you find
+> that nobody has, then it's nobody's, and that's precisely why it's got turf on
+> it.**"*
+
+**SO THE MAN TO ASK IS CUDDY** — thirty years in that chapel; he will remember who
+came with the ladder even if he has never once thought of it as a question of title.
+**Costs nothing, asks nobody's leave, and can be done on a trip already being made.**
+
+### AND HE ARRIVES INDEPENDENTLY AT CUDDY'S WARNING AND WEND'S — third reader, third direction
+
+> *"Don't ask the hall. If you put it to a steward — **whose roof is this** — he'll
+> go and find out, and what he'll find is that it's **his**, because a roof that's
+> his is a roof he can charge somebody for. You'd not be learning the answer.
+> **You'd be making it.**"*
+
+**Cuddy day 51: *"you'd be arming him."* Wend day 54: *"asking makes him look at
+it."* Ottir day 76: *"you'd be making it."* Three advisers, no contact between them,
+one conclusion.**
+
+### HE RULES PERRIN OUT — and hands the party its own hard-won lesson back
+
+> *"Perrin's a good man and he knows a joint from a nail. **And he can't spend a
+> shilling and he refers upward.** You found that out yourselves with your rosewood.
+> Ask Perrin about a roof and Perrin asks Wace about a roof. **That's the same
+> letter you're trying not to write, only it's got somebody else's name on it and
+> you can't stop it.**"*
+
+**Perrin is therefore STRUCK from the list of people to ask** — on the party's own
+day-41 finding, *"Perrin's paper is worth what Perrin can spend."*
+
+### WHAT OTTIR WILL NOT DO, and he says it without dressing it up
+
+*(d6 = 4 — he engages fully, counsels well, and carries nothing.)*
+
+> *"I'll not carry it. I see the man twice a year and I'd sooner both times were
+> about sheep."*
+
+**Not a refusal of the party and not cowardice.** He took the surety on day 4, rode
+early to buy the first hearing of the morning, stood behind them in front of the
+steward, and witnessed art. 13 four days ago. **He will explain how the machine
+works. He will not put his hand in it.** *(`npcs.md`: "frightened of Sir Aymer" —
+Wend's word, and he does not deny it.)*
+
+> **NEXT ACTION: one question to Cuddy — who mended it last, and who paid?** Two
+> Draycot trips are already pending: the **Michaelmas licence payment** and the
+> **dwarf's burial**, which waits on an answer about what a dwarf is owed.
 
 > ### ⚠ THE RISK WEND NAMED, and it is the reason this is not a simple kindness
 >
