@@ -1,0 +1,61 @@
+# THE CAMPAIGN DAY, machine-readable. The spine of campaign/calendar.md.
+#
+# Append-only. One row per in-game day or span that got played. The CURRENT DAY
+# is max(day) -- derived, never stored, so it cannot drift.
+#
+# WHY THIS FILE EXISTS: the day count was kept in the DM's head and drifted until
+# the player caught it on Torsat's illness. `calendar.md` was then made
+# authoritative -- but it is prose, so "what day is it" was still a reading
+# rather than a query, and it is the single most frequently needed fact in the
+# campaign. See dlwork/tooling_plan.md, the demand-side table.
+#
+# calendar.md remains the NARRATIVE record and is much richer than this. This
+# file carries only what a tool needs: the number, where the party was, and one
+# line to recognise the day by.
+#
+# Seeded 2026-09-11 from calendar.md. Days 1-76 are summarised in spans where
+# calendar.md itself does; the day NUMBERS are the load-bearing part.
+day	when	where	summary
+1	2026-08-19	quasqueton	Expedition 1. Into the caves.
+2	2026-08-20	quasqueton	Slept in area 5. Emerged about 11 p.m.
+4	2026-08-21	wethersby	Torsat's rash and fever. Salvage sold, 170 gp. Surety before Ottir. Halm's mule in restitution.
+6	2026-08-22	north_road	The patrol begins. Osk met on the road.
+10	2026-08-24	wethersby	Torsat clear. Wend still refusing.
+11	2026-08-24	wethersby	Torsat fully fit.
+12	2026-08-25	wethersby	WEND COMES ROUND, before anyone spoke. Coll's standing instruction given.
+13	2026-08-25	draycot_road	Outbound. The cold camp thirty yards off the road, four people, a fortnight old.
+15	2026-08-26	wethersby	Nan and her two children walk in. Two men off Ellery's.
+17	2026-08-27	wethersby	The party's first mule.
+19	2026-08-28	wethersby	Two carts bought, 50 gp each. Dragon scales sold, 110 gp.
+20	2026-08-28	wethersby	Wend's open-handed-where-it-is-finite rule adopted: iron and salt at cost, price visible.
+25	2026-08-30	ludbury	THE CLIP SOLD. 1,200 gp. Rosewood 350 besides.
+27	2026-08-31	ludbury	The Ludbury spend, 1,038 gp. Fenn paid at his gate.
+28	2026-08-31	road_north	Ede wants a month to shut up her cottage.
+32	2026-09-01	wethersby	THE ARTICLES BEGUN. Ancel on the road, 11 -> 81. Wend takes the factorship.
+34	2026-09-02	wethersby	WEND AND ANCEL, 127. Four buyers named; a penny in the pound for three years. Six unlisted hands to Marrow's on a written right of return.
+35	2026-09-02	wethersby	Marrow paid in the square. Gyll pays restitution to the eleven, aloud, Ottir witnessing.
+37	2026-09-03	wethersby	Market day. ~178 gp of small goods moved.
+39	2026-09-04	wethersby	HASK, DELLIE AND ISTA BECOME 1st-LEVEL CHARACTERS. Art. 7 agreed: 8 gp the tod, cap 500.
+40	2026-09-05	wethersby	Check-ins. Halm's standing want, unmet: "what I'd want is a RUN."
+41	2026-09-05	draycot_road	Perrin, usher of the hall, met riding north. 92, then 98.
+44	2026-09-06	wethersby	Market day. Ottir's hearing.
+45	2026-09-06	quasqueton	EXPEDITION 7 SETS OUT. Nine underground for the first time.
+46	2026-09-06	quasqueton	The skeletons behind the secret door into area 9.
+48	2026-09-07	wethersby	Wend: only half the small goods have sold.
+51	2026-09-07	draycot	CUDDY'S ANSWER ON THE CRAG. Holy water refused. The dwarf in irons told. Licence counselled.
+52	2026-09-07	draycot	THE PETITION. Licence granted and backdated.
+53	2026-09-08	draycot_road	Ottir and Yrtone ride home. The party is now a known quantity in Sir Aymer's country.
+55	2026-09-08	wethersby	Toller finds the same hole Wend found. THE LETTER TO WACE, and the receipt trick.
+56	2026-09-08	road_south	South with Halm's cart. Wat rides for Draycot.
+58	2026-09-08	marchford	Marchford at dusk. Pell the carrier met: "Ludbury. That's the whole mystery."
+59	2026-09-08	marchford	THE VIAL IS NAMED: REALGAR. Father Doule is 5th level and Marchford has no font. The small-goods line closes, 573 on 357.
+62	2026-09-09	lyde	Lyde's terms met. 31 gp paid at his door; 18 owing in three quarters.
+65	2026-09-09	wethersby	WACE'S RECEIPT ARRIVES. Toller pays ~250. Over a thousand gold for the first time. Wend turns the narrow loom round.
+67	2026-09-09	wethersby	Expedition 8 outfitting. Six ropes, eight person-weeks standard rations.
+69	2026-09-09	quasqueton	EXPEDITION 8. The barrel re-coopered behind a spiked door.
+70	2026-09-09	quasqueton	Areas 8 and 9 stripped. One troglodyte on the loaded walk out.
+71	2026-09-09	wethersby	HOME. The barrel sold to Holt, 58 gp. Wend's week of writing done a day early.
+72	2026-09-09	wethersby	THE STRUCTURE SIGNED, art. 13. Nan can grade wool. The wool operation formed.
+73	2026-09-10	draycot_road	THE DWARF TO DRAYCOT. Hask leaves with the wool party.
+76	2026-09-10	draycot	Cuddy frail. A MAN HAS BEEN SENT ABOUT THE ANIMATED DEAD. Dellie taught the words. Home that evening.
+77	2026-09-10	wethersby	Ottir on the chapel roof. Wend has no amounts. THE CARRIAGE GAP: "at cost" was ~60 gp below cost.

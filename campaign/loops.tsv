@@ -1,0 +1,74 @@
+# OPEN LOOPS -- a log of things that will one day CLOSE.
+#
+# Append-only. One row per loop EVENT, not one row per loop: `open`, `close`,
+# `supersede`, `note`. The set of open loops is DERIVED by taking the latest
+# verb for each id -- so there is no mutable `closed` cell to go stale, which is
+# what the first draft of this file got wrong.
+#
+# WHY IT EXISTS: four errors of one shape. A forward-looking note was written,
+# it fired, and nobody closed it:
+#
+#   * articles.md art. 11 warned the Wace receipt would reach Wend before she
+#     had seen the letter. TRUE ON DAY 55, FIRED ON DAY 65, quoted as live on
+#     DAY 77 -- eleven days late.
+#   * npcs.md said of Ancel "Unanswered. He will not sit in the square forever."
+#     ANSWERED ON DAY 34 and quoted as live on DAY 77 -- FORTY-THREE DAYS.
+#   * CHECKLIST section 11 was headed "day 39" while play stood at day 77, and
+#     warned in its own second paragraph that snapshots rot.
+#   * "Rowe stays until his foot heals" long after he went south with Halm.
+#
+# A warning is the one kind of prose that never LOOKS stale. A stale total looks
+# like a number and can be checked against a tool; a stale warning looks like a
+# warning. So warnings become rows with a due date and a close-out.
+#
+# *** `close` REQUIRES `evidence`, and tools/loops.py refuses without it. ***
+# A loop cannot be closed with a flag. Closing means CITING THE THING THAT
+# CLOSED IT -- which is precisely the step that was skipped on art. 11. Evidence
+# is a pointer: "65:2" (day:seq in interactions), "calendar.md:72", a TSV line.
+#
+# WHAT MAY NOT GO IN HERE. The test is: DOES IT HAVE A MOMENT AT WHICH IT STOPS
+# BEING TRUE?
+#   LOOP          "the wool party back ~83"  "Ancel returns in spring"
+#   LOGGED FACT   "Cuddy is frail"  "Perrin refers upward"   -> npcs.md / interactions
+#   FINDING       "gifts land badly, work lands"              -> articles.md
+# If facts get in here the list grows for ever, the DM stops reading it, and it
+# becomes the next CHECKLIST.md.
+#
+# Seeded 2026-09-11 by walking CHECKLIST section 11 and every warning box in
+# articles.md. That walk WAS the first audit. See dlwork/tooling_plan.md phase 1.
+when	day	loop	verb	subject	expected_day	evidence	what
+2026-09-11	32	L001	open	ancel		npcs.md:402	Ancel asked OSK, in front of the party, who to speak to about next summer's wool -- the first outside buyer to ask in two years
+2026-09-11	34	L001	close	ancel		calendar.md:40	ANSWERED COMPLETELY on day 34: introduced to Wend as factor (127), brokered to Marrow (114), four buyers named, a penny in the pound for three years. *** This is the 43-day loop. It is seeded first on purpose, as the worked example of what this file is for. ***
+2026-09-11	55	L002	open	wace	66	articles.md:633	Master Wace's receipt for the account of movables -- Toller's day-42 condition turns on it, and Wend will have it before she has seen the letter
+2026-09-11	65	L002	close	wace		calendar.md:72	RECEIPT ARRIVED and recites the contents. Toller paid ~250 gp the same day; his condition DISCHARGED AND CLOSED. Over a thousand gold for the first time. *** The eleven-day loop. Second worked example. ***
+2026-09-11	34	L003	open	holders		wool_venture.md	The six holders' 229 gp of shares, in a strongbox, not the party's money
+2026-09-11	39	L004	open	wend		articles.md	The art. 7 floor chalked on the board and read to every holder
+2026-09-11	40	L005	open	halm		npcs.md:980	Halm's standing want, asked once and never again: "one load's a load. What I'd want is a RUN." Wend is for it on one condition -- a load both ways
+2026-09-11	51	L006	open	cuddy		calendar.md:57	What a dwarf is owed. Cuddy has written to his own house; the dwarf waits above ground on trestles until an answer comes
+2026-09-11	51	L007	open	cuddy		articles.md	The Michaelmas licence payment, 25 gp a year for three years from Michaelmas last
+2026-09-11	55	L008	open	toller		npcs.md	Toller wants SIX CORRESPONDENTS IN SIX TOWNS -- "two dealers in one town who know each other is one price"
+2026-09-11	62	L009	open	lyde	152	calendar.md:68	18 gp owing to Lyde in three further quarterly instalments; next about day 152
+2026-09-11	71	L010	open	holt		calendar.md:78	28 gp owing from Holt in his own hand against the cask, as he draws it
+2026-09-11	71	L011	open	holt		calendar.md:78	Holt asked to be told if anyone ever learns whose brewhouse 'SD' was
+2026-09-11	71	L012	open	toller		calendar.md:78	Toller asked ONE thing: tell him FIRST if anything ever goes south instead of to him
+2026-09-11	71	L013	open	trebb		npcs.md	Forty unnamed jars of chemicals for Trebb the dyer at Marchford -- Toller handed them off entirely: "forty of anything isn't curio, it's STOCK"
+2026-09-11	72	L014	open	wool_party	83	calendar.md:79	The wool-buying party home -- Nan grades, Tam writes, Hask holds the price, Halm carts, Rowe minds the beasts
+2026-09-11	72	L015	open	dill		npcs.md	Find Dill his trade or lose him. Hask's proposal is TEACHING, not labour: a year to make two dressers. Wend: don't find him a shovel
+2026-09-11	76	L016	open	cuddy		articles.md:923	The Draycot chapel roof -- whose is it. Ottir: ask WHO MENDED IT LAST and who paid, and the man to ask is Cuddy. Perrin struck off. Do not ask the hall
+2026-09-11	76	L017	open	unknown		calendar.md:80	*** A MAN HAS BEEN SENT ABOUT THE ANIMATED DEAD. *** No name, no rank, no date. Cuddy's house did not write to ask questions -- it wrote to say a man is coming
+2026-09-11	77	L018	open	wend		calendar.md:82	Wend needs ONE answer before she will cost the southern list: HOW MUCH, and WHOSE MONEY
+2026-09-11	77	L019	open	bern		calendar.md:82	Ask Bern what he wants off a Ludbury list -- the reed and the heddles, not the frame. Do not order over his head
+2026-09-11	77	L020	open	wend		calendar.md:82	Wend to order the narrow loom from Bern and send Lyde the joiner's name, and to hire her two
+2026-09-11	77	L021	open	osk	81	calendar.md:82	Osk back off his Marchford run. Three things: whether the party is entering his trade, the standing-run question, and he is the man Ancel asked about the wool
+2026-09-11	77	L022	open	party	83	calendar.md:82	SOUTH with three carts after the 83rd -- Wend's list costed, Toller's correspondents, the jars, and "who buys narrow cloth in Marchford and at what"
+2026-09-11	77	L023	open	ottir		articles.md	Gyll's four-and-a-bit acres for flax. Ottir's condition: ask the eleven, one at a time, and NOBODY goes near Gyll first
+2026-09-11	77	L024	open	party		articles.md	The iron price -- price the NEW properly and SHOW THE ROAD IN THE PRICE. Do not reprice the old
+2026-09-11	77	L025	open	sarn		CHECKLIST.md	Sarn onto Coll's standing roll at a clerk's wage. Wend and Coll are doing it; the party is not to be involved, and nobody tells Sarn it is because he was owed it
+2026-09-11	77	L026	open	coll		CHECKLIST.md	Wat's terms -- Coll's to settle, the party has stood back
+2026-09-11	77	L027	open	ancel	260	npcs.md:491	ANCEL RETURNS IN SPRING WITH A PURSE, on a penny in the pound for three years -- and his four buyers include a FULLER WHO TAKES CLOTH, which is the answer-shaped thing to Wend's narrow-cloth question
+2026-09-11	77	L028	open	tristle		xp.py	Tristle is 539 xp from 2nd level -- which is what unfreezes the pit trap at (29,31), the only known way to level 2
+2026-09-11	77	L029	open	party		npcs.md	The plain metal ring from the area 27 dais is still unidentified. Only lead is WRAYE, three days east of Ludbury, which has a library
+2026-09-11	77	L030	open	mapdb		CHECKLIST.md	Areas 10 and 11 are mis-mapped and the party must not be taken there
+2026-09-11	77	L031	open	mapdb		CHECKLIST.md	Level 2 is built and merged but entirely unexplored -- two exits from room 50 and something in the east passage
+2026-09-11	77	L032	open	party		CHECKLIST.md	EXPEDITION 9 FOOD: eight people have ~4 days underground. 3 gp a person-week standard, 5 gp iron, purse with Wend
+2026-09-11	77	L033	open	blartho		CHECKLIST.md	Blartho's third spell -- he has held detect magic since day 47 for an errand finished thirty days ago. Offered, not answered

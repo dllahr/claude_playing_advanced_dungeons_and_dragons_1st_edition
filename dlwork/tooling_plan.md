@@ -118,6 +118,77 @@ A stray `UPDATE` raises an error instead of silently rewriting the past.
 
 ---
 
+## 1.4 · THE DEMAND SIDE — what most needs to be on hand
+
+**Built by asking what I actually reach for during play, ranked by frequency × cost to
+get it now × how often it has gone wrong.** This is the justification for the schema
+below, and it turned up one thing the schema was missing entirely.
+
+### Tier 1 — needed constantly, currently prose or **in my head**, with a track record
+
+| what | where it lives now | errors |
+|---|---|---|
+| **The day** | `calendar.md` prose | day drift, player-caught on Torsat's illness |
+| **Who is available** — present / away / hurt / dead | **nowhere.** Re-derived every time: *"Hask on the wool, Rowe with Halm, so eight"* | — |
+| **Open loops** | nowhere | **4** |
+| **Funds, committed vs free** | a ~4,000-char notes blob; `finances.md`, which says it is not a source of truth | **5** |
+| **⚠ Who knows what** | **nowhere at all** | ≥2 — *"a fact nobody in this room mentioned"* · *"Halm genuinely does not know about the barrel"* |
+| **⚠ LIVE ENCOUNTER STATE** | **entirely in my own narration** | **1, and it was the worst** |
+
+### ⚠ The encounter gap, which was not in the plan at all
+
+A fight runs ten messages. Across them I hold: round · initiative order · who is
+engaged with what · **who held an action** · each monster's remaining hp · surprise ·
+what is spiked · light. **All of it by re-reading my own previous messages.**
+
+> **That is the "narrate from my own summary" failure mode operating in the
+> highest-stakes context in the game** — and the day-70 violation, where I resolved the
+> party's round without asking, happened in exactly that context.
+
+**`encounter.tsv`** — append-only log of the live fight; round, combatant hp and
+conditions **derived**. `combat.py` reads it, and can then **refuse an undeclared party
+action**, because it knows whose turn it is and that nothing has been declared.
+**Slotted into phase 3** — small, independent of the migration, and it hardens the
+context where errors cost most.
+
+### Tier 2 — needed per scene, partly covered
+
+One person's full history (`recall.py` exists, cannot join) · last reaction and
+standing loyalty adjustment (prose) · what they have been promised (prose) ·
+**spell loadouts** (`spells.tsv`, *"no tool reads it yet"*) · goods with **weights** ·
+what is still unexplored (derivable from `cells.seen`, never surfaced).
+
+### Tier 3 — already good, **leave alone**
+
+`hp.py` · `xp.py` · `light.py` · `clock.py` · `mapdb` · `world.py deployed` ·
+`rules.py` · `combat.py`'s resolution · `dice.py`.
+
+### And three conclusions that change the design
+
+**1 · ⚠ Almost nothing should be materialised, because the data is tiny.** ~7,000
+rolls, a few hundred entities, a few hundred interactions. **Rebuilding the whole view
+is milliseconds.** So **default to derived**; materialise only what is genuinely
+expensive (`mapdb`, which does image extraction) or what a human wants to read.
+**Category 3 nearly disappears — and what does not exist between calls cannot rot.**
+Watermarks therefore matter in two narrow places, not everywhere: **`mapdb`, and prose
+blocks that legitimately cache a figure.**
+
+**2 · "Who knows what" needs no new file — knowledge is DERIVED FROM PRESENCE.** Who
+was in the room is already logged (`interaction_person`); what was said is already
+logged (`interactions`). **So it is a join.** It is also the one query with a spoiler
+dimension, which is exactly why it should be structural rather than remembered.
+
+**3 · There are three different kinds of "on hand", wanting three different tools** —
+and the first draft conflated all three into `brief.py`:
+
+| | shape | tool |
+|---|---|---|
+| **Briefing** — session start, after a compact | broad, shallow | `brief.py` |
+| **Scene** — this moment, this person | narrow, deep | `recall.py` as a query |
+| **Encounter** — live, mutable within a fight | small, fast, rewritten every round | `encounter.tsv` + `combat.py` |
+
+---
+
 ## 2 · THE SCHEMA
 
 ### 2.1 · Existing logs: UNTOUCHED

@@ -1,0 +1,33 @@
+# WHO IS AVAILABLE -- append-only, and current availability is DERIVED.
+#
+# WHY THIS FILE EXISTS: it was the second item on the demand-side table in
+# dlwork/tooling_plan.md and it lived NOWHERE. Every time an expedition was
+# outfitted the DM re-derived it out of prose -- "Hask is on the wool road and
+# Rowe went with Halm, so eight are available" -- and a re-derivation is a place
+# an error gets in. It is also the fact that decides who may be rolled for.
+#
+# One row per CHANGE, not per person per day. The current status of a character
+# is the latest row for that name; anyone with no row at all is `present`.
+#
+# status:
+#   present    with the party, fit, may be rolled for
+#   away       elsewhere on campaign business -- NOT available and NOT a casualty
+#   invalid    present but out of action under a rule (DMG p.82's week, illness)
+#   dead
+#
+# `until_day` is a FORECAST and may be blank. It does not close the row -- a
+# return is its own `present` row, logged when it happens. A forecast that
+# closes itself is how "Rowe stays until his foot heals" outlived the fact.
+#
+# This file covers the NINE CHARACTERS in characters.tsv only. NPC whereabouts
+# are a different question and belong with the entity work in phase 4.
+when	day	who	status	until_day	why
+2026-09-11	73	Hask	away	83	Gone with the wool-buying party -- he holds the price. Nan grades, Tam writes, Halm carts, Rowe minds the beasts
+2026-09-11	77	Dave	present		Home off the Draycot road the evening of the 76th
+2026-09-11	77	Torsat	present
+2026-09-11	77	Tristle	present
+2026-09-11	77	Frython	present
+2026-09-11	77	Yrtone	present		Last point of the day-70 troglodyte claw healed; anchored 7/7
+2026-09-11	77	Blartho	present
+2026-09-11	77	Dellie	present		Taught the words for the dwarf by Cuddy on the evening of the 76th
+2026-09-11	77	Ista	present

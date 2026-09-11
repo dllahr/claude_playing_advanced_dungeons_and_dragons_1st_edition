@@ -982,9 +982,16 @@ Standing facts that carry to any new sheet:
 > snapshots rot — **and then rotted for five weeks.** It is the single largest
 > instance in the repo of the defect the rest of this file is about.
 >
-> **Read `git log --oneline` first.** That is the campaign history, it cannot go
-> stale, and it costs almost nothing. **Then run the tools.** This section is for
-> the things no tool computes.
+> ### ▶ RUN `python tools/brief.py` FIRST. IT SUPERSEDES THE STATE TABLES BELOW.
+>
+> Day · who is available · hp · xp · oil · gear in the dungeon · position · clock ·
+> **open loops** · what is stale. **Every figure computed by the tool that owns
+> it**, so none of it can rot. And **`python tools/loops.py --touching "<names>"`
+> every turn** with whoever the player just named — that is the mechanism that
+> would have caught both art. 11 and Ancel.
+>
+> **Then `git log --oneline`** — the campaign history, which cannot go stale.
+> **What is left below is only the things no tool computes.**
 
 ### ⏸ PLAY IS PAUSED MID-DEPARTURE — resume exactly here
 

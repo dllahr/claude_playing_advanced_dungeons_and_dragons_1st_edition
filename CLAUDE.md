@@ -345,6 +345,17 @@ DM to tell the player their spikes were in a door they had already recovered the
 - `campaign/light.tsv` — every lighting, hooding, extinguishing and refill; fuel is
   computed against clock rounds, never stored. **Hooding does not stop the burn**, so
   log `out` before a rest or the party sleeps through eight hours of lamp oil
+- **`campaign/days.tsv`** — **the campaign day, machine-readable.** The current day is
+  `max(day)`, derived, so it cannot drift the way it did before the player caught it on
+  Torsat's illness. `calendar.md` stays the far richer narrative record
+- **`campaign/loops.tsv`** — **things that will one day CLOSE.** A log of loop *events*,
+  not a table with a mutable `closed` cell; the open set is derived. **A `close` must
+  cite the event that closed it.** Built because a warning is the one kind of prose that
+  never *looks* stale: art. 11's fired on day 65 and was quoted as live on day 77, and
+  Ancel's *"Unanswered"* outlived its answer by **43 days**
+- **`campaign/availability.tsv`** — **who is present, away, invalid or dead.** Append-only,
+  current status derived. This lived nowhere and was re-derived out of prose every time an
+  expedition was outfitted
 - `campaign/rolls.tsv` — an audit trail of every die rolled
 - `campaign/party.tsv` — **where the party is**, and the only legal way to move
   it. `tools/party.py move` routes through `mapdb`, which physically cannot walk
@@ -377,6 +388,8 @@ DM to tell the player their spikes were in a door they had already recovered the
 
 | tool | what it computes fresh |
 |---|---|
+| **`tools/brief.py`** | **THE SESSION BRIEFING. RUN IT FIRST, EVERY SESSION AND AFTER EVERY COMPACT.** Day · who is available · hp · xp · oil · gear left in the dungeon · position · clock · **open loops** · what is stale. Every figure computed by the tool that owns it, so nothing in it can be 38 in-game days out of date the way `CHECKLIST` §11 was |
+| **`tools/loops.py`** | **things that will one day CLOSE**, derived from `campaign/loops.tsv`. **`--touching "Wend, Osk"` is the one that matters: run it EVERY TURN with whoever the player just named.** A `close` **requires evidence and the tool refuses without it** — closing means citing the thing that closed it |
 | `tools/xp.py` | totals; the +10% applies **once to earned experience**, not per award, or truncation eats it on small kills |
 | `tools/hp.py` | current hit points, negative values **not** clamped |
 | `tools/world.py` | replays world changes onto the map DB — **run after every rebuild** |
