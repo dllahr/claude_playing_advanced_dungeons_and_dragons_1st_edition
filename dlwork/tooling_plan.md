@@ -363,20 +363,81 @@ build_meta    (source PK, rows, last_day, sha256, built_at)   -- THE WATERMARK
 box in `articles.md` — that walk IS the first audit.**
 **No database, no migration. Play resumes immediately after this.**
 
-### Phase 2 — the auditor · *the only net under "I said it and logged nothing"*
-`.claude/agents/auditor.md`. Read-only. **Citation or nothing:** one line per factual
-assertion, verdict `SUPPORTED` / `CONTRADICTED` / `UNSUPPORTED`, each with
-`file:line`. **No opinions on tone, plausibility or quality** — an auditor that offers
-judgment becomes another voice to argue with, and then I start overriding it.
+### Phase 2 — the auditor · ✅ BUILT 2026-09-11 · *the only net under "I said it and logged nothing"*
 
-| trigger | on what |
-|---|---|
-| **before the player sees it** | turns asserting what an NPC previously said or did · turns writing a **finding or rule** into `articles.md` / `CHECKLIST.md` / `rules/` |
-| **in the background while he reads** | ordinary play turns |
-| **at every commit** | everything narrated since the last one |
+**Split in two, which was the right call and came out of the discussion: a third
+of the errors in this campaign were plain arithmetic and needed no language
+model at all.**
 
-**Deliberately ahead of the migration:** it works on greps alone, so it pays from day
-one — and it is the right instrument for the phase-4 archaeology.
+#### 2a · `tools/audit.py` — deterministic, and it cannot be forgotten
+
+Checks the figures in a block of text against the tool that owns each one.
+**Catches all seven of the real historical number errors** — funds 595 vs 1,072,
+spikes 3 vs 9, Tristle 641 vs 712, Yrtone 6/7 vs 7/7, 19 flasks vs 18, 2 ropes
+vs 8, 171 tests vs 198 — **and stays silent on correct text, which is the harder
+requirement.**
+
+> **The design constraint that mattered more than coverage: it must not cry
+> wolf.** A checker that fires on a true statement teaches me to ignore it, and
+> an ignored checker is prose again.
+>
+> Three mechanisms enforce that: a figure is checked **only when an anchor
+> phrase for that quantity is within 80 characters of it**; a sentence naming a
+> campaign day **other than today** is treated as historical and skipped; and
+> the report **always prints how many figures went unchecked**, so coverage is
+> visible rather than implied.
+>
+> **The bug that proved the point:** the first implementation compared every
+> figure in a sentence against every anchor in it, so *"19 sealed flasks and 2
+> ropes"* reported the rope count as a bad flask count, and *"Dave is at 9/9 and
+> Yrtone is 6 of 7"* produced four findings from two facts, two of them wrong.
+> `_nearest()` fixed it and `test_audit.py` holds the line.
+
+**Wired into `tools/hooks/pre-commit`** (`git config core.hooksPath tools/hooks`).
+**It BLOCKS** — a warning that does not block is prose. Escape hatches are
+`audit-skip` in the line, which is self-documenting, or `--no-verify`, which is
+not. `dlwork/`, `deprecated/`, `tools/tests/` and `audit.py` itself are skipped,
+because their whole job is to quote the wrong numbers on purpose.
+
+#### 2b · the `auditor` agent — `.claude/agents/auditor.md`
+
+Read-only, `Bash Read Grep Glob`, **citation or nothing.** One line per
+assertion; three verdicts (`SUPPORTED` / `CONTRADICTED` / `UNSUPPORTED`) and no
+others; **a verdict with no citation may not be emitted.**
+
+> ### ⚠ AND EVERY VERDICT NAMES ITS SOURCE TIER
+>
+> **The evidence base contains files known to be wrong.** `npcs.md` is *the*
+> file that misleads the DM, so contradicting him out of it could be the auditor
+> repeating the very error it was built to catch, wearing a badge.
+>
+> | tier | | weight |
+> |---|---|---|
+> | **1 EVIDENCE** | `campaign/*.tsv` · `mapdb` · `git log` | authoritative |
+> | **2 AUTHORITY** | `rules/` · `bestiary/` · the PDFs | authoritative for rules and monsters |
+> | **3 INDEX** | `npcs.md` · `articles.md` · `calendar.md` | **suggestive, never conclusive** |
+>
+> **Tier 1 beats tier 3 and the auditor reports both — that disagreement is
+> itself a finding, because it means a prose file has rotted.**
+
+**Explicitly out of scope for the agent:** figures (they belong to `audit.py`,
+exactly and for free — *running an exact answer past a language model makes it
+approximate*), dialogue being invented now, and **tone, plausibility,
+characterisation or quality.** An auditor that offers judgment becomes another
+voice to argue with, and then it gets overridden.
+
+**And it may not read `modules/B1_DM_NOTES_DO_NOT_READ.md` or
+`modules/private/`.** A claim checkable only against those returns
+`UNCHECKABLE — DM-only source` and nothing further. *A hint is a spoiler with
+deniability.*
+
+| trigger | on what | how it fires |
+|---|---|---|
+| **every commit** | the staged diff's added lines | **the hook. Automatic** |
+| **before the player sees it** | turns asserting what an NPC said or did · turns writing a finding or rule | **the DM invokes the agent** |
+| **while he reads** | ordinary play turns | held back until we see what it catches |
+
+**219 tests pass** (185 → 198 after phase 1 → 219 now).
 
 ### Phase 3 — money and inventory become logs · *kills class B*
 Extract `money.tsv` from the `funds` notes blob — **the archaeology, and where the

@@ -1,0 +1,44 @@
+#!/bin/sh
+# The deterministic half of the auditor, wired so it CANNOT BE FORGOTTEN.
+#
+# Every prose warning in this repo has failed again after being written. The
+# three mechanisms with a perfect record are machines that cannot do the wrong
+# thing -- `party.py move` refuses a wall, the pytest conftest refuses the
+# campaign roll log, `test_lane_rule.py` refuses a paraphrase. This hook is the
+# same idea for figures: it reads the ADDED lines of the staged diff and checks
+# every figure it recognises against the tool that owns it.
+#
+# Enable once, per clone:
+#     git config core.hooksPath tools/hooks
+#
+# It BLOCKS on a mismatch. That is deliberate: a warning that does not block is
+# prose again. To commit anyway -- and there are honest reasons, chiefly
+# quoting a figure as it stood at the time -- either:
+#     * put `audit-skip` in the line, which is self-documenting and permanent;
+#     * or `git commit --no-verify`, which is not.
+#
+# If it ever cries wolf, LOOSEN THE CHECKER, do not learn to pass --no-verify.
+# A checker that is routinely overridden has become decoration.
+# conda run prints its own ERROR line on a non-zero exit, which buries the
+# report under plumbing noise. Run the env's interpreter directly instead.
+PY=python3
+for candidate in \
+    "$HOME/miniconda3/envs/advanced_dnd_1e/bin/python" \
+    "$HOME/anaconda3/envs/advanced_dnd_1e/bin/python"
+do
+    [ -x "$candidate" ] && PY="$candidate" && break
+done
+
+if ! "$PY" tools/audit.py --staged; then
+    echo ""
+    echo "-------------------------------------------------------------------"
+    echo "COMMIT BLOCKED by tools/audit.py: a figure in the staged text does"
+    echo "not match what the tools compute."
+    echo ""
+    echo "  * If the tools are right, fix the text."
+    echo "  * If the text is right, fix the LOG -- not the text."
+    echo "  * If the figure is historical, add 'audit-skip' to the line or"
+    echo "    name the day in the sentence, which marks it as of-its-time."
+    echo "-------------------------------------------------------------------"
+    exit 1
+fi
