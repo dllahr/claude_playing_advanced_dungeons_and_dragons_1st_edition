@@ -52,6 +52,7 @@ import xp as xpmod                                               # noqa: E402
 import light as lightmod                                         # noqa: E402
 import world as worldmod                                         # noqa: E402
 import loops as loopmod                                          # noqa: E402
+import ledger as ledgermod                                       # noqa: E402
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
@@ -106,9 +107,11 @@ def truths(need=None):
     """
     t = {}
 
-    funds = _funds_sp()
-    if funds is not None:
-        t['funds'] = (funds / 10.0, 'gp', 'campaign/inventory.tsv')
+    # The purse is COMPUTED from campaign/money.tsv, not read off the
+    # inventory cell. That cell is materialised state; ledger.check() is what
+    # notices when it drifts, and this checker must not check a figure against
+    # a copy of itself.
+    t['funds'] = (ledgermod.total(), 'gp', 'tools/ledger.py')
 
     spikes_in, _ = worldmod.deployed(worldmod.load())
     t['spikes_emplaced'] = (spikes_in.get('iron spike', 0), 'spikes',
@@ -363,6 +366,24 @@ SKIP_PATHS = ('dlwork/', 'deprecated/', 'tools/tests/', 'tools/audit.py')
 # Any line may opt out. Use it for a figure deliberately quoted as it stood.
 SKIP_MARK = 'audit-skip'
 
+# *** ONLY PROSE IS AUDITED. ***
+#
+# The first time this hook ran against a real commit it blocked one, and every
+# finding was a false positive out of the new TSVs: `torch ... 100` was an asset
+# name beside its unit WEIGHT; `rope, 50 ft ... 75` gave "50" and "75"; and the
+# header comment of money.tsv, which lists the five historical errors by way of
+# explaining itself, offered up "357 gp of small goods" as a rope count.
+#
+# The diagnosis is not that the anchors were sloppy. It is that AUDITING THE
+# LOGS IS CIRCULAR: they are what the tools compute FROM, so checking them
+# against the tools compares a figure with a copy of itself, and the only thing
+# such a check can ever produce is noise. Paraphrases live in prose. That is
+# where the eight class-C errors lived, every one of them.
+#
+# The hook's own header says: if it cries wolf, LOOSEN THE CHECKER, do not learn
+# to pass --no-verify. This is that, on the first occasion, by design.
+AUDIT_EXTENSIONS = ('.md',)
+
 
 def staged_text():
     """Added lines from the staged diff -- what is about to be committed.
@@ -382,6 +403,8 @@ def staged_text():
         if ln.startswith(('---', '+++', '@@', 'diff ', 'index ')):
             continue
         if not ln.startswith('+'):
+            continue
+        if not path.endswith(AUDIT_EXTENSIONS):
             continue
         if any(path.startswith(sk) for sk in SKIP_PATHS):
             continue

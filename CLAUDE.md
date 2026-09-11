@@ -345,6 +345,17 @@ DM to tell the player their spikes were in a door they had already recovered the
 - `campaign/light.tsv` — every lighting, hooding, extinguishing and refill; fuel is
   computed against clock rounds, never stored. **Hooding does not stop the burn**, so
   log `out` before a rest or the party sleeps through eight hours of lamp oil
+- **`campaign/money.tsv`** — **every movement of coin, append-only, and `asset` is
+  REQUIRED.** Funds are `SUM(delta)`, computed. Anchored at day 39 because the prose
+  blob it was reconstructed from **stops reconciling around day 34** — from 39 onward it
+  reconciles to the gold piece. **Five purchases in this campaign were recorded only as
+  a sentence inside the notes column of the old `funds` row** and the thing bought got no
+  row anywhere; naming an asset is what makes that impossible
+- **`campaign/assets.tsv`** — **REFERENCE: identity only, no quantities.** So that
+  `money.tsv` and `inventory.tsv` can name the same thing and be checked against each
+  other. The **service ids** (`wages`, `lodging`, `licence`, `loan`, `kit`) exist because
+  money leaves the purse for things that are not goods, and a rule that cannot be obeyed
+  is a rule that gets quietly broken
 - **`campaign/days.tsv`** — **the campaign day, machine-readable.** The current day is
   `max(day)`, derived, so it cannot drift the way it did before the player caught it on
   Torsat's illness. `calendar.md` stays the far richer narrative record
@@ -389,6 +400,8 @@ DM to tell the player their spikes were in a door they had already recovered the
 | tool | what it computes fresh |
 |---|---|
 | **`tools/brief.py`** | **THE SESSION BRIEFING. RUN IT FIRST, EVERY SESSION AND AFTER EVERY COMPACT.** Day · who is available · hp · xp · oil · gear left in the dungeon · position · clock · **open loops** · what is stale. Every figure computed by the tool that owns it, so nothing in it can be 38 in-game days out of date the way `CHECKLIST` §11 was |
+| **`tools/log.py`** | **THE ONLY WRITE PATH for money, days and availability. It VALIDATES, then appends** — and refuses a money row that names no asset, an asset id not in `assets.tsv`, a zero delta, a campaign day running backwards, or an unknown character. Validate on write, rebuild on read |
+| **`tools/ledger.py`** | **the purse, computed from `campaign/money.tsv`** — never stored, never quoted from a cell. `check` is the double-entry audit: every movement names an asset, every *good* has an inventory row, and the computed purse is compared against the `inventory.tsv` cell rather than trusting it |
 | **`tools/audit.py`** | **checks the FIGURES in a block of text against the tool that owns each one.** `--text "…"` · a file · `--staged` · `--show` lists every truth it knows. **Wired into `tools/hooks/pre-commit`, so it runs on every commit and cannot be forgotten** — enable once per clone with `git config core.hooksPath tools/hooks`. It **blocks** on a mismatch; `audit-skip` in a line, or naming a day in the sentence, marks a figure as of-its-time. **If it ever cries wolf, LOOSEN THE CHECKER — do not learn to pass `--no-verify`** |
 | **the `auditor` agent** | `.claude/agents/auditor.md`. The half that needs reading comprehension. **Citation or nothing**, three verdicts, and **every verdict names its SOURCE TIER** — tier 1 the TSVs, tier 2 `rules/`, tier 3 the prose, which is *suggestive, never conclusive*. **Run it before asserting what an NPC previously said or did, and before writing any finding or rule into `articles.md` / `CHECKLIST.md` / `rules/`.** It may not read the DM notes |
 | **`tools/loops.py`** | **things that will one day CLOSE**, derived from `campaign/loops.tsv`. **`--touching "Wend, Osk"` is the one that matters: run it EVERY TURN with whoever the player just named.** A `close` **requires evidence and the tool refuses without it** — closing means citing the thing that closed it |

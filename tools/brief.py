@@ -38,6 +38,7 @@ import sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from tsvlog import read_tsv                                     # noqa: E402
 import loops as loopmod                                         # noqa: E402
+import ledger as ledgermod                                      # noqa: E402
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
@@ -132,6 +133,13 @@ def brief(day=None, touching=None):
     parts.append(head)
 
     parts.append(RULE + '\n' + avail_report())
+    purse = [RULE, 'THE PURSE', ledgermod.report()]
+    problems = ledgermod.check()
+    if problems:
+        purse.append('')
+        purse += ['%-5s %s' % (sev, msg) for sev, msg in problems]
+    parts.append('\n'.join(purse))
+
     parts.append(RULE + '\nHIT POINTS\n' + run(['tools/hp.py']))
     parts.append(RULE + '\nEXPERIENCE\n' + run(['tools/xp.py']))
     parts.append(RULE + '\nLIGHT AND OIL\n' + run(['tools/light.py', 'oilstate']))

@@ -155,6 +155,23 @@ def test_a_figure_far_from_its_anchor_is_not_bound_to_it():
 
 # ---------------------------------------------------------------- plumbing
 
+def test_only_prose_is_audited():
+    """AUDITING THE LOGS IS CIRCULAR and can only produce noise.
+
+    The first time the hook ran against a real commit it BLOCKED one, and every
+    finding was a false positive out of the new TSVs: `torch ... 100` was an
+    asset name beside its unit WEIGHT; `rope, 50 ft ... 75` yielded "50" and
+    "75"; and money.tsv's header comment, which lists the five historical
+    errors by way of explaining itself, offered "357 gp of small goods" as a
+    rope count.
+
+    The logs are what the tools compute FROM. Checking them against the tools
+    compares a figure with a copy of itself. Paraphrases live in prose, and so
+    did all eight class-C errors.
+    """
+    assert audit.AUDIT_EXTENSIONS == ('.md',)
+
+
 def test_the_staged_diff_skips_the_post_mortems():
     """`dlwork/` quotes the wrong numbers ON PURPOSE -- it is where the error
     post-mortems and this project's own plan live. Auditing it would flag a

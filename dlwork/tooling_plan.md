@@ -440,9 +440,77 @@ deniability.*
 **219 tests pass** (185 → 198 after phase 1 → 219 now).
 
 ### Phase 3 — money and inventory become logs · *kills class B*
-Extract `money.tsv` from the `funds` notes blob — **the archaeology, and where the
-remaining unbooked purchases will surface.** Convert `inventory.tsv` to a log plus
-computed state. Then `log.py money`, `ledger.py check`, `test_double_entry.py`.
+
+#### 3a · money · ✅ BUILT 2026-09-11
+
+`campaign/assets.tsv` (**reference — identity only, no quantities**),
+`campaign/money.tsv` (**log, `asset` required**), `tools/ledger.py`,
+`tools/log.py`, `tools/tests/test_ledger.py`. **The purse is now `SUM(delta)`,
+computed, and `brief.py` and `audit.py` both take it from the ledger rather than
+from the `inventory.tsv` cell** — a checker must not check a figure against a
+copy of itself.
+
+**THE ARCHAEOLOGY, and its finding:** the 4,910-character notes blob on the old
+`funds` row **reconciles exactly from day 39 onward** —
+`595.6 −25 +61 +235 −31 −1.1 +250 −42.4 +30 = 1,072.1`, which is what the cell
+said and what the tools compute. **Before day 39 it does not.** The day-34 chain
+lands about a gold piece away from the day-35 opening figure and the blob does
+not say where the difference is.
+
+> **That is the finding, not a failure: a running total kept in prose stopped
+> being reconcilable somewhere around day 34 and nobody could have known.**
+> Inventing eight rows to close a 1 gp gap would put false precision into an
+> append-only log, so days 1–38 are **one anchor carrying the narrative**,
+> exactly as the day-39 XP anchor does in `encounters.tsv`.
+
+**The service ids** (`wages`, `lodging`, `licence`, `loan`, `kit`, `service`)
+are not a fudge. Money leaves the purse for things that are not goods, and
+without them the double-entry rule would be **unsatisfiable on its first real
+use** — and a rule that cannot be obeyed is a rule that gets quietly broken.
+
+**`tools/log.py` is the gate.** It refuses a money row with no asset, an asset id
+not in `assets.tsv` (and suggests the near miss), a zero delta, a campaign day
+running backwards, and an unknown character. **Validate on write, rebuild on
+read.**
+
+#### ⚠ AND TWO REAL BUGS FOUND WHILE BUILDING IT — both pre-existing, both silent
+
+**1 · Short rows are read with every later field shifted one column left.**
+`tsvlog.read_tsv` pads short rows *on purpose* (a trailing note left off is
+still a usable event), so a line missing a **middle** field is misread in
+silence. It happened twice within an hour of `money.tsv` being written by hand.
+`log.py` now always writes the full width.
+
+**2 · TWO EVENTS GLUED BY A MISSING NEWLINE, invisible since 2026-08-28.**
+Checking field counts across every campaign log found two over-wide rows, and in
+both cases **the second event had never been read by any tool**:
+
+| | lost |
+|---|---|
+| `clock.tsv` | **round 959 — Yrtone casting cure light wounds on Dave** |
+| `world_changes.tsv` | **the square (20,8) marked SEEN** — so the map believed the party had never looked at a square they walked through |
+
+**`world.py replay` went from 404 applied changes to 405 once the line was
+split.** `test_no_campaign_log_has_an_over_wide_row` now guards every log, and a
+second test names both recovered rows so a future merge cannot re-glue them.
+
+#### 3b · inventory becomes a log · TODO
+
+`inventory.tsv` is still edited **in place** — the one campaign file that is, and
+the one that has rotted five times. It becomes `inventory_log.tsv` + computed
+quantities over the same `assets.tsv`. **Until then `ledger.py check`'s
+good-has-an-inventory-row leg is a name match rather than a quantity match**,
+which is the weaker half of the double entry.
+
+#### 3c · `encounter.tsv` · TODO
+
+The live fight — round, initiative, who held, each monster's remaining hp —
+currently lives **entirely in the DM's own narration**, which is the
+"narrate from my own summary" failure operating in the highest-stakes context in
+the game. With it, `combat.py` can **refuse an undeclared party action**, because
+it knows whose turn it is and that nothing has been declared.
+
+**238 tests pass** (185 → 198 → 219 → 238).
 
 ### Phase 4 — canonical entities and the prose split · *kills class D, the largest*
 1. `people.tsv`, `places.tsv`, `assets.tsv` — **identity only**.

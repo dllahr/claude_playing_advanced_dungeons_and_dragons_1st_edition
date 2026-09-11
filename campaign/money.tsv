@@ -1,0 +1,47 @@
+# THE PURSE -- append-only. FUNDS ARE DERIVED: `python tools/ledger.py`.
+#
+# `delta` is in GOLD PIECES, decimal, 0.1 gp = 1 s.p. Positive in, negative out.
+# `asset` MUST name a row in campaign/assets.tsv and tools/log.py refuses a row
+# without one. That requirement IS the double entry: five errors in this
+# campaign were purchases recorded only as a sentence inside the notes column of
+# the funds row, with no item row anywhere --
+#
+#     the two carts     40 days unrecorded
+#     the two mules     ditto
+#     the small goods   357 gp, 17 days untracked and never rolled
+#     six 50-ft ropes   11 days, while the rope row still said 2
+#     dragon scales     carried as unsold long after they were sold
+#
+# You cannot write a money row here without naming what the money was for.
+#
+# *** WHY THERE IS AN ANCHOR AT DAY 39 ***
+# This file was reconstructed on 2026-09-11 from the 4,910-character notes blob
+# on the `funds` row of inventory.tsv. FROM DAY 39 ONWARD THE BLOB RECONCILES
+# EXACTLY -- 595.6 -25 +61 +235 -31 -1.1 +250 -42.4 +30 = 1,072.1, which is the
+# figure the inventory row carries and the figure the tools compute. Every one
+# of those movements is a row below.
+#
+# BEFORE DAY 39 IT DOES NOT RECONCILE. The day-34 chain (26.1 -> 265.1, less
+# 115.5 of outfitting, less 3.2 to Coll, less 18 for Ista's kit) lands about a
+# gold piece away from the day-35 opening figure of 150.6, and the blob does not
+# say where the difference is. THAT IS THE FINDING, not a failure: a running
+# total kept in prose stopped being reconcilable somewhere around day 34 and
+# nobody could have known. Inventing eight rows to close a 1 gp gap would put
+# false precision into an append-only log, so days 1-38 are one anchor carrying
+# the narrative, exactly as the day-39 XP anchor does in encounters.tsv.
+#
+# An `anchor` row SETS the purse outright. Everything else adds.
+when	day	delta	asset	qty	counterparty	interaction	reason
+2026-09-11	39	595.6	anchor			-	ANCHOR: 595 gp 6 sp. Days 1-38 in one row because the prose blob stops reconciling around day 34 (see header). What it records: 211 gp 6 sp on departure for expedition 6, plus receipts that came in while the party was underground -- ~+312 the day-37 market on the small goods, ~+60 the tool line under Hask, +20 the last iron and salt AT COST, +14 for 28 ep off the orc bodies = 617 gp 6 sp; then LESS 22 gp for Ista's kit on day 39, which this row had never been debited and which the player caught. Earlier landmarks inside the anchor: day 34 receipts +80 iron/salt at cost and +159 the tool line; day-34 outfitting 114 gp 15 sp (10 oil flasks, five daggers, backpack, waterskin, keg and spigot, 18 person-weeks of iron rations); 3 gp 2 sp to Coll for wage arrears; 18 gp Ista's kit; day 35 +61 including Marrow's last ten pair of shears at 26 gp, which Hask UNDERSOLD by nine gold. HASK'S RING-FENCED SEVENTH of the tool line (~36 gp) is NOT in this figure and never has been.
+2026-09-11	52	-25	licence		wace	-	The Draycot licence paid in coin on the table, Ottir witnessing. 25 gp a year for three years, backdated to Michaelmas last. articles.md art. 10
+2026-09-11	54	61	small_goods		-	-	Small-goods receipts for days 38-54 that had never been rolled at the time: 26 (day-44 market) + 21 (day-51 market) + 14 (counter trade). Entered retroactively 2026-09-07, scale anchored by Wend's own day-48 statement that only half had sold, which OVERRIDES the dice
+2026-09-11	59	35	realgar	-1	church_limner	59:2	The vial named as REALGAR by Trebb the dyer and sold to the church's limner at Marchford. Valued 45 on 3d6=13; sold 35
+2026-09-11	59	40	dye	-1	trebb	59:3	The dye to Trebb AT COST, all of it, cash. Reaction 41 -- articles.md's first finding: at cost is a discount and a discount is a gift wearing a trade's clothes
+2026-09-11	59	160	small_goods	-1	ossery	59:4	The remaining small goods to OSSERY the mercer, blue shutters, at dusk on market day. HASK SOLD IT and did not undersell, holding his number through two silences. THE LINE CLOSES: 573 gp on 357 gp of cost
+2026-09-11	62	-31	lodging		lyde	62:1	Paid at Lyde's door: 25 gp premium plus 6 gp first quarter's board of a year for Meg and Tibb, at 1 gp/month/head (DMG p.28's porter at 1 gp a month WITH quarters). OWING: 18 gp in three further quarterly instalments, next about day 152
+2026-09-11	62	-1.1	loan		dill	62:2	Eleven shillings LENT to Dill for his tools -- a LOAN, entered as a debt at his own insistence, repayable out of his first month. He asked for it to be written that way
+2026-09-11	65	250	lab_glass	-1	toller	65:1	Toller's FULL valuation for Zelligar's laboratory apparatus, paid the moment he was shown Master Wace's receipt, which recites the contents of Dave's letter. His day-42 condition DISCHARGED after twenty-three days. Over a thousand gold for the first time
+2026-09-11	67	-16	lodging		-	-	Marchford lodging never charged at the time: 8 people, 2 nights, house rule 1 gp/person/night. Booked day 67 when the omission was found
+2026-09-11	67	-24	rations_std	8	-	-	Eight person-weeks of STANDARD rations at 3 gp. Standard, not iron, deliberately -- iron exists to keep a month and a three-day trip does not
+2026-09-11	67	-2.4	rope_50ft	6	-	-	SIX 50-ft ropes at 4 s.p. One of the two old ropes was chewed more than halfway through on exp.6 and the plan put eight people on brake lines behind 460 lb. *** THE ROPE ROW STILL SAID 2 FOR ELEVEN DAYS AFTER THIS. This row and the corrected inventory line are the fix ***
+2026-09-11	71	30	ale_barrel_sd	-1	holt	71:4	First half of 58 gp for the 36-gallon SD cask. Holt named it off the bung without tapping it -- strong stock ale, thirty years and not turned. TWENTY-EIGHT GOLD IS STILL OWING in his own hand against the cask as he draws it, written unasked. That is loop L010, not a receivable in this file

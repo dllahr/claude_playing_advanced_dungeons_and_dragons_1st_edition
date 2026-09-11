@@ -282,7 +282,8 @@ when	map	exped	turn	level	scope	target	change	item	qty	who	note
 # a WALL. (19,6) is retracted from seen; the true route turns east at (19,5).
 2026-08-28	b1	4	1111	1	seen	20,5	yes				corrected route: east at (19,5), then north to the 3-way at (20,7)
 2026-08-28	b1	4	1111	1	seen	20,6	yes				corrected route: east at (19,5), then north to the 3-way at (20,7)
-2026-08-28	b1	4	1111	1	seen	20,7	yes				corrected route: east at (19,5), then north to the 3-way at (20,7)2026-08-28	b1	4	112	1	seen	20,8	yes			party	walked the corridor north from the three-way junction
+2026-08-28	b1	4	1111	1	seen	20,7	yes				corrected route: east at (19,5), then north to the 3-way at (20,7)
+2026-08-28	b1	4	112	1	seen	20,8	yes			party	walked the corridor north from the three-way junction
 2026-08-28	b1	4	112	1	seen	20,9	yes			party	walked the corridor north from the three-way junction
 2026-08-28	b1	4	112	1	seen	20,10	yes			party	walked the corridor north from the three-way junction
 2026-08-28	b1	4	112	1	seen	20,11	yes			party	walked the corridor north from the three-way junction
