@@ -972,62 +972,118 @@ Standing facts that carry to any new sheet:
 
 ---
 
-## 11. Where the campaign stands *(updated 2026-09-05, day 39)*
+## 11. Where the campaign stands *(updated 2026-09-10, day 77)*
 
-> **Read `git log --oneline` first.** It is the campaign history and it costs
-> almost nothing. This section is a snapshot and snapshots rot — this very
-> heading said "day 28" while play was at day 39.
+> ### ⚠ THIS SECTION WAS 38 IN-GAME DAYS STALE WHEN IT WAS REWRITTEN
+>
+> It was headed *"day 39"* while play stood at **day 77**, it carried funds of
+> **595 gp** against an actual **1,072**, spikes **3** against **9**, and Tristle's
+> XP **641** against **712**. It also warned, in its own second paragraph, that
+> snapshots rot — **and then rotted for five weeks.** It is the single largest
+> instance in the repo of the defect the rest of this file is about.
+>
+> **Read `git log --oneline` first.** That is the campaign history, it cannot go
+> stale, and it costs almost nothing. **Then run the tools.** This section is for
+> the things no tool computes.
 
-**NOBODY IS IN THE DUNGEON. Campaign day 39, in Wethersby**, expedition 6
-closed — all eight came out alive after 26 hours 20 minutes under.
+### ⏸ PLAY IS PAUSED MID-DEPARTURE — resume exactly here
 
-### THE IMMEDIATE AGENDA — the player's own list, given 2026-09-05
+**Campaign day 77, evening, Wethersby. Nobody is in the dungeon.** Expedition 8
+closed on day 71. **Expedition 9 has been declared and not begun.**
 
-**Six check-ins, in Wethersby, day 39-40.** Named in this order and all owed a
-scene:
+**The player paused on 2026-09-10 to rebuild the tooling** — see
+`dlwork/tooling_redesign.md`. His reason, in his words: *"it seems like we're
+spending more and more time correcting things, it's inevitable as the game
+expands."*
 
-| | and the thing they are actually waiting on |
+#### WHAT WAS ALREADY DECIDED FOR EXPEDITION 9, and must not be re-asked
+
+| | |
 |---|---|
-| ~~**Wend**~~ | **DONE day 39 late.** 59, then **101** on Dave's three items. See `npcs.md` `## DAY 39, late — WEND` and `articles.md` arts. **6** (the money lives with her) and **7** (buyer of last resort, **price/cap/season still unnamed**). **She asked for a CLERK and did not know Sarn existed as one.** New holders want into the pool. **Wat's terms still not agreed** |
-| ~~**Ottir**~~ | **DONE day 40 morning.** 81 · 87 · 93. See `npcs.md` `## DAY 40, morning — REEVE OTTIR`. **THE SURETY IS SATISFIED.** **MASTER WACE HAS WRITTEN: account of the hundred at Draycot, DAY 52** — yield, hands, and traffic on the north road. **The party told him everything about Quasqueton** and he asked the one hard question: *whose is it?* **Causeway CLOSED by Dave — do not reopen it** |
-| **Bern** | the loom. **May or may not have started it** — the party left Wend in charge and did not say. Ista told him about the caves herself and asked that nobody help; **outcome unknown, do not resolve it for her** |
-| **Coll** | basecamp and the barn. Has his authority in writing now. All six unlisted hands went to Marrow's with a written right of return |
-| **Halm** | the guide. **Genuinely does not know about the barrel** (d6=1, answered honestly) |
-| ~~**Sarn**~~ | **DONE day 39 evening.** See `npcs.md` `## DAY 39, evening — SARN`. Learning his letters off Frython from first light day 40; **Toller banked a week** and Dave holds the line that opens that door. **He is still unpaid for a month of running the store** |
+| **Who** | **ALL EIGHT available** — Dave, Torsat, Tristle, Frython, Yrtone, Blartho, Dellie, Ista. **Hask is on the wool road; Rowe went with Halm** |
+| **Objective** | **EXPLORE. The player was asked and pushed back — "why do you need this?" — and he was right.** The route is chosen at each junction, by him, standing in the corridor. **Do not ask for an expedition objective again** |
+| **Spells** | **"Same as last time"** = the standing loadouts below |
+| **Departure** | **First light day 78 · road all day · night at COLL'S BASECAMP · up to the door the morning of DAY 79** |
+| **Formation** | standard, **with Hask's spear missing from the second rank.** Never ask for marching order |
 
-**Do not front-load these with mechanics.** Reaction rolls per DMG p.63 with the
-adjustment said aloud first, and remember the standing finding in
-`campaign/articles.md`: **gifts land badly, work lands.**
+#### ⚠ TWO QUESTIONS WERE OUTSTANDING WHEN PLAY STOPPED
 
-### State
+1. **FOOD.** Eight people have **~2 person-weeks standard + ~2.5 iron ≈ four days
+   underground.** Standard packets are day-67 and aging. **3 gp a person-week
+   standard, 5 gp iron**, and the purse is with Wend, so it is tonight's errand or
+   it does not happen.
+2. **BLARTHO'S THIRD SPELL.** He has held ***detect magic*** since day 47, prayed
+   specifically to test the sealed vial — **a job finished 30 days ago.** He is
+   carrying a spell for a completed errand. Offered; not answered.
 
-- **Nine characters, not six.** Hask (Fighter), Dellie (Cleric) and Ista (Thief)
-  were promoted day 39. **Dellie may not use edged weapons and is AC 6.**
-  **Ista's CON 3** caps her resurrections at three.
-- **Funds 595 gp 6 sp** (617 gp 6 sp less Ista's 22 gp kit).
-- **Frython and Blartho are invalid until day 45** — a week off their feet.
-- **13 iron spikes carried; 3 left in the dungeon.** Three of them hold the
-  **pit trap at (29,31) jammed open** — that is a world change, not a memory.
-- **Tristle: 641 XP, needs 1,251 — and 1,500 gp of training he cannot afford.**
-- **The ring is still unidentified.** Only lead is **Wraye**, three days east of
-  Ludbury, which has a library.
+#### THE STANDING SPELL LOADOUTS (last logged overnight day 47-48)
 
-### Owed in the fiction
+| **Yrtone** | *command* + 2 × cure light wounds |
+|---|---|
+| **Blartho** | *detect magic* + 2 × cure light wounds — **see above** |
+| **Dellie** | 2 × *light* + 1 × cure light wounds. **She has never cast a light** |
+| **Frython** | *sleep*, his only spell |
 
-Fetch **Ede** — **due about DAY 58** *(CORRECTED 2026-09-05, player-caught. This
-line said "~17 days out" and I wrote it myself earlier the same day; it does not
-follow from anything attested and I could not reconstruct it. The attested fact is
-`calendar.md` day 28: **she wants a MONTH to shut up her cottage**, so day 28 + 30
-= **day 58**, which is **19 days from day 39**. Travel is NOT attested either — the
-distance table gives Wethersby↔Fenn's as **4 days by cart** plus 8 miles
-cross-country to her door; "2½ days on horseback" was also mine. Derive it before
-quoting it.)* · send a lad to the
-weaver at **Lyde** · **Wat's terms** · Ottir's report to **Master Wace** ·
-**Draycot's second letter** about the headboard · **art. 7 fair copy to Ottir,
-day 40** · **the floor chalked on the board and read to every holder** · **Sarn
-onto Coll's standing roll at a clerk's wage** (Wend and Coll are doing it; the
-party is not to be involved, and *nobody tells Sarn it is because he was owed
-it*) · **Wat's terms — Coll's to settle, the party has stood back**.
+**All three clerics have THREE 1st-level slots** — 1 for the level plus 2 for
+Wisdom. That is why a 1st-level cleric here casts three.
+
+### State — day 77. EVERY NUMBER HERE IS COMPUTED BY A TOOL; RE-RUN, DO NOT QUOTE
+
+| | |
+|---|---|
+| **Nine characters** | Hask (F), Dellie (C), Ista (T) promoted day 39. **Dellie may not use edged weapons, AC 6. Ista CON 3** — −2 hp/die, three raises maximum |
+| **hp** | **everyone full** — `tools/hp.py`. Yrtone anchored to 7/7 on day 77 |
+| **XP** | Dave 744 · Tristle **712 (539 from 2nd level)** · Yrtone 660 · Frython 660 · Torsat 599 · Blartho 599 · Dellie 88 · Hask 73 · Ista 53 — `tools/xp.py` |
+| **Funds** | **1,072 gp 1 sp**, with Wend. **Plus 28 gp owing from Holt** in his own hand against the cask |
+| **Spikes** | **13 carried, 9 EMPLACED** — 3 jamming the pit trap at **(29,31)**, 2 holding the **(17,13,V)** one-way slab, 2 each at **(23,23,V)** and **(31,31,V)** sealing area 34. `tools/world.py deployed` |
+| **Light** | 3 lanterns · **440.6 turns of oil** (18 sealed + 1 broached) · 8 torches. `tools/light.py oilstate` |
+| **Ropes** | **8** (7 sound, 1 damaged) |
+| **Position** | `party.py` shows **(16,1)** from the day-70 walk out. **That tool tracks DUNGEON position only** — the party has been overland for seven days |
+| **Clock** | `clock.py status` reports **expedition 8, round 286. THAT CLOCK IS CLOSED.** `clock.py start --exped 9` supersedes it |
+| **The ring** | still unidentified. Only lead is **WRAYE**, three days east of Ludbury, which has a library |
+
+### Owed in the fiction — day 77
+
+**The convergence: nothing on the board runs sooner than the dates below.**
+
+| when | what |
+|---|---|
+| **~80-81** | **OSK back off his run.** Three things for him: whether the party is entering his trade, the standing-run question, and **he is the man ANCEL asked about the wool** |
+| **~83** | **THE WOOL PARTY HOME** — Nan grades, Tam (9) writes, Hask holds the price, Halm carts, Rowe minds the beasts. **The first operation that never needed the party** |
+| **after 83** | **SOUTH with three carts.** Wend's list costed · **Toller's six correspondents in six towns** · forty unnamed jars for Trebb · *"who buys narrow cloth in Marchford and at what — I don't want their cloth, I want their PRICE"* |
+| **spring** | **ANCEL RETURNS WITH A PURSE**, on a penny in the pound for three years, and **his four buyers include a FULLER WHO TAKES CLOTH** |
+
+**Not on a clock, and live:**
+
+- **⚠ A MAN HAS BEEN SENT ABOUT THE ANIMATED DEAD.** No name, no rank, no date.
+  Cuddy's house did not write to ask questions — **it wrote to say a man is
+  coming.** And holy water needs a cleric of the 5th, so the thing walking toward
+  the crag may be the answer to the crag.
+- **THE DWARF** is on trestles above ground in Cuddy's chapel, awaiting an answer on
+  what a dwarf is owed. **Dellie now knows the words** — Cuddy taught her, *"in
+  case."*
+- **THE CHAPEL ROOF.** Ottir's answer: ask **who mended it last and who paid**, and
+  the man to ask is **Cuddy**. **Perrin is struck off** — he refers upward. Costs
+  one question on a trip already pending. **Do not ask the hall.**
+- **CUDDY IS FRAIL** (d6=1) — wet in the chest, seventy-odd, November. Not dying.
+- **GYLL'S FOUR-AND-A-BIT ACRES** for Dill's flax. **Ottir's condition: ask the
+  eleven, one at a time, and nobody goes near Gyll first.** Wend has not started.
+- **DILL** — Hask's proposal is *teaching*, not labour: a year to make two dressers,
+  and buy two or three stone of retted flax, because *"you don't cart a harvest, you
+  cart a lesson."* **Wend: don't find him a shovel.**
+- **THE LOOM** goes to **BERN**, flatly — and **ask Bern what he wants off a Ludbury
+  list** (the reed and heddles, not the frame). Do not order over his head.
+- **THE IRON PRICE** — art. 14's fourth finding. **"At cost" was ~60 gp BELOW cost.**
+  Price the new properly and **show the road in the price**; do not reprice the old.
+- **WEND NEEDS ONE ANSWER FROM THE PARTY: how much, and whose money.** She will not
+  cost the southern list without it.
+- **Sarn** onto Coll's standing roll at a clerk's wage — *Wend and Coll are doing
+  it, the party is not to be involved, and nobody tells Sarn it is because he was
+  owed it.*
+- **The 229 gp of the six holders' shares** and the **floor chalked on the board**.
+- **Toller** wants to be told **first** if anything ever goes south instead of to him.
+- **Holt** wants to know whose brewhouse **'SD'** was.
+
 
 ### Dungeon threads
 
@@ -1041,11 +1097,21 @@ area", not "inside room N", and are not reliable.
 **`combat.py` does not cycle a multi-value damage list** — it rolls the first
 value for every attack in the list. Roll those by hand.
 
-**`clock.py status` still reports expedition 5, round 358. That clock is CLOSED**
-— there is no `close` subcommand, and `clock.py start --exped 6` will supersede
-it. Do not read a live dungeon clock off it while the party is overland.
+**`clock.py` has no `close` subcommand**, so `status` always reports the last
+expedition's final round as though it were live — **expedition 8, round 286 as of
+day 77, while the party has been overland for seven days.** `clock.py start
+--exped 9` supersedes it. **Do not read a live dungeon clock off it while the
+party is above ground.** *(This entry itself said "expedition 5, round 358" until
+2026-09-10 — three expeditions out of date. The DEFECT is real and unfixed; the
+example in it kept rotting, which is why the example has been replaced with a
+pointer to the command.)*
 
-**Tests: 171 in `tools/`** (`conda run -n advanced_dnd_1e python -m pytest tools/tests -q`),
+**`party.py where` tracks DUNGEON position only.** It reported (16,1) throughout
+seven days in Wethersby and two trips to Draycot. That is not a bug — there is no
+overland map — but it must never be read as "where the party is" while they are
+above ground.
+
+**Tests: 185 in `tools/`** (`conda run -n advanced_dnd_1e python -m pytest tools/tests -q`),
 plus the `mapdb` suite — `python -m pytest mapdb tools -q` runs both.
 **Reachability regression: DMG 21/641, B1 6/1197.** B1 moved 5 -> 6 on 2026-08-29
 and that was a FIX; `rebuild.sh` explains why in its footer.
