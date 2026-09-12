@@ -1,16 +1,17 @@
 """The drawn map must obey the same two rules as the text one, and one more.
 
-`tools/mapimg.py` and `tools/overland.py` render **the same data in two media**
-for two readers: the ASCII map is read inline while narrating and can be quoted;
-this one is for looking at properly. Neither can drift from the other, because
-neither holds any data of its own.
+`tools/mapimg.py` is now **the only thing that draws this campaign's overland
+map**. An ASCII renderer lived in `overland.py` for a day and was removed on
+2026-09-12: the player asked whether it was actually easier to READ than the
+data behind it, and it was not. This holds no places of its own either -- it
+draws `places.tsv` and `knowledge.tsv` and nothing else.
 
 WHAT THE PIXELS BUY, and it is the reason this file exists at all:
 
-    the aspect is simply TRUE      the text map carries a 2:1 character hack
-                                   and has to announce it in its own header
-    labels are sub-pixel           the text renderer had to reserve margin, and
-                                   before that it dropped names it could not fit
+    the aspect is simply TRUE      the text map carried a 2:1 character hack
+                                   and had to announce it in its own header
+    labels are sub-pixel and can   the terminal had to give up and SAY so
+    run on a LEADER LINE
     *** A VAGUE POSITION IS A      in text, Quasqueton's uncertainty is a
         DRAWN CIRCLE ***           footnote saying "~ within 1,000 ft". Here it
                                    is a ring you can SEE, and at the crag it is
@@ -160,12 +161,11 @@ def test_the_output_is_gitignored_because_it_is_derived():
     assert mapimg.OUTDIR.endswith(os.path.join('campaign', 'output'))
 
 
-def test_the_two_renderers_agree_about_who_is_on_the_map():
+def test_the_drawing_shows_exactly_who_the_data_says_it_should():
     """They hold no data of their own, so they cannot disagree -- and this
     says so out loud, because 'two views of one source' is only a virtue while
     somebody is checking."""
     import entities
-    text = land.render(width=120, height=46)
     pic = mapimg.svg()
     for pid, r in entities.places().items():
         if (r.get('kind') or '') in ('region', 'hundred'):
@@ -177,4 +177,3 @@ def test_the_two_renderers_agree_about_who_is_on_the_map():
                 'by the basecamp and the cave mouth -- which is worse than the '
                 'terminal, which at least reports what it could not fit. '
                 'Leader lines and a NO ROOM note are the fix.' % pid)
-            assert r['name'] in text, '%s in SVG but not in text' % pid

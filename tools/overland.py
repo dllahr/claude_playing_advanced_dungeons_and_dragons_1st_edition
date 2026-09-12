@@ -1,58 +1,39 @@
 #!/usr/bin/env python3
-"""The land above ground, on a grid. Computed from campaign/places.tsv.
+"""The land above ground: distances, bearings, and what the party knows.
 
-    python tools/overland.py                      # the schematic
-    python tools/overland.py --scale 3            # tighter
+    python tools/overland.py                      # everywhere, from Wethersby
     python tools/overland.py how-far Draycot Marchford
-    python tools/overland.py from Wethersby       # everywhere, by distance
-    python tools/overland.py check                # does the grid still agree
-                                                  # with the narrative? exit 1
+    python tools/overland.py from Marchford
+    python tools/overland.py where b1_level1 16 1  # a dungeon square, in the world
+    python tools/overland.py knows
+    python tools/overland.py check                 # does the model still match
+                                                   # the fiction? exit 1 if not
 
-*** THE ASCII MAP IS NOT FOR THE DM, AND IT IS NOT AUTHORITATIVE. ***
+*** THIS TOOL NO LONGER DRAWS A MAP, AND THAT IS DELIBERATE. ***
 
-Asked directly whether the text map was easier to read than the data behind it,
-the honest answer is NO. Reading "which town lies north-west of Wethersby" off a
-character grid means reconstructing coordinates from column positions -- which is
-strictly harder than reading the coordinates. Every question the DM actually asks
-has a better answer in a query:
-
-    how far          `how-far A B`      exact, both ways, with the time ranges
-    which way        the bearing, computed, not eyeballed off a glyph
-    what lies on     `from <place>`, sorted by distance
-    do they know     `knows`
-
-A picture can surprise you with something you did not ask about, and that is
-worth something. It is thin next to the cost of the DM squinting at a grid.
+An ASCII renderer lived here for a day. The player asked the right question --
+was it actually easier to READ than the data behind it? -- and the answer was
+no. Reading "which town lies north-west of Wethersby" off a character grid means
+reconstructing coordinates from column positions, which is strictly harder than
+reading the coordinates. Every question the DM actually asks has a better answer
+in a query, and all of them are above.
 
 *** AND A PASTED MAP IS A STALE MAP. *** A rendering in the conversation is
-correct at the instant it is made and never again. Reading a position back off
-one is narrating from a summary instead of from the log -- the single largest
-error class in this campaign -- so: RENDER IT FOR THE PLAYER, QUERY IT FOR
-YOURSELF.
+correct at the instant it is made and never again; reading a position back off
+one is narrating from a summary instead of from the log, which is the largest
+error class in this campaign. **Render it for the player -- `tools/mapimg.py`,
+which draws SVG and can show an uncertainty as an actual circle. Query it for
+yourself, here.**
 
-WHY A GRID AND NOT A PICTURE. The distances lived in `calendar.md` prose and
-were misquoted: the DM twice described the cart as *"a day behind at Fenn's"*
-when Ede's gate is **eight miles** from Fenn's yard -- a couple of hours. A
-drawing would have been just as easy to misread. Coordinates can be *checked*,
-and `check` recomputes every travel time off them and FAILS if the map stops
-agreeing with the fiction it was built from.
+THE TWO LAYERS. `campaign/places.tsv` is the TRUE map and it is EXACT: the world
+is where it is, distance is fixed, and only TIME varies. `campaign/knowledge.tsv`
+is what the PARTY knows, which is where the uncertainty belongs -- known, vague,
+heard, unknown. The campaign already drew that distinction one level down, where
+`mapdb` separates what a square IS from `cells.seen`.
 
-*** THE SCALE IS ATTESTED, NOT INVENTED. *** One day by cart = **18 miles**,
-because the crag turning is *"one day's walk, call it fifteen to twenty miles
-laden"* and one day from Wethersby. Everything else is scaled off that.
-
-*** AND `fix` SAYS HOW EACH PLACE GOT WHERE IT IS. *** A map flattens the
-difference between a fact and a guess more thoroughly than prose does -- once
-something is drawn, it looks surveyed. So every place carries its provenance:
-
-    attested   bearing AND distance are both in the record
-    part       one of the two is; the other is a DM call
-    call       NEITHER is. Placed to make the schematic work, and the
-               schematic is the only authority for it
-    region     an area, not a point
-
-**A `call` is not canon.** If play establishes where Marrow's holding actually
-lies, that answer wins and this file changes to match it.
+THE SCALE IS THE BOOK'S: `rules/overland.md`, DMG p.58. A cart does 25 miles a
+day on a road, a laden walk 20, a medium mount 40. An earlier draft used a
+DM-invented 18 per CART-day, taken off a WALKING figure.
 """
 import argparse
 import math
@@ -96,9 +77,6 @@ ROADS = {
     'the Ludbury road east': ['ludbury', 'wraye'],
 }
 
-GLYPH = {'town': 'O', 'city': '@', 'hall': 'H', 'village': 'v',
-         'holding': 'f', 'hamlet': '.', 'camp': 'c', 'landmark': '^',
-         'dungeon': '*', 'region': ' ', 'hundred': ' '}
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 KNOW = os.path.join(ROOT, 'campaign', 'knowledge.tsv')
@@ -200,63 +178,6 @@ def road_between(a, b):
     return None
 
 
-ASPECT = 2.0        # a terminal character is about twice as tall as it is wide
-
-
-def _fit(pts, width, height=None, margin=2):
-    """Miles per column so the map fills `width`, honouring the aspect ratio.
-
-    If `height` is given the map is fitted into the BOX, which letterboxes
-    horizontally -- this world is half as wide as it is tall, so filling the
-    width makes a long map. That is the honest shape of it.
-    """
-    xs = [v[0] for v in pts.values()]
-    ys = [v[1] for v in pts.values()]
-    span_x = max((max(xs) - min(xs)) / MILE, 1.0)
-    span_y = max((max(ys) - min(ys)) / MILE, 1.0)
-    by_w = span_x / max(width - margin * 2 - 1, 1)
-    if height is None:
-        return by_w
-    by_h = span_y / (max(height - margin - 1, 1) * ASPECT)
-    return max(by_w, by_h)
-
-
-def _road_char(dx, dy):
-    if dx == 0:
-        return '|'
-    if dy == 0:
-        return '-'
-    return '\\' if (dx > 0) == (dy > 0) else '/'
-
-
-def _place_label(grid, cy, cx, text):
-    """Write `text` near (cy,cx) wherever it fits. Returns True if it landed.
-
-    The first renderer wrote labels straight onto the grid and they collided --
-    Wettleford over Marrow's, both over WETHERSBY, and the origin of the whole
-    map vanished under somebody's holding. This tries four sides and gives up
-    honestly rather than overwriting.
-    """
-    rows, cols = len(grid), len(grid[0])
-
-    def free(y, x0, n):
-        if not (0 <= y < rows and 0 <= x0 and x0 + n <= cols):
-            return False
-        return all(grid[y][x0 + i] == ' ' for i in range(n))
-
-    n = len(text) + 1
-    spots = [(cy, cx + 2), (cy, cx - n - 1)]
-    for dy in (-1, 1, -2, 2, -3, 3):
-        for dx in (1, 2, 3, -n, -n - 1, -n - 2, 0):
-            spots.append((cy + dy, cx + dx))
-    for y, x0 in spots:
-        if free(y, x0, n):
-            for i, ch in enumerate(text):
-                grid[y][x0 + i] = ch
-            return True
-    return False
-
-
 def crop(pts, centre, radius_mi):
     """Only what lies within `radius_mi` of `centre`. THE ZOOM.
 
@@ -271,149 +192,6 @@ def crop(pts, centre, radius_mi):
     r = radius_mi * MILE
     return {k: v for k, v in pts.items()
             if math.hypot(v[0] - cx, v[1] - cy) <= r}
-
-
-def render(scale_mi=None, pts=None, true=False, kn=None,
-           width=120, height=None, labels=True, all_pts=None):
-    """The PARTY'S map by default. `true` is the DM's.
-
-    *** THE DEFAULT MATTERS AND IT IS NOT DECORATION. *** A map is the easiest
-    possible way to leak a position. If the party has never been to Wraye their
-    map must not carry a dot at its exact coordinates -- CHECKLIST section 8 --
-    so a `heard` place is a name in the margin and nothing else.
-    """
-    pts = pts if pts is not None else points()
-    # Distances in the legend are always FROM WETHERSBY, which a crop may have
-    # cut out -- the crag at a 4-mile radius does not contain the town.
-    all_pts = all_pts if all_pts is not None else points()
-    kn = kn if kn is not None else knowledge()
-    real = {k: v for k, v in pts.items()
-            if (v[2].get('kind') or '') not in ('region', 'hundred')}
-    if not true:
-        real = {k: v for k, v in real.items()
-                if level_of(k, kn) in (KNOWN, VAGUE)}
-    if not real:
-        return 'the party has been nowhere yet'
-
-    # Reserve room for the longest NAME before choosing the scale, or a place
-    # at the eastern edge has nowhere to put its label and the map has to report
-    # that it gave up -- which it did, for Marrow's holding and Ede's cottage.
-    pad = max(len(v[2]['name']) for v in real.values()) + 3
-    scale = (scale_mi if scale_mi
-             else _fit(real, max(width - pad, 20), height)) * MILE
-    rowft = scale * ASPECT
-    xs = [v[0] for v in real.values()]
-    ys = [v[1] for v in real.values()]
-    x0 = min(xs) - scale * 2
-    y0 = min(ys) - rowft
-    cols = int((max(xs) + scale * 2 - x0) / scale) + 1 + pad
-    rows = int((max(ys) + rowft - y0) / rowft) + 1
-    grid = [[' '] * cols for _ in range(rows)]
-
-    def cell(x, y):
-        return (max(0, min(cols - 1, int(round((x - x0) / scale)))),
-                max(0, min(rows - 1, rows - 1 - int(round((y - y0) / rowft)))))
-
-    for stops in ROADS.values():
-        for a_, b_ in zip(stops, stops[1:]):
-            if a_ not in real or b_ not in real:
-                continue
-            (ax, ay), (bx, by) = cell(*pts[a_][:2]), cell(*pts[b_][:2])
-            ch = _road_char(bx - ax, by - ay)
-            steps = max(abs(bx - ax), abs(by - ay)) or 1
-            for i in range(steps + 1):
-                cx = ax + int(round((bx - ax) * i / steps))
-                cy = ay + int(round((by - ay) * i / steps))
-                if grid[cy][cx] == ' ':
-                    grid[cy][cx] = ch
-
-    order = sorted(real.items(), key=lambda kv: (-kv[1][1], kv[1][0]))
-    at, unlabelled = {}, []
-    for pid, (x, y, r) in order:
-        cx, cy = cell(x, y)
-        g = GLYPH.get(r.get('kind') or '', '+')
-        if grid[cy][cx] not in ' -|\\/':
-            at.setdefault((cy, cx), []).append(pid)
-            continue
-        grid[cy][cx] = g
-        at.setdefault((cy, cx), []).append(pid)
-
-    if labels:
-        for pid, (x, y, r) in order:
-            cx, cy = cell(x, y)
-            here = at.get((cy, cx), [])
-            if here and here[0] != pid:
-                continue                       # the sharer names the cell
-            mark = '~' if level_of(pid, kn) == VAGUE else ''
-            text = mark + r['name'] + (
-                '' if not true or r.get('fix') == 'attested' else '?')
-            if len(here) > 1:
-                text += ' +%d' % (len(here) - 1)
-            if not _place_label(grid, cy, cx, text):
-                unlabelled.append(r['name'])
-
-    mi = scale / MILE
-    # An adaptive bar. A fixed "10 miles" ran off the edge at the crag, where a
-    # column is fifty feet, and would have been a single character out at the
-    # whole-world zoom.
-    want = cols * mi * 0.3
-    steps = [1 / 52.8, 5 / 52.8, 10 / 52.8, 0.25, 0.5, 1, 2, 5, 10, 20, 50, 100]
-    step = min(steps, key=lambda v: abs(math.log(v / max(want, 1e-6))))
-    bar = max(3, min(cols, int(round(step / mi))))
-    label = ('%d mile%s' % (round(step), '' if round(step) == 1 else 's')) if step >= 1 else (
-        '%g mile' % step if step >= 0.25 else '%d ft' % round(step * MILE))
-    head = [
-        '%s -- %s' % ('THE TRUE MAP  (DM ONLY)' if true else "THE PARTY'S MAP",
-                      'computed from campaign/places.tsv'),
-        'N is up, E is right.  %.2f miles a column, %.2f a row -- THE ASPECT '
-        'IS HONEST.  Wethersby is the origin.' % (mi, mi * ASPECT),
-        '|' + '-' * (bar - 2) + '|  ' + label,
-        '',
-    ]
-    body = [''.join(r).rstrip() for r in grid]
-
-    leg = ['', '%-3s %-22s %-9s %-7s %7s  %-11s %s'
-           % ('', 'place', 'kind', 'they', 'miles', 'bearing', 'time by cart')]
-    for pid, (x, y, r) in order:
-        m = miles('wethersby', pid, all_pts)
-        lv = level_of(pid, kn)
-        lo, hi = days_range(m, 'cart')
-        note = ''
-        if lv == VAGUE:
-            p_ft = (kn.get(pid, {}).get('precision_ft') or '').strip()
-            if p_ft:
-                v = float(p_ft)
-                note = '   ~ within %s' % ('%g mi' % (v / MILE) if v >= MILE
-                                           else '{:,} ft'.format(int(v)))
-        if true and r.get('fix') != 'attested':
-            note += '   <- %s' % r.get('fix')
-        leg.append('%-3s %-22s %-9s %-7s %7.0f  %-11s %.1f-%.1f d%s'
-                   % (GLYPH.get(r.get('kind') or '', '+'), r['name'],
-                      r.get('kind', ''), lv, m,
-                      bearing('wethersby', pid, all_pts)
-                      if pid != 'wethersby' else '--', lo, hi, note))
-
-    tail = []
-    heard = sorted(k for k in pts
-                   if level_of(k, kn) == HEARD and k in entmod.places())
-    if heard and not true:
-        tail += ['', 'HEARD OF, AND NOT PLACED -- they could not put these on a '
-                     'map, and this tool will not pretend otherwise:']
-        for k in heard:
-            tail.append('    %-18s %s' % (entmod.places()[k]['name'],
-                                          (kn[k].get('how') or '')[:88]))
-    dupes = [v for v in at.values() if len(v) > 1]
-    if dupes:
-        tail += ['', 'sharing a cell at this scale: ' + '; '.join(
-            ', '.join(entmod.places()[p]['name'] for p in v) for v in dupes)]
-    if unlabelled:
-        tail += ['', 'no room for a label beside: ' + ', '.join(unlabelled)]
-    tail += ['', ('*** DM MAP. Positions are EXACT. "?" and "<- call" mean the '
-                  'record establishes neither bearing nor distance and the '
-                  'position is mine; a call is not canon.') if true else
-             ('The party\'s own map. "~" marks a place they could not put a pin '
-              'in. Run with --true for the world as it is.')]
-    return '\n'.join(head + body + leg + tail)
 
 
 def check(pts=None, kn=None):
@@ -543,30 +321,13 @@ def from_report(origin, pts=None, kn=None):
 def build_parser():
     p = argparse.ArgumentParser(
         prog='overland.py',
-        description='The land above ground. The PARTY\'S map by default.')
-    p.add_argument('--width', type=int, default=120,
-                   help='fill this many columns (default 120)')
-    p.add_argument('--height', type=int,
-                   help='BOX it into this many rows as well. Without it the map '
-                        'fills the width and runs as deep as the aspect '
-                        'demands -- this world is far taller than it is wide, '
-                        'so the whole of it at 120 columns is ~200 rows. '
-                        '--around is usually the better answer')
-    p.add_argument('--scale', type=float,
-                   help='miles per column, overriding the fit')
-    p.add_argument('--no-labels', action='store_true')
-    p.add_argument('--around', help='CROP to a radius of this place -- the '
-                                    'zoom, and what makes a wide terminal pay')
-    p.add_argument('--miles', type=float, default=30,
-                   help='the crop radius, with --around (default 30)')
-    p.add_argument('--true', action='store_true',
-                   help='THE DM\'S MAP. Shows places the party has never heard '
-                        'of. Not to be shown at the table')
+        description='Distances, bearings, and what the party knows. '
+                    'For a DRAWN map see tools/mapimg.py.')
     sub = p.add_subparsers(dest='cmd')
     h = sub.add_parser('how-far')
     h.add_argument('a')
     h.add_argument('b')
-    f = sub.add_parser('from')
+    f = sub.add_parser('from', help='everywhere, by distance from one place')
     f.add_argument('origin')
     w = sub.add_parser('where', help='a dungeon square, in the world frame')
     w.add_argument('frame')
@@ -645,15 +406,8 @@ def main(argv=None):
                                      (kn.get(pid, {}).get('how') or '')[:62]))
         return 0
 
-    shown = pts
-    if a.around:
-        cid = entmod.resolve(a.around, entmod.places())
-        if cid is None:
-            print('no place %r' % a.around, file=sys.stderr)
-            return 1
-        shown = crop(pts, cid, a.miles)
-    print(render(a.scale, shown, true=a.true, kn=kn, width=a.width,
-                 height=a.height, labels=not a.no_labels))
+    # No subcommand: the TABLE, which is the thing worth reading.
+    print(from_report('wethersby', pts, kn))
     return 0
 
 
