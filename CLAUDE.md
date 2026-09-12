@@ -404,7 +404,10 @@ DM to tell the player their spikes were in a door they had already recovered the
 - `campaign/district.md` — the SETTING, built at the table on dice because B1
   supplies a crag and a dungeon and nothing else. The wool staple moved; every
   acre is held; the layoffs are upstream of the robberies. Not DM-side secret
-- **`campaign/people.tsv`** · **`campaign/places.tsv`** — **REFERENCE, identity only.**
+- **`campaign/people.tsv`** · **`campaign/places.tsv`** — **REFERENCE, identity only** —
+  and `places.tsv` also carries **the overland grid** (`x`, `y`, `fix`) and
+  **`day_mode` beside every travel time**, because a day is not a distance: cart 18
+  miles, ride 30, walk 14.
   Aliases resolve *Wetherby*→*Wethersby* and *"Rell's brother"*→*Gyll*. **No status or
   condition columns**: those change, so they are events with dates
 - **`campaign/interactions.tsv`** — **who was in the room and what happened.** The join
@@ -420,6 +423,7 @@ DM to tell the player their spikes were in a door they had already recovered the
 | **`tools/brief.py`** | **THE SESSION BRIEFING. RUN IT FIRST, EVERY SESSION AND AFTER EVERY COMPACT.** Day · who is available · hp · xp · oil · gear left in the dungeon · position · clock · **open loops** · what is stale. Every figure computed by the tool that owns it, so nothing in it can be 38 in-game days out of date the way `CHECKLIST` §11 was |
 | **`tools/log.py`** | **THE ONLY WRITE PATH for money, scenes, days and availability. It VALIDATES, then appends** — and refuses a money row that names no asset, an asset id not in `assets.tsv`, a zero delta, **a citation to a scene that does not exist**, a campaign day running backwards, an unknown character, or **a scene naming somebody not in `people.tsv`**. Validate on write, rebuild on read |
 | **`tools/build_campaign_db.py`** | **builds `campaign/output/campaign.sqlite` — a DERIVED VIEW, gitignored, rebuilt from the TSVs.** Real foreign keys, `PRAGMA foreign_keys=ON`, **and a violation FAILS THE BUILD** rather than dropping the row. `--check` compares a **watermark** (rows + sha256 per source) so staleness is a comparison, not a judgment. `--query` runs ad-hoc SQL **read-only** |
+| **`tools/overland.py`** | **THE LAND ABOVE GROUND, on a grid** — computed from the `x`/`y` columns of `places.tsv`. `how-far A B` · `from <place>` · the schematic · **`check` recomputes every travel time and FAILS if the grid stops agreeing with the fiction.** One day by cart = **18 miles**, which is attested, not invented. ⚠ **`fix` says how each place got where it is** — `attested`, `part`, or `call`. **A call is not canon**; if play fixes a position, play wins |
 | **`tools/entities.py`** | **`who <name>` is the query this campaign never had** — every scene a person was in, with a day, a reaction and a citation. `check` refuses any name that does not resolve, so *Wetherby*/*Wethersby* and *"Rell's brother"*/*Gyll* are each one thing. **Run `who` before narrating anybody's past** |
 | **`tools/encounter.py`** | **the LIVE FIGHT**, computed from `campaign/encounter.tsv` — round, initiative, **who has declared**, **who HELD**, and monster hit points (`--hidden`; never shown otherwise). All of this used to live only in the DM's own narration, re-read every turn out of his own previous messages |
 | **`tools/inventory.py`** | **what the party OWNS**, computed from `campaign/inventory_log.tsv`. **One row per (asset, condition), with an explicit `unit`** — so `~2.5 IRON + 8 STANDARD` is two rows in person-weeks instead of one cell that read as the number 2. **`carried` derives spikes as owned − emplaced**, so the two can never drift |

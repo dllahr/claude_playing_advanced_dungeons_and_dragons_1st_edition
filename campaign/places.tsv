@@ -12,6 +12,27 @@
 #    EIGHT MILES from Fenn's yard -- a couple of hours, not a day. A cart out of
 #    Fenn's is at Ede's door before dinner.
 #
+# *** THE GRID, added 2026-09-12. *** x = miles EAST of Wethersby, y = miles
+# NORTH. ONE DAY BY CART = 18 MILES, which is the attested figure and not a
+# guess: the crag turning is "one day's walk, call it fifteen to twenty miles
+# laden". `tools/overland.py check` recomputes every distance off these
+# coordinates and FAILS if the grid stops agreeing with the travel times the
+# narrative has already used -- so the map cannot quietly drift from the
+# fiction, which is the whole reason it is data and not a picture.
+#
+# `fix` says how the position was arrived at, because that distinction is
+# load-bearing and a map hides it better than prose does:
+#   attested  bearing AND distance are both in the record
+#   part      one of the two is; the other is a DM call
+#   call      NEITHER is on record. Placed to make the schematic work
+#   region    an area, not a point
+#
+# `days_from_wethersby` carries `day_mode` BESIDE IT -- cart, ride or walk --
+# for the same reason every quantity in this campaign carries its unit. A day
+# is not a distance: cart 18 miles, RIDE 30, walk 14. Draycot is "a long day's
+# RIDE; the walk is two days", and checking that 1 against cart speed was the
+# first thing `overland.py check` caught -- in the map's own author.
+#
 # `days_from_wethersby` is BY CART unless the note says otherwise, because a
 # cart is what the party moves goods with. Riding times are in the note where
 # they differ and matter -- Draycot is a long day's RIDE and two days' walk, and
@@ -19,20 +40,20 @@
 #
 # Blank means not established. Blank is honest; a guessed distance would be
 # quoted back as a fact, which is how the Fenn's/Ede's error happened.
-id	name	aliases	kind	parent	days_from_wethersby	notes
-wethersby	Wethersby	Wetherby	town	north_hundred	0	Market town. Market is WEEKLY -- day 37 was one, so 37/44/51/58/65/72/79
-north_hundred	the north hundred		hundred		0	Ottir's. The party's own ground
-crag_turning	the crag turning		landmark	north_hundred	1	On the north road. One day's walk, call it fifteen to twenty miles laden. The outer limit of the day's-walk patrol circuit
-basecamp	Coll's basecamp		camp	crag_turning	1	HALF AN HOUR from the road and half an hour from the cave mouth. Graded cart-passable trail, cleared flat, fire pit, latrine downwind, a boxed spring that runs clear, and a turf-and-pole lean-to that sleeps eight dry. Nobody asked them to build the spring or the lean-to
-cave_mouth	the cave entrance		landmark	crag_turning	1	*** A CART NEVER REACHES THE DOOR. *** Half an hour of UNMADE OUTCROP above the basecamp. The DM described the graded trail as reaching the cave door and it does not -- it reaches halfway, and Halm's objection to the rope plan collapsed with it
-quasqueton	Quasqueton		dungeon	cave_mouth	1	A day and an hour from Wethersby. The route in and out is the alcove-pair-2 one-way slab at (17,13,V) -- NEVER the x=16 corridor between y=13 and y=19 under the magic mouths
-draycot	Draycot		hall		1	Sir Aymer's hall, south-west, on the road the party first came in by. A LONG DAY'S RIDE; the walk is two days
-marrows	Marrow's holding		holding	north_hundred		The biggest flock in the hundred and a stone barn with two years of fleece
-fenns	Fenn's		holding		4	By cart. Flax
-edes	Ede's cottage		holding	fenns	4	*** EIGHT MILES CROSS-COUNTRY FROM FENN'S -- A COUPLE OF HOURS, NOT A DAY. *** Player-caught 2026-09-08 after the DM said it twice. A cart out of Fenn's is at Ede's door before dinner
-lyde	Lyde		village			A DAY OFF THE ROAD EACH WAY from the southern route. He will not move, so it is a ride and a talk, not carting
-marchford	Marchford		town		3	Three days by cart, the far end of Osk's run. A bridge town; the traffic thickens in the last day and a half. Osk hands off to other carriers here and beyond it he does not know where the load goes
-ludbury	Ludbury		city		5	Where the wool sold, 1,200 gp on day 25-27. Gate duty on goods brought in. PELL'S ANSWER TO OSK'S DAY-6 QUESTION: "Ludbury. That's the whole mystery"
-wraye	Wraye		town	ludbury		THREE DAYS EAST OF LUDBURY. It has a LIBRARY -- the only lead on the plain metal ring
-hobbs_lane	Hobb's Lane		hamlet	north_hundred		A widow there has three years of wool in a loft and would take a fair price off anybody who asked her properly. Nan's word: nobody has ever asked her a single question about wool
-wettleford	Wettleford		hamlet			Two holdings past it roll their wool wet. Nan's word
+id	name	aliases	kind	parent	days_from_wethersby	day_mode	x	y	fix	notes
+wethersby	Wethersby	Wetherby	town	north_hundred	0	cart	0	0	attested	Market town. Market is WEEKLY -- day 37 was one, so 37/44/51/58/65/72/79  ||GRID: The origin. "A market town on the NORTH ROAD"
+north_hundred	the north hundred		hundred		0	cart	0	6	region	Ottir's. The party's own ground  ||GRID: The region, not a point. Centred a little north of the town
+crag_turning	the crag turning		landmark	north_hundred	1	cart	0	18	attested	On the north road. One day's walk, call it fifteen to twenty miles laden. The outer limit of the day's-walk patrol circuit  ||GRID: NORTH one day. district.md and the distance table
+basecamp	Coll's basecamp		camp	crag_turning	1	cart	2	19	attested	HALF AN HOUR from the road and half an hour from the cave mouth. Graded cart-passable trail, cleared flat, fire pit, latrine downwind, a boxed spring that runs clear, and a turf-and-pole lean-to that sleeps eight dry. Nobody asked them to build the spring or the lean-to  ||GRID: Half an hour off the road, halfway to the cave mouth
+cave_mouth	the cave entrance		landmark	crag_turning	1	cart	3	19	attested	*** A CART NEVER REACHES THE DOOR. *** Half an hour of UNMADE OUTCROP above the basecamp. The DM described the graded trail as reaching the cave door and it does not -- it reaches halfway, and Halm's objection to the rope plan collapsed with it  ||GRID: Half an hour above the basecamp, up unmade outcrop
+quasqueton	Quasqueton		dungeon	cave_mouth	1	cart	3	19	attested	A day and an hour from Wethersby. The route in and out is the alcove-pair-2 one-way slab at (17,13,V) -- NEVER the x=16 corridor between y=13 and y=19 under the magic mouths  ||GRID: The same point as the cave mouth; the dungeon is under it
+draycot	Draycot		hall		1	ride	-20	-20	attested	Sir Aymer's hall, south-west, on the road the party first came in by. A LONG DAY'S RIDE; the walk is two days  ||GRID: SOUTH-WEST, "a long day's ride" (d6=2). ~28 miles: a long ride, two days' walk
+marrows	Marrow's holding		holding	north_hundred			12	8	call	The biggest flock in the hundred and a stone barn with two years of fleece  ||GRID: DM CALL. In the north hundred and reachable by a day's ride; no distance or bearing is on record
+fenns	Fenn's		holding		4	cart	4	-72	attested	By cart. Flax  ||GRID: South of Marchford, and "four acres of flax FOUR MILES EAST OF THE ROAD"
+edes	Ede's cottage		holding	fenns	4	cart	10	-67	part	*** EIGHT MILES CROSS-COUNTRY FROM FENN'S -- A COUPLE OF HOURS, NOT A DAY. *** Player-caught 2026-09-08 after the DM said it twice. A cart out of Fenn's is at Ede's door before dinner  ||GRID: EIGHT MILES CROSS-COUNTRY from Fenn's is attested; the BEARING is a DM call
+lyde	Lyde		village				-18	-36	call	A DAY OFF THE ROAD EACH WAY from the southern route. He will not move, so it is a ride and a talk, not carting  ||GRID: DM CALL. "A day off the road each way" is attested; WHERE along the southern road is not
+marchford	Marchford		town		3	cart	0	-54	attested	Three days by cart, the far end of Osk's run. A bridge town; the traffic thickens in the last day and a half. Osk hands off to other carriers here and beyond it he does not know where the load goes  ||GRID: THREE DAYS SOUTH by cart, a market town at a river crossing
+ludbury	Ludbury		city		5	cart	0	-90	attested	Where the wool sold, 1,200 gp on day 25-27. Gate duty on goods brought in. PELL'S ANSWER TO OSK'S DAY-6 QUESTION: "Ludbury. That's the whole mystery"  ||GRID: FIVE DAYS SOUTH -- "three to Marchford, two beyond it"
+wraye	Wraye		town	ludbury			54	-90	attested	THREE DAYS EAST OF LUDBURY. It has a LIBRARY -- the only lead on the plain metal ring  ||GRID: THREE DAYS EAST OF LUDBURY. It has a library
+hobbs_lane	Hobb's Lane		hamlet	north_hundred			-8	6	call	A widow there has three years of wool in a loft and would take a fair price off anybody who asked her properly. Nan's word: nobody has ever asked her a single question about wool  ||GRID: DM CALL. In the north hundred; nothing on record but the widow with three years of wool in a loft
+wettleford	Wettleford		hamlet				-14	10	call	Two holdings past it roll their wool wet. Nan's word  ||GRID: DM CALL. In the north hundred, with "two holdings past it" that roll their wool wet
