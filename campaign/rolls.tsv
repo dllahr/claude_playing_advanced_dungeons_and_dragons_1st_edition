@@ -7285,3 +7285,64 @@ when	exped	turn	notation	dice	modifier	total	hidden	reason
 2026-09-10			d6	4	0	4		day 77: Wend on (a) whether to talk to Osk and what about, (b) putting wages+cart wear into the 'at cost' price, (c) has she already noticed the carriage gap in her own books, (d) her view of a STANDING run for Halm
 2026-09-10			d6	3	0	3		day 77: is Osk in Wethersby or out on his Marchford run; and how the iron's share of the Ludbury carriage lands when Wend shows her working
 2026-09-10			d6	5	0	5		day 77: is Osk in Wethersby or out on his Marchford run; and how the iron's share of the Ludbury carriage lands when Wend shows her working
+2026-09-11			d20	8	0	8		Dave attacks with long sword
+2026-09-11			d20	4	0	4		Torsat attacks with long sword
+2026-09-11			d20	14	0	14		Blartho attacks with footman's flail
+2026-09-11				VOID				THE THREE d20s IMMEDIATELY ABOVE (Dave 8, Torsat 4, Blartho 14) ARE NOT GAME EVENTS AND ARE VOID. They were rolled by driving combat.py from a shell to verify the new encounter declaration gate, 2026-09-11, while play was PAUSED at day 77 and no fight existed. Nothing is deleted -- this log is append-only -- but no ruling may rest on them. *** THE HOLE THEY CAME THROUGH IS NOW SHUT: dice.ROLLS honours $DND_ROLL_LOG, so tool-testing redirects instead of polluting. tests/conftest.py had closed this for pytest only, and the shell was the other door. ***
+2026-09-11			d20	11	0	11		leak check -- must not reach campaign/rolls.tsv
+2026-09-11			d20	1	0	1		Y save vs Paralyze/Poison/Death
+2026-09-11			d20	12	0	12		F save vs Spell
+2026-09-11			d100	62	0	62		morale
+2026-09-11			d100	63	0	63		morale
+2026-09-11			d100	50	0	50		morale
+2026-09-11			d100	51	0	51		morale
+2026-09-11			d100	51	0	51		morale
+2026-09-11			d100	66	0	66		morale
+2026-09-11			d100	81	0	81		morale
+2026-09-11			d100	100	0	100		morale
+2026-09-11			d100	100	0	100		morale
+2026-09-11			d100	100	0	100		morale
+2026-09-11			d6	5	0	5		initiative, party
+2026-09-11			d6	2	0	2		initiative, monsters
+2026-09-11			d6	3	0	3		initiative, party
+2026-09-11			d6	3	0	3		initiative, monsters
+2026-09-11			d6	3	0	3		surprise check, party
+2026-09-11			d6	3	0	3		surprise check, party
+2026-09-11			d6	2	0	2		surprise check, party
+2026-09-11			d6	2	0	2		surprise check, party
+2026-09-11			d20	20	0	20		giant centipede attacks AC 9
+2026-09-11			d20	20	0	20		giant centipede attacks AC 9
+2026-09-11			d20	20	0	20		giant centipede attacks AC 9
+2026-09-11			d20	20	0	20		giant centipede attacks AC 9
+2026-09-11			d20	20	0	20		giant centipede attacks AC 9
+2026-09-11			d20	20	0	20		orc attacks AC 9
+2026-09-11			1-8 (1d8)	8	0	8		orc damage
+2026-09-11			d20	1	0	1		leak check -- must not reach campaign/rolls.tsv
+2026-09-11			d20	1	0	1		Y save vs Paralyze/Poison/Death
+2026-09-11			d20	12	0	12		F save vs Spell
+2026-09-11			d100	62	0	62		morale
+2026-09-11			d100	63	0	63		morale
+2026-09-11			d100	50	0	50		morale
+2026-09-11			d100	51	0	51		morale
+2026-09-11			d100	51	0	51		morale
+2026-09-11			d100	66	0	66		morale
+2026-09-11			d100	81	0	81		morale
+2026-09-11			d100	100	0	100		morale
+2026-09-11			d100	100	0	100		morale
+2026-09-11			d100	100	0	100		morale
+2026-09-11			d6	5	0	5		initiative, party
+2026-09-11			d6	2	0	2		initiative, monsters
+2026-09-11			d6	3	0	3		initiative, party
+2026-09-11			d6	3	0	3		initiative, monsters
+2026-09-11			d6	3	0	3		surprise check, party
+2026-09-11			d6	3	0	3		surprise check, party
+2026-09-11			d6	2	0	2		surprise check, party
+2026-09-11			d6	2	0	2		surprise check, party
+2026-09-11			d20	20	0	20		giant centipede attacks AC 9
+2026-09-11			d20	20	0	20		giant centipede attacks AC 9
+2026-09-11			d20	20	0	20		giant centipede attacks AC 9
+2026-09-11			d20	20	0	20		giant centipede attacks AC 9
+2026-09-11			d20	20	0	20		giant centipede attacks AC 9
+2026-09-11			d20	20	0	20		orc attacks AC 9
+2026-09-11			1-8 (1d8)	8	0	8		orc damage
+2026-09-11				VOID				THE 56 ROWS IMMEDIATELY ABOVE ARE NOT GAME EVENTS AND ARE VOID. They are pytest rows, and they are here because of a test I wrote to guard against exactly this: test_dice_honours_the_roll_log_override did importlib.reload(dice), which reset dice.ROLLS to the module default and so UNDID the session fixture in tools/tests/conftest.py. A test for a leak that opened the leak. It now runs in a SUBPROCESS, and a full suite run moves this file by zero lines. Nothing is deleted -- this log is append-only -- but no ruling may rest on any row between the previous VOID and this one.\n

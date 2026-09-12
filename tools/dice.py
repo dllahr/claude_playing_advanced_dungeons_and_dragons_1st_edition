@@ -32,6 +32,23 @@ from tsvlog import append, today                                # noqa: E402
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ROLLS = os.path.join(ROOT, 'campaign', 'rolls.tsv')
 
+# *** AN ESCAPE HATCH FOR TOOL-TESTING, BECAUSE THE HOLE WAS ONLY HALF SHUT. ***
+#
+# `roll()` logs by DEFAULT, which is right for play: CLAUDE.md treats
+# campaign/rolls.tsv as the evidence and a roll that never got written down is a
+# roll that can be argued about later. But it means anything that drives
+# combat.py or clock.py writes into the campaign's own audit trail.
+#
+# pytest was doing exactly that -- 31 rows a run, 125 runs, ~3,875 rows in a
+# 7,247-row file -- and `tools/tests/conftest.py` closed it FOR PYTEST ONLY.
+# Driving combat.py by hand from a shell to check the new declaration gate put
+# three more real d20s into the live log within a minute of the gate being
+# written, which is the same hole through the other door.
+#
+# Set DND_ROLL_LOG to redirect. The logging branch still runs and is still
+# tested; it just writes somewhere that is not the campaign.
+ROLLS = os.environ.get('DND_ROLL_LOG') or ROLLS
+
 _NOTATION = re.compile(r'^\s*(\d*)\s*d\s*(\d+)\s*([+-]\s*\d+)?\s*$', re.I)
 _RANGE = re.compile(r'^\s*(\d+)\s*-\s*(\d+)\s*$')
 

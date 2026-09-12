@@ -537,15 +537,59 @@ them. And `money.tsv` gained a `unit` column because 1e has five coin types: the
 anchor records *"28 ep off the orc bodies, +14"* and **the electrum survives only in
 that prose**, because the conversion happened before the column existed.
 
-#### 3c · `encounter.tsv` · TODO
+#### 3c · `encounter.tsv` · ✅ BUILT 2026-09-11 — **the day-70 error made impossible**
 
-The live fight — round, initiative, who held, each monster's remaining hp —
-currently lives **entirely in the DM's own narration**, which is the
-"narrate from my own summary" failure operating in the highest-stakes context in
-the game. With it, `combat.py` can **refuse an undeclared party action**, because
-it knows whose turn it is and that nothing has been declared.
+`campaign/encounter.tsv` + `tools/encounter.py`, and **a gate inside
+`combat.py round`.**
 
-**238 tests pass** (185 → 198 → 219 → 238).
+> ### `combat.py round` REFUSES to roll for a character who has not declared
+>
+> ```
+> REFUSED: Torsat has not declared an action this round.
+>   ASK THE PLAYER, then:  python tools/encounter.py declare <who> "<what they said>"
+>   Choosing for them is the day-70 error: four attack rolls voided at round 285.
+> ```
+>
+> **`CHECKLIST`'s ⚠⚠ *THE DM DOES NOT DECLARE THE PARTY'S ACTIONS. EVER. ASK.*
+> stops being a sentence and becomes a required input.** It names exactly who is
+> missing, which is the difference between a gate and an obstacle.
+
+**Two things the gate gets right that a naive one would not:**
+
+- **A HELD action is a declaration.** Day 70 had two of them — Blartho and
+  Dellie held, ready to close or cast — and a gate that read "held" as "said
+  nothing" would refuse the one round the DM got right.
+- **A declaration does not carry into the next round.** Actions are declared
+  every round, not once per fight.
+
+**It is a speed bump and not a wall**, and the tool says so: the DM could type a
+declaration the player never made, exactly as he could log a move `party.py`
+never routed. **That tool has held for two expeditions anyway**, because the
+friction arrives at the instant of the error rather than in a file read at the
+start of a session.
+
+**And the state is computed, not remembered:** round, initiative, who declared,
+who held, who is out, and **monster hit points — `--hidden`, never shown
+otherwise.**
+
+#### ⚠ AND A THIRD HOLE IN THE ROLL LOG, found by building this
+
+`dice.roll()` logs by default, which is right for play. `tools/tests/conftest.py`
+closed that for **pytest only** — and **driving `combat.py` from a shell to check
+the new gate put three real d20s into `campaign/rolls.tsv` within a minute of the
+gate being written.** Same hole, other door.
+
+**`dice.ROLLS` now honours `$DND_ROLL_LOG`.**
+
+> **And then the test written to guard it opened the leak itself.** The first
+> version called `importlib.reload(dice)`, which reset `dice.ROLLS` to the module
+> default and **undid the conftest fixture**, and the suite immediately wrote 56
+> rows into the campaign log. **A test for a leak that opened the leak.** It runs
+> in a subprocess now; a full suite run moves the file by zero lines. Both batches
+> are voided in place by appended rows — **nothing deleted, because the log is
+> append-only.**
+
+**266 tests pass** (185 → 198 → 219 → 239 → 252 → 266). **Phase 3 is complete.**
 
 ### Phase 4 — canonical entities and the prose split · *kills class D, the largest*
 1. `people.tsv`, `places.tsv`, `assets.tsv` — **identity only**.

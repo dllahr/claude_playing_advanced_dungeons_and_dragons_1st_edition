@@ -511,6 +511,12 @@ def build_parser():
     sub = p.add_subparsers(dest='cmd', required=True)
 
     r = sub.add_parser('round', help="resolve a round of the party's attacks")
+    r.add_argument('--declared', action='store_true',
+                   help='THE GATE OVERRIDE. Without a `declare` row in '
+                        'campaign/encounter.tsv for every attacker, this '
+                        'subcommand REFUSES. Use this flag only when there is '
+                        'no fight logged at all -- a one-off roll outside an '
+                        'encounter -- and never to skip asking the player')
     r.add_argument('--target', required=True,
                    help='e.g. "berserker AC 7 HD 1" (size L if larger than man-sized)')
     r.add_argument('--attack', nargs='+', required=True, metavar='WHO:WEAPON',
@@ -573,6 +579,46 @@ def main(argv=None):
 
     if a.cmd == 'round':
         name, ac, hd, size = parse_target(a.target)
+
+        # *** THE GATE. ***
+        #
+        # CHECKLIST: "THE DM DOES NOT DECLARE THE PARTY'S ACTIONS. EVER. ASK."
+        # It was a rule in prose, and on day 70 at round 285 the DM broke it
+        # anyway -- deciding who engaged, deciding Yrtone swapped sling for
+        # flail, deciding nobody fired or cast or withdrew. Four attack rolls
+        # were voided. "Please stop right now."
+        #
+        # So the rule becomes a required input. A character may not be rolled
+        # for until the player has SAID what they do and it has been written
+        # down. This is a speed bump, not a wall -- the DM could type a
+        # declaration nobody made, exactly as he could log a move party.py
+        # never routed. That tool has held for two expeditions anyway, because
+        # the friction arrives at the instant of the error.
+        import encounter as encmod
+        who_all = [parse_attack(spec)[0] for spec in a.attack]
+        if encmod.current() is None:
+            if not a.declared:
+                print('REFUSED: no fight is logged.\n'
+                      '  Start one:  python tools/encounter.py start '
+                      '--detail "where, and what was met"\n'
+                      '  then log what the PLAYER said each character does:\n'
+                      '              python tools/encounter.py declare Dave '
+                      '"..."\n'
+                      '  For a one-off roll outside an encounter, pass '
+                      '--declared.', file=sys.stderr)
+                return 1
+        else:
+            missing = encmod.undeclared(who_all)
+            if missing and not a.declared:
+                print('REFUSED: %s ha%s not declared an action this round.\n'
+                      '  ASK THE PLAYER, then:  python tools/encounter.py '
+                      'declare <who> "<what they said>"\n'
+                      '  Choosing for them is the day-70 error: four attack '
+                      'rolls voided at round 285.'
+                      % (', '.join(missing), 've' if len(missing) > 1 else 's'),
+                      file=sys.stderr)
+                return 1
+
         out, total = [], 0
         if a.initiative:
             lines, _ = initiative()
@@ -593,6 +639,9 @@ def main(argv=None):
             total += dmg
         out.append('total damage to %s this round: %d' % (name, total))
         out.append('(monster hit points stay with the DM -- describe wounds)')
+        if encmod.current() is not None and total:
+            out.append('  log it: python tools/encounter.py damage %s %d'
+                       % (name.split()[0].lower(), total))
         print('\n'.join(out))
         return 0
 

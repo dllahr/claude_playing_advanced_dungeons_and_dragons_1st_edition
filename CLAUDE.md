@@ -373,7 +373,12 @@ DM to tell the player their spikes were in a door they had already recovered the
 - **`campaign/availability.tsv`** — **who is present, away, invalid or dead.** Append-only,
   current status derived. This lived nowhere and was re-derived out of prose every time an
   expedition was outfitted
-- `campaign/rolls.tsv` — an audit trail of every die rolled
+- **`campaign/encounter.tsv`** — **the live fight.** Append-only; round, initiative,
+  declarations, holds and monster damage all derived. **Empty when no fight is in
+  progress**, which is how `combat.py` knows to refuse
+- `campaign/rolls.tsv` — an audit trail of every die rolled. ⚠ **`dice.py` honours
+  `$DND_ROLL_LOG`** — set it before driving any tool by hand, or the rolls land in the
+  campaign's evidence. `tools/tests/conftest.py` closes the same hole for pytest
 - `campaign/party.tsv` — **where the party is**, and the only legal way to move
   it. `tools/party.py move` routes through `mapdb`, which physically cannot walk
   through a wall; freehand narration once did exactly that
@@ -407,6 +412,7 @@ DM to tell the player their spikes were in a door they had already recovered the
 |---|---|
 | **`tools/brief.py`** | **THE SESSION BRIEFING. RUN IT FIRST, EVERY SESSION AND AFTER EVERY COMPACT.** Day · who is available · hp · xp · oil · gear left in the dungeon · position · clock · **open loops** · what is stale. Every figure computed by the tool that owns it, so nothing in it can be 38 in-game days out of date the way `CHECKLIST` §11 was |
 | **`tools/log.py`** | **THE ONLY WRITE PATH for money, days and availability. It VALIDATES, then appends** — and refuses a money row that names no asset, an asset id not in `assets.tsv`, a zero delta, a campaign day running backwards, or an unknown character. Validate on write, rebuild on read |
+| **`tools/encounter.py`** | **the LIVE FIGHT**, computed from `campaign/encounter.tsv` — round, initiative, **who has declared**, **who HELD**, and monster hit points (`--hidden`; never shown otherwise). All of this used to live only in the DM's own narration, re-read every turn out of his own previous messages |
 | **`tools/inventory.py`** | **what the party OWNS**, computed from `campaign/inventory_log.tsv`. **One row per (asset, condition), with an explicit `unit`** — so `~2.5 IRON + 8 STANDARD` is two rows in person-weeks instead of one cell that read as the number 2. **`carried` derives spikes as owned − emplaced**, so the two can never drift |
 | **`tools/ledger.py`** | **the purse, computed from `campaign/money.tsv`** — never stored, never quoted from a cell. `check` is the double-entry audit: every movement names an asset, every *good* has an inventory row, and the computed purse is compared against the `inventory.tsv` cell rather than trusting it |
 | **`tools/audit.py`** | **checks the FIGURES in a block of text against the tool that owns each one.** `--text "…"` · a file · `--staged` · `--show` lists every truth it knows. **Wired into `tools/hooks/pre-commit`, so it runs on every commit and cannot be forgotten** — enable once per clone with `git config core.hooksPath tools/hooks`. It **blocks** on a mismatch; `audit-skip` in a line, or naming a day in the sentence, marks a figure as of-its-time. **If it ever cries wolf, LOOSEN THE CHECKER — do not learn to pass `--no-verify`** |
@@ -417,7 +423,7 @@ DM to tell the player their spikes were in a door they had already recovered the
 | `tools/world.py` | replays world changes onto the map DB — **run after every rebuild** |
 | `tools/clock.py` | the dungeon clock and wandering checks |
 | `tools/light.py` | lantern oil and torch stubs, burnt against clock rounds; burn times come from `rules/exploration.md`, never from the code |
-| `tools/combat.py` | attacks, damage, saves, morale, initiative, surprise |
+| `tools/combat.py` | attacks, damage, saves, morale, initiative, surprise. ⚠ **`round` REFUSES to roll for a character with no `declare` row in the current round** — *THE DM DOES NOT DECLARE THE PARTY'S ACTIONS* stops being a sentence and becomes a required input. A **held** action counts as a declaration; a declaration **does not carry into the next round** |
 | `tools/rules.py` | parses `rules/*.md`; every table `combat.py` uses comes from there |
 | `tools/dice.py` | dice, including 1e range notation ("3-18" is 3d6, not a flat pick) |
 | `tools/bestiary.py` | reads `bestiary/` — the campaign's own Monster Manual, one file per creature |

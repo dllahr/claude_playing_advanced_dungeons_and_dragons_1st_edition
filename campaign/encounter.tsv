@@ -1,0 +1,50 @@
+# THE LIVE FIGHT -- append-only, and the current state is DERIVED.
+#
+# *** WHY THIS FILE EXISTS ***
+#
+# A fight runs ten messages. Across them the DM was holding, in his own
+# narration and nowhere else: the round number, the initiative order, who was
+# engaged with what, WHO HAD HELD AN ACTION, each monster's remaining hit
+# points, who was surprised, what was spiked, and the light. Re-read every turn
+# out of his own previous messages.
+#
+# That is the "narrate from my own summary instead of from the log" failure
+# operating in THE HIGHEST-STAKES CONTEXT IN THE GAME -- and the worst single
+# error of the campaign happened in exactly that context:
+#
+#   DAY 70, round 285. The DM RESOLVED THE PARTY'S ROUND WITHOUT ASKING. He
+#   decided Yrtone swapped sling for flail, decided which four engaged, decided
+#   nobody fired a missile, cast, dropped a load or withdrew. Four attack rolls
+#   were VOIDED. The player: "Please stop right now."
+#
+# *** THE GATE ***
+#
+# `combat.py round` REFUSES to roll for a character who has no `declare` row in
+# the current round. The CHECKLIST rule -- THE DM DOES NOT DECLARE THE PARTY'S
+# ACTIONS, EVER, ASK -- stops being a sentence and becomes a required argument.
+# It is a speed bump and not a wall (the DM could type a declaration the player
+# never made), but it lands at the exact instant of the error, which is what
+# made `party.py move` hold.
+#
+# verbs
+#   start       a fight begins. detail = where, and what was met
+#   surprise    a surprise roll and its reading
+#   initiative  a round's initiative, party vs monsters
+#   declare     *** WHAT THE PLAYER SAID A CHARACTER DOES. The gate reads this
+#               and nothing else. One row per actor per round. ***
+#   attack      a swing resolved (combat.py writes these)
+#   damage      hit points off a MONSTER. Character damage stays in hp_log.tsv
+#   hold        an action deliberately held
+#   move        position changed inside the fight
+#   morale      a morale check and its result
+#   flee        a combatant leaves
+#   dead        a combatant is down for good
+#   end         the fight is over. detail = the outcome
+#
+# `side` is `party` or `monsters`. `actor` is a character name or a monster id
+# ("trog1"), so two of a kind can be told apart -- which no prose narration of
+# a four-monster fight has ever managed reliably.
+#
+# EMPTY BY DESIGN as of 2026-09-11: no fight is in progress. Expedition 9 is
+# declared and has not begun.
+when	day	exped	round	side	actor	verb	target	qty	detail
