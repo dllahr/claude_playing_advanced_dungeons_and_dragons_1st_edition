@@ -8,6 +8,28 @@
     python tools/overland.py check                # does the grid still agree
                                                   # with the narrative? exit 1
 
+*** THE ASCII MAP IS NOT FOR THE DM, AND IT IS NOT AUTHORITATIVE. ***
+
+Asked directly whether the text map was easier to read than the data behind it,
+the honest answer is NO. Reading "which town lies north-west of Wethersby" off a
+character grid means reconstructing coordinates from column positions -- which is
+strictly harder than reading the coordinates. Every question the DM actually asks
+has a better answer in a query:
+
+    how far          `how-far A B`      exact, both ways, with the time ranges
+    which way        the bearing, computed, not eyeballed off a glyph
+    what lies on     `from <place>`, sorted by distance
+    do they know     `knows`
+
+A picture can surprise you with something you did not ask about, and that is
+worth something. It is thin next to the cost of the DM squinting at a grid.
+
+*** AND A PASTED MAP IS A STALE MAP. *** A rendering in the conversation is
+correct at the instant it is made and never again. Reading a position back off
+one is narrating from a summary instead of from the log -- the single largest
+error class in this campaign -- so: RENDER IT FOR THE PLAYER, QUERY IT FOR
+YOURSELF.
+
 WHY A GRID AND NOT A PICTURE. The distances lived in `calendar.md` prose and
 were misquoted: the DM twice described the cart as *"a day behind at Fenn's"*
 when Ede's gate is **eight miles** from Fenn's yard -- a couple of hours. A
