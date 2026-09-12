@@ -67,10 +67,24 @@ def test_every_close_cites_evidence():
              if r.get('verb', '').strip() == 'close'
              and not r.get('evidence', '').strip()]
     assert not naked, (
-        'loop(s) %s were CLOSED WITHOUT EVIDENCE. Closing means citing the '
-        'thing that closed it -- a day:seq, a file:line, a log row. This is '
-        'the exact step that was skipped on articles.md art. 11, which then '
-        'sat open for eleven days after it had fired and was quoted as live.'
+        'loop(s) %s were CLOSED WITHOUT EVIDENCE.\n'
+        '\n'
+        'Closing means CITING THE THING THAT CLOSED IT -- a day:seq, a '
+        'file:line, a log row. This is the exact step skipped on articles.md '
+        'art. 11, which then sat open for ELEVEN DAYS after it had fired and '
+        'was quoted as live on day 77.\n'
+        '\n'
+        'WHY THIS PARTICULAR RULE NEEDS A MACHINE: a stale total looks like a '
+        'number and can be checked against a tool. A STALE WARNING LOOKS LIKE '
+        'A WARNING. Nothing on its face says it has already fired, so it reads '
+        'as live for ever and gets quoted as live for ever. The prose files '
+        'are an index, and AN INDEX OF THE FUTURE GOES OUT OF DATE FASTER '
+        'THAN AN INDEX OF THE PAST.\n'
+        '\n'
+        'And when you close one in a prose file, close it by REWRITING the '
+        'box -- a tick, what actually happened, and the fact that it was true '
+        'when written. Deleting it orphans the citation; see '
+        'deprecated/README.md for the same principle.'
         % naked)
 
 

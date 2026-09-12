@@ -63,6 +63,26 @@ def test_it_refuses_when_no_fight_is_logged(monkeypatch, capsys):
     assert 'REFUSED' in capsys.readouterr().err
 
 
+def test_the_rule_itself_is_stated_where_it_fires(fight, capsys):
+    """A test may only replace prose if its message says what the prose said.
+
+    The CHECKLIST section this replaced listed what the DM silently decided on
+    day 70: that Yrtone swapped her sling for a flail, which four characters
+    engaged and which five did not, that nobody fired a missile, that nobody
+    cast -- Frython's sleep and nine memorised cleric spells went unmentioned --
+    and that nobody dropped a load, withdrew, closed a door or ran.
+
+    **A MONSTER'S ACTIONS ARE THE DM'S. A CHARACTER'S ACTIONS ARE NEVER THE
+    DM'S** -- not the six PCs, and not Hask, Dellie or Ista, who are 1st-level
+    characters on characters.tsv that the player plays.
+    """
+    combat.main(['round', '--target', 'troglodyte AC 5 HD 2',
+                 '--attack', 'Dave:long sword'])
+    err = capsys.readouterr().err
+    assert 'ASK THE PLAYER' in err
+    assert 'day-70' in err or 'day 70' in err
+
+
 def test_it_refuses_when_nobody_has_declared(fight, capsys):
     assert combat.main(['round', '--target', 'troglodyte AC 5 HD 2',
                         '--attack', 'Dave:long sword',

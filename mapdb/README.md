@@ -8,7 +8,7 @@ before applying the same pipeline to B1.
 
 ```bash
 conda activate advanced_dnd_1e
-python -m pytest -q                    # 134 tests
+python -m pytest -q                    # the mapdb suite
 ```
 
 Outputs live under `output/<map>/`; code, key modules and correction files stay
@@ -745,3 +745,159 @@ the next reader. **Worth fixing.**
 
 *(Module typo, for the record: area 55's heading is printed "35. EXIT CAVE".)*
 
+---
+
+# Appendix — moved out of `CHECKLIST.md` on 2026-09-12
+
+**This was section 10 of `CHECKLIST.md`, which is the standing procedure for
+RUNNING THE CAMPAIGN. 147 lines of map-pipeline procedure is not that, and
+keeping it there made the file longer without making it more read.**
+
+Nothing is changed and nothing is lost. `CHECKLIST.md` now carries a pointer to
+here.
+
+## The map extraction pipeline
+
+Read `mapdb/README.md` before touching it, and `mapdb/lab_notebook.md` before
+trying anything clever. Both maps are driven by the same code with different
+options — the differences are measured, not guessed, and the table of them is in
+the README.
+
+> ### `rebuild.sh` WAS SILENTLY ABORTING PART-WAY THROUGH. Read this.
+>
+> *(Found 2026-09-04, and only because a game query hit a table that should
+> have had rows in it.)*
+>
+> The script runs under **`set -euo pipefail`**, and **`world.py replay` exits 1**
+> whenever any log row fails to match the map — three legacy rows always do.
+> **So the script died at that line every run**, silently skipping everything
+> after it: the level-2 merge, the door review and the diagonal review. Level 1's
+> numbers all printed correctly first, so nothing looked wrong.
+>
+> **The lower level vanished from `b1.sqlite` this way** and was not noticed for
+> an hour of play.
+>
+> **Two rules out of it:**
+> - **NEVER run a rebuild with its output suppressed.** No `>/dev/null`, no bare
+>   `tail -3`. If you must filter, filter and then check the LAST line is the one
+>   you expect. I hid this from myself with `>/dev/null 2>&1`.
+> - **A step that legitimately exits nonzero needs `|| echo …`, not `|| true`.**
+>   Swallow the status, keep the message.
+
+**Rebuild with `mapdb/rebuild.sh`, never by hand.** The step order is
+load-bearing and one step was being skipped: `extents.py --apply` runs after
+`markers.py` and before `world.py replay`, and without it `cells.room` covers
+only the 58 label squares of B1's 1,196, which looks like success and quietly
+makes every area-scoped query wrong.
+
+```bash
+./mapdb/rebuild.sh both                # build, markers, extents, replay, check
+python -m pytest mapdb/tests tools/tests -q      # both suites
+```
+
+`rebuild.sh` prints the two reachability counts as **regression checks**: DMG
+**21** unreached of 641, B1 **5** of 1,196 *(was 4 until 2026-08-28; (34,13) is a
+rock outcrop that should never have been reachable)*. If either moves, something changed
+behaviour — find out what before playing on it.
+
+Standing facts that carry to any new sheet:
+
+- **Read the map's own legend first.** Four classifiers were written before
+  anyone looked at the DMG's LEVEL KEY, and several early misreadings were
+  symbols the book defines explicitly. **AND THEN IT HAPPENED AGAIN:** B1's sheet
+  prints its own legend too, nobody read it, and **60 of level 1's 106 doors were
+  wrong** (audit 2026-09-03). The legend defines **FALSE DOOR** — a box on one
+  side of an unbroken wall — which is **drawn identically to furniture against a
+  wall**, so the "one-sided" flag finds both and cannot separate them. See
+  `mapdb/README.md`.
+- **The INK PROFILE beats thickness.** Sample ~19 points perpendicular across the
+  boundary at 200 dpi: a genuine door holds the wall value with **two narrow
+  spikes** flanking; a wall is flat; **furniture is flat but elevated +3 to +8**
+  over the same bar either side. Thickness is a net — `(13,20,H)` measured 9, in
+  band, confidence 9, and was a counter drawn against a solid wall.
+- **Secret doors cannot be read from the image.** They come from the text.
+- **Room anchors are label positions, not room extents.**
+- **DIAGONAL walls are invisible to the edge model** — the rock sits inside the
+  squares, so every boundary measures thin and open and a room's extent floods
+  through it. Four B1 rooms are affected: **34** (fixed from the player's own
+  reading of the printed map), and **10, 11 and 33**, all still wrong. Run
+  `mapdb/diagcheck.py`, read the contact sheet, and note that its `room` column
+  names the fault directly: a corrected room reads `34/34 | 31/None`, a leaking
+  one reads `10/10 | 10/10` — the same area on both sides of a wall.
+  See `mapdb/DIAGONAL_WALLS.md`.
+- **BOTH LEVELS NOW LIVE IN `b1.sqlite`** — level 1 **6 unreached of 1,197**, level
+  2 **0 of 923**. `rebuild_b1` rebuilds and re-merges level 2 itself; **do not
+  remove those lines.** `build.py` deletes and recreates its target, so every
+  rebuild destroys the lower level, and **nothing fails when it does** — level 1's
+  checks all still pass, so the loss is silent.
+- **`b1_corrections.tsv` HAS NO LEVEL COLUMN.** `apply_corrections(db,file,level)`
+  stamps every row at the level passed. Level 2 has its own
+  `b1_lv2_corrections.tsv` and `b1_lv2_key.py`. Never mix them.
+- **CHECK EVERY MAP PAGE FOR ITS OWN LEGEND.** B1 page 1 prints doors/stairs/
+  statue/pits; **page 2 prints a DIFFERENT legend — POOL, DEPRESSION, WEBS.**
+- **`extract._edge` samples only the MIDDLE HALF of a boundary.** Right for a
+  stronghold, **wrong for a cavern**, where the floor crosses a grid line near the
+  cell *corner*. It fabricated **125 walls** on level 2 and accounted for 90 → 18
+  of the unreached squares. Measure the full boundary when the map is caves.
+- **`label_boxes` shields a cell's interior but NOT its border**, so a numeral
+  straddling two squares invents a wall **inside its own room**. Seven cases on
+  level 2.
+- **On a cavern sheet, secret-door `S` glyphs sit on rock plugs INSIDE squares,
+  not on grid lines** — the module says the doors are disguised as rock and the
+  map draws them that way. Placing them on the nearest boundary leaves them
+  bypassable; **sealing them changed reachability by zero, which is how it was
+  caught.**
+- **DO NOT QUOTE LEVEL 2'S ROOM EXTENTS.** `cells.room` there means "nearest
+  numbered area", not "inside room N" — and the lower text states no dimension
+  anywhere, so the extent cross-check does not exist on that level.
+- **`markers.py --apply` mutates the database and is not idempotent.** Rebuild
+  first. (`world.py replay` *is* idempotent, deliberately — it always starts
+  from what the build produced and applies the whole log.)
+- Every tool that reopens a page must reproduce the build's grid — the render
+  settings are stored in the `levels` table for that reason.
+- **A real door CROSSES the wall; furniture does not.** On the page a genuine
+  door glyph straddles the wall band with floor showing on both sides, because
+  the door goes through the wall. Drawn furniture lies wholly on the room side.
+  **This is the one test that separates them reliably** — thickness does not, and
+  area 24's fabrications measured *closer to the middle of the genuine band than
+  its real door did*. Player's insight, 2026-08-28.
+  **IMPLEMENTED** as `extract.door_suspect` + `mapdb/diagcheck.py`'s sibling
+  `mapdb/doorcheck.py`, which flags and draws a contact sheet but never
+  reclassifies. It has since caught **seven** fabricated doors in live play —
+  and **NINE** by 2026-09-03. Both of the last two were called by the player from
+  the module text alone, before any tool was run:
+  **(18,19,H)** in **area 3, the DINING ROOM** — thick=17, deep in the WALL band,
+  stools drawn against the room's south wall; and
+  **(13,20,H)** in **area 2, the KITCHEN** — **thick=9, INSIDE the genuine door
+  band, confidence 9**, a counter drawn against the north wall leaving a white gap
+  read as hole=200.
+- [ ] **AN IN-BAND THICKNESS DOES NOT CLEAR A DOOR THAT OPENS OFF A FURNISHED
+      ROOM.** (13,20,H) passed the 4-11 test and was still fabricated. The
+      thickness flag is a *net*, not a verdict: render the page at 8-10x with the
+      grid drawn on it and apply the only reliable test — **a real door CROSSES
+      the wall band with floor showing on both sides; furniture lies wholly on
+      the room side.**
+- [ ] **THE FURNISHED-ROOM LIST IS THE RED FLAG.** In B1 so far: **areas 2, 3, 9,
+      18, 24, 27, 28.** Before narrating any door on the boundary of one of
+      these, render it. *(The player has now caught two in a row that no
+      automated check flagged, purely from knowing what the room is for.)* Read
+  `wall` and `offset` TOGETHER: a lone `no wall` flag is weak (a genuine door in
+  a one-square stub of wall trips it), while `one-sided` is strong.
+- **Flag every `door` whose thickness falls outside 4-11** and render that page.
+  B1's genuine doors measure 4-11, its walls 7-18, its printed rulings 0-3 — so a
+  door outside that band is suspect. **Four fabricated doors were found this way
+  in one session**, in three consecutive furnished rooms (areas 9, 27, 28).
+  Neither automated check can see them: a fabricated door stays passable, and the
+  extent check is blind when the room has another way in. **But the flag is
+  noisy** — it lists 48 edges on level 1, not a handful. Render the **thickness
+  1-3** and **18+** tails first; the 12-15 band is mostly genuine doors on heavy
+  line work. See `mapdb/lab_notebook.md`.
+- **The play record is a fourth check on the map**, and it catches what the
+  other three cannot. The party walked through a boundary at the end of
+  expedition 3 that the database recorded as a plain wall at thickness 15: no
+  glyph was proposed, reachability was blind because both sides were reachable
+  anyway, and no text names it. `world.py check` now reports that class of
+  disagreement.
+
+
+---

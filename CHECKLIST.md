@@ -1,5 +1,31 @@
 # Running this campaign — standing procedure
 
+> ## ⚖ THIS FILE IS UNDER A RATCHET — `tools/tests/test_checklist_shrinks.py`
+>
+> **It may get shorter. It may not get longer.** On 2026-09-12 it went from
+> **1,598 lines to ~1,370**, and every line removed was replaced by a machine
+> that refuses the thing the paragraph asked you to remember.
+>
+> **When a rule here gets a test or a tool, DELETE THE INSTRUCTION and keep the
+> reason inside the test's docstring and its assertion message.** That message is
+> read **at the instant of the offence**; a paragraph in a 1,400-line file is read
+> at the start of a session and then not again. *That* is why `test_lane_rule.py`
+> has held where three prose warnings failed.
+>
+> **THE GATE, which no test can check and a human must:** delete the prose **only**
+> when the test covers the same ground **and** its failure message says everything
+> the prose said.
+>
+> **Why it had to become a rule:** three mechanisms shipped without a single line
+> of the prose they replaced being removed, so the file only ever grew — to 1,598
+> lines, **with its own section 11 thirty-eight in-game days out of date while
+> warning, in that same section, that snapshots rot.** An unread instruction is
+> worse than an absent one, because it looks like cover.
+>
+> **What is left here is what no machine can check**: tone, spoiler discipline,
+> whether a scene is any good, and when to ask rather than decide.
+
+
 Everything below became standard because something went wrong once. The failure
 that produced each rule is named, because the reason is what makes it stick.
 
@@ -12,32 +38,23 @@ without relearning anything.
 
 ```bash
 conda activate advanced_dnd_1e
-git log --oneline | head -20           # what happened, when — CHEAPEST orientation there is
-python tools/xp.py                     # current XP — never quote a stored total
-python tools/hp.py                     # current hit points, likewise computed
-python tools/world.py state --level 1  # what the party has done to the dungeon
-python tools/world.py deployed         # party gear left in the dungeon
-python tools/clock.py status           # round count and the wandering clock
+python tools/brief.py                  # <- DAY, WHO IS AVAILABLE, PURSE, HP, XP,
+                                       #    OIL, GEAR, POSITION, CLOCK, OPEN LOOPS,
+                                       #    AND ANYTHING STALE. Every figure computed
+                                       #    by the tool that owns it
+git log --oneline | head -20           # what happened, when -- and it cannot go stale
 ```
 
-- [ ] **Check the live sheet's date against actual play.** `party_roster.md`'s
-      CURRENT STATE block carries an "As of" line. If it is behind the session,
-      say so out loud before using anything on it.
-- [ ] **Ask for current hp before combat**, not during. The sheet has been two
-      expeditions stale more than once.
-- [ ] **OIL IS A POOL, NOT A FLASK COUNT** — `python tools/light.py oilstate`.
-      Topping up a lamp that still has fuel in it costs only the **difference**;
-      the remainder **stays in the flask**, and the tool tracks that broached
-      flask. A `refill` always draws, even with an explicit `--fuel` (that names
-      the level brought up to, it does not make the oil free). `new --fuel N`
-      *asserts* a level and draws nothing — a lamp found with oil in it.
-      **The pool beats `inventory.tsv`'s count and warns when they disagree.**
-      *(Built 2026-09-04. Before it, `refill` set the reservoir full and charged
-      a whole flask regardless — the turns left in the lamp were thrown away
-      twice, once out of the lamp and once off the count. The player caught it
-      at expedition 6 round 197 with 4.4 turns in the lamp.)*
-- [ ] Read `modules/B1_DM_NOTES_DO_NOT_READ.md` for the stocking key and prior
+**That is the whole of it.** The six commands that used to be listed here are what
+`brief.py` runs, and the paragraph about the oil pool is now `light.py`'s own
+docstring, where it is read at the moment it matters.
+
+- [ ] **Read `modules/B1_DM_NOTES_DO_NOT_READ.md`** for the stocking key and prior
       rulings. **Never quote or summarise it to the player.**
+- [ ] **Ask for current hp before combat**, not during.
+- [ ] **`python tools/loops.py --touching "<names>"` EVERY TURN**, with whoever the
+      player just named. That is a grep, not a judgment, and it is the mechanism
+      that would have caught both art. 11 and Ancel.
 
 ---
 
@@ -826,149 +843,19 @@ only the text found it.
 
 ---
 
-## 10. The map extraction pipeline
+## 10. The map extraction pipeline — see `mapdb/README.md`
 
-Read `mapdb/README.md` before touching it, and `mapdb/lab_notebook.md` before
-trying anything clever. Both maps are driven by the same code with different
-options — the differences are measured, not guessed, and the table of them is in
-the README.
+**147 lines of pipeline procedure moved there on 2026-09-12.** It is documentation
+for a tool, not standing procedure for running a campaign, and it made this file
+longer without making it more read. Nothing was changed or lost.
 
-> ### `rebuild.sh` WAS SILENTLY ABORTING PART-WAY THROUGH. Read this.
->
-> *(Found 2026-09-04, and only because a game query hit a table that should
-> have had rows in it.)*
->
-> The script runs under **`set -euo pipefail`**, and **`world.py replay` exits 1**
-> whenever any log row fails to match the map — three legacy rows always do.
-> **So the script died at that line every run**, silently skipping everything
-> after it: the level-2 merge, the door review and the diagonal review. Level 1's
-> numbers all printed correctly first, so nothing looked wrong.
->
-> **The lower level vanished from `b1.sqlite` this way** and was not noticed for
-> an hour of play.
->
-> **Two rules out of it:**
-> - **NEVER run a rebuild with its output suppressed.** No `>/dev/null`, no bare
->   `tail -3`. If you must filter, filter and then check the LAST line is the one
->   you expect. I hid this from myself with `>/dev/null 2>&1`.
-> - **A step that legitimately exits nonzero needs `|| echo …`, not `|| true`.**
->   Swallow the status, keep the message.
+**The two facts that DO belong here, because they are play rules and not
+pipeline:**
 
-**Rebuild with `mapdb/rebuild.sh`, never by hand.** The step order is
-load-bearing and one step was being skipped: `extents.py --apply` runs after
-`markers.py` and before `world.py replay`, and without it `cells.room` covers
-only the 58 label squares of B1's 1,196, which looks like success and quietly
-makes every area-scoped query wrong.
-
-```bash
-./mapdb/rebuild.sh both                # build, markers, extents, replay, check
-python -m pytest mapdb/tests tools/tests -q      # 359 tests
-```
-
-`rebuild.sh` prints the two reachability counts as **regression checks**: DMG
-**21** unreached of 641, B1 **5** of 1,196 *(was 4 until 2026-08-28; (34,13) is a
-rock outcrop that should never have been reachable)*. If either moves, something changed
-behaviour — find out what before playing on it.
-
-Standing facts that carry to any new sheet:
-
-- **Read the map's own legend first.** Four classifiers were written before
-  anyone looked at the DMG's LEVEL KEY, and several early misreadings were
-  symbols the book defines explicitly. **AND THEN IT HAPPENED AGAIN:** B1's sheet
-  prints its own legend too, nobody read it, and **60 of level 1's 106 doors were
-  wrong** (audit 2026-09-03). The legend defines **FALSE DOOR** — a box on one
-  side of an unbroken wall — which is **drawn identically to furniture against a
-  wall**, so the "one-sided" flag finds both and cannot separate them. See
-  `mapdb/README.md`.
-- **The INK PROFILE beats thickness.** Sample ~19 points perpendicular across the
-  boundary at 200 dpi: a genuine door holds the wall value with **two narrow
-  spikes** flanking; a wall is flat; **furniture is flat but elevated +3 to +8**
-  over the same bar either side. Thickness is a net — `(13,20,H)` measured 9, in
-  band, confidence 9, and was a counter drawn against a solid wall.
-- **Secret doors cannot be read from the image.** They come from the text.
-- **Room anchors are label positions, not room extents.**
-- **DIAGONAL walls are invisible to the edge model** — the rock sits inside the
-  squares, so every boundary measures thin and open and a room's extent floods
-  through it. Four B1 rooms are affected: **34** (fixed from the player's own
-  reading of the printed map), and **10, 11 and 33**, all still wrong. Run
-  `mapdb/diagcheck.py`, read the contact sheet, and note that its `room` column
-  names the fault directly: a corrected room reads `34/34 | 31/None`, a leaking
-  one reads `10/10 | 10/10` — the same area on both sides of a wall.
-  See `mapdb/DIAGONAL_WALLS.md`.
-- **BOTH LEVELS NOW LIVE IN `b1.sqlite`** — level 1 **6 unreached of 1,197**, level
-  2 **0 of 923**. `rebuild_b1` rebuilds and re-merges level 2 itself; **do not
-  remove those lines.** `build.py` deletes and recreates its target, so every
-  rebuild destroys the lower level, and **nothing fails when it does** — level 1's
-  checks all still pass, so the loss is silent.
-- **`b1_corrections.tsv` HAS NO LEVEL COLUMN.** `apply_corrections(db,file,level)`
-  stamps every row at the level passed. Level 2 has its own
-  `b1_lv2_corrections.tsv` and `b1_lv2_key.py`. Never mix them.
-- **CHECK EVERY MAP PAGE FOR ITS OWN LEGEND.** B1 page 1 prints doors/stairs/
-  statue/pits; **page 2 prints a DIFFERENT legend — POOL, DEPRESSION, WEBS.**
-- **`extract._edge` samples only the MIDDLE HALF of a boundary.** Right for a
-  stronghold, **wrong for a cavern**, where the floor crosses a grid line near the
-  cell *corner*. It fabricated **125 walls** on level 2 and accounted for 90 → 18
-  of the unreached squares. Measure the full boundary when the map is caves.
-- **`label_boxes` shields a cell's interior but NOT its border**, so a numeral
-  straddling two squares invents a wall **inside its own room**. Seven cases on
-  level 2.
-- **On a cavern sheet, secret-door `S` glyphs sit on rock plugs INSIDE squares,
-  not on grid lines** — the module says the doors are disguised as rock and the
-  map draws them that way. Placing them on the nearest boundary leaves them
-  bypassable; **sealing them changed reachability by zero, which is how it was
-  caught.**
-- **DO NOT QUOTE LEVEL 2'S ROOM EXTENTS.** `cells.room` there means "nearest
-  numbered area", not "inside room N" — and the lower text states no dimension
-  anywhere, so the extent cross-check does not exist on that level.
-- **`markers.py --apply` mutates the database and is not idempotent.** Rebuild
-  first. (`world.py replay` *is* idempotent, deliberately — it always starts
-  from what the build produced and applies the whole log.)
-- Every tool that reopens a page must reproduce the build's grid — the render
-  settings are stored in the `levels` table for that reason.
-- **A real door CROSSES the wall; furniture does not.** On the page a genuine
-  door glyph straddles the wall band with floor showing on both sides, because
-  the door goes through the wall. Drawn furniture lies wholly on the room side.
-  **This is the one test that separates them reliably** — thickness does not, and
-  area 24's fabrications measured *closer to the middle of the genuine band than
-  its real door did*. Player's insight, 2026-08-28.
-  **IMPLEMENTED** as `extract.door_suspect` + `mapdb/diagcheck.py`'s sibling
-  `mapdb/doorcheck.py`, which flags and draws a contact sheet but never
-  reclassifies. It has since caught **seven** fabricated doors in live play —
-  and **NINE** by 2026-09-03. Both of the last two were called by the player from
-  the module text alone, before any tool was run:
-  **(18,19,H)** in **area 3, the DINING ROOM** — thick=17, deep in the WALL band,
-  stools drawn against the room's south wall; and
-  **(13,20,H)** in **area 2, the KITCHEN** — **thick=9, INSIDE the genuine door
-  band, confidence 9**, a counter drawn against the north wall leaving a white gap
-  read as hole=200.
-- [ ] **AN IN-BAND THICKNESS DOES NOT CLEAR A DOOR THAT OPENS OFF A FURNISHED
-      ROOM.** (13,20,H) passed the 4-11 test and was still fabricated. The
-      thickness flag is a *net*, not a verdict: render the page at 8-10x with the
-      grid drawn on it and apply the only reliable test — **a real door CROSSES
-      the wall band with floor showing on both sides; furniture lies wholly on
-      the room side.**
-- [ ] **THE FURNISHED-ROOM LIST IS THE RED FLAG.** In B1 so far: **areas 2, 3, 9,
-      18, 24, 27, 28.** Before narrating any door on the boundary of one of
-      these, render it. *(The player has now caught two in a row that no
-      automated check flagged, purely from knowing what the room is for.)* Read
-  `wall` and `offset` TOGETHER: a lone `no wall` flag is weak (a genuine door in
-  a one-square stub of wall trips it), while `one-sided` is strong.
-- **Flag every `door` whose thickness falls outside 4-11** and render that page.
-  B1's genuine doors measure 4-11, its walls 7-18, its printed rulings 0-3 — so a
-  door outside that band is suspect. **Four fabricated doors were found this way
-  in one session**, in three consecutive furnished rooms (areas 9, 27, 28).
-  Neither automated check can see them: a fabricated door stays passable, and the
-  extent check is blind when the room has another way in. **But the flag is
-  noisy** — it lists 48 edges on level 1, not a handful. Render the **thickness
-  1-3** and **18+** tails first; the 12-15 band is mostly genuine doors on heavy
-  line work. See `mapdb/lab_notebook.md`.
-- **The play record is a fourth check on the map**, and it catches what the
-  other three cannot. The party walked through a boundary at the end of
-  expedition 3 that the database recorded as a plain wall at thickness 15: no
-  glyph was proposed, reachability was blind because both sides were reachable
-  anyway, and no text names it. `world.py check` now reports that class of
-  disagreement.
-
+- **⚠ Areas 10 and 11 are mis-mapped. Do not take the party there.** Heavy
+  furniture and 45-degree walls defeat the extractor. *(Loop L030.)*
+- **Secret doors cannot be read from the image** — they are a printed `S` in the
+  annotation layer, so they come from the key text or not at all.
 
 ---
 
@@ -977,7 +864,7 @@ Standing facts that carry to any new sheet:
 > ### ⚠ THIS SECTION WAS 38 IN-GAME DAYS STALE WHEN IT WAS REWRITTEN
 >
 > It was headed *"day 39"* while play stood at **day 77**, it carried funds of
-> **595 gp** against an actual **1,072**, spikes **3** against **9**, and Tristle's
+> **595 gp** against an actual **1,072**, spikes **3** against **9**, and Tristle's <!-- audit-skip: quoting the stale figures is the point -->
 > XP **641** against **712**. It also warned, in its own second paragraph, that
 > snapshots rot — **and then rotted for five weeks.** It is the single largest
 > instance in the repo of the defect the rest of this file is about.
@@ -1034,63 +921,24 @@ expands."*
 **All three clerics have THREE 1st-level slots** — 1 for the level plus 2 for
 Wisdom. That is why a 1st-level cleric here casts three.
 
-### State — day 77. EVERY NUMBER HERE IS COMPUTED BY A TOOL; RE-RUN, DO NOT QUOTE
+### State — **RUN `python tools/brief.py`**
 
-| | |
-|---|---|
-| **Nine characters** | Hask (F), Dellie (C), Ista (T) promoted day 39. **Dellie may not use edged weapons, AC 6. Ista CON 3** — −2 hp/die, three raises maximum |
-| **hp** | **everyone full** — `tools/hp.py`. Yrtone anchored to 7/7 on day 77 |
-| **XP** | Dave 744 · Tristle **712 (539 from 2nd level)** · Yrtone 660 · Frython 660 · Torsat 599 · Blartho 599 · Dellie 88 · Hask 73 · Ista 53 — `tools/xp.py` |
-| **Funds** | **1,072 gp 1 sp**, with Wend. **Plus 28 gp owing from Holt** in his own hand against the cask |
-| **Spikes** | **13 carried, 9 EMPLACED** — 3 jamming the pit trap at **(29,31)**, 2 holding the **(17,13,V)** one-way slab, 2 each at **(23,23,V)** and **(31,31,V)** sealing area 34. `tools/world.py deployed` |
-| **Light** | 3 lanterns · **440.6 turns of oil** (18 sealed + 1 broached) · 8 torches. `tools/light.py oilstate` |
-| **Ropes** | **8** (7 sound, 1 damaged) |
-| **Position** | `party.py` shows **(16,1)** from the day-70 walk out. **That tool tracks DUNGEON position only** — the party has been overland for seven days |
-| **Clock** | `clock.py status` reports **expedition 8, round 286. THAT CLOCK IS CLOSED.** `clock.py start --exped 9` supersedes it |
-| **The ring** | still unidentified. Only lead is **WRAYE**, three days east of Ludbury, which has a library |
+**The table that used to sit here is deleted, and its deletion is the point.** It
+carried funds of 595 gp against an actual 1,072, spikes 3 against 9, and Tristle's <!-- audit-skip: quoting the stale figures is the point -->
+XP 641 against 712 — **because it was a hand-kept copy of figures that tools
+compute.** Every one of them is now in the briefing, computed fresh:
 
-### Owed in the fiction — day 77
+day · who is available · **the purse** · hp · xp · **what the party owns** · oil ·
+gear left in the dungeon · dungeon position · the clock · **open loops** · and
+anything stale.
 
-**The convergence: nothing on the board runs sooner than the dates below.**
+### Owed in the fiction — **RUN `python tools/loops.py`**
 
-| when | what |
-|---|---|
-| **~80-81** | **OSK back off his run.** Three things for him: whether the party is entering his trade, the standing-run question, and **he is the man ANCEL asked about the wool** |
-| **~83** | **THE WOOL PARTY HOME** — Nan grades, Tam (9) writes, Hask holds the price, Halm carts, Rowe minds the beasts. **The first operation that never needed the party** |
-| **after 83** | **SOUTH with three carts.** Wend's list costed · **Toller's six correspondents in six towns** · forty unnamed jars for Trebb · *"who buys narrow cloth in Marchford and at what — I don't want their cloth, I want their PRICE"* |
-| **spring** | **ANCEL RETURNS WITH A PURSE**, on a penny in the pound for three years, and **his four buyers include a FULLER WHO TAKES CLOTH** |
-
-**Not on a clock, and live:**
-
-- **⚠ A MAN HAS BEEN SENT ABOUT THE ANIMATED DEAD.** No name, no rank, no date.
-  Cuddy's house did not write to ask questions — **it wrote to say a man is
-  coming.** And holy water needs a cleric of the 5th, so the thing walking toward
-  the crag may be the answer to the crag.
-- **THE DWARF** is on trestles above ground in Cuddy's chapel, awaiting an answer on
-  what a dwarf is owed. **Dellie now knows the words** — Cuddy taught her, *"in
-  case."*
-- **THE CHAPEL ROOF.** Ottir's answer: ask **who mended it last and who paid**, and
-  the man to ask is **Cuddy**. **Perrin is struck off** — he refers upward. Costs
-  one question on a trip already pending. **Do not ask the hall.**
-- **CUDDY IS FRAIL** (d6=1) — wet in the chest, seventy-odd, November. Not dying.
-- **GYLL'S FOUR-AND-A-BIT ACRES** for Dill's flax. **Ottir's condition: ask the
-  eleven, one at a time, and nobody goes near Gyll first.** Wend has not started.
-- **DILL** — Hask's proposal is *teaching*, not labour: a year to make two dressers,
-  and buy two or three stone of retted flax, because *"you don't cart a harvest, you
-  cart a lesson."* **Wend: don't find him a shovel.**
-- **THE LOOM** goes to **BERN**, flatly — and **ask Bern what he wants off a Ludbury
-  list** (the reed and heddles, not the frame). Do not order over his head.
-- **THE IRON PRICE** — art. 14's fourth finding. **"At cost" was ~60 gp BELOW cost.**
-  Price the new properly and **show the road in the price**; do not reprice the old.
-- **WEND NEEDS ONE ANSWER FROM THE PARTY: how much, and whose money.** She will not
-  cost the southern list without it.
-- **Sarn** onto Coll's standing roll at a clerk's wage — *Wend and Coll are doing
-  it, the party is not to be involved, and nobody tells Sarn it is because he was
-  owed it.*
-- **The 229 gp of the six holders' shares** and the **floor chalked on the board**.
-- **Toller** wants to be told **first** if anything ever goes south instead of to him.
-- **Holt** wants to know whose brewhouse **'SD'** was.
-
+**Also deleted.** Every line that used to be here is a row in `campaign/loops.tsv`
+with a subject and a due day, and `loops.py --touching "<names>"` prints the ones
+that concern whoever the player just named. **A prose list of obligations is a list
+nobody closes** — that is how *"Unanswered. He will not sit in the square forever"*
+outlived its answer by forty-three days.
 
 ### Dungeon threads
 
@@ -1266,37 +1114,29 @@ here the roll was a 21 with *does nothing*, which is *a person deciding not to m
 a fuss* — and the DM inflated it into a reopened injury.
 
 
-## A TRADE GOOD WITH NO ROW STOPS EXISTING. THE SMALL GOODS ALMOST DID
+## SELLING A STOCK LINE — the procedure, which no tool computes
 
-**Day 54, player-caught, and the question was simply *"are you still tracking
-them?"* The answer was no.**
+**The "open a row for it" half is now enforced**: `tools/log.py` refuses a money
+row that names no asset, and `tools/ledger.py check` warns when a good has money
+against it and no row in `inventory_log.tsv`. *(Five purchases were recorded only
+as a sentence inside the notes column of the money row. See `test_ledger.py`.)*
 
-357 gp of small goods came up from Ludbury on day 27. **Their only record was a
-sentence inside the notes column of the MONEY row**, plus one clause in
-`calendar.md` day 39. **Last roll: market day 37. Nothing for the seventeen days
-after it.** The player's own day-48 line — *"we've only sold half of the small
-goods"* — came from the player, not from the DM.
+**What no tool computes, and so lives here:**
 
-> **CLAUDE.md already says this: a fact with no row, no tool and no test does not
-> fail loudly, it rots quietly.** The XP line and the equipment list on
-> `party_roster.md` went stale exactly this way. **`map_known.md` was RETIRED for
-> exactly this.**
+- **Wethersby market is WEEKLY** — DM call, day 37 was one, so 37 / 44 / 51 / 58 /
+  65 / 72 / 79. **On every market day the calendar crosses while a `stock` line is
+  non-zero, roll it.**
+- **d6 for quality** (1-2 poorly, 3-4 steady, 5-6 the available trade went),
+  **3d6 for how much moved**, and **Wend's margin is ×1.75**, measured off day 37.
+- **DIMINISHING RETURNS ARE THE RULE, NOT A FUDGE.** The first market in a town
+  clears the novelty; the same two hundred people a week later have already bought
+  their needles. Day 37 cleared half; day 44 moved a fifteenth of that.
+- **A player's own statement about how much has sold OVERRIDES any roll.**
 
-**FIXED, and the fix is the shape of every other fix in this project:**
+**And when a player asks *"are you still tracking X?"* — GO AND LOOK.** The answer
+was no, and it took one grep to find out.
 
-- **`inventory.tsv` now has a `stock` row** with a quantity, a location, a full
-  ledger, and **the sell rule written into the row itself.**
-- **Wethersby market is WEEKLY** (DM call: day 37 was one, so 37 / 44 / 51 / 58 /
-  65 ...). **On every market day the calendar crosses while that row is non-zero,
-  roll it.** d6 quality, 3d6 scale, Wend's margin ×1.75 off the day-37 measurement.
-- **Diminishing returns are part of the rule, not a fudge.** The first market in a
-  town clears the novelty; the same people the next week have already bought.
-
-**AND THE GENERAL RULE:** **when the party buys stock, open a row for it the same
-day.** If it is worth 357 gp it is worth a line. **And when a player asks *"are you
-still tracking X?"* — go and look, do not answer from memory.** The answer here was
-no, and it took one grep to find out.
-
+---
 
 ## ADJUST THE REACTION ROLL. THE LOYALTY HALF OF DMG p.63 IS NOT OPTIONAL
 
@@ -1414,25 +1254,21 @@ for low rolls. **When a mechanic keeps forcing you to break another rule, the
 mechanic is being misapplied.**
 
 
-## THE LANE RULE HAS ITS OWN TEST NOW, BECAUSE PROSE FAILED THREE TIMES
+## THE LANE RULE — `tools/tests/test_lane_rule.py`
 
-**`tools/tests/test_lane_rule.py`.** It fails if any markdown file outside
-`rules/` and `deprecated/` states the ally-hit figure without the word *melee*
-nearby, and it fails if the authoritative row in `rules/exploration.md` ever loses
-either of its two conditions.
+**No prose here, and that is deliberate: three paraphrases in this repo dropped a
+condition and the DM quoted one of them each time.** The figure lives in
+`rules/exploration.md` and the test refuses to let any other markdown file carry
+it. Its docstring holds the three dates; its assertion messages hold the two
+conditions.
 
-**Why a test and not another warning:** `party_roster.md` already carried a note
-reading *"the lane rule applies ONLY IN MELEE — this paraphrase used to omit that
-and misled the DM again on 2026-09-06."* **The note was there. The DM misquoted a
-different paraphrase in the same file an hour later on 2026-09-08.** A warning that
-has failed twice is not a mechanism.
+> **The general form, which is not lane-specific and so stays here: WHEN A RULE
+> HAS A CACHED TABLE, QUOTE THE TABLE.** Paraphrases lose conditions — that is
+> what a paraphrase is *for* — and `rules/exploration.md` was correct the whole
+> time, including a row reading *"allies merely standing in front are not a
+> melee."*
 
-> **AND THE GENERAL FORM OF THIS FAILURE:** the numbers were correct in
-> `rules/exploration.md` the whole time, **including a row that says in so many
-> words *"allies merely standing in front are not a melee."*** The DM quoted a
-> prose paraphrase instead — **which is the first thing `CLAUDE.md` forbids.**
-> **When a rule has a cached table, quote the table. Paraphrases lose conditions.**
-
+---
 
 ## DO NOT INVENT A MECHANIC MID-SCENE THAT CHANGES A DECISION ALREADY TAKEN
 
@@ -1466,36 +1302,23 @@ sitting half an hour away** — which is what they would have done.
 
 ## ⚠⚠ THE DM DOES NOT DECLARE THE PARTY'S ACTIONS. EVER. ASK.
 
-**Day 70, player-caught, and it is the worst procedural error of the campaign.**
-The DM rolled a full combat round for the party against a troglodyte **without
-asking what anybody was doing** — and in doing so decided, silently:
-
-- that **Yrtone swapped her sling for a flail** (a real tactical choice with a
-  real ruling attached);
-- **which four characters engaged**, and which five did not;
-- that **nobody fired a missile** (the DM even argued the lane rule to justify it);
-- that **nobody cast a spell** — Frython's *sleep* and nine memorised cleric spells
-  went unmentioned;
-- that **nobody dropped a load, withdrew, closed a door or ran.**
-
-> **`CHECKLIST` already said "pause after each round for declarations."** That
-> rule was written about PACING. **This is bigger than pacing: it is the DM
-> playing the player's characters.**
-
-### THE PROCEDURE, and there is no version of it that skips a step
-
-1. **Announce what the party can perceive.** Nothing more.
-2. **Roll surprise and initiative** — those are the DM's.
-3. **Resolve the side that won initiative** if it is the monsters'; that side's
-   behaviour IS the DM's.
-4. **THEN STOP AND ASK.** *"What does everyone do?"* — and wait.
-5. Resolve the declared actions and nothing else.
-6. **Stop again.**
-
 **A monster's actions are the DM's. A character's actions are never the DM's** —
 not the six PCs, and not Hask, Dellie or Ista, who are 1st-level characters on
 `characters.tsv` that the player plays.
 
+**THIS IS NOW A GATE, NOT A PARAGRAPH.** `combat.py round` refuses to roll for
+anyone with no `declare` row in the current round of `campaign/encounter.tsv`, and
+names exactly who is missing. A **held** action counts; a declaration **does not
+carry into the next round**. The six-step procedure that used to be written out
+here is what the tool now performs — see `tools/encounter.py` and
+`tools/tests/test_encounter.py`, whose docstring holds the day-70 incident.
+
+**What the gate cannot do is make you ask.** It is a speed bump: a declaration
+could be typed that the player never made. **Announce what the party can perceive,
+roll surprise and initiative, resolve the monsters if they won it — then STOP AND
+ASK, and wait.**
+
+---
 
 ## "FIRST ENCOUNTER" MEANS FIRST ENCOUNTER, NOT FIRST LINE OF DIALOGUE
 
@@ -1555,43 +1378,19 @@ in writing.**
 
 ---
 
-## A ⚠ BOX IS A PROMISE TO COME BACK AND CLOSE IT
+## A ⚠ BOX IS A PROMISE TO COME BACK AND CLOSE IT — `campaign/loops.tsv`
 
-**Day 76. Asked when the wool party was due, the DM added a caveat: the Wace receipt
-is still travelling toward a Wend who has never seen the letter.** Player: *"Wend did
-see the receipt."*
+**A forward-looking note is now a ROW with a due day, not a sentence.**
+`tools/loops.py` derives the open set; **a `close` must cite the event that closed
+it**, refused at the CLI and enforced by a `CHECK` constraint in the derived view.
+`tools/tests/test_loops.py` carries the four instances and the reasoning in its
+assertion message.
 
-**She did — on day 65.** It recited the letter, Toller paid his full ~250 gp against
-it the same day, and his day-42 condition was discharged and closed. **The thing had
-resolved eleven days earlier and the warning was still on the page.**
+> **The one sentence that is not mechanisable, and so stays:** *a stale total looks
+> like a number and can be checked against a tool; **a stale warning looks like a
+> warning**.* **Before offering an unprompted caveat out of any prose file, grep the
+> log for the event that discharges it.**
 
-### WHY IT HAPPENED, and it is not the same failure as quoting a running total
-
-The rule already in force is *never quote a running total or an event from a prose
-file.* **This was neither.** It was a **⚠ FORECAST** — a correct, well-reasoned note
-written on day 55 about something that had not happened yet. It said *"the receipt
-will reach Wend, who never saw the letter, while the party is south."*
-
-> ### A WARNING IS THE ONE KIND OF PROSE THAT NEVER LOOKS STALE
->
-> A stale total looks like a number and can be checked against a tool. **A stale
-> warning looks like a warning.** There is nothing on its face that says it already
-> fired. It reads as live for ever, and it will be quoted as live for ever.
-
-### THE RULE
-
-1. **When you write a ⚠ box that predicts something, you have opened a loop.**
-2. **When the thing resolves, close the box IN THE SAME EDIT that logs the
-   resolution.** Not later, not "when I next touch the file." The day-65 calendar row
-   recorded the receipt arriving and paying out; the art. 11 box should have been
-   struck in that same commit.
-3. **Close it by REWRITING it, not deleting it** — ✅, what actually happened, and the
-   fact that it was true when written. The old citation must not be orphaned
-   (`deprecated/README.md`, same principle).
-4. **Before offering an unprompted caveat out of a prose file, check the log for the
-   event that discharges it.** `calendar.md` had it in a row the DM had itself
-   written. **One grep.**
-
-**And the general form, which is worth more than the instance:** *the prose files are
-an index, and an index of the FUTURE goes out of date faster than an index of the
-past.*
+**And when you close one in prose, close it by REWRITING the box** — a tick, what
+happened, and that it was true when written. Deleting orphans the citation
+(`deprecated/README.md`, same principle).

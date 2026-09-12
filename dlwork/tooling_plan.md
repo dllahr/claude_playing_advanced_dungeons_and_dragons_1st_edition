@@ -713,20 +713,72 @@ WHERE le.verb='open' AND le.loop_id NOT IN
 
 **300 tests pass** (185 → 198 → 219 → 239 → 252 → 266 → 280 → 300).
 
-### Phase 6 — **the ratchet, and it is NOT OPTIONAL**
-For every rule a test now covers: **delete the instruction from `CHECKLIST.md`** and
-keep the reason inside the test's docstring and assertion message. Then
-`test_checklist_shrinks.py` holds the line.
+### Phase 6 — the ratchet · ✅ BUILT 2026-09-12 · **THE FILE GOT SHORTER**
 
-> **The gate, so the trade cannot go bad:** delete the prose **only** when the test
-> covers the same ground **and** its failure message says everything the prose said.
-> `test_lane_rule.py` is the worked example — 25 lines of failure history in its
-> docstring, and an assertion that reads *"THE TRIGGER IS GONE."*
+**`CHECKLIST.md`: 1,598 → 1,397 lines.** First time it has ever gone down.
+
+| what went | where it went, and what enforces it now |
+|---|---|
+| **§1's six-command start-of-session block** | `brief.py` runs all of them, plus the purse, the inventory, the loops and the staleness |
+| **The lane-rule section** | `test_lane_rule.py`. Its docstring holds the three dates; its assertions hold the two conditions |
+| **"A trade good with no row stops existing"** | `log.py` refuses a money row with no asset · `ledger.py check` warns on a good with no inventory row. **The market-day sell rule stayed** — no tool computes it |
+| **The six-step declaration procedure** | `combat.py round` refuses an undeclared attack and names who is missing. `test_encounter.py` holds the day-70 incident |
+| **"A ⚠ box is a promise"** | `loops.tsv`, a `CHECK` constraint, and `test_loops.py`'s assertion message |
+| **§11's State table and "Owed in the fiction"** | `brief.py` and `loops.py`. **They are what made §11 thirty-eight in-game days stale** |
+| **§10's 147 lines of map pipeline** | **MOVED to `mapdb/README.md`, not deleted** — unique content, but documentation for a tool rather than procedure for running a campaign |
+
+#### `tools/tests/test_checklist_shrinks.py` holds the line
+
+A **`CEILING`** that may only be **lowered**, a check that the ceiling has no slack
+in it (*a ratchet with room in it is a suggestion*), a named list of the sections
+that must not come back, **and the other half of the gate: a test that every
+deleted rule still exists somewhere that FIRES.**
+
+> ### WHY THE DELETING WAS THE HARD HALF
 >
-> **I have done the fun half of this twice and never the deleting. That is why the file
-> is 1,470 lines and why its own §11 sat 38 in-game days stale.**
+> **Three mechanisms shipped without one line of the prose they replaced being
+> removed** — `test_lane_rule.py`, the roll-log conftest, the reaction-table
+> discipline. So the file only ever grew, **to 1,598 lines, with its own §11
+> thirty-eight in-game days out of date while warning in that same section that
+> snapshots rot.**
+>
+> **An unread instruction is worse than an absent one, because it looks like
+> cover.**
 
----
+**THE GATE, which no test can check and a human must:** delete the prose **only**
+when the test covers the same ground **and its failure message says everything the
+prose said.** Every deletion above was preceded by strengthening the message —
+`test_loops.py` gained the *"a stale warning looks like a warning"* reasoning and
+`test_encounter.py` gained the list of what the DM silently decided on day 70.
+
+**What is left in `CHECKLIST.md` is what no machine can check:** tone, spoiler
+discipline, whether a scene is any good, and when to ask rather than decide.
+
+**306 tests pass** (185 → 198 → 219 → 239 → 252 → 266 → 280 → 300 → 306), and
+**510 with the `mapdb` suite.** **All six phases are complete.**
+
+#### ⚠ And the hook blocked this very commit — correctly, once, and wrongly twice
+
+**Moving §10 into `mapdb/README.md` put it under the auditor for the first time,
+and it carried a STALE TEST COUNT** — *"# 359 tests"*, written when it was true.
+**Replaced with the command**, because a count in prose will go stale again.
+
+The other two firings were false positives, and they taught the general lesson:
+
+> ### A COMMON ENGLISH WORD MAKES A BAD ANCHOR
+>
+> | | |
+> |---|---|
+> | **auditing the logs at all** | `torch … 100` was an asset name beside its unit **weight**. Fixed by auditing `.md` only — checking the logs against tools computed *from* them is circular |
+> | **`tests`, singular** | *"(13,20,H) passed the 4-11 test"* is a brightness threshold. Fixed by requiring the **plural** |
+> | **`available`** | fired on *"not the six PCs"* and on *"5-6 the available trade went"*, and on nothing else. **Anchor removed** — a checker whose only two firings are false positives is not a checker |
+>
+> **When in doubt, drop the checker.** Coverage is reported honestly as
+> *"unchecked"*, and **an honest gap beats a checker nobody believes.**
+
+Two lines in `CHECKLIST.md` that quote the day-39 figures *on purpose* now carry
+`audit-skip`, which is the self-documenting escape and the one the hook's own
+header names. **`--no-verify` was not used.**
 
 ## 4 · WHAT THIS KILLS — AND WHAT SURVIVES IT
 

@@ -23,6 +23,24 @@ is left for claims that need reading comprehension -- *"Cuddy was cold to
 Yrtone"*, *"the barrel was never moved"*. Free, exact, instant, and it runs in a
 pre-commit hook, so it is the one part of the auditor that CANNOT BE FORGOTTEN.
 
+*** THE CHARACTERISTIC FAILURE OF THIS APPROACH, learned by doing it three
+times: A COMMON ENGLISH WORD MAKES A BAD ANCHOR. *** Each loosening so far was
+one of those --
+
+    auditing the TSVs at all   "torch ... 100" was an asset name beside its
+                               unit WEIGHT. Fixed by auditing .md only: the
+                               logs are what the tools compute FROM, so
+                               checking them is circular
+    `tests` singular           "(13,20,H) passed the 4-11 test" is a brightness
+                               threshold. Fixed by requiring the PLURAL
+    `available`                fired on "not the six PCs" and on "5-6 the
+                               available trade went", and on nothing else.
+                               ANCHOR REMOVED -- a checker whose only two
+                               firings are false positives is not a checker
+
+**When in doubt, drop the checker.** Coverage is reported honestly as
+"unchecked", and an honest gap beats a checker nobody believes.
+
 THE DESIGN CONSTRAINT THAT MATTERS MORE THAN COVERAGE: **it must not cry wolf.**
 A checker that fires on historical figures would train me to ignore it, and then
 it is prose again -- which is the whole failure this project is about. So:
@@ -107,6 +125,12 @@ def truths(need=None):
                        'tools/loops.py')
 
     av = _availability()
+    # `available` has NO ANCHOR and so is never checked against prose -- it is
+    # kept here for `--show` and for brief.py. Its anchor was removed after it
+    # fired twice and was wrong both times: on "not the six PCs, and not Hask,
+    # Dellie or Ista" (a true sentence about who the PLAYER plays) and on "5-6
+    # the available trade went" (a die result). A checker whose only two
+    # firings are false positives is not a checker.
     t['available'] = (sum(1 for s in av.values() if s == 'present'),
                       'characters', 'campaign/availability.tsv')
     t['characters'] = (len(hpmod.characters()), 'characters',
@@ -156,10 +180,11 @@ ANCHORS = (
     ('oil_sealed',      r'sealed[^.]{0,20}flasks?|flasks?[^.]{0,20}sealed'),
     ('oil_turns',       r'turns of oil|oil[^.]{0,20}turns'),
     ('day',             r'campaign day|\bit is day\b|\btoday is day\b'),
-    ('tests',           r'\btests?\b[^.]{0,20}(?:pass|passing|in `?tools)|'
-                        r'\d[\d,]*\s+tests?\b'),
+    # PLURAL only, and only next to "pass". Singular caught "(13,20,H) passed
+    # the 4-11 test", which is a brightness threshold in the map pipeline.
+    ('tests',           r'\btests\b[^.]{0,20}(?:pass|passing|in `?tools)|'
+                        r'\d[\d,]*\s+tests\b'),
     ('open_loops',      r'open loops?'),
-    ('available',       r'available\b|\bgo(?:ing)? up\b'),
 )
 
 # Per-character hp, written "9/9", "9 of 9", "6 of 7".
