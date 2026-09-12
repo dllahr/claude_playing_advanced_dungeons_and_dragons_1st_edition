@@ -159,8 +159,52 @@ eight men on the books, and a road they have just spent a week proving is safe.
 Rell's **eleven** (four still about). Ferd's holding **six**. Ellery **three** at
 Michaelmas. Marrow's, some. Coll and Ferd got to roughly **twenty** and stopped.
 
-**Eight are now the party's:** Hask, Dellie, Corm, Sarn, Coll, Wat, Ferd, Ged.
-Roughly a dozen are not.
+### ⚠ CORRECTED 2026-09-11 — FOUR OF THE EIGHT WERE NEVER TURNED-OFF HANDS
+
+This section used to end *"Eight are now the party's: Hask, Dellie, Corm, Sarn,
+Coll, Wat, Ferd, Ged"* — under the heading **the count of turned-off hands**,
+which silently made Hask's crew part of Rell's eleven. **They are not, and
+`npcs.md` has always kept them in two separate sections on purpose:**
+
+| **OFF THE FARMS** — turned-off hands | **Coll · Wat · Ferd · Ged** |
+|---|---|
+| **OFF THE ROAD** — ex-bandits, met in area 7 | **Hask · Dellie · Corm · Sarn** |
+
+**Hask has been a road-robber since he was nineteen — twenty-two years — and had
+never worked THIS road until a week before the party met him.** He is not a
+desperate local; he is a career robber who moved onto a road that had gone poor,
+empty and unwatched. *That* is the connection, and it is causal, not personal.
+
+**Roughly a dozen of the turned-off are still not the party's.**
+
+## ⚠ THE TWO CLOCKS — ruled 2026-09-11, player-prompted
+
+**The player asked what "two years" meant in Gyll's** *"I've had two year to find
+something else to say and there isn't anything"* **— and noticed it sits oddly
+beside a road that only went bad recently. It does not. There are two clocks and
+this file already said so:** *"the robberies are DOWNSTREAM... all the same
+event, MONTHS APART."*
+
+| when | what |
+|---|---|
+| **~two years back** | **The wool staple moved and the buyer stopped coming.** Rell died; **Gyll took the land and turned off eleven after they got the harvest in, nothing written down.** Marrow began stockpiling. This is Gyll's two years, Ottir's two years, and the two years Marrow did not ask his son a question |
+| **Michaelmas, weeks before day 1** | **The second wave, all at once and for the same reason** — Ellery's three, Ferd's six, Marrow's some |
+| **Weeks before day 1** | **Hask's crew arrive on the road**, which by then was poor and unpatrolled under a reeve with no men |
+
+**GYLL DID NOT MISSPEAK.** His eleven were turned off two years ago; the road went
+bad much later, for the same underlying reason and by a different route.
+
+> ### ⚠ AND WHAT IS STILL NOT PINNED: THE MONTHS
+>
+> Day 76 is **November** and the licence runs *"from Michaelmas last"*, with
+> Toller saying on day 55 that **Michaelmas is a year off** — so it fell before
+> or very near day 1. **Nothing in the record fixes the month of day 1**, and
+> `days.tsv` starts there with no season on it.
+>
+> **This is left open deliberately rather than invented.** Everything relative
+> — *two summers back*, *at Michaelmas*, *died in the spring* — is attested and
+> consistent. An absolute calendar is not, and a guessed one would be quoted
+> back as a fact inside a week.
 
 
 ---
