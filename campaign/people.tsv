@@ -1,0 +1,92 @@
+# PEOPLE -- REFERENCE. IDENTITY ONLY.
+#
+# An id, a name, the names they also go by, what kind of person they are, and
+# the day they first appear. NOTHING ELSE.
+#
+# *** WHY STATUS AND CONDITION ARE NOT COLUMNS HERE ***
+#
+# They are EVENTS WITH DATES and they belong in a log. "Cuddy is frail" is not a
+# property of Cuddy; it is something that became true on day 76 and was rolled
+# for. "Ancel departed" happened after day 35. Filing that kind of thing as a
+# property is exactly how `npcs.md` came to say of Ancel:
+#
+#     "Unanswered. He will not sit in the square forever."
+#
+# -- which was true for two days, was answered completely on day 34, and was
+# still being quoted as live on DAY 77. FORTY-THREE DAYS.
+#
+# So: identity here, because identity is stable and makes a safe key. Everything
+# that CHANGES goes to campaign/interactions.tsv, campaign/loops.tsv or
+# campaign/availability.tsv, where it carries a day.
+#
+# kind: pc | henchman | npc | hireling | offstage | dead
+#   offstage = named and not yet met. They are real and they are referred to.
+#   dead     = still needs a row; the dead are talked about more than the living.
+#
+# `aliases` is semicolon-separated and exists so that "Rell's brother" and
+# "Gyll" resolve to one person -- nobody in this hundred used his name for two
+# years, and the file used both.
+id	name	aliases	kind	first_day	place	notes
+# ---- the nine characters. Stats are characters.tsv's; this is identity only.
+dave	Dave		pc	1	-	Fighter. Speaks for the party. Took the surety for the four ex-bandits before Ottir, by name and aloud
+torsat	Torsat		pc	1	-	Fighter
+tristle	Tristle		pc	1	-	Thief, elf. 539 xp from 2nd level, which is what unfreezes the pit trap
+frython	Frython		pc	1	-	Magic-User. Two hit points and one spell
+yrtone	Yrtone		pc	1	-	Cleric
+blartho	Blartho		pc	1	-	Cleric
+hask	Hask		pc	4	-	Ex-bandit, 41; a road-robber for twenty-two years. Fighter since day 39. Holds the price on the wool road
+dellie	Dellie		pc	4	-	Ex-bandit. Cleric since day 39: may not use edged weapons, AC 6 on DEX 4. Cuddy taught her the dwarf's words on day 76
+ista	Ista		pc	4	-	Bern's partner. Thief since day 39. CON 3 -- three raises at most. The lantern and the fuel are her duty, and she asked for it
+# ---- Wethersby
+wend	Wend		npc	11	wethersby	Cloth and wool trader; FACTOR of the hundred since day 32. The party's money lives with her. Refused them twice before coming round on day 12 "from watching"
+toller	Toller		npc	4	wethersby	Book and curio dealer. Fences the salvage at full value and advised against a city sale AGAINST HIS OWN INTEREST on day 16
+ottir	Reeve Ottir	Ottir	npc	4	wethersby	~50. Reeve of the north hundred; answers to Sir Aymer and is frightened of him -- Wend's word, and he does not deny it
+halm	Halm		npc	4	wethersby	Carter, ~50. Robbed by Hask's crew; the party bought him a mule. WANTS A RUN and has asked once, on day 40, saying he would not ask twice
+bern	Bern		npc	4	wethersby	Joiner, ~30. Robbed of 6 gp and his kit. Ista's partner. Will not go near the caves and is ashamed of it. The loom is to be his
+osk	Osk		npc	6	wethersby	Carrier. Wethersby to Marchford and back, three days each way, EVERY FORTNIGHT. Told the market about the patrol unprompted and named the party
+coll	Coll		hireling	11	wethersby	Nine years on Rell's ground. Runs the barn and the basecamp; has his authority in writing. Built the spring and the lean-to nobody asked for
+sarn	Sarn		hireling	4	wethersby	Ex-bandit, broken leg, will not limp. Keeps the store tally with a nine-year-old holding the pen -- the most accurate document in Wethersby. Cannot read and asked to learn
+corm	Corm		hireling	4	wethersby	Ex-bandit. Works Bern's bench, which satisfies Ottir's condition for him indefinitely
+nan	Nan		hireling	15	wethersby	Dairywoman off Ferd's old holding, two children. NINE YEARS ON RELL'S GROUND AND SHE CAN GRADE WOOL -- and knows whose is worth buying. Nobody had ever asked her a question about wool
+tam	Tam		hireling	15	wethersby	Nan's boy, NINE. Holds the pen for Sarn's tally and now for the wool prices
+wat	Wat		hireling	11	wethersby	Rides. Carried the letter to Wace; 3 s.p. a day and the hack, priced by Wend unasked
+dill	Dill		hireling	60	wethersby	Flax DRESSER, not a labourer, and says so. A year early for the trade he has. Wend: "don't find him a shovel"
+rowe	Rowe		hireling	60	wethersby	Minds the beasts. Cannot read and says so as a disqualification, asking for nothing
+holt	Holt		npc	4	wethersby	The innkeeper. Named the SD cask off the bung without tapping it -- strong stock ale, thirty years and not turned
+corvie	Corvie		npc	4	wethersby	Bonesetter. Set Sarn's leg at midnight and did not ask who he was
+bircher	Bircher		npc	4	wethersby	Offered Halm 9 gp for his cart. Did not get it
+ferd	Ferd		hireling	11	wethersby	Named Nan to Dave on the road, and Dave said "then bring her"
+ged	Ged		hireling	11	wethersby	Took a rope through both palms on the barrel descent -- rope burn, NO hp damage
+hew	Hew		hireling	12	wethersby	Nine years beside Coll on Rell's ground. Walked in on the fifth day
+meg	Meg		hireling	12	lyde	Mother of Tibb. At Lyde's learning the loom; better than her son at everything about it except speed
+tibb	Tibb		hireling	12	lyde	Meg's GROWN SON, not a child -- the DM wrote "two families" once and was corrected
+odo	Odo		hireling	12	wethersby	Nearer sixty than fifty. Carries water; cannot lift a fleece
+# ---- Draycot
+cuddy	Father Cuddy	Cuddy	npc	41	draycot	ALMONER, keeps the chapel outside the wall. A cleric of the 3rd level. Read a chest for ten nights by candle at his own expense. FRAIL as of day 76 -- the wet in his chest, seventy-odd, November
+wace	Master Wace	Wace	npc	41	draycot	Sir Aymer's steward, ~55. Reads for a living, trusts paper more than people, and ASSUMES THE WORST WHEN NOTHING IS PUT IN FRONT OF HIM. Writes down what you say while you are saying it
+perrin	Perrin		npc	41	draycot	Usher of the hall, ~40. Answers for how the hall looks and what is in it. Knows wood. CANNOT SPEND A SHILLING AND REFERS UPWARD -- which is why Ottir struck him off the roof question
+aymer	Sir Aymer		offstage	1	draycot	The lord. Not distant -- he simply does not come. Ottir sees him twice a year and will not ask him for anything
+gatemen	the two gatemen		npc	14	draycot	Sir Aymer's, and good at it. Hostile at 25 to eight armed strangers unannounced, then 69 once Dave put his hands up
+# ---- the holdings
+marrow	Marrow		npc	16	marrows	64. The biggest flock in the hundred and a stone barn with two years of fleece in it. Bought up Rell's ewes cheap rather than watch good ones go for nothing
+sim	Sim		npc	16	marrows	16, Marrow's son. Knows that flock and that hill better than anyone alive. His father had never once asked him what he wanted
+gyll	Gyll	Rell's brother	npc	12	wethersby	Took Rell's land and turned off half the hands with nothing written down. Made restitution in the square on day 35, selling the grey mare to cover it. FOUR AND A BIT ACRES that would grow flax
+rell	Rell		dead	12	-	Landowner east of the farms; died in the spring. Gave Coll eleven years
+ellery	Ellery		offstage	15	-	Holder. Turned off three at Michaelmas. Nan's word: his wool is honest
+fenn	Fenn		npc	27	fenns	Flax. Said no to Dill honestly and said why. The party paid for his barn, seed and winter at his gate
+ede	Ede		hireling	28	wethersby	Spinner. Sold her own house to come. Eight miles cross-country from Fenn's -- a couple of hours, not a day
+trask	Trask		offstage	60	-	Handed Dill his own hackles over on day 71
+hesta	Hesta		npc	27	-	Promised a crock a fortnight before, honoured unasked
+# ---- the road and the south
+ancel	Ancel		npc	32	-	Small trader east of Marchford; one cart and two hired men he can barely afford. Came north on a rumour TO BUY. Named four buyers who did not know Wethersby existed, on a penny in the pound for three years. RETURNS IN SPRING WITH A PURSE
+pell	Pell		npc	58	-	Carrier, one of the men Osk hands off to. Answered Osk's own day-6 question flat: "Ludbury. That's the whole mystery"
+rud	Rud		npc	50	-	Drover, met on the last stretch into Draycot
+lyde	Lyde		npc	62	lyde	The weaver. Will not move. Takes apprentices on his own terms and holds to them exactly
+trebb	Trebb		npc	59	marchford	Dyer. Named the vial as REALGAR in his own yard with nobody exposed, for nothing -- and thirty years of telling people what is in a jar has never once been costed
+doule	Father Doule	Doule	npc	59	marchford	Priest at Marchford and A CLERIC OF THE 5th LEVEL, so he CAN make holy water -- and Marchford has no font. "I can make it. I have never made it"
+ossery	Ossery		npc	59	marchford	Mercer, blue shutters. Buys to sell on, which is why he bought a complete Ludbury lot in October
+limner	the church's limner		npc	59	marchford	Bought the realgar for 35 gp
+# ---- offstage and unresolved
+wool_buyer	the wool buyer		offstage	12	-	Came up every summer for twelve years with money and two carts and bought the district's clip standing. Came late two summers back, then not at all
+kell	Kell		dead	4	-	The fifth of the road crew. Died underground three days before the party met them. HASK HAS NEVER SAID HOW AND THE PARTY HAS NEVER ASKED -- and a DM summary once got the direction backwards. How he died is DM-side
+the_man_sent	the man sent about the animated dead		offstage	76	-	NO NAME, NO RANK, NO DATE. Cuddy's house did not write to ask questions; it wrote to say a man is coming. Loop L017

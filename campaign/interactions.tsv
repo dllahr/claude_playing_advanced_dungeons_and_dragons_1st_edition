@@ -1,0 +1,86 @@
+# INTERACTIONS -- who was in the room, and what happened. Append-only.
+#
+# *** THIS IS THE FILE THE CAMPAIGN HAS BEEN MISSING. ***
+#
+# Social events lived ONLY in prose -- three thousand lines of it -- which is
+# why "narrating from my own summary instead of from the log" is the largest
+# error class in this campaign. Every one of these was a query that could not be
+# run:
+#
+#   how Kell died          ..  narrated backwards
+#   Sim's two years        ..  wrong
+#   Cuddy toward Yrtone    ..  called cold; npcs.md said the opposite
+#   Ista's grievance       ..  extended to a cart trip it never covered
+#   the barrel "never moved" .. world_changes.tsv:419 says otherwise
+#   "the plan was the 51st" .. the DM's own calendar row, read back as theirs
+#   Meg and Tibb           ..  a mother and her grown son, written as two families
+#   "you nearly forgot Wend" .. they had been the ones reminding him
+#
+# `people` is a COMMA LIST on purpose: it has to be typeable at the table. The
+# build normalises it into a proper join, and the validator REFUSES any name
+# that does not resolve to campaign/people.tsv -- so "Wetherby", "Rell's
+# brother" and a typo are all caught at the moment of writing.
+#
+# `seq` numbers the scenes within a day, so `evidence` elsewhere can point at
+# "77:3" and mean something exact.
+#
+# `kind`: first_contact | counsel | negotiation | promise | payment | grievance
+#         | teaching | report | conflict | fact
+#   `fact` is for a dated thing that is true of somebody and will stop being
+#   true -- "Cuddy is frail" -- which is an EVENT, not a property, and filing it
+#   as a property is how Ancel's "Unanswered" outlived its answer by 43 days.
+#
+# `reaction` is the d100 where one was rolled. MOST OF THE TIME THERE IS NONE:
+# DMG p.63 is a FIRST-CONTACT mechanic and rolling it at friends was itself one
+# of the errors (four times in one hour). Blank means no roll, deliberately.
+#
+# SEEDED 2026-09-11 from campaign/sessions/. Not every scene -- the ones a query
+# would be run against: first contacts, the reactions, the promises, and the
+# findings. `evidence` points at the session file, which is verbatim and
+# complete.
+day	seq	place	people	kind	reaction	d6s	summary	evidence
+4	1	wethersby	ottir,dave	promise		-	THE SURETY. Dave answerable for Hask, Dellie, Corm and Sarn by name and aloud. Nothing on paper either way; the condition is that the four must be visibly WORKING	npcs.md
+6	1	crag_turning	osk,dave	first_contact	123	-	Met on the road, half-day 1 of the patrol. Neutral until Dave named Ottir. Had driven the whole lonely stretch and seen nothing, and TOLD THE MARKET SO UNPROMPTED, naming the party	sessions/day-032.md
+11	1	wethersby	dave,ferd,ged,coll,wat	promise		-	"NOT DOWN THE HOLE" -- I'll not ask that of anybody who isn't paid to take that kind of risk. Dave will not ask any hired man into the caves. A promise, not a preference	npcs.md
+12	1	wethersby	wend,dave	report		-	WEND COMES ROUND BEFORE ANYONE SPOKE -- not for the money and not for the argument, but because they walked the road publicly for six days. "I got it from watching"	npcs.md
+12	2	wethersby	coll,dave	promise		-	Coll's standing instruction: bring in anyone desperate and put them to work. "If people need work I trust your judgement." He did exactly that and wrote down what each was owed	articles.md
+16	1	marrows	marrow,sim,dave	counsel		d6=6	Marrow asked DAVE to ask his son what he wanted, because he could not. "I suppose I thought if he said he wanted to stay, I'd have to let him"	sessions/day-033.md
+32	1	crag_turning	ancel,dave,osk	first_contact	11	-	Reaction 11, BADLY FRIGHTENED -- pulled to 81 when Dave took his mail off in the road where the crossbowman could watch. Came north TO BUY, on a rumour. Asked Osk who to speak to about next summer's wool	sessions/day-032.md
+32	2	wethersby	wend,dave	negotiation		-	WEND TAKES THE FACTORSHIP. Her price is the succession document: two years, then she spends it on the town as she sees fit	articles.md
+33	1	marrows	marrow,sim,dave	report		-	Dave quoted Sim to his father word for word. Marrow asked the boy directly for the first time in two years and got his "Aye." THE THREAD CLOSES	sessions/day-033.md
+34	1	wethersby	ancel,wend,dave	negotiation	127	-	*** THE ANSWER TO ANCEL'S QUESTION, TWO DAYS AFTER HE ASKED IT. *** He cannot buy the clip and says so, then names FOUR BUYERS who do not know Wethersby exists -- two raw-wool men east of Marchford, a FULLER WHO TAKES CLOTH, and a factor's man. A penny in the pound for three years; he asked two and Wend haggled him up	sessions/day-034.md
+35	1	wethersby	marrow,ancel	first_contact	114	-	Brokered by Wend. Marrow made him say the four names twice, then where they were and what they bought. Marrow bought him his dinner	sessions/day-034.md
+35	2	wethersby	gyll,ottir,coll,hew	payment		d6=1	GYLL PAYS RESTITUTION TO THE ELEVEN, 4 gp 10 sp apiece, selling the grey mare to cover the shortfall, SAID ALOUD IN THE SQUARE with Ottir witnessing	sessions/day-034.md
+39	1	wethersby	sarn,dave	counsel	113;42;77;55	-	The leg mends clean and he will not limp. HE CANNOT READ AND HE ASKED TO LEARN	sessions/day-039.md
+39	2	wethersby	wend,dave	negotiation	59;101	d6=1	The buyer of last resort agreed -- 8 gp the tod, cap 500 the season. She needs a CLERK and DOES NOT KNOW SARN HAS BEEN KEEPING THE TALLY	sessions/day-039.md
+40	1	wethersby	ottir,dave	report	81;87;93	-	THE SURETY IS SATISFIED. Wace has written: the account of the hundred at Draycot on day 52. Ottir asked the one hard question about Quasqueton -- whose is it?	sessions/day-040.md
+40	2	wethersby	halm,dave	report	69;60	-	*** HALM'S STANDING WANT, asked once and never again: "One load's a load. What I'd want, someday, is a RUN. Osk's got a run. He knows where he is on a Tuesday." ***	sessions/day-040.md
+41	1	draycot	perrin,ottir,yrtone	first_contact	92;98	-	Met riding north. Usher of the hall, buying a bed for a spring wedding. Gave away WHY WACE WROTE, for nothing, and it defused everything	sessions/day-041.md
+41	2	draycot	cuddy,dave	first_contact	102	-	The chest gets read. He has the run of it, nobody minds an almoner reading, and ten days	sessions/day-041.md
+51	1	draycot	cuddy,dave	counsel	53	d6=3;d6=5	THE SKELETONS TOLD AND HOLY WATER REFUSED. Cuddy is a cleric of the 3rd; DMG p.114 requires the 5th, and his chapel has no font	sessions/day-051.md
+51	2	draycot	cuddy,dave	counsel	5	d6=1;d6=2	THE DWARF IN IRONS, told second and should have been first. "I have never once had to be told about a man forty years late." His one flat instruction: BRING HIM OUT	sessions/day-051.md
+51	3	draycot	cuddy,dave	counsel	74	d6=4;d6=5	THE CRAG. The title cannot be settled from that chest -- but a grant NAMING ROGAHN AND ZELLIGAR, to hold of the lord FOR THE KEEPING OF THE NORTH WAY. Counsel: do not raise the title, ask for the LICENCE	sessions/day-051.md
+52	1	draycot	wace,ottir,dave	negotiation	54;67	d6=5;d6=6	THE PETITION. The licence GRANTED AS ASKED and backdated to Michaelmas last. He never read the perambulation -- d6=4, vindicating Cuddy completely	sessions/day-052.md
+54	1	wethersby	wend,dave	counsel	88	d6=5	SHE FINDS THE HOLE NOBODY ELSE SAW: the licence says stone and timber, and it is not a bill of sale for a dead wizard's balances	sessions/day-054.md
+54	2	wethersby	wend,dave	conflict	41	d6=2	THE DOUBLE BIND, CALLED OUT AND DISSOLVED. "Let me spend it" read as asking permission that was not the party's to give. The rule that came out of it is about POWER, NOT PHRASING	sessions/day-054.md
+54	3	wethersby	ista,dave	grievance	21	-	THE MESSAGE TO ISTA WENT BADLY	sessions/day-054.md
+55	1	wethersby	toller,dave	counsel	76;49	d6=1;d6=6	He finds the SAME hole four hours later -- corroboration, not coincidence. AND HE FINDS THE TRICK: ask for nothing substantive, then ask for A RECEIPT, because a receipt recites what the letter said	sessions/day-055.md
+59	1	marchford	trebb,dave	first_contact	95	-	"Why's the glass smoked? Somebody paid extra so this could sit in the dark." THE VIAL IS REALGAR -- a pigment, poisonous, degrades in light. He opened it himself in shade with a wet rag, everyone else eight feet back	sessions/day-059.md
+59	2	marchford	limner,dave	payment		3d6=13	The realgar sold for 35 gp	sessions/day-059.md
+59	3	marchford	trebb,dave	conflict	43;41;5	d6=6	THE DYE AT COST, AND THE FIRST FINDING RUNS AGAINST THE PARTY. At cost is a discount and a discount is a gift wearing a trade's clothes -- and then Dave put a FIGURE on it and it went to 5. "Thirty years telling people what's in a jar for nothing and nobody's ever costed it"	sessions/day-059.md
+59	4	marchford	ossery,hask	negotiation	56;52	d6=1;3d6=14	HASK SELLS THE SMALL GOODS AND DOES NOT UNDERSELL, holding his number through two silences. 160 gp. THE LINE CLOSES: 573 on 357	sessions/day-059.md
+59	5	marchford	doule,dave	first_contact	84	d6=3;d6=2	FATHER DOULE IS FIFTH LEVEL -- Cuddy's lead was good -- AND MARCHFORD HAS NO FONT. "I can make it. I have never made it." The priest and the vessel are in different towns	sessions/day-059.md
+60	1	fenns	dill,rowe,dave,hask	first_contact		-	Dill is the missing link in the party's own cloth chain, and he is a DRESSER, not a labourer	sessions/day-060.md
+62	1	lyde	lyde,dave	negotiation	67	d6=5	He holds to his terms exactly. 31 gp at his door; 18 owing in three quarterly instalments	sessions/day-062.md
+65	1	wethersby	toller,dave	payment	62	d6=5	PAID ~250 GP, his full valuation, the moment he was shown Wace's receipt. His day-42 condition DISCHARGED after twenty-three days. Over a thousand gold for the first time	sessions/day-065.md
+65	2	wethersby	wend,dave	counsel	88;98	d6=1;d6=6	THE LOOM IS NARROW -- and she turns it round: "It isn't one weaver too many. IT'S ONE LOOM TOO FEW." She REFUSES THE CARTS as a gift and proposes letting them at the wear	sessions/day-065.md
+71	1	wethersby	holt,hask,dave	negotiation		d6=5;d6=6	HOLT NAMES THE CASK OFF THE BUNG without tapping it -- strong stock ale, thirty years and not turned. 58 gp: 30 in coin and 28 in his own hand, written unasked	calendar.md
+72	1	wethersby	wend,sarn,ottir,dave	promise		-	THE STRUCTURE SIGNED, articles.md art. 13. 300 gp wage reserve, cash, locked, NO exception clause. Fair copy in SARN'S hand, witnessed by OTTIR	sessions/day-072.md
+72	2	wethersby	nan,wend,dave	report		d6=5	*** NAN CAN GRADE WOOL. *** Nine years on Rell's ground, and she knows WHOSE -- Ellery honest, two past Wettleford roll theirs wet, Marrow's the best in the hundred, and a widow at Hobb's Lane with three years of it in a loft. "Nobody has ever asked her a single question about wool. Including me"	sessions/day-072.md
+76	1	draycot	cuddy,dave	fact		d6=1	CUDDY IS FRAIL. The wet in his chest, seventy-odd, November. Not dying, and it did not show in September	sessions/day-076.md
+76	2	draycot	cuddy,dave	report		d6=6;d6=5	*** A MAN HAS BEEN SENT ABOUT THE ANIMATED DEAD. *** His house did not write to ask questions -- it wrote to say a man is coming. "In thirty years I have never once had a letter that said somebody was coming"	sessions/day-076.md
+76	3	draycot	cuddy,dellie	teaching		d6=4	He asks Dellie to learn the words for the dwarf -- "not today, in case" -- and teaches her for an hour at the table. "There ought to be two of us who can and not one"	sessions/day-076.md
+76	4	wethersby	ottir,dave	counsel		d6=2;d6=4	THE ROOF. He does not know and will not guess -- and reframes it: "Whose is it is the wrong end of it. They ask WHO MENDED IT LAST, and who paid the man." PERRIN STRUCK OFF because he refers upward. He will not carry it himself	sessions/day-076.md
+77	1	wethersby	wend,dave	counsel		d6=2;d6=2;d6=1;d6=3	NO AMOUNTS, and she owns it: "You asked me for a list and I gave you a list. A LIST ISN'T AN ORDER." It does not fit one cart. The loom goes to BERN. One addition: flax seed	sessions/day-077.md
+77	2	wethersby	cuddy,wend	promise		-	The Draycot almonry account: 10 gp a year on Wend's books IN HIS NAME, a sum he DRAWS and renders. Not a purse across a table	articles.md
+77	3	wethersby	wend,dave	counsel		d6=6;d6=4;d6=2;d6=4	*** THE CARRIAGE GAP. *** She had already found it and had not raised it. Carriage follows WEIGHT: the iron was 14% of the Ludbury load's value and 51% of its weight, so "at cost" was 50-70 gp BELOW cost. On Osk she has NO VIEW AT ALL and says so, naming Halm and the trap in the same breath: ask what is DONE	sessions/day-077.md

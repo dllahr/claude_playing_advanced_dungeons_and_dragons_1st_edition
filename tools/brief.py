@@ -40,6 +40,7 @@ from tsvlog import read_tsv                                     # noqa: E402
 import loops as loopmod                                         # noqa: E402
 import ledger as ledgermod                                      # noqa: E402
 import inventory as invmod                                      # noqa: E402
+import entities as entmod                                       # noqa: E402
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
@@ -171,6 +172,12 @@ def brief(day=None, touching=None):
         parts.append(RULE + '\nLOOPS TOUCHING %s\n%s'
                      % (touching, loopmod.report(touching=touching,
                                                  day=today_n)))
+        for name in [n.strip() for n in touching.split(',') if n.strip()]:
+            parts.append(RULE + '\n' + entmod.who(name))
+    bad = entmod.check()
+    if bad:
+        parts.append(RULE + '\nENTITIES\n'
+                     + '\n'.join('%-5s %s' % x for x in bad))
     parts.append(RULE + '\nSTALE?\n' + stale_report())
     return '\n\n'.join(parts)
 

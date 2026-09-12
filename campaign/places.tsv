@@ -1,0 +1,38 @@
+# PLACES -- REFERENCE. Identity and the distances between them.
+#
+# *** THIS FILE KILLS TWO LIVE ERRORS. ***
+#
+# 1. WETHERBY / WETHERSBY. Both spellings are in this repository, some of them
+#    typed by the player, and until now nothing reconciled them. `aliases` makes
+#    them one town. A validator can then refuse a row naming a place that does
+#    not exist, which a fuzzy match never could.
+#
+# 2. THE DISTANCE TABLE LIVED IN `calendar.md` PROSE AND WAS MISQUOTED. The DM
+#    twice described the cart as "a day behind at Fenn's" when Ede's gate is
+#    EIGHT MILES from Fenn's yard -- a couple of hours, not a day. A cart out of
+#    Fenn's is at Ede's door before dinner.
+#
+# `days_from_wethersby` is BY CART unless the note says otherwise, because a
+# cart is what the party moves goods with. Riding times are in the note where
+# they differ and matter -- Draycot is a long day's RIDE and two days' walk, and
+# that difference has already decided a scene.
+#
+# Blank means not established. Blank is honest; a guessed distance would be
+# quoted back as a fact, which is how the Fenn's/Ede's error happened.
+id	name	aliases	kind	parent	days_from_wethersby	notes
+wethersby	Wethersby	Wetherby	town	north_hundred	0	Market town. Market is WEEKLY -- day 37 was one, so 37/44/51/58/65/72/79
+north_hundred	the north hundred		hundred		0	Ottir's. The party's own ground
+crag_turning	the crag turning		landmark	north_hundred	1	On the north road. One day's walk, call it fifteen to twenty miles laden. The outer limit of the day's-walk patrol circuit
+basecamp	Coll's basecamp		camp	crag_turning	1	HALF AN HOUR from the road and half an hour from the cave mouth. Graded cart-passable trail, cleared flat, fire pit, latrine downwind, a boxed spring that runs clear, and a turf-and-pole lean-to that sleeps eight dry. Nobody asked them to build the spring or the lean-to
+cave_mouth	the cave entrance		landmark	crag_turning	1	*** A CART NEVER REACHES THE DOOR. *** Half an hour of UNMADE OUTCROP above the basecamp. The DM described the graded trail as reaching the cave door and it does not -- it reaches halfway, and Halm's objection to the rope plan collapsed with it
+quasqueton	Quasqueton		dungeon	cave_mouth	1	A day and an hour from Wethersby. The route in and out is the alcove-pair-2 one-way slab at (17,13,V) -- NEVER the x=16 corridor between y=13 and y=19 under the magic mouths
+draycot	Draycot		hall		1	Sir Aymer's hall, south-west, on the road the party first came in by. A LONG DAY'S RIDE; the walk is two days
+marrows	Marrow's holding		holding	north_hundred		The biggest flock in the hundred and a stone barn with two years of fleece
+fenns	Fenn's		holding		4	By cart. Flax
+edes	Ede's cottage		holding	fenns	4	*** EIGHT MILES CROSS-COUNTRY FROM FENN'S -- A COUPLE OF HOURS, NOT A DAY. *** Player-caught 2026-09-08 after the DM said it twice. A cart out of Fenn's is at Ede's door before dinner
+lyde	Lyde		village			A DAY OFF THE ROAD EACH WAY from the southern route. He will not move, so it is a ride and a talk, not carting
+marchford	Marchford		town		3	Three days by cart, the far end of Osk's run. A bridge town; the traffic thickens in the last day and a half. Osk hands off to other carriers here and beyond it he does not know where the load goes
+ludbury	Ludbury		city		5	Where the wool sold, 1,200 gp on day 25-27. Gate duty on goods brought in. PELL'S ANSWER TO OSK'S DAY-6 QUESTION: "Ludbury. That's the whole mystery"
+wraye	Wraye		town	ludbury		THREE DAYS EAST OF LUDBURY. It has a LIBRARY -- the only lead on the plain metal ring
+hobbs_lane	Hobb's Lane		hamlet	north_hundred		A widow there has three years of wool in a loft and would take a fair price off anybody who asked her properly. Nan's word: nobody has ever asked her a single question about wool
+wettleford	Wettleford		hamlet			Two holdings past it roll their wool wet. Nan's word

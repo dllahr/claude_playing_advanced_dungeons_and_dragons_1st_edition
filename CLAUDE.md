@@ -404,14 +404,22 @@ DM to tell the player their spikes were in a door they had already recovered the
 - `campaign/district.md` — the SETTING, built at the table on dice because B1
   supplies a crag and a dungeon and nothing else. The wool staple moved; every
   acre is held; the layoffs are upstream of the robberies. Not DM-side secret
-- `campaign/npcs.md` — the named NPCs and, importantly, **Dave's standing surety
-  for the four ex-bandits**. Ten named people arrived in two days of play; a
-  cleared context loses them all at once. Nothing in it is DM-side secret
+- **`campaign/people.tsv`** · **`campaign/places.tsv`** — **REFERENCE, identity only.**
+  Aliases resolve *Wetherby*→*Wethersby* and *"Rell's brother"*→*Gyll*. **No status or
+  condition columns**: those change, so they are events with dates
+- **`campaign/interactions.tsv`** — **who was in the room and what happened.** The join
+  table. Social events used to live only in prose, which is why misremembering one was
+  the largest error class here
+- **`campaign/sessions/day-NNN.md`** — **the session write-ups, ARCHIVED.** Verbatim and
+  complete. **Read for pleasure and for quotes, never to answer a question**
+- `campaign/npcs.md` — now the **roster and how people are run**: Dave's standing
+  surety, the ex-bandits' sheet, and the loyalty-adjustment table. Nothing DM-side
 
 | tool | what it computes fresh |
 |---|---|
 | **`tools/brief.py`** | **THE SESSION BRIEFING. RUN IT FIRST, EVERY SESSION AND AFTER EVERY COMPACT.** Day · who is available · hp · xp · oil · gear left in the dungeon · position · clock · **open loops** · what is stale. Every figure computed by the tool that owns it, so nothing in it can be 38 in-game days out of date the way `CHECKLIST` §11 was |
 | **`tools/log.py`** | **THE ONLY WRITE PATH for money, days and availability. It VALIDATES, then appends** — and refuses a money row that names no asset, an asset id not in `assets.tsv`, a zero delta, a campaign day running backwards, or an unknown character. Validate on write, rebuild on read |
+| **`tools/entities.py`** | **`who <name>` is the query this campaign never had** — every scene a person was in, with a day, a reaction and a citation. `check` refuses any name that does not resolve, so *Wetherby*/*Wethersby* and *"Rell's brother"*/*Gyll* are each one thing. **Run `who` before narrating anybody's past** |
 | **`tools/encounter.py`** | **the LIVE FIGHT**, computed from `campaign/encounter.tsv` — round, initiative, **who has declared**, **who HELD**, and monster hit points (`--hidden`; never shown otherwise). All of this used to live only in the DM's own narration, re-read every turn out of his own previous messages |
 | **`tools/inventory.py`** | **what the party OWNS**, computed from `campaign/inventory_log.tsv`. **One row per (asset, condition), with an explicit `unit`** — so `~2.5 IRON + 8 STANDARD` is two rows in person-weeks instead of one cell that read as the number 2. **`carried` derives spikes as owned − emplaced**, so the two can never drift |
 | **`tools/ledger.py`** | **the purse, computed from `campaign/money.tsv`** — never stored, never quoted from a cell. `check` is the double-entry audit: every movement names an asset, every *good* has an inventory row, and the computed purse is compared against the `inventory.tsv` cell rather than trusting it |

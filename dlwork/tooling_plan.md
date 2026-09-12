@@ -591,15 +591,65 @@ gate being written.** Same hole, other door.
 
 **266 tests pass** (185 → 198 → 219 → 239 → 252 → 266). **Phase 3 is complete.**
 
-### Phase 4 — canonical entities and the prose split · *kills class D, the largest*
-1. `people.tsv`, `places.tsv`, `assets.tsv` — **identity only**.
-2. **`npcs.md`'s ~3,000 lines of write-ups → `sessions/day-NNN.md`. ARCHIVED, NEVER
-   DELETED.** Read for pleasure and for quotes, never to answer a question. **The
-   prose is the best thing in this repo.**
-3. `interactions.tsv`, seeded from those write-ups.
-4. `test_entities_resolve.py`.
+### Phase 4 — canonical entities and the prose split · ✅ BUILT 2026-09-11 · *kills class D, the largest*
 
-**The disruptive phase. One sitting, no play in it.**
+**`campaign/people.tsv`, `campaign/places.tsv`, `campaign/interactions.tsv`,
+`tools/entities.py`, and `campaign/sessions/` — 24 files, days 32 to 77.**
+
+#### The split
+
+**3,075 lines of session write-ups moved out of `npcs.md` into
+`campaign/sessions/day-NNN.md`, verbatim and complete**; 470 lines of reference
+stayed. Every session file opens with a banner saying **ARCHIVE — read for
+pleasure and for quotes, NEVER to answer a question**, and a test enforces it.
+`npcs.md`'s own header now points at the tools instead of at itself.
+
+> **The prose is the best thing in this repository. It is archived, not
+> deleted.** What changed is that it is no longer where an answer comes from.
+
+#### The query the campaign never had
+
+```
+$ python tools/entities.py who Ancel
+Ancel  (npc)   first appears day 32
+3 scene(s):
+  day 32   first_contact  reaction 11    BADLY FRIGHTENED -- pulled to 81 when Dave took his mail off
+  day 34   negotiation    reaction 127   *** THE ANSWER TO ANCEL'S QUESTION, TWO DAYS AFTER HE ASKED IT ***
+  day 35   first_contact  reaction 114   Brokered by Wend. Marrow bought him his dinner
+```
+
+**That is the 43-day error, answered in one command.** The prose said
+*"Unanswered. He will not sit in the square forever"* until day 77.
+
+#### Identity is reference; condition is an event
+
+`people.tsv` holds only what is stable — id, name, aliases, kind, first day —
+and **a test forbids a `status`, `condition` or `reaction` column.** *"Cuddy is
+frail"* is not a property of Cuddy; it became true on day 76 and was rolled for,
+so it is a scene with `kind=fact`. **Filing that sort of thing as a property is
+precisely how the Ancel line outlived its answer.**
+
+#### And a name must RESOLVE
+
+| | |
+|---|---|
+| **Wetherby / Wethersby** | both are in this repo, some typed by the player → one place |
+| **"Rell's brother" / Gyll** | one man whose name nobody used for two years → one person |
+| **Father Cuddy / Cuddy**, Reeve Ottir, Master Wace, Father Doule | titles resolve |
+
+`entities.py check` refuses a scene naming somebody who does not exist **and
+suggests the near miss in both directions**. It also enforces that `day:seq` is
+unique, because `money.tsv` and `loops.tsv` cite scenes as `"77:3"` and that must
+mean exactly one thing.
+
+#### ⚠ And the phase-3a test caught a defect in a file written ten minutes earlier
+
+`test_no_campaign_log_has_an_over_wide_row` failed on **`places.tsv:31`** — an
+extra empty field in the `fenns` row, which would have shifted `days_from_wethersby`
+into `parent` for exactly the holding whose distance had already been misquoted
+twice. **The mechanism catching its own author is the strongest evidence it works.**
+
+**280 tests pass** (185 → 198 → 219 → 239 → 252 → 266 → 280).
 
 ### Phase 5 — the view, the keys, validate-on-write
 `build_campaign_db.py` with the schema above · `build_meta` watermarks · `log.py`
