@@ -38,19 +38,36 @@ import os
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from tsvlog import read_tsv                                      # noqa: E402
 import entities as entmod                                        # noqa: E402
 
-MILES_PER_DAY = 18          # attested: the crag turning, one day, 15-20 laden
+MILE = 5280
 
-# A DAY IS NOT A DISTANCE, and `places.tsv` carries `day_mode` beside every
-# figure for the same reason every quantity in this campaign carries its unit.
-# Draycot is "a long day's RIDE; the walk is two days" -- and checking that 1
-# against cart speed was the first thing `check` caught, in this file's author.
-PACE = {'cart': 18, 'ride': 30, 'walk': 14, '': 18}
-TOLERANCE = 0.45            # a day's travel, either way, before `check` warns
+# FROM THE BOOK, NOT INVENTED: rules/overland.md, DMG p.58. An earlier draft of
+# this file used a DM-reasoned 18 miles per CART-day, taken off "fifteen to
+# twenty miles laden" -- which is a WALKING figure. The DMG gives a cart 25 on a
+# road. Every travel TIME in the narrative is unchanged; only the mileage moved,
+# and it moved onto the book.
+PACE = {'cart': 25, 'wagon': 25, 'ride': 40, 'ride_light': 60,
+        'walk': 20, 'walk_rough': 10, '': 25}
 
-# The roads, as sequences of place ids. Travel follows a road where one exists,
-# which is why a straight-line distance is a FLOOR and never a quote.
+# A DISTANCE IS FIXED. A TIME IS NOT -- load, weather, road and beast all move
+# it, which is why the uncertainty that used to sit on the map now sits here,
+# where it is honest.
+SPREAD = 0.2
+
+# Attested PAIRWISE claims. `attested_days` on a row is a radius from Wethersby
+# and only works where the road runs roughly straight; Wraye is "three days EAST
+# OF LUDBURY" and its eight days from Wethersby go south and THEN east, so a
+# straight line cuts the corner and the check fired. The claim belongs on the
+# leg. (a, b, days, mode)
+LEGS = (('marchford', 'ludbury', 2, 'cart'),
+        ('ludbury', 'wraye', 3, 'cart'),
+        ('marchford', 'fenns', 1, 'cart'))
+
+KNOWN, VAGUE, HEARD, UNKNOWN = 'known', 'vague', 'heard', 'unknown'
+LEVELS = (KNOWN, VAGUE, HEARD, UNKNOWN)
+
 ROADS = {
     'the north road': ['crag_turning', 'wethersby', 'marchford', 'ludbury'],
     'the Draycot road': ['wethersby', 'draycot'],
@@ -61,26 +78,84 @@ GLYPH = {'town': 'O', 'city': '@', 'hall': 'H', 'village': 'v',
          'holding': 'f', 'hamlet': '.', 'camp': 'c', 'landmark': '^',
          'dungeon': '*', 'region': ' ', 'hundred': ' '}
 
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+KNOW = os.path.join(ROOT, 'campaign', 'knowledge.tsv')
+FRAMES = os.path.join(ROOT, 'campaign', 'frames.tsv')
+
+
+def knowledge(path=None):
+    """{place: row} -- the LATEST row per place. A place with none is unknown."""
+    out = {}
+    for r in read_tsv(path or KNOW, missing_ok=True):
+        if r.get('place'):
+            out[r['place']] = r
+    return out
+
+
+def level_of(pid, kn=None):
+    kn = kn if kn is not None else knowledge()
+    return (kn.get(pid, {}).get('level') or UNKNOWN).strip() or UNKNOWN
+
+
+def frames(path=None):
+    return {r['id']: r for r in read_tsv(path or FRAMES, missing_ok=True)
+            if r.get('id')}
+
+
+def to_overland(frame_id, cell_x, cell_y, fr=None):
+    """A local grid square -> feet in the world frame. THE ONE CONVERSION."""
+    fr = fr if fr is not None else frames()
+    f = fr[frame_id]
+    u = float(f['unit_ft'])
+    dx, dy = cell_x * u, cell_y * u
+    rot = math.radians(float(f.get('rotation_deg') or 0))
+    if rot:
+        dx, dy = (dx * math.cos(rot) - dy * math.sin(rot),
+                  dx * math.sin(rot) + dy * math.cos(rot))
+    return int(round(float(f['origin_x_ft']) + dx)), \
+           int(round(float(f['origin_y_ft']) + dy))
+
 
 def points():
-    """{id: (x, y, row)} for every place that has coordinates."""
+    """{id: (x_ft, y_ft, row)} for every place with coordinates. EXACT."""
     out = {}
     for pid, r in entmod.places().items():
         try:
-            out[pid] = (float(r['x']), float(r['y']), r)
+            out[pid] = (float(r['x_ft']), float(r['y_ft']), r)
         except (KeyError, ValueError):
             continue
     return out
 
 
-def miles(a, b, pts=None):
+def feet(a, b, pts=None):
     pts = pts if pts is not None else points()
     (ax, ay, _), (bx, by, _) = pts[a], pts[b]
     return math.hypot(bx - ax, by - ay)
 
 
+def miles(a, b, pts=None):
+    return feet(a, b, pts) / MILE
+
+
 def days(m, mode='cart'):
-    return m / PACE.get(mode, MILES_PER_DAY)
+    """Mid-estimate in days for `m` MILES."""
+    return m / PACE.get(mode, PACE['cart'])
+
+
+def days_range(m, mode='cart'):
+    """(low, high). A distance is fixed; a TIME is not, and this says so."""
+    mid = days(m, mode)
+    return mid * (1 - SPREAD), mid * (1 + SPREAD)
+
+
+def how_long(m):
+    """Every ordinary way of covering `m` miles, as a range of days."""
+    out = []
+    for mode, label in (('cart', 'by cart'), ('ride', 'at a medium ride'),
+                        ('walk', 'walking laden'), ('walk_rough', 'off the road')):
+        lo, hi = days_range(m, mode)
+        out.append('%-18s %4.1f - %.1f days' % (label, lo, hi))
+    return out
 
 
 def bearing(a, b, pts=None):
@@ -103,35 +178,43 @@ def road_between(a, b):
     return None
 
 
-def render(scale=2, pts=None):
-    """A schematic, and a legend under it.
+def render(scale_mi=4, pts=None, true=False, kn=None):
+    """The PARTY'S map by default. `true` is the DM's.
 
-    Labels are NOT written onto the grid. The first attempt did and they
-    collided -- Wettleford overwrote Marrow's, both overwrote WETHERSBY, and the
-    origin of the whole map vanished under somebody's holding. A legend keyed by
-    letter cannot do that, and it has room for the provenance besides.
+    *** THE DEFAULT MATTERS AND IT IS NOT DECORATION. *** A map is the easiest
+    possible way to leak a position. If the party has never been to Wraye their
+    map must not carry a dot at its exact coordinates -- CHECKLIST section 8 --
+    so a `heard` place is a name in the margin and nothing else.
     """
     pts = pts if pts is not None else points()
+    kn = kn if kn is not None else knowledge()
+    scale = scale_mi * MILE
     real = {k: v for k, v in pts.items()
             if (v[2].get('kind') or '') not in ('region', 'hundred')}
+    if not true:
+        real = {k: v for k, v in real.items()
+                if level_of(k, kn) in (KNOWN, VAGUE)}
+    if not real:
+        return 'the party has been nowhere yet'
+
     xs = [v[0] for v in real.values()]
     ys = [v[1] for v in real.values()]
     x0, x1 = min(xs) - scale * 2, max(xs) + scale * 2
     y0, y1 = min(ys) - scale * 2, max(ys) + scale * 2
-    rowmiles = scale * 2                    # characters are ~twice as tall
+    rowft = scale * 2
     cols = int((x1 - x0) / scale) + 1
-    rows = int((y1 - y0) / rowmiles) + 1
+    rows = int((y1 - y0) / rowft) + 1
     grid = [[' '] * cols for _ in range(rows)]
 
     def cell(x, y):
         return (max(0, min(cols - 1, int(round((x - x0) / scale)))),
-                max(0, min(rows - 1, rows - 1 - int(round((y - y0) / rowmiles)))))
+                max(0, min(rows - 1, rows - 1 - int(round((y - y0) / rowft)))))
 
     for stops in ROADS.values():
-        for a, b in zip(stops, stops[1:]):
-            if a not in pts or b not in pts:
+        for a_, b_ in zip(stops, stops[1:]):
+            if a_ not in real or b_ not in real:
                 continue
-            (ax, ay), (bx, by) = cell(*pts[a][:2]), cell(*pts[b][:2])
+            (ax, ay), (bx, by) = cell(*pts[a_][:2]), cell(*pts[b_][:2])
             steps = max(abs(bx - ax), abs(by - ay)) or 1
             for i in range(steps + 1):
                 cx = ax + int(round((bx - ax) * i / steps))
@@ -140,118 +223,168 @@ def render(scale=2, pts=None):
                     grid[cy][cx] = ('|' if abs(bx - ax) < abs(by - ay)
                                     else ('-' if by == ay else '\\'))
 
-    # North first, so a collision keeps the northern place and the legend says
-    # which two shared a cell rather than silently losing one.
     keys, shared = {}, []
     for n, (pid, (x, y, r)) in enumerate(
             sorted(real.items(), key=lambda kv: (-kv[1][1], kv[1][0]))):
-        letter = chr(ord('a') + n) if n < 26 else '+'
-        keys[pid] = letter
+        keys[pid] = chr(ord('a') + n) if n < 26 else '+'
         cx, cy = cell(x, y)
         if grid[cy][cx] not in ' -|\\':
             shared.append(pid)
         else:
-            grid[cy][cx] = letter
+            grid[cy][cx] = keys[pid]
 
-    out = ['THE HUNDRED AND THE ROAD SOUTH -- computed from campaign/places.tsv',
-           'N up, E right. %d miles a column, %d a row. Wethersby is the origin.'
-           % (scale, rowmiles), '']
+    out = ['THE %s MAP -- %d miles a column, %d a row. Wethersby is the origin.'
+           % ('DM\'S TRUE' if true else "PARTY'S", scale_mi, scale_mi * 2), '']
     out += ['   ' + ''.join(r).rstrip() for r in grid]
-    out += ['', '%-4s %-22s %-9s %6s %6s  %-11s %s'
-            % ('key', 'place', 'kind', 'x', 'y', 'bearing', 'from Wethersby')]
+    out += ['', '%-4s %-22s %-9s %-7s %8s  %-11s %s'
+            % ('key', 'place', 'kind', 'they', 'miles', 'bearing', 'from Wethersby')]
     for pid, (x, y, r) in sorted(real.items(), key=lambda kv: (-kv[1][1],
                                                               kv[1][0])):
         m = miles('wethersby', pid, pts)
-        mode = (r.get('day_mode') or 'cart').strip() or 'cart'
-        mark = '' if r.get('fix') == 'attested' else '  <- %s' % r.get('fix')
-        out.append('%-4s %-22s %-9s %6.0f %6.0f  %-11s %3.0f mi, %.1f d by %s%s'
-                   % (keys[pid], r['name'], r.get('kind', ''), x, y,
+        lv = level_of(pid, kn)
+        note = ''
+        if lv == VAGUE:
+            p_ft = (kn.get(pid, {}).get('precision_ft') or '').strip()
+            if p_ft:
+                v = float(p_ft)
+                note = ('  ~ within %s' % ('%g mi' % (v / MILE) if v >= MILE
+                                           else '{:,} ft'.format(int(v))))
+            else:
+                note = '  ~'
+        if true and r.get('fix') != 'attested':
+            note += '   <- %s' % r.get('fix')
+        out.append('%-4s %-22s %-9s %-7s %8.0f  %-11s %.1f d by cart%s'
+                   % (keys[pid], r['name'], r.get('kind', ''), lv, m,
                       bearing('wethersby', pid, pts) if pid != 'wethersby'
-                      else '--', m, m / PACE[mode], mode, mark))
+                      else '--', days(m), note))
+
+    heard = sorted(k for k in pts
+                   if level_of(k, kn) == HEARD and k in entmod.places())
+    if heard and not true:
+        out += ['', 'HEARD OF, AND NOT PLACED -- they could not put these on a '
+                    'map and this tool will not pretend otherwise:']
+        for k in heard:
+            out.append('     %-20s %s' % (entmod.places()[k]['name'],
+                                          (kn[k].get('how') or '')[:70]))
     if shared:
-        out.append('')
-        out.append('sharing a cell at this scale: %s'
-                   % ', '.join(real[p][2]['name'] for p in shared))
-    out += ['',
-            'ROADS: ' + ' | '.join('%s = %s' % (n, ' - '.join(
-                pts[s][2]['name'] for s in stops if s in pts))
-                for n, stops in ROADS.items()),
-            '',
-            '"<- call" means the record establishes NEITHER bearing nor '
-            'distance and the position is a DM call. "<- part" means one of the '
-            'two is attested. A call is not canon: if play fixes it, play wins.']
+        out += ['', 'sharing a cell at this scale: %s'
+                % ', '.join(real[p][2]['name'] for p in shared)]
+    if true:
+        out += ['', '*** DM MAP. Positions are EXACT; "<- call" means the record '
+                    'establishes neither bearing nor distance and the position '
+                    'is mine. A call is not canon.']
+    else:
+        out += ['', 'The party\'s own map. "~" is a place they could not put a '
+                    'pin in and would not bet on. Run with --true for the world '
+                    'as it is.']
     return '\n'.join(out)
 
 
-def check(pts=None):
-    """[(severity, message)]. Does the grid still agree with the fiction?"""
+def check(pts=None, kn=None):
+    """[(severity, message)]. Does the model still match the fiction?"""
     pts = pts if pts is not None else points()
+    kn = kn if kn is not None else knowledge()
     out = []
     if 'wethersby' not in pts:
         return [('FAIL', 'Wethersby has no coordinates and it is the origin')]
 
     for pid, (x, y, r) in sorted(pts.items()):
-        stated = (r.get('days_from_wethersby') or '').strip()
+        stated = (r.get('attested_days') or '').strip()
         if not stated:
             continue
         try:
             want = float(stated)
         except ValueError:
             continue
-        mode = (r.get('day_mode') or 'cart').strip() or 'cart'
+        mode = (r.get('attested_mode') or 'cart').strip() or 'cart'
         if mode not in PACE:
-            out.append(('FAIL', '%s has day_mode %r; expected one of %s'
+            out.append(('FAIL', '%s has attested_mode %r; expected one of %s'
                         % (pid, mode, sorted(k for k in PACE if k))))
             continue
         m = miles('wethersby', pid, pts)
-        got = m / PACE[mode]
-        if abs(got - want) > TOLERANCE:
-            out.append(('FAIL', '%s: the record says %g day(s) BY %s from '
-                                'Wethersby, the grid gives %.2f (%.0f miles at '
-                                '%d miles a day). THE NARRATIVE WINS -- move '
-                                'the coordinates, or fix the mode.'
-                        % (pid, want, mode.upper(), got, m, PACE[mode])))
+        lo, hi = days_range(m, mode)
+        if not (lo - 0.3 <= want <= hi + 0.3):
+            out.append(('FAIL', '%s: the narrative says %g day(s) BY %s, the '
+                                'map gives %.1f-%.1f (%.0f miles at %d a day). '
+                                'THE NARRATIVE WINS -- move the coordinates.'
+                        % (pid, want, mode.upper(), lo, hi, m, PACE[mode])))
 
-    # Bearings the record states in words, checked against the grid.
+    for a_, b_, want, mode in LEGS:
+        if a_ in pts and b_ in pts:
+            m = miles(a_, b_, pts)
+            lo, hi = days_range(m, mode)
+            if not (lo - 0.3 <= want <= hi + 0.3):
+                out.append(('FAIL', '%s to %s: the narrative says %g day(s) by '
+                                    '%s, the map gives %.1f-%.1f (%.0f miles). '
+                                    'THE NARRATIVE WINS.'
+                            % (a_, b_, want, mode.upper(), lo, hi, m)))
+
     for pid, want in (('draycot', 'south-west'), ('marchford', 'south'),
                       ('ludbury', 'south'), ('crag_turning', 'north')):
-        if pid in pts:
-            got = bearing('wethersby', pid, pts)
-            if got != want:
-                out.append(('FAIL', '%s is %s of Wethersby on the grid; the '
-                                    'record says %s' % (pid, got, want)))
-    if 'wraye' in pts and 'ludbury' in pts:
-        got = bearing('ludbury', 'wraye', pts)
-        if got != 'east':
-            out.append(('FAIL', 'Wraye is %s of Ludbury on the grid; the '
-                                'record says three days EAST' % got))
+        if pid in pts and bearing('wethersby', pid, pts) != want:
+            out.append(('FAIL', '%s is %s of Wethersby on the map; the record '
+                                'says %s' % (pid, bearing('wethersby', pid,
+                                                          pts), want)))
+    if 'wraye' in pts and bearing('ludbury', 'wraye', pts) != 'east':
+        out.append(('FAIL', 'Wraye is %s of Ludbury; the record says three days '
+                            'EAST' % bearing('ludbury', 'wraye', pts)))
 
-    # The two distances the DM has already got wrong in play.
     if 'fenns' in pts and 'edes' in pts:
         m = miles('fenns', 'edes', pts)
-        if abs(m - 8) > 2.5:
-            out.append(('FAIL', "Fenn's to Ede's is %.1f miles on the grid. "
-                                'The record says EIGHT, "a couple of hours, '
-                                'not a day" -- and the DM said "a day" twice '
-                                'before the player caught it.' % m))
-    for pid in ('basecamp', 'cave_mouth'):
-        if pid in pts and 'crag_turning' in pts:
-            m = miles('crag_turning', pid, pts)
-            if m > 6:
-                out.append(('FAIL', '%s is %.1f miles off the road. Half an '
-                                    'hour to the basecamp and half an hour '
-                                    'again to the door, and A CART NEVER '
-                                    'REACHES THE DOOR.' % (pid, m)))
+        if abs(m - 8) > 1.5:
+            out.append(('FAIL', "Fenn's to Ede's is %.1f miles. The record says "
+                                'EIGHT, "a couple of hours, not a day" -- and '
+                                'the DM said "a day" TWICE before the player '
+                                'caught it.' % m))
+    if {'crag_turning', 'cave_mouth'} <= set(pts):
+        m = miles('crag_turning', 'cave_mouth', pts)
+        if m > 4:
+            out.append(('FAIL', 'the cave mouth is %.1f miles off the road. An '
+                                'hour, half of it unmade outcrop, AND A CART '
+                                'NEVER REACHES THE DOOR.' % m))
 
     for pid, (x, y, r) in sorted(pts.items()):
         if (r.get('fix') or '') not in ('attested', 'part', 'call', 'region'):
             out.append(('FAIL', '%s has fix=%r; it must say how the position '
                                 'was arrived at' % (pid, r.get('fix'))))
+
+    for pid, row in sorted(kn.items()):
+        if pid not in entmod.places():
+            out.append(('FAIL', 'knowledge.tsv names place %r, which is not in '
+                                'campaign/places.tsv' % pid))
+        lv = (row.get('level') or '').strip()
+        if lv not in LEVELS:
+            out.append(('FAIL', '%s has knowledge level %r; expected one of %s'
+                        % (pid, lv, list(LEVELS))))
+        if lv == VAGUE and not (row.get('precision_ft') or '').strip():
+            out.append(('WARN', '%s is VAGUE with no precision_ft -- how far '
+                                'out would they actually be?' % pid))
+        if lv != VAGUE and (row.get('precision_ft') or '').strip():
+            out.append(('WARN', '%s is %s but carries a precision_ft. Only '
+                                'VAGUE takes one: a known place is known and a '
+                                'heard-of one has no position at all'
+                        % (pid, lv)))
+
+    # The cross-check that catches the DM forgetting: somewhere they demonstrably
+    # spent a day, with nothing said about whether they now know where it is.
+    seen = {r['where'].strip() for r in read_tsv(
+        os.path.join(ROOT, 'campaign', 'days.tsv'), missing_ok=True)
+        if (r.get('where') or '').strip()}
+    for pid in sorted(seen & set(entmod.places()) - set(kn)):
+        out.append(('WARN', 'the party spent a day at %r (days.tsv) and '
+                            'knowledge.tsv says nothing about it' % pid))
+
+    fr = frames()
+    for fid, f in sorted(fr.items()):
+        if f.get('place') not in entmod.places():
+            out.append(('FAIL', 'frame %r sits at place %r, which does not '
+                                'exist' % (fid, f.get('place'))))
     return out
 
 
-def from_report(origin, pts=None):
+def from_report(origin, pts=None, kn=None):
     pts = pts if pts is not None else points()
+    kn = kn if kn is not None else knowledge()
     oid = entmod.resolve(origin, entmod.places())
     if oid is None or oid not in pts:
         return 'no place %r with coordinates' % origin
@@ -260,44 +393,56 @@ def from_report(origin, pts=None):
     for m, k in rows:
         r = pts[k][2]
         road = road_between(oid, k)
-        out.append('  %-22s %4.0f miles  %4.1f days  %-11s %s%s'
-                   % (r['name'], m, days(m), bearing(oid, k, pts),
+        lo, hi = days_range(m, 'cart')
+        out.append('  %-22s %4.0f mi  %4.1f-%.1f d by cart  %-11s %-15s %s'
+                   % (r['name'], m, lo, hi, bearing(oid, k, pts),
                       ('by %s' % road) if road else 'cross-country',
-                      '' if r.get('fix') == 'attested' else '   [%s]'
-                      % r.get('fix')))
-    out.append('')
-    out.append('Straight-line, so every figure is a FLOOR. Travel follows a '
-               'road where one exists.')
+                      level_of(k, kn)))
+    out += ['', 'Straight-line, so every distance is a FLOOR -- travel follows '
+                'a road where one exists. Times are RANGES because a distance '
+                'is fixed and a journey is not.']
     return '\n'.join(out)
 
 
 def build_parser():
     p = argparse.ArgumentParser(
-        prog='overland.py', description='The land above ground, on a grid.')
-    p.add_argument('--scale', type=int, default=4, help='miles per column')
+        prog='overland.py',
+        description='The land above ground. The PARTY\'S map by default.')
+    p.add_argument('--scale', type=int, default=8, help='miles per column')
+    p.add_argument('--true', action='store_true',
+                   help='THE DM\'S MAP. Shows places the party has never heard '
+                        'of. Not to be shown at the table')
     sub = p.add_subparsers(dest='cmd')
     h = sub.add_parser('how-far')
     h.add_argument('a')
     h.add_argument('b')
     f = sub.add_parser('from')
     f.add_argument('origin')
-    sub.add_parser('check', help='does the grid still agree with the fiction?')
+    w = sub.add_parser('where', help='a dungeon square, in the world frame')
+    w.add_argument('frame')
+    w.add_argument('x', type=int)
+    w.add_argument('y', type=int)
+    sub.add_parser('check', help='does the model still match the fiction?')
+    sub.add_parser('knows', help='what the party knows, and what it does not')
     return p
 
 
 def main(argv=None):
     a = build_parser().parse_args(argv)
-    pts = points()
+    pts, kn = points(), knowledge()
 
     if a.cmd == 'check':
-        problems = check(pts)
+        problems = check(pts, kn)
         for sev, msg in problems:
             print('%-5s %s' % (sev, msg))
         if not problems:
             att = sum(1 for v in pts.values() if v[2].get('fix') == 'attested')
-            print('overland OK: %d places, %d of them ATTESTED in both bearing '
-                  'and distance. Every stated travel time is reproduced by the '
-                  'grid to within %.2f of a day.' % (len(pts), att, TOLERANCE))
+            known = sum(1 for k in pts if level_of(k, kn) == KNOWN)
+            print('overland OK: %d places, %d ATTESTED in bearing and distance, '
+                  '%d KNOWN to the party.' % (len(pts), att, known))
+            print('  Every stated travel time is reproduced within %d%% of the '
+                  'DMG p.58 rates, and no place is drawn on the party map that '
+                  'they have not been to.' % int(SPREAD * 100))
         return 1 if any(s == 'FAIL' for s, _ in problems) else 0
 
     if a.cmd == 'how-far':
@@ -307,23 +452,50 @@ def main(argv=None):
             print('need two places with coordinates')
             return 1
         m = miles(ai, bi, pts)
-        road = road_between(ai, bi)
-        print('%s to %s: %.0f miles, about %.1f day(s) by cart, %s'
-              % (pts[ai][2]['name'], pts[bi][2]['name'], m, days(m),
+        print('%s to %s: %.0f miles (%s), %s'
+              % (pts[ai][2]['name'], pts[bi][2]['name'], m,
+                 '{:,} ft'.format(int(feet(ai, bi, pts))),
                  bearing(ai, bi, pts)))
+        road = road_between(ai, bi)
         print('  %s' % (('along %s' % road) if road else
                         'cross-country -- no road on record between them'))
+        for line in how_long(m):
+            print('    ' + line)
         for i in (ai, bi):
-            if pts[i][2].get('fix') != 'attested':
-                print('  [%s is a %s, not something the record establishes]'
-                      % (pts[i][2]['name'], pts[i][2].get('fix')))
+            lv = level_of(i, kn)
+            if lv != KNOWN:
+                print('  [the party\'s knowledge of %s is %s]'
+                      % (pts[i][2]['name'], lv.upper()))
+        return 0
+
+    if a.cmd == 'where':
+        try:
+            x, y = to_overland(a.frame, a.x, a.y)
+        except KeyError:
+            print('no frame %r. Known: %s'
+                  % (a.frame, ', '.join(sorted(frames()))), file=sys.stderr)
+            return 1
+        print('%s cell (%d,%d) is at (%s, %s) ft in the world frame'
+              % (a.frame, a.x, a.y, '{:,}'.format(x), '{:,}'.format(y)))
+        print('  = %.2f miles east and %.2f miles north of Wethersby'
+              % (x / MILE, y / MILE))
         return 0
 
     if a.cmd == 'from':
-        print(from_report(a.origin, pts))
+        print(from_report(a.origin, pts, kn))
         return 0
 
-    print(render(a.scale, pts))
+    if a.cmd == 'knows':
+        print('%-22s %-8s %s' % ('place', 'level', 'how'))
+        for pid in sorted(entmod.places()):
+            if (entmod.places()[pid].get('kind') or '') in ('region', 'hundred'):
+                continue
+            lv = level_of(pid, kn)
+            print('%-22s %-8s %s' % (entmod.places()[pid]['name'], lv,
+                                     (kn.get(pid, {}).get('how') or '')[:62]))
+        return 0
+
+    print(render(a.scale, pts, true=a.true, kn=kn))
     return 0
 
 

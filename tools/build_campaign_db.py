@@ -56,6 +56,7 @@ MAPDB = os.path.join(ROOT, 'mapdb', 'output', 'b1', 'b1.sqlite')
 
 # Every TSV that feeds the view, and therefore every watermark.
 SOURCES = ('people', 'places', 'assets', 'interactions', 'money',
+           'knowledge', 'frames',
            'inventory_log', 'loops', 'days', 'availability', 'hp_log',
            'encounters', 'rolls', 'clock', 'light', 'spells', 'party',
            'world_changes', 'encounter', 'characters')
@@ -137,7 +138,7 @@ CREATE TABLE build_meta (
 # They are queryable and joinable by hand without being modelled -- modelling
 # every one of them would be a second schema nobody re-checks against the file.
 RAW = ('encounters', 'rolls', 'clock', 'light', 'spells', 'party',
-       'world_changes', 'encounter', 'characters')
+       'world_changes', 'encounter', 'characters', 'knowledge', 'frames')
 
 
 def _path(name):

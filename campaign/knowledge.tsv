@@ -1,0 +1,47 @@
+# THE MAP THE PARTY HAS. Append-only; current knowledge is DERIVED.
+#
+# *** THE TRUE MAP IS campaign/places.tsv AND IT IS EXACT. THIS IS WHAT THEY
+# *** KNOW ABOUT IT, WHICH IS A DIFFERENT THING AND CHANGES.
+#
+# The campaign already draws this distinction one level down: `mapdb` separates
+# what a square IS from `cells.seen`, what the party has actually looked at, and
+# `campaign/journal.md` is explicitly "what the party thinks it knows, as
+# distinct from cells.seen". This is that, above ground.
+#
+# level:
+#   known    been there and attended. They could put it on a map and be right
+#   vague    *** they know roughly where it is and would not bet on it. ***
+#            Either hearsay with a direction, or somewhere they PASSED THROUGH
+#            IN A HURRY -- technically been, practically not. `precision_ft` is
+#            the radius they would actually stand behind
+#   heard    named, no position. Wraye is "three days east of Ludbury and it has
+#            a library" and THAT IS ALL THEY HAVE
+#   unknown  not in their world yet. The default; a place with no row is unknown
+#
+# A LOG and not a table, because knowledge is ACQUIRED ON A DAY BY AN EVENT --
+# the same reasoning that made loops.tsv a log. `known` versus `vague` is a
+# judgment and cannot be derived, so it is logged; but `overland.py check` will
+# flag any place the party demonstrably spent a day at with no row here, which
+# catches the DM forgetting.
+#
+# *** AND THIS IS A SPOILER SURFACE. *** `overland.py` renders the PARTY'S map by
+# default and needs --true for the other one. If they have never been to Wraye,
+# their map must not have a dot at its exact coordinates. CHECKLIST section 8.
+when	day	place	level	precision_ft	how	evidence
+2026-09-12	1	wethersby	known		Home since day 1. Market, the square, Wend's barn, the inn	days.tsv
+2026-09-12	1	draycot	vague	105600	They came IN by the Draycot road before expedition 1 -- so they have walked it -- but they arrived as strangers with no reason to survey it, and did not see the hall until day 14	district.md
+2026-09-12	1	crag_turning	known		The north road, walked repeatedly from day 6	days.tsv
+2026-09-12	6	north_hundred	known		Six days of patrolling its whole day's-walk circuit	days.tsv
+2026-09-12	13	draycot	known		The first ride down, day 13-14. Seen properly, gate and all	calendar.md
+2026-09-12	16	marrows	known		Dave and Sim rode out; two years of fleece in a stone barn	16:1
+2026-09-12	20	basecamp	known		Coll's crew graded the trail and built it	world_changes.tsv
+2026-09-12	20	cave_mouth	known		Eight expeditions in and out	party.tsv
+2026-09-12	20	quasqueton	vague	1000	*** THE THIRD CASE, EXACTLY. *** They have been INSIDE more than anyone, and mapdb holds level 1 to ten feet -- but where the hill SITS relative to the road is still "about an hour off the turning, up the outcrop". Nobody has surveyed the outside	mapdb
+2026-09-12	25	ludbury	known		The wool caravan, days 25-27. Gate duty, the market, the rosewood	calendar.md
+2026-09-12	27	fenns	known		90 gp for a barn, seed and a winter, paid at his gate	calendar.md
+2026-09-12	28	edes	known		Eight miles cross-country and back; they have walked it twice	calendar.md
+2026-09-12	32	wraye	heard		THREE DAYS EAST OF LUDBURY AND IT HAS A LIBRARY. That is the whole of it, and it is the only lead on the ring	npcs.md
+2026-09-12	58	marchford	known		Three days down, market day, Trebb's yard, the church, Ossery's shutters	calendar.md
+2026-09-12	62	lyde	known		Dave rode over from the road and paid 31 gp at his door	62:1
+2026-09-12	72	hobbs_lane	heard		Nan named it: a widow with three years of wool in a loft who would take a fair price off anybody who asked her properly. NOBODY HAS BEEN	72:2
+2026-09-12	72	wettleford	heard		Nan named it: two holdings past it roll their wool wet. NOBODY HAS BEEN	72:2

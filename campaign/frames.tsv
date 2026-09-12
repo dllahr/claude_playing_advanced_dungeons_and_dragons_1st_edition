@@ -1,0 +1,21 @@
+# LOCAL GRIDS, AND WHERE THEY SIT IN THE WORLD.
+#
+# This is the one row that makes the dungeon and the road ONE coordinate system.
+# `mapdb` keeps its own local 10-ft grid, its own origin and its own 134 tests --
+# NOTHING ABOUT IT CHANGES. All that is recorded here is where that grid is.
+#
+#   overland_x_ft = origin_x_ft + (cell_x * unit_ft), rotated by rotation_deg
+#
+# so "where is the party" has ONE answer whether they are at (16,1) in a
+# corridor or four miles east of the road south of Marchford.
+#
+# rotation_deg: 0 means the frame's north is true north. A printed dungeon map's
+# north arrow need not agree with the world's, and pretending it does is the kind
+# of quiet assumption this project keeps finding. B1's level 1 is taken as
+# aligned until something says otherwise.
+#
+# The B1 level-1 grid is 37 x 48 squares of 10 ft = 370 x 480 ft. The overland
+# extent is about 660,000 ft. The dungeon is a speck, and integers handle it.
+id	name	kind	place	level	unit_ft	origin_x_ft	origin_y_ft	rotation_deg	notes
+b1_level1	Quasqueton, level 1	dungeon	quasqueton	1	10	15656	113344	0	Cell (0,0) is the NW corner of the level-1 grid, placed so the grid is centred under the cave mouth. The entrance the party uses is the alcove-pair-2 one-way slab at (17,13,V)
+b1_level2	Quasqueton, level 2	dungeon	quasqueton	2	10	15656	113344	0	Built and merged, ENTIRELY UNEXPLORED. Two exits from room 50 and something in the east passage. Taken as sharing level 1's origin until the stair geometry says otherwise -- loop L031
