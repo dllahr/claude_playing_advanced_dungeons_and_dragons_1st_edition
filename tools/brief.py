@@ -41,6 +41,7 @@ import loops as loopmod                                         # noqa: E402
 import ledger as ledgermod                                      # noqa: E402
 import inventory as invmod                                      # noqa: E402
 import entities as entmod                                       # noqa: E402
+import build_campaign_db as dbmod                               # noqa: E402
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
@@ -105,14 +106,18 @@ def avail_report(path=None):
 
 
 def stale_report():
-    """The crude watermark: is the map cache older than its own log?
+    """Are the derived views current with the logs they are built from?
 
-    Phase 5 replaces this with a `build_meta` table carrying row counts and
-    hashes. Modification time is a weak proxy -- it cannot tell you HOW far
-    behind -- but it is honest about the direction, and the direction is the
-    part that was being missed.
+    `campaign.sqlite` carries a real watermark -- a `build_meta` row per source
+    TSV with its row count and a sha256 -- so staleness is a COMPARISON and not
+    a judgment. The map cache still only gets a modification-time check, which
+    is a weak proxy: it cannot say HOW far behind. It is honest about the
+    direction, and the direction is the part that kept being missed.
     """
     out = []
+    for name, why in dbmod.stale():
+        out.append('*** campaign.sqlite: %s %s -- run '
+                   'python tools/build_campaign_db.py' % (name, why))
     if not os.path.exists(MAPDB):
         out.append('mapdb/output/b1/b1.sqlite ABSENT -- run mapdb/rebuild.sh')
     elif os.path.getmtime(MAPDB) < os.path.getmtime(WORLD_LOG):

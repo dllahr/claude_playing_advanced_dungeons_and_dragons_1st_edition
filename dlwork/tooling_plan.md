@@ -651,10 +651,67 @@ twice. **The mechanism catching its own author is the strongest evidence it work
 
 **280 tests pass** (185 → 198 → 219 → 239 → 252 → 266 → 280).
 
-### Phase 5 — the view, the keys, validate-on-write
-`build_campaign_db.py` with the schema above · `build_meta` watermarks · `log.py`
-validating against the view before appending · `recall.py` as a query ·
-`test_watermarks.py` · `test_no_cached_figures.py`.
+### Phase 5 — the view, the keys, validate-on-write · ✅ BUILT 2026-09-11
+
+`tools/build_campaign_db.py` builds **`campaign/output/campaign.sqlite`** —
+**gitignored, rebuilt from the TSVs, and a view rather than a store.**
+
+#### The keys fail the build rather than dropping the row
+
+`PRAGMA foreign_keys = ON`, and `PRAGMA foreign_key_check` is run before the
+commit. **A view that quietly loses the rows it cannot join looks complete,
+which is the worst thing a view can look.**
+
+> ### ⚠ AND IT FIRED WITHIN A MINUTE OF EXISTING
+>
+> The first build **failed on two dangling citations I had typed by hand an hour
+> earlier**: `money.tsv` cited scene **`62:2`**, which had never been logged, and
+> **`71:4`**, which was a typo for `71:1`.
+>
+> **The 62:2 scene was real and is now logged** — the eleven shillings lent to
+> Dill, *which he asked to have written as a debt rather than taken as a gift*.
+> **A citation to nothing looks CHECKED, which is worse than no citation.**
+
+| constraint | what it makes unrepresentable |
+|---|---|
+| `interaction_person → people` | a scene inventing a person |
+| `money.interaction_id → interactions` | a payment citing a scene that never happened |
+| `loop_events CHECK (verb <> 'close' OR evidence <> '')` | **closing a loop with a flag instead of evidence** — the art. 11 step |
+| `interactions UNIQUE (day, seq)` | `"77:3"` meaning two things, while other files cite it |
+| `person_alias` / `place_alias` | *Wetherby*/*Wethersby* and *"Rell's brother"*/*Gyll* being two |
+
+#### The watermark makes staleness a comparison
+
+`build_meta` carries **rows, last day and a sha256 per source TSV**. `--check`
+reports drift and exits 1; `brief.py` shows it in its STALE section. **`CHECKLIST`
+§11 was 38 in-game days out of date while warning in its own second paragraph
+that snapshots rot — a sha256 cannot do that.**
+
+#### And the same rule arrives earlier, at the write
+
+`log.py` gained **`interaction`** (validating every name and auto-assigning
+`seq`) and now **refuses a money row citing a scene that does not exist** — the
+foreign key's rule, delivered at the moment of the error instead of at the next
+build. **Reads are anything, including ad-hoc SQL. Writes go through `log.py`
+and nowhere else, and every other consumer opens the file READ-ONLY**, so a
+stray `UPDATE` raises instead of silently rewriting the past.
+
+#### The joins it exists for
+
+```sql
+-- every reaction ever rolled at one person: how the p.63 misuse was found
+SELECT i.day, i.reaction FROM interactions i
+JOIN interaction_person ip ON ip.interaction_id = i.id
+WHERE ip.person_id = 'cuddy' AND i.reaction <> '';
+
+-- who is owed something, and by what day
+SELECT p.name, le.expected_day, le.what FROM loop_events le
+JOIN people p ON p.id = le.subject_person_id
+WHERE le.verb='open' AND le.loop_id NOT IN
+      (SELECT loop_id FROM loop_events WHERE verb='close');
+```
+
+**300 tests pass** (185 → 198 → 219 → 239 → 252 → 266 → 280 → 300).
 
 ### Phase 6 — **the ratchet, and it is NOT OPTIONAL**
 For every rule a test now covers: **delete the instruction from `CHECKLIST.md`** and

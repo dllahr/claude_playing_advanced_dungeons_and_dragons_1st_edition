@@ -50,8 +50,10 @@ from tsvlog import append, header_of, read_tsv, today             # noqa: E402
 import ledger as ledgermod                                        # noqa: E402
 import loops as loopmod                                           # noqa: E402
 import hp as hpmod                                                # noqa: E402
+import entities as entmod                                         # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+SCENES = os.path.join(ROOT, 'campaign', 'interactions.tsv')
 MONEY = os.path.join(ROOT, 'campaign', 'money.tsv')
 DAYS = os.path.join(ROOT, 'campaign', 'days.tsv')
 AVAIL = os.path.join(ROOT, 'campaign', 'availability.tsv')
@@ -88,6 +90,19 @@ def do_money(a):
     if a.delta == 0:
         raise Refused('a delta of zero records nothing. Omit the row, or say '
                       'what actually moved.')
+    # A citation that resolves to nothing is worse than none: it looks
+    # checked. The foreign key in campaign.sqlite catches this at BUILD time
+    # and caught two of them within a minute of existing -- money.tsv cited
+    # scene 62:2, never logged, and 71:4, a typo for 71:1. Catching it HERE is
+    # the same rule arriving at the moment of the error.
+    if a.interaction and ':' in a.interaction:
+        have = {'%s:%s' % (r['day'], r['seq']) for r in entmod.scenes()}
+        if a.interaction not in have:
+            raise Refused(
+                'no scene %r in campaign/interactions.tsv. Log the scene first '
+                '(`python tools/log.py interaction ...`), or leave the '
+                'citation off -- a pointer to nothing looks CHECKED, which is '
+                'worse than no pointer at all.' % a.interaction)
     day = a.day if a.day is not None else loopmod.current_day()
     line = _write(a.log_file or MONEY, dict(
         when=today(), day=day, delta=a.delta, asset=a.asset,
@@ -99,6 +114,39 @@ def do_money(a):
     print()
     for sev, msg in ledgermod.check(ledgermod.rows(a.log_file or MONEY)):
         print('%-5s %s' % (sev, msg))
+    return 0
+
+
+def do_interaction(a):
+    """A scene. Every name is validated before the row is written."""
+    pl, pc = entmod.people(), entmod.places()
+    pidx, cidx = entmod.index(pl), entmod.index(pc)
+    for n in entmod.split_people(a.people):
+        if n.strip().lower() not in pidx:
+            near = sorted({v for k, v in pidx.items()
+                           if n.lower() in k or k in n.lower()})
+            raise Refused('no person %r in campaign/people.tsv.%s'
+                          % (n, (' Did you mean %s?' % ', '.join(near))
+                             if near else ' Add them there first.'))
+    if a.place and a.place != '-' and a.place.lower() not in cidx:
+        raise Refused('no place %r in campaign/places.tsv' % a.place)
+    if a.kind not in entmod.SCENE_KINDS:
+        raise Refused('kind %r is not one of %s'
+                      % (a.kind, ', '.join(entmod.SCENE_KINDS)))
+    day = a.day if a.day is not None else loopmod.current_day()
+    used = {int(r['seq']) for r in entmod.scenes()
+            if r['day'] == str(day) and r['seq'].isdigit()}
+    seq = a.seq if a.seq is not None else (max(used) + 1 if used else 1)
+    if seq in used:
+        raise Refused('day %s already has a scene %d. Other files cite scenes '
+                      'as "%s:%d" and that must mean exactly one thing.'
+                      % (day, seq, day, seq))
+    print(_write(a.log_file or SCENES, dict(
+        day=day, seq=seq, place=a.place or '-', people=a.people, kind=a.kind,
+        reaction=a.reaction or '', d6s=a.d6s or '-', summary=a.summary,
+        evidence=a.evidence or '')))
+    print()
+    print('cite this scene as %s:%d' % (day, seq))
     return 0
 
 
@@ -151,6 +199,21 @@ def build_parser():
     m.add_argument('--reason', required=True)
     m.add_argument('--day', type=int)
     m.set_defaults(fn=do_money)
+
+    n = sub.add_parser('interaction', help='a scene. EVERY NAME IS VALIDATED')
+    n.add_argument('--people', required=True,
+                   help='comma-separated; names or aliases both resolve')
+    n.add_argument('--kind', required=True)
+    n.add_argument('--summary', required=True)
+    n.add_argument('--place', default='-')
+    n.add_argument('--reaction', help='the d100, where one was rolled. MOST OF '
+                                      'THE TIME THERE IS NONE -- p.63 is a '
+                                      'FIRST-CONTACT mechanic')
+    n.add_argument('--d6s')
+    n.add_argument('--evidence')
+    n.add_argument('--day', type=int)
+    n.add_argument('--seq', type=int, help='normally auto-assigned')
+    n.set_defaults(fn=do_interaction)
 
     d = sub.add_parser('day', help='open a new campaign day')
     d.add_argument('--day', type=int, required=True)
