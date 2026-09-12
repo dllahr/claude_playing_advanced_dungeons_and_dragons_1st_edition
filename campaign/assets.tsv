@@ -16,74 +16,82 @@
 # rules die. They are marked kind=service so `ledger.py` can tell them from
 # goods and never look for them on a cart.
 #
-# unit_weight is in GP WEIGHT (DMG Appendix O), 10 gp weight = 1 lb. Blank means
-# not yet weighed -- and blank is honest; a guessed weight would be quoted.
-id	name	kind	unit_weight	notes
+# weight + weight_unit, in two columns ON PURPOSE. The player's design, and
+# it has teeth in 1e: DMG Appendix O counts encumbrance in GP WEIGHT, ten to
+# the pound, while every merchant, cart and porter in the fiction talks in
+# POUNDS. The SD barrel is 460 lb and 4,600 gp weight, and the mule-capacity
+# ruling in rules/equipment.md turns on not confusing them. A bare number in
+# one column would be a unit kept in somebody's head, which is the shape of
+# every error this project is about. Blank is honest -- a guessed weight
+# would be quoted.
+id	name	kind	weight	weight_unit	notes
 # ---- money and money-like
-coin	gold pieces	money		The purse. Lives WITH WEND in Wethersby; the party carries a working purse only. articles.md art. 1 assumes this custody
+coin	gold pieces	money			The purse. Lives WITH WEND in Wethersby; the party carries a working purse only. articles.md art. 1 assumes this custody
 # ---- services and obligations: money that leaves for something that is not a thing
-service	a service rendered	service		Generic. Prefer a more specific id where one exists
-wages	wages and hire	service		The standing roll, drovers, carriers, day labour
-lodging	lodging and board	service		Inns and quarters. House rule 1 gp/person/night
-licence	licence and fees	service		The Draycot licence, gate duty, tolls
-loan	money lent	service		A debt owed TO the party. Dill's 11 shillings
-kit	kit issued to a person	service		Outfitting an individual, where the items were not itemised at the time
+service	a service rendered	service			Generic. Prefer a more specific id where one exists
+wages	wages and hire	service			The standing roll, drovers, carriers, day labour
+lodging	lodging and board	service			Inns and quarters. House rule 1 gp/person/night
+licence	licence and fees	service			The Draycot licence, gate duty, tolls
+loan	money lent	service			A debt owed TO the party. Dill's 11 shillings
+kit	kit issued to a person	service			Outfitting an individual, where the items were not itemised at the time
 # ---- trade lines
-small_goods	small goods -- needles, pins, spices, dye, glass	stock		The 357 gp Ludbury line. CLOSED day 59 at 573 gp
-tool_line	Fenn's tool list -- shears, blades, files, auger	stock		136 gp at Ludbury. Hask owns a ring-fenced seventh of THIS LINE and no other
-iron_salt	iron, nails and salt	stock	1	100 gp and 600 lb at Ludbury, sold to the district AT COST. articles.md fourth finding: laid down it was nearer 160
-dye	dye -- woad and madder	stock		20 gp of the cloth-plant line; sold to Trebb at cost day 59
-cloth_plant	cloth-making plant -- loom, spindles, cards, hackles	stock		100 gp at Ludbury
+small_goods	small goods -- needles, pins, spices, dye, glass	stock			The 357 gp Ludbury line. CLOSED day 59 at 573 gp
+tool_line	Fenn's tool list -- shears, blades, files, auger	stock			136 gp at Ludbury. Hask owns a ring-fenced seventh of THIS LINE and no other
+iron_salt	iron, nails and salt	stock	1	gp-weight	100 gp and 600 lb at Ludbury, sold to the district AT COST. articles.md fourth finding: laid down it was nearer 160
+dye	dye -- woad and madder	stock			20 gp of the cloth-plant line; sold to Trebb at cost day 59
+cloth_plant	cloth-making plant -- loom, spindles, cards, dye	stock			100 gp at Ludbury
+hackles	flax hackles, three grades	tools			Dill's own, handed over by Trask on day 71. The party's Ludbury pair are three real grades (d6=5)
 # ---- salvage sold
-lab_glass	Zelligar's laboratory apparatus	salvage		~250 gp from Toller day 65 on Wace's receipt
-lab_glass_bulky	Zelligar's laboratory glass, bulky	salvage		~97 gp, taken day 70, with Toller on open terms
-realgar	stoppered smoked-glass vial -- realgar	salvage		Named by Trebb day 59, sold 35 gp to the church's limner
-ale_barrel_sd	barrel, 36 gallon, sealed 'SD'	salvage	4600	58 gp from Holt day 71: 30 in coin, 28 in his own hand against the cask
-dragon_scales	brass dragon scales	salvage		110 gp, day 19
-rosewood	rosewood headboard and bed	salvage		350 gp at Ludbury, less 10% foreigner's tax. THE PARTY'S ALONE, not the venture's
-chemicals	sealed containers of chemicals, unidentified	salvage		Forty of them, day 70. Toller handed them off entirely: stock, not curio
-salvage_misc	assorted salvage	salvage		Where a mixed sale was never itemised
+lab_glass	Zelligar's laboratory apparatus	salvage			~250 gp from Toller day 65 on Wace's receipt
+lab_glass_bulky	Zelligar's laboratory glass, bulky	salvage			~97 gp, taken day 70, with Toller on open terms
+realgar	stoppered smoked-glass vial -- realgar	salvage			Named by Trebb day 59, sold 35 gp to the church's limner
+ale_barrel_sd	barrel, 36 gallon, sealed 'SD'	salvage	4600	gp-weight	58 gp from Holt day 71: 30 in coin, 28 in his own hand against the cask
+dragon_scales	brass dragon scales	salvage			110 gp, day 19
+rosewood	rosewood headboard and bed	salvage			350 gp at Ludbury, less 10% foreigner's tax. THE PARTY'S ALONE, not the venture's
+chemicals	sealed containers of chemicals, unidentified	salvage			Forty of them, day 70. Toller handed them off entirely: stock, not curio
+salvage_misc	assorted salvage	salvage			Where a mixed sale was never itemised
 # ---- gear
-oil_flask	oil flask	light	100	Fuel is computed by tools/light.py from campaign/light.tsv, never counted here
-torch	torch	light	100
+oil_flask	oil flask	light	100	gp-weight	Fuel is computed by tools/light.py from campaign/light.tsv, never counted here
+torch	torch	light	100	gp-weight
 candle	candle	light
-lantern	lantern, hooded	light	300
-iron_spike	iron spike	tools	50
+tinder_box	tinder box, flint & steel	light
+lantern	lantern, hooded	light	300	gp-weight
+iron_spike	iron spike	tools	50	gp-weight
 wooden_spike	wooden spike	tools
-rope_50ft	rope, 50 ft	tools	75	Six bought day 67 at 4 s.p. -- the purchase that had no row for eleven days
-ten_foot_pole	ten-foot pole	tools	100
+rope_50ft	rope, 50 ft	tools	75	gp-weight	Six bought day 67 at 4 s.p. -- the purchase that had no row for eleven days
+ten_foot_pole	ten-foot pole	tools	100	gp-weight
 mallet	mallet	tools
 mirror	metal mirror	tools
 thieves_tools	thieves' picks and tools	tools
 joiners_set	joiner's set, small	tools
-backpack	backpack, leather	tools	20
+backpack	backpack, leather	tools	20	gp-weight
 keg_spigot	keg, small (~3 gallon), spigot and gimlet	tools
-rations_iron	rations, iron, 1 person-week	food	75	5 gp. They keep a month, which is what they are for
-rations_std	rations, standard, 1 person-week	food	200	3 gp. They do NOT keep a month
-waterskin	waterskin	food	50
+rations_iron	rations, iron, 1 person-week	food	75	gp-weight	5 gp. They keep a month, which is what they are for
+rations_std	rations, standard, 1 person-week	food	200	gp-weight	3 gp. They do NOT keep a month
+waterskin	waterskin	food	50	gp-weight
 # ---- arms
-banded_mail	banded mail	armour	450
-leather_armour	leather armour	armour	150
-shield_large	large shield	armour	100
-shield_small	small wooden shield	armour	50
-long_sword	long sword	weapon	60
-short_sword	short sword	weapon	35
-flail	footman's flail	weapon	150
-mace	mace, footman's	weapon	100
-spear	spear	weapon	50
-short_bow	short bow	weapon	50
-arrows	arrows	weapon	1
-sling	sling	weapon	5
-sling_bullet	sling bullets	weapon	5
-dart	dart	weapon	5
-dagger	dagger	weapon	10
-hand_axe	hand axe	weapon	50
+banded_mail	banded mail	armour	450	gp-weight
+leather_armour	leather armour	armour	150	gp-weight
+shield_large	large shield	armour	100	gp-weight
+shield_small	small wooden shield	armour	50	gp-weight
+long_sword	long sword	weapon	60	gp-weight
+short_sword	short sword	weapon	35	gp-weight
+flail	footman's flail	weapon	150	gp-weight
+mace	mace, footman's	weapon	100	gp-weight
+spear	spear	weapon	50	gp-weight
+short_bow	short bow	weapon	50	gp-weight
+arrows	arrows	weapon	1	gp-weight
+sling	sling	weapon	5	gp-weight
+sling_bullet	sling bullets	weapon	5	gp-weight
+dart	dart	weapon	5	gp-weight
+dagger	dagger	weapon	10	gp-weight
+hand_axe	hand axe	weapon	50	gp-weight
 # ---- beasts and vehicles
-mule	mule	livestock		20 gp. Two: day 17 and day 19-20. Halm's day-4 mule was RESTITUTION and is his
-cart	cart, 2-wheeled	vehicle		50 gp each. Two, bought day 19-20 -- and they had no row for forty days
-horse_riding	horse, riding (light)	livestock		The PARTY'S, assigned to Hask and Dellie for the caravan. Not theirs
+mule	mule	livestock			20 gp. Two: day 17 and day 19-20. Halm's day-4 mule was RESTITUTION and is his
+cart	cart, 2-wheeled	vehicle			50 gp each. Two, bought day 19-20 -- and they had no row for forty days
+horse_riding	horse, riding (light)	livestock			The PARTY'S, assigned to Hask and Dellie for the caravan. Not theirs
 # ---- treasure and oddments
-ring_plain	plain metal ring	treasure		Registers magic (day-4 detect). Unidentified. Only lead is Wraye
+ring_plain	plain metal ring	treasure			Registers magic (day-4 detect). Unidentified. Only lead is Wraye
 tapestry	tapestry, small (3' x 4')	treasure
 comb_silver	silver-plated comb	treasure
 perfume	perfume, capped bottle	treasure

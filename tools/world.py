@@ -35,7 +35,14 @@ from tsvlog import append, read_tsv, today                    # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 LOG = os.path.join(ROOT, 'campaign', 'world_changes.tsv')
-INVENTORY = os.path.join(ROOT, 'campaign', 'inventory.tsv')
+INVENTORY_LOG = os.path.join(ROOT, 'campaign', 'inventory_log.tsv')
+
+# This log names gear in prose ("iron spike"); the inventory log names it by
+# asset id. One small map rather than a fuzzy stem match, because a guess
+# cannot be a constraint.
+ITEM_TO_ASSET = {'iron spike': 'iron_spike', 'wooden spike': 'wooden_spike',
+                 'rope, 50 ft': 'rope_50ft', 'ten-foot pole': 'ten_foot_pole',
+                 'laboratory glass, bulky': 'lab_glass_bulky'}
 
 SCOPES = ('edge', 'cell', 'area', 'seen')
 
@@ -188,8 +195,9 @@ def current(rows):
 def deployed(rows):
     """Gear currently left in the world, netted per item.
 
-    This is the counterpart to campaign/inventory.tsv, which counts only what
-    is CARRIED. Keeping emplaced gear in a prose note on the inventory line is
+    This is the counterpart to campaign/inventory_log.tsv, which holds what is
+    OWNED -- so CARRIED = owned - emplaced, derived, and the two can never
+    drift. Keeping emplaced gear in a prose note on an inventory line is
     what once had the DM tell the player their spikes were unavailable when
     they had been recovered two expeditions earlier.
     """
@@ -311,7 +319,7 @@ def report_deployed(rows):
     if not net:
         return 'nothing of the party\'s is left in the dungeon.'
     out = ['gear currently emplaced in the dungeon',
-           '(campaign/inventory.tsv counts only what is CARRIED)', '']
+           '(tools/inventory.py holds what is OWNED; carried = owned - this)', '']
     for item, n in sorted(net.items()):
         out.append('  %-16s %d' % (item, n))
         for q, scope, target, exped, note in where[item]:
@@ -328,21 +336,21 @@ def check(db, level, rows=None):
     out += ['  ' + w for w in validate(rows)]
 
     # 1. Emplaced gear described in inventory prose instead of logged here.
-    #    inventory.tsv once carried "TWO ARE IN THE PAIR-2 DOOR holding it
-    #    open" as a free-text note, which nothing recomputed and which was
-    #    wrong by two expeditions.
+    #    The old inventory.tsv once carried "TWO ARE IN THE PAIR-2 DOOR holding
+    #    it open" as a free-text note, which nothing recomputed and which was
+    #    wrong by two expeditions. The check now reads the inventory LOG's note
+    #    column, which is where such a sentence would land today.
     net, _ = deployed(rows)
-    for r in read_tsv(INVENTORY, missing_ok=True):
-        note = (r.get('notes') or '').lower()
+    for r in read_tsv(INVENTORY_LOG, missing_ok=True):
+        note = (r.get('note') or '').lower()
         # A note that points AT this log is the fix, not the fault.
         if 'world_changes' in note or 'world.py' in note:
             continue
-        if any(w in note for w in ('in the door', 'left in', 'holding it open',
-                                   'are in the', 'spiked open', 'spiked shut',
-                                   'wedged in')):
-            out.append('  inventory.tsv line for %r describes gear left in the '
-                       'world in prose: %r -- log it here instead'
-                       % (r.get('item'), r.get('notes')))
+        if any(w in note for w in ('in the door', 'holding it open',
+                                   'spiked open', 'spiked shut', 'wedged in')):
+            out.append('  inventory_log.tsv row for %r describes gear left in '
+                       'the world in prose: %r -- log it here instead'
+                       % (r.get('asset'), r.get('note')))
 
     # 2. A state applied to a boundary the map does not have.
     if db and os.path.exists(db):
@@ -360,15 +368,22 @@ def check(db, level, rows=None):
                            'world change' % (x, y, o))
         con.close()
 
-    # 3. Emplaced gear that is also still counted as carried.
+    # 3. Emplaced gear, and what that leaves carried.
+    #    This used to WARN that a thing was "also still counted as carried",
+    #    which was right when inventory.tsv stored a carried figure by hand.
+    #    It no longer does: tools/inventory.py holds the total OWNED and derives
+    #    carried as owned minus emplaced, so the two cannot disagree. The note
+    #    survives because restocking in town should still count both.
     if net:
-        carried = {r.get('item'): r.get('qty') for r in
-                   read_tsv(INVENTORY, missing_ok=True)}
+        import inventory as invmod
+        owned = invmod.state()
         for item, n in net.items():
-            if item in carried:
-                out.append('  note: %r -- %d emplaced in the dungeon, %s '
-                           'carried. Restocking in town should count both.'
-                           % (item, n, carried[item]))
+            asset = ITEM_TO_ASSET.get(item)
+            if asset and asset in owned:
+                total = sum(v[0] for v in owned[asset].values())
+                out.append('  note: %r -- %g owned, %d emplaced in the dungeon, '
+                           '%g carried. Restocking in town should count both.'
+                           % (item, total, n, total - n))
     return out or ['  all checks pass']
 
 

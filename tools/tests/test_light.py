@@ -351,14 +351,21 @@ def test_a_backfilled_earlier_expedition_does_not_supersede_a_later_one(
 # ------------------------------------------------------- the party total
 
 def test_reserves_are_priced_off_the_rules_table(tmp_path, cat):
-    inv = tmp_path / 'inventory.tsv'
-    open(str(inv), 'w').write(
-        'category\titem\tqty\theld_by\tnotes\n'
-        'light\toil flask\t3\tspread\t\n'
-        'light\ttorch\t2\tspread\t\n'
-        'light\tcandle\t6\tspread\t\n'
-        'weapon\tdagger\t1\tFrython\t\n')
-    priced, unpriced = light.reserves(cat, str(inv))
+    """*** THE FLASK COUNT NOW COMES FROM THE OIL POOL, NOT AN INVENTORY CELL.
+
+    It used to come from campaign/inventory.tsv, so the same fact lived in two
+    files and they drifted apart TWICE -- caught both times only by a
+    disagreement warning. light.tsv knows which flasks have been broached, so
+    `sealed` is derived there and there is nothing left to disagree with. ***
+    """
+    inv_state = {
+        'torch': {'': [2, 'each', 'spread', '']},
+        'candle': {'': [6, 'each', 'spread', '']},
+        'dagger': {'': [1, 'each', 'Frython', '']},
+    }
+    pool = dict(known=True, sealed=3, broached=0.0, opened=0, drawn=0.0,
+                short=0.0, untracked=0.0)
+    priced, unpriced = light.reserves(cat, inv_state=inv_state, pool=pool)
     by_item = {p['item']: p for p in priced}
     assert by_item['oil flask']['rounds'] == 3 * 240
     assert by_item['torch']['rounds'] == 2 * 60
@@ -368,22 +375,21 @@ def test_reserves_are_priced_off_the_rules_table(tmp_path, cat):
     assert [i for i, _ in unpriced] == ['candle']
 
 
-def test_the_total_is_a_FLOOR_when_any_source_is_unknown(tmp_path, cat):
-    inv = tmp_path / 'inventory.tsv'
-    open(str(inv), 'w').write(
-        'category\titem\tqty\theld_by\tnotes\n'
-        'light\toil flask\t2\tspread\t\n')
+def test_the_total_is_a_FLOOR_when_any_source_is_unknown(tmp_path, cat, monkeypatch):
+    monkeypatch.setattr(light, 'reserves', lambda *a, **k: (
+        [dict(item='oil flask', qty=2, what='Lantern (hooded)',
+              each_rounds=240, rounds=2 * 240, text='')], []))
     log = rows_to_file(tmp_path, [
         row(exped=4, round=0, source='known', kind='new', what='Torch'),
         row(exped=4, round=0, source='dunno', kind='anchor',
             what='Lantern (hooded)', fuel='?', certainty='uncertain'),
     ])
     src = light.state(light.load(log), at_round=0, cat=cat)
-    t = light.total(src, 0, cat, str(inv))
+    t = light.total(src, 0, cat)
     assert t['in_sources'] == 60             # the torch only
     assert t['reserves'] == 2 * 240
     assert t['unknown'] == ['dunno']
-    assert 'FLOOR' in light.remaining_report(src, 0, cat, str(inv))
+    assert 'FLOOR' in light.remaining_report(src, 0, cat)
 
 
 def test_a_lost_source_stops_counting(tmp_path, cat):
@@ -640,20 +646,26 @@ def test_running_out_of_oil_fills_the_lamp_SHORT_not_full(tmp_path):
     assert 'RAN DRY' in light.oil_report(pool)
 
 
-def test_the_pool_replaces_the_inventory_count_rather_than_adding_to_it(tmp_path):
-    """Otherwise the broached flask is counted twice."""
+def test_the_flask_count_comes_from_the_pool_and_nowhere_else(tmp_path,
+                                                              monkeypatch):
+    """There is no second count left to disagree with, and that is the fix.
+
+    This test used to assert that the pool BEAT a stale inventory cell and that
+    `oil_report` said so. Both halves are gone: the cell is gone, the
+    disagreement warning is gone, and `reserves()` reads the flask count
+    straight out of the pool. A warning that two sources disagree was never a
+    check -- it was an early sign that the design was wrong.
+    """
     p = rows_to_file(tmp_path, [
         row(exped=6, round=0, source='oil',  kind='oil', fuel=3),
         row(exped=6, round=0, source='lamp', kind='new', what='lantern', fuel=24),
     ])
-    inv = tmp_path / 'inv.tsv'
-    inv.write_text('category\titem\tqty\theld_by\tnotes\n'
-                   'light\toil flask\t99\tparty\t-\n')
+    monkeypatch.setattr('inventory.state', lambda *a, **k: {})
     src, pool = light._replay(path=p, at_round=0)
-    t = light.total(src, 0, inventory=str(inv), pool=pool)
-    # 3 sealed flasks, not the 99 the stale inventory line claims.
+    t = light.total(src, 0, pool=pool)
+    # 3 sealed flasks, straight from the pool.
     assert light.turns(t['reserves']) == pytest.approx(72.0)
-    assert 'DISAGREES' in light.oil_report(pool, inventory=str(inv))
+    assert 'DISAGREES' not in light.oil_report(pool)
 
 
 def test_oil_used_on_something_other_than_a_lamp_comes_out_of_the_pool(tmp_path):

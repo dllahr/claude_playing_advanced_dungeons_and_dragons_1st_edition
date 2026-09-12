@@ -337,7 +337,13 @@ DM to tell the player their spikes were in a door they had already recovered the
 - `campaign/encounters.tsv` — append-only award log; `anchor` rows set totals outright
 - `campaign/characters.tsv` — prime requisites, AC, hp_max, proficiencies, and the
   Strength/Dexterity adjustments, so every modifier is applied consistently
-- `campaign/inventory.tsv` — what the party **carries**, edited in place
+- **`campaign/inventory_log.tsv`** — what the party **owns**, append-only, quantities
+  derived. **Every quantity carries its `unit`** and there is one row per
+  `(asset, condition)`. ⚠ **Oil, torches, candles and lanterns are NOT counted here** —
+  `light.tsv` owns them, because that log knows which flasks have been broached. **Where
+  a thing is in the dungeon** is `world_changes.tsv`'s. *(The old `campaign/inventory.tsv`
+  was retired to `deprecated/` on 2026-09-11: it was the one file still edited in place
+  and it had rotted five times.)*
 - `campaign/world_changes.tsv` — what the party has **done to the dungeon**, and what
   gear it has left there. Append-only, reversible, replayed onto the map database
 - `campaign/hp_log.tsv` — every wound, heal and rest; current hp is computed, never stored
@@ -401,6 +407,7 @@ DM to tell the player their spikes were in a door they had already recovered the
 |---|---|
 | **`tools/brief.py`** | **THE SESSION BRIEFING. RUN IT FIRST, EVERY SESSION AND AFTER EVERY COMPACT.** Day · who is available · hp · xp · oil · gear left in the dungeon · position · clock · **open loops** · what is stale. Every figure computed by the tool that owns it, so nothing in it can be 38 in-game days out of date the way `CHECKLIST` §11 was |
 | **`tools/log.py`** | **THE ONLY WRITE PATH for money, days and availability. It VALIDATES, then appends** — and refuses a money row that names no asset, an asset id not in `assets.tsv`, a zero delta, a campaign day running backwards, or an unknown character. Validate on write, rebuild on read |
+| **`tools/inventory.py`** | **what the party OWNS**, computed from `campaign/inventory_log.tsv`. **One row per (asset, condition), with an explicit `unit`** — so `~2.5 IRON + 8 STANDARD` is two rows in person-weeks instead of one cell that read as the number 2. **`carried` derives spikes as owned − emplaced**, so the two can never drift |
 | **`tools/ledger.py`** | **the purse, computed from `campaign/money.tsv`** — never stored, never quoted from a cell. `check` is the double-entry audit: every movement names an asset, every *good* has an inventory row, and the computed purse is compared against the `inventory.tsv` cell rather than trusting it |
 | **`tools/audit.py`** | **checks the FIGURES in a block of text against the tool that owns each one.** `--text "…"` · a file · `--staged` · `--show` lists every truth it knows. **Wired into `tools/hooks/pre-commit`, so it runs on every commit and cannot be forgotten** — enable once per clone with `git config core.hooksPath tools/hooks`. It **blocks** on a mismatch; `audit-skip` in a line, or naming a day in the sentence, marks a figure as of-its-time. **If it ever cries wolf, LOOSEN THE CHECKER — do not learn to pass `--no-verify`** |
 | **the `auditor` agent** | `.claude/agents/auditor.md`. The half that needs reading comprehension. **Citation or nothing**, three verdicts, and **every verdict names its SOURCE TIER** — tier 1 the TSVs, tier 2 `rules/`, tier 3 the prose, which is *suggestive, never conclusive*. **Run it before asserting what an NPC previously said or did, and before writing any finding or rule into `articles.md` / `CHECKLIST.md` / `rules/`.** It may not read the DM notes |

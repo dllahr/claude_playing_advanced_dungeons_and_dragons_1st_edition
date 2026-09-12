@@ -494,13 +494,48 @@ both cases **the second event had never been read by any tool**:
 split.** `test_no_campaign_log_has_an_over_wide_row` now guards every log, and a
 second test names both recovered rows so a future merge cannot re-glue them.
 
-#### 3b · inventory becomes a log · TODO
+#### 3b · inventory becomes a log · ✅ BUILT 2026-09-11 — **and the `unit` column is the player's design**
 
-`inventory.tsv` is still edited **in place** — the one campaign file that is, and
-the one that has rotted five times. It becomes `inventory_log.tsv` + computed
-quantities over the same `assets.tsv`. **Until then `ledger.py check`'s
-good-has-an-inventory-row leg is a name match rather than a quantity match**,
-which is the weaker half of the double entry.
+`campaign/inventory_log.tsv` + `tools/inventory.py`. The old `campaign/inventory.tsv`
+is **retired to `deprecated/`** with a full explanation, so no citation is orphaned.
+
+> ### THE OLD `qty` CELL WAS PROSE PRETENDING TO BE A NUMBER
+>
+> Every tool that read it took the first integer it could find:
+>
+> | the cell | read as | |
+> |---|---|---|
+> | `~2.5 IRON + 8 STANDARD` | **2** | **two things crammed into one cell** |
+> | `1,072 gp 1 sp` | **1** | |
+> | `~100 lb, ~97 gp` | **100** | a **weight** read as a **count** |
+> | `18 sealed (+1 broached)` | 18 | right by luck; the broached flask invisible |
+> | `8 (7 sound, 1 damaged)` | 8 | right by luck — **and the damaged rope is the one that nearly dropped Blartho** |
+>
+> **Three of those were simply wrong.** Now: **one row per `(asset, condition)`, and
+> the `unit` is what forces the split** — you cannot write "2.5 person-weeks of iron
+> and 8 of standard" into a single signed quantity. The unit vocabulary is **closed
+> and tested**, so a typo is a failure rather than a second silent unit.
+
+**AND THE SECOND HALF: ONE FACT, ONE HOME.** Two long-standing duplications are gone,
+and with them the cross-checks that existed only because the duplication did:
+
+| | was | now |
+|---|---|---|
+| **Oil flasks** | counted in `inventory.tsv` *and* derived in `light.tsv`. **Drifted apart twice** | `light.py reserves()` takes `sealed` from the pool. **The disagreement warning is deleted — there is nothing left to disagree with** |
+| **Iron spikes** | a hand-kept "carried" figure beside a separate emplacement log. This is how the ledger showed a phantom negative and needed two correcting rows, the first over-correcting to 7 | **`carried = owned − emplaced`, derived** |
+| **The purse** | computed by `ledger.py` *and* stored in a cell | one home; the cell cross-check is gone |
+
+> **A tool that compares a figure against a copy of itself was never a check — it was
+> an early warning that the design was wrong.** All three warnings are now deleted, and
+> deleting them is the improvement.
+
+**Also: the `weight`/`weight_unit` split in `assets.tsv`, same reasoning, and it has
+teeth in 1e** — DMG Appendix O counts encumbrance in **gp weight, ten to the pound**,
+while every merchant and cart in the fiction talks in **pounds**. The SD barrel is
+**460 lb and 4,600 gp weight**, and the mule-capacity ruling turns on not confusing
+them. And `money.tsv` gained a `unit` column because 1e has five coin types: the day-39
+anchor records *"28 ep off the orc bodies, +14"* and **the electrum survives only in
+that prose**, because the conversion happened before the column existed.
 
 #### 3c · `encounter.tsv` · TODO
 

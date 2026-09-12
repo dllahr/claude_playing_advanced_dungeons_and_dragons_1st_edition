@@ -1,3 +1,38 @@
+# *** RETIRED 2026-09-11. NOTHING HERE IS AUTHORITATIVE. DO NOT READ FACTS OUT
+# *** OF IT AND DO NOT UPDATE IT. It is kept so that older citations -- and
+# *** there are many, in CHECKLIST.md, npcs.md and the commit history -- do not
+# *** point at nothing. See deprecated/README.md.
+#
+# SUPERSEDED BY:
+#     campaign/inventory_log.tsv  + tools/inventory.py   what the party owns
+#     campaign/money.tsv          + tools/ledger.py      the purse
+#     campaign/light.tsv          + tools/light.py       lanterns, oil, torches
+#     campaign/world_changes.tsv  + tools/world.py       gear left in the dungeon
+#
+# WHY. This was the ONE campaign file still edited IN PLACE -- materialised
+# state with no watermark, the only category of thing in this repo that can rot
+# -- and it is the file that rotted five times: the two carts (forty days with
+# no row at all), the two mules, the small goods (357 gp, seventeen days
+# untracked), six ropes (eleven days while the row still said 2), the dragon
+# scales (carried as unsold long after they were sold).
+#
+# AND THE `qty` COLUMN WAS PROSE PRETENDING TO BE A NUMBER. Every tool that read
+# it took the first integer it could find, so:
+#
+#     "~2.5 IRON + 8 STANDARD"   read as 2    <- TWO THINGS IN ONE CELL
+#     "1,072 gp 1 sp"            read as 1
+#     "~100 lb, ~97 gp"          read as 100  <- a WEIGHT read as a COUNT
+#     "18 sealed (+1 broached)"  read as 18   <- the broached flask invisible
+#     "8 (7 sound, 1 damaged)"   read as 8    <- and the damaged rope is the one
+#                                                that nearly dropped Blartho
+#
+# The replacement carries a `unit` column beside every quantity and one row per
+# (asset, condition). The unit is what forces the split.
+#
+# The NOTES in this file are still worth reading as provenance. The NUMBERS are
+# not. The ones that mattered were carried across into inventory_log.tsv and
+# assets.tsv with their notes attached.
+#
 # Party inventory. Edit in place; this is the source of record.
 # Anchored on the verified kit list at the START of expedition 3
 # (transcript line 9219), with expedition-3 changes applied.

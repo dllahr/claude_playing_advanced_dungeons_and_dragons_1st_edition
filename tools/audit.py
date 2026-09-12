@@ -53,10 +53,10 @@ import light as lightmod                                         # noqa: E402
 import world as worldmod                                         # noqa: E402
 import loops as loopmod                                          # noqa: E402
 import ledger as ledgermod                                       # noqa: E402
+import inventory as invmod                                       # noqa: E402
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
-INVENTORY = os.path.join(ROOT, 'campaign', 'inventory.tsv')
 AVAIL = os.path.join(ROOT, 'campaign', 'availability.tsv')
 TESTDIR = os.path.join(HERE, 'tests')
 
@@ -67,35 +67,6 @@ NUM = r'\d[\d,]*(?:\.\d+)?'
 # the truths, each computed by the tool that owns it
 # --------------------------------------------------------------------------
 
-def _inventory_qty(category, item):
-    """First integer in the qty cell of one inventory row, or None.
-
-    The column is `category`, not `kind` -- getting that wrong is why the first
-    run of this tool silently reported no funds, no ropes and no torches
-    instead of failing. A missing truth is worse than a wrong one: it looks
-    like a clean bill.
-    """
-    for r in read_tsv(INVENTORY, missing_ok=True):
-        if r.get('category') == category and r.get('item', '').startswith(item):
-            m = re.search(r'\d+', r.get('qty', ''))
-            return int(m.group()) if m else None
-    return None
-
-
-def _funds_sp():
-    """The purse in silver pieces, so `gp` and `sp` compare cleanly.
-
-    Matched on the EXACT item name: there are two `funds` rows and the other is
-    `gold pieces (licence coin)`, which is 0 and paid.
-    """
-    for r in read_tsv(INVENTORY, missing_ok=True):
-        if r.get('category') == 'funds' and r.get('item', '').strip() == 'gold pieces':
-            q = r.get('qty', '').replace(',', '')
-            gp = re.search(r'(\d+)\s*gp', q)
-            sp = re.search(r'(\d+)\s*sp', q)
-            if gp:
-                return int(gp.group(1)) * 10 + (int(sp.group(1)) if sp else 0)
-    return None
 
 
 def truths(need=None):
@@ -116,16 +87,10 @@ def truths(need=None):
     spikes_in, _ = worldmod.deployed(worldmod.load())
     t['spikes_emplaced'] = (spikes_in.get('iron spike', 0), 'spikes',
                             'tools/world.py deployed')
-    carried = _inventory_qty('tools', 'iron spike')
-    if carried is not None:
-        t['spikes_carried'] = (carried, 'spikes', 'campaign/inventory.tsv')
-
-    ropes = _inventory_qty('tools', 'rope, 50 ft')
-    if ropes is not None:
-        t['ropes'] = (ropes, 'ropes', 'campaign/inventory.tsv')
-    torches = _inventory_qty('light', 'torch')
-    if torches is not None:
-        t['torches'] = (torches, 'torches', 'campaign/inventory.tsv')
+    t['spikes_carried'] = (invmod.carried_spikes(), 'spikes',
+                           'tools/inventory.py carried')
+    t['ropes'] = (invmod.qty('rope_50ft'), 'ropes', 'tools/inventory.py')
+    t['torches'] = (invmod.qty('torch'), 'torches', 'tools/inventory.py')
 
     oil = lightmod.oil_state()
     t['oil_sealed'] = (oil['sealed'], 'flasks', 'tools/light.py oilstate')

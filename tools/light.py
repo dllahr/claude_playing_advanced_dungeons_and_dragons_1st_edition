@@ -82,7 +82,6 @@ from tsvlog import append, read_tsv, today                      # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 LOG = os.path.join(ROOT, 'campaign', 'light.tsv')
-INVENTORY = os.path.join(ROOT, 'campaign', 'inventory.tsv')
 
 TABLE = 'Light sources'          # the heading in rules/exploration.md
 ROUNDS_PER_TURN = 10             # rules/exploration.md, Time: 1 turn = 10 rounds
@@ -579,32 +578,53 @@ def report(src, at_round):
     return '\n'.join(out)
 
 
-def reserves(cat=None, path=None):
+# The asset ids in campaign/assets.tsv that this module prices, and the rules
+# table heading each one burns under.
+_ASSET_FUEL = {'torch': 'Torch', 'oil_flask': 'Lantern (hooded)'}
+_ASSET_UNPRICED = ('candle', 'lantern', 'tinder_box')
+
+
+def reserves(cat=None, path=None, inv_state=None, pool=None):
     """Unburnt fuel the party is CARRYING, priced off the rules table.
 
-    Read from campaign/inventory.tsv, which CHECKLIST.md names as the source of
-    record for what the party carries. Items the rules table does not price
-    (candles) are returned separately rather than counted as nothing.
+    *** THE OIL FLASK COUNT COMES FROM THE OIL POOL, NOT FROM AN INVENTORY
+    CELL. *** It used to come from the old campaign inventory file, so the fact
+    lived in two files -- and they drifted apart TWICE, both times caught only
+    by the disagreement warning this function used to feed. `light.tsv` knows
+    which flasks have been broached, so `sealed` is DERIVED there and there is
+    now nothing left to disagree with.
+
+    Everything else comes from campaign/inventory_log.tsv via tools/inventory.py.
+    Items the rules table does not price (candles, the spare lantern, the tinder
+    box) are returned separately rather than counted as nothing.
     """
+    import inventory as invmod
     cat = cat if cat is not None else catalogue()
-    rows = read_tsv(path or INVENTORY, missing_ok=True)
+    st = inv_state if inv_state is not None else invmod.state()
+    pool = pool if pool is not None else oil_state()
     priced, unpriced = [], []
-    for r in rows:
-        if (r.get('category') or '').strip().lower() != 'light':
+
+    n = pool['sealed'] if pool.get('known') else 0
+    entry = cat['Lantern (hooded)']
+    priced.append(dict(item='oil flask', qty=n, what='Lantern (hooded)',
+                       each_rounds=entry['burn_rounds'],
+                       rounds=n * (entry['burn_rounds'] or 0),
+                       text=entry['text']))
+
+    for asset, what in sorted(_ASSET_FUEL.items()):
+        if asset == 'oil_flask':
             continue
-        item = (r.get('item') or '').strip().lower()
-        qty_txt = (r.get('qty') or '').strip()
-        m = _LEADING_NUM.search(qty_txt)
-        qty = int(m.group(1)) if m else 0
-        if item not in INVENTORY_FUEL:
-            unpriced.append((r.get('item', ''), qty_txt))
-            continue
-        what, _ = INVENTORY_FUEL[item]
+        n = sum(v[0] for v in st.get(asset, {}).values())
         entry = cat[what]
-        priced.append(dict(item=r.get('item', ''), qty=qty, what=what,
+        priced.append(dict(item=asset, qty=int(n), what=what,
                            each_rounds=entry['burn_rounds'],
-                           rounds=qty * (entry['burn_rounds'] or 0),
+                           rounds=int(n) * (entry['burn_rounds'] or 0),
                            text=entry['text']))
+    for asset in _ASSET_UNPRICED:
+        for cond, v in sorted(st.get(asset, {}).items()):
+            if v[0]:
+                unpriced.append(('%s%s' % (asset, (' (%s)' % cond) if cond
+                                           else ''), '%g' % v[0]))
     return priced, unpriced
 
 
@@ -618,8 +638,8 @@ def oil_report(pool, cat=None, inventory=None):
                    'lamps with no pool to draw them from.'
                    % turns(pool['drawn']))
         out.append('  Log `light.py oil <id> --fuel <flasks>` to start '
-                   'counting; until then the flask count in '
-                   'campaign/inventory.tsv is the only record and a top-up '
+                   'counting. Until then NOTHING records the flasks -- the '
+                   'inventory cell that used to is retired -- and a top-up '
                    'silently costs a whole flask.')
         return '\n'.join(out)
     held = pool['sealed'] * cap + pool['broached']
@@ -636,12 +656,10 @@ def oil_report(pool, cat=None, inventory=None):
     if pool['short'] > 1e-9:
         out.append('  *** RAN DRY: %.1f turns could not be supplied. A lamp '
                    'was filled short, not full.' % turns(pool['short']))
-    priced, _ = reserves(cat, inventory)
-    inv = next((p['qty'] for p in priced if 'oil' in p['item'].lower()), None)
-    if inv is not None and inv != pool['sealed']:
-        out.append('  *** DISAGREES WITH campaign/inventory.tsv, which says '
-                   '%d flask(s). The pool is computed from the log and wins; '
-                   'the inventory line wants correcting.' % inv)
+    # The disagreement warning that used to live here is GONE, and its absence
+    # is the point: the flask count had two homes -- this log and an
+    # inventory cell -- and they drifted apart twice. `reserves()` now takes
+    # the count from this pool, so there is nothing left to disagree with.
     return '\n'.join(out)
 
 

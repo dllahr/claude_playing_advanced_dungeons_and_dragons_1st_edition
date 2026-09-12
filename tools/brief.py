@@ -39,6 +39,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from tsvlog import read_tsv                                     # noqa: E402
 import loops as loopmod                                         # noqa: E402
 import ledger as ledgermod                                      # noqa: E402
+import inventory as invmod                                      # noqa: E402
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
@@ -139,6 +140,14 @@ def brief(day=None, touching=None):
         purse.append('')
         purse += ['%-5s %s' % (sev, msg) for sev, msg in problems]
     parts.append('\n'.join(purse))
+
+    gear = [RULE, 'WHAT THE PARTY OWNS  (computed; carried spikes = owned - '
+                  'emplaced)', run(['tools/inventory.py'])]
+    bad = invmod.check()
+    if bad:
+        gear.append('')
+        gear += ['%-5s %s' % (sev, msg) for sev, msg in bad]
+    parts.append('\n'.join(gear))
 
     parts.append(RULE + '\nHIT POINTS\n' + run(['tools/hp.py']))
     parts.append(RULE + '\nEXPERIENCE\n' + run(['tools/xp.py']))

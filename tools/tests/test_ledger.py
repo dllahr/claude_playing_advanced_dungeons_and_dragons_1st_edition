@@ -54,11 +54,17 @@ def test_the_purse_is_computed_not_stored():
     assert ledger.total() == 1072.1
 
 
-def test_the_purse_agrees_with_the_inventory_cell():
-    """That cell is MATERIALISED STATE -- the only kind that can rot -- so it
-    is checked rather than trusted, which is how light.py caught the oil count
-    drifting twice."""
-    assert abs(ledger.inventory_cell() - ledger.total()) < 0.001
+def test_there_is_no_second_copy_of_the_purse_left_to_check_against():
+    """This test used to assert the computed purse matched inventory.tsv's cell.
+
+    **Both the cell and the check are gone, and that is the improvement.** The
+    purse lived in two places, so a cross-check was needed; it now lives in one,
+    and a tool that compares a figure against a copy of itself was never a check
+    -- it was an early warning that the design was wrong. Same reasoning retired
+    light.py's oil disagreement warning in the same commit.
+    """
+    assert not hasattr(ledger, 'inventory_cell')
+    assert ledger.total() == 1072.1
 
 
 def test_an_anchor_supersedes_everything_above_it():
@@ -101,10 +107,21 @@ def test_check_catches_an_asset_id_that_does_not_exist():
     assert any('cartz' in m for m in fails)
 
 
-def test_check_catches_the_purse_disagreeing_with_the_cell():
-    log = [dict(day='1', delta='999', asset=ledger.ANCHOR, reason='')]
-    fails = [m for s, m in ledger.check(log) if s == 'FAIL']
-    assert any('DISAGREES' in m for m in fails)
+def test_check_warns_when_a_good_has_money_but_no_inventory_row():
+    """THE LEG THAT WAS MISSING ALL FIVE TIMES.
+
+    A disposed-of thing gets a ZERO row with provenance, not an absent one: a
+    zero says "sold", an absence says nothing at all -- which is exactly how the
+    dragon scales were carried as unsold for weeks after they had been sold.
+    """
+    log = [dict(day='1', delta='110', asset='dragon_scales', reason='')]
+    warns = [m for s, m in ledger.check(log, ) if s == 'WARN']
+    assert not warns, 'dragon_scales has a zero row, so this must be quiet'
+    log = [dict(day='1', delta='-50', asset='tapestry', reason='')]
+    # tapestry IS held, so also quiet. Use an asset with no inventory row:
+    log = [dict(day='1', delta='-50', asset='salvage_misc', reason='')]
+    warns = [m for s, m in ledger.check(log) if s == 'WARN']
+    assert any('salvage_misc' in m for m in warns)
 
 
 def test_services_are_exempt_from_needing_an_inventory_row():
@@ -186,7 +203,7 @@ def test_log_writes_at_full_width(tmp_path):
                         '--reason', 'iron rations']) == 0
     last = [ln for ln in scratch.read_text().splitlines()
             if ln.strip() and not ln.startswith('#')][-1]
-    assert len(last.split('\t')) == 8
+    assert len(last.split('\t')) == 9   # when day delta unit asset qty cp int reason
     assert read_tsv(str(scratch))[-1]['reason'] == 'iron rations'
 
 

@@ -1,0 +1,119 @@
+# WHAT THE PARTY OWNS -- append-only. QUANTITIES ARE DERIVED: `tools/inventory.py`.
+#
+# Replaces the hand-edited `qty` column of campaign/inventory.tsv, which was the
+# ONE campaign file still edited in place and the one that had rotted five times
+# -- the carts (forty days), the mules, the small goods (357 gp, seventeen days),
+# six ropes (eleven days), the dragon scales.
+#
+# *** WHY THERE IS A `unit` COLUMN -- the player's design, and it is the point ***
+#
+# The old `qty` cell was PROSE PRETENDING TO BE A NUMBER, and every tool that
+# read it took the first integer it could find. Three of those reads were simply
+# wrong and two more hid a fact somebody would have wanted:
+#
+#     "~2.5 IRON + 8 STANDARD"   read as 2    <- two things in one cell
+#     "1,072 gp 1 sp"            read as 1
+#     "~100 lb, ~97 gp"          read as 100  <- a WEIGHT read as a COUNT
+#     "18 sealed (+1 broached)"  read as 18   <- the broached flask invisible
+#     "8 (7 sound, 1 damaged)"   read as 8    <- and the damaged rope is the
+#                                                one that nearly dropped Blartho
+#
+# ONE ROW PER (asset, condition), AND THE UNIT IS WHAT FORCES THE SPLIT. You
+# cannot write "2.5 person-weeks of iron and 8 of standard" into one qty.
+#
+# *** WHAT IS *NOT* IN HERE, AND MUST NOT BE ***
+#
+#   LIGHT SOURCES AND FUEL belong to campaign/light.tsv and tools/light.py.
+#   Lanterns, oil flasks, torches and candles were counted in BOTH places and
+#   the two drifted apart TWICE -- light.py's disagreement warning caught it
+#   both times. Two sources for one fact is the defect this project exists to
+#   remove, so the second one is gone.
+#
+#   WHERE A THING IS IN THE DUNGEON belongs to campaign/world_changes.tsv.
+#   This file records what the party OWNS; `world.py deployed` records what is
+#   emplaced. SPIKES CARRIED = owned - emplaced, derived, never stored.
+#
+# verb: `anchor` sets the (asset, condition) total outright; `move` adds qty,
+# which may be negative. Same shape as hp_log.tsv and money.tsv.
+#
+# Seeded 2026-09-11 at day 77 from inventory.tsv. Anchors rather than a
+# reconstructed history, for the same reason money.tsv anchors at day 39: the
+# old cells record a STATE and not the movements that produced it, and inventing
+# the movements would put false precision into an append-only log.
+when	day	asset	verb	qty	unit	condition	holder	evidence	note
+# ---- tools
+2026-09-11	77	iron_spike	anchor	22	each		spread	world.py deployed	TOTAL OWNED. 13 carried + 9 emplaced in the dungeon. CARRIED IS DERIVED -- do not anchor it here, or the two will drift the way the oil count did. The 9: three jamming the pit trap at (29,31), two holding the (17,13,V) one-way slab open, two each at (23,23,V) and (31,31,V) sealing area 34 since expedition 4
+2026-09-11	77	wooden_spike	anchor	4	each		Tristle
+2026-09-11	77	rope_50ft	anchor	7	each	sound	spread	money.tsv day 67	Six bought day 67 at 4 s.p. plus the one undamaged original. THE ROW SAID 2 FOR ELEVEN DAYS after that purchase
+2026-09-11	77	rope_50ft	anchor	1	each	damaged	spread	exp.6	Sawn on the edge of a canted slab while Blartho was hauled forty feet dead-weight. Chewed more than halfway through about eight feet from one end, core showing. CUT THAT EIGHT FEET OFF and it is 42 ft of sound rope; as it stands IT IS NOT TO BE TRUSTED WITH A PERSON
+2026-09-11	77	mallet	anchor	1	each		Tristle
+2026-09-11	77	ten_foot_pole	anchor	3	each		spread		Two more are floating in the pool below the area 36 pit trap, lost on exp.6 attempt 2. Those are the party below's, not the party's
+2026-09-11	77	mirror	anchor	1	each		Tristle
+2026-09-11	77	thieves_tools	anchor	1	set		Tristle
+2026-09-11	77	joiners_set	anchor	1	set		Ista	articles.md art. 3	She asked for these before she asked for armour. "I can be a second pair of hands on a frame -- and that's a real thing, not a made-up job"
+2026-09-11	77	backpack	anchor	1	each		spread
+2026-09-11	77	keg_spigot	anchor	1	set		spread	money.tsv day 34	Bought day 34 for ~2 gp to decant the SD barrel in the dungeon. NEVER USED -- the barrel came out whole
+2026-09-11	77	cloth_plant	anchor	1	set		Wend's barn	cargo_manifest.md	The Ludbury loom, spindles, cards and dye. THE LOOM IS NARROW, measured day 65, which is what turned the whole venture round
+2026-09-11	77	hackles	anchor	1	set		Dill		Trask handed Dill his own over on day 71. The party's Ludbury hackles are three real grades (d6=5), so Wend bought those right
+# ---- light. THE FLASK COUNT IS NOT HERE: tools/light.py computes sealed oil
+# from campaign/light.tsv, which knows which flasks have been broached. These
+# are the light items that log does NOT count.
+2026-09-11	77	lantern	anchor	2	each	full	Torsat, Yrtone		Both hooded. Hooding does NOT stop the burn -- the party once slept a full night in area 5 and woke down eight hours of oil nobody had counted
+2026-09-11	77	lantern	anchor	1	each	empty	Yrtone	exp.4 turn 156	Out of the area 6 closet. Dry for decades but SOUND -- shutter works, wick and glass intact. Fill it and it lights
+2026-09-11	77	torch	anchor	8	each		spread		6 turns each
+2026-09-11	77	candle	anchor	6	each		spread		Not priced by the rules table
+2026-09-11	77	tinder_box	anchor	1	each		spread
+# ---- food. person-weeks, because that is the unit a trip is planned in
+2026-09-11	77	rations_iron	anchor	2.5	person-week		spread		ESTIMATE, and flagged as one. 18 person-weeks were bought day 34; roughly 15 went on expedition 7, the Draycot ride and the southern haul. The old cell said "~2.5" and gave no working
+2026-09-11	77	rations_std	anchor	2	person-week		spread	money.tsv day 67	ESTIMATE. Eight person-weeks bought day 67 (24 gp); expedition 8 was ~14 people over three days, about six person-weeks. *** THE OLD CELL SAID "~2.5 IRON + 8 STANDARD bought day 67" -- WHICH RECORDED THE PURCHASE, NOT THE REMAINDER, and read as the number 2 to every tool. That ambiguity is why this column has a unit ***
+2026-09-11	77	waterskin	anchor	7	each		one each		Water is also available from the Room of Pools
+# ---- armour
+2026-09-11	77	banded_mail	anchor	4	each		spread
+2026-09-11	77	banded_mail	anchor	2	each	worn	Hask, Dellie	cargo_manifest.md	180 gp at Ludbury. NOT FREIGHT and never was -- worn home
+2026-09-11	77	leather_armour	anchor	2	each		spread		One is Ista's, bought day 39. She asked for leather, not mail: "I'd be no use and I'd be slow"
+2026-09-11	77	shield_large	anchor	2	each		spread
+2026-09-11	77	shield_large	anchor	2	each	issued	spread	salvage	Off the bandits, expedition 4
+2026-09-11	77	shield_small	anchor	2	each		spread
+# ---- arms
+2026-09-11	77	long_sword	anchor	3	each		Dave, Torsat, Tristle
+2026-09-11	77	short_sword	anchor	1	each		Hask
+2026-09-11	77	flail	anchor	3	each		Yrtone, Blartho, Dellie	rules/combat.md	Dellie's bought day 45 for 3 gp. THE CLERIC EDGED-WEAPON PROHIBITION took her spear on day 39 and handed her the correct weapon for the first fight she ever walked into
+2026-09-11	77	mace	anchor	1	each		spread	salvage
+2026-09-11	77	spear	anchor	3	each		spread		Hask's is the one that matters: he fights from the SECOND RANK in the standing formation
+2026-09-11	77	short_bow	anchor	3	each		spread
+2026-09-11	77	arrows	anchor	48	each		spread
+2026-09-11	77	arrows	anchor	1	quiver		spread	salvage	A quiver of unknown count off the bandits. COUNT IT before anyone relies on it
+2026-09-11	77	sling	anchor	4	each		spread		Hask and Dellie both declined short bows on day 39 and kept these
+2026-09-11	77	sling_bullet	anchor	30	each		spread		Approximate in the old cell and approximate here. Nobody has counted them
+2026-09-11	77	dart	anchor	15	each		Ista		1-3 damage, and HALVED against skeletons -- so mostly 1 point a throw
+2026-09-11	77	dagger	anchor	8	each		spread	money.tsv day 34	Five bought day 34 plus three older. CLERICS GET NONE: PHB p.20 forbids edged and pointed weapons
+2026-09-11	77	hand_axe	anchor	1	each		Ista
+# ---- beasts and vehicles
+2026-09-11	77	cart	anchor	2	each		Wethersby	money.tsv	50 gp each, days 19-20. *** FORTY DAYS WITH NO ROW AT ALL, found by the player *** One goes to Draycot and two south; the second is with the wool party until about day 83
+2026-09-11	77	mule	anchor	2	each		Wethersby		Day 17 and days 19-20. HALM'S MULE IS NOT ONE OF THESE -- his was day-4 restitution and is his
+2026-09-11	77	horse_riding	anchor	2	each		Wethersby		THE PARTY'S, assigned to Hask and Dellie for the caravan. Player-corrected: they are not theirs
+# ---- treasure, salvage and oddments
+2026-09-11	77	ring_plain	anchor	1	each		Frython	npcs.md	Out of the area 27 dais recess. REGISTERS MAGIC on the day-4 detect -- the only thing in the whole haul that did. Unidentified; the only lead is Wraye, three days east of Ludbury
+2026-09-11	77	tapestry	anchor	1	each		spread
+2026-09-11	77	comb_silver	anchor	1	each		spread
+2026-09-11	77	perfume	anchor	2	each		spread
+2026-09-11	77	holy_symbol	anchor	2	each		Yrtone, Blartho		Dellie needs one. She has been a cleric since day 39
+2026-09-11	77	garlic	anchor	1	each		spread
+2026-09-11	77	books	anchor	1	each		Toller's shop		On the same open terms as the diary
+2026-09-11	77	papers	anchor	1	bundle		Toller's shop		The area 6 papers. Toller does the 86-marks date-work himself
+2026-09-11	77	chemicals	anchor	40	each	unidentified	Wend's barn	calendar.md day 71	Taken day 70. Toller handed them off entirely: "forty jars nobody can name isn't forty things, it's one thing and the thing is 'unknown'... forty of anything isn't curio, it's STOCK. That's Wend's." FOR TREBB THE DYER at Marchford
+# ---- GONE. Zero rows, not absent rows. An asset that money moved for and then
+# vanished from the record is exactly the shape of the dragon scales, which were
+# carried as unsold for weeks after they had been sold. A zero with provenance
+# says "disposed of"; an absence says nothing at all, and ledger.py check now
+# WARNS on the difference.
+2026-09-11	77	small_goods	anchor	0	each		-	money.tsv day 59	THE LINE IS CLOSED: 573 gp on 357 gp of cost, a 60% return over 32 days. The last of it to OSSERY the mercer at Marchford, sold by Hask, who held his number through two silences
+2026-09-11	77	dye	anchor	0	each		-	money.tsv day 59	All of it to TREBB at cost, 40 gp, cash -- and reaction 41, because at cost is a discount and a discount is a gift wearing a trade's clothes
+2026-09-11	77	realgar	anchor	0	each		-	money.tsv day 59	Named by Trebb in a dyer's yard with nobody exposed, sold 35 gp to the church's limner
+2026-09-11	77	lab_glass	anchor	0	each		-	money.tsv day 65	Toller's full ~250 gp valuation, paid on Wace's receipt
+2026-09-11	77	ale_barrel_sd	anchor	0	each		-	money.tsv day 71	To HOLT at the inn, 58 gp: 30 in coin and 28 still owing in his own hand against the cask. Loop L010
+2026-09-11	77	dragon_scales	anchor	0	each		-	encounters.tsv:42	Sold day 19 for 110 gp. *** CARRIED AS UNSOLD FOR WEEKS AFTER, and the player found it ***
+2026-09-11	77	rosewood	anchor	0	each		-	cargo_manifest.md	350 gp at Ludbury less the 10% foreigner's tax. THE PARTY'S ALONE, not the venture's
+2026-09-11	77	iron_salt	anchor	0	each		-	articles.md	Sold to the district AT COST with the price visible -- and the fourth finding is that laid down it had cost nearer 160, so this was the largest single gift in the campaign
+2026-09-11	77	tool_line	anchor	0	each		-	cargo_manifest.md	Fenn's list, 136 gp. Hask owns a ring-fenced seventh of THIS LINE and no other -- about four pair of shears and a bit
+2026-09-11	77	lab_glass_bulky	anchor	0	each		-	world_changes.tsv	Out of the hill on day 70 and with TOLLER since day 71 on open terms -- his room, his pace, paid when sold. Not the party's to count

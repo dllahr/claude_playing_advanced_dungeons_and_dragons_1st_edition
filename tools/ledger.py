@@ -30,13 +30,18 @@ WHAT `check` VERIFIES
 
   1. every `asset` resolves to `campaign/assets.tsv`;
   2. no row has a zero or missing delta;
-  3. a physical good that money moved for has a row in `inventory.tsv` -- the
-     **leg that was missing every one of the five times.** Services are exempt
-     by kind, which is what the service ids in `assets.tsv` are for;
-  4. the computed purse agrees with the cell in `inventory.tsv`. That cell is
-     MATERIALISED STATE and is the only thing here that can rot, so it is
-     checked rather than trusted -- the same mechanism by which `light.py`
-     caught the oil count drifting twice.
+  3. a physical good that money moved for has a row in
+     `campaign/inventory_log.tsv` -- the **leg that was missing every one of
+     the five times.** A disposed-of thing gets a ZERO row with provenance, not
+     an absent one: a zero says "sold"; an absence says nothing at all, which
+     is precisely how the dragon scales were carried as unsold for weeks after
+     they had been sold. Services are exempt by kind, which is what the service
+     ids in `assets.tsv` are for.
+
+There is deliberately NO purse-versus-inventory-cell cross-check any more. That
+check existed because the purse lived in two places; it now lives in one, and a
+tool that compared a figure against a copy of itself was never a check -- it was
+an early warning that the design was wrong.
 """
 import argparse
 import os
@@ -49,7 +54,6 @@ from tsvlog import read_tsv                                      # noqa: E402
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 LOG = os.path.join(ROOT, 'campaign', 'money.tsv')
 ASSETS = os.path.join(ROOT, 'campaign', 'assets.tsv')
-INVENTORY = os.path.join(ROOT, 'campaign', 'inventory.tsv')
 
 # `anchor` is not an asset; it is the verb that sets the purse outright.
 ANCHOR = 'anchor'
@@ -94,29 +98,23 @@ def gp_sp(v):
     return '%s%s gp%s' % (neg, '{:,}'.format(g), (' %d sp' % s) if s else '')
 
 
-def inventory_cell():
-    """The purse as inventory.tsv states it -- materialised state, checkable."""
-    for r in read_tsv(INVENTORY, missing_ok=True):
-        if r.get('category') == 'funds' and r.get('item', '').strip() == 'gold pieces':
-            q = r.get('qty', '').replace(',', '')
-            g = re.search(r'(\d+)\s*gp', q)
-            s = re.search(r'(\d+)\s*sp', q)
-            if g:
-                return int(g.group(1)) + (int(s.group(1)) / 10.0 if s else 0.0)
-    return None
+def held_assets():
+    """Asset ids the party actually holds -- the other leg of the double entry.
 
-
-def inventory_items():
-    """{item name lowercased: qty cell} -- the other leg of the double entry."""
-    return {r.get('item', '').strip().lower(): r.get('qty', '')
-            for r in read_tsv(INVENTORY, missing_ok=True)}
+    Comes from campaign/inventory_log.tsv. It used to come from a name match
+    against inventory.tsv's prose item column, which is why this was the weaker
+    half of the check: matching "rope, 50 ft" against "rope_50ft" by stem is a
+    guess, and a guess cannot be a constraint.
+    """
+    import inventory as invmod
+    return set(invmod.state())
 
 
 def check(log=None, ass=None):
     """[(severity, message)]. Empty means the ledger hangs together."""
     log = log if log is not None else rows()
     ass = ass if ass is not None else assets()
-    inv = inventory_items()
+    held = held_assets()
     out = []
 
     for i, r in enumerate(log, 1):
@@ -144,22 +142,13 @@ def check(log=None, ass=None):
             continue
         if ass[a].get('kind') in SERVICE_KINDS:
             continue
-        name = ass[a].get('name', '').lower()
-        stem = re.split(r'[,(\-]', name)[0].strip()
-        if not any(stem and stem in k for k in inv):
-            out.append(('WARN', 'asset %r (%s) has money against it but no '
-                                'inventory row matching %r. THIS IS THE LEG '
-                                'THAT WAS MISSING ALL FIVE TIMES.'
-                        % (a, ass[a].get('kind'), stem)))
-
-    cell, computed = inventory_cell(), total(log)
-    if cell is None:
-        out.append(('WARN', 'inventory.tsv states no purse to check against'))
-    elif abs(cell - computed) > 0.001:
-        out.append(('FAIL', 'THE PURSE DISAGREES. money.tsv computes %s; '
-                            'inventory.tsv states %s. The LOG wins -- correct '
-                            'the cell, or append the movement that is missing.'
-                    % (gp_sp(computed), gp_sp(cell))))
+        if a not in held:
+            out.append(('WARN', 'asset %r (%s) has money against it but NO ROW '
+                                'in campaign/inventory_log.tsv. THIS IS THE LEG '
+                                'THAT WAS MISSING ALL FIVE TIMES. If the thing '
+                                'was consumed or sold on, log the movement that '
+                                'took it away rather than leaving it absent.'
+                        % (a, ass[a].get('kind'))))
     return out
 
 
