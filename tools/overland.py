@@ -178,7 +178,81 @@ def road_between(a, b):
     return None
 
 
-def render(scale_mi=4, pts=None, true=False, kn=None):
+ASPECT = 2.0        # a terminal character is about twice as tall as it is wide
+
+
+def _fit(pts, width, height=None, margin=2):
+    """Miles per column so the map fills `width`, honouring the aspect ratio.
+
+    If `height` is given the map is fitted into the BOX, which letterboxes
+    horizontally -- this world is half as wide as it is tall, so filling the
+    width makes a long map. That is the honest shape of it.
+    """
+    xs = [v[0] for v in pts.values()]
+    ys = [v[1] for v in pts.values()]
+    span_x = max((max(xs) - min(xs)) / MILE, 1.0)
+    span_y = max((max(ys) - min(ys)) / MILE, 1.0)
+    by_w = span_x / max(width - margin * 2 - 1, 1)
+    if height is None:
+        return by_w
+    by_h = span_y / (max(height - margin - 1, 1) * ASPECT)
+    return max(by_w, by_h)
+
+
+def _road_char(dx, dy):
+    if dx == 0:
+        return '|'
+    if dy == 0:
+        return '-'
+    return '\\' if (dx > 0) == (dy > 0) else '/'
+
+
+def _place_label(grid, cy, cx, text):
+    """Write `text` near (cy,cx) wherever it fits. Returns True if it landed.
+
+    The first renderer wrote labels straight onto the grid and they collided --
+    Wettleford over Marrow's, both over WETHERSBY, and the origin of the whole
+    map vanished under somebody's holding. This tries four sides and gives up
+    honestly rather than overwriting.
+    """
+    rows, cols = len(grid), len(grid[0])
+
+    def free(y, x0, n):
+        if not (0 <= y < rows and 0 <= x0 and x0 + n <= cols):
+            return False
+        return all(grid[y][x0 + i] == ' ' for i in range(n))
+
+    n = len(text) + 1
+    spots = [(cy, cx + 2), (cy, cx - n - 1)]
+    for dy in (-1, 1, -2, 2, -3, 3):
+        for dx in (1, 2, 3, -n, -n - 1, -n - 2, 0):
+            spots.append((cy + dy, cx + dx))
+    for y, x0 in spots:
+        if free(y, x0, n):
+            for i, ch in enumerate(text):
+                grid[y][x0 + i] = ch
+            return True
+    return False
+
+
+def crop(pts, centre, radius_mi):
+    """Only what lies within `radius_mi` of `centre`. THE ZOOM.
+
+    The party's world is about 38 miles wide and 146 tall, so filling 120
+    columns with the whole of it honestly gives a map 200 rows deep and mostly
+    road. Cropping is what makes a wide terminal pay: the hundred at 30 miles
+    across puts the crag, the basecamp and the cave mouth in separate columns.
+    """
+    if centre not in pts:
+        return pts
+    cx, cy, _ = pts[centre]
+    r = radius_mi * MILE
+    return {k: v for k, v in pts.items()
+            if math.hypot(v[0] - cx, v[1] - cy) <= r}
+
+
+def render(scale_mi=None, pts=None, true=False, kn=None,
+           width=120, height=None, labels=True, all_pts=None):
     """The PARTY'S map by default. `true` is the DM's.
 
     *** THE DEFAULT MATTERS AND IT IS NOT DECORATION. *** A map is the easiest
@@ -187,8 +261,10 @@ def render(scale_mi=4, pts=None, true=False, kn=None):
     so a `heard` place is a name in the margin and nothing else.
     """
     pts = pts if pts is not None else points()
+    # Distances in the legend are always FROM WETHERSBY, which a crop may have
+    # cut out -- the crag at a 4-mile radius does not contain the town.
+    all_pts = all_pts if all_pts is not None else points()
     kn = kn if kn is not None else knowledge()
-    scale = scale_mi * MILE
     real = {k: v for k, v in pts.items()
             if (v[2].get('kind') or '') not in ('region', 'hundred')}
     if not true:
@@ -197,13 +273,19 @@ def render(scale_mi=4, pts=None, true=False, kn=None):
     if not real:
         return 'the party has been nowhere yet'
 
+    # Reserve room for the longest NAME before choosing the scale, or a place
+    # at the eastern edge has nowhere to put its label and the map has to report
+    # that it gave up -- which it did, for Marrow's holding and Ede's cottage.
+    pad = max(len(v[2]['name']) for v in real.values()) + 3
+    scale = (scale_mi if scale_mi
+             else _fit(real, max(width - pad, 20), height)) * MILE
+    rowft = scale * ASPECT
     xs = [v[0] for v in real.values()]
     ys = [v[1] for v in real.values()]
-    x0, x1 = min(xs) - scale * 2, max(xs) + scale * 2
-    y0, y1 = min(ys) - scale * 2, max(ys) + scale * 2
-    rowft = scale * 2
-    cols = int((x1 - x0) / scale) + 1
-    rows = int((y1 - y0) / rowft) + 1
+    x0 = min(xs) - scale * 2
+    y0 = min(ys) - rowft
+    cols = int((max(xs) + scale * 2 - x0) / scale) + 1 + pad
+    rows = int((max(ys) + rowft - y0) / rowft) + 1
     grid = [[' '] * cols for _ in range(rows)]
 
     def cell(x, y):
@@ -215,69 +297,101 @@ def render(scale_mi=4, pts=None, true=False, kn=None):
             if a_ not in real or b_ not in real:
                 continue
             (ax, ay), (bx, by) = cell(*pts[a_][:2]), cell(*pts[b_][:2])
+            ch = _road_char(bx - ax, by - ay)
             steps = max(abs(bx - ax), abs(by - ay)) or 1
             for i in range(steps + 1):
                 cx = ax + int(round((bx - ax) * i / steps))
                 cy = ay + int(round((by - ay) * i / steps))
                 if grid[cy][cx] == ' ':
-                    grid[cy][cx] = ('|' if abs(bx - ax) < abs(by - ay)
-                                    else ('-' if by == ay else '\\'))
+                    grid[cy][cx] = ch
 
-    keys, shared = {}, []
-    for n, (pid, (x, y, r)) in enumerate(
-            sorted(real.items(), key=lambda kv: (-kv[1][1], kv[1][0]))):
-        keys[pid] = chr(ord('a') + n) if n < 26 else '+'
+    order = sorted(real.items(), key=lambda kv: (-kv[1][1], kv[1][0]))
+    at, unlabelled = {}, []
+    for pid, (x, y, r) in order:
         cx, cy = cell(x, y)
-        if grid[cy][cx] not in ' -|\\':
-            shared.append(pid)
-        else:
-            grid[cy][cx] = keys[pid]
+        g = GLYPH.get(r.get('kind') or '', '+')
+        if grid[cy][cx] not in ' -|\\/':
+            at.setdefault((cy, cx), []).append(pid)
+            continue
+        grid[cy][cx] = g
+        at.setdefault((cy, cx), []).append(pid)
 
-    out = ['THE %s MAP -- %d miles a column, %d a row. Wethersby is the origin.'
-           % ('DM\'S TRUE' if true else "PARTY'S", scale_mi, scale_mi * 2), '']
-    out += ['   ' + ''.join(r).rstrip() for r in grid]
-    out += ['', '%-4s %-22s %-9s %-7s %8s  %-11s %s'
-            % ('key', 'place', 'kind', 'they', 'miles', 'bearing', 'from Wethersby')]
-    for pid, (x, y, r) in sorted(real.items(), key=lambda kv: (-kv[1][1],
-                                                              kv[1][0])):
-        m = miles('wethersby', pid, pts)
+    if labels:
+        for pid, (x, y, r) in order:
+            cx, cy = cell(x, y)
+            here = at.get((cy, cx), [])
+            if here and here[0] != pid:
+                continue                       # the sharer names the cell
+            mark = '~' if level_of(pid, kn) == VAGUE else ''
+            text = mark + r['name'] + (
+                '' if not true or r.get('fix') == 'attested' else '?')
+            if len(here) > 1:
+                text += ' +%d' % (len(here) - 1)
+            if not _place_label(grid, cy, cx, text):
+                unlabelled.append(r['name'])
+
+    mi = scale / MILE
+    # An adaptive bar. A fixed "10 miles" ran off the edge at the crag, where a
+    # column is fifty feet, and would have been a single character out at the
+    # whole-world zoom.
+    want = cols * mi * 0.3
+    steps = [1 / 52.8, 5 / 52.8, 10 / 52.8, 0.25, 0.5, 1, 2, 5, 10, 20, 50, 100]
+    step = min(steps, key=lambda v: abs(math.log(v / max(want, 1e-6))))
+    bar = max(3, min(cols, int(round(step / mi))))
+    label = ('%d mile%s' % (round(step), '' if round(step) == 1 else 's')) if step >= 1 else (
+        '%g mile' % step if step >= 0.25 else '%d ft' % round(step * MILE))
+    head = [
+        '%s -- %s' % ('THE TRUE MAP  (DM ONLY)' if true else "THE PARTY'S MAP",
+                      'computed from campaign/places.tsv'),
+        'N is up, E is right.  %.2f miles a column, %.2f a row -- THE ASPECT '
+        'IS HONEST.  Wethersby is the origin.' % (mi, mi * ASPECT),
+        '|' + '-' * (bar - 2) + '|  ' + label,
+        '',
+    ]
+    body = [''.join(r).rstrip() for r in grid]
+
+    leg = ['', '%-3s %-22s %-9s %-7s %7s  %-11s %s'
+           % ('', 'place', 'kind', 'they', 'miles', 'bearing', 'time by cart')]
+    for pid, (x, y, r) in order:
+        m = miles('wethersby', pid, all_pts)
         lv = level_of(pid, kn)
+        lo, hi = days_range(m, 'cart')
         note = ''
         if lv == VAGUE:
             p_ft = (kn.get(pid, {}).get('precision_ft') or '').strip()
             if p_ft:
                 v = float(p_ft)
-                note = ('  ~ within %s' % ('%g mi' % (v / MILE) if v >= MILE
-                                           else '{:,} ft'.format(int(v))))
-            else:
-                note = '  ~'
+                note = '   ~ within %s' % ('%g mi' % (v / MILE) if v >= MILE
+                                           else '{:,} ft'.format(int(v)))
         if true and r.get('fix') != 'attested':
             note += '   <- %s' % r.get('fix')
-        out.append('%-4s %-22s %-9s %-7s %8.0f  %-11s %.1f d by cart%s'
-                   % (keys[pid], r['name'], r.get('kind', ''), lv, m,
-                      bearing('wethersby', pid, pts) if pid != 'wethersby'
-                      else '--', days(m), note))
+        leg.append('%-3s %-22s %-9s %-7s %7.0f  %-11s %.1f-%.1f d%s'
+                   % (GLYPH.get(r.get('kind') or '', '+'), r['name'],
+                      r.get('kind', ''), lv, m,
+                      bearing('wethersby', pid, all_pts)
+                      if pid != 'wethersby' else '--', lo, hi, note))
 
+    tail = []
     heard = sorted(k for k in pts
                    if level_of(k, kn) == HEARD and k in entmod.places())
     if heard and not true:
-        out += ['', 'HEARD OF, AND NOT PLACED -- they could not put these on a '
-                    'map and this tool will not pretend otherwise:']
+        tail += ['', 'HEARD OF, AND NOT PLACED -- they could not put these on a '
+                     'map, and this tool will not pretend otherwise:']
         for k in heard:
-            out.append('     %-20s %s' % (entmod.places()[k]['name'],
-                                          (kn[k].get('how') or '')[:70]))
-    if shared:
-        out += ['', 'sharing a cell at this scale: %s'
-                % ', '.join(real[p][2]['name'] for p in shared)]
-    if true:
-        out += ['', '*** DM MAP. Positions are EXACT; "<- call" means the record '
-                    'establishes neither bearing nor distance and the position '
-                    'is mine. A call is not canon.']
-    else:
-        out += ['', 'The party\'s own map. "~" is a place they could not put a '
-                    'pin in and would not bet on. Run with --true for the world '
-                    'as it is.']
-    return '\n'.join(out)
+            tail.append('    %-18s %s' % (entmod.places()[k]['name'],
+                                          (kn[k].get('how') or '')[:88]))
+    dupes = [v for v in at.values() if len(v) > 1]
+    if dupes:
+        tail += ['', 'sharing a cell at this scale: ' + '; '.join(
+            ', '.join(entmod.places()[p]['name'] for p in v) for v in dupes)]
+    if unlabelled:
+        tail += ['', 'no room for a label beside: ' + ', '.join(unlabelled)]
+    tail += ['', ('*** DM MAP. Positions are EXACT. "?" and "<- call" mean the '
+                  'record establishes neither bearing nor distance and the '
+                  'position is mine; a call is not canon.') if true else
+             ('The party\'s own map. "~" marks a place they could not put a pin '
+              'in. Run with --true for the world as it is.')]
+    return '\n'.join(head + body + leg + tail)
 
 
 def check(pts=None, kn=None):
@@ -408,7 +522,21 @@ def build_parser():
     p = argparse.ArgumentParser(
         prog='overland.py',
         description='The land above ground. The PARTY\'S map by default.')
-    p.add_argument('--scale', type=int, default=8, help='miles per column')
+    p.add_argument('--width', type=int, default=120,
+                   help='fill this many columns (default 120)')
+    p.add_argument('--height', type=int,
+                   help='BOX it into this many rows as well. Without it the map '
+                        'fills the width and runs as deep as the aspect '
+                        'demands -- this world is far taller than it is wide, '
+                        'so the whole of it at 120 columns is ~200 rows. '
+                        '--around is usually the better answer')
+    p.add_argument('--scale', type=float,
+                   help='miles per column, overriding the fit')
+    p.add_argument('--no-labels', action='store_true')
+    p.add_argument('--around', help='CROP to a radius of this place -- the '
+                                    'zoom, and what makes a wide terminal pay')
+    p.add_argument('--miles', type=float, default=30,
+                   help='the crop radius, with --around (default 30)')
     p.add_argument('--true', action='store_true',
                    help='THE DM\'S MAP. Shows places the party has never heard '
                         'of. Not to be shown at the table')
@@ -495,7 +623,15 @@ def main(argv=None):
                                      (kn.get(pid, {}).get('how') or '')[:62]))
         return 0
 
-    print(render(a.scale, pts, true=a.true, kn=kn))
+    shown = pts
+    if a.around:
+        cid = entmod.resolve(a.around, entmod.places())
+        if cid is None:
+            print('no place %r' % a.around, file=sys.stderr)
+            return 1
+        shown = crop(pts, cid, a.miles)
+    print(render(a.scale, shown, true=a.true, kn=kn, width=a.width,
+                 height=a.height, labels=not a.no_labels))
     return 0
 
 

@@ -31,6 +31,18 @@ import overland                                                   # noqa: E402
 import entities                                                   # noqa: E402
 
 
+def map_body(out):
+    """The grid only -- between the scale bar and the legend.
+
+    Splitting on a blank line does NOT work: the grid has blank ROWS in it, and
+    a render whose first row happened to be empty measured as two lines tall.
+    """
+    lines = out.split('\n')
+    start = next(i for i, l in enumerate(lines) if l.startswith('|-')) + 1
+    end = next(i for i, l in enumerate(lines) if l.lstrip().startswith('place'))
+    return [l for l in lines[start:end - 1]]
+
+
 # ------------------------------------------------------- the true map
 
 def test_the_live_map_agrees_with_every_stated_travel_time():
@@ -195,3 +207,94 @@ def test_the_frame_records_a_rotation_even_though_it_is_zero():
 
 def test_every_frame_sits_at_a_place_that_exists():
     assert [m for s, m in overland.check() if 'frame' in m and s == 'FAIL'] == []
+
+
+# ----------------------------------------------------------- the renderer
+
+def test_it_fills_the_requested_width():
+    """The ask was ~120 columns, so an UNCONSTRAINED render fills the width.
+
+    Give it a height as well and the aspect binds instead: this world is about
+    38 miles wide and 146 tall, so boxing it into a screen makes it narrow and
+    tall -- which is the honest shape and not a bug. That is what
+    `test_a_height_boxes_it_instead` is for.
+    """
+    for w in (80, 120, 160):
+        out = overland.render(width=w)
+        # The MAP body only. The legend and the heard-of notes are prose and
+        # wrap where the terminal wraps them; the grid is what has a width.
+        body = map_body(out)
+        widest = max((len(l) for l in body), default=0)
+        assert widest <= w, ('render(width=%d) drew %d columns' % (w, widest))
+        assert widest >= w * 0.8, (
+            'render(width=%d) drew only %d columns -- with no height cap it is '
+            'meant to FILL the width, and room reserved for labels is not an '
+            'excuse for a fifth of it' % (w, widest))
+
+
+def test_a_height_boxes_it_instead():
+    """And then the aspect binds, which is the honest shape of a long world."""
+    rows = map_body(overland.render(width=120, height=46))
+    assert len(rows) <= 48, len(rows)
+    assert len(map_body(overland.render(width=120))) > len(rows), (
+        'without a height cap the map should run deeper, not the same')
+
+
+def test_the_aspect_is_honest_and_says_so():
+    """A row must cover TWICE the miles of a column, because a terminal
+    character is about twice as tall as it is wide. Stretching one axis to make
+    a long world look compact would be the most convincing kind of lie a map
+    can tell."""
+    assert overland.ASPECT == 2.0
+    out = overland.render(width=120, height=46)
+    assert 'THE ASPECT IS HONEST' in out
+    head = [l for l in out.split('\n') if 'miles a column' in l][0]
+    import re
+    col = float(re.search(r'([\d.]+) miles a column', head).group(1))
+    row = float(re.search(r'([\d.]+) a row', head).group(1))
+    assert abs(row - col * overland.ASPECT) < 0.02, (col, row)
+
+
+def test_every_place_shown_gets_a_label():
+    """The renderer reserves room for the longest NAME before choosing a scale.
+
+    Without that, a place at the eastern edge has nowhere to put its label and
+    the map has to report that it gave up -- which it did, for Marrow's holding
+    and Ede's cottage, until the margin was reserved.
+    """
+    out = overland.render(width=120, height=46)
+    assert 'no room for a label' not in out
+    for name in ("Marrow's holding", "Ede's cottage", 'Wethersby', 'Ludbury'):
+        assert name in out.split('    place')[0], name
+
+
+def test_the_scale_bar_adapts_to_the_zoom():
+    """A fixed "10 miles" ran off the edge at the crag, where a column is fifty
+    feet, and would have been one character at the whole-world zoom."""
+    wide = overland.render(width=120, height=46)
+    close = overland.render(pts=overland.crop(overland.points(),
+                                              'crag_turning', 4), width=120)
+    def bar(out):
+        return [l for l in out.split('\n') if l.startswith('|-')][0]
+    assert bar(wide) != bar(close)
+    assert len(bar(wide)) < 120 and len(bar(close)) < 130
+
+
+def test_crop_is_the_zoom_and_keeps_distances_from_wethersby():
+    """A 4-mile crop of the crag does NOT contain Wethersby, and the legend
+    still has to measure from it -- which it got wrong the first time and
+    crashed on."""
+    near = overland.crop(overland.points(), 'crag_turning', 4)
+    assert 'wethersby' not in near
+    assert {'crag_turning', 'basecamp', 'cave_mouth'} <= set(near)
+    out = overland.render(pts=near, width=120)
+    assert 'the crag turning' in out
+    assert '20  north' in out or ' 20 ' in out      # still measured from town
+
+
+def test_crop_respects_the_party_layer():
+    """Cropping must not become a back door onto places they have not been."""
+    around = overland.crop(overland.points(), 'ludbury', 90)
+    assert 'wraye' in around
+    assert 'Wraye' not in overland.render(pts=around, width=120).split(
+        'HEARD OF')[0]
