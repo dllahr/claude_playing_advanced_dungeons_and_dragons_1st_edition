@@ -560,3 +560,12 @@ when	map	exped	turn	level	scope	target	change	item	qty	who	note
 2026-09-13	b1	9	2	1	seen	13,32	revert			party	RETRACTED 2026-09-13. Marked seen on day 79 from (14,34) and then from (13,34), through an opening at (13,34,V) THAT IS NOT ON THE PAGE. The party never crossed into the x=13 corridor and has still never seen any of it. Map corrected in mapdb/b1_corrections.tsv
 2026-09-13	b1	9	2	1	seen	13,31	revert			party	RETRACTED 2026-09-13. Marked seen on day 79 from (14,34) and then from (13,34), through an opening at (13,34,V) THAT IS NOT ON THE PAGE. The party never crossed into the x=13 corridor and has still never seen any of it. Map corrected in mapdb/b1_corrections.tsv
 2026-09-13	b1	9	2	1	seen	12,35	revert			party	RETRACTED 2026-09-13. Marked seen on day 79 from (14,34) and then from (13,34), through an opening at (13,34,V) THAT IS NOT ON THE PAGE. The party never crossed into the x=13 corridor and has still never seen any of it. Map corrected in mapdb/b1_corrections.tsv
+2026-09-13	b1	9	2	1	seen	15,35	yes			party	Day 79: walked east along y=35 from the gap at (14,35). Ten-foot corridor, dressed stone, unbroken both sides
+2026-09-13	b1	9	2	1	seen	16,35	yes			party	Day 79: walked east along y=35 from the gap at (14,35). Ten-foot corridor, dressed stone, unbroken both sides
+2026-09-13	b1	9	2	1	seen	17,35	yes			party	Day 79: walked east along y=35 from the gap at (14,35). Ten-foot corridor, dressed stone, unbroken both sides
+2026-09-13	b1	9	2	1	seen	18,35	yes			party	Day 79: walked east along y=35 from the gap at (14,35). Ten-foot corridor, dressed stone, unbroken both sides
+2026-09-13	b1	9	2	1	seen	19,35	yes			party	Day 79: walked east along y=35 from the gap at (14,35). Ten-foot corridor, dressed stone, unbroken both sides
+2026-09-13	b1	9	2	1	seen	20,35	yes			party	Day 79: in Ista's lantern light from (19,35) -- the corridor runs on east, and a ten-foot bay opens north to a DOOR
+2026-09-13	b1	9	2	1	seen	21,35	yes			party	Day 79: in Ista's lantern light from (19,35) -- the corridor runs on east, and a ten-foot bay opens north to a DOOR
+2026-09-13	b1	9	2	1	seen	22,35	yes			party	Day 79: in Ista's lantern light from (19,35) -- the corridor runs on east, and a ten-foot bay opens north to a DOOR
+2026-09-13	b1	9	2	1	seen	19,36	yes			party	Day 79: in Ista's lantern light from (19,35) -- the corridor runs on east, and a ten-foot bay opens north to a DOOR

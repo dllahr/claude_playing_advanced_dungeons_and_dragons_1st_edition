@@ -652,3 +652,34 @@ feature	4	30	-	none	dl+claude	area 11: same hatching, same ruling
 feature	5	29	-	none	dl+claude	area 11: same hatching, same ruling
 feature	5	30	-	none	dl+claude	area 11: same hatching, same ruling
 edge	13	34	V	wall	dl+claude	THE WEST OPENING THAT WAS NOT THERE. The x=13 and x=14 corridors run parallel from y=30 to y=38 and NEVER connect; the classifier read this one boundary as open (thick=5) while calling its identical neighbours wall. Measured ink 0.49 -- the walls above and below it measure 0.49-0.74 and the genuinely open boundaries on this corridor measure 0.14-0.17. Found 2026-09-13 by the player, in play, after the DM narrated an opening and the party walked through it.
+#
+# --- THE THIRTEEN STAIRCASES THAT ARE DOORS, x16-22 y36-40 ---------------------
+# Found 2026-09-13 with the party standing at (19,35) about to walk into them.
+# This block is a suite of 10'x10' chambers connected by doors. The classifier
+# called 13 of those doors `stairs` at confidence 7 while calling 3 IDENTICAL
+# glyphs `door` at confidence 9, and the `hole` measurements overlap completely
+# (stairs 36-68, doors 51-79) -- so it is one threshold splitting one symbol.
+#
+# The glyph is B1's door: a rounded rectangle straddling the wall line with a
+# bar through it. Rendered at 11x beside a confirmed door and they are the same
+# drawing. THIRTEEN STAIRCASES IN A 60'x30' BLOCK IS NOT A READING ANYONE WOULD
+# DEFEND, and B1 HAS NO UPPER LEVEL for stairs up to reach -- the same argument
+# that struck area 11's on 2026-09-12.
+#
+# This matters for PLAY and not just for the picture: a door is opened on B1's
+# own d6 (rules/b1-module.md), can be listened at, spiked and locked. Stairs are
+# none of those things. Correcting to `door` leaves connectivity untouched --
+# both kinds are passable -- so nothing here changes what is reachable.
+edge	16	39	V	door	dl+claude	suite of chambers x16-22 y36-40: B1 door glyph read as a stair tread (conf 7); identical glyphs at (17,38,V) (18,38,V) (20,39,V) were read as doors at conf 9
+edge	17	39	V	door	dl+claude	suite of chambers x16-22 y36-40: B1 door glyph read as a stair tread (conf 7); identical glyphs at (17,38,V) (18,38,V) (20,39,V) were read as doors at conf 9
+edge	18	39	V	door	dl+claude	suite of chambers x16-22 y36-40: B1 door glyph read as a stair tread (conf 7); identical glyphs at (17,38,V) (18,38,V) (20,39,V) were read as doors at conf 9
+edge	16	38	V	door	dl+claude	suite of chambers x16-22 y36-40: B1 door glyph read as a stair tread (conf 7); identical glyphs at (17,38,V) (18,38,V) (20,39,V) were read as doors at conf 9
+edge	17	38	H	door	dl+claude	suite of chambers x16-22 y36-40: B1 door glyph read as a stair tread (conf 7); identical glyphs at (17,38,V) (18,38,V) (20,39,V) were read as doors at conf 9
+edge	18	38	H	door	dl+claude	suite of chambers x16-22 y36-40: B1 door glyph read as a stair tread (conf 7); identical glyphs at (17,38,V) (18,38,V) (20,39,V) were read as doors at conf 9
+edge	19	38	H	door	dl+claude	suite of chambers x16-22 y36-40: B1 door glyph read as a stair tread (conf 7); identical glyphs at (17,38,V) (18,38,V) (20,39,V) were read as doors at conf 9
+edge	20	38	V	door	dl+claude	suite of chambers x16-22 y36-40: B1 door glyph read as a stair tread (conf 7); identical glyphs at (17,38,V) (18,38,V) (20,39,V) were read as doors at conf 9
+edge	21	38	H	door	dl+claude	suite of chambers x16-22 y36-40: B1 door glyph read as a stair tread (conf 7); identical glyphs at (17,38,V) (18,38,V) (20,39,V) were read as doors at conf 9
+edge	17	37	H	door	dl+claude	suite of chambers x16-22 y36-40: B1 door glyph read as a stair tread (conf 7); identical glyphs at (17,38,V) (18,38,V) (20,39,V) were read as doors at conf 9
+edge	19	37	H	door	dl+claude	suite of chambers x16-22 y36-40: B1 door glyph read as a stair tread (conf 7); identical glyphs at (17,38,V) (18,38,V) (20,39,V) were read as doors at conf 9
+edge	21	37	H	door	dl+claude	suite of chambers x16-22 y36-40: B1 door glyph read as a stair tread (conf 7); identical glyphs at (17,38,V) (18,38,V) (20,39,V) were read as doors at conf 9
+edge	19	36	H	door	dl+claude	suite of chambers x16-22 y36-40: B1 door glyph read as a stair tread (conf 7); identical glyphs at (17,38,V) (18,38,V) (20,39,V) were read as doors at conf 9
