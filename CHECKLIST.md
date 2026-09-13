@@ -883,46 +883,46 @@ pipeline:**
 > **Then `git log --oneline`** — the campaign history, which cannot go stale.
 > **What is left below is only the things no tool computes.**
 
-### ⏸ PLAY IS PAUSED MID-DEPARTURE — resume exactly here
+### ⏸ RESUME EXACTLY HERE — day 79, expedition 9, round 10
 
-**Campaign day 77, evening, Wethersby. Nobody is in the dungeon.** Expedition 8
-closed on day 71. **Expedition 9 has been declared and not begun.**
+**The party is AT (14,29) on level 1, facing NORTH into a fresh ten-foot
+corridor**, about to move at exploring rate. Ista's lantern is burning with
+**13.2 turns** left; the pool is untouched at 440. **Nothing has been met.**
 
-**The player paused on 2026-09-10 to rebuild the tooling** — see
-`dlwork/tooling_redesign.md`. His reason, in his words: *"it seems like we're
-spending more and more time correcting things, it's inevitable as the game
-expands."*
+> **RUN `python tools/brief.py` FIRST.** Everything below it is computed.
 
-#### WHAT WAS ALREADY DECIDED FOR EXPEDITION 9, and must not be re-asked
+#### THE FORMATION, set day 79 and NOT the one older files carry
 
-| | |
-|---|---|
-| **Who** | **ALL EIGHT available** — Dave, Torsat, Tristle, Frython, Yrtone, Blartho, Dellie, Ista. **Hask is on the wool road; Rowe went with Halm** |
-| **Objective** | **EXPLORE. The player was asked and pushed back — "why do you need this?" — and he was right.** The route is chosen at each junction, by him, standing in the corridor. **Do not ask for an expedition objective again** |
-| **Spells** | **"Same as last time"** = the standing loadouts below |
-| **Departure** | **First light day 78 · road all day · night at COLL'S BASECAMP · up to the door the morning of DAY 79** |
-| **Formation** | standard, **with Hask's spear missing from the second rank.** Never ask for marching order |
+| rank | | | |
+|---|---|---|---|
+| **1** | **Yrtone** — shield, sling | **Dave** — shield, long sword | **Torsat** — **BOW** |
+| **2** | **Frython** — darts | **Tristle** — bow | **Ista** — **lantern**, darts |
+| **3** | **Dellie** — shield, sling | **Blartho** — shield, sling |
 
-#### ⚠ TWO QUESTIONS WERE OUTSTANDING WHEN PLAY STOPPED
+**Torsat is at the FRONT with a BOW. Yrtone, a 7-hp cleric, is IN THE LINE.**
+Neither gets quietly changed. **Hask is on the wool road until ~day 83**, so
+there is no spear in the second rank — and **the lane rule now bears on five of
+the eight**, its two conditions in `rules/exploration.md` and nowhere else.
 
-1. **FOOD.** Eight people have **~2 person-weeks standard + ~2.5 iron ≈ four days
-   underground.** Standard packets are day-67 and aging. **3 gp a person-week
-   standard, 5 gp iron**, and the purse is with Wend, so it is tonight's errand or
-   it does not happen.
-2. **BLARTHO'S THIRD SPELL.** He has held ***detect magic*** since day 47, prayed
-   specifically to test the sealed vial — **a job finished 30 days ago.** He is
-   carrying a spell for a completed errand. Offered; not answered.
+#### WHAT IS OPEN AT THIS EXACT MOMENT
 
-#### THE STANDING SPELL LOADOUTS (last logged overnight day 47-48)
+- **The corridor north of (14,29)** — dressed stone both sides, no doors in the
+  first thirty feet, and **the air against your face is slightly colder** than
+  the corridor behind.
+- **West along y=29** is now open ground: **areas 10 and 11 were corrected on
+  day 46** and the day-79 warning against them was six days stale.
+  **Area 10 has a secret door at (8,25,V)** that Tristle's passive 1-in-6 failed
+  on (rolled 3) walking past it on day 46.
+- **Spells:** Yrtone *command* + 2 cure · Blartho *command* + 2 cure *(changed
+  back the night of the 77th)* · Dellie 2 *light* + 1 cure, **and she has never
+  cast a light** · Frython his one *sleep*.
 
-| **Yrtone** | *command* + 2 × cure light wounds |
-|---|---|
-| **Blartho** | *detect magic* + 2 × cure light wounds — **see above** |
-| **Dellie** | 2 × *light* + 1 × cure light wounds. **She has never cast a light** |
-| **Frython** | *sleep*, his only spell |
+#### THE WAY OUT, AND THE TOOL NOW ENFORCES IT
 
-**All three clerics have THREE 1st-level slots** — 1 for the level plus 2 for
-Wisdom. That is why a 1st-level cleric here casts three.
+The route in and out is the **alcove-pair-2 one-way slab at (17,13,V)**, held
+open by two of the party's own spikes. **`party.py move` REFUSES a route up the
+x=16 corridor between y=13 and y=19** — it tried to take it on day 79 and the
+guard went in the same hour. `--anyway` is the override.
 
 ### State — **RUN `python tools/brief.py`**
 

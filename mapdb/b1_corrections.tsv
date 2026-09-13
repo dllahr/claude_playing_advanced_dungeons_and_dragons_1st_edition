@@ -631,3 +631,23 @@ member	9	30	-	none	dl+claude	flooded from area 11 across a diagonal
 # reachability no longer corroborates it. See DIAGONAL_WALLS.md for the sibling
 # problem.
 edge	10	24	V	secret	dl	secret door from the 20-ft x=10 passage EAST into area 8, the Wizard's Workroom; read off the printed map
+# --- 2026-09-12: area 11's "stairs" are struck. PLAYER'S RULING. -------------
+# The map draws four squares of tight parallel hatching SE-NW through (4,29)
+# (4,30) (5,29) (5,30), not tapering, which is B1's own legend for STAIRS UP.
+# The classifier read it as stairs and that reading was defended in 781bac5 on
+# the grounds that the map is what the party can SEE.
+#
+# The player has now read B1's key for area 11. It does not mention stairs, and
+# *** THERE IS NO UPPER-LEVEL MAP IN THE MODULE AT ALL *** -- B1 ships two
+# levels and this is the top one. Stairs up from here go nowhere that exists.
+# His ruling: "I have no idea what that graphic is supposed to represent, but
+# from the text it is clearly not stairs."
+#
+# That is the right call and it is the same shape as the area 33 bed frames and
+# the area 34 chests: tight parallel ink at the stair threshold. The feature is
+# cleared; the SQUARES REMAIN part of the room and the terrain is untouched.
+# What the hatching actually depicts is still unknown and is not invented here.
+feature	4	29	-	none	dl+claude	area 11: parallel hatching read as stair treads. B1's key for area 11 does not mention stairs AND THE MODULE HAS NO UPPER-LEVEL MAP -- stairs up would lead to nothing. Player's ruling 2026-09-12, superseding the reading in 781bac5
+feature	4	30	-	none	dl+claude	area 11: same hatching, same ruling
+feature	5	29	-	none	dl+claude	area 11: same hatching, same ruling
+feature	5	30	-	none	dl+claude	area 11: same hatching, same ruling
