@@ -51,10 +51,12 @@ import ledger as ledgermod                                        # noqa: E402
 import loops as loopmod                                           # noqa: E402
 import hp as hpmod                                                # noqa: E402
 import entities as entmod                                         # noqa: E402
+import inventory as invmod                                        # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SCENES = os.path.join(ROOT, 'campaign', 'interactions.tsv')
 MONEY = os.path.join(ROOT, 'campaign', 'money.tsv')
+INVLOG = os.path.join(ROOT, 'campaign', 'inventory_log.tsv')
 DAYS = os.path.join(ROOT, 'campaign', 'days.tsv')
 AVAIL = os.path.join(ROOT, 'campaign', 'availability.tsv')
 
@@ -150,6 +152,43 @@ def do_interaction(a):
     return 0
 
 
+def do_inventory(a):
+    """Gear in or out. The unit is REQUIRED, which is the whole point.
+
+    The retired inventory.tsv had one `qty` cell holding prose, and every tool
+    that read it took the first integer it could find -- so "~2.5 IRON + 8
+    STANDARD" read as the number 2. You cannot write that here: one row per
+    (asset, condition), and the unit beside the number.
+    """
+    ass = ledgermod.assets()
+    if a.asset not in ass:
+        near = sorted(k for k in ass if a.asset.lower() in k.lower())
+        raise Refused('asset %r is not in campaign/assets.tsv.%s'
+                      % (a.asset, (' Did you mean %s?' % ', '.join(near))
+                         if near else ''))
+    if a.asset in invmod.FOREIGN:
+        raise Refused('%s is counted by %s. Two sources for one fact is what '
+                      'drifted twice on the oil count.'
+                      % (a.asset, invmod.FOREIGN[a.asset]))
+    if a.unit not in invmod.UNITS:
+        raise Refused('unit %r is not in the closed vocabulary %s'
+                      % (a.unit, list(invmod.UNITS)))
+    if (a.condition or '') not in invmod.CONDITIONS:
+        raise Refused('condition %r is not one of %s. "sold" and "consumed" are '
+                      'EVENTS -- log a negative qty with a note instead'
+                      % (a.condition, list(invmod.CONDITIONS)))
+    if a.qty == 0:
+        raise Refused('a qty of zero moves nothing')
+    day = a.day if a.day is not None else loopmod.current_day()
+    print(_write(a.log_file or INVLOG, dict(
+        when=today(), day=day, asset=a.asset, verb='move', qty=a.qty,
+        unit=a.unit, condition=a.condition or '', holder=a.holder or '',
+        evidence=a.evidence or '', note=a.note)))
+    print()
+    print(invmod.report(invmod.rows(a.log_file or INVLOG), asset=a.asset))
+    return 0
+
+
 def do_day(a):
     last = loopmod.current_day(a.log_file or DAYS)
     if last is not None and a.day < last:
@@ -214,6 +253,19 @@ def build_parser():
     n.add_argument('--day', type=int)
     n.add_argument('--seq', type=int, help='normally auto-assigned')
     n.set_defaults(fn=do_interaction)
+
+    v = sub.add_parser('inventory', help='gear in or out. UNIT IS REQUIRED')
+    v.add_argument('--asset', required=True)
+    v.add_argument('--qty', type=float, required=True,
+                   help='signed. Negative is out')
+    v.add_argument('--unit', required=True,
+                   help='each | person-week | set | quiver | bundle | pair | ...')
+    v.add_argument('--condition', default='')
+    v.add_argument('--holder', default='')
+    v.add_argument('--evidence', default='')
+    v.add_argument('--note', required=True)
+    v.add_argument('--day', type=int)
+    v.set_defaults(fn=do_inventory)
 
     d = sub.add_parser('day', help='open a new campaign day')
     d.add_argument('--day', type=int, required=True)
