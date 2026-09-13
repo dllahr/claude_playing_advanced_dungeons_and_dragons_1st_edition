@@ -587,3 +587,6 @@ when	map	exped	turn	level	scope	target	change	item	qty	who	note
 2026-09-13	b1	9	4	1	edge	14,28,H	closed			party	day 79: the area 9 north secret slab, pushed shut behind them on the way out of the north corridors. No spikes in it -- both wedges came home on day 70
 2026-09-13	b1	9	5	1	edge	10,24,V	spiked_shut	iron spike	2	Tristle	day 79 round 49: two jamb wedges from inside area 8, THE QUIET METHOD -- by hand and mallet-handle, no extra wandering check. It swings INWARD so wedges on the party side stop the leaf entirely; same as exp.7 and exp.8
 2026-09-13	b1	9	5	1	edge	14,28,H	spiked_shut	iron spike	2	Tristle	day 79 round 49: the area 9 north slab, spiked shut the same quiet way. IT WAS NOT SPIKED -- both wedges were drawn on the way out on day 70 and the party checked, correctly, rather than assuming. THE 8/9 POCKET IS SEALED AGAIN
+2026-09-13	b1	9	6	1	edge	10,24,V	shut, unspiked	iron spike	-2	Tristle	day 79 round 319: both wedges drawn on the way out. It swings inward and is a secret door nothing has ever used; left merely SHUT
+2026-09-13	b1	9	6	1	edge	14,28,H	shut, unspiked	iron spike	-2	Tristle	day 79 round 319: both wedges drawn out of the area 9 north slab. Left shut
+2026-09-13	b1	9	7	1	seen	16,1	yes			party	day 79: OUT. Expedition 9 leaves by the entry corridor, 5h30m underground including a four-hour rest in area 8

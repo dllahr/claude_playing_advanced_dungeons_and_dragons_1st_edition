@@ -166,3 +166,10 @@ when	map	level	x	y	exped	turn	squares	feet	rate	why	route
 2026-09-13	b1	1	27	37			2	20	explore	day 79: north round the dogleg from (27,35) to the corner at (27,37)	27,35 27,36 27,37
 2026-09-13	b1	1	24	37			3	30	explore	day 79: west along y=37 to the next corner at (24,37)	27,37 26,37 25,37 24,37
 2026-09-13	b1	1	13	24			30	300	known	day 79: OUT after the troglodytes. Retracing to area 8 to rest -- west along y=35, south down x=14, through the area 9 secret slab at (14,28,H), across area 9 and through the door at (13,25,H) into the WIZARD'S WORKROOM. Carrying Torsat, so 9in -> 6in	24,37 25,37 26,37 27,37 27,36 27,35 26,35 25,35 24,35 23,35 22,35 21,35 20,35 19,35 18,35 17,35 16,35 15,35 14,35 14,34 14,33 14,32 14,31 14,30 14,29 14,28 14,27 14,26 13,26 13,25 13,24
+2026-09-13	b1	1	10	24			3	30	known	day 79 OUT, leg by leg to keep clear of the x=16 corridor: west out of area 8 through the secret door at (10,24,V)	13,24 12,24 11,24 10,24
+2026-09-13	b1	1	16	21			9	90	known	day 79 OUT, leg by leg to keep clear of the x=16 corridor: east and south through the known corridors to (16,21)	10,24 10,23 10,22 10,21 11,21 12,21 13,21 14,21 15,21 16,21
+2026-09-13	b1	1	16	19			2	20	known	day 79 OUT, leg by leg to keep clear of the x=16 corridor: south to the four-way at (16,19) -- and NOT one square further south	16,21 16,20 16,19
+2026-09-13	b1	1	19	19			3	30	known	day 79 OUT, leg by leg to keep clear of the x=16 corridor: EAST along y=19, away from the magic mouths	16,19 17,19 18,19 19,19
+2026-09-13	b1	1	19	13			6	60	known	day 79 OUT, leg by leg to keep clear of the x=16 corridor: south down x=19	19,19 19,18 19,17 19,16 19,15 19,14 19,13
+2026-09-13	b1	1	17	13			2	20	known	day 79 OUT, leg by leg to keep clear of the x=16 corridor: west through the one-way slab at (17,13,V) into alcove pair 2	19,13 18,13 17,13
+2026-09-13	b1	1	16	1			13	130	known	day 79: out through alcove pair 2 and the entry corridor to the threshold. Torsat walking under his own power at the back of the casters	17,13 16,13 16,12 16,11 16,10 16,9 16,8 16,7 16,6 16,5 16,4 16,3 16,2 16,1
