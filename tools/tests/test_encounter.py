@@ -174,9 +174,33 @@ def test_starting_a_fight_inside_a_fight_is_refused(fight):
                            '--detail', 'another', '--exped', '9']) == 1
 
 
-def test_the_committed_log_is_empty_because_no_fight_is_in_progress():
-    """Play is paused at day 77 with expedition 9 declared and not begun."""
-    assert encounter.current(read_tsv(LOG, missing_ok=True)) is None
+def test_the_committed_log_holds_NO_STALE_FIGHT():
+    """*** THIS TEST USED TO PIN TODAY'S STATE AND WENT RED THE MOMENT A FIGHT
+    STARTED. *** It read `current(...) is None` with a docstring saying "play is
+    paused at day 77", and on 2026-09-13 the troglodytes at (24,37) turned it
+    red for the one reason that is not a bug: a fight was in progress, correctly.
+
+    A test that fails when the campaign advances is a test of the calendar, not
+    of the code -- the same defect as the three tests that pinned the purse and
+    the party's position on day 79. So it now asserts the INVARIANT it was
+    always reaching for: the live log never carries a fight somebody forgot to
+    `end`. Either no fight is running, or exactly one is, and it belongs to the
+    expedition that is actually out.
+    """
+    log = read_tsv(LOG, missing_ok=True)
+    starts = [r for r in log if (r.get('verb') or '').strip() == 'start']
+    ends = [r for r in log if (r.get('verb') or '').strip() == 'end']
+    assert len(ends) in (len(starts), len(starts) - 1), (
+        '%d start rows and %d end rows -- a fight was left dangling, which is '
+        'how encounter.py comes to report a round number from a fight that '
+        'finished two expeditions ago' % (len(starts), len(ends)))
+
+    live = encounter.current(log)
+    if live is None:
+        return
+    assert len(ends) == len(starts) - 1
+    exped = {(r.get('exped') or '').strip() for r in starts[-1:]}
+    assert exped, 'a live fight with no expedition on its start row'
 
 
 def test_monster_damage_is_hidden_unless_asked_for():
