@@ -651,3 +651,4 @@ feature	4	29	-	none	dl+claude	area 11: parallel hatching read as stair treads. B
 feature	4	30	-	none	dl+claude	area 11: same hatching, same ruling
 feature	5	29	-	none	dl+claude	area 11: same hatching, same ruling
 feature	5	30	-	none	dl+claude	area 11: same hatching, same ruling
+edge	13	34	V	wall	dl+claude	THE WEST OPENING THAT WAS NOT THERE. The x=13 and x=14 corridors run parallel from y=30 to y=38 and NEVER connect; the classifier read this one boundary as open (thick=5) while calling its identical neighbours wall. Measured ink 0.49 -- the walls above and below it measure 0.49-0.74 and the genuinely open boundaries on this corridor measure 0.14-0.17. Found 2026-09-13 by the player, in play, after the DM narrated an opening and the party walked through it.

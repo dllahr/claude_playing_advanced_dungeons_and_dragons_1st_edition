@@ -108,7 +108,7 @@ rebuild_b1 () {
         || { echo '*** LEVEL 2 MERGE FAILED ***'; exit 1; }
     python ../tools/world.py replay --db output/b1/b1.sqlite --level 2 || true
 
-    echo "--- reachability (expect 6 unreached of 1197 on lv1, 0 of 923 on lv2) ---"
+    echo "--- reachability (expect 8 unreached of 1199 on lv1, 0 of 923 on lv2) ---"
     python dmap.py reach output/b1/b1.sqlite 1 --from-cell 16 1 | head -1
     python dmap.py reach output/b1/b1.sqlite 2 --from-cell 20 13 | head -1
     echo "--- door review (contact sheet: output/b1/images/30_doors.png) ---"
@@ -146,3 +146,11 @@ echo "B1's expected count went 4 -> 5 on 2026-08-28 and that was CORRECT: (34,13
 echo "is a rock outcrop between two lobes of area 25, 18% open with rock on all"
 echo "four sides. It had only been 'reachable' because the lobe outline around it"
 echo "was read as three doors. A square that is not floor should not be reached."
+
+echo "B1's expected count went 6 -> 8 on 2026-09-13 and that was CORRECT, and it"
+echo "is a CONSEQUENCE, not a cause: striking area 11's four 'stairs' features on"
+echo "2026-09-12 left (4,30) and (5,30) walled on all four sides. They were only"
+echo "ever 'reached' through the stair feature itself. Walkable went 1197 -> 1199"
+echo "for the same reason -- they count as plain floor now. WHAT THE HATCHING IS"
+echo "remains unknown (loop L035) and is not to be invented; that two of its four"
+echo "squares are sealed is a fact about the drawing, not an answer."

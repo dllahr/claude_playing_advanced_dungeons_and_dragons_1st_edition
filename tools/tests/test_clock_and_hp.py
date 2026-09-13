@@ -120,6 +120,58 @@ def test_fired_checks_are_remembered(tmp_path):
     assert rnd == 23 and fired == {20}
 
 
+# ------------------------------------------------- correcting the clock
+# Added 2026-09-13. `state` takes max() of every round it sees, deliberately, so
+# that a `check` row logged at the round it FIRED cannot rewind a move that ended
+# later. The unnoticed cost of that rule was that the clock could not be
+# corrected AT ALL: `advance --rounds -1` was appended and SILENTLY IGNORED,
+# leaving a row in campaign/clock.tsv that said one thing while the tool did
+# another. That is the failure this repo exists to prevent, so the clock got a
+# way to be corrected rather than a dead row in its log.
+
+
+def test_a_correct_row_is_the_one_thing_that_may_move_the_clock_BACK(tmp_path):
+    p = write(tmp_path / 'c.tsv', CLOCK_HEADER,
+              ('2026-01-01', 9, 0, 'start', '', '', ''),
+              ('2026-01-01', 9, 0, 'jitter', '', '30:5,60:5', ''),
+              ('2026-01-01', 9, 17, 'advance', '', '17', ''),
+              ('2026-01-01', 9, 16, 'correct', '', '-1', 'a round charged for '
+               'a step through a wall that is not on the printed map'))
+    assert clock.state(clock.load(p))[1] == 16
+
+
+def test_a_negative_advance_is_STILL_ignored_so_correct_is_the_only_way(tmp_path):
+    """The max() rule is untouched for `advance`. Loosening it there would
+    reintroduce the bug it was written for."""
+    p = write(tmp_path / 'c.tsv', CLOCK_HEADER,
+              ('2026-01-01', 9, 0, 'start', '', '', ''),
+              ('2026-01-01', 9, 0, 'jitter', '', '30:5', ''),
+              ('2026-01-01', 9, 17, 'advance', '', '17', ''),
+              ('2026-01-01', 9, 16, 'advance', '', '-1', 'must NOT take'))
+    assert clock.state(clock.load(p))[1] == 17
+
+
+def test_a_correction_forward_works_too_and_fires_no_wandering_check(tmp_path):
+    """A correction states what the clock SHOULD have read. Rolling for
+    wanderers on it would invent an encounter out of a bookkeeping fix."""
+    p = write(tmp_path / 'c.tsv', CLOCK_HEADER,
+              ('2026-01-01', 9, 0, 'start', '', '', ''),
+              ('2026-01-01', 9, 0, 'jitter', '', '30:0,60:0,90:0', ''),
+              ('2026-01-01', 9, 20, 'advance', '', '20', ''))
+    assert clock.main(['--log-file', p, 'correct', '--to', '80',
+                       '--why', 'a fight that was never charged']) == 0
+    rows = clock.load(p)
+    assert clock.state(rows)[1] == 80
+    assert [r for r in rows if r.get('kind') == 'check'] == [], (
+        'a correction fired a wandering check')
+
+
+def test_correct_demands_a_reason(tmp_path):
+    parser = clock.build_parser()
+    with pytest.raises(SystemExit):
+        parser.parse_args(['correct', '--to', '16'])
+
+
 def test_the_encounter_table_loaded_for_each_level():
     for level in (1, 2):
         t = clock.encounter_table(level)

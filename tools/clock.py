@@ -109,11 +109,29 @@ def state(rows=None):
                     except ValueError:
                         pass
             continue
-        # The round counter only ever moves FORWARD within an expedition, so
-        # take the maximum rather than the last value written. A check fires
-        # partway through an advance and is logged at the round it fired --
-        # round 21 inside a move that ended at 23 -- and because it is written
-        # last, reading the last value silently rewound the clock two rounds.
+        # A `correct` row SETS the round outright, and is the ONLY thing that
+        # may move it backwards. Same shape as the day-39 XP anchor and the
+        # money anchor: the past is fixed by APPENDING a row that overrides,
+        # never by rewriting one. It exists because on 2026-09-13 the DM
+        # charged a round for a step through a wall that is not on the printed
+        # map, appended `advance --rounds -1` to give it back, and the tool
+        # silently ignored it -- max() below saw a smaller number and kept the
+        # larger one. A log row that says one thing while the tool does another
+        # is the exact failure this repo is built against, so the honest fix
+        # was to give the clock a way to be corrected rather than to leave a
+        # dead row in the log.
+        if kind == 'correct':
+            try:
+                rnd = int(r.get('round'))
+            except (TypeError, ValueError):
+                pass
+            continue
+        # Otherwise the round counter only ever moves FORWARD within an
+        # expedition, so take the maximum rather than the last value written. A
+        # check fires partway through an advance and is logged at the round it
+        # fired -- round 21 inside a move that ended at 23 -- and because it is
+        # written last, reading the last value silently rewound the clock two
+        # rounds.
         try:
             rnd = max(rnd, int(r.get('round') or rnd))
         except ValueError:
@@ -230,6 +248,14 @@ def build_parser():
                          'default: an empty check announced at the table tells '
                          'the player the next twenty rounds are safe, which '
                          'their characters do not know. The log has them all.')
+
+    co = sub.add_parser('correct', help='SET the round outright -- the only '
+                                       'thing that may move the clock back')
+    co.add_argument('--to', type=int, required=True, help='the true round')
+    co.add_argument('--why', required=True,
+                    help='what was charged that did not happen, or what was '
+                         'not charged that did. Required: an unexplained jump '
+                         'in the clock is indistinguishable from a bug')
 
     sub.add_parser('status', help='where the clock stands')
 
@@ -426,6 +452,20 @@ def main(argv=None):
                                      'rolled in advance and HIDDEN'))
         print('jitter extended from round %d to %d (%d new anchors, hidden).'
               % (horizon, target, len(pairs)))
+        return 0
+
+    if a.cmd == 'correct':
+        if exped is None:
+            print('no expedition started; run `clock.py start --exped N`')
+            return 1
+        append(a.log_file, dict(when=today(), exped=exped, round=a.to,
+                                kind='correct', anchor='',
+                                detail='%+d' % (a.to - rnd), note=a.why))
+        print('round %d -> %d   CORRECTED   (%s)' % (rnd, a.to, a.why))
+        # Deliberately fires no checks. A correction is a statement about what
+        # the clock SHOULD have read, not time passing, and a correction that
+        # rolled for wandering monsters would be inventing an encounter out of
+        # a bookkeeping fix.
         return 0
 
     if a.cmd == 'advance':
