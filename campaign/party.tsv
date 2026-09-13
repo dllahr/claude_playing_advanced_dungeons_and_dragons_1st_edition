@@ -162,3 +162,6 @@ when	map	level	x	y	exped	turn	squares	feet	rate	why	route
 2026-09-13	b1	1	13	34			1	10	explore	day 79: west through the gap at (14,34) into the parallel passage	14,34 13,34
 2026-09-13	b1	1	14	34	9	2			PLACED	CORRECTION 2026-09-13: the party was walked WEST from (14,34) into (13,34) through an opening that is not on the printed map. (13,34,V) measures 0.49 ink -- a wall -- and the map database had it as open. The move never happened in the fiction; the party has stood at (14,34) since round 16. Map corrected at source in mapdb/b1_corrections.tsv	
 2026-09-13	b1	1	19	35			6	60	explore	day 79: north one square to the east opening at (14,35), then east along y=35 until the corridor changes -- cautious mapping pace, Tristle and Ista counting	14,34 14,35 15,35 16,35 17,35 18,35 19,35
+2026-09-13	b1	1	27	35			8	80	explore	day 79: on east along y=35, past the door in the bay, until the corridor changes	19,35 20,35 21,35 22,35 23,35 24,35 25,35 26,35 27,35
+2026-09-13	b1	1	27	37			2	20	explore	day 79: north round the dogleg from (27,35) to the corner at (27,37)	27,35 27,36 27,37
+2026-09-13	b1	1	24	37			3	30	explore	day 79: west along y=37 to the next corner at (24,37)	27,37 26,37 25,37 24,37

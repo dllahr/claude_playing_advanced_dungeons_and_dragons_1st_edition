@@ -415,6 +415,91 @@ morale fails. The **margin of failure** determines the result:
 **Berserkers never check morale** (MM). Neither do unintelligent undead or
 anything the module states is fighting to the death.
 
+## Surprise — segments, not a coin flip
+
+**Adopted in full 2026-09-13, day 79, by the player, mid-ambush**, after nine
+expeditions of running it as "surprised or not, one free round." Both halves
+below were in the books the whole time.
+
+### How many segments
+
+Roll d6 per side. **The lost segments are the DIFFERENCE between the two dice**,
+not the fact of being surprised:
+
+| Surprise dice difference | 0 | 1 | 2 | 3 |
+|---|---|---|---|---|
+| **Lost segments** | **0** | **1** | **2** | **3** |
+
+*source: **DMG p. 61**, COMBAT (ENCOUNTERS, COMBAT, & INITIATIVE).*
+
+> *"If surprise is indicated for both parties concerned, the party which has
+> lesser surprise subtracts its result from the result of the greater to find the
+> number of segments the latter are inactive. Nonetheless, it is possible for
+> both parties to be surprised **equally** — with surprise thus having no
+> effect."* — DMG p. 61
+
+**"Both surprised means nobody is surprised" is the EQUAL case only.** It is the
+difference-of-0 row above. Day 70's troglodyte was party 2 vs trog 2 and
+`rolls.tsv` records it as *"MUTUAL, cancels"* — correct, and the same rule that
+gives 2 lost segments on a 4 against a 2.
+
+### What a segment buys
+
+> *"the surprising party will be able to attempt telling blows during each
+> segment of surprise **as if the segment were an entire round!** That is, a
+> fighter able to attack twice during a normal round of combat will be able to do
+> so twice during each surprise segment… Even if distance prevents striking with
+> weapons, the discharge of arrows, bolts or hand-hurled weapons is permissible at
+> **three times the normal rate** providing the weapon/missiles are ready."*
+> — **DMG p. 62**
+
+So **two lost segments is two full rounds of attacks**, not one. Missiles already
+in hand fire at **3x rate** in a segment.
+
+Possible in a surprise segment: avoiding, parleying, waiting, **missile
+discharge**, setting weapons against a charge, and **1-segment spells** — which is
+most 1st-level magic-user spells. Longer spells may only be *begun*.
+
+### Dexterity, per individual (DMG p. 62)
+
+> *"if there is a dexterity penalty, the individual will suffer that many
+> additional segments of time in a surprised state. On the other hand, if the
+> dexterity bonus applies the individual negates that many segments of surprise
+> **as far as the individual only is concerned**."*
+
+Use the **Reaction/Attacking** column of `rules/abilities.md`. It never creates
+surprise in the other side, and it never touches anybody else's count.
+
+**A negated segment is not a won initiative.** The DMG grants *the non-surprised
+side* the segments of initiative; dexterity only removes one individual's
+inactivity. That person acts **within** the same segments and is not a free
+target — he does not act **before** the surprising side, and there is no
+initiative roll inside a surprise segment.
+
+**This party's non-zero adjustments are TRISTLE (DEX 18, +3) and DELLIE (DEX 4,
+−2), and nobody else.** Dave 10, Torsat 11, Yrtone 12, Blartho 12, Ista 13,
+Frython 14 and Hask 11 all sit in the 0 band.
+
+### Encounter distance
+
+Surprise **shortens** it: subtract the surprise value from normal distance
+(DMG p. 49). Underground the binding limit is usually light —
+
+> *"A light source reliance limits the encounter distance to twice the normal
+> vision radius of the source (2 x radius of the light source)."* — **DMG p. 62**
+
+A 30-ft lantern therefore caps it at **60 ft**, before surprise takes its bite.
+
+### What negates surprise outright
+
+> *"Prior detection negates the possibility of surprise… Noise can negate
+> surprise considerations, whether the sound is the normal progress of the party
+> or the effect of a fruitless attempt to open a door. **Light can spoil the
+> chance of surprise.**"* — DMG p. 62
+
+And: *"surprise can be and often is unilateral… merely roll for the party which
+is subject to the condition and do not roll for the other."*
+
 ## Time
 
 - 1 turn = 10 melee rounds. 1 melee round = 10 segments.

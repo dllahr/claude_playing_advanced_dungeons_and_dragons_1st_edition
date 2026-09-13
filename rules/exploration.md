@@ -386,8 +386,14 @@ wandering monster checks until the party passes the door.*
 
 ## Surprise
 
-d6 per side; **1–2 = surprised** unless modified. A surprised party loses 1 segment (or
-more) of action.
+d6 per side; **1–2 = surprised** unless modified.
+
+> **THE FULL PROCEDURE IS IN `rules/combat.md`, "Surprise — segments, not a
+> coin flip", AND NOT HERE.** This paragraph used to read *"a surprised party
+> loses 1 segment (or more) of action"*, which is not the rule and is not even a
+> summary of it — the number of lost segments is the DIFFERENCE of the two dice,
+> and each lost segment buys the surprising side a FULL ROUND of attacks. Nine
+> expeditions were run off that sentence giving a surprising monster one round.
 
 ### Opening a door in B1 — the MODULE'S rule, not the PHB's
 

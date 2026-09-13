@@ -674,3 +674,7 @@ when	exped	round	kind	anchor	detail	note
 2026-09-13	9	16	correct		-1	the round charged for a step WEST from (14,34) into (13,34) -- an opening that is NOT on the printed map. (13,34,V) measures 0.49 ink; the walls above and below it measure 0.49-0.74 and the real openings on this corridor measure 0.14-0.17. The move never happened. The  row above this one was appended first and did nothing: the clock takes max() by design, which is why  now exists
 2026-09-13	9	16	correct		+0	RESTATES the row above, whose note was mangled by shell backticks and lost two phrases. In full: the round was charged for a step WEST from (14,34) into (13,34), an opening that is NOT on the printed map. The first attempt at this correction was "advance --rounds -1", which was appended and SILENTLY DID NOTHING because state() takes max() by design -- that is why the "correct" subcommand now exists, with three tests
 2026-09-13	9	23	advance		7	day 79: (14,34) north to (14,35) and east along y=35 to (19,35), 60 ft, exploring/mapping pace
+2026-09-13	9	32	advance		9	day 79: east along y=35 from (19,35) to the corner at (27,35), 80 ft, exploring/mapping pace
+2026-09-13	9	34	advance		2	day 79: north twenty feet to the dogleg corner at (27,37)
+2026-09-13	9	37	advance		3	day 79: west along y=37 from the dogleg corner to (24,37), 30 ft, exploring/mapping pace
+2026-09-13	9	35	check	30	d6=1 -> Troglodytes (1-2)-AC 5, HD 2', hp 6,5, #AT 3, D 1-4/1-4/ 1-4, MV 120' (40'), Save F2, ML 9	anchor 30 + 5
