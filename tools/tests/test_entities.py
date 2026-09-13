@@ -31,6 +31,8 @@ import os
 import re
 import sys
 
+import pytest
+
 HERE = os.path.dirname(os.path.abspath(__file__))
 TOOLS = os.path.dirname(HERE)
 ROOT = os.path.dirname(TOOLS)
@@ -195,3 +197,36 @@ def test_the_session_files_carry_the_days_the_calendar_knows_about():
             for f in os.listdir(SESSIONS) if f.startswith('day-')}
     assert max(days) <= loops.current_day(), (
         'a session file is dated past the current campaign day')
+
+
+def test_log_py_REFUSES_evidence_that_is_a_sentence_not_a_citation():
+    import log
+    with pytest.raises(log.Refused) as e:
+        log.check_evidence('articles.md art.7, the sellable-before-shearing clause')
+    assert 'does not resolve' in str(e.value)
+    assert 'NOT A CITATION' in str(e.value)
+
+
+def test_log_py_ACCEPTS_the_three_shapes_that_ARE_citations():
+    """A bare file, a file:line, and a scene id. None of these may raise."""
+    import log
+    for ev in ('articles.md', 'articles.md:913', 'sessions/day-077.md:12',
+               '77:1', ''):
+        log.check_evidence(ev)
+
+
+def test_the_checker_is_PURE_and_writes_nothing():
+    """The first version of this test called do_interaction and put a probe row
+    into campaign/interactions.tsv -- the exact leak conftest.py exists to
+    prevent, reintroduced by a test written to prevent a different one."""
+    import log
+    before = open(os.path.join(CAMPAIGN, 'interactions.tsv'),
+                  encoding='utf-8').read()
+    try:
+        log.check_evidence('not a citation at all')
+    except log.Refused:
+        pass
+    log.check_evidence('articles.md')
+    after = open(os.path.join(CAMPAIGN, 'interactions.tsv'),
+                 encoding='utf-8').read()
+    assert before == after, 'the evidence checker wrote to the campaign log'

@@ -188,14 +188,29 @@ def test_the_cli_refuses_a_bad_close(argv, tmp_path):
 
 
 def test_a_good_close_is_appended_and_removes_it_from_open(tmp_path):
+    """*** THIS NAMED L018 AND WENT RED WHEN THE PARTY CLOSED IT. ***
+
+    On day 80 Dave answered Wend's whose-money question, L018 closed, and a
+    test about the CLOSE MECHANISM failed because the fixture had hard-coded
+    one live loop id as a stand-in for "an open loop". Fifth time this shape has
+    appeared -- the purse, the party's position, the encounter fixture, the
+    spike count, and now this. A test that names today's data is a test of
+    today.
+
+    It now takes whatever is open, so it tests the mechanism and nothing else.
+    """
     scratch = tmp_path / 'loops.tsv'
     scratch.write_text(open(LOG).read())
-    before = len(read_tsv(str(scratch)))
-    assert loops.main(['--log-file', str(scratch), 'close', 'L018',
+    rows = read_tsv(str(scratch))
+    still_open = loops.open_loops(rows)
+    assert still_open, 'no open loops at all -- pick a different fixture'
+    victim = still_open[0]['loop']
+    before = len(rows)
+    assert loops.main(['--log-file', str(scratch), 'close', victim,
                        '--evidence', '79:2', '--day', '79']) == 0
     after = read_tsv(str(scratch))
     assert len(after) == before + 1
-    assert 'L018' not in [r['loop'] for r in loops.open_loops(after)]
+    assert victim not in [r['loop'] for r in loops.open_loops(after)]
 
 
 def test_days_tsv_gives_a_current_day():

@@ -119,6 +119,33 @@ def do_money(a):
     return 0
 
 
+def check_evidence(ev):
+    """Raise Refused unless `ev` is a citation that resolves. Pure; writes nothing.
+
+    THE EVIDENCE MUST RESOLVE TO A FILE THAT EXISTS. test_entities.py has always
+    asserted this of the COMMITTED data -- it reads `evidence.split(":")[0]` as
+    a path under campaign/ -- but NOTHING CHECKED IT ON THE WAY IN. On day 80
+    the DM wrote a scene citing "articles.md art.7, the sellable-before-shearing
+    clause", which is a sentence and not a citation, and log.py took it happily;
+    the suite went red afterwards, which is the wrong end to find it.
+
+    A bare scene id like "77:1" passes because the part before the colon is a
+    day number, not a path -- those are checked by entities.py resolving the
+    scene itself.
+    """
+    if not ev:
+        return
+    head = ev.split(':')[0].split('#')[0].strip()
+    if head.isdigit():
+        return                                  # a scene id, e.g. "77:1"
+    if not os.path.exists(os.path.join(ROOT, 'campaign', head)):
+        raise Refused(
+            'evidence %r does not resolve. The part before the first ":" is '
+            'read as a path under campaign/ -- so "articles.md", '
+            '"sessions/day-077.md:12" or a scene id like "77:1". A '
+            'DESCRIPTION IS NOT A CITATION; put the prose in --summary.' % ev)
+
+
 def do_interaction(a):
     """A scene. Every name is validated before the row is written."""
     pl, pc = entmod.people(), entmod.places()
@@ -135,6 +162,7 @@ def do_interaction(a):
     if a.kind not in entmod.SCENE_KINDS:
         raise Refused('kind %r is not one of %s'
                       % (a.kind, ', '.join(entmod.SCENE_KINDS)))
+    check_evidence(a.evidence)
     day = a.day if a.day is not None else loopmod.current_day()
     used = {int(r['seq']) for r in entmod.scenes()
             if r['day'] == str(day) and r['seq'].isdigit()}
