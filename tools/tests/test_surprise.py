@@ -169,3 +169,25 @@ def test_exploration_points_at_combat_instead_of_paraphrasing():
     assert 'rules/combat.md' in section, (
         'the exploration.md surprise section must POINT at the full procedure, '
         'not summarise it')
+
+
+def test_nothing_an_ally_does_returns_a_surprise_segment():
+    """Asked on day 79: does shouting shorten the party's surprise? No. The DMG
+    considered modelling recovery from surprise and SAID IT WOULD NOT -- and the
+    surprise roll already subsumes the morale/panic factor a warning addresses.
+
+    The trap is the noise rule, which sounds like it applies and does not:
+    "noise can negate surprise CONSIDERATIONS" decides whether surprise is
+    ROLLED AT ALL, beside "prior detection" and "light can spoil the chance of
+    surprise". It does not reach backwards into a roll already made.
+    """
+    body = open(os.path.join(ROOT, 'rules', 'combat.md'),
+                encoding='utf-8').read()
+    i = body.find('What does NOT end a surprise once it is rolled')
+    assert i > 0, 'the section is gone'
+    sec = body[i:i + 2000]
+    assert 'factors of time for recovery' in sec
+    assert 'unable to react in any way' in sec
+    assert 'rolled at all' in sec, (
+        'the noise rule must be distinguished here, or it reads as a way out '
+        'of a surprise already rolled')

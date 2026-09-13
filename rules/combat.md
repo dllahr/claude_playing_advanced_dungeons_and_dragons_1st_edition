@@ -498,6 +498,34 @@ initiative roll inside a surprise segment.
 −2), and nobody else.** Dave 10, Torsat 11, Yrtone 12, Blartho 12, Ista 13,
 Frython 14 and Hask 11 all sit in the 0 band.
 
+### What does NOT end a surprise once it is rolled
+
+**Nothing the surprised side's own allies do.** A shout, a warning, a torch
+thrown — none of it returns a segment to anybody.
+
+> *"While each possible cause of surprise could be detailed, with a matrix and
+> **factors of time for recovery from the condition** calculated to a nicety, the
+> overall result would not materially add to the game — in fact, the undue
+> complication would detract from the smooth flow of play."* — **DMG p. 62**
+
+Gygax considered modelling recovery and declined. And the roll already contains
+the thing a warning would address:
+
+> *"The second factor represented in surprise is **morale**… Panic or fear
+> reactions to the situation take their toll. Again, this is all **subsumed in
+> the single surprise roll**."* — DMG p. 62
+
+Set against *"during the surprise segment or segments, the surprised party is
+**unable to react in any way**"*, a shout is by definition something they cannot
+react to.
+
+**Do not confuse this with the noise rule.** *"Noise can negate surprise
+considerations"* sits beside *"prior detection"* and *"light can spoil the chance
+of surprise"* — those decide whether surprise is **rolled at all**. They do not
+reach backwards into a roll already made. *(Asked by the player 2026-09-13, day
+79, with six of his eight frozen and the one free character holding a bow he did
+not want to fire into their backs.)*
+
 ### Encounter distance
 
 Surprise **shortens** it: subtract the surprise value from normal distance
