@@ -7450,3 +7450,10 @@ when	exped	turn	notation	dice	modifier	total	hidden	reason
 2026-09-13			2d4	1,1	0	2		day 79 rd 2: FRYTHON'S SLEEP. Troglodytes are 2 HD -> the '1+1 to 2' row of PHB p.68 -> 2-8 creatures affected. There are only two, so this cannot fail to take both; rolled for the record
 2026-09-13			1d3	3	0	3		day 79 rd 2: Frython's sleep took 2d4=2 creatures but THREE are inside the circle -- both troglodytes and Dave, by the player's own geometry. PHB p.68 gives NO priority rule in 1e ('lowest hit dice first' is Basic/2e, not this game), so it is rolled neutrally rather than resolved in the party's favour. WHO ESCAPES: 1=troglodyte 1, 2=troglodyte 2, 3=DAVE
 2026-09-13			1d8	4	0	4		day 79 rd 2: Blartho's CURE LIGHT WOUNDS on Yrtone, who is at 2/7 with his own side's arrow in her back
+2026-09-13			1d8	1	0	1		day 79 round 49, area 8 before the rest: cure light wounds, Dellie->Yrtone. Every cure in the party spent before sleeping, since all of it is re-memorised in four hours
+2026-09-13			1d8	2	0	2		day 79 round 49, area 8 before the rest: cure light wounds, Yrtone->Dave. Every cure in the party spent before sleeping, since all of it is re-memorised in four hours
+2026-09-13			1d8	6	0	6		day 79 round 49, area 8 before the rest: cure light wounds, Blartho->Torsat. Every cure in the party spent before sleeping, since all of it is re-memorised in four hours
+2026-09-13			1d6	2	0	2		day 79: TORSAT'S COMA. DMG p.82 -- 'any character brought to 0 (or fewer) hit points and then revived will remain in a coma for 1-6 turns.' He was at -1 and Blartho's cure took him to 5/6
+2026-09-13			d6	2	0	2		wandering check, anchor rest watch 1
+2026-09-13			d6	6	0	6		wandering check, anchor rest watch 2
+2026-09-13			d6	6	0	6		wandering check, anchor 300

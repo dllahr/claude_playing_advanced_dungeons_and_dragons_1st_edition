@@ -116,3 +116,13 @@ when	exped	round	who	spell	event	note
 2026-09-12	-	overnight day 77-78	Dellie	light	memorised	2 of 2
 2026-09-12	-	overnight day 77-78	Dellie	cure light wounds	memorised	her one cure
 2026-09-12	-	overnight day 77-78	Frython	sleep	memorised	His only spell. It has ended two fights without a blow struck -- exp.6 and exp.7 -- and it is a DEAD CARD against undead
+2026-09-13	9	rd 2 of the fight / clock 39	Frython	sleep	cast	THIRD FIGHT IT HAS ENDED WITHOUT A BLOW STRUCK -- exp.6, exp.7, and now the two troglodytes at (24,37). His ONLY spell; he has nothing left until he rests.
+2026-09-13	9	rd 2 of the fight / clock 39	Blartho	cure light wounds	cast	1d8=4 on Yrtone, 2/7 -> 6/7, after Tristle put his own arrow in her back. ONE CURE LEFT, plus command.
+2026-09-13	9	clock 49	Yrtone	cure light wounds	cast	1d8=2 on Dave, 8/9 -> 9/9 capped. Spent deliberately before the rest, since it is re-memorised in four hours. ONE CURE LEFT plus command.
+2026-09-13	9	clock 49	Dellie	cure light wounds	cast	1d8=1 on Yrtone, 6/7 -> 7/7. *** DELLIE’S FIRST CURE EVER CAST. *** She has been a cleric since day 39. Her two LIGHT spells are still untouched and she has still never cast one.
+2026-09-13	9	clock 49	Blartho	cure light wounds	cast	1d8=6 on TORSAT at -1 -> 5/6. His second cure; he is down to command alone. Under the RAW adopted today this bought the hit points and nothing else -- coma 1d6=2 turns, then a week.
+2026-09-13	9	clock 289-319	Frython	sleep	memorised	Re-memorised after the 4-hour rest. 15 min study, DMG p.40. Same spell -- it is his only one.
+2026-09-13	9	clock 289-319	Blartho	cure light wounds	memorised	1 of 2, re-memorised. 30 min of prayer for the pair, the longest of any caster, so it sets the study time for the whole party.
+2026-09-13	9	clock 289-319	Blartho	cure light wounds	memorised	2 of 2, re-memorised. Command was never cast and is still held.
+2026-09-13	9	clock 289-319	Yrtone	cure light wounds	memorised	Replaces the one spent on Dave. Back to command + 2 cure.
+2026-09-13	9	clock 289-319	Dellie	cure light wounds	memorised	Replaces the one spent on Yrtone. Back to 2 light + 1 cure, and the two lights are STILL unused.

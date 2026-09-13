@@ -680,3 +680,17 @@ when	exped	round	kind	anchor	detail	note
 2026-09-13	9	35	check	30	d6=1 -> Troglodytes (1-2)-AC 5, HD 2', hp 6,5, #AT 3, D 1-4/1-4/ 1-4, MV 120' (40'), Save F2, ML 9	anchor 30 + 5
 2026-09-13	9	38	advance		1	day 79: the troglodyte surprise window at (24,37) -- two segments resolved as two rounds
 2026-09-13	9	39	advance		1	day 79: round 2 of the troglodyte fight -- sleep, and both killed helpless
+2026-09-13	9	49	advance		10	day 79: OUT from (24,37) to area 8, 300 ft on known ground but CARRYING TORSAT -- 450 ft/turn dropped to 300 (9in -> 6in, the area-9 glassware precedent), so 10 rounds not 7
+2026-09-13	9	289	advance		240	REST 4.0 h — day 79, AREA 8: four hours, the minimum for 1st-level spells (DMG p.40). Both secret doors spiked shut by hand and mallet-handle, the interior door to area 9 closed, LANTERN OUT for real so Tristle keeps his elf infravision. Dave and Ista one at each spiked door listening; TRISTLE WATCHES THE WHOLE TIME. Two checks, not three -- half a night camped inside
+2026-09-13	9	65	check	60	not rolled	inside a long rest; the module gives 2 checks per night instead of the normal schedule
+2026-09-13	9	91	check	90	not rolled	inside a long rest; the module gives 2 checks per night instead of the normal schedule
+2026-09-13	9	123	check	120	not rolled	inside a long rest; the module gives 2 checks per night instead of the normal schedule
+2026-09-13	9	154	check	150	not rolled	inside a long rest; the module gives 2 checks per night instead of the normal schedule
+2026-09-13	9	185	check	180	not rolled	inside a long rest; the module gives 2 checks per night instead of the normal schedule
+2026-09-13	9	210	check	210	not rolled	inside a long rest; the module gives 2 checks per night instead of the normal schedule
+2026-09-13	9	245	check	240	not rolled	inside a long rest; the module gives 2 checks per night instead of the normal schedule
+2026-09-13	9	275	check	270	not rolled	inside a long rest; the module gives 2 checks per night instead of the normal schedule
+2026-09-13	9	129	check	rest watch 1	d6=2	rest watch 1
+2026-09-13	9	209	check	rest watch 2	d6=6	rest watch 2
+2026-09-13	9	319	advance		30	day 79: study and prayer after the rest -- 15 min per spell (DMG p.40), and Blartho's two cures at 30 min set the pace for everybody
+2026-09-13	9	300	check	300	d6=6	anchor 300 + 0
