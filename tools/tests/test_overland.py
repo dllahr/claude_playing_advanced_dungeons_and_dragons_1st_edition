@@ -405,3 +405,45 @@ def test_the_lyde_turning_is_KNOWN_because_dave_rode_it():
     import mapimg
     assert 'the Lyde track' in overland.ways(true=False)
     assert 'the Lyde turning' in mapimg.svg()
+
+
+# ------------------------------------- what a casualty costs on the road
+# Added 2026-09-13. The DM ruled mid-scene that an invalid under DMG p.82 drops
+# the party to the heavy-burden row and so made a 22-mile walk take two days.
+# The player said the campaign had never done that, and he was right: expedition
+# 7 came out on day 46 and was in Wethersby LATE AFTERNOON ON DAY 47 with Ista
+# invalid and ~250 gp of laboratory glass carried. One day, twenty-two miles.
+#
+# A rule reasoned from a table that contradicts attested play loses to the play.
+
+def test_an_invalid_does_NOT_slow_the_party():
+    import rules
+    t = rules.find('Wounded, invalid and carried')
+    assert t, 'the casualty table is gone from rules/overland.md'
+    rows = {r[0]: r[1] for r in t['rows']}
+    inval = [v for k, v in rows.items() if 'INVALID' in k]
+    assert inval, rows
+    assert '20 miles' in inval[0], (
+        'an invalid walks the normal laden day. Attested day 46-47: Ista '
+        'invalid, 22 miles, one day, arrived late afternoon.')
+
+
+def test_someone_who_cannot_walk_DOES_slow_the_party():
+    import rules
+    rows = {r[0]: r[1] for r in rules.find('Wounded, invalid and carried')['rows']}
+    cant = [v for k, v in rows.items() if 'CANNOT WALK' in k]
+    assert cant and '10 miles' in cant[0], rows
+
+
+def test_the_precedents_are_quoted_not_just_cited():
+    """Both rows were settled against the record, and the record must sit
+    beside them -- otherwise the next DM re-derives from the burden table and
+    gets the same wrong answer."""
+    body = open(os.path.join(ROOT, 'rules', 'overland.md'),
+                encoding='utf-8').read()
+    # normalised: the file is hard-wrapped, and a quotation must not have to be
+    # kept on one line to stay findable
+    flat = ' '.join(body.split())
+    assert 'BACK IN WETHERSBY, late afternoon' in flat
+    assert 'litter of two poles and the bearskin' in flat
+    assert 'A LITTER IS NOT FASTER THAN A MAN WHO CAN WALK' in flat

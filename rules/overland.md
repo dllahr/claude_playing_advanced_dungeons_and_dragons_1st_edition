@@ -63,6 +63,48 @@ into this category."**
 
 ---
 
+## Wounded, invalid and carried — what actually slows a march
+
+**Written 2026-09-13, day 79, after the DM invented a rate mid-scene and the
+player caught it against the record.** The DM ruled that Torsat, an invalid
+under DMG p.82, dropped the party to the heavy-burden row of 10 miles a day and
+so made Wethersby two days. **That is not what this campaign has done**, and the
+player said so.
+
+| the casualty | what the party makes | why |
+|---|---|---|
+| **Wounded but on his feet** — any hit points above 0 | **the normal day, 20 miles laden** | a wound is not a burden |
+| **INVALID under DMG p.82** — revived from 0 or fewer, inside the week, *"move slowly to a place of rest"* | **the normal day, 20 miles laden.** He arrives tired and late, not slower | **attested, day 46-47** |
+| **CANNOT WALK** — unconscious, or at 0 or below and not yet revived | **the HEAVY row, 10 miles a day**, and it costs two bearers at a time | **attested, day 69** |
+
+*source: **DM RULING 2026-09-13**, settled against two attested precedents
+rather than reasoned from the burden table.*
+
+**The invalid row is the one that was got wrong, and the evidence is flat:**
+
+> **Day 46** — *"EXPEDITION 7. 13h20m under, all nine out alive."*
+> **Day 47** — *"**BACK IN WETHERSBY, late afternoon.** ~250 gp of laboratory
+> glass carried out… **Ista invalid until ~day 53** (DMG p.82)."*
+
+**Twenty-two miles in one day, with an invalid in the party and a quarter-ton of
+glass on their backs.** Whatever the burden table implies, that is what happened,
+and a rule that contradicts play loses to play.
+
+### Carrying a man — the litter
+
+The party has built one: **day 69, the dwarf, *"a litter of two poles and the
+bearskin"*.** Two bearers at a time, rotated through everyone able.
+
+**A LITTER IS NOT FASTER THAN A MAN WHO CAN WALK.** Rotating the bearers keeps
+the party going all day without wrecking anybody, but it does not beat 20 miles
+— two people carrying a third are on the **heavy** row whatever the rotation, and
+the rotation buys endurance, not speed. **So if the casualty can walk at all, he
+walks.** The litter is for someone who cannot.
+
+**Underground the carry is priced separately and it is real: 9″ drops to 6″** —
+the area-9 glassware precedent, applied to carrying Torsat out of (24,37) on day
+79. Distance underground is short enough that the difference shows.
+
 ## ⚠ WHAT THIS CAMPAIGN USES, AND THE FIGURE IT CORRECTS
 
 **The hundred's roads are NORMAL terrain**, which for vehicles means *roadways
