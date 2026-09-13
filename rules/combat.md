@@ -453,8 +453,26 @@ gives 2 lost segments on a 4 against a 2.
 > **three times the normal rate** providing the weapon/missiles are ready."*
 > — **DMG p. 62**
 
-So **two lost segments is two full rounds of attacks**, not one. Missiles already
-in hand fire at **3x rate** in a segment.
+### ⚠ WHO THAT PARAGRAPH IS ABOUT — read the subject before quoting it
+
+**BOTH of those benefits belong to the SURPRISING side ONLY, and the DMG states
+the premise in the same sentence: *"BECAUSE THE PARTY SURPRISED IS (RELATIVELY)
+INACTIVE, the surprising party will be able to…"*.** They exist because the
+targets are helpless.
+
+So **two lost segments is two full rounds of attacks for the side that
+surprised**, and missiles already in hand fire at **3x** — *for that side*.
+
+**NEITHER APPLIES TO SOMEBODY WHO MERELY IS NOT SURPRISED.** A character who
+negates his own segments on dexterity is **not frozen and not a free target, and
+that is the whole of it**. His opponents are not inactive, so nothing multiplies:
+he acts at his **normal rate of fire, once**.
+
+> *Caught by the player 2026-09-13, day 79, within the hour of this section
+> being written — the DM told him Tristle's bow fired at 3x because the rule had
+> been cached WITHOUT ITS SUBJECT. That is the same defect, in the same file,
+> that this whole section was written to fix: A PARAPHRASE LOSES CONDITIONS.
+> The condition here is six words long and it is the first six words.*
 
 Possible in a surprise segment: avoiding, parleying, waiting, **missile
 discharge**, setting weapons against a charge, and **1-segment spells** — which is

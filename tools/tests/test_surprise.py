@@ -77,6 +77,37 @@ def test_a_segment_buys_a_WHOLE_ROUND_of_attacks():
         'missiles already in hand fire at 3x in a surprise segment, DMG p.62')
 
 
+def test_the_3x_AND_the_segment_as_a_round_belong_to_the_SURPRISING_SIDE_ONLY():
+    """*** THE DM GOT THIS WRONG WITHIN THE HOUR OF WRITING THE SECTION. ***
+
+    He told the player that Tristle -- who negated his own surprise on DEX 18 --
+    fired at three times rate. He does not. The DMG puts the premise in the same
+    sentence as the benefit: "BECAUSE THE PARTY SURPRISED IS (RELATIVELY)
+    INACTIVE, the surprising party will be able to..." Both multipliers exist
+    because the targets are helpless, and Tristle's targets were the ones doing
+    the surprising.
+
+    Negating your own surprise makes you UNFROZEN AND NOT A FREE TARGET. It is
+    not an attack multiplier and it is not a won initiative.
+
+    The condition is the first six words of the paragraph. Caching the sentence
+    without its subject is the exact failure this file was written to prevent.
+    """
+    body = open(os.path.join(ROOT, 'rules', 'combat.md'),
+                encoding='utf-8').read()
+    i = body.find('three times the normal rate')
+    assert i > 0
+    scope = body[i:i + 1400]
+    assert 'SURPRISING side ONLY' in scope or 'surprising side only' in scope.lower(), (
+        'the 3x rate is cached without saying WHOSE it is')
+    assert 'BECAUSE THE PARTY SURPRISED IS (RELATIVELY)' in scope, (
+        "the DMG's own premise must sit beside the benefit, or the next reader "
+        'quotes the benefit alone -- which is what happened')
+    assert 'normal rate of fire, once' in scope, (
+        'what a merely-unsurprised character actually gets must be stated, or '
+        'the absence reads as the multiplier applying')
+
+
 # ------------------------------------------------------- dexterity
 
 def test_dexterity_in_surprise_is_PER_INDIVIDUAL_and_is_not_an_initiative():
