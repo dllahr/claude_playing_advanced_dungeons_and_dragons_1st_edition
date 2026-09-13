@@ -37,6 +37,52 @@ sys.path.insert(0, os.path.join(
 from tsvlog import append, read_tsv, today                      # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+# *** EDGES THE PATHFINDER MAY NOT USE. ***
+#
+# `move` physically cannot cross a WALL, which has held for two expeditions.
+# It had no notion of a route the campaign has RULED OUT -- and on day 79 it
+# proved it: asked for the four-way at (16,19), it went back through the secret
+# slab and straight up x=16 from y=13 to y=19, the corridor under the magic
+# mouths, which is the one stretch of level 1 this party does not walk. The rule
+# was in CHECKLIST.md, in prose, where the pathfinder could not read it.
+#
+# (map, level, x, y, orient) -> why. A blocked edge is refused with the reason,
+# and `--anyway` is the deliberate override.
+FORBIDDEN = {
+    ('b1', 1, 16, 13, 'H'): 'the x=16 corridor between y=13 and y=19 runs '
+                            'under the MAGIC MOUTHS. The party does not use '
+                            'it; the route in and out is the alcove-pair-2 '
+                            'one-way slab at (17,13,V)',
+    ('b1', 1, 16, 14, 'H'): 'same corridor, under the magic mouths',
+    ('b1', 1, 16, 15, 'H'): 'same corridor, under the magic mouths',
+    ('b1', 1, 16, 16, 'H'): 'same corridor, under the magic mouths',
+    ('b1', 1, 16, 17, 'H'): 'same corridor, under the magic mouths',
+    ('b1', 1, 16, 18, 'H'): 'same corridor, under the magic mouths',
+}
+
+
+def forbidden(map_name, level, x, y, orient):
+    return FORBIDDEN.get((map_name, int(level), int(x), int(y), orient))
+
+
+def edge_between(a, b):
+    """The (x, y, orient) separating two adjacent squares."""
+    (ax, ay), (bx, by) = a, b
+    if ay == by:
+        return (min(ax, bx), ay, 'V')
+    return (ax, min(ay, by), 'H')
+
+
+def forbidden_on(steps, map_name, level):
+    """[(edge, why)] for every ruled-out edge the route would cross."""
+    out = []
+    for a, b in zip(steps, steps[1:]):
+        x, y, o = edge_between(a, b)
+        why = forbidden(map_name, level, x, y, o)
+        if why:
+            out.append(((x, y, o), why))
+    return out
 LOG = os.path.join(ROOT, 'campaign', 'party.tsv')
 DB = os.path.join(ROOT, 'mapdb', 'output', 'b1', 'b1.sqlite')
 
@@ -77,7 +123,7 @@ def route(db, level, a, b):
 
 
 def move(to, why='', rate='explore', db=None, path=None, map_name='b1',
-         exped='', turn='', max_squares=None):
+         exped='', turn='', max_squares=None, anyway=False):
     """Move the party. Raises ValueError if the route does not exist.
 
     This is the whole point of the module: an illegal move is an exception,
@@ -110,6 +156,27 @@ def move(to, why='', rate='explore', db=None, path=None, map_name='b1',
     # the map routes it 28 squares the long way round. Refusing impossible
     # destinations was never enough -- the bad move was possible, just not the
     # way it was imagined.
+    # *** A ROUTE THE CAMPAIGN HAS RULED OUT. ***
+    #
+    # The pathfinder finds the SHORTEST legal path, and "legal" meant "does not
+    # cross a wall". On day 79, asked for the four-way at (16,19), it went back
+    # through the secret slab and straight up the corridor under the magic
+    # mouths -- the one stretch of level 1 this party does not walk. The rule
+    # lived in CHECKLIST.md, in prose, where no tool could read it.
+    #
+    # It REFUSES rather than rerouting, on purpose: the caller should name the
+    # way they mean, exactly as the player did.
+    bad = forbidden_on(steps, map_name, level)
+    if bad and not anyway:
+        raise ValueError(
+            'THAT ROUTE IS RULED OUT. The shortest path from (%d,%d) to '
+            '(%d,%d) crosses:\n%s\n'
+            '    Name the waypoints and walk it in legs, or pass --anyway if '
+            'the party has genuinely decided to use it.'
+            % (x, y, dest[0], dest[1],
+               '\n'.join('        (%d,%d,%s)  %s' % (e[0], e[1], e[2], w)
+                          for e, w in bad)))
+
     straight = abs(dest[0] - x) + abs(dest[1] - y)
     walked = len(steps) - 1
     # max(2, ...) not max(3, ...): a one-square straight line that costs three
