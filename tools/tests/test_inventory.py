@@ -92,15 +92,29 @@ def test_every_unit_is_in_the_closed_vocabulary():
 # ------------------------------------------------- one fact, one home
 
 def test_spikes_carried_is_derived_not_stored():
-    """22 owned - 9 emplaced = 13 carried, and no cell holds the 13.
+    """CARRIED = OWNED - EMPLACED, whatever today's numbers happen to be.
 
     The old file stored "13" by hand beside a world_changes log that separately
     tracked 9 emplaced. Two numbers for one fact is how the spike ledger came to
     show a phantom negative and needed two correcting rows, the first of which
     over-corrected to 7.
+
+    *** THIS TEST USED TO ASSERT `carried_spikes() == 13` AND WENT RED THE
+    MOMENT THE PARTY SPIKED A DOOR. *** On day 79 they wedged both secret doors
+    of the 8/9 pocket, carried fell to 9, and a test about DERIVATION failed for
+    a reason that was simply play happening. That is the third time this shape
+    has appeared -- the purse, the party's position, the encounter fixture -- so
+    it now asserts the relationship instead of the reading.
     """
-    assert inventory.qty('iron_spike') == 22
-    assert inventory.carried_spikes() == 13
+    import world
+    owned = inventory.qty('iron_spike')
+    carried = inventory.carried_spikes()
+    placed, _ = world.deployed(world.load())
+    emplaced = placed.get('iron spike', 0)
+    assert owned > 0
+    assert carried == owned - emplaced, (owned, emplaced, carried)
+    assert 0 <= carried <= owned, (carried, owned)
+    assert emplaced >= 0, 'a NEGATIVE emplacement is the phantom this log had'
 
 
 def test_oil_is_not_counted_here_at_all():
