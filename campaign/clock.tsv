@@ -667,3 +667,4 @@ when	exped	round	kind	anchor	detail	note
 2026-09-12	9	0	start			entered the dungeon
 2026-09-12	9	0	jitter		30:5,60:5,90:1,120:3,150:4,180:5,210:0,240:5,270:5,300:0,330:5,360:0,390:0,420:0,450:1,480:4,510:5,540:5,570:3,600:4,630:2,660:5,690:1,720:3,750:1,780:1,810:1,840:4,870:1,900:5,930:1,960:0,990:1,1020:4,1050:5,1080:4,1110:2,1140:2,1170:3,1200:3,1230:1,1260:1,1290:2,1320:3,1350:0,1380:4,1410:3,1440:1,1470:2,1500:1,1530:1,1560:4,1590:4,1620:4,1650:1,1680:2,1710:5,1740:5,1770:4,1800:3	rolled in advance and HIDDEN; each is reported when its check fires
 2026-09-12	9	3	advance		3	IN. Thirteen squares to the alcove at (17,13), known rate, lantern lit at the mouth
+2026-09-12	9	10	advance		7	day 79: the named route from the alcove to (14,29) -- east through the slab, north up x=19, west along y=19 to the four-way, north to (16,21), west and north to (10,29), east to (14,29). 31 squares, 310 feet, known rate
