@@ -266,7 +266,7 @@ def test_lyde_is_reached_by_a_TURNING_off_the_north_road():
     assert overland.road_between('marchford', 'lyde') is None
 
 
-def test_the_route_to_lyde_is_VAGUE_to_the_party():
+def _superseded_test_the_route_to_lyde_is_VAGUE_to_the_party():
     """They got there twice and could still not say which milestone the
     turning is at. Lyde itself they have stood in."""
     assert overland.level_of('lyde_turning') == overland.VAGUE
@@ -326,3 +326,82 @@ def test_wraye_is_now_drawn_but_with_its_doubt_around_it():
     assert 'Wraye' in out, 'a vague place is DRAWN; only a heard-of one is not'
     rings = out.count('stroke-dasharray="5 4"')
     assert rings >= 1, 'and its uncertainty must be drawn with it'
+
+# ------------------------------------------- Draycot is not a cul-de-sac
+
+def test_draycot_has_more_than_one_way_out():
+    """*** INFERRED FROM THE RECORD, NOT INVENTED. ***
+    district.md: "Sir Aymer's clip has gone [to Ludbury] these two summers", and
+    Wethersby was never told where the staple went because "his clip goes to
+    Ludbury EITHER WAY". *** If it went through Wethersby the town would have
+    watched it go, every summer, and the whole mystery would never have
+    existed. *** So Draycot has its own way south.
+    """
+    out = [r['id'] for r in overland.roads().values()
+           if 'draycot' in overland.stops_of(r)]
+    assert len(out) >= 3, out
+    assert 'draycot_south' in out
+    assert 'ludbury' in overland.stops_of(overland.roads()['draycot_south'])
+
+
+def test_the_south_road_does_not_pass_through_wethersby():
+    """The whole point of it. If it did, the staple would not have been
+    a mystery to a market town that watches every cart on its own road."""
+    assert 'wethersby' not in overland.stops_of(
+        overland.roads()['draycot_south'])
+
+
+def test_the_party_does_not_know_the_south_road_and_it_is_not_drawn():
+    """*** A ROAD IS A SPOILER TOO. *** They have never
+    asked where Sir Aymer's clip goes. Drawing the answer on their map would
+    hand it to them in a picture, which is harder to un-see than a sentence.
+    """
+    import mapimg
+    assert overland.level_of('draycot_south') == overland.UNKNOWN
+    name = overland.roads()['draycot_south']['name']
+    assert name not in overland.ways(true=False)
+    assert name in overland.ways(true=True)
+    assert name not in mapimg.svg()
+    assert name in mapimg.svg(true=True)
+
+
+def test_the_draycot_road_runs_ON_and_the_party_came_up_it():
+    """district.md: "Where the PCs came from -- d8 = 6 -- the SOUTH-WEST,
+    on the Draycot road, before expedition 1." So the road does not stop at the
+    hall, and they know that because they walked it."""
+    assert 'sw_way' in overland.points()
+    assert 'draycot_road_on' in overland.roads()
+    assert overland.bearing('draycot', 'sw_way') == 'south-west'
+    assert overland.level_of('sw_way') == overland.VAGUE
+    assert overland.level_of('draycot_road_on') == overland.VAGUE
+
+
+# ---------------------------------------------- knowledge covers the ways
+
+def test_every_way_has_a_knowledge_row():
+    """Explicitly, because a default would be a guess about what the
+    party has actually travelled."""
+    kn = overland.knowledge()
+    missing = [rid for rid in overland.roads() if rid not in kn]
+    assert not missing, missing
+
+
+def test_a_road_does_not_carry_a_precision():
+    """A precision is a radius around a POINT. You know where a road
+    goes, or you do not quite."""
+    warns = [m for s, m in overland.check() if s == 'WARN']
+    assert not [m for m in warns if 'is a ROAD and carries a precision' in m]
+
+
+def test_the_lyde_turning_is_KNOWN_because_dave_rode_it():
+    """*** CORRECTED 2026-09-12, PLAYER-CAUGHT. *** It was
+    logged VAGUE on the reasoning that nobody had surveyed which milestone the
+    turning is at. But DAVE RODE TO LYDE AND HOME AGAIN on day 62, and Wat
+    before him -- and a man who has ridden to a place and back knows where he
+    turned off. The route belongs on the party's map.
+    """
+    assert overland.level_of('lyde_turning') == overland.KNOWN
+    assert overland.level_of('lyde_track') == overland.KNOWN
+    import mapimg
+    assert 'the Lyde track' in overland.ways(true=False)
+    assert 'the Lyde turning' in mapimg.svg()

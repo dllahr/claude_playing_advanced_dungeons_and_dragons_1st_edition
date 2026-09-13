@@ -187,9 +187,21 @@ def stops_of(r):
 ROADS = None        # filled on first use, so callers can still iterate ways
 
 
-def ways():
-    """{name: [stops]} -- what `mapimg.py` draws."""
-    return {r['name']: stops_of(r) for r in roads().values()}
+def ways(kn=None, true=True):
+    """{name: [stops]}. With `true=False`, only what the PARTY knows about.
+
+    *** A ROAD IS A SPOILER TOO. *** The party has never asked where Sir Aymer's
+    clip goes, and it goes to Ludbury by a road that does not pass their town --
+    which is most of why nobody in Wethersby could say where the staple went.
+    Drawing that road on their map would hand them the answer in a picture.
+    """
+    kn = kn if kn is not None else knowledge()
+    out = {}
+    for r in roads().values():
+        if not true and level_of(r['id'], kn) in (HEARD, UNKNOWN):
+            continue
+        out[r['name']] = stops_of(r)
+    return out
 
 
 def road_between(a, b):
@@ -329,22 +341,41 @@ def check(pts=None, kn=None):
             out.append(('FAIL', '%s has fix=%r; it must say how the position '
                                 'was arrived at' % (pid, r.get('fix'))))
 
+    # A knowledge row is about a PLACE or about a WAY. Both are things the
+    # party can know, and a road they have never heard of is exactly as real as
+    # a town they have never heard of.
+    ways_ = roads()
     for pid, row in sorted(kn.items()):
-        if pid not in entmod.places():
-            out.append(('FAIL', 'knowledge.tsv names place %r, which is not in '
-                                'campaign/places.tsv' % pid))
+        is_place, is_way = pid in entmod.places(), pid in ways_
+        if not (is_place or is_way):
+            out.append(('FAIL', 'knowledge.tsv names %r, which is neither a '
+                                'place nor a road' % pid))
         lv = (row.get('level') or '').strip()
         if lv not in LEVELS:
             out.append(('FAIL', '%s has knowledge level %r; expected one of %s'
                         % (pid, lv, list(LEVELS))))
-        if lv == VAGUE and not (row.get('precision_ft') or '').strip():
-            out.append(('WARN', '%s is VAGUE with no precision_ft -- how far '
-                                'out would they actually be?' % pid))
-        if lv != VAGUE and (row.get('precision_ft') or '').strip():
-            out.append(('WARN', '%s is %s but carries a precision_ft. Only '
-                                'VAGUE takes one: a known place is known and a '
-                                'heard-of one has no position at all'
-                        % (pid, lv)))
+        # A PRECISION IS A RADIUS AROUND A POINT, so only a place takes one.
+        # You do not know a road to within a thousand feet; you know where it
+        # goes or you do not quite.
+        if is_place:
+            if lv == VAGUE and not (row.get('precision_ft') or '').strip():
+                out.append(('WARN', '%s is VAGUE with no precision_ft -- how '
+                                    'far out would they actually be?' % pid))
+            if lv != VAGUE and (row.get('precision_ft') or '').strip():
+                out.append(('WARN', '%s is %s but carries a precision_ft. Only '
+                                    'VAGUE takes one: a known place is known '
+                                    'and a heard-of one has no position at all'
+                            % (pid, lv)))
+        elif (row.get('precision_ft') or '').strip():
+            out.append(('WARN', '%s is a ROAD and carries a precision_ft. A '
+                                'precision is a radius around a point' % pid))
+
+    for rid in sorted(ways_):
+        if rid not in kn:
+            out.append(('WARN', 'road %r has no row in knowledge.tsv. Every '
+                                'way gets one explicitly -- a default would be '
+                                'a guess about what the party has travelled'
+                        % rid))
 
     # The cross-check that catches the DM forgetting: somewhere they demonstrably
     # spent a day, with nothing said about whether they now know where it is.

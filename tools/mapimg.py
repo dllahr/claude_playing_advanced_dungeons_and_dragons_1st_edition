@@ -98,9 +98,13 @@ def svg(pts=None, kn=None, true=False, px_per_mile=PX_PER_MILE):
          '<rect width="100%%" height="100%%" fill="#f6f1e4"/>']
 
     # roads under everything
-    for r in sorted(land.roads().values(), key=lambda r: r.get('kind') != 'road'):
+    shown_ways = land.ways(kn, true=true)
+    for r in sorted(land.roads().values(),
+                    key=lambda r: r.get('kind') != 'road'):
         stops = land.stops_of(r)
         name, kind = r['name'], (r.get('kind') or 'road')
+        if name not in shown_ways:
+            continue        # a road they have not heard of
         seq = [s for s in stops if s in real]
         if len(seq) < 2:
             continue
