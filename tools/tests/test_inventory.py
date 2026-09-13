@@ -47,10 +47,15 @@ def test_the_rations_split_that_used_to_read_as_two():
     tool the number 2 for the pair of them.
     """
     st = inventory.state()
-    assert st['rations_iron'][''][0] == 2.5
-    assert st['rations_std'][''][0] == 2
+    # THE UNITS are the invariant. The QUANTITIES move every time the party
+    # buys food, and pinning them made this fail on the first purchase after
+    # it was written -- a stored total wearing a test's clothes.
     assert st['rations_iron'][''][1] == 'person-week'
     assert st['rations_std'][''][1] == 'person-week'
+    assert 'rations_iron' in st and 'rations_std' in st, (
+        'iron and standard are DIFFERENT ASSETS. The retired cell held both '
+        'as "~2.5 IRON + 8 STANDARD" and every tool read it as the number 2')
+    assert st['rations_iron'][''][0] > 0 and st['rations_std'][''][0] > 0
 
 
 def test_the_damaged_rope_is_visible_on_its_own_row():

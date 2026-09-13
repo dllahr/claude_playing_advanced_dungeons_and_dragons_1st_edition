@@ -50,8 +50,18 @@ def money_rows():
 # ------------------------------------------------------------- the purse
 
 def test_the_purse_is_computed_not_stored():
-    """It must equal the figure every other tool and the cell agree on."""
-    assert ledger.total() == 1072.1
+    """*** THIS USED TO ASSERT 1072.1 AND BROKE THE FIRST TIME THE PARTY
+    BOUGHT ANYTHING. *** A test that pins today's gold is a stored total
+    wearing a test's clothes -- the exact thing ledger.py exists to abolish.
+    What must hold is the INVARIANT: the purse is the sum of the log.
+    """
+    rows = money_rows()
+    anchor = [r for r in rows if r['asset'] == ledger.ANCHOR][-1]
+    after = rows[rows.index(anchor) + 1:]
+    expect = float(anchor['delta']) + sum(float(r['delta'] or 0)
+                                          for r in after)
+    assert abs(ledger.total() - expect) < 0.001
+    assert ledger.total() > 0, 'the party is not in debt'
 
 
 def test_there_is_no_second_copy_of_the_purse_left_to_check_against():
@@ -64,7 +74,8 @@ def test_there_is_no_second_copy_of_the_purse_left_to_check_against():
     light.py's oil disagreement warning in the same commit.
     """
     assert not hasattr(ledger, 'inventory_cell')
-    assert ledger.total() == 1072.1
+    # and no figure is pinned here either, for the same reason
+    assert ledger.total() == ledger.total(ledger.rows())
 
 
 def test_an_anchor_supersedes_everything_above_it():
@@ -76,8 +87,11 @@ def test_an_anchor_supersedes_everything_above_it():
 
 def test_the_purse_can_be_asked_for_a_past_day():
     """day 65 is the day the party passed a thousand gold for the first time."""
+    # PAST days are safe to pin: they cannot change without rewriting the
+    # log, which is the one thing CLAUDE.md forbids outright.
     assert ledger.total(day=65) == 1084.5
     assert ledger.total(day=52) == 570.6
+    assert ledger.total() >= ledger.total(day=65) - 200
 
 
 def test_gp_sp_formatting_is_the_campaigns_own():

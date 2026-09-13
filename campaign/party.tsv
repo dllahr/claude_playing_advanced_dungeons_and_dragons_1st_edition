@@ -148,3 +148,4 @@ when	map	level	x	y	exped	turn	squares	feet	rate	why	route
 2026-09-09	b1	1	17	13	8	28	2	20	known	day 70 OUT with ~200 lb at 6in, the named dogleg, never x=16 between y=13 and y=19	19,13 18,13 17,13
 2026-09-09	b1	1	16	13	8	28	1	10	known	day 70 OUT with ~200 lb at 6in, the named dogleg, never x=16 between y=13 and y=19	17,13 16,13
 2026-09-09	b1	1	16	1	8	28	12	120	known	day 70 OUT with ~200 lb at 6in, the named dogleg, never x=16 between y=13 and y=19	16,13 16,12 16,11 16,10 16,9 16,8 16,7 16,6 16,5 16,4 16,3 16,2 16,1
+2026-09-12	b1	1	17	13	9		13	130	known	IN. Day 79, expedition 9: eight down the entrance corridor to the alcove with the secret door, the route they have used every time. NEVER x=16 between y=13 and y=19 under the magic mouths	16,1 16,2 16,3 16,4 16,5 16,6 16,7 16,8 16,9 16,10 16,11 16,12 16,13 17,13

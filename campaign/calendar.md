@@ -137,3 +137,32 @@ sleeps eight dry with firewood stacked under it. A board on the post reads
 **The patrol never went past the crag turning**, which is the outer limit of the
 day's-walk circuit and the point where the party's own road ends and the hills
 begin.
+
+---
+
+## EXPEDITION 9 — the standing formation, set day 79
+
+**It changed for this expedition and it is not the one the file carried before.**
+Hask is on the wool road; there is no spear in the second rank.
+
+| rank | | | |
+|---|---|---|---|
+| **1** | **Yrtone** — shield, **sling** | **Dave** — shield, long sword | **Torsat** — **BOW** |
+| **2** | **Frython** — darts | **Tristle** — bow | **Ista** — **the lantern**, darts |
+| **3** | **Dellie** — shield, sling | **Blartho** — shield, sling |
+
+> ### ⚠ TWO THINGS IN IT THE DM WILL OTHERWISE RUN WRONG
+>
+> **TORSAT IS IN THE FRONT RANK WITH A BOW**, not a sword. A fighter at the
+> front shooting is a deliberate choice and it is the player's.
+>
+> **YRTONE IS IN THE FRONT RANK.** She is a cleric with seven hit points and she
+> is standing in the line. Do not quietly move her.
+>
+> **AND THE LANE RULE APPLIES TO FIVE OF THE EIGHT**, because Frython, Tristle,
+> Ista, Dellie and Blartho are all shooting past rank 1. The figure and its two
+> conditions live in `rules/exploration.md` and nowhere else — **quote the
+> table, never a paraphrase.**
+
+**Darts are split between Frython and Ista** out of the fifteen Ista has carried.
+**Three short bows exist; two are in use.** Four slings, three carried.
