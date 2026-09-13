@@ -316,3 +316,47 @@ def test_a_rest_does_not_fire_every_anchor_it_covers(tmp_path):
     exped, rnd, jitter, fired = clock.state(clock.load(p))
     due = clock.check_due(rnd, rnd + 480, jitter, fired)
     assert len(due) > 20, 'the normal schedule really would fire this many'
+
+
+# --------------------------------------------------- stabilising the dying
+# Added 2026-09-13. `condition()` derived "bleeding 1 hp/round" FROM THE NUMBER
+# ALONE, so a character who had been bandaged went on being reported as bleeding
+# to death by every briefing until somebody remembered otherwise. Ista bandaged
+# Torsat at -1 on day 79 and the tool said he was still going down a point a
+# round -- with the only correction living in a `heal 0` row nobody reads.
+
+def test_aid_stops_the_bleeding_and_the_report_says_so(tmp_path):
+    p = write(tmp_path / 'h.tsv', HP_HEADER,
+              ('2026-01-01', 9, 4, 'Torsat', 'damage', -7, 'seven on a six'),
+              ('2026-01-01', 9, 4, 'Torsat', 'stabilise', 0, 'bandaged'))
+    rows = hpmod.read_tsv(p)
+    assert hpmod.current(rows=rows)['Torsat'][0] == -1
+    assert 'Torsat' in hpmod.stabilised(rows=rows)
+    line = hpmod.condition(-1, True)
+    assert 'BLEEDING STOPPED' in line
+    assert 'bleeding 1 hp/round' not in line
+
+
+def test_aid_restores_NO_hit_points(tmp_path):
+    """DMG p.82 aid stops the slide; it is not a cure. A delta here would read
+    as healing in every total computed from the log."""
+    p = write(tmp_path / 'h.tsv', HP_HEADER,
+              ('2026-01-01', 9, 4, 'Torsat', 'damage', -7, ''),
+              ('2026-01-01', 9, 4, 'Torsat', 'stabilise', 0, ''))
+    assert hpmod.current(rows=hpmod.read_tsv(p))['Torsat'][0] == -1
+
+
+def test_further_damage_REOPENS_it(tmp_path):
+    """You can only stabilise a man once per wounding."""
+    p = write(tmp_path / 'h.tsv', HP_HEADER,
+              ('2026-01-01', 9, 4, 'Torsat', 'damage', -7, ''),
+              ('2026-01-01', 9, 4, 'Torsat', 'stabilise', 0, 'bandaged'),
+              ('2026-01-01', 9, 5, 'Torsat', 'damage', -1, 'kicked'))
+    rows = hpmod.read_tsv(p)
+    assert 'Torsat' not in hpmod.stabilised(rows=rows)
+    assert 'bleeding 1 hp/round' in hpmod.condition(-2, False)
+
+
+def test_an_unstabilised_negative_still_reports_the_bleeding(tmp_path):
+    assert 'bleeding 1 hp/round' in hpmod.condition(-1, False)
+    assert hpmod.condition(-10, True) == 'DEAD'

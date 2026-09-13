@@ -36,6 +36,35 @@ def characters(path=None):
     return out
 
 
+def stabilised(chars=None, rows=None):
+    """Who has had their bleeding STOPPED by aid, and is still stable.
+
+    DMG p.82 is explicit that the 1-point-a-round slide to -10 "ceases
+    immediately on any round a friendly creature administers aid" -- binding
+    wounds, a draught, anything. Before this existed, hp.py derived "bleeding"
+    from the NUMBER ALONE, so a character who had been bandaged went on being
+    reported as bleeding to death by every briefing until somebody remembered
+    otherwise. Ista bandaged Torsat at -1 on day 79 and the tool said he was
+    still going down a point a round.
+
+    Any FURTHER damage re-opens it: you can only stabilise a man once per
+    wounding.
+    """
+    chars = chars if chars is not None else characters()
+    rows = rows if rows is not None else read_tsv(LOG, missing_ok=True)
+    stable = set()
+    for r in rows:
+        who = r.get('who', '').strip()
+        if who not in chars:
+            continue
+        kind = r.get('kind')
+        if kind == 'stabilise':
+            stable.add(who)
+        elif kind in ('damage', 'anchor'):
+            stable.discard(who)
+    return stable
+
+
 def current(chars=None, rows=None):
     """{name: (hp, hp_max)}. Anchors supersede everything above them."""
     chars = chars if chars is not None else characters()
@@ -63,11 +92,14 @@ def current(chars=None, rows=None):
     return {n: (hp[n], maxhp[n]) for n in hp}
 
 
-def condition(hp):
+def condition(hp, stable=False):
     """The 1e reading of a hit point total, so it is never guessed in play."""
     if hp <= -10:
         return 'DEAD'
     if hp <= 0:
+        if stable:
+            return ('unconscious, BLEEDING STOPPED -- and still comatose 1-6 '
+                    'turns then OUT A WEEK, cure or no cure (DMG p.82)')
         return 'unconscious and bleeding 1 hp/round (DMG p.82)'
     return ''
 
@@ -75,11 +107,13 @@ def condition(hp):
 def report(chars=None, rows=None):
     hp = current(chars, rows)
     chars = chars if chars is not None else characters()
+    stable = stabilised(chars, rows)
     out = ['%-9s %-11s %7s  %s' % ('', 'class', 'hp', 'condition')]
     for n in sorted(hp, key=lambda k: -hp[k][0]):
         cur, mx = hp[n]
         out.append('%-9s %-11s %3d /%3d  %s'
-                   % (n, chars[n].get('class', ''), cur, mx, condition(cur)))
+                   % (n, chars[n].get('class', ''), cur, mx,
+                      condition(cur, n in stable)))
     return '\n'.join(out)
 
 
@@ -101,6 +135,12 @@ def build_parser():
         s.add_argument('--reason', default='')
         s.add_argument('--exped', default='')
         s.add_argument('--turn', default='')
+    st = sub.add_parser('stabilise', help='aid given -- the bleeding STOPS '
+                                         '(DMG p.82). Restores no hit points')
+    st.add_argument('who')
+    st.add_argument('--reason', default='')
+    st.add_argument('--exped', default='')
+    st.add_argument('--turn', default='')
     return p
 
 
@@ -111,13 +151,20 @@ def main(argv=None):
         if a.who not in chars:
             print('no character %r; known: %s' % (a.who, ', '.join(sorted(chars))))
             return 1
-        delta = -abs(a.amount) if a.cmd == 'damage' else abs(a.amount)
+        # `stabilise` carries no amount: aid stops the bleeding and restores
+        # nothing (DMG p.82). Giving it a delta would make it look like healing.
+        delta = 0 if a.cmd == 'stabilise' else (
+            -abs(a.amount) if a.cmd == 'damage' else abs(a.amount))
         append(a.log_file, dict(when=today(), exped=a.exped, turn=a.turn,
                                 who=a.who, kind=a.cmd, delta=delta,
                                 reason=a.reason))
-        hp, mx = current(chars)[a.who]
-        print('%s %s %d -> %d/%d  %s'
-              % (a.who, a.cmd, abs(a.amount), hp, mx, condition(hp)))
+        rows = read_tsv(a.log_file, missing_ok=True)
+        hp, mx = current(chars, rows)[a.who]
+        stable = a.who in stabilised(chars, rows)
+        print('%s %s %s-> %d/%d  %s'
+              % (a.who, a.cmd,
+                 '' if a.cmd == 'stabilise' else '%d ' % abs(a.amount),
+                 hp, mx, condition(hp, stable)))
         return 0
 
     rows = read_tsv(a.log_file, missing_ok=True)
