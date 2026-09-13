@@ -135,10 +135,11 @@ def test_check_fails_when_the_map_stops_matching_the_fiction():
 # --------------------------------------------------- the party's map
 
 def test_a_place_only_heard_of_carries_that_level():
-    """They know Wraye is "three days east of Ludbury and it has a
-    library", and that is ALL they have. Whether it gets DRAWN is
+    """Nan named Hobb's Lane and Wettleford and NOBODY HAS BEEN to
+    either; that is ALL they have of them. Whether it gets DRAWN is
     tools/mapimg.py's problem now; the LEVEL is decided here."""
-    assert overland.level_of('wraye') == overland.HEARD
+    assert overland.level_of('hobbs_lane') == overland.HEARD
+    assert overland.level_of('wettleford') == overland.HEARD
     assert overland.level_of('marchford') == overland.KNOWN
 
 
@@ -161,7 +162,10 @@ def test_this_tool_no_longer_draws_anything():
     src = open(os.path.join(TOOLS, 'overland.py'), encoding='utf-8').read()
     assert 'NO LONGER DRAWS A MAP' in src
     assert 'def crop(' in src, 'crop stays -- tools/mapimg.py uses it'
-    assert 'ROADS = {' in src, 'ROADS stays -- mapimg draws them'
+    assert 'def ways(' in src, 'the ways stay -- mapimg draws them'
+    assert 'ROADS = {' not in src, (
+        'the roads moved to campaign/roads.tsv on 2026-09-12; a dict of '
+        'them in a tool is data in code')
 
 
 def test_the_third_case_is_represented():
@@ -216,3 +220,109 @@ def test_the_frame_records_a_rotation_even_though_it_is_zero():
 
 def test_every_frame_sits_at_a_place_that_exists():
     assert [m for s, m in overland.check() if 'frame' in m and s == 'FAIL'] == []
+
+# ------------------------------------------------------------- the ways
+
+def test_the_roads_are_DATA_and_not_a_dict_in_a_tool():
+    """`ROADS` was hard-coded in overland.py, which is the one thing
+    CLAUDE.md is most insistent about. It is campaign/roads.tsv now."""
+    assert os.path.exists(os.path.join(ROOT, 'campaign', 'roads.tsv'))
+    src = open(os.path.join(TOOLS, 'overland.py'), encoding='utf-8').read()
+    assert 'ROADS = {' not in src
+    assert len(overland.roads()) >= 6
+
+
+def test_every_road_ends_where_a_place_is():
+    """A route to nowhere is not a route."""
+    ids = set(entities.places())
+    for r in overland.roads().values():
+        for stop in overland.stops_of(r):
+            assert stop in ids, '%s stops at %r' % (r['id'], stop)
+
+
+def test_a_track_is_slower_than_a_road_and_that_is_the_book():
+    """DMG p.58: normal terrain for a VEHICLE means roadways; rugged
+    means "roadways through such terrain OR TRACKS/PATHS through normal
+    terrain". So `kind` changes how long a journey takes and is not a label.
+    """
+    assert overland.WAY_PACE['track']['cart'] < overland.WAY_PACE['road']['cart']
+    assert overland.WAY_PACE['path']['cart'] is None, (
+        'a path is not cart-passable at all')
+
+
+def test_lyde_is_reached_by_a_TURNING_off_the_north_road():
+    """DM call: not via Draycot, not via Marchford. A turning about two
+    days south, then west by track -- which is what makes the attested "a day
+    off the road each way" true at TRACK pace rather than road pace."""
+    north = overland.stops_of(overland.roads()['north_road'])
+    assert 'lyde_turning' in north
+    assert 'lyde' not in north, 'Lyde is not ON the north road'
+    assert overland.roads()['lyde_track']['kind'] == 'track'
+    m = overland.miles('lyde_turning', 'lyde')
+    d = m / overland.WAY_PACE['track']['ride']
+    assert 0.6 <= d <= 1.4, (m, d)
+    assert overland.bearing('lyde_turning', 'lyde') == 'west'
+    assert overland.road_between('draycot', 'lyde') is None
+    assert overland.road_between('marchford', 'lyde') is None
+
+
+def test_the_route_to_lyde_is_VAGUE_to_the_party():
+    """They got there twice and could still not say which milestone the
+    turning is at. Lyde itself they have stood in."""
+    assert overland.level_of('lyde_turning') == overland.VAGUE
+    assert overland.level_of('lyde') == overland.KNOWN
+    assert overland.knowledge()['lyde_turning']['precision_ft'].strip()
+
+
+def test_fenns_is_four_miles_east_of_the_road_by_track():
+    m = overland.miles('fenns_turning', 'fenns')
+    assert abs(m - 4) < 1, m
+    assert overland.bearing('fenns_turning', 'fenns') == 'east'
+    assert overland.roads()['fenns_track']['kind'] == 'track'
+    assert 'fenns_turning' in overland.stops_of(overland.roads()['north_road'])
+
+
+def test_edes_is_reached_THROUGH_FENNS_AND_NOT_FROM_THE_ROAD():
+    """DM call, and it explains the record: the party went that way both
+    times, and it makes Fenn's yard the gateway to her."""
+    assert overland.road_between('fenns', 'edes') is not None
+    for other in ('fenns_turning', 'marchford', 'ludbury', 'wethersby'):
+        assert overland.road_between(other, 'edes') is None, (
+            'a direct way to Ede\'s from %s would make Fenn\'s yard '
+            'unnecessary, and the party has gone through it twice' % other)
+
+
+def test_a_turning_sits_ON_the_road_it_turns_off():
+    """A junction that is not on the road is not a junction."""
+    pts = overland.points()
+    for t in ('lyde_turning', 'fenns_turning'):
+        assert abs(pts[t][0] - pts['wethersby'][0]) < 2000, t
+
+
+# ----------------------------------------------------------------- Wraye
+
+def test_wraye_is_VAGUE_now_and_not_merely_heard_of():
+    """They know it exists and is reachable by road out of Ludbury, so
+    they could put a finger on a REGION -- more than nothing, less than a
+    position.
+
+    *** The record says three days east of LUDBURY, not Marchford:
+    calendar.md:103, the distance table. ***
+    """
+    assert overland.level_of('wraye') == overland.VAGUE
+    r = overland.knowledge()['wraye']
+    rad = float(r['precision_ft']) / overland.MILE
+    assert 20 <= rad <= 45, (
+        'the radius is %g miles. "East" is one of eight compass points, a '
+        '45-degree wedge, and at 75 miles that is about 30 wide.' % rad)
+    assert 'LUDBURY' in r['how']
+    assert 'ludbury' in overland.stops_of(overland.roads()['ludbury_east'])
+
+
+def test_wraye_is_now_drawn_but_with_its_doubt_around_it():
+    import mapimg
+    out = mapimg.svg(mapimg.land.crop(overland.points(), 'ludbury', 90),
+                     px_per_mile=6)
+    assert 'Wraye' in out, 'a vague place is DRAWN; only a heard-of one is not'
+    rings = out.count('stroke-dasharray="5 4"')
+    assert rings >= 1, 'and its uncertainty must be drawn with it'

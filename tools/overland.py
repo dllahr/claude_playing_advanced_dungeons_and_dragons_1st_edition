@@ -68,18 +68,21 @@ LEGS = (('marchford', 'ludbury', 2, 'cart'),
         ('ludbury', 'wraye', 3, 'cart'),
         ('marchford', 'fenns', 1, 'cart'))
 
+# A road is NORMAL terrain for a vehicle; a track is RUGGED; a path is neither.
+# rules/overland.md, DMG p.58 -- so `kind` here changes how long a journey
+# takes, and is not decoration.
+WAY_PACE = {'road': {'cart': 25, 'ride': 40, 'walk': 20},
+            'track': {'cart': 15, 'ride': 20, 'walk': 10},
+            'path': {'cart': None, 'ride': 20, 'walk': 10}}
+
 KNOWN, VAGUE, HEARD, UNKNOWN = 'known', 'vague', 'heard', 'unknown'
 LEVELS = (KNOWN, VAGUE, HEARD, UNKNOWN)
 
-ROADS = {
-    'the north road': ['crag_turning', 'wethersby', 'marchford', 'ludbury'],
-    'the Draycot road': ['wethersby', 'draycot'],
-    'the Ludbury road east': ['ludbury', 'wraye'],
-}
 
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 KNOW = os.path.join(ROOT, 'campaign', 'knowledge.tsv')
+WAYS = os.path.join(ROOT, 'campaign', 'roads.tsv')
 FRAMES = os.path.join(ROOT, 'campaign', 'frames.tsv')
 
 
@@ -171,10 +174,37 @@ def bearing(a, b, pts=None):
     return names[int((ang + 22.5) // 45) % 8]
 
 
+def roads(path=None):
+    """{id: row}. Was a dict inside this file, which is data in code."""
+    return {r['id']: r for r in read_tsv(path or WAYS, missing_ok=True)
+            if r.get('id')}
+
+
+def stops_of(r):
+    return [s.strip() for s in (r.get('stops') or '').split(',') if s.strip()]
+
+
+ROADS = None        # filled on first use, so callers can still iterate ways
+
+
+def ways():
+    """{name: [stops]} -- what `mapimg.py` draws."""
+    return {r['name']: stops_of(r) for r in roads().values()}
+
+
 def road_between(a, b):
-    for name, stops in ROADS.items():
-        if a in stops and b in stops:
-            return name
+    for r in roads().values():
+        st = stops_of(r)
+        if a in st and b in st:
+            return r['name']
+    return None
+
+
+def way_kind(a, b):
+    for r in roads().values():
+        st = stops_of(r)
+        if a in st and b in st:
+            return r.get('kind') or 'road'
     return None
 
 
@@ -222,6 +252,43 @@ def check(pts=None, kn=None):
                                 'map gives %.1f-%.1f (%.0f miles at %d a day). '
                                 'THE NARRATIVE WINS -- move the coordinates.'
                         % (pid, want, mode.upper(), lo, hi, m, PACE[mode])))
+
+    ids = set(entmod.places())
+    for r in roads().values():
+        for st in stops_of(r):
+            if st not in ids:
+                out.append(('FAIL', 'road %r stops at %r, which is not in '
+                                    'campaign/places.tsv' % (r['id'], st)))
+        if (r.get('kind') or '') not in WAY_PACE:
+            out.append(('FAIL', 'road %r has kind %r; expected one of %s'
+                        % (r['id'], r.get('kind'), sorted(WAY_PACE))))
+
+    # A turning must actually BE on the road it turns off.
+    for tid, main in (('lyde_turning', 'north_road'),
+                      ('fenns_turning', 'north_road')):
+        if tid in pts and main in roads():
+            if tid not in stops_of(roads()[main]):
+                out.append(('FAIL', '%s is not a stop on %s -- a junction that '
+                                    'is not on the road is not a junction'
+                            % (tid, main)))
+            elif abs(pts[tid][0] - pts['wethersby'][0]) > 2000:
+                out.append(('FAIL', '%s sits %0.1f miles off the line of the '
+                                    'north road' % (tid,
+                                                    abs(pts[tid][0]) / MILE)))
+
+    # "A day off the road each way" -- on a TRACK, which is the point.
+    if {'lyde', 'lyde_turning'} <= set(pts):
+        m = miles('lyde_turning', 'lyde', pts)
+        d = m / WAY_PACE['track']['ride']
+        if not (0.6 <= d <= 1.4):
+            out.append(('FAIL', 'the Lyde track is %.0f miles, %.1f days by a '
+                                'rider at track pace. The record says A DAY OFF '
+                                'THE ROAD EACH WAY.' % (m, d)))
+    if {'fenns', 'fenns_turning'} <= set(pts):
+        m = miles('fenns_turning', 'fenns', pts)
+        if abs(m - 4) > 1:
+            out.append(('FAIL', "the Fenn's track is %.1f miles. The record "
+                                'says FOUR MILES EAST OF THE ROAD.' % m))
 
     for a_, b_, want, mode in LEGS:
         if a_ in pts and b_ in pts:
@@ -308,10 +375,11 @@ def from_report(origin, pts=None, kn=None):
         r = pts[k][2]
         road = road_between(oid, k)
         lo, hi = days_range(m, 'cart')
-        out.append('  %-22s %4.0f mi  %4.1f-%.1f d by cart  %-11s %-15s %s'
+        kind = way_kind(oid, k)
+        out.append('  %-22s %4.0f mi  %4.1f-%.1f d by cart  %-11s %-24s %s'
                    % (r['name'], m, lo, hi, bearing(oid, k, pts),
-                      ('by %s' % road) if road else 'cross-country',
-                      level_of(k, kn)))
+                      ('by %s%s' % (road, ' (TRACK)' if kind == 'track' else ''))
+                      if road else 'no way on record', level_of(k, kn)))
     out += ['', 'Straight-line, so every distance is a FLOOR -- travel follows '
                 'a road where one exists. Times are RANGES because a distance '
                 'is fixed and a journey is not.']
@@ -367,9 +435,16 @@ def main(argv=None):
               % (pts[ai][2]['name'], pts[bi][2]['name'], m,
                  '{:,} ft'.format(int(feet(ai, bi, pts))),
                  bearing(ai, bi, pts)))
-        road = road_between(ai, bi)
-        print('  %s' % (('along %s' % road) if road else
-                        'cross-country -- no road on record between them'))
+        road, kind = road_between(ai, bi), way_kind(ai, bi)
+        if road:
+            print('  along %s -- a %s, so %s'
+                  % (road, kind,
+                     'cart 15 a day, rider 20' if kind == 'track'
+                     else 'no cart at all' if kind == 'path'
+                     else 'cart 25 a day, rider 40'))
+        else:
+            print('  NO WAY ON RECORD between them -- a straight line across '
+                  'somebody\'s fields is not a route')
         for line in how_long(m):
             print('    ' + line)
         for i in (ai, bi):

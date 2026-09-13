@@ -49,10 +49,15 @@ def rings(out):
 def test_a_place_only_heard_of_is_not_drawn():
     """*** A MAP IS THE EASIEST WAY TO LEAK A POSITION, and a PICTURE of one is
     easier still, because nobody reads a picture sceptically. ***"""
-    assert land.level_of('wraye') == land.HEARD
+    assert land.level_of('hobbs_lane') == land.HEARD
     party = mapimg.svg()
-    assert 'Wraye' not in party
-    assert 'Wraye' in mapimg.svg(true=True)
+    assert "Hobb's Lane" not in party
+    assert "Hobb's Lane" in mapimg.svg(true=True)
+    # Wraye WAS the example here until 2026-09-12, when it went
+    # from `heard` to `vague`: they know it is reachable by road
+    # out of Ludbury, so they can point at a region. A vague place
+    # IS drawn -- with its doubt around it.
+    assert 'Wraye' in party
 
 
 def test_the_default_is_the_partys_map():
@@ -65,8 +70,9 @@ def test_the_page_names_heard_of_places_without_placing_them():
     well as on the terminal."""
     page = mapimg.html()
     assert 'Heard of and not placed' in page
-    assert 'Wraye' in page
-    assert 'Wraye' not in page.split('</svg>')[0], 'Wraye is drawn'
+    assert "Hobb's Lane" in page
+    assert "Hobb's Lane" not in page.split('</svg>')[0], (
+        "Hobb's Lane is drawn and nobody has been there")
 
 
 def test_the_dm_page_is_marked_as_the_dms():
@@ -95,10 +101,17 @@ def test_a_ring_too_small_to_draw_is_DROPPED_and_not_inflated():
     visible minimum would show a bigger doubt than the party has.
     """
     wide = mapimg.svg(px_per_mile=9)
-    assert rings(wide) == [], (
-        'a ring was drawn at a zoom where it cannot be to scale. It must be '
-        'dropped -- the "~" beside the glyph carries it instead.')
+    # Wraye's thirty-mile doubt IS big enough to draw at this zoom; Quasqueton's
+    # thousand feet is not, and must be dropped rather than inflated.
+    small = [r for r in rings(wide) if r[2] < 3]
+    assert small == [], (
+        'a ring was drawn smaller than three pixels, where it cannot be to '
+        'scale. It must be DROPPED -- the "~" beside the glyph carries it. '
+        'Inflating it to a visible minimum would draw a bigger doubt than the '
+        'party actually has.')
     assert '~' in wide, 'and the ~ must then be there'
+    assert any(r[2] > 20 for r in rings(wide)), (
+        "Wraye's thirty miles is big enough to draw at this zoom and should be")
 
 
 def test_the_ring_scales_with_the_zoom_and_nothing_else():

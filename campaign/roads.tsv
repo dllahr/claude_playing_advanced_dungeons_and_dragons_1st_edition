@@ -1,0 +1,26 @@
+# THE WAYS BETWEEN PLACES. Reference, and it used to be a dict inside a tool.
+#
+# `ROADS` lived hard-coded in tools/overland.py, which is data in code -- the one
+# thing CLAUDE.md is most insistent about. It is a file now.
+#
+# *** `kind` IS MECHANICAL, NOT DECORATIVE. *** rules/overland.md, DMG p.58:
+# "Normal terrain ... with respect to vehicular movement it assumes ROADWAYS
+# through such terrain", and "Rugged ... assumes either roadways through such
+# terrain OR TRACKS/PATHS through normal terrain". So:
+#
+#   road    normal for a vehicle   cart 25 mi/day, mount 40
+#   track   RUGGED for a vehicle   cart 15 mi/day, mount 20. A cart CAN take it
+#   path    not cart-passable at all -- feet and hooves only
+#
+# That is why a day off the road to Lyde is eighteen miles and not twenty-five.
+#
+# `stops` is a comma list of place ids IN ORDER. A junction is a place: the
+# turnings below exist so that "how do you get to Lyde" has an answer that is
+# not "overland, somehow".
+id	name	kind	stops	notes
+north_road	the north road	road	crag_turning,wethersby,lyde_turning,marchford,fenns_turning,ludbury	The spine. Wethersby is "a market town on the north road" and Osk drives its southern half every fortnight
+draycot_road	the Draycot road	road	wethersby,draycot	South-west. The road the party first came in by, before expedition 1
+ludbury_east	the east road out of Ludbury	road	ludbury,wraye	THREE DAYS EAST. The party has never been on it and knows only that it exists
+lyde_track	the Lyde track	track	lyde_turning,lyde	DM CALL 2026-09-12: Lyde is reached by a TURNING off the north road about two days south of Wethersby, then eighteen miles west. NOT via Draycot and NOT via Marchford. Eighteen miles of track is "a day off the road each way" for a rider -- which is the attested phrase, and is why Wat rode rather than carted
+fenns_track	the Fenn's track	track	fenns_turning,fenns	Four miles east off the north road. The record's own words: "four acres of flax FOUR MILES EAST OF THE ROAD"
+edes_track	the field track to Ede's	track	fenns,edes	DM CALL 2026-09-12: *** THERE IS NO DIRECT WAY TO EDE'S FROM THE MAIN ROAD. *** Her gate is reached THROUGH FENN'S YARD, eight miles of field track, which is why the party has gone that way both times and why Halm's cart could fetch her load at all. It makes Fenn's the gateway to her, which is worth knowing before anybody plans around her

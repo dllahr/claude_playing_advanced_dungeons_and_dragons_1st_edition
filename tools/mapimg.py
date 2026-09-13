@@ -98,17 +98,26 @@ def svg(pts=None, kn=None, true=False, px_per_mile=PX_PER_MILE):
          '<rect width="100%%" height="100%%" fill="#f6f1e4"/>']
 
     # roads under everything
-    for name, stops in land.ROADS.items():
+    for r in sorted(land.roads().values(), key=lambda r: r.get('kind') != 'road'):
+        stops = land.stops_of(r)
+        name, kind = r['name'], (r.get('kind') or 'road')
         seq = [s for s in stops if s in real]
         if len(seq) < 2:
             continue
         d = ' '.join('%s%.1f,%.1f' % ('M' if i == 0 else 'L',
                                       X(pts[s][0]), Y(pts[s][1]))
                      for i, s in enumerate(seq))
-        o.append('<path d="%s" fill="none" stroke="#b9a77e" stroke-width="5" '
-                 'stroke-linecap="round"/>' % d)
-        o.append('<path d="%s" fill="none" stroke="#8d7b52" stroke-width="1.2" '
-                 'stroke-dasharray="7 5"/>' % d)
+        # A TRACK IS NOT A ROAD and the drawing says so: rugged terrain for a
+        # vehicle, so fifteen miles a day for a cart rather than twenty-five.
+        if kind == 'road':
+            o.append('<path d="%s" fill="none" stroke="#b9a77e" '
+                     'stroke-width="5" stroke-linecap="round"/>' % d)
+            o.append('<path d="%s" fill="none" stroke="#8d7b52" '
+                     'stroke-width="1.2" stroke-dasharray="7 5"/>' % d)
+        else:
+            o.append('<path d="%s" fill="none" stroke="#b9a77e" '
+                     'stroke-width="2" stroke-linecap="round" '
+                     'stroke-dasharray="6 4"/>' % d)
         mid = seq[len(seq) // 2]
         o.append('<text x="%.1f" y="%.1f" font-size="11" fill="#8d7b52" '
                  'font-style="italic">%s</text>'
