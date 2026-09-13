@@ -67,10 +67,21 @@ def test_the_named_route_east_of_the_slab_is_clean():
 
 
 def test_move_refuses_and_writes_nothing(tmp_path):
-    """A refusal that has already moved the party is not a refusal."""
+    """A refusal that has already moved the party is not a refusal.
+
+    *** IT PUTS THE PARTY AT THE ALCOVE FIRST, rather than using wherever
+    they happen to be. *** The first version walked from their LIVE position
+    and passed only while that position was (17,13); an hour of play later
+    they were at (14,29), from which (16,19) does not cross the forbidden
+    corridor at all, and the test failed having tested nothing. A test that
+    depends on today's game state is the same defect as one that pins today's
+    gold.
+    """
     log = tmp_path / 'party.tsv'
     log.write_text(open(os.path.join(ROOT, 'campaign', 'party.tsv'),
                         encoding='utf-8').read())
+    party.place('17,13', why='fixture: the alcove, where the route to the\n                four-way crosses the ruled-out corridor',
+                path=str(log))
     before = log.read_text()
     try:
         party.move('16,19', path=str(log), rate='known', why='x')

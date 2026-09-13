@@ -852,8 +852,11 @@ longer without making it more read. Nothing was changed or lost.
 **The two facts that DO belong here, because they are play rules and not
 pipeline:**
 
-- **⚠ Areas 10 and 11 are mis-mapped. Do not take the party there.** Heavy
-  furniture and 45-degree walls defeat the extractor. *(Loop L030.)*
+- **✅ Areas 10 and 11 were CORRECTED on day 46** (`781bac5`), from the player's
+  own reading of the printed map -- he laid out the boundary squares and every
+  one he called diagonal came out `mixed` in the classifier, seven for seven.
+  **They are safe.** ⚠ What is still open is `L034`: **area 11 has STAIRS on the
+  map that B1's key does not mention.**
 - **Secret doors cannot be read from the image** — they are a printed `S` in the
   annotation layer, so they come from the key text or not at all.
 
@@ -942,7 +945,9 @@ outlived its answer by forty-three days.
 
 ### Dungeon threads
 
-**Areas 10 and 11 are still mis-mapped — do not take the party there.**
+**✅ Areas 10 and 11 are FIXED** — corrected day 46, `781bac5`. *(This line said
+they were still broken for six days after they were mended, and the DM quoted it
+at the table on day 79. See `L034` for what IS still open about them.)*
 **Level 2 is built and merged but entirely unexplored**: two exits from room 50,
 and something in the east passage. Level 2's room extents are "nearest numbered
 area", not "inside room N", and are not reliable.

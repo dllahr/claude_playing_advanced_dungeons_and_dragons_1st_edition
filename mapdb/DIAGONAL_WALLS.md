@@ -7,7 +7,11 @@ nothing else was: `extract.diagonal_stat` / `side_classes` / `split_orient` /
 figures below were re-measured against that code and reproduce exactly, except
 where noted in section 2.4. **The MODEL is unchanged and the rest of this
 document remains a proposal** — no schema column, no half-cell nodes, no
-automatic reclassification, and no correction has been entered for areas 10 and
+automatic reclassification. **⚠ THE REST OF THIS SENTENCE WAS TRUE UNTIL
+2026-09-06 AND IS NOT NOW: areas 10 and 11 WERE corrected in `781bac5`, from
+the player's reading of the printed map. The note below is kept for the
+reasoning, not for its conclusion.** No correction had been entered for areas
+10 and
 11. Both regression counts are unmoved: DMG 21 unreached of 641, B1 5 of 1,196.
 
 Everything below was written before that, from scratch scripts run against a
