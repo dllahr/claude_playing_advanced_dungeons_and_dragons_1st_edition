@@ -7419,3 +7419,29 @@ when	exped	turn	notation	dice	modifier	total	hidden	reason
 2026-09-13			d20	4	0	4		Yrtone save vs Paralyze/Poison/Death
 2026-09-13			1d6	1	0	1		day 79 rd 35: Dave FAILED his save vs the revulsion odor -- how many rounds of cumulative -1 STR (MM p.97, 1-6 rounds)
 2026-09-13			1d6	3	0	3		day 79 rd 35: Yrtone FAILED her save vs the revulsion odor -- rounds of cumulative -1 STR (MM p.97)
+2026-09-13			d20	3	0	3		Tristle attacks with short bow
+2026-09-13			1d100	92	0	92		day 79 rd 1: Tristle's FIRST arrow missed (d20=3 vs 16). 50% chance it strikes the ally in front -- rules/exploration.md, shooting past allies who fill a 10-ft corridor. 01-50 = it hits a friend
+2026-09-13			d20	6	0	6		Tristle attacks with short bow
+2026-09-13			1d100	47	0	47		day 79 rd 1: Tristle's SECOND arrow missed (d20=6 vs 16). 50% chance it strikes the ally in front. 01-50 = it hits a friend
+2026-09-13			1d3	1	0	1		day 79 rd 1: Tristle's second arrow struck an ally (d100=47, 50% or less). WHO -- the three filling (24,37): 1=Yrtone 2=Dave 3=Torsat
+2026-09-13			1d6	5	0	5		day 79 rd 1: Tristle's second arrow, which struck YRTONE in the back (d20=6 miss, d100=47, d3=1). Short bow arrow, 1d6. No DEX damage bonus -- DEX is to-hit only, rules/abilities.md
+2026-09-13			1d3	3	0	3		day 79 surprise segment 1: troglodyte 1 chooses among the three filling (24,37) -- 1=Yrtone 2=Dave 3=Torsat
+2026-09-13			1d3	2	0	2		day 79 surprise segment 1: troglodyte 2 chooses among the three filling (24,37) -- 1=Yrtone 2=Dave 3=Torsat
+2026-09-13			d20	11	0	11		troglodyte 1 attacks AC 3
+2026-09-13			d20	4	0	4		troglodyte 1 attacks AC 3
+2026-09-13			d20	2	0	2		troglodyte 1 attacks AC 3
+2026-09-13			d20	3	0	3		troglodyte 2 attacks AC 3
+2026-09-13			d20	19	0	19		troglodyte 2 attacks AC 3
+2026-09-13			1-3 (1d3)	1	0	1		troglodyte 2 damage
+2026-09-13			d20	2	0	2		troglodyte 2 attacks AC 3
+2026-09-13			1d3	3	0	3		day 79 surprise segment 2: troglodyte 1 chooses among the three in (24,37) -- 1=Yrtone 2=Dave 3=Torsat
+2026-09-13			1d3	3	0	3		day 79 surprise segment 2: troglodyte 2 chooses among the three in (24,37) -- 1=Yrtone 2=Dave 3=Torsat
+2026-09-13			d20	13	0	13		troglodyte 1 attacks AC 3
+2026-09-13			1-3 (1d3)	1	0	1		troglodyte 1 damage
+2026-09-13			d20	16	0	16		troglodyte 1 attacks AC 3
+2026-09-13			1-3 (1d3)	3	0	3		troglodyte 1 damage
+2026-09-13			d20	13	0	13		troglodyte 1 attacks AC 3
+2026-09-13			2-5 (1d4+1)	2	1	3		troglodyte 1 damage
+2026-09-13			d20	7	0	7		troglodyte 2 attacks AC 3
+2026-09-13			d20	6	0	6		troglodyte 2 attacks AC 3
+2026-09-13			d20	1	0	1		troglodyte 2 attacks AC 3

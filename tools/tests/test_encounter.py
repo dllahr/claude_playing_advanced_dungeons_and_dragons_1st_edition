@@ -38,11 +38,29 @@ from tsvlog import read_tsv                                       # noqa: E402
 LOG = os.path.join(ROOT, 'campaign', 'encounter.tsv')
 
 
+def header_only():
+    """The real log's COMMENTS AND COLUMN HEADER, and not one data row.
+
+    *** THIS USED TO COPY THE WHOLE CAMPAIGN LOG. *** It worked for as long as
+    no fight was ever in progress at rest -- and on 2026-09-13 the troglodytes
+    at (24,37) meant the scratch file was seeded with a LIVE FIGHT, so `start`
+    correctly refused and every test built on the fixture inherited round 2 of a
+    real encounter. A fixture that reads today's campaign state is a fixture
+    that fails on a Tuesday. Same defect as the test that pinned the purse.
+    """
+    out = []
+    for line in open(LOG, encoding='utf-8'):
+        out.append(line)
+        if not line.startswith('#') and line.strip():
+            break                      # that was the column header; stop
+    return ''.join(out)
+
+
 @pytest.fixture
 def fight(tmp_path, monkeypatch):
     """A scratch encounter log, pointed at by the module the gate reads."""
     p = tmp_path / 'encounter.tsv'
-    p.write_text(open(LOG, encoding='utf-8').read())
+    p.write_text(header_only())
     monkeypatch.setattr(encounter, 'LOG', str(p))
     encounter.main(['--log-file', str(p), 'start', '--detail',
                     'the y=21 corridor, one troglodyte', '--exped', '9',

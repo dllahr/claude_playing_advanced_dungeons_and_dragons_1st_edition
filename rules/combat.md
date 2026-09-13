@@ -999,40 +999,48 @@ like it has fixed the problem. **It has not.** The character is still comatose,
 then still an invalid for a week. A cleric who drops to 0 is out of the
 expedition AND cannot cast on the way home.
 
-### THE HOUSE RULE, confirmed by the player 2026-09-05 — a CURE lifts it
+### ⛔ THE HOUSE RULE IS RETIRED — RAW GOVERNS FROM DAY 79
 
-**The DMG paragraph above is played in full, with ONE amendment this table has
-used all campaign:**
+**Retired by the player 2026-09-13, day 79**, with Torsat lying at −1 in the
+corridor at (24,37):
 
-**THE LINE IS AT ZERO. It is the number they stopped on, not how they were revived.**
+> *"I think we ruled that going forward we would stick with the official rule,
+> that 0 or less puts you out of action for a week."*
+
+**THE LINE IS NOW AT ZERO OR FEWER, AS THE DMG WRITES IT.** There is no longer a
+cure-lifts-it exception at exactly 0.
 
 | where they stopped | outcome |
 |---|---|
-| **EXACTLY 0**, then given a cure spell or potion | **BACK IN ACTION.** No coma, no week. Normal |
-| **−1 OR LOWER** | **OUT FOR A WEEK, EVEN WITH A CURE.** Coma 1-6 turns, then shuffling to a place of rest and nothing else — no attacking, no defending, no casting, no carrying, no running |
-| Any of the above, bandaged only | as −1 or lower: the week applies |
+| **0 OR FEWER**, however revived | **COMA 1-6 TURNS, THEN A WEEK MINIMUM.** No attacking, no defending, no casting, no carrying, no running |
+| **A cure spell or potion** | **restores the hit points and NOTHING ELSE.** It does not lift the coma or the week |
+| ***heal*** | lifts the prohibition — 6th level, and out of this party's reach |
+| **−6 or worse** | DM may rule scarring or the loss of a limb |
 
-*source: **HOUSE RULE, not RAW.** DMG p. 82 applies the coma and the week to
-anyone brought to 0 **or fewer**, and says explicitly that a cure does not lift
-it. This table draws the line at **exactly zero** instead. Confirmed by the
-player 2026-09-05 as how it has been played all campaign.*
+*source: **DMG p. 82**, ZERO HIT POINTS, quoted in full above. RAW.*
 
-**That is a deliberate departure from RAW**, which says the prohibition applies
-*"even if cure spells and/or healing potions are given"* and lifts only for
-*heal*. **This table lifts it for a cure.** It is why a party carries clerics.
+**What this changes in practice:** it used to be that a cure reaching somebody at
+**exactly** zero bought them back whole, so the cleric's decision was about
+SPEED. That is gone. **A cure now buys a life and nothing more, at any number.**
+Getting there fast still matters — but only because of the bleeding, which is a
+separate clock.
 
-**The practical shape of it, and it is brutal:** a cure is only a rescue if it
-reaches them **at exactly zero**. One point further down and the spell buys their
-life and nothing else — they are still carried out and still gone for a week,
-which for a cleric means gone for the next expedition too.
+**The retired table is kept below because citations point at it**, and because
+the campaign ran on it for sixty-odd days. It is **NOT authoritative** and must
+not be applied to anything after day 79.
 
-**So the cleric's decision is about SPEED, not about spell economy.** Getting a
-cure into somebody the round they drop is worth far more than the hit points on
-the die.
+> #### RETIRED — do not apply. Ran 2026-09-05 to 2026-09-13.
+>
+> | where they stopped | outcome |
+> |---|---|
+> | ~~**EXACTLY 0**, then given a cure spell or potion~~ | ~~**BACK IN ACTION.** No coma, no week~~ |
+> | ~~**−1 OR LOWER**~~ | ~~out for a week even with a cure~~ |
+> | ~~bandaged only~~ | ~~as −1 or lower~~ |
 
-*(I got this wrong twice in one scene on 2026-09-04/05 — first applying RAW to a
-cure the player had already spent, then forgetting the week applied to the
-bandaged one. Both halves are above.)*
+**The past stands as it was played.** Ista and Blartho's area-36 pit-trap
+revivals, and every ruling made under the old table between day 39 and day 79,
+are correct as adjudicated — see the corollary immediately below, which is the
+rule that says so and which was itself written after I broke it.
 
 ### Corollary: rules corrections are prospective
 
