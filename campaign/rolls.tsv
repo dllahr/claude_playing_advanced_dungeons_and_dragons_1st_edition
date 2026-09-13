@@ -7345,4 +7345,66 @@ when	exped	turn	notation	dice	modifier	total	hidden	reason
 2026-09-11			d20	20	0	20		giant centipede attacks AC 9
 2026-09-11			d20	20	0	20		orc attacks AC 9
 2026-09-11			1-8 (1d8)	8	0	8		orc damage
-2026-09-11				VOID				THE 56 ROWS IMMEDIATELY ABOVE ARE NOT GAME EVENTS AND ARE VOID. They are pytest rows, and they are here because of a test I wrote to guard against exactly this: test_dice_honours_the_roll_log_override did importlib.reload(dice), which reset dice.ROLLS to the module default and so UNDID the session fixture in tools/tests/conftest.py. A test for a leak that opened the leak. It now runs in a SUBPROCESS, and a full suite run moves this file by zero lines. Nothing is deleted -- this log is append-only -- but no ruling may rest on any row between the previous VOID and this one.\n
+2026-09-11				VOID				THE 56 ROWS IMMEDIATELY ABOVE ARE NOT GAME EVENTS AND ARE VOID. They are pytest rows, and they are here because of a test I wrote to guard against exactly this: test_dice_honours_the_roll_log_override did importlib.reload(dice), which reset dice.ROLLS to the module default and so UNDID the session fixture in tools/tests/conftest.py. A test for a leak that opened the leak. It now runs in a SUBPROCESS, and a full suite run moves this file by zero lines. Nothing is deleted -- this log is append-only -- but no ruling may rest on any row between the previous VOID and this one.\n2026-09-12			d6	6	0	6		day 78 expedition 9 road north. MAPPING SET BEFORE ROLLING: (a) anything on the road? 1-2 something, 3-6 an empty road; (b) anyone at Coll's basecamp? 1-2 nobody, 3-4 one or two hands, 5-6 a working party; (c) the weather on the crag, November: 1-2 hard rain, 3-4 grey and cold, 5-6 clear and bitter
+2026-09-12			d6	2	0	2		day 78 expedition 9 road north. MAPPING SET BEFORE ROLLING: (a) anything on the road? 1-2 something, 3-6 an empty road; (b) anyone at Coll's basecamp? 1-2 nobody, 3-4 one or two hands, 5-6 a working party; (c) the weather on the crag, November: 1-2 hard rain, 3-4 grey and cold, 5-6 clear and bitter
+2026-09-12			d6	4	0	4		day 78 expedition 9 road north. MAPPING SET BEFORE ROLLING: (a) anything on the road? 1-2 something, 3-6 an empty road; (b) anyone at Coll's basecamp? 1-2 nobody, 3-4 one or two hands, 5-6 a working party; (c) the weather on the crag, November: 1-2 hard rain, 3-4 grey and cold, 5-6 clear and bitter
+2026-09-12			d6	6	0	6	yes	wandering jitter, anchor 30
+2026-09-12			d6	6	0	6	yes	wandering jitter, anchor 60
+2026-09-12			d6	2	0	2	yes	wandering jitter, anchor 90
+2026-09-12			d6	4	0	4	yes	wandering jitter, anchor 120
+2026-09-12			d6	5	0	5	yes	wandering jitter, anchor 150
+2026-09-12			d6	6	0	6	yes	wandering jitter, anchor 180
+2026-09-12			d6	1	0	1	yes	wandering jitter, anchor 210
+2026-09-12			d6	6	0	6	yes	wandering jitter, anchor 240
+2026-09-12			d6	6	0	6	yes	wandering jitter, anchor 270
+2026-09-12			d6	1	0	1	yes	wandering jitter, anchor 300
+2026-09-12			d6	6	0	6	yes	wandering jitter, anchor 330
+2026-09-12			d6	1	0	1	yes	wandering jitter, anchor 360
+2026-09-12			d6	1	0	1	yes	wandering jitter, anchor 390
+2026-09-12			d6	1	0	1	yes	wandering jitter, anchor 420
+2026-09-12			d6	2	0	2	yes	wandering jitter, anchor 450
+2026-09-12			d6	5	0	5	yes	wandering jitter, anchor 480
+2026-09-12			d6	6	0	6	yes	wandering jitter, anchor 510
+2026-09-12			d6	6	0	6	yes	wandering jitter, anchor 540
+2026-09-12			d6	4	0	4	yes	wandering jitter, anchor 570
+2026-09-12			d6	5	0	5	yes	wandering jitter, anchor 600
+2026-09-12			d6	3	0	3	yes	wandering jitter, anchor 630
+2026-09-12			d6	6	0	6	yes	wandering jitter, anchor 660
+2026-09-12			d6	2	0	2	yes	wandering jitter, anchor 690
+2026-09-12			d6	4	0	4	yes	wandering jitter, anchor 720
+2026-09-12			d6	2	0	2	yes	wandering jitter, anchor 750
+2026-09-12			d6	2	0	2	yes	wandering jitter, anchor 780
+2026-09-12			d6	2	0	2	yes	wandering jitter, anchor 810
+2026-09-12			d6	5	0	5	yes	wandering jitter, anchor 840
+2026-09-12			d6	2	0	2	yes	wandering jitter, anchor 870
+2026-09-12			d6	6	0	6	yes	wandering jitter, anchor 900
+2026-09-12			d6	2	0	2	yes	wandering jitter, anchor 930
+2026-09-12			d6	1	0	1	yes	wandering jitter, anchor 960
+2026-09-12			d6	2	0	2	yes	wandering jitter, anchor 990
+2026-09-12			d6	5	0	5	yes	wandering jitter, anchor 1020
+2026-09-12			d6	6	0	6	yes	wandering jitter, anchor 1050
+2026-09-12			d6	5	0	5	yes	wandering jitter, anchor 1080
+2026-09-12			d6	3	0	3	yes	wandering jitter, anchor 1110
+2026-09-12			d6	3	0	3	yes	wandering jitter, anchor 1140
+2026-09-12			d6	4	0	4	yes	wandering jitter, anchor 1170
+2026-09-12			d6	4	0	4	yes	wandering jitter, anchor 1200
+2026-09-12			d6	2	0	2	yes	wandering jitter, anchor 1230
+2026-09-12			d6	2	0	2	yes	wandering jitter, anchor 1260
+2026-09-12			d6	3	0	3	yes	wandering jitter, anchor 1290
+2026-09-12			d6	4	0	4	yes	wandering jitter, anchor 1320
+2026-09-12			d6	1	0	1	yes	wandering jitter, anchor 1350
+2026-09-12			d6	5	0	5	yes	wandering jitter, anchor 1380
+2026-09-12			d6	4	0	4	yes	wandering jitter, anchor 1410
+2026-09-12			d6	2	0	2	yes	wandering jitter, anchor 1440
+2026-09-12			d6	3	0	3	yes	wandering jitter, anchor 1470
+2026-09-12			d6	2	0	2	yes	wandering jitter, anchor 1500
+2026-09-12			d6	2	0	2	yes	wandering jitter, anchor 1530
+2026-09-12			d6	5	0	5	yes	wandering jitter, anchor 1560
+2026-09-12			d6	5	0	5	yes	wandering jitter, anchor 1590
+2026-09-12			d6	5	0	5	yes	wandering jitter, anchor 1620
+2026-09-12			d6	2	0	2	yes	wandering jitter, anchor 1650
+2026-09-12			d6	3	0	3	yes	wandering jitter, anchor 1680
+2026-09-12			d6	6	0	6	yes	wandering jitter, anchor 1710
+2026-09-12			d6	6	0	6	yes	wandering jitter, anchor 1740
+2026-09-12			d6	5	0	5	yes	wandering jitter, anchor 1770
+2026-09-12			d6	4	0	4	yes	wandering jitter, anchor 1800

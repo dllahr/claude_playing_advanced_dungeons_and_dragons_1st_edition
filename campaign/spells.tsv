@@ -106,3 +106,13 @@ when	exped	round	who	spell	event	note
 2026-09-07	-	overnight day 47-48	Dellie	cure light wounds	memorised	her one cure
 2026-09-07	-	overnight day 47-48	Frython	sleep	memorised	his only spell
 2026-09-07	4	town-d4	Blartho	detect magic	result	LEDGER CORRECTION 2026-09-07, logged three weeks late. The day-4 sweep of the recovered gear found ONE thing: THE PLAIN METAL RING out of the area 27 dais recess registers magic. Zelligar's diary does NOT, nor did anything else in the haul. The casting was logged at the time and its finding never was, so inventory.tsv ended up saying no detect magic had been cast at all -- and the DM spent most of day 48 offering the party a sweep they had already done in expedition 4.
+2026-09-12	-	overnight day 77-78	Blartho	command	memorised	*** LOADOUT CHANGE, BACK TO HIS STANDING ONE. *** He dropped command for DETECT MAGIC on the night of day 47, prayed specifically to test the sealed vial out of area 9 -- and that vial was named as REALGAR by Trebb the dyer on day 59. He has been carrying a spell for a finished errand for THIRTY DAYS. Party's call on the night of the 77th: command comes back.
+2026-09-12	-	overnight day 77-78	Blartho	cure light wounds	memorised	1 of 2
+2026-09-12	-	overnight day 77-78	Blartho	cure light wounds	memorised	2 of 2
+2026-09-12	-	overnight day 77-78	Yrtone	command	memorised	Her standing loadout, unchanged since day 47
+2026-09-12	-	overnight day 77-78	Yrtone	cure light wounds	memorised	1 of 2
+2026-09-12	-	overnight day 77-78	Yrtone	cure light wounds	memorised	2 of 2
+2026-09-12	-	overnight day 77-78	Dellie	light	memorised	1 of 2 -- unchanged since the loadout she chose herself on day 45, and SHE HAS STILL NEVER CAST ONE
+2026-09-12	-	overnight day 77-78	Dellie	light	memorised	2 of 2
+2026-09-12	-	overnight day 77-78	Dellie	cure light wounds	memorised	her one cure
+2026-09-12	-	overnight day 77-78	Frython	sleep	memorised	His only spell. It has ended two fights without a blow struck -- exp.6 and exp.7 -- and it is a DEAD CARD against undead

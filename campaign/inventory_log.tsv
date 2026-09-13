@@ -117,3 +117,4 @@ when	day	asset	verb	qty	unit	condition	holder	evidence	note
 2026-09-11	77	iron_salt	anchor	0	each		-	articles.md	Sold to the district AT COST with the price visible -- and the fourth finding is that laid down it had cost nearer 160, so this was the largest single gift in the campaign
 2026-09-11	77	tool_line	anchor	0	each		-	cargo_manifest.md	Fenn's list, 136 gp. Hask owns a ring-fenced seventh of THIS LINE and no other -- about four pair of shears and a bit
 2026-09-11	77	lab_glass_bulky	anchor	0	each		-	world_changes.tsv	Out of the hill on day 70 and with TOLLER since day 71 on open terms -- his room, his pace, paid when sold. Not the party's to count
+2026-09-12	77	rations_std	move	4.0	person-week			money.tsv day 77	Bought the evening before expedition 9, 12 gp. STANDING ORDER: eat the standard ones FIRST -- the day-67 packets are eleven days old and standard rations do not keep a month, while the 2.5 person-weeks of IRON keep and are the reserve

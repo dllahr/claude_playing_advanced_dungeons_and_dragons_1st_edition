@@ -107,7 +107,7 @@ def do_money(a):
                 'worse than no pointer at all.' % a.interaction)
     day = a.day if a.day is not None else loopmod.current_day()
     line = _write(a.log_file or MONEY, dict(
-        when=today(), day=day, delta=a.delta, asset=a.asset,
+        when=today(), day=day, delta=a.delta, unit=a.unit, asset=a.asset,
         qty=a.qty or '', counterparty=a.counterparty or '-',
         interaction=a.interaction or '-', reason=a.reason))
     print(line)
@@ -235,6 +235,11 @@ def build_parser():
     m.add_argument('--qty', help='how many units moved; negative if sold')
     m.add_argument('--counterparty', help='who the money came from or went to')
     m.add_argument('--interaction', help='day:seq of the scene, if there was one')
+    m.add_argument('--unit', default='gp',
+                   help='gp | sp | ep | pp | cp. 1e has five coin types and '
+                        'WHICH ONE is sometimes the interesting fact -- the '
+                        'day-39 anchor records "28 ep off the orc bodies" and '
+                        'the electrum survives only in that prose')
     m.add_argument('--reason', required=True)
     m.add_argument('--day', type=int)
     m.set_defaults(fn=do_money)
