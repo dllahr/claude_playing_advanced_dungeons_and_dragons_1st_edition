@@ -753,3 +753,25 @@ feature	24	32	-	stairs	dl+claude	genuine, and named by B1 under area 36 as the F
 # (Also: (29,31)'s `stairs` cell feature is spurious -- it is the pit trap's
 # boxed-X counterweight floor, drawn across (29,30) and (29,31). Left alone
 # because the party has correctly treated it as a pit since expedition 6.)
+#
+# --- AREA 35's SOUTH CHAMBER IS A ROW SHORT ------------------------------------
+# Found in play on day 81 with the party sealed inside it and a wandering check
+# firing, which made "how many ways in are there" an urgent question.
+#
+# The extractor gave area 35 eight rows -- y33,34 / y36,37,38 / y40,41,42 -- so
+# the south chamber came out 4x2 while the other two are 4x3. THE WALLS WERE ALL
+# CORRECT; only the room label stopped short. y=32 is chamber floor: the printed
+# "35" sits at (32,33)-(33,33), furniture is drawn at (33,32) and (34,33), and
+# every y=32 square is walled to the SOUTH against area 33.
+#
+# Consequence if left: the chamber reads as having FIVE openings -- its own four
+# internal y33->y32 boundaries plus the door -- instead of ONE. That is the
+# difference between "sealed" and "wide open" with troglodytes in the corridor.
+#
+# Three chambers of 4x3 each, one door apiece, which is what B1 describes:
+# "three identical guest chambers side by side, all opening into the same
+# corridor".
+member	31	32	-	35	dl+claude	area 35 south chamber: the room label stopped one row short. Walls were already right; found in play 2026-09-14
+member	32	32	-	35	dl+claude	area 35 south chamber: the room label stopped one row short. Walls were already right; found in play 2026-09-14
+member	33	32	-	35	dl+claude	area 35 south chamber: the room label stopped one row short. Walls were already right; found in play 2026-09-14
+member	34	32	-	35	dl+claude	area 35 south chamber: the room label stopped one row short. Walls were already right; found in play 2026-09-14

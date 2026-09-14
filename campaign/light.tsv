@@ -155,3 +155,4 @@ when	exped	round	source	kind	what	who	fuel	certainty	note
 2026-09-13	9	332	lantern-ista	out				known	day 79 round 332: out at the threshold, in daylight. 8.0 turns left in it
 2026-09-13	10	0	lantern-ista	lit				known	day 81: lit at the threshold going in. The part-burned one still goes first -- 8.0 turns, with Torsat's and Yrtone's full 24s in reserve. NOTE: Torsat is at the Inn but HIS LANTERN CAME -- it is party gear, not his
 2026-09-14	10	51	lantern-ista	refill				known	day 81: topped off at the halt at (15,31), 2.9 of 24 turns left. Draws only the difference, and the broached flask goes first -- same as the day-70 and day-69 top-offs
+2026-09-14	10	238	lantern-ista	refill				known	day 81: topped off inside the spiked guest chamber, 5.3 of 24 turns left. Draws the difference -- the broached flask's 11.5 turns go in first and finish it, then a fresh flask makes up the balance

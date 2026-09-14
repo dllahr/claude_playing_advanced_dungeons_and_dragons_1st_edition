@@ -724,3 +724,13 @@ when	exped	round	kind	anchor	detail	note
 2026-09-14	10	184	advance		4	day 81: twenty feet north to the stair head, and two rounds probing the steps with a ten-foot pole before anybody sets foot on them
 2026-09-14	10	191	advance		7	day 81: down the false steps and 60 ft east along y=32 at exploring pace
 2026-09-14	10	185	check	180	d6=6	anchor 180 + 5
+2026-09-14	10	193	advance		2	day 81: round the turn to the first door on the x=30 corridor
+2026-09-14	10	195	advance		2	day 81: one round examining the door at (30,33,V), one with both thieves listening
+2026-09-14	10	196	advance		1	day 81: Yrtone shoves the door at (30,33,V) open
+2026-09-14	10	198	advance		2	day 81: into the chamber, door shut, two floor spikes and the cloaks laid
+2026-09-14	10	238	advance		40	day 81: THOROUGH SEARCH of the southernmost guest chamber. 40x20 = 2 of the DMG's 20x20 areas, 1 turn casual plus 1 turn thorough each = 4 turns. NOT doubled: B1 calls these rooms 'a minimum of furnishings' -- a bed, a small table and a chair -- which is the opposite of the 'many containers and much furniture' clause. Dave standing guard on the spiked door, six searching
+2026-09-14	10	212	check	210	d6=4	anchor 210 + 2
+2026-09-14	10	239	advance		1	day 81: topping off Ista's lantern in the chamber
+2026-09-14	10	279	advance		40	day 81: WALL SEARCH of the south guest chamber, twelve 10-ft sections in THREE PAIRS working in parallel -- 4 turns instead of 12 (rules/exploration.md, the parallel-search ruling made today). Dave still on the spiked door
+2026-09-14	10	245	check	240	d6=6	anchor 240 + 5
+2026-09-14	10	273	check	270	d6=1 -> Troglodytes (1-2)-AC 5, HD 2', hp 6,5, #AT 3, D 1-4/1-4/ 1-4, MV 120' (40'), Save F2, ML 9	anchor 270 + 3

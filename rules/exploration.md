@@ -582,6 +582,32 @@ square through a doorway and seeing three.
 *"If there are many containers and much furniture in the area, the time might
 actually be double that shown."*
 
+## Searching in PARALLEL — trading rolls for time
+
+**Player's ruling 2026-09-14, day 81, and it is a ruling not a rule.** The DMG
+prices **a 10-ft section**, not a searcher: *"searching a 10' section for traps
+or secret doors: 1 turn each."* Nothing in the book says how many people may work
+one section, so nothing forbids splitting them up.
+
+| how the party works | turns for N sections | rolls per section |
+|---|---|---|
+| **everybody on every section** | **N** | one per searcher — best odds, slowest |
+| **split into pairs** | **N / (searchers / 2)** | **two** |
+| **one each, fanned out** | **N / searchers** | **one** — fastest, worst odds |
+
+*source: **DM RULING**, not the DMG. The time figure is the book's; dividing it
+across bodies is the player's call, made explicitly as a trade.*
+
+**Expedition 7's find is the shape this preserves:** *"Tristle rolled 2 on his elf
+2-in-6 active search and Dellie rolled 1 on her 1-in-6, INDEPENDENTLY, on the
+same 10-ft section."* Two searchers, one section, two dice. Splitting them just
+puts those two dice on different walls.
+
+**The catch, and it must be said BEFORE the dice:** a section searched by one
+person got one roll and **that section is now spent for that person.** Fanning
+out is not free — it buys hours at the price of a thinner net, and a 1-in-6 net
+with one throw per section misses five sixths of what is there.
+
 ## Secret doors — the detection chances
 
 | | per turn, per 10' x 10' area searched |
