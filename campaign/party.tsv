@@ -195,3 +195,6 @@ when	map	level	x	y	exped	turn	squares	feet	rate	why	route
 2026-09-14	b1	1	15	31			3	30	explore	day 81: south down x=15 until the corridor changes	15,34 15,33 15,32 15,31
 2026-09-14	b1	1	20	31			5	50	explore	day 81: east along y=31 to the door in the north wall	15,31 16,31 17,31 18,31 19,31 20,31
 2026-09-14	b1	1	19	32			2	20	explore	day 81: into the room and two squares west, to put the lantern on the thing in the bracket	20,31 20,32 19,32
+2026-09-14	b1	1	15	31			7	70	known	day 81: out of area 37 by its one door and west along y=31 to the T	19,32 20,32 20,31 19,31 18,31 17,31 16,31 15,31
+2026-09-14	b1	1	16	30			2	20	explore	day 81: south one square off the T and east into new ground	15,31 15,30 16,30
+2026-09-14	b1	1	23	30			7	70	explore	day 81: east along y=30 until the corridor changes	16,30 17,30 18,30 19,30 20,30 21,30 22,30 23,30

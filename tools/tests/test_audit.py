@@ -232,3 +232,29 @@ def test_the_pre_commit_hook_exists_and_is_executable():
     text = open(hook, encoding='utf-8').read()
     assert 'audit.py --staged' in text
     assert 'core.hooksPath' in text, 'the hook does not say how to enable it'
+
+
+def test_party_has_no_dwarf_is_not_a_claim_about_the_purse():
+    """*** IT CRIED WOLF ON 2026-09-14 AND BLOCKED A COMMIT. ***
+
+    The `funds` anchor carried a bare `party (?:has|holds)`, so a DM note
+    reading "The party has no dwarf. The one they took out of area 34..." was
+    read as a statement about money. The checker then took the nearest number --
+    the 6 in "2 in 6 chance" -- and reported "text says 6, tools say 1041.1 gp".
+
+    CLAUDE.md: "If it ever cries wolf, LOOSEN THE CHECKER -- do not learn to
+    pass --no-verify." So the phrase must now sit within thirty characters of an
+    actual money word.
+    """
+    findings, _ = run('The party has no dwarf. Only a dwarf notices the '
+                      'slant, 2 in 6.')
+    assert not [f for f in findings if f[1] == 'funds'], findings
+
+
+def test_the_funds_anchor_still_catches_a_real_purse_claim():
+    """Loosening must not blind it."""
+    for text in ('the party has 3 gp on hand',
+                 'the purse is 12 gp',
+                 'party funds stand at 7 gp'):
+        findings, _ = run(text)
+        assert [f for f in findings if f[1] == 'funds'], (text, findings)

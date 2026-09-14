@@ -718,3 +718,6 @@ when	exped	round	kind	anchor	detail	note
 2026-09-14	10	94	check	90	d6=3	anchor 90 + 4
 2026-09-14	10	123	check	120	d6=6	anchor 120 + 3
 2026-09-14	10	155	check	150	d6=2	anchor 150 + 5
+2026-09-14	10	170	advance		4	day 81: out of area 37, wedges drawn and cloaks lifted, west to the T at (15,31), south one and east one
+2026-09-14	10	172	advance		2	day 81: the two squares of new ground south and east off the T -- the seven back to it were known rate and already charged
+2026-09-14	10	180	advance		8	day 81: east along y=30 from (16,30) to (23,30), 70 ft at exploring pace

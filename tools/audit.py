@@ -168,8 +168,16 @@ def _count_tests():
 # --------------------------------------------------------------------------
 
 ANCHORS = (
+    # `party has|holds` USED TO BE BARE and it cried wolf on 2026-09-14: a DM
+    # note reading "The party has no dwarf" was read as a funds claim, the
+    # checker grabbed the nearest number -- the 6 in "2 in 6" -- and blocked the
+    # commit against a purse of 1,041 gp. CLAUDE.md says loosen the checker
+    # rather than learn to pass --no-verify, so the phrase now has to be within
+    # thirty characters of an actual money word.
     ('funds',           r'\bfunds?\b|\bpurse\b|\bin the purse\b|'
-                        r'party (?:has|holds)\b|\bon hand\b'),
+                        r'party (?:has|holds)[^.]{0,30}'
+                        r'(?:gp\b|g\.p\.|gold|coin|silver|money)|'
+                        r'\bon hand\b'),
     ('spikes_emplaced', r'spikes?[^.]{0,40}(?:emplaced|in the hill|'
                         r'left in the dungeon|still (?:in|there))|'
                         r'(?:emplaced|deployed)[^.]{0,20}spikes?'),

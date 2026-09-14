@@ -4067,3 +4067,35 @@ into Draycot, at dusk. Worth keeping: it is a nice piece of table honesty that t
 schedule, and would move it for the party next summer if paid. Reaction 69 means
 he will talk over a fire and take a drink; it does not mean he has joined
 anything.
+
+## ⚠ THE FALSE STEPS AT (24,32) — DM ONLY, AND IT EXPLAINS THE WHOLE OF DAY 81
+
+Reached by expedition 10 on day 81 from (23,32), going east. **The steps are
+REAL. What they promise is not.** B1's own text under area 36:
+
+> *"FALSE STEPS. Although the steps here are very real, **the entire area north
+> of this room (the various winding corridors) is specially designed to confuse
+> any explorers.** The corridor leading past the guest chambers is on an
+> **upward slant which will be unnoticeable to casual adventurers (except
+> dwarves, who will have a 2 in 6 chance to notice it).** The stairs (8 of them)
+> then lead downward, **as if to another level — although this is only the
+> impression created.**"*
+
+**So: eight real steps down, arriving back on level 1.** The party will read them
+as stairs to the lower level and they are not.
+
+**AND IT RETROSPECTIVELY EXPLAINS EVERY CORRIDOR THEY WALKED ON DAY 81.** The
+y=38 stub that dead-ends ten feet from the troglodyte corridor; x=28 running the
+whole length of y=35 without meeting it; y=34 ending at the back of (14,34);
+y=30 and y=31 parallel and sealed from each other. *"Specially designed to
+confuse any explorers"* — that is the design, and the party has spent a day
+inside it drawing it accurately, which is the correct counter and cost them
+nothing but time.
+
+**ONLY A DWARF NOTICES THE SLANT, 2 in 6.** The party has no dwarf. The one they
+took out of area 34 went to Draycot on day 73 and is on trestles above ground.
+**Do not hint at the slant.** If they ever bring a dwarf down here, roll it.
+
+**The real way down is area 30, the ACCESS ROOM at x21-23 y8-9**, whose
+descending stairway *"leads down and directly into room 38 on the lower level"*
+— nowhere near here, and the party has never been in it.
