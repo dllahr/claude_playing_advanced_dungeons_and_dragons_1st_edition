@@ -706,3 +706,29 @@ edge	19	36	H	door	dl+claude	suite of chambers x16-22 y36-40: B1 door glyph read 
 # mapdb/lab_notebook.md, 2026-09-14.
 member	16	32	-	37	dl+claude	area 37: a MAT square filed as corridor because the stippling broke the room flood fill. Player-caught in play 2026-09-14
 member	16	33	-	37	dl+claude	area 37: a MAT square filed as corridor because the stippling broke the room flood fill. Player-caught in play 2026-09-14
+#
+# --- THE FALSE STEPS AT (24,32): TREADS READ AS WALLS ---------------------------
+# Reached in play on day 81, expedition 10, and the classifier had the staircase
+# DESCENDING INTO SOLID ROCK: (24,32) came out `mixed`, open=0.20, sides=NSWE,
+# and its east boundary was called a wall. All of that ink is stair treads.
+#
+# The profiles, at the party's own stair head, measured before anything was
+# narrated (the L036 audit rule):
+#
+#   (23,32,V) into the steps    thick= 2px   0 0 0 0 0 0 0 0 .4 .9 .5 0 0 .3 .9
+#   (24,32,V) out of the steps  thick= 6px   0 .6 1 .5 .3 .8 1 .4 .3 .9 .6 .1 0
+#   (25,32,V) corridor east     thick= 1px   0 0 0 0 0 0 .3 .9 .2 0 0 0 0 0 0
+#   (14,34,V) a REAL wall       thick=10px   0 0 0 0 .1 .6 1 1 1 1 1 1 1 1 .7
+#
+# (24,32,V) is THREE SEPARATE NARROW BARS -- the last treads, straddling the
+# boundary -- not the single solid band a wall makes. Same family as area 33's
+# bed frames, area 34's chests and area 11's hatching: DRAWN DETAIL READ AS
+# STRUCTURE. The difference is that here the stairs are REAL and the structure
+# around them was wrong.
+#
+# B1 names them under area 36: "FALSE STEPS... the stairs (8 of them) then lead
+# downward, as if to another level -- although this is only the impression
+# created." They are genuine steps and they arrive back on level 1.
+cell	24	32	-	open	dl+claude	the stair square itself, read as rock because eight treads fill it
+edge	24	32	V	open	dl+claude	the east side of the stair square: three narrow tread bars summed into a wall. The steps RUN THROUGH HERE into (25,32)
+feature	24	32	-	stairs	dl+claude	genuine, and named by B1 under area 36 as the FALSE STEPS -- real steps that lead nowhere new
