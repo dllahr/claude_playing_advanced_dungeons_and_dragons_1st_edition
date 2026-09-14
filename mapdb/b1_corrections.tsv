@@ -683,3 +683,26 @@ edge	17	37	H	door	dl+claude	suite of chambers x16-22 y36-40: B1 door glyph read 
 edge	19	37	H	door	dl+claude	suite of chambers x16-22 y36-40: B1 door glyph read as a stair tread (conf 7); identical glyphs at (17,38,V) (18,38,V) (20,39,V) were read as doors at conf 9
 edge	21	37	H	door	dl+claude	suite of chambers x16-22 y36-40: B1 door glyph read as a stair tread (conf 7); identical glyphs at (17,38,V) (18,38,V) (20,39,V) were read as doors at conf 9
 edge	19	36	H	door	dl+claude	suite of chambers x16-22 y36-40: B1 door glyph read as a stair tread (conf 7); identical glyphs at (17,38,V) (18,38,V) (20,39,V) were read as doors at conf 9
+#
+# --- AREA 37's WEST END: THE MATS ARE NOT A PASSAGE -----------------------------
+# Player-caught 2026-09-14, in play, with the party standing in the room and the
+# DM having just told them there was an undoored ten-foot opening in the west
+# wall. THERE IS NO OPENING. (16,32) and (16,33) ARE PART OF THE ROOM.
+#
+# The tell is in the database's own output: both squares come out as
+# `open corridor [mats]` -- the extractor tagged them with the MAT FEATURE and
+# then filed them as corridor, because room 37's flood fill stopped at x=17 where
+# the stippled 20'x20' mat block interrupted it. B1: "five heavy woven mats lying
+# atop each other to form a sort of floor cushion measuring 20' BY 20'" -- four
+# squares, and two of them fell outside the room.
+#
+# Both squares are walled on every side except into the room, so the pocket went
+# nowhere in any case. THE ROOM HAS EXACTLY ONE ENTRANCE, the carved door at
+# (20,31,H), and is otherwise sealed.
+#
+# SAME FAILURE CLASS AS THE THIRTEEN STAIRS OF DAY 79: room texture read as
+# structure. The stippling also dragged the (16,32,V) ink mean to 0.31 against a
+# 0.35 threshold, which is what made the boundary look borderline -- see
+# mapdb/lab_notebook.md, 2026-09-14.
+member	16	32	-	37	dl+claude	area 37: a MAT square filed as corridor because the stippling broke the room flood fill. Player-caught in play 2026-09-14
+member	16	33	-	37	dl+claude	area 37: a MAT square filed as corridor because the stippling broke the room flood fill. Player-caught in play 2026-09-14

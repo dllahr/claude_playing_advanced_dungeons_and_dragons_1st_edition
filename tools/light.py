@@ -621,7 +621,9 @@ def reserves(cat=None, path=None, inv_state=None, pool=None):
                            rounds=int(n) * (entry['burn_rounds'] or 0),
                            text=entry['text']))
     for asset in _ASSET_UNPRICED:
-        for cond, v in sorted(st.get(asset, {}).items()):
+        # inventory.state() is keyed (condition, unit) since 2026-09-14 -- the
+        # unit had to join the key or an anchor in one unit wiped another.
+        for (cond, _unit), v in sorted(st.get(asset, {}).items()):
             if v[0]:
                 unpriced.append(('%s%s' % (asset, (' (%s)' % cond) if cond
                                            else ''), '%g' % v[0]))

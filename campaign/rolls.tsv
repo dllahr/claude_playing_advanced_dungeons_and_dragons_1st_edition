@@ -7524,3 +7524,11 @@ when	exped	turn	notation	dice	modifier	total	hidden	reason
 2026-09-14			1d6	1	0	1		day 81 rd 58: THE B1 LOCK ROLL for the door at (20,31,H), spent as part of Tristle's examination -- he tries the LATCH. 1-2 it bars entrance, 3-6 it opens. Precedent: (9,21,H) on expedition 6, where the roll was spent the same way and the correction row separates it from a pick attempt
 2026-09-14			1d100	32	0	32		day 81 rd 60: TRISTLE'S OPEN LOCKS on the door at (20,31,H). 35% -- base 25, elf -5, DEX 18 +15 (rules/thief.md). ONE ATTEMPT PER LOCK PER LEVEL OF EXPERIENCE, PHB p.28, and this spends it at 1st level. Need 35 or under
 2026-09-14			d6	3	0	3		wandering check, anchor 60
+2026-09-14			d6	3	0	3		wandering check, anchor 90
+2026-09-14			d6	6	0	6		wandering check, anchor 120
+2026-09-14			d6	2	0	2		wandering check, anchor 150
+2026-09-14			1d3	1	0	1		day 81 area 37: B1 says 'several quivers of arrows'. HOW MANY -- table declared before the die: d3+2, so 3 to 5 quivers
+2026-09-14			2d6	6,6	0	12		day 81 area 37: arrows in each quiver, 2d6 apiece. Sound rather than rotten -- the same ruling Quasqueton's other 30-year-old contents have had, the area 6 lantern 'dry for decades but sound' and the oil that still burned
+2026-09-14			2d6	6,2	0	8		day 81 area 37: arrows in each quiver, 2d6 apiece. Sound rather than rotten -- the same ruling Quasqueton's other 30-year-old contents have had, the area 6 lantern 'dry for decades but sound' and the oil that still burned
+2026-09-14			2d6	4,6	0	10		day 81 area 37: arrows in each quiver, 2d6 apiece. Sound rather than rotten -- the same ruling Quasqueton's other 30-year-old contents have had, the area 6 lantern 'dry for decades but sound' and the oil that still burned
+2026-09-14			2d6	5,2	0	7		day 81 area 37: arrows in each quiver, 2d6 apiece. Sound rather than rotten -- the same ruling Quasqueton's other 30-year-old contents have had, the area 6 lantern 'dry for decades but sound' and the oil that still burned

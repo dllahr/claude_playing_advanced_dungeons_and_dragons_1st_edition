@@ -88,7 +88,33 @@ def _num(v):
 
 
 def state(log=None):
-    """{asset: {condition: [qty, unit, holder, note]}}. Anchors set; moves add."""
+    """{asset: {key: [qty, unit, holder, note]}}. Anchors set; moves add.
+
+    *** THE KEY IS (CONDITION, UNIT), NOT CONDITION ALONE, AND THAT COST 48
+    ARROWS. ***
+
+    This keyed on condition only, carrying the unit along as a value that each
+    row overwrote. So two rows for one asset in the same condition but DIFFERENT
+    UNITS landed in the same cell, and the later anchor destroyed the earlier:
+
+        day 77  anchor 48 each     cell = [48, 'each']
+        day 77  anchor  1 quiver   cell = [ 1, 'quiver']   <- ate the 48
+        day 81  move  +36 each     cell = [37, 'each']
+
+    From day 77 to day 81 the tool reported the party's arrows as "1 quiver" and
+    the forty-eight were invisible -- including in brief.py, which is the file
+    the DM reads first every session. Caught 2026-09-14 when the player said
+    "we have 3 quivers, we bought 1 each at the start of the game" and the total
+    came out 37.
+
+    CLAUDE.md and this module's own docstring both promised "one row per (asset,
+    condition), with an explicit unit". The unit column was added and nothing was
+    keyed on it -- the unit-column principle half-applied, which is worse than
+    not applying it, because the figure looks authoritative.
+
+    A key is rendered as "condition" when the unit is the only distinction, so
+    the report reads the same as before for every asset held in one unit.
+    """
     log = log if log is not None else rows()
     out = {}
     for r in log:
@@ -96,17 +122,29 @@ def state(log=None):
         if not a:
             continue
         cond = (r.get('condition') or '').strip()
-        cell = out.setdefault(a, {}).setdefault(
-            cond, [0.0, (r.get('unit') or 'each').strip(), '', ''])
+        unit = (r.get('unit') or 'each').strip()
+        cell = out.setdefault(a, {}).setdefault((cond, unit),
+                                                [0.0, unit, '', ''])
         if (r.get('verb') or '').strip() == 'anchor':
             cell[0] = _num(r.get('qty'))
         else:
             cell[0] += _num(r.get('qty'))
-        cell[1] = (r.get('unit') or cell[1] or 'each').strip()
         if r.get('holder', '').strip():
             cell[2] = r['holder'].strip()
         if r.get('note', '').strip():
             cell[3] = r['note'].strip()
+    return out
+
+
+def conditions(st_for_asset):
+    """{condition: cell} for callers that only care about the condition.
+
+    Kept so ledger.py and light.py, which ask "is there a row for this asset",
+    do not have to learn about the compound key.
+    """
+    out = {}
+    for (cond, _unit), cell in st_for_asset.items():
+        out.setdefault(cond, cell)
     return out
 
 
@@ -139,7 +177,7 @@ def report(log=None, asset=None, held_by=None):
         if asset and a != asset:
             continue
         kind = ass.get(a, {}).get('kind', '?')
-        for cond, (n, unit, holder, note) in sorted(st[a].items()):
+        for (cond, _u), (n, unit, holder, note) in sorted(st[a].items()):
             if held_by and held_by.lower() not in holder.lower():
                 continue
             if not n and not asset:

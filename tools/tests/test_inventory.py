@@ -50,21 +50,22 @@ def test_the_rations_split_that_used_to_read_as_two():
     # THE UNITS are the invariant. The QUANTITIES move every time the party
     # buys food, and pinning them made this fail on the first purchase after
     # it was written -- a stored total wearing a test's clothes.
-    assert st['rations_iron'][''][1] == 'person-week'
-    assert st['rations_std'][''][1] == 'person-week'
+    assert st['rations_iron'][('', 'person-week')][1] == 'person-week'
+    assert st['rations_std'][('', 'person-week')][1] == 'person-week'
     assert 'rations_iron' in st and 'rations_std' in st, (
         'iron and standard are DIFFERENT ASSETS. The retired cell held both '
         'as "~2.5 IRON + 8 STANDARD" and every tool read it as the number 2')
-    assert st['rations_iron'][''][0] > 0 and st['rations_std'][''][0] > 0
+    assert (st['rations_iron'][('', 'person-week')][0] > 0
+            and st['rations_std'][('', 'person-week')][0] > 0)
 
 
 def test_the_damaged_rope_is_visible_on_its_own_row():
     """"8 (7 sound, 1 damaged)" read as 8 and hid which rope not to trust."""
     st = inventory.state()['rope_50ft']
-    assert st['sound'][0] == 7
-    assert st['damaged'][0] == 1
+    assert st[('sound', 'each')][0] == 7
+    assert st[('damaged', 'each')][0] == 1
     assert inventory.qty('rope_50ft') == 8
-    assert 'NOT TO BE TRUSTED' in st['damaged'][3]
+    assert 'NOT TO BE TRUSTED' in st[('damaged', 'each')][3]
 
 
 def test_a_total_across_mixed_units_is_refused_not_summed():
@@ -201,3 +202,60 @@ def test_disposed_things_have_a_zero_row_not_an_absent_one():
         assert asset in st, '%s has no row at all -- that is the defect' % asset
         assert sum(v[0] for v in st[asset].values()) == 0
     assert [m for s, m in ledger.check() if s == 'WARN'] == []
+
+
+# ----------------------------- the unit belongs in the KEY, not just the cell
+# Added 2026-09-14. `state()` keyed on CONDITION ALONE and carried the unit as a
+# value each row overwrote, so two rows for one asset in the same condition but
+# different units shared a cell and the later ANCHOR DESTROYED THE EARLIER:
+#
+#     day 77  anchor 48 each     -> [48, 'each']
+#     day 77  anchor  1 quiver   -> [ 1, 'quiver']   ate the 48
+#     day 81  move  +36 each     -> [37, 'each']
+#
+# The party's forty-eight arrows were invisible for four campaign days, brief.py
+# included -- the file the DM reads first every session. Caught by the player
+# saying "we have 3 quivers, we bought 1 each at the start of the game" when the
+# total came out 37.
+#
+# CLAUDE.md and the module docstring both promised "one row per (asset,
+# condition), with an explicit unit". THE UNIT COLUMN WAS ADDED AND NOTHING WAS
+# KEYED ON IT -- the unit-column principle half-applied, which is worse than not
+# applying it, because the wrong figure looks authoritative.
+
+def _two_unit_log():
+    return [
+        dict(asset='arrows', verb='anchor', qty='48', unit='each',
+             condition='', holder='spread', note='counted'),
+        dict(asset='arrows', verb='anchor', qty='1', unit='quiver',
+             condition='', holder='spread', note='off the bandits, uncounted'),
+        dict(asset='arrows', verb='move', qty='36', unit='each',
+             condition='', holder='spread', note='area 37'),
+    ]
+
+
+def test_two_units_of_one_asset_do_not_share_a_cell():
+    st = inventory.state(_two_unit_log())['arrows']
+    assert st[('', 'each')][0] == 84, st
+    assert st[('', 'quiver')][0] == 1, st
+
+
+def test_an_anchor_in_ONE_unit_does_not_wipe_ANOTHER():
+    """The whole bug in one assertion."""
+    st = inventory.state(_two_unit_log())['arrows']
+    assert st[('', 'each')][0] != 37, (
+        'the quiver anchor ate the 48 arrows again')
+
+
+def test_mixed_units_are_still_REFUSED_as_a_total():
+    """qty() must go on raising rather than adding arrows to quivers."""
+    import pytest as _p
+    with _p.raises(ValueError):
+        inventory.qty('arrows', _two_unit_log())
+
+
+def test_the_report_still_prints_the_CONDITION_not_the_raw_key():
+    """The key became a tuple; the column must not."""
+    out = inventory.report(_two_unit_log(), asset='arrows')
+    assert "('', 'each')" not in out, 'the compound key leaked into the report'
+    assert '84' in out and 'quiver' in out

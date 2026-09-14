@@ -358,10 +358,11 @@ def test_reserves_are_priced_off_the_rules_table(tmp_path, cat):
     disagreement warning. light.tsv knows which flasks have been broached, so
     `sealed` is derived there and there is nothing left to disagree with. ***
     """
+    # keyed (condition, unit) since 2026-09-14 -- see inventory.state()
     inv_state = {
-        'torch': {'': [2, 'each', 'spread', '']},
-        'candle': {'': [6, 'each', 'spread', '']},
-        'dagger': {'': [1, 'each', 'Frython', '']},
+        'torch': {('', 'each'): [2, 'each', 'spread', '']},
+        'candle': {('', 'each'): [6, 'each', 'spread', '']},
+        'dagger': {('', 'each'): [1, 'each', 'Frython', '']},
     }
     pool = dict(known=True, sealed=3, broached=0.0, opened=0, drawn=0.0,
                 short=0.0, untracked=0.0)

@@ -713,3 +713,8 @@ when	exped	round	kind	anchor	detail	note
 2026-09-14	10	62	advance		1	day 81: Ista opens the door at (20,31,H)
 2026-09-14	10	62	check	60	d6=3	anchor 60 + 2
 2026-09-14	10	64	advance		2	day 81: into area 37, door shut behind them, and two squares west to light the west end
+2026-09-14	10	66	advance		2	day 81: two jamb wedges and the cloaks laid along the door's foot
+2026-09-14	10	166	advance		100	day 81: THOROUGH SEARCH of area 37 -- casual examination plus thorough search, DOUBLED for furniture (DMG p.97), across 2.5 of the DMG's 20x20 areas = 10 turns. Five searching, Dave and Yrtone standing guard. NO wall search for secret doors, by the player's choice
+2026-09-14	10	94	check	90	d6=3	anchor 90 + 4
+2026-09-14	10	123	check	120	d6=6	anchor 120 + 3
+2026-09-14	10	155	check	150	d6=2	anchor 150 + 5
