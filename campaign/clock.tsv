@@ -699,3 +699,9 @@ when	exped	round	kind	anchor	detail	note
 2026-09-13	10	0	start			day 81: in by alcove pair 2 and the one-way slab, seven of them, straight for (24,37)
 2026-09-13	10	0	jitter		30:3,60:2,90:4,120:3,150:5,180:5,210:2,240:5,270:3,300:0,330:1,360:4,390:3,420:0,450:1,480:1,510:0,540:0,570:1,600:4,630:2,660:0,690:0,720:3,750:5,780:2,810:3,840:2,870:3,900:0,930:3,960:1,990:3,1020:2,1050:4,1080:4,1110:0,1140:5,1170:3,1200:3,1230:0,1260:0,1290:3,1320:5,1350:5,1380:2,1410:5,1440:0,1470:5,1500:5,1530:5,1560:2,1590:5,1620:5,1650:1,1680:3,1710:4,1740:1,1770:0,1800:5	rolled in advance and HIDDEN; each is reported when its check fires
 2026-09-13	10	15	advance		15	day 81: threshold to (24,37), 680 ft, all of it ground walked on day 79 -- known rate, nobody slowing them, past the bay door without stopping
+2026-09-13	10	22	advance		7	day 81: (24,37) north to the four-way and east along y=39 to (28,39), 60 ft at exploring/mapping pace
+2026-09-13	10	27	advance		5	day 81: (28,39) south and west along y=38 to the dead end at (25,38), 40 ft at exploring pace
+2026-09-13	10	32	advance		5	day 81: 30 ft back east at known rate, then 40 ft south down x=28 at exploring pace
+2026-09-13	10	39	advance		7	day 81: west along y=34 from (28,34) to (22,34), 60 ft at exploring pace
+2026-09-13	10	33	check	30	d6=6	anchor 30 + 3
+2026-09-13	10	47	advance		8	day 81: west along y=34 from (22,34) to (15,34), 70 ft at exploring pace
