@@ -75,7 +75,18 @@ and put Tristle's trap chance in the cache at 30% for most of the campaign. It i
 > risen to a higher experience level."* — PHB p. 28
 
 **A failed pick is final until Tristle reaches 2nd level.** Not "try again next
-round", not "try again with better light". The same wording governs traps:
+round", not "try again with better light".
+
+> ### HOW A FAILURE IS DESCRIBED AT THE TABLE -- the player's own wording, day 81
+>
+> **"He's STUMPED."** Not "the lock beats him", not "he cannot pick locks". *He
+> could keep trying as long as he likes and he is simply not going to work this
+> one out* -- until he has more experience and comes back to it with a fresh
+> perspective. The mechanic is a once-per-object roll; the fiction is a man who
+> cannot see it yet. **Describe it that way, and do not let the character look
+> incompetent for a die roll.**
+
+The same wording governs traps:
 *"Finding/Removing Traps is accomplished in exactly the same manner as opening
 locks… One try only per thief is allowed."*
 
@@ -96,7 +107,16 @@ and Find Traps may not.
 
 > ## ⚠ THE LIMIT IS PER **OBJECT**, NOT A PER-LEVEL BUDGET
 >
-> **Misapplied 2026-09-06 and caught by the player.** The DM told the party that
+> ### THIS BOX HAS NOW FAILED TWICE. SEE `tools/world.py picks`.
+>
+> **Misapplied 2026-09-06 and caught by the player. MISAPPLIED AGAIN ON DAY 81,
+> 2026-09-13, WITH THIS BOX ALREADY IN THE FILE** -- the DM told the player that
+> Tristle, having picked the lock at (20,31,H), had "no picks left" for the bay
+> door on y=35 and was spent "until 2nd level, 526 xp away". Every word of that
+> was wrong, and the box saying so was eight lines up. **A warning that has
+> failed twice is not a warning, so the ATTEMPTS ARE NOW QUERYABLE:
+> `python tools/world.py picks` lists every lock and trap attempt by character
+> and by object, out of world_changes.tsv. Run it instead of remembering.** The DM told the party that
 > because Tristle and Ista had each used Find/Remove Traps on the area 36 pit
 > trap, **neither could check a secret door found an hour later.** That is wrong.
 >

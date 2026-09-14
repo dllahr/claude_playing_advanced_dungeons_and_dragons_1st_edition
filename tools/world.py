@@ -410,6 +410,13 @@ def build_parser():
     r = sub.add_parser('state', help='what is currently changed')
     r.add_argument('--map', default='b1', help='which dungeon')
     r.add_argument('--level', type=int, default=1, help='dungeon level')
+    pk = sub.add_parser('picks', help='every once-per-object lock/trap attempt, '
+                                     'by character and object -- PHB p.28. THE '
+                                     'LIMIT IS PER OBJECT, and that has been '
+                                     'got wrong twice')
+    pk.add_argument('--map', default=None,
+                    help='restrict to one dungeon; default is all of them')
+    pk.add_argument('--who', default=None, help='one character')
     d = sub.add_parser('deployed', help='gear currently left in the dungeon')
     d.add_argument('--map', default=None,
                    help='restrict to one dungeon; default is all of them')
@@ -438,6 +445,76 @@ def build_parser():
     return p
 
 
+# HIGH-PRECISION phrases only. The first version of this matched a bare "pick"
+# and reported "cloaks picked up" and an oiling row as lock attempts -- a lookup
+# nobody trusts is worse than no lookup, because it sends you back to memory.
+ATTEMPT_PHRASES = ('lock sprung', 'open locks', 'find/remove traps',
+                   'find traps', 'remove traps', 'stumped', 'picked open',
+                   'attempted the lock', 'lock untried', 'b1 lock roll')
+NOT_AN_ATTEMPT = ('picked up', 'oiled')
+
+
+def report_picks(rows):
+    """Every ONCE-PER-OBJECT attempt ever made, by character and by object.
+
+    *** THIS EXISTS BECAUSE A WARNING FAILED TWICE. ***
+
+    `rules/thief.md` carries a box headed "THE LIMIT IS PER OBJECT, NOT A
+    PER-LEVEL BUDGET", written after the DM got it wrong on 2026-09-06. On day
+    81 he got it wrong AGAIN, with that box in the file -- telling the player
+    that Tristle, having picked (20,31,H), had "no picks left" for the bay door
+    and was spent "until 2nd level, 526 xp away". The limit is per LOCK. Nothing
+    else was spent by that roll.
+
+    PHB p.28: "Opening Locks may be attempted by any given thief but once per
+    lock... although the thief may try again when he or she has risen to a
+    higher experience level." Find/Remove Traps works "in exactly the same
+    manner". So the question is never "has he used his attempt" -- it is "has he
+    used it ON THIS OBJECT", which is a lookup and not a memory.
+    """
+    per = {}
+    for r in rows:
+        blob = ((r.get('change') or '') + ' ' + (r.get('note') or '')).lower()
+        if not any(k in blob for k in ATTEMPT_PHRASES):
+            continue
+        if any(k in blob for k in NOT_AN_ATTEMPT):
+            continue
+        who = (r.get('who') or '').strip()
+        if not who or who.lower() in ('party', 'claude', 'dl', 'dl+claude'):
+            continue
+        tgt = ('%s %s' % (r.get('scope', ''), r.get('target', ''))).strip()
+        if 'sprung' in blob or 'picked open' in blob:
+            outcome = 'SPRUNG'
+        elif 'stumped' in blob:
+            outcome = 'STUMPED'
+        elif ('untried' in blob or 'has not attempted' in blob
+              or 'never attempted' in blob):
+            outcome = 'UNTRIED'
+        elif 'b1 lock roll' in blob:
+            outcome = "the DOOR's d6"
+        else:
+            outcome = '?'
+        # LATEST row per (who, object) wins -- a correction row is appended
+        # after the thing it corrects, and (9,21,H) has exactly that shape.
+        per[(who, tgt)] = (r.get('when', ''), outcome, (r.get('note') or '')[:74])
+    out = ['ONCE-PER-OBJECT ATTEMPTS -- locks and traps, PHB p.28',
+           '',
+           '*** THE LIMIT IS PER OBJECT. A spent attempt on one lock spends',
+           '    NOTHING anywhere else. Got wrong twice; see rules/thief.md. ***',
+           '']
+    if not per:
+        out.append('  none logged')
+    for (who, tgt), (when, outcome, note) in sorted(per.items()):
+        out.append('  %-9s %-15s %-11s %-13s %s' % (who, tgt, when, outcome, note))
+    out += ['',
+            'A name/object pair marked STUMPED may NOT be retried by that',
+            'character until they gain a level. SPRUNG is done. UNTRIED means the',
+            'attempt is still available. Anything NOT LISTED AT ALL is a fresh',
+            "roll at the full percentage -- including every other lock in the",
+            'dungeon.']
+    return '\n'.join(out)
+
+
 def main(argv=None):
     a = build_parser().parse_args(argv)
     if a.cmd == 'replay':
@@ -452,6 +529,13 @@ def main(argv=None):
         return 0
     if a.cmd == 'deployed':
         print(report_deployed(load(a.log_file, a.map)))
+        return 0
+    if a.cmd == 'picks':
+        rows = load(a.log_file, a.map)
+        if a.who:
+            rows = [r for r in rows
+                    if a.who.lower() in (r.get('who') or '').lower()]
+        print(report_picks(rows))
         return 0
     if a.cmd == 'check':
         m = map_of(a.db) if a.db else None

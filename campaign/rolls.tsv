@@ -7522,3 +7522,4 @@ when	exped	turn	notation	dice	modifier	total	hidden	reason
 2026-09-14			1d100	21	0	21		day 81 rd 59: TRISTLE listens at the door at (20,31,H). Hear Noise 15% -- base 10 plus elf 5, rules/thief.md
 2026-09-14			1d100	68	0	68		day 81 rd 59: ISTA listens at the same door. Hear Noise 10% -- base 10, human, DEX 13 carries no adjustment
 2026-09-14			1d6	1	0	1		day 81 rd 58: THE B1 LOCK ROLL for the door at (20,31,H), spent as part of Tristle's examination -- he tries the LATCH. 1-2 it bars entrance, 3-6 it opens. Precedent: (9,21,H) on expedition 6, where the roll was spent the same way and the correction row separates it from a pick attempt
+2026-09-14			1d100	32	0	32		day 81 rd 60: TRISTLE'S OPEN LOCKS on the door at (20,31,H). 35% -- base 25, elf -5, DEX 18 +15 (rules/thief.md). ONE ATTEMPT PER LOCK PER LEVEL OF EXPERIENCE, PHB p.28, and this spends it at 1st level. Need 35 or under

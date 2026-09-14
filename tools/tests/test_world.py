@@ -270,3 +270,54 @@ def test_check_flags_a_wall_that_the_party_walked_through(tmp_path):
                      'spiked_open', '', '', 'T', ''))
     out = world.check(db, 1, world.load(log, 'b1', 1))
     assert any('calls it a plain wall' in ln for ln in out)
+
+
+# ------------------------------- once-per-object, because prose failed twice
+# `rules/thief.md` has carried a box headed "THE LIMIT IS PER OBJECT, NOT A
+# PER-LEVEL BUDGET" since 2026-09-06, written after the DM got it wrong. On day
+# 81 he got it wrong AGAIN with the box in the file, telling the player that
+# Tristle -- having just picked (20,31,H) -- had "no picks left" for the bay
+# door and was spent "until 2nd level". PHB p.28: once per LOCK.
+#
+# So the attempts became a QUERY. A warning that has failed twice must stop
+# being a sentence.
+
+def _picks_rows():
+    return [
+        dict(when='2026-08-29', scope='edge', target='23,6,V', who='Tristle',
+             change='unlocked',
+             note='lock sprung on the first and only attempt, d100=24 vs 35'),
+        dict(when='2026-09-06', scope='edge', target='29,31,H', who='Tristle',
+             change='trap', note='STUMPED on the pit trap, d100=71 vs 25'),
+        dict(when='2026-09-04', scope='edge', target='9,21,H', who='Tristle',
+             change='locked',
+             note='still LOCKED and Tristle has never attempted the lock'),
+        dict(when='2026-09-09', scope='edge', target='25,10,H', who='party',
+             change='unspiked', note='cloaks picked up on the way out'),
+        dict(when='2026-09-04', scope='edge', target='24,29,H', who='Ista',
+             change='oiled', note='hinges oiled with 2 turns of oil'),
+    ]
+
+
+def test_picks_reports_one_line_per_character_and_OBJECT():
+    out = world.report_picks(_picks_rows())
+    assert 'edge 23,6,V' in out and 'SPRUNG' in out
+    assert 'edge 29,31,H' in out and 'STUMPED' in out
+    assert 'edge 9,21,H' in out and 'UNTRIED' in out
+
+
+def test_picks_does_NOT_match_cloaks_picked_up_or_oiled_hinges():
+    """The first version matched a bare "pick" and reported both. A lookup
+    nobody trusts is worse than no lookup: it sends you back to memory, which
+    is the thing that got this wrong twice."""
+    out = world.report_picks(_picks_rows())
+    assert '25,10,H' not in out, 'matched "cloaks picked up"'
+    assert '24,29,H' not in out, 'matched an oiling row'
+
+
+def test_picks_says_out_loud_that_the_limit_is_per_object():
+    out = world.report_picks(_picks_rows())
+    assert 'PER OBJECT' in out
+    assert 'NOT LISTED AT ALL is a fresh' in out, (
+        'the report must state what an ABSENT pair means, or the reader infers '
+        'a per-level budget from a short list -- which is the original error')
