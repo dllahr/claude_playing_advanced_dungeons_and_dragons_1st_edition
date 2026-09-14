@@ -725,3 +725,35 @@ Open question for the feature audit: whether `(11,19)` is INSIDE area 2 (making
 the row 19/20 boundary at x=11 `open`) or outside it (`wall`). The pits sit at the
 room's south-west corner per the module text; the boundary kind follows from that
 and should be settled off a render, not guessed.
+
+## 2026-09-14 — adjudicating a BORDERLINE boundary in play, and a wrong turn
+
+Checking the west wall of area 37 mid-session, the quick ink-mean test came out
+at **0.31 against a 0.35 threshold** — too close to act on. Two lessons.
+
+**The wrong instrument, tried first.** I reached for *continuity*: sample a
+narrow window on the boundary, take the darkest pixel per row, and call it a
+wall if every row is inked. **That misclassifies every open boundary on the
+map**, because *B1 rules a light grid over its floors* — there is ink on every
+ten-foot line whether or not there is a wall there. It duly called a boundary the
+party had walked through a wall.
+
+**The right one is THICKNESS**, which is what `extract.py --t-thick 6.0` already
+measures and what the `thick=` figures in `edges.notes` record. Print the column
+profile and read it:
+
+```
+(19,31,V) open floor   0  0  0  0  0  0 .2  1 .7  0  0  0  0     2px = grid ruling
+(16,32,V) open floor   0  0  0  0  0 .3 .9 .4  0 .3 .6 .8 .6     ruling + mat stipple
+(14,34,V) a WALL       0  0  0 .1 .6  1  1 .9 .9 .9 .9  1  1     10px band
+```
+
+**Why the mean was borderline:** a 2-px ruling in an 11-px window averages ~0.15
+and a 9-px wall ~0.7, so the mean normally separates them cleanly. Here the
+**stippling of the 20'x20' woven mats** sat just inside the room and dragged the
+window average up to 0.31. *Room texture adjacent to a boundary inflates the
+mean; it does not thicken the line.*
+
+**Procedure when a mean lands between about 0.25 and 0.45: print the profile.**
+Do not reach for a new statistic in the middle of a session — the existing one
+has a known failure mode and the profile shows it directly.
