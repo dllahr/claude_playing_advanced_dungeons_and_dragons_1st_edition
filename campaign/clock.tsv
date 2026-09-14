@@ -705,3 +705,7 @@ when	exped	round	kind	anchor	detail	note
 2026-09-13	10	39	advance		7	day 81: west along y=34 from (28,34) to (22,34), 60 ft at exploring pace
 2026-09-13	10	33	check	30	d6=6	anchor 30 + 3
 2026-09-13	10	47	advance		8	day 81: west along y=34 from (22,34) to (15,34), 70 ft at exploring pace
+2026-09-14	10	51	advance		4	day 81: south down x=15 from (15,34) to (15,31), 30 ft at exploring pace
+2026-09-14	10	52	advance		1	day 81: halt at (15,31) to top off Ista's lantern
+2026-09-14	10	58	advance		6	day 81: east along y=31 from (15,31) to the door at (20,31), 50 ft at exploring pace
+2026-09-14	10	60	advance		2	day 81: one round examining the door at (20,31) -- hinges, frame, swing -- and one with both thieves listening at it

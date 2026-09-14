@@ -7518,3 +7518,7 @@ when	exped	turn	notation	dice	modifier	total	hidden	reason
 2026-09-13			d6	1	0	1	yes	wandering jitter, anchor 1770
 2026-09-13			d6	6	0	6	yes	wandering jitter, anchor 1800
 2026-09-13			d6	6	0	6		wandering check, anchor 30
+2026-09-14			1d6	1	0	1		day 81 rd 58: WHICH WAY THE DOOR AT (20,31,H) SWINGS. B1 prints no swing on its door glyphs, so this is an unknown fact rolled on a table declared BEFORE the die (CHECKLIST): 1-3 it opens TOWARD the party, into the corridor; 4-6 it opens AWAY, into whatever is beyond. The hinges are visible on a plain door, so examining it settles this with no find roll -- unlike the (10,24,V) secret door, whose mechanism took a turn and a d6
+2026-09-14			1d100	21	0	21		day 81 rd 59: TRISTLE listens at the door at (20,31,H). Hear Noise 15% -- base 10 plus elf 5, rules/thief.md
+2026-09-14			1d100	68	0	68		day 81 rd 59: ISTA listens at the same door. Hear Noise 10% -- base 10, human, DEX 13 carries no adjustment
+2026-09-14			1d6	1	0	1		day 81 rd 58: THE B1 LOCK ROLL for the door at (20,31,H), spent as part of Tristle's examination -- he tries the LATCH. 1-2 it bars entrance, 3-6 it opens. Precedent: (9,21,H) on expedition 6, where the roll was spent the same way and the correction row separates it from a pick attempt

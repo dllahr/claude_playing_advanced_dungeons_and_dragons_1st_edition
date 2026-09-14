@@ -15,6 +15,25 @@ read end to end. See `CHECKLIST.md` — read a module's front matter FIRST.*
 | 1-2 | **Locked** — bars entrance until picked or broken |
 | 3-6 | **It opens** |
 
+> ### WHEN THE d6 IS ROLLED: AT THE EXAMINATION, NOT AT THE HAUL
+>
+> **Trying the latch is part of examining a door, and that is what spends this
+> roll.** The party learns then and there whether it bars entrance. Attested at
+> **(9,21,H) on expedition 6** -- *"B1 lock roll spent, d6=2 = LOCKED"* -- with a
+> correction row the next day drawing the line that matters:
+>
+> > *"Tristle examined this door and tried the LATCH only. He has NOT attempted
+> > to pick the lock. His Open Locks (35%) on this door is UNSPENT... the d6=2
+> > logged earlier was the DOOR'S B1 lock roll (is it locked - yes), NOT a pick
+> > attempt. Do not assume it was burned."*
+>
+> **TWO SEPARATE ROLLS, CONSTANTLY CONFLATED:** the DOOR'S d6, spent once per
+> door at the examination; and the THIEF'S Open Locks, spent once per lock per
+> level of experience. *(The DM told the player on day 81 that the d6 waits until
+> somebody takes hold of the door. The player said that was a new mechanism and
+> he was right. Written down here so it stops being a ruling.)*
+
+
 > *"In all cases, unless otherwise noted, doors will be locked one-third of the
 > time — and any roll of a 1 or 2 on a six-sided die (d6) will mean that they
 > will bar entrance unless the lock is sprung or broken. Breaking the lock or
