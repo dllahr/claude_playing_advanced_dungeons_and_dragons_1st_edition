@@ -610,6 +610,28 @@ with one throw per section misses five sixths of what is there.
 
 ## Secret doors — the detection chances
 
+> ### ⚠ THIS ROLL IS REPEATABLE. IT IS NOT A ONCE-PER-OBJECT ABILITY.
+>
+> *"Thus, a secret door is discovered **1 in 6 by any non-elf, 2 in 6 by elven or
+> half-elven characters, EACH CHARACTER BEING ALLOWED TO ROLL EACH TURN** in
+> checking a 10' x 10' area."* — **DMG p. 97**
+>
+> **Each turn.** A section that turned up nothing can be searched again, by the
+> same character, for the price of another turn. **Searching costs TIME, and
+> nothing else.**
+>
+> **DO NOT CONFUSE THIS WITH THE THIEF'S ONCE-PER-OBJECT ABILITIES.** Open Locks
+> and Find/Remove Traps are *"once per lock"* / *"one try only per thief"* and are
+> spent until the character gains a level — `rules/thief.md`. **General searching
+> for secret doors is neither of those things.**
+>
+> *(The DM got this backwards on day 81, telling the player that seven wall
+> sections which came up empty could not be retried until somebody levelled. The
+> player corrected it: "that's not how general searching works, we can keep
+> trying it just takes more time." He is right and the DMG says so in the same
+> sentence that gives the odds.)*
+
+
 | | per turn, per 10' x 10' area searched |
 |---|---|
 | any non-elf | **1 in 6** |

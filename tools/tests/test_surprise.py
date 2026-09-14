@@ -191,3 +191,26 @@ def test_nothing_an_ally_does_returns_a_surprise_segment():
     assert 'rolled at all' in sec, (
         'the noise rule must be distinguished here, or it reads as a way out '
         'of a surprise already rolled')
+
+
+# --------------------- searching is repeatable; thief abilities are not
+# Added 2026-09-14. The DM told the player that seven wall sections which came up
+# empty "may not be retried until somebody gains a level". That is the thief's
+# Open Locks / Find-Traps limit applied to a mechanic it has nothing to do with.
+# DMG p.97 settles it in the same sentence that gives the odds: "each character
+# being allowed to roll EACH TURN in checking a 10' x 10' area."
+
+def test_secret_door_searching_is_cached_as_REPEATABLE():
+    body = ' '.join(open(os.path.join(ROOT, 'rules', 'exploration.md'),
+                         encoding='utf-8').read().split())
+    assert 'EACH CHARACTER BEING ALLOWED TO ROLL EACH TURN' in body.upper()
+    assert 'REPEATABLE' in body.upper()
+
+
+def test_the_thief_box_says_it_does_NOT_cover_general_searching():
+    """The two limits sat in one file and got conflated. The thief box must now
+    disown general searching explicitly, or the next reader borrows its rule."""
+    body = ' '.join(open(os.path.join(ROOT, 'rules', 'thief.md'),
+                         encoding='utf-8').read().split())
+    assert 'DOES NOT COVER GENERAL SEARCHING' in body.upper()
+    assert 'each character being allowed to roll EACH TURN' in body

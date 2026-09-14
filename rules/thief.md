@@ -125,6 +125,22 @@ and Find Traps may not.
 > him or her to succeed **with that lock**."* **Per lock. Per trap. Per object.**
 > *"One try only per thief is allowed"* means one try at **that** trap.
 >
+> ### ⚠ AND IT DOES NOT COVER GENERAL SEARCHING AT ALL
+>
+> **The once-per-object limit belongs to the THIEF'S ABILITIES — Open Locks and
+> Find/Remove Traps — and to nothing else.** Ordinary searching for a secret
+> door is a different mechanic with a different limit, namely none:
+>
+> > *"a secret door is discovered 1 in 6 by any non-elf, 2 in 6 by elven or
+> > half-elven characters, **each character being allowed to roll EACH TURN** in
+> > checking a 10' x 10' area."* — **DMG p. 97**, and see `rules/exploration.md`
+>
+> **A wall section that came up empty can be searched again for another turn.**
+> *(The DM told the player the opposite on day 81 — that seven empty sections
+> were spent until somebody levelled — and was corrected. Note that this box's
+> own side-table example is about a THIEF ABILITY on a specific object, not
+> about walking a wall.)*
+>
 > A per-level budget would make a thief useless in any dungeon containing more
 > than one trap, which is every dungeon.
 >

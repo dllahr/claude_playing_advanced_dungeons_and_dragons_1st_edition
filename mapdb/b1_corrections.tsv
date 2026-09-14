@@ -775,3 +775,20 @@ member	31	32	-	35	dl+claude	area 35 south chamber: the room label stopped one ro
 member	32	32	-	35	dl+claude	area 35 south chamber: the room label stopped one row short. Walls were already right; found in play 2026-09-14
 member	33	32	-	35	dl+claude	area 35 south chamber: the room label stopped one row short. Walls were already right; found in play 2026-09-14
 member	34	32	-	35	dl+claude	area 35 south chamber: the room label stopped one row short. Walls were already right; found in play 2026-09-14
+#
+# --- THE MIDDLE GUEST CHAMBER'S FALSE DOOR, (34,37,V) -------------------------
+# B1, area 35: "The middle chamber differs from the other two in one respect:
+# there is a false door on its eastern wall. Although it seems to move just as a
+# normal door would, it resists opening. If it is battered down, it will reveal
+# only a stone wall behind it."
+#
+# The extractor read it as WALL, which is physically right and cartographically
+# wrong -- there is a door drawn there and the party will see one. Recorded as
+# false_door so the map says what the page says. NO CONNECTIVITY CHANGE: a false
+# door is impassable, so this is the same barrier under a truer name.
+#
+# ONE-SIDED, like (29,31,H): the glyph sits INSIDE (34,37) against its east wall,
+# so it is visible from in the chamber and not from whatever lies east. See the
+# (29,31,H) block above for the general rule -- the edge records THAT a boundary
+# has a door, not which face shows one.
+edge	34	37	V	false_door	dl+claude	area 35 middle chamber: B1's named false door on the eastern wall, read as plain wall. Impassable either way; recorded so the map matches the page

@@ -202,3 +202,5 @@ when	map	level	x	y	exped	turn	squares	feet	rate	why	route
 2026-09-14	b1	1	29	32			6	60	explore	day 81: down the eight steps and east along y=32 until the corridor changes	23,32 24,32 25,32 26,32 27,32 28,32 29,32
 2026-09-14	b1	1	30	33			2	20	explore	day 81: east one and north round the turn, to the door in the east wall at (30,33)	29,32 30,32 30,33
 2026-09-14	b1	1	31	33			1	10	explore	day 81: into the southernmost guest chamber	30,33 31,33
+2026-09-14	b1	1	30	37			5	50	explore	day 81: out of the south chamber and north up the rough corridor to the second door	31,33 30,33 30,34 30,35 30,36 30,37
+2026-09-14	b1	1	31	37			1	10	explore	day 81: into the middle guest chamber	30,37 31,37
