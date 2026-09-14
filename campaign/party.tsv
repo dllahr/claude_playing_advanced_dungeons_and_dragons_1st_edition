@@ -173,3 +173,15 @@ when	map	level	x	y	exped	turn	squares	feet	rate	why	route
 2026-09-13	b1	1	19	13			6	60	known	day 79 OUT, leg by leg to keep clear of the x=16 corridor: south down x=19	19,19 19,18 19,17 19,16 19,15 19,14 19,13
 2026-09-13	b1	1	17	13			2	20	known	day 79 OUT, leg by leg to keep clear of the x=16 corridor: west through the one-way slab at (17,13,V) into alcove pair 2	19,13 18,13 17,13
 2026-09-13	b1	1	16	1			13	130	known	day 79: out through alcove pair 2 and the entry corridor to the threshold. Torsat walking under his own power at the back of the casters	17,13 16,13 16,12 16,11 16,10 16,9 16,8 16,7 16,6 16,5 16,4 16,3 16,2 16,1
+2026-09-13	b1	1	16	13			12	120	known	day 81 IN, leg by leg clear of the magic mouths: north up x=16 from the threshold, stopping AT y=13	16,1 16,2 16,3 16,4 16,5 16,6 16,7 16,8 16,9 16,10 16,11 16,12 16,13
+2026-09-13	b1	1	17	13			1	10	known	day 81 IN, leg by leg clear of the magic mouths: east into alcove pair 2	16,13 17,13
+2026-09-13	b1	1	19	13			2	20	known	day 81 IN, leg by leg clear of the magic mouths: east through the one-way slab, still spiked open	17,13 18,13 19,13
+2026-09-13	b1	1	19	19			6	60	known	day 81 IN, leg by leg clear of the magic mouths: north up x=19	19,13 19,14 19,15 19,16 19,17 19,18 19,19
+2026-09-13	b1	1	16	19			3	30	known	day 81 IN, leg by leg clear of the magic mouths: west along y=19 to the four-way -- and no further south	19,19 18,19 17,19 16,19
+2026-09-13	b1	1	16	21			2	20	known	day 81 IN, leg by leg clear of the magic mouths: north, off the four-way	16,19 16,20 16,21
+2026-09-13	b1	1	14	29			18	180	known	day 81 IN: west and north by the y=29 corridor, the day-79 route	16,21 15,21 14,21 13,21 12,21 11,21 10,21 10,22 10,23 10,24 10,25 10,26 10,27 10,28 10,29 11,29 12,29 13,29 14,29
+2026-09-13	b1	1	14	34			5	50	known	day 81 IN: north up x=14 to the gap in the east wall	14,29 14,30 14,31 14,32 14,33 14,34
+2026-09-13	b1	1	19	35			6	60	known	day 81 IN: through the gap and east along y=35, PAST THE BAY	14,34 14,35 15,35 16,35 17,35 18,35 19,35
+2026-09-13	b1	1	27	35			8	80	known	day 81 IN: on east to the dead end	19,35 20,35 21,35 22,35 23,35 24,35 25,35 26,35 27,35
+2026-09-13	b1	1	27	37			2	20	known	day 81 IN: north round the dogleg	27,35 27,36 27,37
+2026-09-13	b1	1	24	37			3	30	known	day 81 IN: west to the corner where the troglodytes came down	27,37 26,37 25,37 24,37
