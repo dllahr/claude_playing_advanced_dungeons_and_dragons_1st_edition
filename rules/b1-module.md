@@ -34,6 +34,25 @@ read end to end. See `CHECKLIST.md` — read a module's front matter FIRST.*
 > he was right. Written down here so it stops being a ruling.)*
 
 
+> ### THIS PARTY'S STANDING DOOR ROUTINE — assume nothing beyond it
+>
+> Set 2026-09-14, after the DM rolled a step the party does not take and called
+> it *"everything we normally look at/for"*.
+>
+> | | |
+> |---|---|
+> | **1. EXAMINE**, one round | the **latch** — *which spends the B1 lock roll above* — the **hinge side** and so the swing, the **sill dust**, the **gap** for draught and light |
+> | **2. LISTEN**, one round | **both thieves**, independently — Tristle 15%, Ista 10% |
+>
+> **AND NOTHING ELSE. IN PARTICULAR THEY DO NOT TAP DOORS.** Tapping happened
+> exactly once, on the suspicious leaf at (34,37,V), as a deliberate extra. It is
+> not routine. *(Folding it in cost nothing that time only because Tristle's
+> listen succeeded and said the same thing better.)*
+>
+> **Everything else is a DECLARED action and must be asked for** — oiling,
+> spiking, picking, prising, battering, drifting pins. None of it is assumed.
+
+
 > *"In all cases, unless otherwise noted, doors will be locked one-third of the
 > time — and any roll of a 1 or 2 on a six-sided die (d6) will mean that they
 > will bar entrance unless the lock is sprung or broken. Breaking the lock or

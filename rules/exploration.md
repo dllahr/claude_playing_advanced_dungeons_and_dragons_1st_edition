@@ -182,6 +182,49 @@ tapestry?"* (p. 102). A load that is awkward rather than heavy still costs a ban
 - Searching a 10' section for traps or secret doors: **1 turn each**.
 - Movement 9" = 90 feet per turn cautiously mapping, faster if not mapping.
 
+## ⛔ WHAT THE PLAYER IS TOLD — the hidden-outcome rolls
+
+**Set by the player 2026-09-14.** For one class of roll, **a failure and a true
+negative are indistinguishable to the character**, so reporting which one
+happened hands the player knowledge nobody at the table has.
+
+> *"For search you tell us we didn't find anything — that could be because
+> either we failed to find it or there is nothing there. It stays a mystery.
+> The same thing applies for the others."*
+
+| roll | what the player is told |
+|---|---|
+| **Searching** (rooms, furniture, floors) | *"You find nothing."* |
+| **Secret doors** — elf 2-in-6, others 1-in-6 | *"You find nothing."* |
+| **Hear Noise** | *"You hear nothing."* |
+| **Find Traps** — the FINDING half | *"You find nothing."* |
+| **Move Silently** | nothing. They learn it when something reacts, or does not |
+| **Hide in Shadows** | nothing. Same |
+
+*source: **PLAYER'S RULING 2026-09-14**, and it generalises the one already
+governing wandering checks — "a silent check that comes up empty is
+indistinguishable from no check at all, which is the point" (tools/clock.py).*
+
+**NEVER SAY "you failed" OR "you succeeded, so it is confirmed clean".** The DM
+spent the whole of day 81 carefully drawing exactly that distinction — *"a
+failed listen is not silence"*, *"seven sections confirmed, seven unresolved"* —
+and every word of it was metagame. **Tristle cannot tell the difference between
+a wall with nothing in it and a wall he searched badly.**
+
+**ROLL IT, LOG IT, AND SAY ONLY WHAT THE CHARACTER EXPERIENCES.** The dice and
+the modifiers go in `campaign/rolls.tsv` and the outcome in `world_changes.tsv`
+exactly as before — this changes the narration, not the record.
+
+### What is NOT on this list, and stays open
+
+**Surprise, morale, initiative, to-hit, damage, saving throws, and social
+reaction rolls all stay VISIBLE**, with their modifiers and sources. Being
+caught flat-footed, a creature breaking and running, a blow landing, a save
+made — **the character experiences every one of those.** The player confirmed
+on 2026-09-14 that the `(d6=2)` annotations threaded through the session
+write-ups should stay: they are what shows an NPC's stance was rolled rather
+than authored.
+
 ## Searching
 
 - **Secret doors:** elves **2 in 6** when actively searching, **1 in 6** merely passing

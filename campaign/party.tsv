@@ -204,3 +204,6 @@ when	map	level	x	y	exped	turn	squares	feet	rate	why	route
 2026-09-14	b1	1	31	33			1	10	explore	day 81: into the southernmost guest chamber	30,33 31,33
 2026-09-14	b1	1	30	37			5	50	explore	day 81: out of the south chamber and north up the rough corridor to the second door	31,33 30,33 30,34 30,35 30,36 30,37
 2026-09-14	b1	1	31	37			1	10	explore	day 81: into the middle guest chamber	30,37 31,37
+2026-09-14	b1	1	30	37			1	10	explore	day 81: out of the middle chamber, formation facing north up the rough corridor	31,37 30,37
+2026-09-14	b1	1	30	41			4	40	explore	day 81: north up the rough corridor to the third chamber's door and the junction there	30,37 30,38 30,39 30,40 30,41
+2026-09-14	b1	1	31	41			1	10	explore	day 81: pull the third chamber's door open and go in	30,41 31,41

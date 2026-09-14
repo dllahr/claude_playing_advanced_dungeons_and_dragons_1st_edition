@@ -7608,3 +7608,7 @@ when	exped	turn	notation	dice	modifier	total	hidden	reason
 2026-09-14			1d100	78	0	78		day 81 rd 467: TRISTLE listens at (30,37,V) after the rats went quiet. Hear Noise 15%
 2026-09-14			1d100	81	0	81		day 81 rd 467: ISTA listens at the same door. Hear Noise 10%
 2026-09-14			d6	2	0	2		wandering check, anchor 450
+2026-09-14			1d6	3	0	3		day 81: THE B1 LOCK ROLL for the third chamber's door (30,41,V), spent on the latch. 1-2 bars entrance
+2026-09-14			1d6	1	0	1		day 81: WHICH WAY (30,41,V) SWINGS. Declared before the die: 1-3 TOWARD the party into the corridor, 4-6 AWAY into the room
+2026-09-14			1d100	6	0	6		day 81: TRISTLE listens at (30,41,V). Hear Noise 15%. Seventh of the day
+2026-09-14			1d100	33	0	33		day 81: ISTA listens at (30,41,V). Hear Noise 10%

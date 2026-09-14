@@ -214,3 +214,41 @@ def test_the_thief_box_says_it_does_NOT_cover_general_searching():
                          encoding='utf-8').read().split())
     assert 'DOES NOT COVER GENERAL SEARCHING' in body.upper()
     assert 'each character being allowed to roll EACH TURN' in body
+
+
+# ------------------------- what the player is told, and what he is not
+# Player's ruling 2026-09-14. For searching, secret doors, hear noise, find
+# traps, move silently and hide in shadows, A FAILURE AND A TRUE NEGATIVE ARE
+# INDISTINGUISHABLE TO THE CHARACTER -- so saying which one happened is
+# metagame. The DM spent all of day 81 drawing exactly that distinction out
+# loud ("a failed listen is not silence", "seven confirmed, seven unresolved")
+# and every word of it was information nobody at the table had.
+
+def test_the_hidden_outcome_rolls_are_listed_and_the_wording_is_fixed():
+    body = ' '.join(open(os.path.join(ROOT, 'rules', 'exploration.md'),
+                         encoding='utf-8').read().split())
+    assert 'WHAT THE PLAYER IS TOLD' in body
+    for roll in ('Searching', 'Secret doors', 'Hear Noise', 'Find Traps',
+                 'Move Silently', 'Hide in Shadows'):
+        assert roll in body, roll
+    assert 'NEVER SAY "you failed"' in body
+
+
+def test_the_VISIBLE_rolls_are_named_too_so_the_rule_does_not_creep():
+    """A rule that says only what to hide gets applied to everything. The
+    player kept surprise, morale and the social reaction rolls open."""
+    body = ' '.join(open(os.path.join(ROOT, 'rules', 'exploration.md'),
+                         encoding='utf-8').read().split())
+    i = body.find('What is NOT on this list')
+    assert i > 0, 'the visible list is gone'
+    tail = body[i:i + 700]
+    for roll in ('Surprise', 'morale', 'initiative', 'saving throws',
+                 'reaction'):
+        assert roll in tail, roll
+
+
+def test_it_changes_the_NARRATION_not_the_RECORD():
+    body = ' '.join(open(os.path.join(ROOT, 'rules', 'exploration.md'),
+                         encoding='utf-8').read().split())
+    assert 'rolls.tsv' in body and 'world_changes.tsv' in body
+    assert 'this changes the narration, not the record' in body

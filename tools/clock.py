@@ -324,11 +324,20 @@ def main(argv=None):
         print('expedition %s   round %d   (turn %d, %d rounds into it)'
               % (exped, rnd, rnd // 10 + 1, rnd % 10))
         print('checks fired: %d' % len(fired))
-        if nxt:
-            print('next check falls between round %d and %d -- the exact round '
-                  'is in the log and stays hidden until it fires'
-                  % (((rnd // ANCHOR) + 1) * ANCHOR,
-                     ((rnd // ANCHOR) + 1) * ANCHOR + 5))
+        # *** THE WINDOW IS NOT PRINTED. ***
+        #
+        # This used to print "next check falls between round N and N+5". The
+        # standing instruction has always been NEVER to tell the player when the
+        # next wandering check falls, and on day 81 the DM pasted this line into
+        # the narration over and over -- because `status` volunteered it and
+        # `brief.py` shells out to `status`. The player: "I deliberately keep
+        # myself ignorant of what rounds they would land on... then I really
+        # don't know and it really will be a random encounter to me."
+        #
+        # A tool that prints a secret makes leaking it the path of least
+        # resistance. So it does not print it, and there is no flag to make it:
+        # the jitter is in campaign/clock.tsv for anyone who genuinely needs it,
+        # which in play is nobody.
         return 0
 
     if a.cmd == 'extra':
