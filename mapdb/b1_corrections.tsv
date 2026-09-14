@@ -732,3 +732,24 @@ member	16	33	-	37	dl+claude	area 37: a MAT square filed as corridor because the 
 cell	24	32	-	open	dl+claude	the stair square itself, read as rock because eight treads fill it
 edge	24	32	V	open	dl+claude	the east side of the stair square: three narrow tread bars summed into a wall. The steps RUN THROUGH HERE into (25,32)
 feature	24	32	-	stairs	dl+claude	genuine, and named by B1 under area 36 as the FALSE STEPS -- real steps that lead nowhere new
+#
+# --- (29,31,H) IS A ONE-SIDED FALSE DOOR. NO CORRECTION, A WARNING ------------
+# The kind is right and nothing here changes it. What the database cannot say is
+# WHICH FACE the door is drawn on, and on day 81 the DM narrated it from the
+# wrong side -- telling the party there was a shut door in the south wall of
+# (29,32). Player-caught.
+#
+# At 13x the glyph sits INSIDE (29,31), hard against its north wall, BELOW the
+# boundary line rather than straddling it. B1's text agrees: "a false door ON
+# THE NORTH WALL where the corridor stops." It is a decoy meant to lure someone
+# standing in (29,31) onto the counterweighted floor, and it is invisible from
+# (29,32).
+#
+# GENERAL RULE, and it applies to every door on this map: THE EDGE RECORDS THAT A
+# BOUNDARY HAS A DOOR, NOT WHICH SIDE SHOWS ONE. For a real door that is
+# immaterial. For a FALSE door it is the whole point, because the deception only
+# exists on one face. Look at the render before describing one.
+#
+# (Also: (29,31)'s `stairs` cell feature is spurious -- it is the pit trap's
+# boxed-X counterweight floor, drawn across (29,30) and (29,31). Left alone
+# because the party has correctly treated it as a pit since expedition 6.)

@@ -199,3 +199,4 @@ when	map	level	x	y	exped	turn	squares	feet	rate	why	route
 2026-09-14	b1	1	16	30			2	20	explore	day 81: south one square off the T and east into new ground	15,31 15,30 16,30
 2026-09-14	b1	1	23	30			7	70	explore	day 81: east along y=30 until the corridor changes	16,30 17,30 18,30 19,30 20,30 21,30 22,30 23,30
 2026-09-14	b1	1	23	32			2	20	explore	day 81: north twenty feet to the head of the steps at (23,32)	23,30 23,31 23,32
+2026-09-14	b1	1	29	32			6	60	explore	day 81: down the eight steps and east along y=32 until the corridor changes	23,32 24,32 25,32 26,32 27,32 28,32 29,32
