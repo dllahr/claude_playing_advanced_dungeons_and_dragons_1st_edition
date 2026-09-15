@@ -7650,3 +7650,22 @@ when	exped	turn	notation	dice	modifier	total	hidden	reason
 2026-09-14			d6	2	0	2		surprise check, the party
 2026-09-14			d6	4	0	4		surprise check, the wanderers
 2026-09-14			1d6	1	0	1		day 81 rd 604: ENCOUNTER DISTANCE in the zigzag band. DMG p.62 light reliance caps it at 2x the lantern radius = 60 ft, so d6 tens capped at 60; DMG p.49 then subtracts the surprise value, which is 2 = 20 ft. Minimum 10
+2026-09-14			d20	8	0	8		kobold A attacks AC 3
+2026-09-14			d20	15	0	15		kobold B attacks AC 6
+2026-09-14			1-4 (1d4)	3	0	3		kobold B damage
+2026-09-14			d20	1	0	1		kobold A attacks AC 3
+2026-09-14			d20	15	0	15		kobold B attacks AC 6
+2026-09-14			1-4 (1d4)	2	0	2		kobold B damage
+2026-09-14			d6	5	0	5		initiative, party
+2026-09-14			d6	2	0	2		initiative, monsters
+2026-09-14			d20	16	0	16		Blartho attacks with footman's flail
+2026-09-14			2-7 (1d6+1)	5	1	6		Blartho damage, footman's flail
+2026-09-14			d20	9	0	9		Dave attacks with long sword
+2026-09-14			d20	20	0	20		Yrtone attacks with footman's flail
+2026-09-14			2-7 (1d6+1)	5	1	6		Yrtone damage, footman's flail
+2026-09-14			d100	87	0	87		morale
+2026-09-14			d20	6	0	6		Frython attacks with dart
+2026-09-14			d20	3	0	3		Frython attacks with dart
+2026-09-14			d20	9	0	9		Frython attacks with dart
+2026-09-14			1d8	8	0	8		day 81: YRTONE'S CURE LIGHT WOUNDS on Dellie, who is at 0 and stable. Capped at her maximum of 5
+2026-09-14			1d6	2	0	2		day 81: DELLIE'S COMA. DMG p.82 -- any character brought to 0 or fewer and then revived is comatose 1-6 turns. Under the RAW adopted this morning the cure buys the hit points and nothing else
