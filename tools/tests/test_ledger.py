@@ -55,7 +55,13 @@ def test_the_purse_is_computed_not_stored():
     wearing a test's clothes -- the exact thing ledger.py exists to abolish.
     What must hold is the INVARIANT: the purse is the sum of the log.
     """
-    rows = money_rows()
+    # ONLY THE PARTY'S OWN BOOK -- money.tsv gained a `book` column on
+    # 2026-09-15 and non-party rows are commitments, not the purse. This
+    # recomputation used to sum every row and went red the moment the wool
+    # venture's 288 gp was logged against art.7, which is exactly the drift
+    # the filter exists to prevent.
+    rows = [r for r in money_rows()
+            if ledger.book_of(r) in ledger.PARTY_BOOKS]
     anchor = [r for r in rows if r['asset'] == ledger.ANCHOR][-1]
     after = rows[rows.index(anchor) + 1:]
     expect = float(anchor['delta']) + sum(float(r['delta'] or 0)
@@ -217,7 +223,13 @@ def test_log_writes_at_full_width(tmp_path):
                         '--reason', 'iron rations']) == 0
     last = [ln for ln in scratch.read_text().splitlines()
             if ln.strip() and not ln.startswith('#')][-1]
-    assert len(last.split('\t')) == 9   # when day delta unit asset qty cp int reason
+    # ten since 2026-09-15: ... reason BOOK. The count is asserted rather than
+    # derived on purpose -- a silently WIDENING row is the same defect as a
+    # silently narrow one, and this catches both.
+    assert len(last.split('\t')) == 10
+    header = [ln for ln in open(MONEY, encoding='utf-8')
+              if ln.startswith('when\t')][0].rstrip('\n').split('\t')
+    assert len(header) == 10 and header[-1] == 'book', header
     assert read_tsv(str(scratch))[-1]['reason'] == 'iron rations'
 
 
@@ -262,3 +274,65 @@ def test_the_two_recovered_events_are_still_separate_rows():
     assert any(r.get('scope') == 'seen' and r.get('target') == '20,8'
                for r in world), (
         'the (20,8) seen row has gone again -- same glued row')
+
+
+# --------------------------------------------- two books in one file
+# Added 2026-09-15. The wool venture's purse was in NO log at all: the buying
+# party went out on day 73 and came home having paid 288 gp, and nothing
+# recorded it. The player's ruling settled the shape -- TRACK THE CAP, NOT THE
+# BOOK. Wend's ledger is hers and is reported, not inspected; what the party
+# logs is its own EXPOSURE against art.7's 500 gp seasonal guarantee.
+
+def _mixed():
+    return [
+        dict(day='39', delta='595.6', unit='gp', asset=ledger.ANCHOR,
+             reason='anchor', book=''),
+        dict(day='80', delta='-12', unit='gp', asset='rations_std',
+             reason='food', book='party'),
+        dict(day='83', delta='-288', unit='gp', asset='wool', qty='36',
+             reason='the wool buy', book='art7'),
+    ]
+
+
+def test_an_art7_row_does_NOT_move_the_purse():
+    """The whole risk of putting two books in one file, in one assertion."""
+    assert ledger.total(_mixed()) == 595.6 - 12
+
+
+def test_the_art7_counter_totals_only_its_own_book():
+    spent, cap, remaining = ledger.art7(_mixed())
+    assert spent == 288
+    assert cap == 500
+    assert remaining == 212
+
+
+def test_a_blank_book_is_the_PARTY_because_every_old_row_has_one():
+    """The column was added on 2026-09-15 to a file with eighteen rows in it.
+    Blank must mean party or the purse would have reset to zero."""
+    assert '' in ledger.PARTY_BOOKS and 'party' in ledger.PARTY_BOOKS
+
+
+def test_the_double_entry_check_does_not_demand_inventory_for_another_book():
+    """A non-party book buys somebody else's stock for somebody else's barn.
+    Demanding an inventory row for the wool would push a false entry into the
+    party's own gear -- which is the opposite of what that check is for."""
+    problems = [m for lvl, m in ledger.check(_mixed()) if 'wool' in m]
+    assert not problems, problems
+
+
+def test_the_purse_BREAKDOWN_reconciles_with_its_own_headline():
+    """It stopped the moment a second book existed. `total()` filtered by book
+    and the in/out summary beneath it did not, so the report printed a purse of
+    1,036.4 over a sum that came to 748.4 -- the 288 gp of somebody else's wool.
+    A breakdown that does not add up to the number above it is worse than none.
+    """
+    import re
+    out = ledger.report()
+    purse = float(re.search(r'THE PURSE: ([\d,]+) gp (\d+) sp', out).group(1)
+                  .replace(',', '')) + float(
+        re.search(r'THE PURSE: ([\d,]+) gp (\d+) sp', out).group(2)) / 10
+    anch = float(re.search(r'anchored at ([\d,]+) gp', out)
+                 .group(1).replace(',', ''))
+    ins = float(re.search(r'in ([\d,]+) gp', out).group(1).replace(',', ''))
+    outs = float(re.search(r'out -([\d,]+) gp', out).group(1).replace(',', ''))
+    assert abs((anch + ins - outs) - purse) < 1.0, (anch, ins, outs, purse)

@@ -142,6 +142,10 @@ def brief(day=None, touching=None):
 
     parts.append(RULE + '\n' + avail_report())
     purse = [RULE, 'THE PURSE', ledgermod.report()]
+    # The party's EXPOSURE, which is not in the purse and is the thing most
+    # likely to be forgotten precisely because it is somebody else's money.
+    if ledgermod.art7()[0]:
+        purse += ['', ledgermod.art7_report()]
     problems = ledgermod.check()
     if problems:
         purse.append('')

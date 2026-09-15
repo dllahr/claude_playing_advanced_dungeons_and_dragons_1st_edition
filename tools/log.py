@@ -105,11 +105,18 @@ def do_money(a):
                 '(`python tools/log.py interaction ...`), or leave the '
                 'citation off -- a pointer to nothing looks CHECKED, which is '
                 'worse than no pointer at all.' % a.interaction)
+    book = (a.book or '').strip()
+    if book and book not in ledgermod.KNOWN_BOOKS:
+        raise Refused(
+            'book %r is not one of %s. A book is not a free-text label -- it '
+            'decides whether a row moves THE PARTY\'S PURSE, and a typo would '
+            'silently either add to it or vanish from it.'
+            % (book, ', '.join(sorted(ledgermod.KNOWN_BOOKS))))
     day = a.day if a.day is not None else loopmod.current_day()
     line = _write(a.log_file or MONEY, dict(
         when=today(), day=day, delta=a.delta, unit=a.unit, asset=a.asset,
         qty=a.qty or '', counterparty=a.counterparty or '-',
-        interaction=a.interaction or '-', reason=a.reason))
+        interaction=a.interaction or '-', reason=a.reason, book=book))
     print(line)
     print()
     print(ledgermod.report(ledgermod.rows(a.log_file or MONEY)))
@@ -270,6 +277,11 @@ def build_parser():
                         'the electrum survives only in that prose')
     m.add_argument('--reason', required=True)
     m.add_argument('--day', type=int)
+    m.add_argument('--book', default='',
+                   help='blank or `party` = the purse. `art7` = the wool '
+                        'venture\'s 500 gp seasonal commitment, which is the '
+                        "party's EXPOSURE and not its money -- those rows do "
+                        'not move the purse')
     m.set_defaults(fn=do_money)
 
     n = sub.add_parser('interaction', help='a scene. EVERY NAME IS VALIDATED')

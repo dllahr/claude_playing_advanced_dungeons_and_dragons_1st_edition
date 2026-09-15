@@ -76,10 +76,41 @@ def _delta(r):
         return 0.0
 
 
-def total(log=None, day=None):
-    """The purse in gp. Anchors supersede everything above them."""
+# The party's purse is book `party`; a BLANK book means party, because every row
+# written before 2026-09-15 predates the column and they are all the purse.
+#
+# OTHER BOOKS ARE NOT MONEY THE PARTY HOLDS. They are COMMITMENTS -- sums the
+# party is answerable for that live in somebody else's book. `art7` is the first:
+# the wool venture's 500 gp seasonal guarantee, which is Wend's money to spend
+# and the party's exposure to carry.
+#
+# The player's ruling 2026-09-15, and it is what makes this small: TRACK THE CAP,
+# NOT THE BOOK. Wend's ledger is hers and is REPORTED, NOT INSPECTED. What gets
+# logged here is only what the party is on the hook for.
+PARTY_BOOKS = ('', 'party')
+
+# A closed vocabulary, for the same reason `unit` and `condition` have one: a
+# typo'd book would either inflate the purse or disappear from it, and both look
+# deliberate. Add a book here before using it.
+KNOWN_BOOKS = ('party', 'art7')
+
+
+def book_of(r):
+    return (r.get('book') or '').strip()
+
+
+def total(log=None, day=None, book=None):
+    """The purse in gp, or the running total of another book.
+
+    *** A NON-PARTY ROW MUST NEVER MOVE THE PURSE. *** That is the whole risk of
+    putting two books in one file, so the filter is the first thing this does
+    and `test_ledger.py` pins it.
+    """
+    want = PARTY_BOOKS if book is None else (book,)
     out = 0.0
     for r in (log if log is not None else rows()):
+        if book_of(r) not in want:
+            continue
         if day is not None and r.get('day', '').isdigit() and int(r['day']) > day:
             continue
         if r.get('asset') == ANCHOR:
@@ -87,6 +118,19 @@ def total(log=None, day=None):
         else:
             out += _delta(r)
     return round(out, 2)
+
+
+# The seasonal commitment, articles.md art. 7. The CAP is the party's, the
+# spending is Wend's. Art.7 is "called at shearing and nowhere else", so the
+# season boundary is SHEARING and not a date -- which is why this carries no
+# reset logic. When the season turns, anchor it.
+ART7_CAP = 500.0
+
+
+def art7(log=None, day=None):
+    """(spent, cap, remaining) against art. 7's seasonal guarantee."""
+    spent = -total(log, day, book='art7')      # payments out are negative
+    return round(spent, 2), ART7_CAP, round(ART7_CAP - spent, 2)
 
 
 def gp_sp(v):
@@ -137,7 +181,16 @@ def check(log=None, ass=None):
 
     # The leg that was missing all five times: a GOOD that money moved for and
     # that appears nowhere in the inventory.
-    for a in sorted({(r.get('asset') or '').strip() for r in log}):
+    #
+    # *** ONLY FOR THE PARTY'S OWN BOOK. *** A non-party book records money the
+    # party is ANSWERABLE FOR, not money it spent, and the goods it buys are
+    # somebody else's stock in somebody else's barn. The wool is the case that
+    # found this: 288 gp of it under book=art7, which the party never owned and
+    # which must never appear in campaign/inventory_log.tsv. Demanding an
+    # inventory row for it would push a false entry into the party's gear.
+    party_assets = {(r.get('asset') or '').strip()
+                    for r in log if book_of(r) in PARTY_BOOKS}
+    for a in sorted(party_assets):
         if a in ('', ANCHOR) or a not in ass:
             continue
         if ass[a].get('kind') in SERVICE_KINDS:
@@ -154,14 +207,21 @@ def check(log=None, ass=None):
 
 def report(log=None):
     log = log if log is not None else rows()
-    lines = ['THE PURSE: %s' % gp_sp(total(log)),
+    # EVERY FIGURE IN THIS BLOCK IS THE PARTY'S BOOK. The in/out breakdown used
+    # the unfiltered log while the total did not, so the moment the wool
+    # venture's 288 gp went in under art.7 the summary stopped reconciling with
+    # the very total printed above it -- 595.6 + 576.3 - 423.5 = 748.4 against a
+    # purse of 1,036.4. A breakdown that does not add up to its own headline is
+    # worse than no breakdown.
+    mine = [r for r in log if book_of(r) in PARTY_BOOKS]
+    lines = ['THE PURSE: %s' % gp_sp(total(mine)),
              '  (computed from %d rows in campaign/money.tsv -- never stored)'
-             % len(log), '']
-    ins = sum(_delta(r) for r in log
+             % len(mine), '']
+    ins = sum(_delta(r) for r in mine
               if _delta(r) > 0 and r.get('asset') != ANCHOR)
-    outs = sum(_delta(r) for r in log
+    outs = sum(_delta(r) for r in mine
                if _delta(r) < 0 and r.get('asset') != ANCHOR)
-    anch = [r for r in log if r.get('asset') == ANCHOR]
+    anch = [r for r in mine if r.get('asset') == ANCHOR]
     if anch:
         lines.append('anchored at %s on day %s'
                      % (gp_sp(_delta(anch[-1])), anch[-1].get('day')))
@@ -193,14 +253,36 @@ def build_parser():
     p.add_argument('--day', type=int, help='the purse as it stood on a day')
     sub = p.add_subparsers(dest='cmd')
     sub.add_parser('check', help='the double-entry audit')
+    sub.add_parser('art7', help="art.7's seasonal exposure -- the "
+                                'party is ANSWERABLE for this and does '
+                                'not hold it')
     sub.add_parser('assets', help='the asset reference')
     return p
 
+
+
+def art7_report(log=None, day=None):
+    """Art. 7's seasonal exposure, in words."""
+    spent, cap, remaining = art7(log, day)
+    return '\n'.join([
+        'ART. 7 -- the wool venture\'s seasonal guarantee',
+        '  spent     %8s' % gp_sp(spent),
+        '  cap       %8s' % gp_sp(cap),
+        '  REMAINING %8s' % gp_sp(remaining),
+        '',
+        '  This is the PARTY\'S EXPOSURE, not its money and not its purse.',
+        '  Wend\'s book is hers and is REPORTED, NOT INSPECTED (player, day 83).',
+        '  The season turns AT SHEARING, not on a date -- art.7 is "called at',
+        '  shearing and nowhere else" -- so when it turns, ANCHOR it.',
+    ])
 
 def main(argv=None):
     a = build_parser().parse_args(argv)
     log = rows(a.log_file)
 
+    if a.cmd == 'art7':
+        print(art7_report(day=a.day))
+        return 0
     if a.cmd == 'check':
         problems = check(log)
         for sev, msg in problems:
