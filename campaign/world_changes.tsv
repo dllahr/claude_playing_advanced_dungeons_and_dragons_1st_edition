@@ -752,3 +752,8 @@ when	map	exped	turn	level	scope	target	change	item	qty	who	note
 2026-09-14	b1	10	65	1	seen	14,42	yes			party	day 81: from the junction at (14,41) -- the band carries on WEST via (14,42), and a NEW ARM runs SOUTH with a DOOR in its west wall ten feet down
 2026-09-14	b1	10	65	1	seen	14,40	yes			party	day 81: from the junction at (14,41) -- the band carries on WEST via (14,42), and a NEW ARM runs SOUTH with a DOOR in its west wall ten feet down
 2026-09-14	b1	10	65	1	cell	14,41	Dellie woke			party	day 81 round ~626, on the march: DELLIE'S COMA RAN OUT (1d6=2 turns from Yrtone's cure) and she woke on the litter. Under DMG p.82 she may do one thing -- 'move slowly to a place of rest' -- so she WALKS and the litter comes down. Ista and Tristle have their hands back. Per rules/overland.md an invalid does not slow a march; only somebody who CANNOT walk does, and she can
+2026-09-14	b1	10	66	1	seen	14,40	yes			party	day 81: the arm south off the zigzag band. NO DOOR in the west wall at (14,40) -- that was a DM error off a bad map call, corrected at source. The wall opens at (14,39), one square further south
+2026-09-14	b1	10	66	1	seen	14,39	yes			party	day 81: the arm south off the zigzag band. NO DOOR in the west wall at (14,40) -- that was a DM error off a bad map call, corrected at source. The wall opens at (14,39), one square further south
+2026-09-14	b1	10	66	1	seen	13,39	yes			party	day 81: in the lantern from (14,39) -- a passage running WEST, and the arm carrying on SOUTH
+2026-09-14	b1	10	66	1	seen	12,39	yes			party	day 81: in the lantern from (14,39) -- a passage running WEST, and the arm carrying on SOUTH
+2026-09-14	b1	10	66	1	seen	14,38	yes			party	day 81: in the lantern from (14,39) -- a passage running WEST, and the arm carrying on SOUTH

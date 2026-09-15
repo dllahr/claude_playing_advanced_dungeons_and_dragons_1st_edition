@@ -792,3 +792,25 @@ member	34	32	-	35	dl+claude	area 35 south chamber: the room label stopped one ro
 # (29,31,H) block above for the general rule -- the edge records THAT a boundary
 # has a door, not which face shows one.
 edge	34	37	V	false_door	dl+claude	area 35 middle chamber: B1's named false door on the eastern wall, read as plain wall. Impassable either way; recorded so the map matches the page
+#
+# --- (13,40,V) IS A WALL, NOT A DOOR -------------------------------------------
+# Caught in play 2026-09-14 with the party standing at (14,40) about to be told
+# there was a door in the west wall. There is not: the boundary measures a SOLID
+# 8px BAND of 1.0s, which is a wall, and the extractor's own note is
+# "thick=8 hole=100" -- it found a thick wall WITH A HOLE IN IT and called the
+# hole a door.
+#
+# The hole is FURNITURE. (13,40) is inside area 13, the IMPLEMENT ROOM, and the
+# page draws small fittings hard against that wall; their white interiors read
+# as a gap. Same family as the thirteen stairs of day 79, area 33's bed frames,
+# area 34's chests and area 37's mats: DRAWN DETAIL READ AS STRUCTURE.
+#
+# NOTE, NOT CORRECTED: (13,40,H) is also called `secret`, and that one STANDS --
+# its note reads "marker glyph area 46, corroborated by reachability (sealed 3
+# squares, exact match)", which is two independent lines of evidence. A secret
+# door is drawn as a wall with a marker, so thick=9 is exactly right for it.
+#
+# ALSO NOTED: area 13 has ONE square, (11,40) -- the label square only. That is
+# the extents-did-not-run symptom rebuild.sh warns about in its header. The party
+# has never been in it; flagged rather than fixed under time pressure.
+edge	13	40	V	wall	dl+claude	area 13's wall fittings read as a door (thick=8 hole=100). The boundary is a solid 8px band. Player-facing consequence: there is NO door in the west wall at (14,40)
