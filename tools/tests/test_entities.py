@@ -256,3 +256,32 @@ def test_the_checker_is_PURE_and_writes_nothing():
     after = open(os.path.join(CAMPAIGN, 'interactions.tsv'),
                  encoding='utf-8').read()
     assert before == after, 'the evidence checker wrote to the campaign log'
+
+
+def test_the_wool_venture_is_wends_and_the_trigger_list_is_written_down():
+    """Player's ruling out of game, 2026-09-15: "I want to be making as few
+    decisions as possible about the wool venture."
+
+    It failed twice on day 83 alone -- the DM staged a yard scene with Osk and
+    asked what Dave wanted to say to him, a room the party never entered and a
+    decision given to Wend on day 80; then asked whether they wanted to question
+    Hask. Both hers. So the FOUR things that reach the table are named, and the
+    test pins that they stay named -- a rule that says only "Wend decides" gets
+    reinterpreted, and one with a list does not.
+    """
+    body = ' '.join(open(os.path.join(CAMPAIGN, 'npcs.md'),
+                         encoding='utf-8').read().split())
+    assert 'THE WOOL VENTURE IS WEND' in body
+    for trigger in ("The party's own purse", 'RAISING art. 7',
+                    "party member's body or days", "Dave's four"):
+        assert trigger in body, trigger
+    assert 'Do not put any of it to the player' in body
+
+
+def test_the_narration_is_explicitly_NOT_being_cut():
+    """The risk in "make it lighter" is cutting the thing he values. He said
+    "I really enjoy reading this" in the same breath as asking for less work,
+    and those pull opposite ways unless it is written down which one wins."""
+    body = ' '.join(open(os.path.join(CAMPAIGN, 'npcs.md'),
+                         encoding='utf-8').read().split())
+    assert 'Fewer prompts, not fewer words' in body

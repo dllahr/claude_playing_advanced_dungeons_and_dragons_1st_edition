@@ -52,6 +52,55 @@ and `tools/hp.py` computes the current number.** This file is the *why*.
 
 ---
 
+## ⛔ THE WOOL VENTURE IS WEND'S. HOW IT REACHES THE TABLE.
+
+**Set by the player out of game, 2026-09-15:** *"I want to be making as few
+decisions as possible about the wool venture. I'll enjoy hearing about the
+progress, and offering help if needed."*
+
+**SHE DECIDES. THE DM NARRATES WHAT SHE DID. THE PARTY IS NOT ASKED.**
+
+### The trigger list — ONLY these four reach the player
+
+| reaches him | because |
+|---|---|
+| **The party's own purse** | it is his money, not the venture's |
+| **RAISING art. 7's cap** | only the party can. They raised it 400 → 500 themselves |
+| **A party member's body or days** | those are characters, not staff |
+| **Dave's four** — Hask, Dellie, Corm, Sarn | he stood surety for them personally; see below |
+
+**Everything else is hers**, and the list of what that covers is long and
+deliberate: pricing, terms, wages, hiring, who grades, who writes, letters to
+holders, the cart-hire agreement, Nan, Tam, Halm, Rowe, Coll's roll. **Do not put
+any of it to the player, even as a courtesy.**
+
+*(This failed twice on day 83 alone. The DM staged a yard scene with Osk in it
+and asked the player what he wanted to say — a room the party never entered and
+a decision they had already given away on day 80. Then he asked whether they
+wanted to question Hask about his forward promises. Both were hers.)*
+
+### The form: A REPORT BETWEEN EXPEDITIONS, not live scenes
+
+**When the party comes back to town, Wend reports.** One block: what happened,
+what she decided, what she wants if anything. **Routine business is not played
+out at the table.**
+
+The player may always ask her about anything specific, and then it is a scene.
+**The default is the report.**
+
+> **WHAT IS NOT BEING CUT IS THE NARRATION.** *"I really enjoy reading this."*
+> The district is most of what is alive in this campaign. **Fewer prompts, not
+> fewer words** — the cost being removed is the DM interrupting to ask, not the
+> texture.
+
+### And her loops stay VISIBLE in the briefing
+
+About nine of the thirty-two open loops are hers. **The player was offered a
+filter that would collapse them to one line in `brief.py` and turned it down**,
+and his reason is the better one: *a filter is a place for something to get
+quietly hidden and then forgotten*, which is the exact defect this whole repo
+was rebuilt to stop. **Nine honest lines beat one line that hides nine.**
+
 ## DAVE'S TWO STANDING OBLIGATIONS
 
 ### 1. Surety — day 4, before Reeve Ottir, by name and aloud
