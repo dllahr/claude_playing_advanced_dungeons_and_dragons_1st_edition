@@ -177,17 +177,43 @@ def test_every_session_file_says_it_is_an_archive():
 
 
 def test_every_scene_cites_evidence_that_exists():
+    """A citation is a file under campaign/, or ANOTHER SCENE.
+
+    The scene-id form was accepted by log.check_evidence from 2026-09-14 and
+    rejected here on the same day, because the two checkers were written at
+    different times and only one of them knew about it. A scene citing a scene
+    is the natural way to say "this corrects the one above" -- 83:5 does exactly
+    that -- so it is legal, AND THE SCENE IT NAMES MUST EXIST.
+    """
+    ids = {'%s:%s' % (s.get('day'), s.get('seq')) for s in entities.scenes()}
     missing = []
     for s in entities.scenes():
         ev = (s.get('evidence') or '').strip()
         if not ev:
             missing.append('%s:%s has no evidence' % (s.get('day'), s.get('seq')))
             continue
-        path = os.path.join(CAMPAIGN, ev.split(':')[0].split('#')[0])
-        if not os.path.exists(path):
+        head = ev.split(':')[0].split('#')[0].strip()
+        if head.isdigit():
+            if ev.split('#')[0].strip() not in ids:
+                missing.append('%s:%s cites SCENE %r, which does not exist'
+                               % (s.get('day'), s.get('seq'), ev))
+            continue
+        if not os.path.exists(os.path.join(CAMPAIGN, head)):
             missing.append('%s:%s cites %r, which does not exist'
                            % (s.get('day'), s.get('seq'), ev))
     assert not missing, missing
+
+
+def test_the_two_evidence_CHECKERS_agree():
+    """log.check_evidence runs on write; the test above runs on the committed
+    data. They disagreed on day 81 -- log.py took a scene id and this file
+    rejected it -- which means a row could be written and then fail the suite.
+    Whatever one accepts, the other must."""
+    import log
+    for ev in ('articles.md', 'articles.md:913', 'sessions/day-077.md:12', '83:4'):
+        log.check_evidence(ev)                      # must not raise
+    with pytest.raises(log.Refused):
+        log.check_evidence('not a citation at all')
 
 
 def test_the_session_files_carry_the_days_the_calendar_knows_about():
