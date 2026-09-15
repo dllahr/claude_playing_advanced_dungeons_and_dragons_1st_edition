@@ -145,10 +145,21 @@ def check_evidence(ev):
     head = ev.split(':')[0].split('#')[0].strip()
     if head.isdigit():
         return                                  # a scene id, e.g. "77:1"
-    if not os.path.exists(os.path.join(ROOT, 'campaign', head)):
+    # campaign/ FIRST, then rules/ -- a scene is often evidenced by the rule it
+    # turned on, and "rules/spells-1st-level.md" was refused on day 86 for no
+    # better reason than that nobody had thought of it. The roots are listed
+    # rather than globbed so a citation cannot wander into manuals/ or the DM
+    # notes, which are not evidence the player may be shown.
+    cand = [os.path.join(ROOT, 'campaign', head)]
+    if head.startswith('rules/'):
+        cand.append(os.path.join(ROOT, head))   # already relative to ROOT
+    if any(os.path.exists(c) for c in cand):
+        return
+    if True:
         raise Refused(
             'evidence %r does not resolve. The part before the first ":" is '
-            'read as a path under campaign/ -- so "articles.md", '
+            'read as a path under campaign/ OR rules/ -- so "articles.md", '
+            '"rules/combat.md", '
             '"sessions/day-077.md:12" or a scene id like "77:1". A '
             'DESCRIPTION IS NOT A CITATION; put the prose in --summary.' % ev)
 

@@ -210,10 +210,31 @@ def test_the_two_evidence_CHECKERS_agree():
     rejected it -- which means a row could be written and then fail the suite.
     Whatever one accepts, the other must."""
     import log
-    for ev in ('articles.md', 'articles.md:913', 'sessions/day-077.md:12', '83:4'):
+    for ev in ('articles.md', 'articles.md:913', 'sessions/day-077.md:12',
+               '83:4', 'rules/combat.md', 'rules/combat.md:97', ''):
         log.check_evidence(ev)                      # must not raise
     with pytest.raises(log.Refused):
         log.check_evidence('not a citation at all')
+
+
+def test_evidence_may_cite_RULES_but_never_the_manuals_or_the_DM_NOTES():
+    """rules/ was refused on day 86 for no better reason than that nobody had
+    thought of it -- a scene is often evidenced by the rule it turned on.
+
+    *** BUT THE ROOTS ARE LISTED, NOT GLOBBED. *** A citation that resolved
+    anywhere under the repo could point at manuals/ or at
+    modules/B1_DM_NOTES_DO_NOT_READ.md, and a citation is a thing the PLAYER is
+    invited to follow. The DM notes are the one file he must never be pointed
+    at, so widening the checker must never widen it to there.
+    """
+    import log
+    log.check_evidence('rules/thief.md')
+    for forbidden in ('manuals/anything.pdf',
+                      'modules/B1_DM_NOTES_DO_NOT_READ.md',
+                      'modules/private/b1_wandering.tsv',
+                      'rules/no-such-file.md'):
+        with pytest.raises(log.Refused):
+            log.check_evidence(forbidden)
 
 
 def test_the_session_files_carry_the_days_the_calendar_knows_about():
