@@ -87,6 +87,38 @@ to learn it — and a failure is permanent for that spell.
 | **Light** | 6" | 1 turn/level | 1 segment | None | As the cleric spell but shorter duration. |
 | **Tenser's Floating Disc** | 2" | 3 turns + 1 turn/level | 1 segment | None | A floating disc that carries loot. |
 
+## Reversible spells — a MAGIC-USER knows both halves
+
+**DM RULING 2026-09-15, and it is a ruling: NEITHER BOOK STATES A GENERAL RULE
+FOR MAGIC-USER REVERSIBLES.** Both were searched.
+
+What the PHB does say, at p. 65: *"**Enlarge** (Alteration) **Reversible.**
+Level: I"* — **one entry, one level, one casting time, one set of components** —
+and then, inside that same entry, *"**The reverse spell, reduce,** will negate
+the effects or actually make creatures or objects smaller in the same ratios."*
+
+| | |
+|---|---|
+| **Knowing the spell** | **ONE check to know, at the entry's name.** `enlarge` is checked; `reduce` is not a separate spell to check |
+| **Memorising it** | **either half, chosen at study**, into the one slot |
+| **The book** | holds the entry, which contains both |
+
+*source: **DM RULING 2026-09-15**, not a book rule. PHB p. 65 for the enlarge
+entry and its reverse; the absence of a general statement was verified by
+searching both the PHB and the DMG.*
+
+**Why:** the reversal is described *within* the entry and is not listed separately
+in the PHB's spell list. Requiring a second 75% check would be checking against a
+spell the book never names as a spell. *(Asked by the player the moment enlarge
+came up at Wraye: "that means he can choose to memorize it any subsequent time as
+enlarge or shrink?")*
+
+**1st-level M-U reversibles this matters for:** **enlarge/reduce** ·
+**comprehend languages/confuse languages** · **light/darkness** ·
+**protection from evil/protection from good**. **Erase has no reverse**; nor do
+sleep, identify, shocking grasp, read magic, charm person, dancing lights or
+Nystul's magic aura.
+
 ## Sleep (PHB p. 68) — Frython's spell, transcribed on its first casting
 
 | | |
