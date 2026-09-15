@@ -87,3 +87,29 @@ def test_no_paraphrase_anywhere_else_carries_the_figure():
         'at least once, and the DM has quoted a paraphrase three times. State the '
         'TRIGGER in prose and point at rules/exploration.md for the numbers.'
         % ', '.join(offenders))
+
+
+def test_a_contested_frontage_is_a_BLOCKED_frontage():
+    """Player-corrected 2026-09-14. The DM told him a rear rank of two in a
+    three-man slot left "a clear lane past Blartho's left shoulder" for a
+    bowman, and so offered the gentle row of the lane rule. Wrong twice over:
+    two defenders facing two attackers HOLD a 10-ft corridor, nobody passes
+    either way, and the corridor counts as FILLED for missile purposes.
+
+    Carried in play since the early expeditions and never written down, which
+    is how it came to be contradicted. Every flank and rear attack this
+    campaign has logged happened against a LAST surviving opponent.
+    """
+    import os
+    root = os.path.dirname(os.path.dirname(os.path.dirname(
+        os.path.abspath(__file__))))
+    body = ' '.join(open(os.path.join(root, 'rules', 'combat.md'),
+                         encoding='utf-8').read().split())
+    assert 'A HELD LINE CANNOT BE WALKED THROUGH' in body
+    assert 'A CONTESTED FRONTAGE IS A BLOCKED FRONTAGE' in body
+    assert 'AND IT GOVERNS THE LANE RULE TOO' in body, (
+        'the missile consequence must sit with the movement rule, or the next '
+        'reader applies one and not the other')
+    assert 'ARE NOT REPEATED HERE' in body, (
+        'it must POINT at rules/exploration.md rather than restate the figures '
+        '-- which is what it did first, and this suite caught within a minute')

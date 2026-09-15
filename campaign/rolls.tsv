@@ -7612,3 +7612,41 @@ when	exped	turn	notation	dice	modifier	total	hidden	reason
 2026-09-14			1d6	1	0	1		day 81: WHICH WAY (30,41,V) SWINGS. Declared before the die: 1-3 TOWARD the party into the corridor, 4-6 AWAY into the room
 2026-09-14			1d100	6	0	6		day 81: TRISTLE listens at (30,41,V). Hear Noise 15%. Seventh of the day
 2026-09-14			1d100	33	0	33		day 81: ISTA listens at (30,41,V). Hear Noise 10%
+2026-09-14			d6	5	0	5		wandering check, anchor 480
+2026-09-14			d6	2	0	2		wandering check, anchor 510
+2026-09-14			d6	6	0	6		wandering check, anchor 540
+2026-09-14			1d6	1	0	1		day 81 walls of the THIRD guest chamber: Tristle, 2-in-6 elf active, 5 sections. HIDDEN-OUTCOME ROLL -- logged, not reported (rules/exploration.md)
+2026-09-14			1d6	2	0	2		day 81 walls of the THIRD guest chamber: Tristle, 2-in-6 elf active, 5 sections. HIDDEN-OUTCOME ROLL -- logged, not reported (rules/exploration.md)
+2026-09-14			1d6	1	0	1		day 81 walls of the THIRD guest chamber: Tristle, 2-in-6 elf active, 5 sections. HIDDEN-OUTCOME ROLL -- logged, not reported (rules/exploration.md)
+2026-09-14			1d6	2	0	2		day 81 walls of the THIRD guest chamber: Tristle, 2-in-6 elf active, 5 sections. HIDDEN-OUTCOME ROLL -- logged, not reported (rules/exploration.md)
+2026-09-14			1d6	1	0	1		day 81 walls of the THIRD guest chamber: Tristle, 2-in-6 elf active, 5 sections. HIDDEN-OUTCOME ROLL -- logged, not reported (rules/exploration.md)
+2026-09-14			1d6	1	0	1		day 81 walls of the THIRD guest chamber: Ista, 1-in-6, 5 sections. HIDDEN-OUTCOME ROLL -- logged, not reported (rules/exploration.md)
+2026-09-14			1d6	3	0	3		day 81 walls of the THIRD guest chamber: Ista, 1-in-6, 5 sections. HIDDEN-OUTCOME ROLL -- logged, not reported (rules/exploration.md)
+2026-09-14			1d6	1	0	1		day 81 walls of the THIRD guest chamber: Ista, 1-in-6, 5 sections. HIDDEN-OUTCOME ROLL -- logged, not reported (rules/exploration.md)
+2026-09-14			1d6	4	0	4		day 81 walls of the THIRD guest chamber: Ista, 1-in-6, 5 sections. HIDDEN-OUTCOME ROLL -- logged, not reported (rules/exploration.md)
+2026-09-14			1d6	5	0	5		day 81 walls of the THIRD guest chamber: Ista, 1-in-6, 5 sections. HIDDEN-OUTCOME ROLL -- logged, not reported (rules/exploration.md)
+2026-09-14			1d6	3	0	3		day 81 walls of the THIRD guest chamber: Frython, 1-in-6, 5 sections. HIDDEN-OUTCOME ROLL -- logged, not reported (rules/exploration.md)
+2026-09-14			1d6	6	0	6		day 81 walls of the THIRD guest chamber: Frython, 1-in-6, 5 sections. HIDDEN-OUTCOME ROLL -- logged, not reported (rules/exploration.md)
+2026-09-14			1d6	3	0	3		day 81 walls of the THIRD guest chamber: Frython, 1-in-6, 5 sections. HIDDEN-OUTCOME ROLL -- logged, not reported (rules/exploration.md)
+2026-09-14			1d6	6	0	6		day 81 walls of the THIRD guest chamber: Frython, 1-in-6, 5 sections. HIDDEN-OUTCOME ROLL -- logged, not reported (rules/exploration.md)
+2026-09-14			1d6	3	0	3		day 81 walls of the THIRD guest chamber: Frython, 1-in-6, 5 sections. HIDDEN-OUTCOME ROLL -- logged, not reported (rules/exploration.md)
+2026-09-14			1d6	5	0	5		day 81 walls of the THIRD guest chamber: Dellie, 1-in-6, 5 sections. HIDDEN-OUTCOME ROLL -- logged, not reported (rules/exploration.md)
+2026-09-14			1d6	3	0	3		day 81 walls of the THIRD guest chamber: Dellie, 1-in-6, 5 sections. HIDDEN-OUTCOME ROLL -- logged, not reported (rules/exploration.md)
+2026-09-14			1d6	3	0	3		day 81 walls of the THIRD guest chamber: Dellie, 1-in-6, 5 sections. HIDDEN-OUTCOME ROLL -- logged, not reported (rules/exploration.md)
+2026-09-14			1d6	1	0	1		day 81 walls of the THIRD guest chamber: Dellie, 1-in-6, 5 sections. HIDDEN-OUTCOME ROLL -- logged, not reported (rules/exploration.md)
+2026-09-14			1d6	4	0	4		day 81 walls of the THIRD guest chamber: Dellie, 1-in-6, 5 sections. HIDDEN-OUTCOME ROLL -- logged, not reported (rules/exploration.md)
+2026-09-14			1d6	1	0	1		day 81 walls of the THIRD guest chamber: Yrtone, 1-in-6, 4 sections. HIDDEN-OUTCOME ROLL -- logged, not reported (rules/exploration.md)
+2026-09-14			1d6	4	0	4		day 81 walls of the THIRD guest chamber: Yrtone, 1-in-6, 4 sections. HIDDEN-OUTCOME ROLL -- logged, not reported (rules/exploration.md)
+2026-09-14			1d6	3	0	3		day 81 walls of the THIRD guest chamber: Yrtone, 1-in-6, 4 sections. HIDDEN-OUTCOME ROLL -- logged, not reported (rules/exploration.md)
+2026-09-14			1d6	6	0	6		day 81 walls of the THIRD guest chamber: Yrtone, 1-in-6, 4 sections. HIDDEN-OUTCOME ROLL -- logged, not reported (rules/exploration.md)
+2026-09-14			1d6	6	0	6		day 81 walls of the THIRD guest chamber: Blartho, 1-in-6, 4 sections. HIDDEN-OUTCOME ROLL -- logged, not reported (rules/exploration.md)
+2026-09-14			1d6	3	0	3		day 81 walls of the THIRD guest chamber: Blartho, 1-in-6, 4 sections. HIDDEN-OUTCOME ROLL -- logged, not reported (rules/exploration.md)
+2026-09-14			1d6	3	0	3		day 81 walls of the THIRD guest chamber: Blartho, 1-in-6, 4 sections. HIDDEN-OUTCOME ROLL -- logged, not reported (rules/exploration.md)
+2026-09-14			1d6	2	0	2		day 81 walls of the THIRD guest chamber: Blartho, 1-in-6, 4 sections. HIDDEN-OUTCOME ROLL -- logged, not reported (rules/exploration.md)
+2026-09-14			d6	6	0	6		wandering check, anchor 570
+2026-09-14			d6	1	0	1		wandering check, anchor 600
+2026-09-14			d6	3	0	3		wandering table, level 1
+2026-09-14			1d6	4	0	4		day 81 rd 604: WHICH WAY the wanderers come at the party in the zigzag band. Declared before the die: 1-3 from the WEST, out of the unwalked ground ahead; 4-6 from the EAST, up the corridor behind them
+2026-09-14			d6	2	0	2		surprise check, the party
+2026-09-14			d6	4	0	4		surprise check, the wanderers
+2026-09-14			1d6	1	0	1		day 81 rd 604: ENCOUNTER DISTANCE in the zigzag band. DMG p.62 light reliance caps it at 2x the lantern radius = 60 ft, so d6 tens capped at 60; DMG p.49 then subtracts the surprise value, which is 2 = 20 ft. Minimum 10

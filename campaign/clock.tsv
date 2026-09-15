@@ -756,3 +756,13 @@ when	exped	round	kind	anchor	detail	note
 2026-09-14	10	476	advance		5	day 81: forty feet north up x=30 at exploring pace, following the rat tracks
 2026-09-14	10	478	advance		2	day 81: a round examining the third chamber's door -- latch, swing, hinges, sill, gap, and a tap -- and a round with both thieves listening
 2026-09-14	10	480	advance		2	day 81: the third chamber's door pulled open and the party in
+2026-09-14	10	482	advance		2	day 81: third chamber door shut, two jamb wedges, cloaks laid
+2026-09-14	10	481	check	480	d6=5	anchor 480 + 1
+2026-09-14	10	542	advance		60	day 81: THOROUGH SEARCH of the third guest chamber's contents. 4x3 = 3 of the DMG's 20x20 areas, 1 turn casual plus 1 turn thorough each = 6 turns. Not doubled -- 'a minimum of furnishings'. Dave on the spiked door
+2026-09-14	10	510	check	510	d6=2	anchor 510 + 0
+2026-09-14	10	540	check	540	d6=6	anchor 540 + 0
+2026-09-14	10	592	advance		50	day 81: WALL SEARCH of the third guest chamber, fourteen 10-ft sections in three pairs = 5 turns
+2026-09-14	10	571	check	570	d6=6	anchor 570 + 1
+2026-09-14	10	622	advance		30	day 81: two rounds recovering wedges and cloaks, then 250 ft of ZIGZAG at exploring pace to make 150 ft of westing -- the diagonal walls weave the passage between y=41 and y=42 the whole way
+2026-09-14	10	604	check	600	d6=1 -> Kobolds (1 -6)-AC 7, HDV 2 , hp4,3,3,2,2,1,#AT 1, D 1-4 or weapon -1, MV 90’ (30’), Save NM, ML 6	anchor 600 + 4
+2026-09-14	10	604	correct		-18	the wandering check fired at 604, mid-march. The advance had carried the clock to 622 on the assumption the march completed; it did not. Rewound to the moment of the check, and the remaining fifteen squares are unwalked

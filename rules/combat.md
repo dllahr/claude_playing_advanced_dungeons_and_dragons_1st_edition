@@ -107,6 +107,41 @@ decided by the range table under *Missile rate of fire and range* below.
 *source: **DMG p. 70**, "Special Types Of Attacks", text layer, cross-checked
 2026-08-26.*
 
+> ### ⚠ GETTING TO A FLANK — A HELD LINE CANNOT BE WALKED THROUGH
+>
+> **The table above says what a flank is worth. It does not say you can reach
+> one, and reaching one is the hard part.**
+>
+> **A CONTESTED FRONTAGE IS A BLOCKED FRONTAGE.** Two defenders facing two
+> attackers across a 10-ft corridor hold that corridor: **nobody goes past,
+> either way.** The empty third slot is not a lane — it is the space the four of
+> them are already using to fight in.
+>
+> **Only when the opposing side is reduced enough to leave the frontage
+> genuinely open** can anyone move round to a flank or a rear. That is how every
+> flank and rear attack in this campaign has actually happened — Dave's rear
+> attack on the LAST troglodyte of expedition 4, with nothing else left to hold
+> the line.
+>
+> **AND IT GOVERNS THE LANE RULE TOO.** If the rank in front is engaged, the
+> corridor counts as **FILLED** for missile purposes, so the harsh row of the
+> lane rule applies and not the "allies not directly in the lane" row. **A gap in
+> your own rank is not a firing lane while somebody is fighting in it.**
+>
+> **THE FIGURES ARE IN `rules/exploration.md` AND ARE NOT REPEATED HERE** — that
+> file is the only home for them and `test_lane_rule.py` enforces it. This block
+> says WHICH ROW APPLIES; go there for what it costs. *(The test caught this
+> paragraph restating them within a minute of it being written, which is the
+> fourth time it has caught a paraphrase.)*
+>
+> *source: **CAMPAIGN RULING**, carried in play since the early expeditions and
+> written down 2026-09-14 when the DM contradicted it — telling the player there
+> was "a clear lane past Blartho's left shoulder" because the rear rank was two
+> men in a three-man slot. The player: "for many initial expeditions we did only
+> 2 people in the front rank, and the enemy did as well, and you ruled in that
+> case we couldn't get by them. It was only when we were down to facing one
+> opponent that we could move around and outflank them."*
+
 A flank attack carries **no to-hit bonus of its own** — all it does is take away
 the shield. Against something with no shield and no Dexterity bonus (most
 monsters, whose AC is hide and not gear) flanking buys nothing at all, and only
