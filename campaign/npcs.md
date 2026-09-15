@@ -68,6 +68,23 @@ progress, and offering help if needed."*
 | **RAISING art. 7's cap** | only the party can. They raised it 400 → 500 themselves |
 | **A party member's body or days** | those are characters, not staff |
 | **Dave's four** — Hask, Dellie, Corm, Sarn | he stood surety for them personally; see below |
+| **THE PARTY'S OWN SALVAGE** — wherever it is stored | a barn is a place, not an owner |
+
+> ### THE SALVAGE ROW WAS ADDED THE SAME DAY, BY THE PLAYER, FROM A REAL CASE
+>
+> *"The initial impetus for that trip was to see if we could sell the vials. We
+> then asked Wend if there is anything she needs, and she came up with the list.
+> I don't think it's Wend's job to sell the vials, so the party goes."*
+>
+> **Exactly right, and the log already agreed: L022's subject is `party`.** The
+> forty jars were carried out of area 9 on day 70 and live in
+> `campaign/inventory_log.tsv`, which is the PARTY'S inventory. They happen to
+> sit in Wend's barn. **Storage is not ownership.**
+>
+> **AND THE CONSEQUENCE RUNS THE OTHER WAY TOO:** once the party is going south
+> for its own reasons, it escorts the WHOLE load — Wend's list included — and the
+> trip is a party expedition that happens to carry her freight. *The venture
+> does not become party business because its goods are on the same cart.*
 
 **Everything else is hers**, and the list of what that covers is long and
 deliberate: pricing, terms, wages, hiring, who grades, who writes, letters to

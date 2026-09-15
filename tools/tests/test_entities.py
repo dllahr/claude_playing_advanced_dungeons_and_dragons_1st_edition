@@ -272,7 +272,8 @@ def test_the_wool_venture_is_wends_and_the_trigger_list_is_written_down():
     body = _flat(os.path.join(CAMPAIGN, 'npcs.md'))
     assert 'THE WOOL VENTURE IS WEND' in body
     for trigger in ("The party's own purse", 'RAISING art. 7',
-                    "party member's body or days", "Dave's four"):
+                    "party member's body or days", "Dave's four",
+                    "THE PARTY'S OWN SALVAGE"):
         assert trigger in body, trigger
     assert 'Do not put any of it to the player' in body
 
