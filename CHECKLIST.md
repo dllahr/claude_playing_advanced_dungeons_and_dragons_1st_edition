@@ -784,6 +784,33 @@ only the text found it.
 
 ---
 
+## 8b. ⛔ NEVER INVENT A PARTY-SIDE FACT TO GIVE A SCENE SHAPE
+
+**Three in three days, all player-caught, and they are one defect:**
+
+| day | invented | what it bought |
+|---|---|---|
+| **82** | that they went back in *"for one thing: the door in the bay"* | a reproach when they did not open it |
+| **84** | that **Ista is thirteen** — read off CON 3 | a reason her cooking lesson failed |
+| **86** | that Dave pitched **buying from** Draycot | a reveal |
+
+**THE CAUSE IS ALWAYS THE SAME AND IT IS NOT CARELESSNESS.** The player hands
+over a clean decision that simply works. A scene where the good call just works
+is duller to write than one with a turn in it — **so the DM manufactures a turn,
+and the only material available is to make the party wrong about something.**
+
+**NPCs get rolled for honestly. The party gets narrated at.** That asymmetry is
+the whole bug.
+
+- [ ] **DO NOT ROLL FOR SOMETHING THE PLAYER HAS ALREADY SAID.** Day 86's table
+      read *"what does he actually want? … 3-4 he wants a way to SELL INTO that
+      district"* — **which was the player's own pitch, restated as an unknown.**
+      Before writing a table, check it against what he actually typed.
+- [ ] **A GOOD CALL IS ALLOWED TO SIMPLY WORK.** The turn in the scene comes from
+      what the NPC wants, what it costs, or who else hears — **never from the
+      party having misunderstood their own plan.**
+- [ ] **IF A REVERSAL NEEDS THE PARTY TO HAVE BEEN WRONG, IT IS INVENTED.** Cut it.
+
 ## 9. When something is wrong
 
 - [ ] **A RULES CORRECTION IS PROSPECTIVE, NEVER RETROACTIVE.** If the table has
@@ -883,46 +910,23 @@ pipeline:**
 > **Then `git log --oneline`** — the campaign history, which cannot go stale.
 > **What is left below is only the things no tool computes.**
 
-### ⏸ RESUME EXACTLY HERE — day 79, expedition 9, round 10
+### ⏸ WHERE PLAY STANDS — **`python tools/brief.py`, AND NOTHING ELSE**
 
-**The party is AT (14,29) on level 1, facing NORTH into a fresh ten-foot
-corridor**, about to move at exploring rate. Ista's lantern is burning with
-**13.2 turns** left; the pool is untouched at 440. **Nothing has been met.**
+> **THIS BLOCK USED TO BE A SNAPSHOT AND IT ROTTED AGAIN.** On 2026-09-15 it
+> still read *"RESUME EXACTLY HERE — day 79, expedition 9, round 10, the party
+> is AT (14,29)… Ista's lantern 13.2 turns"* while play stood at **day 86** with
+> the party **split in two on the southern road**. Forty lines of formation,
+> spells, open corridors and fuel, every figure wrong.
+>
+> **It is the SECOND time this exact section has rotted**, after the 38-day
+> instance above — and it rotted *while carrying its own warning not to*.
+>
+> **So it is deleted rather than updated.** A hand-kept resume point is a copy of
+> things the tools own, and the tools are: `brief.py` for day, party, hp, xp,
+> oil, gear, position, clock and open loops; `party.py where` for the square;
+> `encounter.py` for a live fight; `light.py` for fuel; `git log --oneline` for
+> the history. **Anything a tool computes does not go here, ever again.**
 
-> **RUN `python tools/brief.py` FIRST.** Everything below it is computed.
-
-#### THE FORMATION, set day 79 and NOT the one older files carry
-
-| rank | | | |
-|---|---|---|---|
-| **1** | **Yrtone** — shield, sling | **Dave** — shield, long sword | **Torsat** — **BOW** |
-| **2** | **Frython** — darts | **Tristle** — bow | **Ista** — **lantern**, darts |
-| **3** | **Dellie** — shield, sling | **Blartho** — shield, sling |
-
-**Torsat is at the FRONT with a BOW. Yrtone, a 7-hp cleric, is IN THE LINE.**
-Neither gets quietly changed. **Hask is on the wool road until ~day 83**, so
-there is no spear in the second rank — and **the lane rule now bears on five of
-the eight**, its two conditions in `rules/exploration.md` and nowhere else.
-
-#### WHAT IS OPEN AT THIS EXACT MOMENT
-
-- **The corridor north of (14,29)** — dressed stone both sides, no doors in the
-  first thirty feet, and **the air against your face is slightly colder** than
-  the corridor behind.
-- **West along y=29** is now open ground: **areas 10 and 11 were corrected on
-  day 46** and the day-79 warning against them was six days stale.
-  **Area 10 has a secret door at (8,25,V)** that Tristle's passive 1-in-6 failed
-  on (rolled 3) walking past it on day 46.
-- **Spells:** Yrtone *command* + 2 cure · Blartho *command* + 2 cure *(changed
-  back the night of the 77th)* · Dellie 2 *light* + 1 cure, **and she has never
-  cast a light** · Frython his one *sleep*.
-
-#### THE WAY OUT, AND THE TOOL NOW ENFORCES IT
-
-The route in and out is the **alcove-pair-2 one-way slab at (17,13,V)**, held
-open by two of the party's own spikes. **`party.py move` REFUSES a route up the
-x=16 corridor between y=13 and y=19** — it tried to take it on day 79 and the
-guard went in the same hour. `--anyway` is the override.
 
 ### State — **RUN `python tools/brief.py`**
 

@@ -177,30 +177,38 @@ def test_every_session_file_says_it_is_an_archive():
 
 
 def test_every_scene_cites_evidence_that_exists():
-    """A citation is a file under campaign/, or ANOTHER SCENE.
+    """*** THIS CALLS log.check_evidence RATHER THAN REIMPLEMENTING IT. ***
 
-    The scene-id form was accepted by log.check_evidence from 2026-09-14 and
-    rejected here on the same day, because the two checkers were written at
-    different times and only one of them knew about it. A scene citing a scene
-    is the natural way to say "this corrects the one above" -- 83:5 does exactly
-    that -- so it is legal, AND THE SCENE IT NAMES MUST EXIST.
+    There used to be two implementations and THEY DIVERGED TWICE IN TWO DAYS:
+    once when log.py learned scene ids and this file had not, and again when
+    log.py learned rules/ and this file had not. Both times a row was written
+    successfully and then failed the suite, which is the worst possible place
+    to find out.
+
+    A second implementation of a rule is a second thing to keep in step. There
+    is now one, and this test is about the DATA.
     """
+    import log
     ids = {'%s:%s' % (s.get('day'), s.get('seq')) for s in entities.scenes()}
     missing = []
-    for s in entities.scenes():
-        ev = (s.get('evidence') or '').strip()
+    for sc in entities.scenes():
+        ev = (sc.get('evidence') or '').strip()
+        here = '%s:%s' % (sc.get('day'), sc.get('seq'))
         if not ev:
-            missing.append('%s:%s has no evidence' % (s.get('day'), s.get('seq')))
+            missing.append('%s has no evidence' % here)
             continue
+        try:
+            log.check_evidence(ev)
+        except log.Refused as exc:
+            missing.append('%s: %s' % (here, exc))
+            continue
+        # A scene id must also name a scene that EXISTS -- check_evidence only
+        # knows the shape, because it cannot see the file it is about to append
+        # to. This is the half that belongs to the data.
         head = ev.split(':')[0].split('#')[0].strip()
-        if head.isdigit():
-            if ev.split('#')[0].strip() not in ids:
-                missing.append('%s:%s cites SCENE %r, which does not exist'
-                               % (s.get('day'), s.get('seq'), ev))
-            continue
-        if not os.path.exists(os.path.join(CAMPAIGN, head)):
-            missing.append('%s:%s cites %r, which does not exist'
-                           % (s.get('day'), s.get('seq'), ev))
+        if head.isdigit() and ev.split('#')[0].strip() not in ids:
+            missing.append('%s cites SCENE %r, which does not exist'
+                           % (here, ev))
     assert not missing, missing
 
 
