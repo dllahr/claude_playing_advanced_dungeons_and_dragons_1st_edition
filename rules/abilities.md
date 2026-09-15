@@ -35,6 +35,46 @@ a bonus improves AC. Tristle's leather (AC 8) with DEX 18 (−4) is **AC 4**.
 *This table does NOT modify melee to-hit.* Melee to-hit and damage come from
 Strength; a high-DEX character with an ordinary Strength swings at +0.
 
+## Intelligence — ABILITY FOR MAGIC-USERS (PHB p. 10, TABLE II)
+
+| Score | Chance to know each listed spell | Min spells/level | Max spells/level |
+|---|---|---|---|
+| 9 | 35% | 4 | 6 |
+| 10-12 | 45% | 5 | 7 |
+| 13-14 | 55% | 6 | 9 |
+| 15-16 | 65% | 7 | 11 |
+| **17** | **75%** | **8** | **14** |
+| 18 | 85% | 9 | 18 |
+| 19 or more | 95% | 10 | All |
+
+*source: **PHB p. 10**, INTELLIGENCE TABLE II, read from a 200 dpi page render
+2026-09-15. **THE TEXT LAYER DROPS ROWS 15-16, 17 AND 18 ENTIRELY** — it runs
+13-14 straight to 19 — which is exactly the row FRYTHON needs. Transcribed from
+the render for that reason.*
+
+**FRYTHON IS INT 17.** 75%, minimum 8, maximum 14 first-level spells.
+
+> ### ⚠ "EACH SPELL MAY BE CHECKED ONLY ONCE"
+>
+> *"Percentile dice are rolled, and if the number generated is equal to or less
+> than the percentage chance shown, then the character can learn and thus know
+> that spell… **Each spell may be checked only once.**"* — PHB p. 10
+>
+> **A failed check is permanent for that spell**, at that Intelligence. Not "try
+> again next level" — *"Change in Intelligence: if intelligence goes down or up
+> for any reason… the magic-user must check again."* **Only a change in INT
+> reopens it.**
+>
+> **THE ONE ESCAPE, and it is narrow:** if a complete check through the whole
+> level group fails to produce the MINIMUM number, the character may go back and
+> re-check the ones he failed, repeating until the minimum is met. **That is a
+> floor on the SIZE OF THE BOOK, not a second chance at a chosen spell** — and it
+> only bites once a full group has been checked.
+
+**Acquiring new spells later** — *"New spells can be gained from captured or
+otherwise acquired spell books or from scrolls of magic spells. In the latter
+event **the scroll is destroyed** in learning."*
+
 ## Wisdom — magical attack adjustment
 
 | Score | Magical attack adjustment |
