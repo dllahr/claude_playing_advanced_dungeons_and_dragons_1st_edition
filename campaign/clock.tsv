@@ -768,3 +768,6 @@ when	exped	round	kind	anchor	detail	note
 2026-09-14	10	604	correct		-18	the wandering check fired at 604, mid-march. The advance had carried the clock to 622 on the assumption the march completed; it did not. Rewound to the moment of the check, and the remaining fifteen squares are unwalked
 2026-09-14	10	606	advance		2	day 81: two rounds of the kobold fight at (25,42) -- the surprise window and one melee round
 2026-09-14	10	609	advance		3	day 81: Yrtone's cure on Dellie, Frython gathering his three darts, Tristle going over the two bodies -- the cached looting cost, 3 rounds
+2026-09-14	10	619	advance		10	day 81: building a litter for Dellie, Dave and Yrtone standing guard both ways
+2026-09-14	10	646	advance		27	day 81: 160 ft of zigzag west at exploring pace, SLOWED 9in to 6in because two of them are carrying Dellie on a litter -- 90 ft/turn becomes 60, so 27 rounds not 18. rules/overland.md prices the carry the same way underground
+2026-09-14	10	632	check	630	d6=5	anchor 630 + 2
