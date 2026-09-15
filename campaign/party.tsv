@@ -212,3 +212,11 @@ when	map	level	x	y	exped	turn	squares	feet	rate	why	route
 2026-09-14	b1	1	14	41			16	160	explore	day 81: west along the zigzag, carrying Dellie. Dave and Yrtone leading, Ista and Tristle on the litter, Frython with the lantern, Blartho rear	25,42 24,42 24,41 23,41 22,41 22,42 21,42 20,42 20,41 19,41 18,41 18,42 17,42 16,42 16,41 15,41 14,41
 2026-09-14	b1	1	14	40			1	10	explore	day 81: south off the zigzag band into the new arm	14,41 14,40
 2026-09-14	b1	1	14	39			1	10	explore	day 81: south again, to where the arm opens west	14,40 14,39
+2026-09-14	b1	1	14	35			4	40	explore	day 81: on south down the arm until it changes	14,39 14,38 14,37 14,36 14,35
+2026-09-14	b1	1	14	29			6	60	known	day 81 OUT, leg by leg clear of the x=16 corridor: south down x=14 to the y=29 corridor	14,35 14,34 14,33 14,32 14,31 14,30 14,29
+2026-09-14	b1	1	16	21			18	180	known	day 81 OUT, leg by leg clear of the x=16 corridor: west along y=29 and round to (16,21)	14,29 14,28 14,27 14,26 13,26 13,25 13,24 12,24 11,24 10,24 10,23 10,22 10,21 11,21 12,21 13,21 14,21 15,21 16,21
+2026-09-14	b1	1	16	19			2	20	known	day 81 OUT, leg by leg clear of the x=16 corridor: south to the four-way -- and NOT one square further	16,21 16,20 16,19
+2026-09-14	b1	1	19	19			3	30	known	day 81 OUT, leg by leg clear of the x=16 corridor: EAST along y=19, away from the magic mouths	16,19 17,19 18,19 19,19
+2026-09-14	b1	1	19	13			6	60	known	day 81 OUT, leg by leg clear of the x=16 corridor: south down x=19	19,19 19,18 19,17 19,16 19,15 19,14 19,13
+2026-09-14	b1	1	17	13			2	20	known	day 81 OUT, leg by leg clear of the x=16 corridor: west through the one-way slab into alcove pair 2	19,13 18,13 17,13
+2026-09-14	b1	1	16	1			13	130	known	day 81 OUT, leg by leg clear of the x=16 corridor: down the entry corridor to the threshold	17,13 16,13 16,12 16,11 16,10 16,9 16,8 16,7 16,6 16,5 16,4 16,3 16,2 16,1

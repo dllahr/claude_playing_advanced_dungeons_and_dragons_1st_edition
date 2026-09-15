@@ -773,3 +773,6 @@ when	exped	round	kind	anchor	detail	note
 2026-09-14	10	632	check	630	d6=5	anchor 630 + 2
 2026-09-14	10	648	advance		2	day 81: south into the new arm, to the door in its west wall
 2026-09-14	10	650	advance		2	day 81: south to (14,39)
+2026-09-14	10	655	advance		5	day 81: forty feet south down x=14 at exploring pace
+2026-09-14	10	666	advance		11	day 81 OUT: 500 ft on known ground, six legs, keeping clear of the x=16 magic-mouth corridor. Known rate 450 ft/turn -- Dellie walks and an invalid does not slow a march (rules/overland.md)
+2026-09-14	10	660	check	660	d6=2	anchor 660 + 0
