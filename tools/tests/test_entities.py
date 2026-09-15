@@ -299,3 +299,24 @@ def test_the_narration_is_explicitly_NOT_being_cut():
     and those pull opposite ways unless it is written down which one wins."""
     body = _flat(os.path.join(CAMPAIGN, 'npcs.md'))
     assert 'Fewer prompts, not fewer words' in body
+
+
+def test_no_characters_age_is_invented_in_people_tsv():
+    """*** THE DM MADE ISTA THIRTEEN ON DAY 84 AND BUILT A SCENE ON IT. ***
+
+    He read CON 3 -- a CONSTITUTION SCORE -- as frailty, turned frailty into
+    youth, and wrote "four adults do not take instruction from a thirteen-year-
+    old" as the reason a cooking lesson failed. Her age is recorded nowhere.
+    people.tsv has her as BERN'S PARTNER and Bern is ~30, so the invention also
+    quietly reframed a relationship into something it is not.
+
+    An ABILITY SCORE IS NOT A BIOGRAPHY. This pins the warning in place; the
+    general rule it stands for is that identity facts come from the file or
+    they come from the player, never from a number that looked suggestive.
+    """
+    rows = entities.people()
+    assert 'ista' in rows
+    blob = ' '.join(str(v) for v in rows['ista'].values())
+    assert 'AGE IS NOT ESTABLISHED' in blob, (
+        "the day-84 warning has been dropped from Ista's row")
+    assert 'CONSTITUTION SCORE' in blob
