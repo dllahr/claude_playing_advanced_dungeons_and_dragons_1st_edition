@@ -25,7 +25,6 @@
 > **What is left here is what no machine can check**: tone, spoiler discipline,
 > whether a scene is any good, and when to ask rather than decide.
 
-
 Everything below became standard because something went wrong once. The failure
 that produced each rule is named, because the reason is what makes it stick.
 
@@ -811,6 +810,29 @@ the whole bug.
       party having misunderstood their own plan.**
 - [ ] **IF A REVERSAL NEEDS THE PARTY TO HAVE BEEN WRONG, IT IS INVENTED.** Cut it.
 
+## 8c. ⛔ DO NOT ROLL FOR A CHARACTER THE FICTION HAS ALREADY SETTLED
+
+**DMG p. 63 is a FIRST-CONTACT mechanic.** `log.py --reaction` says so in its own
+help text: *"MOST OF THE TIME THERE IS NONE."*
+
+- [ ] **A REACTION ROLL IS FOR A STRANGER.** Once an NPC has acted, he has a
+      character, and what he does next comes from it.
+- [ ] **NEVER ROLL AN NPC'S RESPONSE TO AN UNAMBIGUOUS ACT.** If the party has
+      done something plainly generous, costly or honest, **the response follows.**
+      Rolling it converts an earned outcome into a lottery.
+- [ ] **A ROLL THAT CONTRADICTS ESTABLISHED CHARACTER IS THE ROLL BEING WRONG**,
+      not the character developing. Void it and play the character.
+
+> *Day 91, player-caught: **"I don't think you should be rolling for Neot."** The
+> DM rolled three times for a man who had already given away his own pearl and
+> refused money — and produced a cold 49 for a party returning that pearl unspent
+> with an honest explanation. **It is the mirror of 8b:** there the DM rolled for
+> what the PLAYER had declared; here for what the FICTION had established.*
+
+**WHAT IS STILL WORTH ROLLING for a known NPC:** facts he might or might not
+know · whether he is present · whether a thing he promised has happened · what he
+has been doing. **Unknown FACTS, never settled DISPOSITION.**
+
 ## 9. When something is wrong
 
 - [ ] **A RULES CORRECTION IS PROSPECTIVE, NEVER RETROACTIVE.** If the table has
@@ -927,74 +949,53 @@ pipeline:**
 > `encounter.py` for a live fight; `light.py` for fuel; `git log --oneline` for
 > the history. **Anything a tool computes does not go here, ever again.**
 
+### State and obligations — **`brief.py` and `loops.py`. NOTHING IS KEPT HERE.**
 
-### State — **RUN `python tools/brief.py`**
-
-**The table that used to sit here is deleted, and its deletion is the point.** It
-carried funds of 595 gp against an actual 1,072, spikes 3 against 9, and Tristle's <!-- audit-skip: quoting the stale figures is the point -->
-XP 641 against 712 — **because it was a hand-kept copy of figures that tools
-compute.** Every one of them is now in the briefing, computed fresh:
-
-day · who is available · **the purse** · hp · xp · **what the party owns** · oil ·
-gear left in the dungeon · dungeon position · the clock · **open loops** · and
-anything stale.
-
-### Owed in the fiction — **RUN `python tools/loops.py`**
-
-**Also deleted.** Every line that used to be here is a row in `campaign/loops.tsv`
-with a subject and a due day, and `loops.py --touching "<names>"` prints the ones
-that concern whoever the player just named. **A prose list of obligations is a list
-nobody closes** — that is how *"Unanswered. He will not sit in the square forever"*
-outlived its answer by forty-three days.
+**Two hand-kept tables used to sit here and both rotted** — the state table
+carried funds of 595 against an actual 1,072 <!-- audit-skip: quoting the stale figures is the point -->
+and spikes 3 against 9, and the obligations list is how *"Unanswered. He will not
+sit in the square forever"* outlived its answer by forty-three days. **Deleted,
+and the deletion is the point.** Everything they held is computed fresh by the
+tool that owns it, and `loops.py --touching "<names>"` is the one to run every
+turn with whoever the player just named.
 
 ### Dungeon threads
 
-**✅ Areas 10 and 11 are FIXED** — corrected day 46, `781bac5`. *(This line said
-they were still broken for six days after they were mended, and the DM quoted it
-at the table on day 79. See `L034` for what IS still open about them.)*
 **Level 2 is built and merged but entirely unexplored**: two exits from room 50,
-and something in the east passage. Level 2's room extents are "nearest numbered
-area", not "inside room N", and are not reliable.
+and something in the east passage. Its room extents are "nearest numbered area",
+not "inside room N", and are not reliable. *(Areas 10 and 11 were fixed on day 46
+and this section still called them broken on day 79 — see `L034`.)*
 
 ### Known unfixed
 
 **`combat.py` does not cycle a multi-value damage list** — it rolls the first
 value for every attack in the list. Roll those by hand.
 
-**`clock.py` has no `close` subcommand**, so `status` always reports the last
-expedition's final round as though it were live — **expedition 8, round 286 as of
-day 77, while the party has been overland for seven days.** `clock.py start
---exped 9` supersedes it. **Do not read a live dungeon clock off it while the
-party is above ground.** *(This entry itself said "expedition 5, round 358" until
-2026-09-10 — three expeditions out of date. The DEFECT is real and unfixed; the
-example in it kept rotting, which is why the example has been replaced with a
-pointer to the command.)*
+**`clock.py` has no `close` subcommand**, so `status` reports the last
+expedition's final round as though it were live. `clock.py start --exped N`
+supersedes it. **Never read a live dungeon clock off it while the party is above
+ground.** *(The example in this entry rotted twice; it has none now.)*
 
-**`party.py where` tracks DUNGEON position only.** It reported (16,1) throughout
-seven days in Wethersby and two trips to Draycot. That is not a bug — there is no
-overland map — but it must never be read as "where the party is" while they are
-above ground.
+**`party.py where` tracks DUNGEON position only** — it reported (16,1) through
+seven days in Wethersby. **The overland position is `overland.py` and
+`mapimg.py`, built 2026-09-12**; this entry claimed "there is no overland map"
+for three days after there was one.
 
-**Tests: 185 in `tools/`** (`conda run -n advanced_dnd_1e python -m pytest tools/tests -q`),
-plus the `mapdb` suite — `python -m pytest mapdb tools -q` runs both.
-**Reachability regression: DMG 21/641, B1 6/1197.** B1 moved 5 -> 6 on 2026-08-29
-and that was a FIX; `rebuild.sh` explains why in its footer.
+**Test counts and reachability figures are NOT kept here** — the count rotted at
+185 while the suite passed 407. `python -m pytest mapdb tools -q` prints one;
+`rebuild.sh`'s footer owns the other and explains every change to it.
 
 **Four rooms have needed the player's own reading of the printed map** — areas
-34, 33, 5 and (partly) 29 — because heavy furniture and 45-degree walls defeat the
-extractor. **Areas 10 and 11 are still broken and the party must not be taken
-there yet.** New correction scopes exist for this: `member` (assign a square to a
+34, 33, 5 and (partly) 29 — because heavy furniture and 45-degree walls defeat
+the extractor. Correction scopes exist for it: `member` (assign a square to a
 room, `none` clears) and `feature` (clear a false `stairs`).
 
-**New 2026-09-05:** `rules/zero-level.md` (normal men, and the 0-level attack
-column the three henchmen were NOT being run off), `deprecated/` and
-`tools/deprecated/`, `.gitignore`, and **the repo is now under git** — see
-CLAUDE.md's *Version control* section for the commit cadence and for the one
-hard rule: **never revert a campaign TSV to undo play.**
-
-`tools/xp.py` now weights **monster xp full and treasure xp by share**; the
-day-39 anchor row in `encounters.tsv` is what keeps that prospective.
-
+> ### ⚠ THIS BLOCK SAID "AREAS 10 AND 11 ARE STILL BROKEN" UNTIL 2026-09-15
+> 
+> **They were fixed on day 46.** The sentence survived here for weeks after two
+> other places in this file were corrected, and the DM quoted it at the table on
+> day 79. **A stale warning is not a harmless leftover; it is a false fact with
+> an imperative attached.** Deleted.
 
 ## SAY WHICH NUMBER IT IS — a bare number in a mouth reads as a COUNT
 
@@ -1008,13 +1009,12 @@ NPC says a bare figure, name what it is in the same breath — *"twelve on the
 turning"*, *"twelve on the die"* — or keep the die out of the dialogue entirely
 and put it in the DM-voice line above.
 
-**And the related half of the same error:** the DM told Cuddy about the six
-skeletons and **left out the dwarf who had been hanging in irons in area 26 since
-expedition 4** — which is the thing an almoner cares about most, and which the
-party's own cleric had already said a rite over. `world_changes.tsv` had it all
-along. **When telling an NPC about something, run `tools/recall.py` or grep the
-log for the WHOLE class of thing, not the most recent instance of it.**
-
+**And the related half:** telling Cuddy about the six skeletons, the DM **left
+out the dwarf in irons in area 26** — the thing an almoner cares about most, and
+already in `world_changes.tsv`. **When telling an NPC about something, query the
+WHOLE CLASS of thing — `recall.py`, `entities.py who` — not the latest instance.**
+*(Broken again on day 86: the DM said nobody had asked in Ludbury about the ring.
+They asked on day 27 and `calendar.md` says so.)*
 
 ## AN NPC WITH DELEGATED AUTHORITY MUST NOT ASK PERMISSION TO USE IT
 
@@ -1070,7 +1070,6 @@ and gave him the words, then took back the substance, correctly:
 *(She conceded the separate "capable hands" point in full and without a fight.
 **But the DM should not have needed the player to find any of this.**)*
 
-
 ## DO NOT PUT A CLOCK ON A THING THE NPC EXPLICITLY UNCLOCKED
 
 **Day 54, player-caught.** Cuddy accepted the dwarf's remains and said, unprompted
@@ -1091,7 +1090,6 @@ one of the kindest things Cuddy did, and the DM handed it straight back.
 
 **Before writing the words *deadline*, *owed*, *collision* or *cannot do both*:
 check what the NPC actually said about timing, and quote it.**
-
 
 ## A LOGGED GRIEVANCE COVERS WHAT IT SAYS AND NOT WHAT IT RHYMES WITH
 
@@ -1121,7 +1119,6 @@ is, the NPC has seen it and cannot reasonably be surprised by it. **This is the
 `A LOW ROLL DOES NOT LICENSE INVENTED BACKSTORY` rule wearing a different hat:**
 here the roll was a 21 with *does nothing*, which is *a person deciding not to make
 a fuss* — and the DM inflated it into a reopened injury.
-
 
 ## SELLING A STOCK LINE — the procedure, which no tool computes
 
@@ -1182,7 +1179,6 @@ missing modifier.**
 > LICENSE INVENTED BACKSTORY`. **Read the player's sentence again before explaining
 > a number.**
 
-
 ## DO NOT RE-ROLL A SETTLED REACTION
 
 **Day 60.** Two desperate men reacted at **81** — DMG p.63, *"friendly, immediate
@@ -1199,7 +1195,6 @@ who was friendly a moment ago is hostile — which is manufacturing, and which i
 - **Roll a new reaction when something genuinely changes the relationship**: a new
   scene, a new day, a new offer of a different order, an insult, a rescue.
 - **And add the standing modifier** from `campaign/npcs.md` every time.
-
 
 ## ⚠⚠ THE p.63 REACTION TABLE IS A FIRST-CONTACT MECHANIC. STOP ROLLING IT AT FRIENDS
 
@@ -1262,7 +1257,6 @@ needed a story invented for it, and `CHECKLIST` already forbade inventing storie
 for low rolls. **When a mechanic keeps forcing you to break another rule, the
 mechanic is being misapplied.**
 
-
 ## THE LANE RULE — `tools/tests/test_lane_rule.py`
 
 **No prose here, and that is deliberate: three paraphrases in this repo dropped a
@@ -1308,7 +1302,6 @@ sitting half an hour away** — which is what they would have done.
 > **AND THE TEST FOR IT:** *would the party have equipped differently if they had
 > known?* **If yes, it is too late.**
 
-
 ## ⚠⚠ THE DM DOES NOT DECLARE THE PARTY'S ACTIONS. EVER. ASK.
 
 **A monster's actions are the DM's. A character's actions are never the DM's** —
@@ -1349,7 +1342,6 @@ it.** Decide what he does from what is known about him and say why.
 survived — whether he could name the contents off the bung, and whether he wanted
 it and could pay. **Dice for facts. Judgment for feelings.**
 
-
 ## ENTERPRISE MATTERS GO TO WEND BY DEFAULT. DO NOT STAGE THEM AT THE PARTY
 
 **Day 72, player-caught — and the DM had it backwards.** The DM wrote that the party
@@ -1383,7 +1375,6 @@ about it; left the wool leads with her; and said to ask Wend and Coll about Dill
 delegated authority must not ask permission to use it*, and *the DM does not declare
 the party's actions*. **All three are the DM taking back agency that was given away
 in writing.**
-
 
 ---
 

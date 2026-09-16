@@ -118,6 +118,20 @@ the entry and none of it was cached.**
 - **The ring was taken out of the area 27 dais and has been carried for weeks.**
   One hour per level means **one hour**. That window shut long ago.
 
+> ### ⛔ PLAYER'S RULING 2026-09-15: THE STRICT READING. THE WINDOW IS SHUT.
+>
+> **`identify` can never read the area 27 ring, at any level, ever.** The limit
+> runs from **DISCOVERY**, not from the casting — so growing in level lengthens
+> the window into a past that has already gone by. A 20th-level magic-user would
+> have had twenty hours from the moment it came out of the recess.
+>
+> **The remaining routes to naming that ring are therefore: a sage; a higher
+> divination such as *legend lore*; or PUTTING IT ON.**
+>
+> **And Frython knew before he left the desk.** He read the entry in order to
+> copy it — the limitation is in the same paragraph as the casting time — so the
+> party learned this at Wraye and not by wasting a pearl.
+
 ## Reversible spells — a MAGIC-USER knows both halves
 
 **DM RULING 2026-09-15, and it is a ruling: NEITHER BOOK STATES A GENERAL RULE
