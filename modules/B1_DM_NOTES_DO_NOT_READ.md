@@ -4099,3 +4099,47 @@ took out of area 34 went to Draycot on day 73 and is on trestles above ground.
 **The real way down is area 30, the ACCESS ROOM at x21-23 y8-9**, whose
 descending stairway *"leads down and directly into room 38 on the lower level"*
 — nowhere near here, and the party has never been in it.
+
+---
+
+## WHAT "SD" IS — sealed d6 = 2, day 93. DETERMINED ONCE, DOES NOT CHANGE
+
+**The module gives no answer.** B1 p.16 puts "a wooden keg stand with a single
+barrel marked 'SD', full and untapped" in area 29 and stops there. So this was
+rolled rather than authored, same as the stocking, and the table was declared
+before the die:
+
+| d6 | what SD is |
+|---|---|
+| **1-2** | **A CONTENTS MARK, NOT A MAKER'S MARK.** The stronghold's own storekeeping shorthand, in the household clerk's hand. **There is no brewhouse.** |
+| 3-4 | A supplier's mark — a real brewhouse, named somewhere in the records |
+| 5-6 | Initials of a person of the household |
+
+### Result: 2. IT IS A CONTENTS MARK. THERE IS NO BREWHOUSE.
+
+**Holt's question has no answer in the shape he is asking it.** He assumed a
+maker's mark because that is what a publican sees when he looks at a cask head,
+and he has been asking *"whose brewhouse was this"* since day 71 (L011) about
+two letters that were never a name.
+
+**This is not a let-down to be softened and it is not a joke at Holt's expense.**
+It is the correct answer and it is worth something: a contents mark means the
+cask was marked by *the household that laid it down*, which puts the answer
+inside the party's own salvage rather than out in the world. The area 6 papers
+are household and construction records **in that same clerical hand.** So:
+
+- **The route the player found is the right route.** Dave connected L011 to L050
+  in the Inn on day 93 unprompted, and he was correct to.
+- The open roll that day (d6 = 4) put drink provisioning **in** the records with
+  nothing that decodes the abbreviation yet. That is a lead, not a solution.
+- **Further work on the papers now serves TWO questions at once** — the 86-marks
+  count and this — which is the thing that makes retrying L050 worth days.
+
+**Do not deliver "there is no brewhouse" until somebody reads it off a document.**
+A conclusion of that shape has to be *earned from the paper*, or it is the DM
+telling the player his question was silly. When it comes, it should come as a
+provisioning line using the same shorthand for something that is obviously not a
+place — that is what makes it land, and it needs a successful check to find.
+
+**And tell Holt.** L011 is discharged by an answer, including this one. He asked
+to be told if anyone ever learned it; "it was never a brewhouse" is learning it.
