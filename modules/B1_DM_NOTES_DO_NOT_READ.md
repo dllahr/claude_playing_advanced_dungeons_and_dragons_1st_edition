@@ -4143,3 +4143,59 @@ place — that is what makes it land, and it needs a successful check to find.
 
 **And tell Holt.** L011 is discharged by an answer, including this one. He asked
 to be told if anyone ever learned it; "it was never a brewhouse" is learning it.
+
+---
+
+## THE PORTCULLIS TRAP AT (10,41,V) — found day 95, module text, NOT invented
+
+**The extractor had this boundary as WALL and the party was standing on it.**
+The chain that found it is worth keeping, because it is the method working:
+
+1. Player read the printed page and said there is a plain door on the south wall
+   of (10,41). **He was right** — rectangle straddling the line, no S. The
+   database said `secret`.
+2. Auditing the cluster, `(13,40,H)` turned out to be a **false** secret door
+   too — area 13's drawn wall fittings again — while `(3,41,V)` is **genuine**,
+   a big printed S beside the area 14 label. Two wrong, one right.
+3. Correcting `(13,40,H)` to wall **stranded (11,41) (12,41) (13,41)**: unreached
+   went 8 → 11. Squares reachable only through a door that is not on the page
+   were never reachable, so the real connection had to be elsewhere.
+4. The only candidate was the boundary with the drawn ticks on it — and **B1
+   p.16 names it**: area 13 holds *"a counterweight mechanism for the portcullis
+   trap in the corridor just outside the room."* Unreached back to **8**.
+
+### The trap, as the module states it
+
+- **The stub is (11,41) (12,41) (13,41)**, thirty feet, dead-ending at the east
+  wall of (13,41). The portcullis is at its **west mouth**, `(10,41,V)`.
+- **Trigger: a point 10 ft in front of the dead-end wall** — that is **(13,41)**.
+- **It drops 20 ft to the rear of that point** — the west side of **(11,41)**,
+  which is exactly where the glyph is drawn. *The module's geometry and the
+  printed map agree to the square; nothing here was fitted to taste.*
+- **Anyone past it is shut into a thirty-foot stub** with the rest of the party
+  on the other side of the grating.
+
+### ⚠ THE THIEF CLAUSE, AND THE FORMATION MAKES IT LIVE
+
+> *"Thieves **in the front of the party** will have a chance for their percentage
+> chance on the 'remove trap' category, in which case they discover the trap and
+> alert the party without triggering it — **provided the thief is the first one
+> to reach the trigger point**, of course."*
+
+**Tristle is in RANK 2 of the day-95 standing formation.** Rank 1 is Yrtone,
+Dave and Torsat, none of them thieves. **On the order as it stands the party
+does not get the check.** Ista is a thief and is also rank 2.
+
+**Do not move them to the front to be kind, and do not mention it.** The order
+is the player's and he has changed it deliberately between expeditions before.
+
+### Raising it again, once it has dropped
+
+Two people maximum, **combined Strength ratings must total at least 30**, giving
+**20%**, **+5% per point above 30**. **Each pair may try ONCE**, though different
+pairings may each have a go. The bars are **rusty and weak** — the module
+continues past this point; read it before adjudicating a forced escape.
+
+**The counterweight and the release lever are on area 13's north wall**, which is
+through the door the party can now see — so the room and the trap are one puzzle,
+and the way out of the trap is on the far side of the grating from anyone caught.

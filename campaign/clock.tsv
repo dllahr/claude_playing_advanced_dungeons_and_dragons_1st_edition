@@ -780,3 +780,8 @@ when	exped	round	kind	anchor	detail	note
 2026-09-16	11	0	jitter		30:0,60:5,90:2,120:0,150:3,180:3,210:2,240:1,270:0,300:2,330:5,360:4,390:3,420:0,450:3,480:2,510:3,540:1,570:4,600:0,630:5,660:2,690:3,720:0,750:5,780:2,810:2,840:0,870:3,900:0,930:1,960:2,990:3,1020:2,1050:0,1080:4,1110:4,1140:4,1170:0,1200:0,1230:4,1260:5,1290:4,1320:4,1350:4,1380:5,1410:1,1440:4,1470:5,1500:3,1530:5,1560:4,1590:0,1620:2,1650:5,1680:1,1710:5,1740:2,1770:0,1800:0	rolled in advance and HIDDEN; each is reported when its check fires
 2026-09-16	11	60	advance		60	day 95: the walk in. (16,1) to the intersection at (14,39) -- 54 squares, 540 ft, six turns at cautious mapping pace, by the mouth-avoiding route through the one-way slab at (17,13,V). All known ground
 2026-09-16	11	30	check	30	d6=5	anchor 30 + 0
+2026-09-16	11	69	advance		9	day 95: west along y=39 from the intersection at (14,39) to the corner at (6,39). Eight squares, 80 ft, cautious mapping pace. NEW GROUND -- the party has never been west of that intersection
+2026-09-16	11	65	check	60	d6=4	anchor 60 + 5
+2026-09-16	11	72	advance		3	day 95: north from the corner at (6,39) to the opening at (6,41) -- two squares, 20 ft, and a look round on arrival. LOOKING is not SEARCHING and is not charged as a search turn
+2026-09-16	11	82	advance		10	day 95: SEVEN SEARCH the blind alcove at (5,41) for secret doors -- one turn, everybody on the one section, which is the best-odds slowest option from the parallel-search table. Dave and Torsat stand guard on the junction and the corridors leaving it and do not search
+2026-09-16	11	87	advance		5	day 95: east along y=41 from the junction. Four squares, 40 ft, cautious mapping pace

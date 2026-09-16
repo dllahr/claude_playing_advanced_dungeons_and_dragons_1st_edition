@@ -221,3 +221,6 @@ when	map	level	x	y	exped	turn	squares	feet	rate	why	route
 2026-09-14	b1	1	17	13			2	20	known	day 81 OUT, leg by leg clear of the x=16 corridor: west through the one-way slab into alcove pair 2	19,13 18,13 17,13
 2026-09-14	b1	1	16	1			13	130	known	day 81 OUT, leg by leg clear of the x=16 corridor: down the entry corridor to the threshold	17,13 16,13 16,12 16,11 16,10 16,9 16,8 16,7 16,6 16,5 16,4 16,3 16,2 16,1
 2026-09-16	b1	1	14	39	11	6	54	540	explore	day 95: the walk in, expedition 11. Nine, three abreast, by the mouth-avoiding route the router now derives on its own from campaign/avoid.tsv	16,1 16,2 16,3 16,4 16,5 16,6 16,7 16,8 16,9 16,10 16,11 16,12 16,13 17,13 18,13 19,13 19,14 19,15 19,16 19,17 19,18 19,19 18,19 17,19 16,19 16,20 16,21 15,21 14,21 13,21 12,21 11,21 10,21 10,22 10,23 10,24 10,25 10,26 10,27 10,28 10,29 11,29 12,29 13,29 14,29 14,30 14,31 14,32 14,33 14,34 14,35 14,36 14,37 14,38 14,39
+2026-09-16	b1	1	6	39	11	7	8	80	explore	day 95: west along the y=39 corridor to where it turns north. Walls both sides the whole run, no doors, no features	14,39 13,39 12,39 11,39 10,39 9,39 8,39 7,39 6,39
+2026-09-16	b1	1	6	41	11	7	2	20	explore	day 95: up the north leg to where the corridor opens out	6,39 6,40 6,41
+2026-09-16	b1	1	10	41	11	9	4	40	explore	day 95: east along the y=41 corridor to its end	6,41 7,41 8,41 9,41 10,41
