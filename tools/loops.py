@@ -98,6 +98,36 @@ def open_loops(rows=None, path=None):
             if latest[i].get('verb', '').strip() in OPEN_VERBS]
 
 
+def notes(rows=None, path=None):
+    """{loop_id: [note rows, in order]}.
+
+    *** THESE WERE INVISIBLE AND THAT DEFEATED THE WHOLE FILE. ***
+
+    `state()` skips `note` rows on purpose -- a note must not reopen or close
+    anything -- but `report()` printed `state()`'s `what`, which is the text
+    written the day the loop was OPENED. So L029 showed "only lead is WRAYE,
+    which has a library" on day 93 while carrying four notes, one of which says
+    IDENTIFY IS OFF THE TABLE FOR THIS RING, PERMANENTLY.
+
+    That is precisely the failure loops.tsv exists to stop -- Ancel's
+    "Unanswered" outliving its answer by 43 days -- reproduced INSIDE the tool
+    built to stop it, because an append-only log whose later rows are never
+    displayed is a log that rots at the top.
+
+    And `--touching` searched only subject and the open text, so the one query
+    the CHECKLIST says to run EVERY TURN could not find a name that had entered
+    the campaign in a note. "Ordric" and "sage" were both unfindable the moment
+    they were written down.
+    """
+    rows = rows if rows is not None else read_tsv(path or LOG, missing_ok=True)
+    out = {}
+    for r in rows:
+        lid = r.get('loop', '').strip()
+        if lid and r.get('verb', '').strip() == 'note':
+            out.setdefault(lid, []).append(r)
+    return out
+
+
 def _due_key(r, day):
     """Overdue first, then soonest, then undated. Undated is not 'never'."""
     e = r.get('expected_day', '').strip()
@@ -109,15 +139,21 @@ def _due_key(r, day):
 def report(rows=None, path=None, subject=None, due=None, touching=None,
            day=None):
     loops = open_loops(rows, path)
+    nts = notes(rows, path)
     day = day if day is not None else current_day()
+
+    def haystack(r):
+        """Subject, the open text, AND EVERY NOTE. See notes()."""
+        lid = r.get('loop', '').strip()
+        return ' '.join([r.get('subject', ''), r.get('what', '')]
+                        + [n.get('what', '') for n in nts.get(lid, [])]).lower()
+
     if subject:
         s = subject.lower()
         loops = [r for r in loops if s in r.get('subject', '').lower()]
     if touching:
         names = [n.strip().lower() for n in touching.split(',') if n.strip()]
-        loops = [r for r in loops
-                 if any(n in (r.get('subject', '') + ' ' + r.get('what', '')).lower()
-                        for n in names)]
+        loops = [r for r in loops if any(n in haystack(r) for n in names)]
     if due is not None:
         loops = [r for r in loops
                  if r.get('expected_day', '').strip().isdigit()
@@ -137,6 +173,15 @@ def report(rows=None, path=None, subject=None, due=None, touching=None,
         out.append('%-5s %-11s %-12s %s'
                    % (r.get('loop', ''), when, r.get('subject', ''),
                       r.get('what', '')))
+        # THE LATEST NOTE, ALWAYS. The open text is the oldest thing on the
+        # loop; where a note exists it is what is actually true now, and
+        # printing only the former is how a loop rots while still being read.
+        mine = nts.get(r.get('loop', '').strip(), [])
+        if mine:
+            last = mine[-1]
+            out.append('      -> day %s (%d note%s): %s'
+                       % (last.get('day', '?'), len(mine),
+                          '' if len(mine) == 1 else 's', last.get('what', '')))
     head = 'OPEN LOOPS (%d)' % len(loops)
     if day is not None:
         head += ', as of day %d' % day

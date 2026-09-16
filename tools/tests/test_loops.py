@@ -221,3 +221,59 @@ def test_days_tsv_gives_a_current_day():
         'current day computed as %s. It was 77 when days.tsv was seeded and '
         'the day count only goes up -- a lower number means rows were lost.'
         % day)
+
+
+# ------------------------------------------------------------ notes are VISIBLE
+# Added 2026-09-15. `state()` skips `note` rows so a note cannot reopen or close
+# a loop -- correct -- but `report()` printed `state()`'s `what`, which is the
+# text written the day the loop was OPENED, and NOTHING ELSE. On day 93 L029
+# displayed "only lead is WRAYE, which has a library" while carrying four notes,
+# one of which says IDENTIFY IS OFF THE TABLE FOR THIS RING, PERMANENTLY.
+#
+# *** THAT IS THIS FILE'S OWN FAILURE MODE, REPRODUCED INSIDE IT. *** loops.tsv
+# exists because Ancel's "Unanswered" outlived its answer by 43 days. An
+# append-only log whose later rows are never displayed rots at the top exactly
+# the same way, and it rots while being read, which is worse.
+
+def test_the_latest_note_is_PRINTED_under_its_loop():
+    rows = read_tsv(LOG)
+    nts = loops.notes(rows)
+    assert nts, 'no note rows at all in campaign/loops.tsv -- pick a new fixture'
+    noted = {r['loop'] for r in loops.open_loops(rows)} & set(nts)
+    assert noted, 'no OPEN loop carries a note -- pick a new fixture'
+    text = loops.report(rows)
+    for lid in noted:
+        last = nts[lid][-1].get('what', '')
+        assert last[:40] in text, (
+            '%s carries %d note(s) and the latest is not in the report. The '
+            'open text is the OLDEST thing on a loop; where a note exists it '
+            'is what is actually true now.' % (lid, len(nts[lid])))
+
+
+def test_touching_SEARCHES_THE_NOTES_TOO():
+    """`--touching` is the query CHECKLIST says to run EVERY TURN with whoever
+    the player just named. It searched subject and the open text only, so any
+    name that entered the campaign IN A NOTE was unfindable from the moment it
+    was written -- "Ordric" and "sage" both were, on the day Neot said them."""
+    rows = read_tsv(LOG)
+    nts = loops.notes(rows)
+    # OPEN loops only -- report() cannot return a closed one, so a note on one
+    # proves nothing either way.
+    opens = {r['loop']: r for r in loops.open_loops(rows)}
+    for lid, ns in nts.items():
+        if lid not in opens:
+            continue
+        words = [w.strip('.,;:*"\'()') for w in ' '.join(
+            n.get('what', '') for n in ns).split()]
+        r = opens[lid]
+        opentext = (r.get('subject', '') + ' ' + r.get('what', '')).lower()
+        # a word that is ONLY in the notes, long enough not to be noise
+        only = [w for w in words if len(w) > 6 and w.lower() not in opentext]
+        if not only:
+            continue
+        got = loops.report(rows, touching=only[0])
+        assert lid in got, (
+            'the word %r appears only in a note on %s and --touching cannot '
+            'find it' % (only[0], lid))
+        return
+    raise AssertionError('no note contributed a distinctive word -- new fixture')

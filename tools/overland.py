@@ -152,9 +152,18 @@ def days_range(m, mode='cart'):
 
 
 def how_long(m):
-    """Every ordinary way of covering `m` miles, as a range of days."""
+    """Every ordinary way of covering `m` miles, as a range of days.
+
+    *** ride_light IS LISTED BECAUSE THE PARTY OWNS LIGHT HORSES. *** It was in
+    PACE from the start and printed nowhere, so `how-far` answered "at a medium
+    ride 40" for two riders the record puts at SIXTY -- days 84 and 90 were both
+    planned on 60 and are right (rules/overland.md, DMG p.58: light 60, medium
+    40). A mode the party is actually in, missing from the only place anybody
+    reads, is a wrong answer waiting for a session that does not remember why.
+    """
     out = []
-    for mode, label in (('cart', 'by cart'), ('ride', 'at a medium ride'),
+    for mode, label in (('cart', 'by cart'), ('ride_light', 'at a light ride'),
+                        ('ride', 'at a medium ride'),
                         ('walk', 'walking laden'), ('walk_rough', 'off the road')):
         lo, hi = days_range(m, mode)
         out.append('%-18s %4.1f - %.1f days' % (label, lo, hi))
@@ -472,7 +481,8 @@ def main(argv=None):
                   % (road, kind,
                      'cart 15 a day, rider 20' if kind == 'track'
                      else 'no cart at all' if kind == 'path'
-                     else 'cart 25 a day, rider 40'))
+                     else 'cart 25 a day, rider 40 on a medium horse '
+                          'and 60 on a light one'))
         else:
             print('  NO WAY ON RECORD between them -- a straight line across '
                   'somebody\'s fields is not a route')
