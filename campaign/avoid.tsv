@@ -1,0 +1,36 @@
+# SQUARES THE PATHFINDER MAY NOT ROUTE THROUGH.
+#
+# *** THIS FILE EXISTS BECAUSE THE SAME BUG WAS PAID FOR TWICE AND CAUGHT BY
+# *** HAND BOTH TIMES.
+#
+#   expedition 5, round 34  -- party.py auto-routed the exit WEST along y=22 and
+#   down the x=16 corridor, 290 ft and shorter, and STRAIGHT PAST (17,21) WHERE
+#   KELL IS BURIED. The party did not go that way. The log row ends: "Do not let
+#   the pathfinder pick a route the player has named."
+#
+#   expedition 7, round 784 -- IT DID IT AGAIN. Auto-routed the walk out from
+#   the crossing SOUTH DOWN THE x=16 CORRIDOR, through (16,17), ALCOVE PAIR 3,
+#   WHERE THE MAGIC MOUTHS ARE. That row says in as many words:
+#
+#       "TOOLING GAP, now twice paid for: party.py move has no --via and no
+#        forbidden-cell list, so a named route must be walked leg by leg."
+#
+# A shortest path is not a route. The party's standing order round the mouths is
+# the alcove-pair-2 one-way slab at (17,13,V) PRECISELY BECAUSE IT EMERGES BELOW
+# THEM, and that costs about 60 ft. The pathfinder cannot know that from geometry
+# and will choose the 60 ft every time.
+#
+# A row here does NOT make a square impassable. It makes the ROUTER decline to
+# send the party through it unasked. The party may still walk in deliberately --
+# `--through x,y` on dmap path, `--allow x,y` on party.py move -- and that is the
+# point: entering the mouths' alcove should be a DECLARED ACT, never a side
+# effect of asking to go somewhere else.
+#
+# Columns: level, x, y, why. Keep `why` short enough to print in a warning.
+level	x	y	why
+1	16	14	same corridor, under the MAGIC MOUTHS -- see (16,17)
+1	16	15	same corridor, under the MAGIC MOUTHS -- see (16,17)
+1	16	16	same corridor, under the MAGIC MOUTHS -- see (16,17)
+1	16	17	ALCOVE PAIR 3, THE MAGIC MOUTHS -- the x=16 corridor between the y=13 and y=19 junctions, avoided AS A RUN and not as one square, because the party does not walk any of it. Standing order is the alcove-pair-2 one-way slab at (17,13,V), which emerges BELOW the mouths: ~60 ft longer, no mouths. The junctions (16,13) and (16,19) are NOT avoided -- the route uses both
+1	16	18	same corridor, under the MAGIC MOUTHS -- see (16,17)
+1	17	21	KELL'S GRAVE. Buried by the road crew before the party ever met them; Hask has never said how he died and the party has never asked. Auto-routed straight past it on exp.5 round 34 and corrected by hand

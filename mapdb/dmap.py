@@ -9,6 +9,7 @@
     python dmap.py reach   dmg.sqlite 1 --from-room 1
 """
 import argparse
+import os
 import sqlite3
 import sys
 
@@ -362,11 +363,60 @@ def describe(db, level, cell):
     return out
 
 
-def find_path(db, level, a, b):
-    """Shortest walkable route, with the doors and stairs it crosses."""
+AVOID_TSV = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(
+    __file__))), 'campaign', 'avoid.tsv')
+
+
+def avoid_set(level, path=None, allow=()):
+    """{(x, y): why} the router must not send the party through. See avoid.tsv.
+
+    *** A SHORTEST PATH IS NOT A ROUTE. *** This is the third attempt at a bug
+    that was paid for twice and caught by hand both times -- exp.5 round 34
+    routed the party past Kell's grave, exp.7 round 784 routed them under the
+    magic mouths, and the second row states the gap outright: "party.py move has
+    no --via and no forbidden-cell list."
+
+    `allow` is the deliberate override. Walking into the mouths' alcove should
+    be a DECLARED ACT, never a side effect of asking to go somewhere else.
+    """
+    out, allow = {}, {tuple(c) for c in allow}
+    try:
+        fh = open(path or AVOID_TSV, encoding='utf-8')
+    except IOError:
+        return out
+    with fh:
+        hdr = None
+        for line in fh:
+            if line.startswith('#') or not line.strip():
+                continue
+            parts = line.rstrip('\n').split('\t')
+            if hdr is None:
+                hdr = parts
+                continue
+            r = dict(zip(hdr, parts))
+            try:
+                if int(r['level']) != int(level):
+                    continue
+                cell = (int(r['x']), int(r['y']))
+            except (KeyError, ValueError):
+                continue
+            if cell not in allow:
+                out[cell] = r.get('why', '')
+    return out
+
+
+def find_path(db, level, a, b, avoid=None):
+    """Shortest walkable route, with the doors and stairs it crosses.
+
+    `avoid` is {(x,y): why}; those squares are removed from the walkable set
+    UNLESS they are an endpoint -- asking to go somewhere is always allowed, it
+    is being sent THROUGH it unasked that this stops.
+    """
     cells, edges = load(db, level)
     walk = {k for k, v in cells.items()
             if v[0] in WALKABLE and (v[2] or '') not in ('stream', 'outside')}
+    if avoid:
+        walk -= ({c for c in avoid} - {a, b})
     if a not in walk or b not in walk:
         return None, []
     prev = {a: None}
@@ -403,9 +453,19 @@ def find_path(db, level, a, b):
     return route, crossed
 
 
-def path_report(db, level, a, b, rate_ft=90):
-    route, crossed = find_path(db, level, a, b)
+def path_report(db, level, a, b, rate_ft=90, avoid=None, through=()):
+    avoid = avoid_set(level, allow=through) if avoid is None else avoid
+    route, crossed = find_path(db, level, a, b, avoid)
     if not route:
+        naive, _ = find_path(db, level, a, b)
+        if naive and avoid:
+            hit = [c for c in naive if c in avoid]
+            return (['NO ROUTE from (%d,%d) to (%d,%d) that avoids everything '
+                     'in campaign/avoid.tsv.' % (a + b)]
+                    + ['  the only way through is %s -- %s'
+                       % ('(%d,%d)' % c, avoid[c][:110]) for c in hit]
+                    + ['  If the party is going anyway, SAY SO: '
+                       '--through %d,%d' % hit[0]])
         return ['no route from (%d,%d) to (%d,%d)' % (a + b)]
     steps = len(route) - 1
     feet = steps * FEET_PER_SQUARE
@@ -415,6 +475,22 @@ def path_report(db, level, a, b, rate_ft=90):
     if crossed:
         out.append('  crosses: %s' % ', '.join(
             '%s at (%d,%d,%s)' % (k, e[0], e[1], e[2]) for k, e in crossed))
+    # *** SAY WHEN THE AVOID LIST CHANGED THE ANSWER. *** A router that silently
+    # returns a different route is how somebody eventually deletes avoid.tsv for
+    # being pointless. Both documented failures were SHORTER by the forbidden
+    # way; the cost of going round is exactly the thing worth printing.
+    if avoid:
+        naive, _ = find_path(db, level, a, b)
+        if naive and len(naive) != len(route):
+            hit = [c for c in naive if c in avoid]
+            out.append('  *** ROUTED AROUND %s, +%d ft ***'
+                       % (', '.join('(%d,%d)' % c for c in hit),
+                          (len(route) - len(naive)) * FEET_PER_SQUARE))
+            for c in hit:
+                out.append('      (%d,%d): %s' % (c + (avoid[c][:100],)))
+        if through:
+            out.append('  [--through given: %s is ALLOWED on this route]'
+                       % ', '.join('(%d,%d)' % tuple(c) for c in through))
     return out
 
 
@@ -479,6 +555,11 @@ def build_parser():
     pa.add_argument('coords', type=int, nargs=4, metavar=('X0', 'Y0', 'X1', 'Y1'))
     pa.add_argument('--rate', type=int, default=90,
                     help="feet per turn; 90 is 9in cautious mapping movement")
+    pa.add_argument('--through', action='append', metavar='X,Y',
+                    help='allow routing through a square listed in '
+                         'campaign/avoid.tsv. Repeatable. Entering the magic '
+                         "mouths' alcove should be a DECLARED ACT, never a "
+                         'side effect of asking to go somewhere else')
 
     sn = common(sub.add_parser(
         'seen', help='mark squares as verified by the party (DM-side only)'),
@@ -522,8 +603,17 @@ def main(argv=None):
         print('\n'.join(describe(args.db, args.level, (args.x, args.y))))
     elif args.cmd == 'path':
         c = args.coords
+        through = []
+        for t in (args.through or []):
+            try:
+                x, y = (int(v) for v in t.split(','))
+            except ValueError:
+                print('--through wants x,y -- got %r' % t, file=sys.stderr)
+                return 2
+            through.append((x, y))
         print('\n'.join(path_report(args.db, args.level,
-                                    (c[0], c[1]), (c[2], c[3]), args.rate)))
+                                    (c[0], c[1]), (c[2], c[3]), args.rate,
+                                    through=through)))
     elif args.cmd == 'seen':
         target = []
         if args.room:

@@ -98,3 +98,74 @@ def test_anyway_is_the_deliberate_override_and_is_documented():
     src = open(os.path.join(TOOLS, 'party.py'), encoding='utf-8').read()
     assert "--anyway" in src
     assert 'genuinely decided' in src
+
+
+# ---------------------------------------------- ONE list, read by BOTH tools
+# Added day 95, when the player asked "do you have a tool for the route that
+# avoids the magic mouths?" There was HALF of one, and the halves disagreed:
+#
+#   party.py     knew six edges, hardcoded in a dict in the source, and REFUSED
+#                them -- so a named route still had to be walked leg by leg.
+#   dmap path    knew nothing at all and cheerfully printed the forbidden route.
+#   NEITHER      knew about (17,21), KELL'S GRAVE -- the OTHER square a route
+#                was hand-corrected away from, on expedition 5 round 34.
+#
+# The squares now live in campaign/avoid.tsv, one copy, and party.py DERIVES its
+# edges from them. The repo's own rule: no rules table is written twice.
+
+def test_party_py_holds_NO_hardcoded_forbidden_table():
+    """The dict is gone and must stay gone. A second copy of a rule is the
+    thing this whole repo is arranged against."""
+    src = open(os.path.join(TOOLS, 'party.py'), encoding='utf-8').read()
+    assert 'FORBIDDEN = {' not in src, (
+        'party.py has grown a hardcoded forbidden table again. The squares '
+        'belong in campaign/avoid.tsv, which dmap.py also reads.')
+    assert 'avoid_set' in src, 'party.py no longer reads campaign/avoid.tsv'
+
+
+def test_both_documented_hand_corrections_are_in_the_file():
+    """Each row exists because a route was auto-picked wrong and caught by
+    hand. If either disappears, the bug that was paid for twice is back."""
+    import dmap
+    cells = dmap.avoid_set(1)
+    assert (16, 17) in cells, 'the magic mouths, exp.7 round 784'
+    assert (17, 21) in cells, (
+        "Kell's grave, exp.5 round 34 -- the one party.py NEVER knew about")
+    for y in range(14, 19):
+        assert (16, y) in cells, (
+            'the mouth corridor is avoided AS A RUN, %d missing' % y)
+    for junction in ((16, 13), (16, 19)):
+        assert junction not in cells, (
+            '%s is a JUNCTION the correct route uses; avoiding it would break '
+            'the detour it exists to allow' % (junction,))
+
+
+def test_the_router_now_produces_the_HAND_CORRECTED_route():
+    """*** THE POINT OF THE WHOLE EXERCISE. *** The day-46 correction row says
+    the right way round is the alcove-pair-2 one-way slab at (17,13,V) and that
+    it costs "~60 ft longer, no mouths". The router, given only the avoided
+    squares, must arrive at that independently -- same slab, same 60 feet."""
+    import dmap
+    db = os.path.join(ROOT, 'mapdb', 'output', 'b1', 'b1.sqlite')
+    if not os.path.exists(db):
+        import pytest
+        pytest.skip('b1.sqlite not built')
+    good, crossed = dmap.find_path(db, 1, (16, 1), (14, 39), dmap.avoid_set(1))
+    naive, _ = dmap.find_path(db, 1, (16, 1), (14, 39))
+    assert good and naive
+    assert not (set(good) & {(16, y) for y in range(14, 19)}), (
+        'the router still walks the mouth corridor')
+    assert (17, 13, 'V') in [e for _, e in crossed], (
+        'the detour must go through the alcove-pair-2 one-way slab')
+    assert (len(good) - len(naive)) * 10 == 60, (
+        'the detour costs %d ft; the hand-written correction from day 46 says '
+        '~60' % ((len(good) - len(naive)) * 10))
+
+
+def test_going_in_deliberately_is_still_possible_and_must_be_SAID():
+    """A rule that cannot be overridden gets worked around instead. Walking
+    into the mouths' alcove is a legal choice -- it just has to be declared."""
+    import dmap
+    allowed = dmap.avoid_set(1, allow=[(16, 17)])
+    assert (16, 17) not in allowed
+    assert (17, 21) in allowed, '--through must free ONE square, not all of them'

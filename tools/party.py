@@ -38,32 +38,61 @@ from tsvlog import append, read_tsv, today                      # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-# *** EDGES THE PATHFINDER MAY NOT USE. ***
+# *** EDGES THE PATHFINDER MAY NOT USE -- DERIVED, NOT WRITTEN HERE. ***
 #
-# `move` physically cannot cross a WALL, which has held for two expeditions.
+# `move` physically cannot cross a WALL, which has held for three expeditions.
 # It had no notion of a route the campaign has RULED OUT -- and on day 79 it
 # proved it: asked for the four-way at (16,19), it went back through the secret
 # slab and straight up x=16 from y=13 to y=19, the corridor under the magic
-# mouths, which is the one stretch of level 1 this party does not walk. The rule
-# was in CHECKLIST.md, in prose, where the pathfinder could not read it.
+# mouths, which is the one stretch of level 1 this party does not walk.
 #
-# (map, level, x, y, orient) -> why. A blocked edge is refused with the reason,
-# and `--anyway` is the deliberate override.
-FORBIDDEN = {
-    ('b1', 1, 16, 13, 'H'): 'the x=16 corridor between y=13 and y=19 runs '
-                            'under the MAGIC MOUTHS. The party does not use '
-                            'it; the route in and out is the alcove-pair-2 '
-                            'one-way slab at (17,13,V)',
-    ('b1', 1, 16, 14, 'H'): 'same corridor, under the magic mouths',
-    ('b1', 1, 16, 15, 'H'): 'same corridor, under the magic mouths',
-    ('b1', 1, 16, 16, 'H'): 'same corridor, under the magic mouths',
-    ('b1', 1, 16, 17, 'H'): 'same corridor, under the magic mouths',
-    ('b1', 1, 16, 18, 'H'): 'same corridor, under the magic mouths',
-}
+# *** THE LIST USED TO BE A HARDCODED DICT RIGHT HERE, AND THAT WAS A SECOND
+# *** COPY OF A RULE. On day 95 the player asked whether there was a tool for
+# the mouth-avoiding route. There was half of one: party.py knew six edges and
+# REFUSED them, `dmap path` knew nothing and happily printed the forbidden
+# route, and NEITHER knew about (17,21), Kell's grave, which is the OTHER
+# square a route was hand-corrected away from (exp.5, round 34).
+#
+# So the squares now live in campaign/avoid.tsv, ONE copy, read by both. Edges
+# are derived from them: any edge leading INTO an avoided square is forbidden,
+# which is the same six edges the dict used to spell out, plus the ones round
+# Kell that it never had.
+def _avoid_cells(map_name, level):
+    """{(x, y): why} from campaign/avoid.tsv. Cached per (map, level)."""
+    key = (map_name, int(level))
+    if key not in _AVOID_CACHE:
+        import dmap
+        # avoid.tsv is not per-map today; B1 is the only live dungeon and the
+        # DMG sample has no party in it. If a second map ever gets a row, give
+        # the file a `map` column rather than a second file.
+        _AVOID_CACHE[key] = dmap.avoid_set(level) if map_name == 'b1' else {}
+    return _AVOID_CACHE[key]
+
+
+_AVOID_CACHE = {}
 
 
 def forbidden(map_name, level, x, y, orient):
-    return FORBIDDEN.get((map_name, int(level), int(x), int(y), orient))
+    """Why this EDGE is ruled out, or None. Derived from the avoided squares.
+
+    An edge is forbidden when it leads into an avoided square from outside it.
+    (16,13,H) separates (16,13) from (16,14); the old dict listed six such
+    edges up the mouth corridor and this reproduces them from one square.
+    """
+    cells = _avoid_cells(map_name, level)
+    if not cells:
+        return None
+    x, y = int(x), int(y)
+    other = (x + 1, y) if orient == 'V' else (x, y + 1)
+    # AN EDGE IS FORBIDDEN IF EITHER SQUARE IT SEPARATES IS AVOIDED. That is
+    # the whole rule, and it is only this simple because avoid.tsv lists the
+    # mouth corridor AS A RUN -- (16,14) through (16,18) -- rather than as the
+    # one square the mouths sit in. The old hardcoded dict spelled out the six
+    # resulting edges by hand; this derives them, and derives Kell's too.
+    for c in ((x, y), other):
+        if c in cells:
+            return cells[c]
+    return None
 
 
 def edge_between(a, b):
