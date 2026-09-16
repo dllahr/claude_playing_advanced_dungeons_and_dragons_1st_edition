@@ -56,7 +56,20 @@ LOG = os.path.join(ROOT, 'campaign', 'inventory_log.tsv')
 # A closed vocabulary, so a typo is a test failure and not a second silent unit.
 # `each` is the default and covers most things. Add to this list deliberately.
 UNITS = ('each', 'person-week', 'set', 'quiver', 'bundle', 'pair', 'flask',
-         'gallon', 'lb', 'gp-weight', 'tod', 'sheet')
+         'gallon', 'lb', 'gp-weight', 'tod', 'sheet', 'gp')
+
+# *** `gp` IS A UNIT OF QUANTITY HERE, NOT A PRICE, AND IT IS FOR DEBTS. ***
+# Added day 93, when the player asked whether Fenn's 90 gp was recorded anywhere
+# and the answer was NO. A debt owed TO the party is a thing the party OWNS
+# whose quantity happens to be denominated in money -- 90 gp of `loan_fenn` --
+# and there was no unit that could say so, so two receivables (Fenn's 90 and
+# Dill's 1.1) existed only in prose. Fenn's was worse: the money left the purse
+# on day 27, INSIDE the day-39 anchor, so no money.tsv row records it either,
+# and its last written mention was a loop that got CLOSED on day 92.
+#
+# DO NOT use `gp` for the purse. That is ledger.py's, computed from money.tsv,
+# and a second copy here is exactly the drift this whole scheme exists to stop.
+# `gp-weight` remains what it always was: the WEIGHT of carried coin.
 
 # Conditions describe the state of a thing WHILE HELD. Disposal is a negative
 # qty with a note, not a condition -- "sold" is an event, not a state.

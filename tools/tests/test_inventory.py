@@ -259,3 +259,53 @@ def test_the_report_still_prints_the_CONDITION_not_the_raw_key():
     out = inventory.report(_two_unit_log(), asset='arrows')
     assert "('', 'each')" not in out, 'the compound key leaked into the report'
     assert '84' in out and 'quiver' in out
+
+
+# --------------------------------------------------- debts are things OWNED
+# Added day 93. The player asked whether Fenn's 90 gp was recorded anywhere and
+# the answer was NO. TWO receivables existed only in prose -- Fenn's 90 and
+# Dill's 1.1 -- because there was no unit for a quantity denominated in money.
+#
+# *** FENN'S WAS THE DANGEROUS ONE. *** The coin left the purse on day 27,
+# INSIDE the day-39 anchor, so money.tsv has no row for it and never will; and
+# its last written mention was loop L048, WHICH WAS CLOSED THE DAY BEFORE. A
+# debt recorded only inside a closed loop is a debt nobody will ever find again.
+
+def test_every_debt_asset_has_an_inventory_row():
+    """A receivable with no quantity is a sentence, which is what these were."""
+    ass = ledger.assets()
+    debts = [k for k, v in ass.items() if v.get('kind') == 'debt']
+    assert debts, 'no debt assets at all -- pick a new fixture'
+    held = {r['asset'] for r in inventory.rows()}
+    for d in debts:
+        assert d in held, (
+            '%s is an asset of kind `debt` with no row in inventory_log.tsv. '
+            'A debt owed TO the party is a thing the party OWNS and its '
+            'quantity must be derived, not narrated.' % d)
+
+
+def test_a_debt_is_NOT_a_service_so_the_ledger_polices_its_repayment():
+    """kind matters. ledger.SERVICE_KINDS are exempt from the "every good has
+    an inventory row" leg -- the leg that was missing all five times a purchase
+    got recorded as a sentence. Filing a debt as a service would exempt its
+    repayment from exactly that check, so when Fenn pays, money.tsv takes +N
+    naming loan_fenn and this log must take -N, and the ledger refuses one
+    without the other."""
+    for k, v in ledger.assets().items():
+        if v.get('kind') == 'debt':
+            assert v['kind'] not in ledger.SERVICE_KINDS, k
+
+
+def test_gp_is_for_DEBTS_and_never_becomes_a_second_copy_of_the_purse():
+    """THE PURSE IS ledger.py's, computed from money.tsv. A `gp` quantity in
+    the inventory log for anything but a debt is a stored copy of a derived
+    number, which is the one mistake this whole scheme exists to prevent."""
+    ass = ledger.assets()
+    for r in inventory.rows():
+        if (r.get('unit') or '').strip() == 'gp':
+            kind = ass.get(r['asset'], {}).get('kind')
+            assert kind == 'debt', (
+                '%s carries a `gp` quantity but is kind %r. `gp` is for debts '
+                'only; the purse is computed by ledger.py and must not be '
+                'mirrored here. (`gp-weight` is the WEIGHT of carried coin and '
+                'is a different unit.)' % (r['asset'], kind))
