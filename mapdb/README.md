@@ -901,3 +901,34 @@ Standing facts that carry to any new sheet:
 
 
 ---
+
+## ⚠ B1'S PRINTED LEGEND IS INCOMPLETE — it does not list every glyph it uses
+
+The map page prints a key: **DOOR · SECRET DOOR · FALSE DOOR · ONE-WAY SECRET
+DOOR · STAIRS UP · STAIRS DOWN · STATUE · PITS COVERED.** Reading it is still the
+first thing to do — it settled three edges in one afternoon on day 95, because
+*door = a rectangle drawn **across** the wall line*, *secret = a printed **S***,
+and *false = a rectangle on **one side***, and those three shapes are impossible
+to confuse once you have seen them side by side.
+
+**But the legend is not exhaustive, and assuming it is will cost you.**
+`(10,41,V)` is a **PORTCULLIS** — on the page a narrow band of very fine circles
+sitting on the boundary — and **portcullis appears nowhere in the key.** The
+extractor called it wall; a human reading the legend would find nothing to match
+it either.
+
+**So when a glyph matches nothing in the key, the answer is in the ROOM TEXT, not
+in the symbol.** Area 13's entry names this one in passing, while describing
+something else entirely: *"a counterweight mechanism for the portcullis trap in
+the corridor just outside the room."* The map never labels it; the prose does.
+
+**The measurement that flagged it first:** ink thickness on that boundary was
+**5 px**, against **1 px** for an open floor ruling and **8-13** for a wall. *A
+boundary that measures between the two classes is carrying a drawn symbol,* and
+the symbol is the thing to go and identify. Do not round it to the nearer class.
+
+**And the check that proved it independently was `dmap.py reach`.** Correcting a
+neighbouring false secret door to wall stranded three squares, 8 unreached → 11.
+Squares reachable only through a door that is not on the page were never
+reachable, so a real connection had to exist elsewhere — and the only candidate
+was the 5 px boundary. Restoring it put unreached back to 8.
