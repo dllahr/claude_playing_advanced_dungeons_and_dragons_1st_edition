@@ -66,10 +66,15 @@ def test_the_named_route_east_of_the_slab_is_clean():
     assert party.forbidden_on(steps, 'b1', 1) == []
 
 
-def test_move_refuses_and_writes_nothing(tmp_path):
-    """A refusal that has already moved the party is not a refusal.
+def test_move_ROUTES_AROUND_the_mouths_instead_of_refusing(tmp_path):
+    """*** THE INVARIANT IS "NEVER SILENTLY WALKED UNDER THE MOUTHS", NOT
+    "REFUSES". *** Day 79 expressed it as a refusal, which was half a fix: it
+    stopped the bad walk and left the caller naming waypoints and walking legs
+    by hand -- exactly what the exp.7 round-784 row was complaining about. Day
+    95 made it reroute. The thing that must never regress is the ROUTE, so
+    this asserts the route.
 
-    *** IT PUTS THE PARTY AT THE ALCOVE FIRST, rather than using wherever
+    *** IT PLACES THE PARTY AT THE ALCOVE FIRST, rather than using wherever
     they happen to be. *** The first version walked from their LIVE position
     and passed only while that position was (17,13); an hour of play later
     they were at (14,29), from which (16,19) does not cross the forbidden
@@ -77,19 +82,50 @@ def test_move_refuses_and_writes_nothing(tmp_path):
     depends on today's game state is the same defect as one that pins today's
     gold.
     """
+    import dmap
     log = tmp_path / 'party.tsv'
     log.write_text(open(os.path.join(ROOT, 'campaign', 'party.tsv'),
                         encoding='utf-8').read())
-    party.place('17,13', why='fixture: the alcove, where the route to the\n                four-way crosses the ruled-out corridor',
+    party.place('17,13', why='fixture: the alcove, where the SHORTEST route to '
+                             'the four-way crosses the ruled-out corridor',
                 path=str(log))
+    naive, _ = party.route(party.DB, 1, (17, 13), (16, 19))
+    assert set(naive) & {(16, y) for y in range(14, 19)}, (
+        'fixture is stale: the shortest way no longer crosses the corridor, '
+        'so this test would pass without testing anything')
+
+    party.move('16,19', path=str(log), rate='known', why='fixture')
+    walked = party.history(str(log))[-1]
+    cells = [tuple(int(v) for v in c.split(',')) for c in
+             (walked.get('route') or '').split()] if walked.get('route') else []
+    assert cells, 'the move logged no route to check'
+    for bad in dmap.avoid_set(1):
+        assert bad not in cells, (
+            'the party was walked through %s, which campaign/avoid.tsv rules '
+            'out. %s' % (bad, dmap.avoid_set(1)[bad][:90]))
+
+
+def test_it_still_REFUSES_when_there_is_no_way_round(tmp_path, monkeypatch):
+    """Rerouting must not become "quietly go anyway when cornered". If every
+    route crosses something ruled out, the tool says so and writes nothing --
+    because that is a decision the party has to make out loud."""
+    import dmap
+    log = tmp_path / 'party.tsv'
+    log.write_text(open(os.path.join(ROOT, 'campaign', 'party.tsv'),
+                        encoding='utf-8').read())
+    party.place('17,13', why='fixture', path=str(log))
     before = log.read_text()
+    # Forbid the whole level except the endpoints: there is then no way round.
+    cells, _ = dmap.load(party.DB, 1)
+    wall = {c: 'FIXTURE: everything is ruled out' for c in cells
+            if c not in ((17, 13), (16, 19))}
+    monkeypatch.setattr(dmap, 'avoid_set', lambda *a, **k: wall)
     try:
-        party.move('16,19', path=str(log), rate='known', why='x')
+        party.move('16,19', path=str(log), rate='known', why='fixture')
         raise AssertionError('it did not refuse')
     except ValueError as exc:
-        assert 'RULED OUT' in str(exc)
-        assert 'magic mouth' in str(exc).lower()
-    assert log.read_text() == before
+        assert 'NO ROUTE' in str(exc) and '--anyway' in str(exc)
+    assert log.read_text() == before, 'it wrote anyway'
 
 
 def test_anyway_is_the_deliberate_override_and_is_documented():

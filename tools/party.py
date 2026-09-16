@@ -145,10 +145,19 @@ def where(path=None, map_name='b1'):
     return (int(last['x']), int(last['y']), int(last['level'] or 1), last)
 
 
-def route(db, level, a, b):
-    """The walkable path from a to b, or None. Never crosses a wall."""
+def route(db, level, a, b, avoid=None):
+    """The walkable path from a to b, or None. Never crosses a wall.
+
+    *** IT ALSO NOW ROUTES AROUND campaign/avoid.tsv RATHER THAN REFUSING. ***
+    Refusing was the day-79 fix and it was only half of one: it stopped the
+    party being walked under the magic mouths, but it left the caller to name
+    waypoints and walk the legs by hand, which is precisely what the exp.7
+    round-784 row was complaining about when it said "a named route must be
+    walked leg by leg with --max-squares". Asking for a destination should
+    produce THE ROUTE THE PARTY ACTUALLY USES.
+    """
     import dmap
-    return dmap.find_path(db, level, a, b)
+    return dmap.find_path(db, level, a, b, avoid)
 
 
 def move(to, why='', rate='explore', db=None, path=None, map_name='b1',
@@ -170,7 +179,27 @@ def move(to, why='', rate='explore', db=None, path=None, map_name='b1',
     if dest not in cells:
         raise ValueError('(%d,%d) is not a square on level %d of %s'
                          % (dest[0], dest[1], level, os.path.basename(db)))
-    steps, crossed = route(db, level, (x, y), dest)
+    import dmap
+    avoid = {} if anyway else dmap.avoid_set(level)
+    steps, crossed = route(db, level, (x, y), dest, avoid)
+    detoured = []
+    if steps and avoid:
+        naive, _ = route(db, level, (x, y), dest)
+        if naive and len(naive) != len(steps):
+            detoured = [c for c in naive if c in avoid]
+    if not steps and avoid:
+        naive, _ = route(db, level, (x, y), dest)
+        if naive:
+            hit = [c for c in naive if c in avoid]
+            raise ValueError(
+                'NO ROUTE from (%d,%d) to (%d,%d) that avoids what the '
+                'campaign has ruled out.\n'
+                '    The only way through is %s\n      %s\n'
+                '    If the party has genuinely decided to go that way, '
+                'pass --anyway. It is a DECLARED ACT, not a default.'
+                % (x, y, dest[0], dest[1],
+                   ', '.join('(%d,%d)' % c for c in hit),
+                   avoid[hit[0]][:160]))
     if not steps:
         raise ValueError(
             'NO WALKABLE ROUTE from (%d,%d) to (%d,%d) on level %d.\n'
