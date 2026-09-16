@@ -87,6 +87,37 @@ to learn it — and a failure is permanent for that spell.
 | **Light** | 6" | 1 turn/level | 1 segment | None | As the cleric spell but shorter duration. |
 | **Tenser's Floating Disc** | 2" | 3 turns + 1 turn/level | 1 segment | None | A floating disc that carries loot. |
 
+## ⚠ IDENTIFY, IN FULL — PHB p. 66-67, and the one-liner was hiding most of it
+
+**Transcribed from a 200 dpi render 2026-09-15, the day before it was to be cast.**
+The summary row in the table above says only *"costs 8 points of Constitution, 6
+turns rest per point, needs a 100 gp pearl"* — **every one of the following is in
+the entry and none of it was cached.**
+
+| | |
+|---|---|
+| **Chance per segment** | **15% + 5% per level** that ONE property becomes known. **A 1st-level M-U: 20%** |
+| **Duration** | **1 segment PER LEVEL.** A 1st-level M-U gets **ONE segment — one 20% roll, and that is the whole spell** |
+| **Then a save** | *"the referee will secretly roll to see if the magic-user made his saving throw versus magic. If the save was successful, the property is known; **if it is 1 point short, A FALSE POWER WILL BE REVEALED**; and if it is lower than 1 under the required score no information will be gained"* |
+| **⚠ THE TIME LIMIT** | *"The item to be identified must be examined by the magic-user **WITHIN 1 HOUR PER LEVEL OF EXPERIENCE of the examiner AFTER IT HAS BEEN DISCOVERED**, or all readable impressions will have been blended into those of the characters who have possessed it since"* |
+| **⚠ THE COMPONENTS** | a pearl of at least 100 gp — **AND an owl feather steeped in wine, THE INFUSION DRUNK — AND A LIVE MINIATURE CARP SWALLOWED WHOLE**, all prior to casting |
+| **The CON cost** | 8 points, **6 turns per point to regain = 48 turns = EIGHT HOURS** |
+| **And the floor** | *"If the 8 point loss drops the spell caster below a constitution of 3, he or she will fall unconscious, and consciousness will not be regained until full constitution is restored **24 hours later**"* |
+| **A luckstone** | powdered into the infusion: **+25% probability and all saves at +4** |
+
+*source: **PHB p. 66-67**, read from a 200 dpi page render 2026-09-15.*
+
+**WHAT THIS MEANS FOR FRYTHON AND THE RING, and it is not good:**
+
+- **He is 1st level. ONE segment, ONE 20% roll**, then a save that can return a
+  **false** power if it misses by exactly 1.
+- **CON 12 − 8 = 4.** Above the floor of 3, so he stays conscious — **but only
+  just**, and a caster with CON 10 would be out for 24 hours.
+- **EIGHT HOURS of rest**, not one. Six turns is an hour; it is **six turns PER
+  POINT.**
+- **The ring was taken out of the area 27 dais and has been carried for weeks.**
+  One hour per level means **one hour**. That window shut long ago.
+
 ## Reversible spells — a MAGIC-USER knows both halves
 
 **DM RULING 2026-09-15, and it is a ruling: NEITHER BOOK STATES A GENERAL RULE
