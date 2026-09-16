@@ -529,6 +529,28 @@ which jams the leaf in its frame and works in either direction but is weaker.
 | Toward you | wedges driven into the floor in front of the leaf | **strong** |
 | Away from you | wedges hammered into the jamb gap | weaker |
 
+> ### ⛔ THIS PARTY SPIKES QUIETLY. ALWAYS. IT IS NOT A DECLARED EXTRA.
+>
+> **Player, day 95:** *"whenever we spike the door we do it quietly, gently. I
+> stopped writing that explicitly a while ago."*
+>
+> **So do not roll for the noise of spiking, and do not treat a spiked door as
+> having announced the party.** The DM rolled exactly that on day 95 — *"two iron
+> spikes hammered into a jamb is not quiet"* — and sent a wandering monster
+> toward the sound. The roll was voided.
+>
+> **The word "hammered" in the table above is doing the damage.** It is the
+> book's description of the method, not a description of how these nine do it:
+> they lean on the wedges, tap them home with a cloak folded over the mallet
+> head, and take the extra half-minute. That is already inside the 1-round door
+> cost; do not charge extra time for it either.
+>
+> **THE GENERAL RULE THIS IS AN INSTANCE OF:** *a procedure the party has
+> performed the same way every time is theirs, and it stops needing to be
+> declared.* Cf. the standing door routine in `rules/b1-module.md`, written after
+> the DM rolled a step the party does not take. **The failure mode is symmetrical
+> — inventing steps they do not take, and forgetting steps they always take.**
+
 *DM ruling 2026-08-27, raised by the player. No 1e rule found; it is physics.
 Worth asking "which way does it open?" BEFORE spending spikes, because the
 answer changes what the spikes are worth.*

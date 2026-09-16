@@ -60,11 +60,29 @@ def test_the_rations_split_that_used_to_read_as_two():
 
 
 def test_the_damaged_rope_is_visible_on_its_own_row():
-    """"8 (7 sound, 1 damaged)" read as 8 and hid which rope not to trust."""
+    """"8 (7 sound, 1 damaged)" read as 8 and hid which rope not to trust.
+
+    *** THE INVARIANT IS THE SEPARATION, NOT THE COUNT. *** This test pinned
+    `sound == 7` and went red on day 95 the moment the party picked a coil of
+    rope off the area 13 rack -- which is the party playing the game correctly,
+    not a regression. That is the SIXTH time a test in this suite has failed by
+    asserting today's game state instead of the property it was written to
+    protect; see the docstring in test_party_forbidden.py for the same lesson
+    about the party's position.
+
+    What must never come back is a single merged number that hides which coil
+    you should not abseil on.
+    """
     st = inventory.state()['rope_50ft']
-    assert st[('sound', 'each')][0] == 7
-    assert st[('damaged', 'each')][0] == 1
-    assert inventory.qty('rope_50ft') == 8
+    sound = st[('sound', 'each')][0]
+    damaged = st[('damaged', 'each')][0]
+    assert damaged >= 1, 'the damaged coil has vanished from the log'
+    assert sound >= 1
+    assert inventory.qty('rope_50ft') == sound + damaged, (
+        'the total must be the sum of the condition rows, not a stored figure')
+    assert len([k for k in st if k[0] in ('sound', 'damaged')]) == 2, (
+        'sound and damaged rope have been merged into one row -- that is the '
+        'bug this test exists for')
     assert 'NOT TO BE TRUSTED' in st[('damaged', 'each')][3]
 
 

@@ -224,3 +224,4 @@ when	map	level	x	y	exped	turn	squares	feet	rate	why	route
 2026-09-16	b1	1	6	39	11	7	8	80	explore	day 95: west along the y=39 corridor to where it turns north. Walls both sides the whole run, no doors, no features	14,39 13,39 12,39 11,39 10,39 9,39 8,39 7,39 6,39
 2026-09-16	b1	1	6	41	11	7	2	20	explore	day 95: up the north leg to where the corridor opens out	6,39 6,40 6,41
 2026-09-16	b1	1	10	41	11	9	4	40	explore	day 95: east along the y=41 corridor to its end	6,41 7,41 8,41 9,41 10,41
+2026-09-16	b1	1	10	40	11	9	1	10	explore	day 95: the party goes INTO area 13, the implement room, through the door at (10,40,H)	10,41 10,40

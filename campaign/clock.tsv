@@ -785,3 +785,15 @@ when	exped	round	kind	anchor	detail	note
 2026-09-16	11	72	advance		3	day 95: north from the corner at (6,39) to the opening at (6,41) -- two squares, 20 ft, and a look round on arrival. LOOKING is not SEARCHING and is not charged as a search turn
 2026-09-16	11	82	advance		10	day 95: SEVEN SEARCH the blind alcove at (5,41) for secret doors -- one turn, everybody on the one section, which is the best-odds slowest option from the parallel-search table. Dave and Torsat stand guard on the junction and the corridors leaving it and do not search
 2026-09-16	11	87	advance		5	day 95: east along y=41 from the junction. Four squares, 40 ft, cautious mapping pace
+2026-09-16	11	89	advance		2	day 95: the standing door routine at (10,40,H) -- one round EXAMINE (latch, hinge side, sill, gap), one round LISTEN, both thieves independently. Nothing else; this party does not tap doors
+2026-09-16	11	90	advance		1	day 95: Ista pulls open the door at (10,40,H) -- unlocked, hinged to swing north into the corridor. The rest of the party stands ready in formation facing it
+2026-09-16	11	93	advance		3	day 95: into area 13, door closed behind them, two jamb wedges driven, cloaks laid along the lower edge
+2026-09-16	11	92	check	90	d6=1 -> Ores (1 -4)-AC 6, HD 1, hp 6,4,3,1, #AT 1, D1 -6 or by wea¬ pon, MV 90' (30'), Save FI, ML 8	anchor 90 + 2
+2026-09-16	11	94	advance		1	day 95: both thieves listen at the spiked door of area 13 while the other seven hold still and silent
+2026-09-16	11	104	advance		10	day 95: the party waits one full turn in area 13, silent, door wedged and cloaked, both thieves listening
+2026-09-16	11	114	advance		10	day 95: a second full turn waiting silent in area 13, both thieves on the door
+2026-09-16	11	124	advance		10	day 95: a third turn waiting silent in area 13 with the thing stopped outside the door
+2026-09-16	11	120	check	120	d6=3	anchor 120 + 0
+2026-09-16	11	194	advance		70	day 95: SEVEN TURNS, everybody on every section -- the thorough contents search of area 13, all seven 10x10 sections, eight searchers with Dave on the door. Walls looked at but NOT searched; no secret-door rolls spent
+2026-09-16	11	153	check	150	d6=1 -> Kobolds (1 -6)-AC 7, HDV 2 , hp4,3,3,2,2,1,#AT 1, D 1-4 or weapon -1, MV 90’ (30’), Save NM, ML 6	anchor 150 + 3
+2026-09-16	11	183	check	180	d6=6	anchor 180 + 3
