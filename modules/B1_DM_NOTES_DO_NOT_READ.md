@@ -4346,3 +4346,28 @@ unliftable anvil one floor up, and gnomes are the people who move rock.
 - They will not volunteer what they are doing. They will want to know **how many,
   whether the party is coming down, and what it has taken** — the last of which
   they care about for a reason they will not state.
+
+---
+
+## Day 96 — the ground round the crag's north foot (DM determination)
+
+**Rolled 2026-09-17, before the party can possibly ask, so the answer is not
+shaped by what would be convenient on the 101st.** Can a cart be got from the
+basecamp flat round the crag's north shoulder to the mouth of the dry
+watercourse, where Durnhak's people will bring the iron out?
+
+> **d6 = 3.** *Slow and awkward.* A cart **can** be walked round — the waste at
+> the foot is open enough and the gullies are crossable — but there is no trail,
+> the going is stony, and it wants a man at the head of the mule and somebody
+> walking ahead picking the line. Call it **the better part of a morning for a
+> mile**, not the hour the same distance takes on foot.
+
+**THE PARTY DOES NOT KNOW THIS AND MUST NOT BE TOLD IT.** All they have is
+Durnhak's sentence that his people cart iron off the crag by their own route.
+`campaign/knowledge.tsv` therefore carries `crag_foot_way` at **vague** and
+`watercourse` at **vague, 1,500 ft** — a bearing and a walking time, which is
+exactly what hearsay-with-a-direction means. If they scout it, append `known`.
+
+**If they take the cart round without scouting**, it works, and it costs them
+the morning. There is no trap in it. The cost is time, and time is what the
+101st is short of.
