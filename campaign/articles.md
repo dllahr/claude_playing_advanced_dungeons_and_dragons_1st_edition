@@ -1142,3 +1142,29 @@ That he can answer without it being about him."*
 >
 > **It also gets a self-interested adviser off the hook** — which is the whole reason
 > Halm can be asked about Osk at all.
+
+---
+
+## ⚖ WHERE THE MONEY IS — a standing rule, set by the player on day 99
+
+> **"We always keep the money on us when we have it. It's either with Wend or on
+> our persons."**
+
+**Two custodies and no third.** There is no cache, no strongbox at the basecamp,
+nothing buried, nothing left in a cart. If the party has drawn coin, the coin is
+on somebody's body until it is spent or handed back to Wend.
+
+**WHY IT IS WORTH WRITING DOWN:** it retires a whole class of question the DM was
+about to start asking — *did the 37 gp come into the dungeon or stay at the
+camp?* — and the answer is now derivable rather than negotiable. `money.tsv`
+tracks the SUM; this rule fixes the LOCATION. Between them nobody has to
+remember anything.
+
+**AND IT HAS TEETH THE PARTY MAY NOT HAVE INTENDED.** Coin on a person goes where
+that person goes, which means into every fight, down every shaft, and onto the
+floor if he is dropped. The 37 gp for Durnhak was in this dungeon within an hour
+of four orcs holding a corridor. *That is the party's choice and it is a coherent
+one — the alternative is a hoard somewhere undefended — but it is a choice.*
+
+*(Custody of the party's main purse is art. 1: it lives with Wend in Wethersby.
+This rule governs what has been drawn OUT of it.)*
