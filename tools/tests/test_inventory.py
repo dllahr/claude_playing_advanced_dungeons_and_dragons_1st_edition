@@ -55,8 +55,22 @@ def test_the_rations_split_that_used_to_read_as_two():
     assert 'rations_iron' in st and 'rations_std' in st, (
         'iron and standard are DIFFERENT ASSETS. The retired cell held both '
         'as "~2.5 IRON + 8 STANDARD" and every tool read it as the number 2')
-    assert (st['rations_iron'][('', 'person-week')][0] > 0
-            and st['rations_std'][('', 'person-week')][0] > 0)
+    # *** AND THE LINE THAT USED TO BE HERE PINNED THE QUANTITIES ANYWAY. ***
+    # It asserted both were > 0, four lines under a comment saying not to do
+    # that, and it went red on day 95 when the party CACHED ALL 2.5 PERSON-
+    # WEEKS OF IRON RATIONS in a smithy fire pit -- correct play, not a
+    # regression. A test that forbids the party from spending a thing is not
+    # protecting anything.
+    #
+    # The invariant is that they are TWO SEPARATE ROWS with their own units and
+    # their own quantities, so that no tool can ever read the pair as one
+    # number again. A quantity of zero satisfies that perfectly: it says "we
+    # have no iron rations", which is a fact, and the retired cell could not
+    # have said it.
+    assert st['rations_iron'] is not st['rations_std']
+    for aid in ('rations_iron', 'rations_std'):
+        assert st[aid][('', 'person-week')][0] >= 0, (
+            '%s computes negative -- that is a real error' % aid)
 
 
 def test_the_damaged_rope_is_visible_on_its_own_row():
