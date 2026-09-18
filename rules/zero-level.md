@@ -268,7 +268,8 @@ The books say **nothing** about:
 5. whether henchmen pay their own training, or the liege does
 6. whether DMG p. 86's 1,500 gp/level/week applies to NPCs at all
 7. how a *specific* NPC's class is chosen from their history (p. 35 rolls it)
-8. whether "1 in 100" is a per-person die roll or a population statistic
+8. ~~whether "1 in 100" is a per-person die roll or a population statistic~~
+   — **DECIDED day 99: a POPULATION STATISTIC. See the ruling at the foot of this file.**
 9. whether "0 level" is a permanent condition or a starting one
 
 **The only place the books call 0 level permanent is a penalty clause:**
@@ -291,3 +292,57 @@ and no class-on-promotion procedure. **Anything that feels like one is coming fr
 somewhere else.** Rulings made to bridge these gaps belong in
 `modules/B1_DM_NOTES_DO_NOT_READ.md`, marked as rulings — not restated here as if
 the books said them.
+
+---
+
+## ⚖ QUESTION 8 DECIDED, day 99: **"1 in 100" IS A POPULATION STATISTIC, NOT A PER-PERSON ROLL**
+
+Open question 8 above has sat undecided since this file was written, and on day 99
+it became load-bearing: **BRAND**, a stranger who has asked to be taught the
+party's trade, needs to know whether he may have a class at all. The day-39
+rulings in the DM notes presumed the die-roll reading — *"if we RECRUIT someone
+new, roll the 1 in 100 then"* — and this file lists the same thing as unresolved.
+**They cannot both stand. Decided here, once, in the open.**
+
+### It is a statistic. Three reasons, in order of weight.
+
+**1 · THE BOOK'S OWN GRAMMAR.** *"Characters suitable for level advancement **are
+found at a ratio of** 1 in 100"* and *"about 1 in 1,000 **population** will be
+interested."* That is the language of describing a world's composition — how many
+candidates exist in a town of two thousand. It is not the language of a test. The
+DMG writes tests as tests, and this is not one.
+
+**2 · THE CONTEXT ON p.35 IS A HIRING PROCEDURE FOR A FACELESS APPLICANT POOL.**
+The ratio exists so a DM can answer *"I post notices in a city of 20,000 — how
+many come?"* Applying it to a named man with five days of history is using a
+demographic figure as a personal verdict.
+
+**3 · AND THE DAY-39 RULING ALREADY STATED THE PRINCIPLE, THEN MISAPPLIED IT.**
+Its own words: ***"Rolling to see whether the person who did the thing is the kind
+of person who does the thing is backwards."*** It then carved out new recruits
+anyway. But the carve-out is only sound for an applicant answering an
+advertisement — the p.35 case. It is not sound for somebody whose conduct is the
+evidence.
+
+> ### THE TEST THAT REPLACES IT: **CONDUCT, NOT A DIE.**
+>
+> The gate is capacity, and **capacity is demonstrated, not diced.** DMG p.35's
+> companion sentence says so from the other side — in the book's model, *taking
+> service with an adventurer is itself the evidence of capacity.*
+>
+> **What counts:** going into danger on your own initiative and coming back;
+> learning from it; wanting to be taught. **What does not count:** being
+> impressive, being willing, or being liked. A hireling who carries a sack ten
+> miles is not evidenced; a man who walked into a hostile dungeon eleven times
+> on his own hook with three torches and kept going back is.
+
+### ⚠ WHAT THIS IS NOT
+
+**It is not a door held open for anybody the party takes a liking to.** It moves
+the question from luck to EVIDENCE, and evidence can be absent. Rowe minds beasts
+and has never gone near the crag; Tam is nine; Halm drives a cart. None of them
+is advancement-capable on this test and none should be made so out of goodwill.
+**The rule got harder to satisfy by accident and easier to satisfy on purpose.**
+
+*Applied first to Brand, day 99. Berserker is a label off B1's wandering table,
+not a class; what he becomes is still open — see L054.*
