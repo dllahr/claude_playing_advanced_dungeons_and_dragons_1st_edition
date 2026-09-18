@@ -4199,3 +4199,150 @@ continues past this point; read it before adjudicating a forced escape.
 **The counterweight and the release lever are on area 13's north wall**, which is
 through the door the party can now see — so the room and the trap are one puzzle,
 and the way out of the trap is on the far side of the grating from anyone caught.
+
+---
+
+## AREAS 15 & 16 — THE PAIRED TELEPORTATION ROOMS. Worked out day 95, BEFORE contact
+
+**The party is at (5,37) with area 15's door in front of them and it came up
+LOCKED (d6=1).** So there is time to get this right on paper. **Botching it live
+would ruin the single best trick in the module**, and the module's own
+instruction — *"the DM must turn his or her map on its side"* — is precisely the
+sort of thing that gets fumbled under narrative pressure.
+
+### Geometry, read off the database, not guessed
+
+| | area 15 | area 16 |
+|---|---|---|
+| squares | (3,37)(3,38)(3,39)(4,37)(4,38)(4,39) | (2,33)(2,34)(3,33)(3,34)(4,33)(4,34) |
+| shape | **2 wide × 3 deep**, x=3-4 | **3 wide × 2 deep**, x=2-4 |
+| door | **(4,37,V)** — EAST wall, south end | **(2,32,H)** — SOUTH wall, west end |
+| outside the door | **(5,37)**, the corridor | **(2,32)**, then (2,31) |
+| farthest corner | **(3,39)** | **(4,34)** |
+
+**In door-relative terms both rooms are 2 deep by 3 wide.** The module's *"equal
+size and shape"* is exactly true and the apparent difference is only rotation.
+
+### ⛔ THE SQUARE MAPPING — computed, do not re-derive under pressure
+
+| in area 15 | → in area 16 |
+|---|---|
+| (4,37) door square | (2,33) |
+| (4,38) | (3,33) |
+| (4,39) | (4,33) |
+| (3,37) | (2,34) |
+| (3,38) | (3,34) |
+| **(3,39) the outcropping** | **(4,34) the outcropping** |
+
+### ⛔ THE DIRECTION TRANSFORM: BELIEVED → ACTUAL IS 90° CLOCKWISE
+
+The door is on the **east** wall in 15 and the **south** wall in 16, and the
+party *will go on believing it is east*. So:
+
+| they believe | it is really |
+|---|---|
+| north | **east** |
+| east | **south** |
+| south | **west** |
+| west | **north** |
+
+**So when they leave "the way they came in" they walk SOUTH out of (2,32)** into
+corridor they have never seen, convinced they are heading east back toward the
+(5,37) dogleg. *That* is the moment the trick lands — not the teleport itself.
+
+### The trigger, verbatim, and what it catches
+
+> *"Once adventurers **enter the room to investigate this**, **the entire party**
+> is instantly teleported to identical locations at the other room — **whether
+> they be in the room itself or nearby in the hallway.** This teleportation
+> occurs without the adventurer noticing that it has occurred; that is, they have
+> **no way of 'feeling'** that anything unusual has happened."*
+
+- **Opening the door does not fire it.** Entering to investigate the outcropping does.
+- **THE WHOLE PARTY GOES, INCLUDING ANYONE LEFT ON GUARD IN THE CORRIDOR.** A
+  rearguard is no protection and posting one must not be hinted to be.
+- **No save, no sensation, no roll.** Do not offer one.
+- The outcropping is *"a shiny, sparkling outcropping of crystalline rock which
+  will dazzle when light is reflected off of it"* — and **identical in both
+  rooms**, which is what makes the second visit indistinguishable from the first.
+
+### How to run it without lying
+
+**Describe what they see, in the directions they believe they are facing.** The
+map is turned, not the narration. Never volunteer a bearing they could not have
+checked. **If they ask a direct question about direction, answer from their
+frame** — they have no compass and no sun; a wrong answer from me would be a lie,
+but "the corridor runs the way you remember" is simply their own dead reckoning
+and it is what a character would say.
+
+**And when it unravels — and the module predicts the exact words, *"wait a
+minute, that can't be like that, we just came that way"* — DO NOT CONFIRM OR
+DENY.** Let them test it. The honest tools are all on their side: pace counts,
+Tristle's and Ista's counting, the mapped squares behind them, and the fact that
+**this party writes everything down.**
+
+### ⚠ AND THE THING THAT WILL ACTUALLY EXPOSE IT
+
+They have a **map database** and they log every square they walk. The moment
+they compare a wall they can see against a wall they recorded, the geometry will
+not fit. **That is a fair win and must be allowed to happen.** Do not quietly
+adjust anything to keep the illusion alive.
+
+---
+
+## AREA 18 TREASURE B — LOCATION FIXED, day 95, BEFORE anyone searched
+
+**The stocking table gives area 18 fifteen gold pieces and the module gives no
+location.** So it was rolled the moment the party stepped inside, **not** decided
+in response to where they chose to look — which is the only way a hidden-treasure
+location can be honest.
+
+**d6 = 1 → among the TOOL RACKS AND IRONS on the WEST WALL** of the barren
+south-west portion. (3-4 would have been the ash of a fire pit, 5-6 under or
+behind the great anvil.)
+
+**Fifteen gold pieces in a smithy's tool rack** reads as a smith's own money left
+where he kept it — in a pouch or a tin among the tongs — which is consistent with
+a stronghold whose people marched out and did not come back.
+
+**It needs a search of the west-wall sections to find.** Do not hand it over on
+a walk-past, and do not move it if they search elsewhere first.
+
+---
+
+## AREA 38's OCCUPANTS — WHAT THEY ARE. Rolled day 95, d6 = 1
+
+**B1 stocks five of them and says only *"parley possible."*** The room is an old
+mining chamber — rock carts, jacks, timbers, pickaxes, no recent work. What they
+are doing there was **rolled before the party's interests could bend it**, which
+matters here more than usual, because the honest answer is awkward for them.
+
+| d6 | | |
+|---|---|---|
+| **1-2** | **SCAVENGERS** — stripping the old workings for metal. Opportunists. **No claim to the place.** | **← rolled** |
+| 3-4 | prospectors, come deliberately to assess the workings and meaning to work them | |
+| 5-6 | they live here; driven out of somewhere else; this is refuge | |
+
+### ⚠ THE AWKWARD PART, AND IT MUST NOT BE SOFTENED
+
+**The party is doing the same thing they are.** Nine people who have spent eleven
+hours carrying tools out of a storeroom, who took four hacksaws and two crosscut
+saws an hour ago, and who left twenty-nine iron bars and a great anvil behind
+**only because they could not lift them.**
+
+**These are competitors, not a quest hook.** They have no claim and neither does
+the party. Do not play them as grateful, and do not play them as a solution to
+the party's iron problem unless the party earns that — though **the convergence
+is real and the player will see it**: this district cannot get iron, there is an
+unliftable anvil one floor up, and gnomes are the people who move rock.
+
+### First contact, day 95, through the shaft
+
+- **Reaction 75** — *uncertain, leaning positive*, one point off Friendly. DMG p.63.
+- **NO COMMON between them** (d6 = 1). **Tristle's gnome is the only channel** —
+  an elf language from character generation, unused for ninety-five days.
+- **How Tristle's opening landed: d6 = 4** — *wary; they answer questions with
+  questions.* **None of them comes into the light.**
+- They will not volunteer what they are doing. They will want to know **how many,
+  whether the party is coming down, and what it has taken** — the last of which
+  they care about for a reason they will not state.

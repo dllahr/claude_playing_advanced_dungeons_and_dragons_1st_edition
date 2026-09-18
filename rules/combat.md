@@ -467,6 +467,32 @@ not the fact of being surprised:
 
 *source: **DMG p. 61**, COMBAT (ENCOUNTERS, COMBAT, & INITIATIVE).*
 
+> ### ⛔ THE TABLE ABOVE IS THE *BOTH-SURPRISED* CASE ONLY. IT WAS CACHED ALONE.
+>
+> **Found day 95, with one side surprised and the other not, and the cache had
+> no rule for it.** The sentence immediately before the table is the general
+> rule and it was left out:
+>
+> > *"**Each 1 of surprise equals 1 segment (six seconds) of time lost to the
+> > surprised party**, and during the lost time the surprising party can freely
+> > act to escape or attack or whatever. **If both parties are surprised, then
+> > the effect is negated or reduced:** [the difference table]"* — **DMG p. 61**
+>
+> | situation | lost segments |
+> |---|---|
+> | **ONE side surprised** | **the surprised side's OWN DIE ROLL.** A 1 costs one segment, a 2 costs two |
+> | **BOTH sides surprised** | **the DIFFERENCE**, per the table above |
+>
+> **So a lower roll is BETTER for the surprised side**, which is counter-intuitive
+> and is why it must be written down. Day 95, expedition 11, at the smithy door:
+> the party rolled 6 against a 1-5 range and was not surprised; the huge spiders
+> rolled **1** and lost **one** segment. Had they rolled 2 they would have lost
+> two, and two segments is two full rounds of attacks against a helpless enemy.
+>
+> *This is the same failure this file already warns about in its own header — **A
+> PARAPHRASE LOSES CONDITIONS** — committed by the file itself. The difference
+> table is the exception; the sentence above it is the rule.*
+
 > *"If surprise is indicated for both parties concerned, the party which has
 > lesser surprise subtracts its result from the result of the greater to find the
 > number of segments the latter are inactive. Nonetheless, it is possible for

@@ -161,9 +161,38 @@ coaching.**
 
 ---
 
-## THE PATTERN — worth knowing before offering anybody anything
+## THE PATTERN — FOUR HUMAN DEPENDENTS IN ONE DISTRICT. READ THE SCOPE FIRST.
 
-Four reactions in two days, all to acts of kindness:
+> ### ⛔ SCOPE, added day 95 after the DM applied this to GNOMES underground
+>
+> **Player:** *"the rule about gifts land badly applies to the above-ground
+> humans. There's no reason to expect the same culture for a different race,
+> underground. Also, where did the rule of gifts land badly come from? I don't
+> think it should be a universal rule for all humans."*
+>
+> **He is right, and the evidence below is the proof.** It is **four
+> observations over two days**: Hask, Osk, Ista and Bern. Every one of them is
+>
+> - **human**, and
+> - **in or adjacent to the party's employ**, and
+> - **of low standing relative to the party**, and
+> - **in Wethersby, above ground**, and
+> - **already holding something the party gave them.**
+>
+> **The mechanism is a DEBT THEY CANNOT PAY.** Where that condition is absent
+> the finding says nothing — not the opposite, *nothing*. A stranger who owes
+> the party nothing is outside it. A different race with a different culture is
+> outside it. The heading used to read *"before offering ANYBODY anything"* and
+> that was wrong on its own four data points.
+>
+> **What happened on day 95:** the DM used it to set the failure band on an oil
+> offer to gnome scavengers forty feet down a shaft — strangers, another race,
+> underground, owing nothing — **having written "these owe nothing" into his own
+> reasoning and then applied it regardless.** The roll was voided and re-rolled
+> on bands about CAUTION, which is what the situation actually contained.
+
+Four reactions in two days, all to acts of kindness, **all to the party's own
+low-standing human dependents in Wethersby**:
 
 | | | |
 |---|---|---|

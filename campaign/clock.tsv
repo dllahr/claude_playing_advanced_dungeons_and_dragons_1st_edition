@@ -797,3 +797,94 @@ when	exped	round	kind	anchor	detail	note
 2026-09-16	11	194	advance		70	day 95: SEVEN TURNS, everybody on every section -- the thorough contents search of area 13, all seven 10x10 sections, eight searchers with Dave on the door. Walls looked at but NOT searched; no secret-door rolls spent
 2026-09-16	11	153	check	150	d6=1 -> Kobolds (1 -6)-AC 7, HDV 2 , hp4,3,3,2,2,1,#AT 1, D 1-4 or weapon -1, MV 90’ (30’), Save NM, ML 6	anchor 150 + 3
 2026-09-16	11	183	check	180	d6=6	anchor 180 + 3
+2026-09-16	11	239	advance		45	day 95: the thorough wall search of area 13 begins -- seven sections, eight searchers, Dave on the door. First 45 rounds
+2026-09-16	11	212	check	210	d6=1 -> Berserkers (1-2)-AC 7, HD 1 +1’, hp 5,4, #AT 1, D 1-8 or by weapon, MV 90' (30'), Save FI, ML 12	anchor 210 + 2
+2026-09-16	11	265	advance		26	day 95: the thorough wall search of area 13 completed -- seven sections, eight searchers, 56 rolls. Plus one round to top off Ista's lamp at 1 round remaining
+2026-09-16	11	241	check	240	d6=5	anchor 240 + 1
+2026-09-16	11	268	advance		3	day 95: gathering the remaining saws, recovering the cloaks, drawing both jamb wedges, and out into the corridor
+2026-09-16	11	298	advance		30	day 95: Tristle and Ista work east past the portcullis slot a square at a time, searching each 10-ft section of floor before standing on it -- three sections, one turn each (DMG). The other seven hold at (10,41)
+2026-09-16	11	270	check	270	d6=2	anchor 270 + 0
+2026-09-16	11	301	advance		3	day 95: the party retraces the western limb back to the (14,39) intersection at known-route pace, 450 ft/turn
+2026-09-16	11	305	advance		4	day 95: three squares north up x=14 from the intersection, cautious mapping pace
+2026-09-16	11	302	check	300	d6=5	anchor 300 + 2
+2026-09-16	11	316	advance		11	day 95: west along the y=42 corridor from (14,42) to the corner at (4,42) -- ten squares, 100 ft, cautious mapping pace. ALL NEW GROUND
+2026-09-16	11	320	advance		4	day 95: south from the (4,42) corner to the crossing at (4,40), then east one square to (5,40). Three squares, 30 ft, cautious mapping pace, all new ground
+2026-09-16	11	324	advance		4	day 95: south from (5,40) down the new corridor to the door, three squares, 30 ft, cautious mapping pace
+2026-09-16	11	326	advance		2	day 95: the standing door routine at (4,37,V) -- one round examine, one round listen with both thieves. No tapping
+2026-09-16	11	337	advance		11	day 95: two floor spikes into the locked door at (4,37,V), then ONE TURN with seven searching the (6,37) alcove for secret doors while Dave and Torsat guard facing north
+2026-09-16	11	335	check	330	d6=5	anchor 330 + 5
+2026-09-16	11	338	advance		1	day 95: Tristle's one attempt on the (4,37,V) lock
+2026-09-17	11	339	advance		1	day 95: Ista's one attempt on the (4,37,V) lock, with Tristle's tools
+2026-09-17	11	340	advance		1	day 95: Dave's one attempt at forcing the (4,37,V) door
+2026-09-17	11	350	advance		10	day 95: Tristle and Ista oil the hinges of (4,37,V), let it soak, and try to drift the pins. The pins are blind
+2026-09-17	11	380	advance		30	day 95: THREE TURNS with the hacksaw on the lock at (4,37,V). Tristle and Ista working in turns, the other seven in formation guarding north. No roll to succeed -- physical work costs time, not dice
+2026-09-17	11	364	check	360	d6=6	anchor 360 + 4
+2026-09-17	11	384	advance		4	day 95: into area 15 in formation and across to the outcropping
+2026-09-17	11	387	advance		3	day 95: Tristle pokes the door with the ten-foot pole, then he and Ista run the standing door routine on it -- examine one round, listen one round, both thieves
+2026-09-17	11	388	advance		1	day 95: Tristle's attempt on the (2,32,H) lock, the rest of the party stood to with weapons ready
+2026-09-17	11	390	advance		2	day 95: the party steps out of the room into the corridor beyond and looks down both passages
+2026-09-17	11	391	advance		1	day 95: a wooden spike tossed back into the room from the passage
+2026-09-17	11	392	advance		1	day 95: Tristle steps into the room
+2026-09-17	11	393	advance		1	day 95: Ista steps into the room
+2026-09-17	11	393	check	390	d6=5	anchor 390 + 3
+2026-09-17	11	394	advance		1	day 95: Ista steps back out of the room and rejoins the eight in the passage. Tristle stays inside. NOTHING FIRES -- the trigger is ENTERING, not leaving, and this is the party's control test
+2026-09-17	11	398	advance		4	day 95: Tristle picks up the spike, out, in, out again
+2026-09-17	11	405	advance		7	day 95: north from the dogleg at (5,37) to (5,40), west through the crossing at (4,40) and on to (2,40) where the corridor turns. Six squares, 60 ft, cautious mapping pace
+2026-09-17	11	411	advance		6	day 95: south down the new west corridor from (2,40) to the turn at (2,35). Five squares, 50 ft, cautious mapping pace, all new ground
+2026-09-17	11	414	advance		3	day 95: east one square to (3,35) and north through the opening into (3,36)
+2026-09-17	11	434	advance		20	day 95: TWO TURNS, seven searchers on both sections of the (3,36)-(4,36) pocket. Dave and Torsat hold the entrance
+2026-09-17	11	420	check	420	d6=6	anchor 420 + 0
+2026-09-17	11	438	advance		4	day 95: back out of the pocket and east along y=35 to its end at (5,35). Three squares, 30 ft, cautious mapping pace
+2026-09-17	11	448	advance		10	day 95: ONE TURN, seven searchers on the (5,36) recess. Dave and Torsat hold the junction looking both ways
+2026-09-17	11	453	advance		5	day 95: top up the lamp, then south from (5,35) to the turn at (5,32). Three squares, 30 ft, cautious mapping pace
+2026-09-17	11	453	check	450	d6=2	anchor 450 + 3
+2026-09-17	11	457	advance		4	day 95: west along y=32 from the turn. Three squares, 30 ft, cautious mapping pace -- and it arrives at the door of the SECOND swapping room, ON FOOT, exactly where Tristle's pace count said it would
+2026-09-17	11	459	advance		2	day 95: south one square from the swapping room's door to the junction at (2,31)
+2026-09-17	11	469	advance		10	day 95: south down x=2 from the junction at (2,31) to the turn at (2,22). Nine squares, 90 ft, cautious mapping pace, walls both sides the whole way
+2026-09-17	11	472	advance		3	day 95: east along y=22 from the turn, two squares to (4,22) where it turns south again
+2026-09-17	11	476	advance		4	day 95: south from (4,22) to (4,19), three squares, 30 ft, cautious mapping pace
+2026-09-17	11	479	advance		3	day 95: one square west, then the standing door routine on (3,19,H) -- examine, then listen with both thieves
+2026-09-17	11	480	advance		1	day 95: Dave shoves the (3,19,H) door open and steps back into formation
+2026-09-17	11	481	advance		1	day 95: sounding the floor and the soot of area 17 with the ten-foot pole from the corridor side, as far as it reaches
+2026-09-17	11	483	advance		2	day 95: nine into area 17 and the door closed behind them
+2026-09-17	11	482	check	480	d6=4	anchor 480 + 2
+2026-09-17	11	485	advance		2	day 95: Tristle sounds the west door of area 17 with the ten-foot pole, then prods the charcoal pile. The other eight in formation covering him
+2026-09-17	11	526	advance		41	day 95: two floor spikes and the cloaks down, then FOUR TURNS -- eight searchers on every one of area 17's four sections. Dave guarding the door
+2026-09-17	11	513	check	510	d6=2	anchor 510 + 3
+2026-09-17	11	530	advance		4	day 95: spikes out, cloaks up, out of area 17, and the standing door routine on (4,18,H)
+2026-09-17	11	532	advance		2	day 95: one square into area 18 and a look round from just inside the door
+2026-09-17	11	543	advance		11	day 95: two jamb wedges and the cloaks down, then ONE TURN with all nine searching the north-west section of the smithy, (3,18)
+2026-09-17	11	541	check	540	d6=1 -> Troglodytes (1-2)-AC 5, HD 2', hp 6,5, #AT 3, D 1-4/1-4/ 1-4, MV 120' (40'), Save F2, ML 9	anchor 540 + 1
+2026-09-17	11	546	advance		3	day 95: across the smithy into its north-east part
+2026-09-17	11	549	advance		3	day 95: east one square and the standing door routine on (6,18,H) -- examine, then listen with both thieves
+2026-09-17	11	570	advance		21	day 95: two jamb wedges and cloaks on the corner door, ONE TURN searching the north-east corner (6,20) with all nine, and ONE TURN working the three ash pits over with the ten-foot poles
+2026-09-17	11	580	advance		10	day 95: ONE TURN, seven of them over the great anvil and its block. Dave on the east door, Torsat on the west
+2026-09-17	11	574	check	570	d6=6	anchor 570 + 4
+2026-09-17	11	610	advance		30	day 95: THREE TURNS, seven searchers on every one of the smithy's three remaining north-east sections -- (5,19), (6,19), (5,20). Dave and Torsat on the doors
+2026-09-17	11	600	check	600	d6=6	anchor 600 + 0
+2026-09-17	11	660	advance		50	day 95: FIVE TURNS, seven searchers on every one of the smithy's five remaining south-west sections -- (3,17), (4,17), (5,17), (4,18), (5,18). *** (3,17) IS WHERE B1'S TREASURE B SITS, fixed by two rolls before the party ever set foot in the room: d6=1 put it in the tool racks on the west wall, d2=2 put it in the southern of the two west-wall sections ***
+2026-09-17	11	635	check	630	d6=5	anchor 630 + 5
+2026-09-17	11	665	advance		5	day 95: lamp topped off, and the two bodies gone over and the arrows gathered
+2026-09-17	11	662	check	660	d6=4	anchor 660 + 2
+2026-09-17	11	668	advance		3	day 95: all four spikes drawn, cloaks up, and Dave shoves the corner door open
+2026-09-17	11	673	advance		5	day 95: nine into the access room, the corner door closed behind them, and the standing routine on the south-wall door (6,16,H)
+2026-09-17	11	675	advance		2	day 95: four floor spikes -- two in each of the access room's doors -- and the cloaks down along both
+2026-09-17	11	679	advance		4	day 95: Torsat's lantern lit, tied to a rope's end, and lowered slowly down the three-foot shaft
+2026-09-17	11	681	advance		2	day 95: the lantern hauled back up to hang at the cavern roof, lighting the space from above, and Dave hails them in Common down the shaft
+2026-09-17	11	683	advance		2	day 95: Tristle's second exchange down the shaft
+2026-09-17	11	686	advance		3	day 95: the lamp lowered to the cavern floor and the oil offered
+2026-09-17	11	689	advance		3	day 95: Tristle names himself and trades what the party has fought for whatever Durnhak will say
+2026-09-17	11	693	advance		4	day 95: Tristle warns them about the spiders, asks how they avoid the reptile-men, disclaims any reason to come down, and offers resupply from town
+2026-09-17	11	693	check	690	d6=2	anchor 690 + 3
+2026-09-17	11	696	advance		3	day 95: Tristle tells them what the party is carrying, and tells them about area 13's iron, the charcoal and the smithy tools
+2026-09-17	11	698	advance		2	day 95: Tristle asks Durnhak to say which way round the half is meant
+2026-09-17	11	701	advance		3	day 95: terms -- market, payment timing, and rendezvous
+2026-09-17	11	761	advance		60	day 95: THE HAUL. Nine carriers, packs and all spare gear left in area 19, door left unspiked. Out to area 13 empty at known rate, load 28 of the 29 iron bars, and back 680 ft at 6 inch movement. About six turns
+2026-09-17	11	720	check	720	d6=5	anchor 720 + 0
+2026-09-17	11	755	check	750	d6=3	anchor 750 + 5
+2026-09-17	11	764	advance		3	day 95: Tristle gives Durnhak the Wethersby iron price, the reckoning on 588 lb, and the quarter
+2026-09-17	11	809	advance		45	day 95: THE WALK OUT, 700 ft from area 13 to the entrance, all known and spiked ground. *** NEW FORMATION, first use: TRISTLE FORTY FEET AHEAD, bow strung, moving silently at 30%, USING INFRAVISION -- at 40 ft he is clear of the lamp's 30 ft washout and his sixty feet of heat-sight works for the first time in the campaign. Eight behind with the lamp. *** Loaded to 6-inch movement with 421 lb of salvage, and scout discipline on top -- about four and a half turns rather than two
+2026-09-17	11	782	check	780	d6=4	anchor 780 + 2
+2026-09-17	11	825	advance		16	day 95: TIME CORRECTION. The 45 rounds charged for the walk out priced only area 13 -> entrance, 700 ft. The party actually went AREA 19 -> through the smithy -> AREA 13 (680 ft, unloaded, known rate) and THEN out (700 ft, loaded, 6-inch). 1,380 ft in all. Sixteen rounds added; the tool caught it by refusing a move from (6,17) that the narration had at (11,40)
+2026-09-17	11	812	check	810	d6=1 -> GiantCentipedes(1-2)-AC9, HDV 2 , hp2,2,#AT 1, Dpoi¬ son, MV 60' (20'), Save NM, ML 7	anchor 810 + 2
+2026-09-17	11	839	advance		14	day 95: the last thirteen squares out to the threshold, with Brand walking alongside and talking
