@@ -28,24 +28,35 @@
 #
 # Columns: level, x, y, why. Keep `why` short enough to print in a warning.
 #
-# *** DAY 95: THE MOUTH CORRIDOR ROWS ARE SPENT, NOT WRONG. LEFT IN AND MARKED. ***
+# *** DAY 95: I CLAIMED THESE ROWS WERE SPENT. THEY ARE NOT. RETRACTED. ***
 #
-# Brand and Orm -- two strangers met in the entrance corridor -- walked up to
-# alcove pair 3 on the afternoon of day 95, triggered the double magic mouth,
-# and fled. PHB p.71: "UNTIL THE SPEAK COMMAND CAN BE FULFILLED, the magic
-# mouth will remain in effect, thus spell duration is variable." It lasts until
-# it speaks. IT HAS SPOKEN. Both mouths are discharged and (16,14)-(16,18) is
-# now an ordinary corridor.
+# The DM reasoned from PHB p.71 -- a magic mouth lasts "until the speak command
+# can be fulfilled" -- that two strangers triggering the mouths had discharged
+# them, and told the player an eleven-expedition detour was over.
 #
-# ELEVEN EXPEDITIONS of walking sixty feet round it, and it was spent by two men
-# who had never been past the entrance, by accident, an hour before the party
-# met them -- and the party only learned it because it TALKED TO THEM instead of
-# fighting them.
+# *** B1 SAYS THE OPPOSITE, FOUR LINES FURTHER ON THAN THE DM READ: ***
 #
-# THE ROWS STAY UNTIL THE PARTY HAS WALKED IT. Frython knows what a magic mouth
-# is; that is class knowledge, not a guess. But knowing and having walked it are
-# different things, and the router should keep refusing until the fiction has
-# caught up. STRIKE THESE FIVE ROWS THE MOMENT THEY DO.
+#   "The mouths will then begin a loud and raucous laughter, which fades in
+#    intensity as the twin mouths disappear from view. THEY ARE A PERMANENT
+#    FEATURE OF THE STRONGHOLD, AND WILL REAPPEAR ON EVERY VISIT."
+#
+# The module overrides the spell's duration explicitly, and B1_DM_NOTES has
+# quoted that exact line correctly the whole time. THE DM DID NOT READ HIS OWN
+# NOTES.
+#
+# AND THE PLAYER CAUGHT IT FROM PLAY, NOT FROM THE BOOK: the party used this
+# corridor on expeditions 1, 2 and 3 and only took the alternate route from
+# expedition 4. The mouths fired SIX TIMES for them, in and out. They know the
+# three lines by heart. Brand recited them something they could have said along
+# with him.
+#
+# *** SO THE DETOUR WAS NEVER ABOUT NOT KNOWING. IT IS ABOUT NOISE. *** Two
+# booming voices and raucous laughter in a stone corridor announce the party to
+# the whole level, which is what "THE REAL OBSTACLE IS THE MAGIC MOUTHS" means
+# in the DM notes. Sixty feet is the price of arriving unannounced, and it is
+# cheap.
+#
+# THESE ROWS STAND. Do not strike them.
 level	x	y	why
 1	16	14	same corridor, under the MAGIC MOUTHS -- see (16,17)
 1	16	15	same corridor, under the MAGIC MOUTHS -- see (16,17)
