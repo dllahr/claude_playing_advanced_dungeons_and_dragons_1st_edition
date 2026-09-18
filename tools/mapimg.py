@@ -198,10 +198,30 @@ def svg(pts=None, kn=None, true=False, px_per_mile=PX_PER_MILE):
         drawn = _wander(r['id'],
                         [(X(pts[s][0]), Y(pts[s][1])) for s in seq], kind)
         d = _smooth(drawn)
+        # *** A WAY THE PARTY HAS ONLY BEEN TOLD ABOUT IS NOT A ROAD, AND UNTIL
+        # *** DAY 98 THIS FILE DREW THEM IDENTICALLY.
+        #
+        # knowledge.tsv has always graded ways as well as places -- ways() reads
+        # it to decide whether to draw a road AT ALL -- and the renderer then
+        # threw the distinction away, so `crag_trail` (Coll's graded, licensed,
+        # cart-passable trail, walked every expedition since day 20) and
+        # `crag_foot_way` (a line drawn on one sentence from a gnome, never once
+        # set foot on) came out as the same tan dashes in one continuous stroke.
+        #
+        # The player read that picture exactly as it was drawn and planned a
+        # route down it. *** THAT IS THE ONE FAILURE A MAP OF KNOWLEDGE MUST NOT
+        # HAVE: places carry their doubt as a dashed ring and ways carried none.
+        # *** Drawn now in the same uncertainty red as the rings, so the two
+        # halves of the knowledge layer speak the same language.
+        vague_way = land.level_of(r['id'], kn) == land.VAGUE
         # A TRACK IS NOT A ROAD and the drawing says so: rugged terrain for a
         # vehicle, so fifteen miles a day for a cart rather than twenty-five.
         # A PATH IS NEITHER -- feet and hooves, and no cart at all.
-        if kind == 'road':
+        if vague_way:
+            o.append('<path d="%s" fill="none" stroke="#c84422" '
+                     'stroke-opacity="0.55" stroke-width="1.6" '
+                     'stroke-linecap="round" stroke-dasharray="9 5 2 5"/>' % d)
+        elif kind == 'road':
             o.append('<path d="%s" fill="none" stroke="#b9a77e" '
                      'stroke-width="5" stroke-linecap="round"/>' % d)
             o.append('<path d="%s" fill="none" stroke="#8d7b52" '
@@ -219,7 +239,9 @@ def svg(pts=None, kn=None, true=False, px_per_mile=PX_PER_MILE):
         # and the way round the north foot each wrote their name on top of the
         # place they end at. The drawn midpoint is always between things.
         mx, my = drawn[len(drawn) // 2]
-        way_labels.append((mx + 7, my - 7, name))
+        way_labels.append((mx + 7, my - 7,
+                           ('~ ' + name) if vague_way else name,
+                           vague_way))
 
     # *** the knowledge layer, drawn rather than footnoted ***
     for pid, (fx, fy, r) in sorted(real.items()):
@@ -311,14 +333,15 @@ def svg(pts=None, kn=None, true=False, px_per_mile=PX_PER_MILE):
     # A road with nowhere to put its name is dropped in silence and that is the
     # right trade: the line is still drawn and still legible, whereas a place
     # whose name is lost is unreadable. Places are named in `unlabelled`.
-    for lx, ly, name in way_labels:
+    for lx, ly, name, vague_way in way_labels:
         tw, th = len(name) * 11 * 0.5, 14
         for dx, dy in ((0, 0), (0, 20), (0, -18), (-tw - 14, 0), (-tw - 14, 18)):
             if free(lx + dx, ly + dy - th, tw, th):
                 placed.append((lx + dx, ly + dy - th, tw, th))
                 o.append('<text x="%.1f" y="%.1f" font-size="11" '
-                         'fill="#8d7b52" font-style="italic">%s</text>'
-                         % (lx + dx, ly + dy, esc(name)))
+                         'fill="%s" font-style="italic">%s</text>'
+                         % (lx + dx, ly + dy,
+                            '#c84422' if vague_way else '#8d7b52', esc(name)))
                 break
 
     # scale bar, in real units, at the real scale
@@ -340,7 +363,8 @@ def svg(pts=None, kn=None, true=False, px_per_mile=PX_PER_MILE):
 
     title = ('THE TRUE MAP — DM ONLY' if true else "THE PARTY'S MAP")
     sub = ['computed from places.tsv and knowledge.tsv',
-           'a dashed ring is how far out the party would be']
+           'a dashed ring is how far out the party would be',
+           'RED, BROKEN AND MARKED ~ : told about, never walked']
     if unlabelled:
         # Say so, exactly as the terminal renderer does. A drawing that loses a
         # name in silence is worse than a terminal that admits it.
