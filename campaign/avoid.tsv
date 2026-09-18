@@ -27,6 +27,25 @@
 # effect of asking to go somewhere else.
 #
 # Columns: level, x, y, why. Keep `why` short enough to print in a warning.
+#
+# *** DAY 95: THE MOUTH CORRIDOR ROWS ARE SPENT, NOT WRONG. LEFT IN AND MARKED. ***
+#
+# Brand and Orm -- two strangers met in the entrance corridor -- walked up to
+# alcove pair 3 on the afternoon of day 95, triggered the double magic mouth,
+# and fled. PHB p.71: "UNTIL THE SPEAK COMMAND CAN BE FULFILLED, the magic
+# mouth will remain in effect, thus spell duration is variable." It lasts until
+# it speaks. IT HAS SPOKEN. Both mouths are discharged and (16,14)-(16,18) is
+# now an ordinary corridor.
+#
+# ELEVEN EXPEDITIONS of walking sixty feet round it, and it was spent by two men
+# who had never been past the entrance, by accident, an hour before the party
+# met them -- and the party only learned it because it TALKED TO THEM instead of
+# fighting them.
+#
+# THE ROWS STAY UNTIL THE PARTY HAS WALKED IT. Frython knows what a magic mouth
+# is; that is class knowledge, not a guess. But knowing and having walked it are
+# different things, and the router should keep refusing until the fiction has
+# caught up. STRIKE THESE FIVE ROWS THE MOMENT THEY DO.
 level	x	y	why
 1	16	14	same corridor, under the MAGIC MOUTHS -- see (16,17)
 1	16	15	same corridor, under the MAGIC MOUTHS -- see (16,17)

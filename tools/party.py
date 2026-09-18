@@ -308,6 +308,15 @@ def build_parser():
                     help='how many squares you EXPECT the route to be. A '
                          'longer one is refused. Also confirms a deliberate '
                          'detour, which is otherwise refused automatically.')
+    mv.add_argument('--anyway', action='store_true',
+                    help='THE DELIBERATE OVERRIDE for campaign/avoid.tsv. Walk '
+                         'ground the campaign has ruled out because the party '
+                         'has genuinely decided to. *** THIS FLAG EXISTED IN '
+                         'move() FROM THE START AND WAS NEVER WIRED TO THE CLI, '
+                         'and the test guarding it only checked that the STRING '
+                         '"--anyway" appeared in the source -- which it did, in '
+                         'an error message. Wired day 95, when the party tried '
+                         'to use it to walk the magic-mouth corridor. ***')
     mv.add_argument('--exped', default='')
     mv.add_argument('--turn', default='')
 
@@ -345,7 +354,7 @@ def main(argv=None):
         try:
             steps, crossed, feet = move(a.to, a.why, a.rate, a.db,
                                         a.log_file, a.map, a.exped, a.turn,
-                                        a.max_squares)
+                                        a.max_squares, a.anyway)
         except ValueError as e:
             print('REFUSED: %s' % e)
             return 1

@@ -205,3 +205,27 @@ def test_going_in_deliberately_is_still_possible_and_must_be_SAID():
     allowed = dmap.avoid_set(1, allow=[(16, 17)])
     assert (16, 17) not in allowed
     assert (17, 21) in allowed, '--through must free ONE square, not all of them'
+
+
+def test_the_anyway_OVERRIDE_IS_ACTUALLY_A_FLAG_not_just_a_string():
+    """*** THE OLD TEST PASSED ON AN ERROR MESSAGE. ***
+
+    It asserted `"--anyway" in src`, and the string was in the source -- inside
+    the text of the refusal that tells you to pass it. The flag itself was never
+    added to the argument parser, so for the whole life of that test the
+    documented override DID NOT EXIST. Found day 95 when the party tried to use
+    it to walk the magic-mouth corridor and argparse said 'unrecognized
+    arguments: --anyway'.
+
+    A test that greps for the name of a feature is not a test that the feature
+    works. This one parses.
+    """
+    p = party.build_parser()
+    a = p.parse_args(['move', '--to', '1,1', '--anyway'])
+    assert a.anyway is True
+    assert p.parse_args(['move', '--to', '1,1']).anyway is False
+    import inspect
+    src = inspect.getsource(party.main)
+    assert 'a.anyway' in src, (
+        'the flag parses but main() never passes it to move() -- which is the '
+        'same hole one layer down')
