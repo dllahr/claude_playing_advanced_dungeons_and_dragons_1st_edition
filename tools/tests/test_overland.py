@@ -447,3 +447,38 @@ def test_the_precedents_are_quoted_not_just_cited():
     assert 'BACK IN WETHERSBY, late afternoon' in flat
     assert 'litter of two poles and the bearskin' in flat
     assert 'A LITTER IS NOT FASTER THAN A MAN WHO CAN WALK' in flat
+
+
+def test_a_short_leg_warns_that_a_DAILY_rate_is_not_an_HOURLY_pace():
+    """*** PLAYER-CAUGHT, DAY 98, AND THE TOOL INVITED THE ERROR. ***
+
+    Basecamp to the dry watercourse is 2 miles. `off the road` divides DMG
+    p.58's 10 mi/day and prints "0.2 - 0.3 days", which the DM read as two and a
+    half hours and narrated an afternoon around. The player:
+
+        "If we took 2 hours to go those 2 miles, which would be very, very
+         slow, we would be there at 1 PM."
+
+    He is right. A daily rate already carries rests, obstacles and the fact that
+    nobody marches ten hours at one pace, so dividing it is correct at the scale
+    it was written for -- Wethersby to Ludbury -- and absurd below a few miles.
+
+    The FIGURES are not changed; they are the book's. The warning is what is
+    added, because the failure was in the reading.
+    """
+    short = land.how_long(2.0)
+    assert any('SHORT LEG' in line for line in short), \
+        'a 2-mile leg printed daily-rate divisions with no caveat'
+    assert any('mi/hour' in line for line in short), \
+        'the caveat must give an actual pace to use instead'
+
+
+def test_a_DAY_SCALE_leg_does_NOT_carry_the_warning():
+    """The caveat must not become noise on the legs the model is right for.
+
+    Wethersby to Ludbury is 125 miles and "4.7 - 7.0 days by cart" is exactly
+    what DMG p.58 is for. A warning printed on every answer is a warning nobody
+    reads.
+    """
+    assert not any('SHORT LEG' in line for line in land.how_long(125.0))
+    assert land.SHORT_LEG_MI < 20, 'the threshold has grown into the day scale'

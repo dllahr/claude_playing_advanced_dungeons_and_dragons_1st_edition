@@ -151,6 +151,35 @@ def days_range(m, mode='cart'):
     return mid * (1 - SPREAD), mid * (1 + SPREAD)
 
 
+# *** A DAILY RATE IS NOT AN HOURLY PACE, AND DIVIDING ONE BY A DAY IS WRONG ON
+# *** A SHORT LEG. Player-caught, day 98.
+#
+# rules/overland.md's figures are DMG p.58 DAILY rates: what a party covers in a
+# day of travel, rests, obstacles, watering and all. Everything in this file
+# divides them, which is right at the scale they were written for -- Wethersby to
+# Ludbury, Draycot to the south-west way -- and quietly absurd below it.
+#
+# THE CASE: basecamp to the dry watercourse is 2 miles. "off the road" divides
+# 10 mi/day and prints 0.2-0.3 days, which the DM read as two and a half hours
+# and narrated. The player: "If we took 2 hours to go those 2 miles, which would
+# be very, very slow, we would be there at 1 PM." He is right. A party on a
+# beaten trail walks two miles in an hour and a half without trying.
+#
+# The numbers are NOT changed -- they are the book's and they are correct for a
+# day's march. What is added is the warning, because the failure was in the
+# READING and the tool printed a figure that invited it.
+SHORT_LEG_MI = 6.0
+SHORT_LEG_WARNING = [
+    '  *** SHORT LEG -- THESE TIMES ARE DAILY RATES DIVIDED AND THEY OVERSTATE',
+    '  IT. *** DMG p.58 gives what a party covers in a DAY, rests and obstacles',
+    '  included; nobody walks a full day at a constant pace. Under a few miles,',
+    '  cost it at the ACTUAL pace: ~3 mi/hour on a road, ~2 leading animals,',
+    '  ~1.5 over rough ground or a game trail, and less only if something in the',
+    '  fiction says so. THE DISTANCE IS STILL EXACT. It is the clock that needs',
+    '  reading with judgment.',
+]
+
+
 def how_long(m):
     """Every ordinary way of covering `m` miles, as a range of days.
 
@@ -167,6 +196,9 @@ def how_long(m):
                         ('walk', 'walking laden'), ('walk_rough', 'off the road')):
         lo, hi = days_range(m, mode)
         out.append('%-18s %4.1f - %.1f days' % (label, lo, hi))
+    if m < SHORT_LEG_MI:
+        out.append('')
+        out += SHORT_LEG_WARNING
     return out
 
 
