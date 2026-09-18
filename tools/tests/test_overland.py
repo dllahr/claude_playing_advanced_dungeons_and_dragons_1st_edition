@@ -466,7 +466,7 @@ def test_a_short_leg_warns_that_a_DAILY_rate_is_not_an_HOURLY_pace():
     The FIGURES are not changed; they are the book's. The warning is what is
     added, because the failure was in the reading.
     """
-    short = land.how_long(2.0)
+    short = overland.how_long(2.0)
     assert any('SHORT LEG' in line for line in short), \
         'a 2-mile leg printed daily-rate divisions with no caveat'
     assert any('mi/hour' in line for line in short), \
@@ -480,5 +480,5 @@ def test_a_DAY_SCALE_leg_does_NOT_carry_the_warning():
     what DMG p.58 is for. A warning printed on every answer is a warning nobody
     reads.
     """
-    assert not any('SHORT LEG' in line for line in land.how_long(125.0))
-    assert land.SHORT_LEG_MI < 20, 'the threshold has grown into the day scale'
+    assert not any('SHORT LEG' in line for line in overland.how_long(125.0))
+    assert overland.SHORT_LEG_MI < 20, 'the threshold has grown into the day scale'
