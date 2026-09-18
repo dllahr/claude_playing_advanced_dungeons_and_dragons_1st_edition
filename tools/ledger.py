@@ -50,6 +50,7 @@ import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from tsvlog import read_tsv                                      # noqa: E402
+import inventory as invmod                                       # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 LOG = os.path.join(ROOT, 'campaign', 'money.tsv')
@@ -194,6 +195,23 @@ def check(log=None, ass=None):
         if a in ('', ANCHOR) or a not in ass:
             continue
         if ass[a].get('kind') in SERVICE_KINDS:
+            continue
+        # *** AN ASSET COUNTED BY ANOTHER TOOL CANNOT HAVE AN INVENTORY ROW,
+        # *** SO DEMANDING ONE IS THE CHECKER CRYING WOLF.
+        #
+        # `inventory.FOREIGN` is the list of things inventory.py deliberately
+        # does not count: oil, which `light.py` owns because only that log knows
+        # which flasks have been broached, and coin, which `ledger.py` owns.
+        # log.py REFUSES an inventory row for them -- so the first time oil was
+        # ever bought with a money row naming `oil_flask` (day 97, two flasks,
+        # every flask in Wethersby) this check demanded a row that the write
+        # path is built to reject, and turned a test red on a correct entry.
+        #
+        # CLAUDE.md, on audit.py and by extension every checker here: "IF IT
+        # EVER CRIES WOLF, LOOSEN THE CHECKER -- do not learn to pass
+        # --no-verify." The double entry is still enforced; the other half of it
+        # just lives in campaign/light.tsv, which is where it belongs.
+        if a in invmod.FOREIGN:
             continue
         if a not in held:
             out.append(('WARN', 'asset %r (%s) has money against it but NO ROW '

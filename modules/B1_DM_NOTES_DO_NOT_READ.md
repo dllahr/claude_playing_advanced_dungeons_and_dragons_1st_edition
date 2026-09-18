@@ -4371,3 +4371,51 @@ exactly what hearsay-with-a-direction means. If they scout it, append `known`.
 **If they take the cart round without scouting**, it works, and it costs them
 the morning. There is no trap in it. The cost is time, and time is what the
 101st is short of.
+
+---
+
+## Day 97 — MUND THE SMITH, and a thing the party has not found out
+
+**Rolled 2026-09-18, before the party walks into his shop.**
+
+Three determinations for the morning's buying:
+
+| roll | result |
+|---|---|
+| **Can Wethersby supply 200 spikes + 20 lb nails in a morning, off-market?** | **d6=5 — yes**, he has the lot or can get it from stock in the hundred |
+| **Nine flasks of lamp oil** | **d6=2 → d2=2. TWO FLASKS.** That is all there is |
+| **Twelve person-weeks of standard rations, early spring, before harvest** | **d6=4 → d4=2.** Two weeks at the ordinary 3 gp; **about six more at a premium; the town cannot do twelve** |
+
+### ⛔ AND THE ONE THAT IS A DISCOVERY, NOT A PRICE — d6 = 6
+
+> **MUND HAS BEEN BUYING THE PARTY'S AT-COST IRON IN QUANTITY AND SELLING IT
+> ON, WORKED.**
+
+He is the single largest beneficiary of the day-20 gesture. The board sells iron,
+nails and salt **at cost** — and the fourth finding is that laid down it had cost
+nearer 160 against the 100 charged, so *at cost* ran **50–70 gp below cost**.
+Mund has been buying bar at that price, putting his labour into it, and selling
+spikes, nails and fittings at a working margin. **That is not cheating: the board
+is open to anybody and he is anybody.** It is simply the thing the party never
+asked.
+
+**WHY IT MATTERS THREE WAYS:**
+
+1. **He is the one man in the hundred who knows exactly what iron is worth**, to
+   the penny, because he buys it by weight and sells it by the piece. L047's
+   stranger *"asked two holdings what things WEIGH and wrote the answers in a
+   book"* — Mund would not have to ask anybody.
+2. **L024** is "price the NEW properly and SHOW THE ROAD IN THE PRICE." The
+   moment that board carries two numbers, **Mund's input cost rises** and he is
+   the customer who will notice first and mind most.
+3. The party is about to buy **200 spikes back off him** — iron they very likely
+   sold him below cost — and pay a worked price for it. *That* is the joke, and
+   nobody at the table can see it yet.
+
+### WHAT THE PARTY MAY AND MAY NOT LEARN
+
+**WEND KNOWS.** It is her book and he is her biggest buyer; she has been four
+days inside the at-cost question. **She will say so if asked who buys the iron,
+and she will not volunteer it** (she has a market to run and did not connect it
+to the Ludbury man). Do not narrate it. **Let it arrive by a question** — at
+Mund's counter, or from Wend, or when L024's two numbers go up on the board.

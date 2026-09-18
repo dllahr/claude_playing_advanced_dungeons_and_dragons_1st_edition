@@ -396,3 +396,36 @@ def test_the_salvage_is_AT_THE_BASECAMP_and_not_in_nine_backpacks():
         assert any('basecamp' in h.lower() for h in holders), (
             '%s should be under the lean-to at Coll\'s basecamp; holder reads '
             '%r' % (asset, holders))
+
+
+def test_check_does_not_demand_an_inventory_row_for_an_asset_ANOTHER_TOOL_OWNS():
+    """*** THE CHECKER CRIED WOLF ON THE FIRST CORRECT OIL PURCHASE. ***
+
+    `inventory.FOREIGN` lists what inventory.py deliberately does not count:
+    oil, because only `light.tsv` knows which flasks have been broached, and
+    coin, because `money.tsv` owns it. **log.py REFUSES an inventory row for
+    them.** So on day 97, the first time any money row named `oil_flask` -- two
+    flasks, which was every flask in Wethersby -- check() demanded the one row
+    the write path is built to reject, and turned a green suite red on a
+    perfectly correct entry.
+
+    CLAUDE.md: "IF IT EVER CRIES WOLF, LOOSEN THE CHECKER -- do not learn to
+    pass --no-verify." The double entry still holds; its other leg is in
+    campaign/light.tsv, which is where it belongs.
+    """
+    import inventory as inv2
+    assert 'oil_flask' in inv2.FOREIGN, 'the premise of the exemption is gone'
+    # the real files, because the real files are what regressed
+    assert [m for s, m in ledger.check() if 'oil_flask' in m] == []
+
+
+def test_a_FOREIGN_asset_is_still_required_to_NAME_itself_in_money():
+    """Loosening the row check must not loosen the rule that money names a thing.
+
+    The exemption is narrow: it forgives a missing INVENTORY row, not a missing
+    asset. A money row with no asset is still a FAIL and that is the rule the
+    five lost purchases actually broke.
+    """
+    bad = [dict(asset='', delta='-2', day='97', reason='oil')]
+    sev = [s for s, _ in ledger.check(log=bad)]
+    assert 'FAIL' in sev
