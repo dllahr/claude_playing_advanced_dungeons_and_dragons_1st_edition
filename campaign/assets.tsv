@@ -51,12 +51,12 @@ rosewood	rosewood headboard and bed	salvage			350 gp at Ludbury, less 10% foreig
 chemicals	sealed containers of chemicals, unidentified	salvage			Forty of them, day 70. Toller handed them off entirely: stock, not curio
 salvage_misc	assorted salvage	salvage			Where a mixed sale was never itemised
 # ---- gear
-oil_flask	oil flask	light	100	gp-weight	Fuel is computed by tools/light.py from campaign/light.tsv, never counted here
-torch	torch	light	100	gp-weight
+oil_flask	oil flask	light	20	gp-weight	Fuel is computed by tools/light.py from campaign/light.tsv, never counted here. *** WEIGHT CORRECTED 100 -> 20 on day 96: DMG p.225 Appendix O gives 'Flask, full' as 20. ***
+torch	torch	light	25	gp-weight	*** WEIGHT CORRECTED 100 -> 25 on day 96, DMG p.225. *** equipment.md already carried this one as a KNOWN OCR slip -- its own correction note reads 'Torch 60 -> 25' -- and assets.tsv had a third figure that matched neither.
 candle	candle	light
 tinder_box	tinder box, flint & steel	light
-lantern	lantern, hooded	light	300	gp-weight
-iron_spike	iron spike	tools	50	gp-weight
+lantern	lantern, hooded	light	60	gp-weight	*** WEIGHT CORRECTED 300 -> 60 on day 96, DMG p.225. ***
+iron_spike	iron spike	tools	10	gp-weight	*** WEIGHT CORRECTED 50 -> 10 on day 96, DMG p.225. THE WORST OF THE FOUR: 200 spikes for Durnhak weighed 1,000 lb under the old figure and weigh 200 lb under the book. ***
 wooden_spike	wooden spike	tools
 rope_50ft	rope, 50 ft	tools	75	gp-weight	Six bought day 67 at 4 s.p. -- the purchase that had no row for eleven days
 ten_foot_pole	ten-foot pole	tools	100	gp-weight
