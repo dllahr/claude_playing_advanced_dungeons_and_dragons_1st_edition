@@ -40,6 +40,7 @@ ROOT = os.path.dirname(TOOLS)
 sys.path.insert(0, TOOLS)
 
 import build_campaign_db as dbmod                                 # noqa: E402
+from tsvlog import read_tsv                                       # noqa: E402
 
 
 @pytest.fixture(scope='module')
@@ -86,6 +87,31 @@ def test_a_scene_naming_an_unknown_person_cannot_be_inserted(db, tmp_path):
     con.close()
 
 
+def absent_scene_id():
+    """A scene citation that CANNOT exist, derived instead of guessed.
+
+    *** BOTH CALLERS USED A HARDCODED ID AND THE CAMPAIGN WALKED INTO IT. ***
+    On 2026-09-18, in-game day 99, scene 99 colon 9 was logged -- and two tests
+    that had been green for a fortnight went red together. Neither had found a
+    bug: they had asserted A FACT ABOUT TODAY'S DATA ("that scene does not
+    exist") while claiming to test AN INVARIANT ("a citation to nothing is
+    refused").
+
+    This repository has been bitten by pinned game state repeatedly -- see
+    test_inventory.py, which carries a comment telling the reader not to pin
+    quantities four lines above a pinned quantity. A hardcoded id is the same
+    mistake in a different hat: THE CAMPAIGN IS A CLOCK, and any literal drawn
+    from its range eventually becomes true.
+
+    So: MAX LOGGED DAY + 1000, read off interactions.tsv at test time. It cannot
+    collide unless somebody plays three more years in a single session, and if
+    they do, this returns a still-absent id rather than a stale one.
+    """
+    rows = read_tsv(os.path.join(ROOT, 'campaign', 'interactions.tsv'))
+    days = [int(r['day']) for r in rows if (r.get('day') or '').isdigit()]
+    return '%d:1' % (max(days, default=0) + 1000)
+
+
 def test_money_cannot_cite_a_scene_that_does_not_exist(db, tmp_path):
     """THE ONE THAT FIRED IMMEDIATELY.
 
@@ -98,7 +124,7 @@ def test_money_cannot_cite_a_scene_that_does_not_exist(db, tmp_path):
     con.execute('PRAGMA foreign_keys = ON')
     with pytest.raises(sqlite3.IntegrityError):
         con.execute('INSERT INTO money (day,delta,asset_id,interaction_id) '
-                    'VALUES (?,?,?,?)', (77, -1, 'coin', '99:9'))
+                    'VALUES (?,?,?,?)', (77, -1, 'coin', absent_scene_id()))
     con.close()
 
 
@@ -228,7 +254,7 @@ def test_log_refuses_a_dangling_scene_citation(tmp_path):
                             encoding='utf-8').read())
     before = scratch.read_text()
     assert logmod.main(['--log-file', str(scratch), 'money', '--delta', '-5',
-                        '--asset', 'coin', '--interaction', '99:9',
+                        '--asset', 'coin', '--interaction', absent_scene_id(),
                         '--reason', 'x']) == 1
     assert scratch.read_text() == before
 
