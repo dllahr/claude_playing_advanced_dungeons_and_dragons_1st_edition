@@ -190,3 +190,115 @@ def test_the_drawing_shows_exactly_who_the_data_says_it_should():
                 'by the basecamp and the cave mouth -- which is worse than the '
                 'terminal, which at least reports what it could not fit. '
                 'Leader lines and a NO ROOM note are the fix.' % pid)
+
+
+# ===================================================================== wobble
+# *** A WAY THAT BENDS IS TRUER THAN A WAY DRAWN WITH A RULER, AND THE ONLY
+# *** REASON THAT IS SAFE IS THAT THE BENDING NEVER TOUCHES A PLACE.
+#
+# Added 2026-09-17 at the player's request: "the roads are probably not
+# perfectly straight, and the side paths almost certainly are not." The risk it
+# introduces is obvious and these tests are the whole of the answer to it -- a
+# prettifying pass on a map that gets READ FOR POSITIONS could quietly move a
+# place, and nothing else in this repository would notice.
+
+def _chord_distance(p, a, b):
+    """How far p sits off the straight line a->b, in px."""
+    dx, dy = b[0] - a[0], b[1] - a[1]
+    length = (dx * dx + dy * dy) ** 0.5
+    if length < 1e-9:
+        return ((p[0] - a[0]) ** 2 + (p[1] - a[1]) ** 2) ** 0.5
+    return abs((p[0] - a[0]) * dy - (p[1] - a[1]) * dx) / length
+
+
+def test_every_named_stop_survives_the_wobble_EXACTLY():
+    """*** THE ONE THAT MATTERS. *** The ink may wander; a place may not."""
+    stops = [(10.0, 10.0), (300.0, 120.0), (420.0, 500.0)]
+    for kind in ('road', 'track', 'path'):
+        got = mapimg._wander('north_road', stops, kind)
+        for s in stops:
+            assert s in got, (
+                '%s: the stop %r is no longer among the drawn points -- the '
+                'wobble has MOVED A PLACE, which is the one thing it may never '
+                'do' % (kind, s))
+        assert got[0] == stops[0] and got[-1] == stops[-1]
+
+
+def test_the_wobble_is_deterministic_so_the_svg_still_diffs():
+    """Hashed, not random. A rebuild that looks like a change is a broken tool.
+
+    The output of this file is gitignored but it is READ side by side with an
+    older copy, and `overland check` compares drawings. A random wobble would
+    make every single re-render differ from the last for no reason.
+    """
+    stops = [(0.0, 0.0), (250.0, 90.0)]
+    a = mapimg._wander('lyde_track', stops, 'track')
+    b = mapimg._wander('lyde_track', stops, 'track')
+    assert a == b
+    # and a DIFFERENT way bends differently, or every road is the same squiggle
+    assert a != mapimg._wander('fenns_track', stops, 'track')
+
+
+def test_a_path_wanders_more_than_a_track_and_a_track_more_than_a_road():
+    """*** THE AMPLITUDE IS THE CLAIM: who built it, and how well. ***
+
+    A made road kept up by somebody with authority over more than one hundred
+    only sags. A path is a line worn by feet and goes where the feet went.
+    """
+    stops = [(0.0, 0.0), (600.0, 0.0)]
+    off = {k: max(abs(p[1]) for p in mapimg._wander('x', stops, k))
+           for k in ('road', 'track', 'path')}
+    assert off['road'] < off['track'] < off['path'], off
+    assert off['road'] > 0, 'even a made road is not a ruler line'
+
+
+def test_the_wobble_is_capped_so_a_long_leg_cannot_wander_miles_off():
+    """Ludbury to Wraye is 396,000 ft. A percentage alone would be absurd."""
+    stops = [(0.0, 0.0), (4000.0, 0.0)]
+    for kind, (_frac, cap) in mapimg.WOBBLE.items():
+        for p in mapimg._wander('x', stops, kind):
+            assert _chord_distance(p, stops[0], stops[1]) <= cap + 0.51, (
+                '%s wandered past its own cap of %.1f px' % (kind, cap))
+
+
+def test_the_curve_passes_through_the_points_it_is_given():
+    """Catmull-Rom INTERPOLATES. A Bezier that merely approximates its control
+    points would pull the line off every named stop -- which is the same failure
+    as moving the stop, arriving by a different route."""
+    d = mapimg._smooth([(0.0, 0.0), (10.0, 5.0), (20.0, 0.0), (30.0, 9.0)])
+    assert d.startswith('M0.0,0.0')
+    assert d.rstrip().endswith('30.0,9.0')
+    for x, y in ((10.0, 5.0), (20.0, 0.0)):
+        assert '%.1f,%.1f' % (x, y) in d
+
+
+def test_no_label_is_drawn_off_the_edge_of_the_canvas():
+    """A clipped label is a label LOST, and it reads as a rendering glitch
+    rather than as the map running out of room. `free()` treats outside-the-
+    canvas as occupied so the leader-line search moves on instead."""
+    for kw in ({}, dict(true=True), dict(px_per_mile=90.0)):
+        s = mapimg.svg(**kw)
+        w = float(re.search(r'width="([\d.]+)"', s).group(1))
+        h = float(re.search(r'height="([\d.]+)"', s).group(1))
+        for m in re.finditer(r'<text x="([-\d.]+)" y="([-\d.]+)"', s):
+            x, y = float(m.group(1)), float(m.group(2))
+            assert -2 <= x <= w + 2 and -2 <= y <= h + 2, \
+                'a label sits at %.1f,%.1f outside a %.0fx%.0f canvas' % (
+                    x, y, w, h)
+
+
+def test_the_ways_round_the_crag_exist_at_all():
+    """*** THEY WERE MISSING FROM roads.tsv ENTIRELY UNTIL DAY 96. ***
+
+    Coll's trail has been walked every expedition since day 20 and the outcrop
+    above it eleven times, and neither was in the data -- so `road_between` said
+    there was no way from the north road to the cave the party lives out of.
+    """
+    rd = land.roads()
+    assert 'crag_trail' in rd and rd['crag_trail']['kind'] == 'track'
+    # A CART NEVER REACHES THE DOOR, and the drawing has to agree with the
+    # sentence places.tsv has carried since it was corrected.
+    assert rd['outcrop_path']['kind'] == 'path', (
+        'the outcrop is feet and hooves only; calling it a track would make '
+        'it cart-passable at 15 miles a day')
+    assert land.road_between('basecamp', 'watercourse') is not None

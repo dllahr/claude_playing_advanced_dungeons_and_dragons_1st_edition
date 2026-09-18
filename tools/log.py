@@ -223,8 +223,29 @@ def do_inventory(a):
         raise Refused('condition %r is not one of %s. "sold" and "consumed" are '
                       'EVENTS -- log a negative qty with a note instead'
                       % (a.condition, list(invmod.CONDITIONS)))
-    if a.qty == 0:
-        raise Refused('a qty of zero moves nothing')
+    if a.qty == 0 and not (a.holder or '').strip():
+        raise Refused('a qty of zero moves nothing. If you meant to say the '
+                      'thing CHANGED HANDS OR PLACE rather than changed in '
+                      'amount, give --holder as well: qty 0 with a holder is '
+                      'a relocation and is allowed.')
+    # *** A RELOCATION IS NOT A QUANTITY, AND UNTIL DAY 96 IT HAD NO WRITE PATH.
+    #
+    # inventory.py has always resolved `holder` last-writer-wins while summing
+    # `qty`, so the data model could express "this moved" perfectly well -- the
+    # only thing stopping it was this guard, which was written against the real
+    # bug (a row that says nothing) and caught a legitimate case with it.
+    #
+    # It came up on the morning of day 96, when the party stacked 421 lb of
+    # salvage under the lean-to at Coll's basecamp and walked to Wethersby
+    # without it. They still OWN all of it and none of it is with them. The only
+    # way to say that in the old schema was a negative row and a positive row
+    # per asset -- twenty-two rows to record that nobody gained or spent
+    # anything, each one a chance to fat-finger a quantity that `ledger check`
+    # would then have to be argued with.
+    #
+    # This is the small half of L052. The big half -- OWNED vs PACKED-FOR-THIS-
+    # TRIP -- is still unbuilt and is still the reason the party's real load is
+    # a ceiling rather than a measurement.
     day = a.day if a.day is not None else loopmod.current_day()
     print(_write(a.log_file or INVLOG, dict(
         when=today(), day=day, asset=a.asset, verb='move', qty=a.qty,

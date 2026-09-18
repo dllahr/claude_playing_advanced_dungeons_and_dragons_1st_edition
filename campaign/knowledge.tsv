@@ -59,3 +59,7 @@ when	day	place	level	precision_ft	how	evidence
 2026-09-12	60	edes_track	known		The eight miles of field track through Fenn's yard, walked and carted	calendar.md
 2026-09-12	32	ludbury_east	vague		Toller named it: three days east out of Ludbury to Wraye. Never travelled	calendar.md:103
 2026-09-12	77	draycot_south	unknown		*** THEY HAVE NEVER ASKED WHERE SIR AYMER'S CLIP GOES. *** It goes to Ludbury and it does not pass their town, which is most of why nobody in Wethersby could say where the staple went. One question to Ottir or Cuddy would open it	-
+2026-09-17	95	watercourse	vague	1500	Durnhak described it down the shaft: round the crag's north shoulder, east then north along the foot of the scree, an hour's walk from the cave mouth. A bearing and a time, from a man with no reason to lie and no way to draw it	95:4
+2026-09-17	20	crag_trail	known		Coll's crew graded it and the party has walked it every expedition since day 20	world_changes.tsv
+2026-09-17	20	outcrop_path	known		Half an hour of unmade outcrop above the basecamp, walked eleven times	party.tsv
+2026-09-17	95	crag_foot_way	vague		*** NOT WALKED, NOT SCOUTED, NOT CONFIRMED CART-PASSABLE. *** All the party has is that Durnhak's people get iron OFF the crag by their own route and that the watercourse mouth is round the north foot. That is a bearing and a claim, not a road	95:4

@@ -33,6 +33,7 @@ writes to a file named so, and `CHECKLIST` section 8 applies to a picture at
 least as hard as to a sentence.
 """
 import argparse
+import hashlib
 import os
 import sys
 
@@ -62,6 +63,91 @@ STYLE = {
 def esc(t):
     return (t.replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;')
             .replace('"', '&quot;'))
+
+
+# *** WAYS BEND, AND HOW MUCH THEY BEND SAYS WHO BUILT THEM. ***
+#
+# A drawn-with-a-ruler road is the one thing on this map that is certainly
+# false: nothing in this district was surveyed. The amplitudes below are a
+# fraction of each leg's length, capped in pixels so a hundred-mile leg does not
+# wander ten miles off:
+#
+#   road   the north road, the Draycot road. A MADE way, kept up by somebody
+#          with authority over more than one hundred, so it only sags
+#   track   a cart can take it and nobody laid it out. Wanders
+#   path    feet and hooves. Wanders most -- it is a line worn by walking
+#
+# *** AND THE WANDER IS TRUER THAN THE STRAIGHT LINE, NOT MERELY PRETTIER. ***
+# overland.py prints "straight-line, so every distance is a FLOOR -- travel
+# follows a road where one exists" under every table it renders. A bent road is
+# longer than its chord, which is exactly the error that warning is about.
+#
+# IT MUST BE DETERMINISTIC. The offsets are hashed off the way's own id, so the
+# same map renders byte-identical every time and the SVG still diffs. A random
+# wobble would make every rebuild look like a change.
+WOBBLE = {
+    'road':  (0.012, 11.0),
+    'track': (0.045, 26.0),
+    'path':  (0.070, 34.0),
+}
+
+
+def _jitter(seed, i):
+    """Deterministic, in [-1, 1]. Hashed, so the drawing never moves on its own."""
+    h = hashlib.md5(('%s|%d' % (seed, i)).encode('utf-8')).digest()
+    return ((h[0] << 8 | h[1]) / 32767.5) - 1.0
+
+
+def _wander(seed, xy, kind):
+    """Points along a way, pushed sideways off the chord.
+
+    *** EVERY NAMED STOP IS RETURNED EXACTLY. *** Only the invented points
+    BETWEEN them move. A place on this map is read for its position, so the
+    prettifying is not allowed anywhere near one -- the wobble lives strictly in
+    the ink joining them.
+    """
+    frac, cap = WOBBLE.get(kind, WOBBLE['road'])
+    out = [xy[0]]
+    for leg, (a, b) in enumerate(zip(xy, xy[1:])):
+        dx, dy = b[0] - a[0], b[1] - a[1]
+        length = (dx * dx + dy * dy) ** 0.5
+        if length < 1:
+            out.append(b)
+            continue
+        amp = min(length * frac, cap)
+        ux, uy = -dy / length, dx / length          # unit normal to the leg
+        n = max(2, min(9, int(length / 55) + 2))
+        for step in range(1, n):
+            t = step / float(n)
+            # Zero at both ends: the offset is damped by a sine, so the curve
+            # arrives at each named stop travelling through it, not past it.
+            k = _jitter('%s|%d' % (seed, leg), step) * amp
+            k *= (t * (1 - t)) * 4
+            out.append((a[0] + dx * t + ux * k, a[1] + dy * t + uy * k))
+        out.append(b)
+    return out
+
+
+def _smooth(p):
+    """Catmull-Rom through EVERY point, emitted as cubic Beziers.
+
+    Interpolating rather than approximating on purpose: the curve passes through
+    each point it is given, so the stops stay where places.tsv puts them.
+    """
+    if len(p) < 3:
+        return 'M%.1f,%.1f L%.1f,%.1f' % (p[0][0], p[0][1], p[-1][0], p[-1][1])
+    d = ['M%.1f,%.1f' % (p[0][0], p[0][1])]
+    for i in range(len(p) - 1):
+        p0 = p[i - 1] if i else p[0]
+        p1, p2 = p[i], p[i + 1]
+        p3 = p[i + 2] if i + 2 < len(p) else p2
+        d.append('C%.1f,%.1f %.1f,%.1f %.1f,%.1f'
+                 % (p1[0] + (p2[0] - p0[0]) / 6.0,
+                    p1[1] + (p2[1] - p0[1]) / 6.0,
+                    p2[0] - (p3[0] - p1[0]) / 6.0,
+                    p2[1] - (p3[1] - p1[1]) / 6.0,
+                    p2[0], p2[1]))
+    return ' '.join(d)
 
 
 def _bounds(pts):
@@ -98,6 +184,7 @@ def svg(pts=None, kn=None, true=False, px_per_mile=PX_PER_MILE):
          '<rect width="100%%" height="100%%" fill="#f6f1e4"/>']
 
     # roads under everything
+    way_labels = []
     shown_ways = land.ways(kn, true=true)
     for r in sorted(land.roads().values(),
                     key=lambda r: r.get('kind') != 'road'):
@@ -108,24 +195,31 @@ def svg(pts=None, kn=None, true=False, px_per_mile=PX_PER_MILE):
         seq = [s for s in stops if s in real]
         if len(seq) < 2:
             continue
-        d = ' '.join('%s%.1f,%.1f' % ('M' if i == 0 else 'L',
-                                      X(pts[s][0]), Y(pts[s][1]))
-                     for i, s in enumerate(seq))
+        drawn = _wander(r['id'],
+                        [(X(pts[s][0]), Y(pts[s][1])) for s in seq], kind)
+        d = _smooth(drawn)
         # A TRACK IS NOT A ROAD and the drawing says so: rugged terrain for a
         # vehicle, so fifteen miles a day for a cart rather than twenty-five.
+        # A PATH IS NEITHER -- feet and hooves, and no cart at all.
         if kind == 'road':
             o.append('<path d="%s" fill="none" stroke="#b9a77e" '
                      'stroke-width="5" stroke-linecap="round"/>' % d)
             o.append('<path d="%s" fill="none" stroke="#8d7b52" '
                      'stroke-width="1.2" stroke-dasharray="7 5"/>' % d)
-        else:
+        elif kind == 'track':
             o.append('<path d="%s" fill="none" stroke="#b9a77e" '
                      'stroke-width="2" stroke-linecap="round" '
                      'stroke-dasharray="6 4"/>' % d)
-        mid = seq[len(seq) // 2]
-        o.append('<text x="%.1f" y="%.1f" font-size="11" fill="#8d7b52" '
-                 'font-style="italic">%s</text>'
-                 % (X(pts[mid][0]) + 9, Y(pts[mid][1]) - 8, esc(name)))
+        else:
+            o.append('<path d="%s" fill="none" stroke="#a89877" '
+                     'stroke-width="1.3" stroke-linecap="round" '
+                     'stroke-dasharray="2 4"/>' % d)
+        # *** LABEL THE WAY AT THE MIDDLE OF THE DRAWN LINE, NOT AT A STOP. ***
+        # seq[len//2] is the DESTINATION of any two-stop way, so Coll's trail
+        # and the way round the north foot each wrote their name on top of the
+        # place they end at. The drawn midpoint is always between things.
+        mx, my = drawn[len(drawn) // 2]
+        way_labels.append((mx + 7, my - 7, name))
 
     # *** the knowledge layer, drawn rather than footnoted ***
     for pid, (fx, fy, r) in sorted(real.items()):
@@ -149,6 +243,13 @@ def svg(pts=None, kn=None, true=False, px_per_mile=PX_PER_MILE):
     placed, unlabelled = [], []       # (x, y, w, h) of labels already written
 
     def free(bx, by, bw, bh):
+        # *** OFF THE EDGE COUNTS AS OCCUPIED. *** Without this the renderer
+        # would happily place "the dry watercourse" half outside the canvas and
+        # report success -- a clipped label is exactly the silent loss the
+        # leader-line machinery below exists to prevent, and it read as a
+        # rendering glitch rather than as the map running out of room.
+        if bx < 3 or by < 3 or bx + bw > w - 3 or by + bh > h - 3:
+            return False
         for (ax, ay, aw, ah) in placed:
             if not (bx + bw < ax or ax + aw < bx or
                     by + bh < ay or ay + ah < by):
@@ -205,6 +306,20 @@ def svg(pts=None, kn=None, true=False, px_per_mile=PX_PER_MILE):
             o.append('<text x="%.1f" y="%.1f" font-size="14" fill="#c84422" '
                      'font-weight="bold">~</text>'
                      % (cx - st['r'] - 9, cy - st['r'] - 1))
+
+    # *** WAY NAMES LAST, SO A PLACE ALWAYS BEATS A ROAD FOR THE SPACE. ***
+    # A road with nowhere to put its name is dropped in silence and that is the
+    # right trade: the line is still drawn and still legible, whereas a place
+    # whose name is lost is unreadable. Places are named in `unlabelled`.
+    for lx, ly, name in way_labels:
+        tw, th = len(name) * 11 * 0.5, 14
+        for dx, dy in ((0, 0), (0, 20), (0, -18), (-tw - 14, 0), (-tw - 14, 18)):
+            if free(lx + dx, ly + dy - th, tw, th):
+                placed.append((lx + dx, ly + dy - th, tw, th))
+                o.append('<text x="%.1f" y="%.1f" font-size="11" '
+                         'fill="#8d7b52" font-style="italic">%s</text>'
+                         % (lx + dx, ly + dy, esc(name)))
+                break
 
     # scale bar, in real units, at the real scale
     for step in (100, 50, 20, 10, 5, 2, 1):

@@ -38,6 +38,7 @@ sys.path.insert(0, TOOLS)
 
 import ledger                                                     # noqa: E402
 import log as logmod                                              # noqa: E402
+import inventory as inv                                           # noqa: E402
 from tsvlog import read_tsv                                       # noqa: E402
 
 MONEY = os.path.join(ROOT, 'campaign', 'money.tsv')
@@ -336,3 +337,62 @@ def test_the_purse_BREAKDOWN_reconciles_with_its_own_headline():
     ins = float(re.search(r'in ([\d,]+) gp', out).group(1).replace(',', ''))
     outs = float(re.search(r'out -([\d,]+) gp', out).group(1).replace(',', ''))
     assert abs((anch + ins - outs) - purse) < 1.0, (anch, ins, outs, purse)
+
+
+# ------------------------------------------- a relocation is not a quantity
+
+def test_inventory_still_refuses_a_zero_qty_with_NO_holder(tmp_path):
+    """The original guard stands: a row that says nothing is still refused."""
+    scratch = tmp_path / 'inventory_log.tsv'
+    scratch.write_text(open(os.path.join(ROOT, 'campaign',
+                                         'inventory_log.tsv')).read())
+    before = scratch.read_text()
+    assert logmod.main(['--log-file', str(scratch), 'inventory',
+                        '--asset', 'shovel', '--qty', '0', '--unit', 'each',
+                        '--note', 'x']) == 1
+    assert scratch.read_text() == before, 'it wrote anyway'
+
+
+def test_inventory_ALLOWS_a_zero_qty_WHEN_a_holder_is_given(tmp_path):
+    """*** A THING CAN CHANGE PLACE WITHOUT CHANGING AMOUNT, AND UNTIL DAY 96
+    THERE WAS NO WAY TO SAY SO. ***
+
+    The party stacked 421 lb of salvage under the lean-to at Coll's basecamp and
+    walked to Wethersby without it. They still own every ounce and none of it is
+    with them. The old schema could only express that as a negative row and a
+    positive row per asset -- twenty-two rows to record that nobody gained or
+    spent anything, every one of them a chance to fat-finger a quantity that
+    `ledger check` would then have to be argued with.
+
+    inventory.py already resolved `holder` last-writer-wins while SUMMING qty,
+    so the model always supported this; only the guard did not.
+    """
+    scratch = tmp_path / 'inventory_log.tsv'
+    scratch.write_text(open(os.path.join(ROOT, 'campaign',
+                                         'inventory_log.tsv')).read())
+    n_before = len(scratch.read_text().splitlines())
+    assert logmod.main(['--log-file', str(scratch), 'inventory',
+                        '--asset', 'shovel', '--qty', '0', '--unit', 'each',
+                        '--condition', 'sound', '--holder', "Coll's basecamp",
+                        '--note', 'stacked under the lean-to']) == 0
+    lines = scratch.read_text().splitlines()
+    assert len(lines) == n_before + 1
+    assert "Coll's basecamp" in lines[-1]
+    assert '\t0.0\t' in lines[-1] or '\t0\t' in lines[-1], \
+        'the quantity must still be recorded as zero -- it moved, it did not '\
+        'multiply'
+
+
+def test_the_salvage_is_AT_THE_BASECAMP_and_not_in_nine_backpacks():
+    """Belt and braces on the thing the relocation exists to say.
+
+    Not a pinned quantity -- it asserts the HOLDER, which is the fact day 96
+    established and which no later purchase or sale can invalidate. If the party
+    fetches it, this test changes with the fiction, which is correct.
+    """
+    st = inv.state()
+    for asset in ('chain_heavy', 'shovel', 'chisel', 'vise_iron'):
+        holders = {cell[2] for cell in st[asset].values()}
+        assert any('basecamp' in h.lower() for h in holders), (
+            '%s should be under the lean-to at Coll\'s basecamp; holder reads '
+            '%r' % (asset, holders))
