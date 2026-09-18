@@ -71,9 +71,18 @@ the right boundary and mention it in a line if it is worth knowing.
 
 **What that authorization does NOT cover:**
 
-- **`git push` IS authorized** (granted 2026-09-05), to `origin` →
-  `github.com:dllahr/claude_playing_advanced_dungeons_and_dragons_1st_edition`.
-  Still not authorized: force-push, or pushing anything that rewrote history.
+- **`git push` — DO NOT ATTEMPT IT. THE PLAYER DOES ALL PUSHING.** *(Corrected
+  2026-09-17. It was listed as authorized from 2026-09-05 and that was wrong in
+  practice.)* `origin` is
+  `git@github.com:dllahr/claude_playing_advanced_dungeons_and_dragons_1st_edition`
+  over **SSH with a password-protected key**, and the player will not bypass the
+  passphrase. A push from here fails with *"Please make sure you have the correct
+  access rights"*, which reads like a broken remote and is not one.
+
+  **So: commit freely, never push, and do not diagnose the failure** — it is
+  expected. If commits are worth getting off the machine, say so in one line and
+  let the player run `git push origin main` himself. Force-push and pushing
+  rewritten history remain forbidden regardless.
 
   > ### THE REPO IS PUBLIC AND THE DM NOTES ARE IN IT — SETTLED, DO NOT RE-RAISE
   >
