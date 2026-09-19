@@ -147,6 +147,34 @@ give free attacks, at **+2** for showing its back.
 Darts, arrows, and sling bullets are recoverable after a fight in a stone dungeon. 1e gives
 no breakage rule for them and none is imposed.
 
+> ### ⚠ AND THE CAMPAIGN HAS BROKEN THAT RULE TWICE. SETTLED 2026-09-18, day 99.
+>
+> The sentence above says *none is imposed*, and then breakage was imposed
+> anyway — on **day 79** (Frython's darts) and again on **day 95**, where the
+> inventory row reads *"NINE OF TWELVE ARROWS RECOVERED … the misses struck
+> dressed stone at close range, which snaps shafts. Three broken and left."*
+>
+> **Two things are wrong with that row beyond contradicting the cache.** Its
+> stated reason does not match its own numbers: it lost **two of six hits** and
+> only **one of six misses**, so whatever happened, it was not the misses
+> striking stone. And it cites day 79 as precedent, which makes an unexamined
+> DM call into a practice by repetition.
+>
+> **RULING: the books win. No breakage, for arrows, darts or sling bullets.**
+> Neither the PHB nor the DMG imposes one, "full Gygaxian rigor, pure PHB/DMG/MM"
+> is the standing instruction, and an invented attrition rule that fires
+> inconsistently is worse than no rule at all — a bullet is a lead ball and a
+> dart is a short stiff shaft, and neither has an obvious reason to snap.
+>
+> **Prospective only.** Day 79 and day 95 stand as they were played; those logs
+> are append-only and a rules correction never reaches backwards. Day 99 is the
+> first fight resolved under the rule as written: nineteen missiles loosed at the
+> gnoll, **nineteen recovered.**
+>
+> If breakage is ever wanted, it needs to be a *stated, rolled* rule living in
+> this file — not a judgment made once per fight in the middle of the fight,
+> which is the mechanism that produced the disagreement.
+
 ## Encumbrance (PHB pp. 101-102, verified from page renders)
 
 Weight is stated in **gold pieces; 10 gp = 1 pound**.
