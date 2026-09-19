@@ -321,3 +321,78 @@ def test_picks_says_out_loud_that_the_limit_is_per_object():
     assert 'NOT LISTED AT ALL is a fresh' in out, (
         'the report must state what an ABSENT pair means, or the reader infers '
         'a per-level budget from a short list -- which is the original error')
+
+
+# ======================================================= the --known guard
+
+def test_dmap_at_known_refuses_a_square_the_party_has_not_seen():
+    """*** THE SAME LEAK HAPPENED TWICE AND THE SECOND TIME I HAD THE WARNING
+    IN FRONT OF ME. ***
+
+    Day 95: the DM read a route home off `dmap path` through unwalked ground and
+    the player said "we shouldn't know about the connection." A --known mode was
+    promised and never built.
+
+    Day 99, worse: the DM chained three `at` calls down an unexplored corridor --
+    (2,19), (2,18), (2,17) -- and told the player the passage had no branches and
+    that two orc bands were walking into each other in it. All true on the map.
+    NONE of it seen. And every one of those three squares printed "NOT SEEN by
+    the party" in the output he quoted.
+
+    *** THE WARNING WAS ON THE QUERIED SQUARE AND THE LEAK WAS IN THE EXITS
+    LIST *** -- which reported terrain and area names for neighbours nobody had
+    ever looked at. A header is read once; an exits table is read as perception.
+    """
+    import sys as _s
+    _s.path.insert(0, os.path.join(ROOT, 'mapdb'))
+    import dmap
+    db = os.path.join(ROOT, 'mapdb', 'output', 'b1', 'b1.sqlite')
+    if not os.path.exists(db):
+        import pytest
+        pytest.skip('map not built')
+    out = '\n'.join(dmap.describe(db, 1, (2, 18), known=True))
+    assert 'NOT SEEN' in out
+    assert 'corridor' not in out.lower(), \
+        'it named the terrain of a square the party has never looked at'
+    # and the DM view still works, because the DM is allowed to know
+    dm = '\n'.join(dmap.describe(db, 1, (2, 18)))
+    assert 'corridor' in dm
+
+
+def test_dmap_at_known_masks_what_lies_BEYOND_an_unseen_exit():
+    """The actual leak, and the reason the flag touches the exits at all.
+
+    From (3,19) -- which the party is standing on -- the DM view names what is
+    south of (2,19). Under --known it must say only that the ground is unseen,
+    because 'open corridor' about a square nobody has looked at is the map being
+    handed over one adjacency at a time.
+    """
+    import sys as _s
+    _s.path.insert(0, os.path.join(ROOT, 'mapdb'))
+    import dmap
+    db = os.path.join(ROOT, 'mapdb', 'output', 'b1', 'b1.sqlite')
+    if not os.path.exists(db):
+        import pytest
+        pytest.skip('map not built')
+    out = '\n'.join(dmap.describe(db, 1, (2, 19), known=True))
+    # (2,19) itself was looked into by lamplight on day 99, so it describes;
+    # (2,18) south of it was NOT, so the exit must be masked.
+    assert 'UNSEEN' in out, \
+        'an exit into unwalked ground was described instead of masked'
+
+
+def test_the_edge_KIND_still_shows_under_known():
+    """A door is a thing you can see from your own side of it.
+
+    --known must not become useless: masking the edge itself would hide doors
+    the party is standing in front of, which is the opposite error.
+    """
+    import sys as _s
+    _s.path.insert(0, os.path.join(ROOT, 'mapdb'))
+    import dmap
+    db = os.path.join(ROOT, 'mapdb', 'output', 'b1', 'b1.sqlite')
+    if not os.path.exists(db):
+        import pytest
+        pytest.skip('map not built')
+    out = '\n'.join(dmap.describe(db, 1, (3, 19), known=True))
+    assert 'door' in out, 'area 17\'s door vanished from a square in front of it'

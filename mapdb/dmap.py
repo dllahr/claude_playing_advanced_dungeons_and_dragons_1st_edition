@@ -298,7 +298,28 @@ DIRS = (('N', 0, 1, lambda x, y: (x, y, 'H')),
 FEET_PER_SQUARE = 10
 
 
-def describe(db, level, cell):
+def describe(db, level, cell, known=False):
+    """What is at a square and every way out of it.
+
+    *** WITH known=True, NOTHING THE PARTY HAS NOT SEEN IS DESCRIBED. ***
+
+    THIS FLAG EXISTS BECAUSE THE SAME LEAK HAPPENED TWICE. On day 95 the DM read
+    a route home off `path` through unwalked ground and the player said "we
+    shouldn't know about the connection." A --known mode was promised then and
+    never built. On day 99 it happened again, worse: the DM chained three `at`
+    calls down an unexplored corridor -- (2,19) to (2,18) to (2,17) -- and told
+    the player that the passage had no branches and that two orc bands were
+    walking into each other in it. All true on the map. NONE OF IT SEEN.
+
+    *** AND THE HEADER ALREADY WARNED HIM. *** Each of those squares printed
+    "NOT SEEN by the party" and he read past it -- because the warning is on the
+    QUERIED square while the leak is in the EXITS LIST, which reports the
+    terrain and room label of neighbours nobody has ever looked at.
+
+    So `known` masks the exits, not just the header. The edge KIND still shows
+    (a door is a thing you can see from your own side of it); what is BEYOND it
+    does not.
+    """
     """What the DM needs at the table: where this is, and every way out.
 
     Replaces reading geometry off a crop mid-session, which is what produced
@@ -329,6 +350,10 @@ def describe(db, level, cell):
     terrain, room, feature, passage = here
     where = 'area %s %s' % (room, names.get(room) or '') if room else 'corridor'
     st, snote, seen = cstate.get(cell, (None, None, 0))
+    if known and not seen:
+        return ['(%d,%d)  *** NOT SEEN BY THE PARTY. Nothing is known about it.'
+                % (x, y),
+                '  Re-run without --known for the DM view.']
     out = ['(%d,%d)  %s  %s%s%s' % (x, y, terrain, where.strip(),
                                     '  [%s]' % feature if feature else '',
                                     '' if seen else '   *** NOT SEEN by the party')]
@@ -349,9 +374,16 @@ def describe(db, level, cell):
         if kind == 'wall' and not beyond:
             continue
         if beyond:
-            broom = beyond[1]
-            desc = ('area %s %s' % (broom, names.get(broom) or '')).strip() \
-                if broom else ('%s' % beyond[0])
+            nseen = cstate.get(nxt, (None, None, 0))[2]
+            if known and not nseen:
+                # THE LEAK LIVED HERE. Reporting 'open corridor' or an area
+                # name for a square nobody has looked at is handing over the
+                # map, one adjacency at a time, and it reads as perception.
+                desc = 'UNSEEN'
+            else:
+                broom = beyond[1]
+                desc = ('area %s %s' % (broom, names.get(broom) or '')).strip() \
+                    if broom else ('%s' % beyond[0])
         else:
             desc = 'off map'
         mark = '' if kind in PASSABLE else '   (blocked)'
@@ -547,6 +579,10 @@ def build_parser():
         level_required=True)
     at.add_argument('x', type=int)
     at.add_argument('y', type=int)
+    at.add_argument('--known', action='store_true',
+                    help='DESCRIBE ONLY WHAT THE PARTY HAS SEEN. Masks the '
+                         'square if unseen, and masks what lies beyond any '
+                         'exit into unseen ground. Use this before narrating')
 
     pa = common(sub.add_parser(
         'path', help='route between two squares, in squares, feet and turns',
@@ -600,7 +636,8 @@ def main(argv=None):
     elif args.cmd == 'check':
         print(check(args.db, args.level))
     elif args.cmd == 'at':
-        print('\n'.join(describe(args.db, args.level, (args.x, args.y))))
+        print('\n'.join(describe(args.db, args.level, (args.x, args.y),
+                                known=args.known)))
     elif args.cmd == 'path':
         c = args.coords
         through = []
