@@ -4452,3 +4452,48 @@ statistic and nothing forbids a survivor's account.
 
 **Do not confirm the identification if the player guesses it.** They are entitled
 to reason from "dead things that hold you" to whatever they like; that is play.
+
+---
+
+## Day 99 — the heat north of (13,31). SEALED BEFORE THE LISTEN ROLLS.
+
+**ONE GNOLL.** hp **13**, the first of area 48's list (AC 5, HD 2, #AT 1, D 2-8 or
+by weapon, MV 9", ML 8). **Stationary and awake** (d6=4). Standing in the cut
+corridor between (13,32) and (13,36), forty to fifty feet north of Tristle, at the
+limit of his heat-sight.
+
+### How it was sourced, because "something new" is the easiest thing to fake
+
+The d6=5 band said *something the party has not met in this dungeon*, which was
+too loose to be honest, so it was narrowed against **B1's own two lists** rather
+than invented:
+
+- **Level-1 wandering table:** orcs, giant centipedes, kobolds, troglodytes,
+  giant rats, berserkers. The party has faced the first five and MET two
+  berserkers as friends.
+- **Level-1 stocking:** bandits, skeletons, crab spiders, a carrion crawler,
+  gnomes, ghouls. All faced except the ghouls — **and ghouls are cold.** The
+  thing is warm, so it is not them, and the party can reason that out.
+
+That leaves a warm, mobile, corridor-using thing from the **lower caverns**, which
+is possible: an unmapped passage was found today, and L028 only ever claimed the
+pit trap was the only *known* way down. Candidates were gnolls (48) and
+hobgoblins (49). **d6=1 → gnolls. 1d4=1 → one of them.**
+
+### ⛔ WHAT THE PARTY HAS, AND IT IS THREE FACTS
+
+1. **Heat**, one bearing, north. No count, no shape.
+2. **It is warm, so it is not what the orcs warned about.** The dead do not
+   radiate. This is a live deduction and it is theirs to make.
+3. **Three full minutes of listening and nothing** — 78, 40, 65 against 15%.
+
+**The silence is consistent with a thing standing still**, and Tristle cannot
+tell that from three failed rolls. **Do not resolve the ambiguity for them.**
+
+### Why it is there — do NOT volunteer this
+
+It is one gnoll, alone, awake, not moving, a long way from area 48. **Whatever
+that means, the party finds it out by asking it or by fighting it**, and a
+seven-foot hyena-headed thing standing sentry in somebody else's corridor is a
+question worth letting them ask. It has no light of its own and does not need
+one.
