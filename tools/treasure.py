@@ -84,23 +84,62 @@ MULT = {'cp': 1000, 'sp': 1000, 'ep': 1000, 'gp': 1000, 'pp': 100,
 # second copy and it was wrong for two of the six creatures in it -- orc lair
 # "D" (the MM says C, O, Q x10, S) and kobold lair "Q, D" (the MM says O, Q x5).
 # Both errors survived because nothing ever compared them to the book.
-_INDIVIDUAL_RE = re.compile(r'([A-Z])\s*(?:individually|individuals?)', re.I)
-_LAIR_RE = re.compile(r'in lair', re.I)
+# A letter, optionally a "J-N" range, optionally a "(x5)" multiplier. The
+# multiplier is consumed as part of the letter's match so that the capital X the
+# MM prints in "Q ( X 5)" is never mistaken for treasure type X.
+_TYPE_RE = re.compile(
+    r'\b([A-Z])\b(?:\s*-\s*\b([A-Z])\b)?(?:\s*\(\s*[xX]\s*(\d+)\s*\))?')
+
+
+def parse_types(raw):
+    """(individual, lair) as [(letter, multiplier)], from a raw MM type line.
+
+    **Classified by the LETTER, not by the prose around it.** A-I and O-Z are
+    lair hoards, J-N are what an individual carries, and the two sets are
+    disjoint -- so the letter decides with no ambiguity at all.
+
+    That matters because the Monster Manual writes the same fact three different
+    ways and a parser keyed on the words gets two of them wrong:
+
+      * ``L individually; C, O, Q (x10), S in lair``   -- orc, letter first
+      * ``Individuals L, M; D, Q (x5), S in lair``     -- gnoll, word first,
+        **and two letters**
+      * ``J-N, Q``                                     -- crab spider, a RANGE
+        and no qualifying word anywhere
+
+    The old regex matched only the first form. On the gnoll it found nothing and
+    printed *"no individual treasure"* for a creature that carries two types,
+    and it filed the crab spider's whole J-N range as a lair hoard -- which
+    `roll_lair` would then have refused, since no J-N letter is a lair type.
+    A silently plausible wrong answer, which is the worst kind.
+
+    Multipliers were dropped outright: ``Q (x10)`` rolled once.
+    """
+    if not raw or raw.strip().lower() in ('nil', '-', ''):
+        return [], []
+    ind, lair = [], []
+    for m in _TYPE_RE.finditer(raw):
+        first, last, mult = m.group(1), m.group(2), m.group(3)
+        mult = int(mult) if mult else 1
+        span = ([chr(c) for c in range(ord(first), ord(last) + 1)]
+                if last else [first])
+        for letter in span:
+            (ind if letter in INDIVIDUAL else lair).append((letter, mult))
+    return ind, lair
 
 
 def monster_types(name):
-    """(individual letter or None, lair letters, the raw text) from bestiary/."""
+    """(individual, lair, raw) from bestiary/ -- see parse_types for the pairs."""
     sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
     import bestiary
     raw = bestiary.field(name, 'Treasure Type')
-    ind, _, lair = raw.partition(';')
-    if not lair:
-        # "A" or "C" alone means a lair type with nothing carried individually.
-        if _INDIVIDUAL_RE.search(ind):
-            return _INDIVIDUAL_RE.search(ind).group(1).upper(), '', raw
-        return None, ind.strip(), raw
-    m = _INDIVIDUAL_RE.search(ind)
-    return (m.group(1).upper() if m else None), lair.strip(), raw
+    ind, lair = parse_types(raw)
+    return ind, lair, raw
+
+
+def fmt_types(pairs):
+    """"L, M" or "Q x5" for display."""
+    return ', '.join('%s x%d' % (L, m) if m > 1 else L for L, m in pairs) or '-'
 
 
 def known_monsters():
@@ -173,8 +212,8 @@ def main(argv=None):
     if a.list:
         for k in known_monsters():
             ind, lair, raw = monster_types(k)
-            print('%-12s individual %-4s lair %-18s  MM: %r'
-                  % (k, ind or '-', lair or '-', raw))
+            print('%-12s individual %-8s lair %-18s  MM: %r'
+                  % (k, fmt_types(ind), fmt_types(lair), raw))
         return 0
 
     letter, n = a.type, a.individuals
@@ -185,30 +224,33 @@ def main(argv=None):
             print('%s' % e)
             return 1
         print('%s: MM treasure type %r' % (a.monster, raw))
-        if a.lair:
-            # A lair may list several types; roll each.
-            letters = re.findall(r'\b([A-Z])\b', lair)
-            if not letters:
-                print('  no lair treasure')
-                return 0
-            if len(letters) > 1:
-                print('  lair lists %d types: %s -- rolling each'
-                      % (len(letters), ', '.join(letters)))
-                for L in letters:
-                    got, notes = roll_lair(L)
-                    print('  --- type %s ---' % L)
-                    for line in notes:
-                        print('    ' + line)
-                    print('    TOTAL: %s'
-                          % (', '.join('%d %s' % (v, k) for k, v in got.items())
-                             or 'nothing'))
-                return 0
-            letter = letters[0]
-        else:
-            letter = ind
-        if not letter:
+        pairs = lair if a.lair else ind
+        if not pairs:
             print('  no %s treasure' % ('lair' if a.lair else 'individual'))
             return 0
+        # A creature may carry or hoard SEVERAL types -- the gnoll carries both
+        # L and M -- so every letter is rolled and the coins summed.
+        print('  %s lists %d type(s): %s -- rolling each'
+              % ('lair' if a.lair else 'individuals', len(pairs),
+                 fmt_types(pairs)))
+        total = {}
+        for L, mult in pairs:
+            for i in range(mult):
+                if a.lair:
+                    got, notes = roll_lair(L)
+                else:
+                    got, notes = roll_individual(L, max(1, n))
+                print('  --- type %s%s ---'
+                      % (L, ' (%d of %d)' % (i + 1, mult) if mult > 1 else ''))
+                for line in notes:
+                    print('    ' + line)
+                for k, v in got.items():
+                    total[k] = total.get(k, 0) + v
+        print('  ===')
+        print('  TOTAL: %s'
+              % (', '.join('%d %s' % (v, k) for k, v in total.items())
+                 or 'nothing'))
+        return 0
     if not letter:
         build_parser().print_help()
         return 1

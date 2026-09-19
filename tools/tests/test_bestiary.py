@@ -57,27 +57,89 @@ def test_troglodyte_damage_is_the_mm_value_not_the_module_one():
 
 # ------------------------------------------------- treasure, via the bestiary
 
+def _letters(pairs):
+    return [letter for letter, _mult in pairs]
+
+
 def test_treasure_types_come_from_the_bestiary():
     """The hand-typed table this replaced was wrong for two of six creatures."""
     ind, lair, raw = treasure.monster_types('orc')
-    assert ind == 'L'
+    assert _letters(ind) == ['L']
     # The old table said the orc lair was "D". The MM says C, O, Q (x10), S.
-    assert 'D' not in lair
+    assert 'D' not in _letters(lair)
     for letter in ('C', 'O', 'Q', 'S'):
-        assert letter in lair
+        assert letter in _letters(lair)
 
 
 def test_kobold_lair_no_longer_claims_type_d():
     ind, lair, raw = treasure.monster_types('kobold')
-    assert ind == 'J'
-    assert 'D' not in lair
-    assert 'O' in lair and 'Q' in lair
+    assert _letters(ind) == ['J']
+    assert 'D' not in _letters(lair)
+    assert 'O' in _letters(lair) and 'Q' in _letters(lair)
 
 
 def test_a_lair_only_creature_carries_nothing_individually():
     ind, lair, _ = treasure.monster_types('troglodyte')
-    assert ind is None
-    assert lair == 'A'
+    assert ind == []
+    assert _letters(lair) == ['A']
+
+
+# --------------------------------------------- the day-99 gnoll parse failure
+#
+# Every case below returned a WRONG answer before 2026-09-18, and none of them
+# raised. The parser matched only "<letter> individually" and the Monster Manual
+# writes the same fact three ways.
+
+def test_a_creature_carrying_two_individual_types_reports_both():
+    """The gnoll is 'Individuals L, M' -- word first, and TWO letters.
+
+    This printed "no individual treasure" for four days, which is a confident
+    wrong answer about a body the party was standing over.
+    """
+    ind, lair, raw = treasure.monster_types('gnoll')
+    assert _letters(ind) == ['L', 'M'], raw
+    assert _letters(lair) == ['D', 'Q', 'S'], raw
+
+
+def test_a_letter_range_expands_and_lands_on_the_individual_side():
+    """The crab spider is 'J-N, Q' with no qualifying word anywhere.
+
+    J-N was filed as a LAIR hoard, and no J-N letter is a lair type, so
+    roll_lair would have refused it.
+    """
+    ind, lair, raw = treasure.monster_types('crab spider')
+    assert _letters(ind) == ['J', 'K', 'L', 'M', 'N'], raw
+    assert _letters(lair) == ['Q'], raw
+
+
+def test_the_multiplier_is_not_discarded():
+    """'Q (x10)' means ten hoard rolls. It used to mean one."""
+    _ind, lair = treasure.parse_types('C, O, Q (x10), S in lair')
+    assert dict(lair)['Q'] == 10
+    assert dict(lair)['C'] == 1
+
+
+def test_the_capital_x_in_the_mm_multiplier_is_not_read_as_type_x():
+    """The MM prints it as '( X 20)'. Type X is a real treasure type."""
+    ind, lair = treasure.parse_types('Individuals M ( X 3); C, Q ( X 20) in lair')
+    assert dict(ind) == {'M': 3}
+    assert dict(lair) == {'C': 1, 'Q': 20}
+    assert 'X' not in dict(lair)
+
+
+def test_individual_and_lair_letter_sets_are_disjoint():
+    """This is WHY classifying by letter is exact rather than a heuristic.
+
+    If the two tables ever overlapped, parse_types would be guessing.
+    """
+    assert not (set(treasure.LAIR) & set(treasure.INDIVIDUAL))
+    assert set(treasure.INDIVIDUAL) == set('JKLMN')
+
+
+def test_nil_carries_nothing_either_way():
+    assert treasure.parse_types('Nil') == ([], [])
+    ind, lair, _ = treasure.monster_types('skeleton')
+    assert (ind, lair) == ([], [])
 
 
 def test_unknown_creature_raises_with_the_options_listed():
