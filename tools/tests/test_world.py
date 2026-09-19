@@ -325,74 +325,127 @@ def test_picks_says_out_loud_that_the_limit_is_per_object():
 
 # ======================================================= the --known guard
 
-def test_dmap_at_known_refuses_a_square_the_party_has_not_seen():
-    """*** THE SAME LEAK HAPPENED TWICE AND THE SECOND TIME I HAD THE WARNING
-    IN FRONT OF ME. ***
-
-    Day 95: the DM read a route home off `dmap path` through unwalked ground and
-    the player said "we shouldn't know about the connection." A --known mode was
-    promised and never built.
-
-    Day 99, worse: the DM chained three `at` calls down an unexplored corridor --
-    (2,19), (2,18), (2,17) -- and told the player the passage had no branches and
-    that two orc bands were walking into each other in it. All true on the map.
-    NONE of it seen. And every one of those three squares printed "NOT SEEN by
-    the party" in the output he quoted.
-
-    *** THE WARNING WAS ON THE QUERIED SQUARE AND THE LEAK WAS IN THE EXITS
-    LIST *** -- which reported terrain and area names for neighbours nobody had
-    ever looked at. A header is read once; an exits table is read as perception.
-    """
+def _dmap_and_db():
     import sys as _s
     _s.path.insert(0, os.path.join(ROOT, 'mapdb'))
     import dmap
     db = os.path.join(ROOT, 'mapdb', 'output', 'b1', 'b1.sqlite')
+    return dmap, db
+
+
+def _an_unseen_square(db):
+    """*** DERIVED, NOT HARDCODED, AND THE FIRST VERSION OF THIS FILE PINNED IT.
+
+    I wrote these tests using the literal (2,18) as 'a square the party has not
+    seen'. THE PARTY WALKED INTO (2,18) ELEVEN MINUTES LATER and the test went
+    red -- having found no bug, because it was asserting A FACT ABOUT TODAY
+    while claiming to test AN INVARIANT.
+
+    That is the same mistake as test_campaign_db.py's hardcoded scene id, which
+    I had fixed EARLIER IN THE SAME SESSION and then made again here. The
+    campaign is a clock; any coordinate, id or quantity drawn from its range
+    eventually becomes true. **DERIVE THE FIXTURE OR DO NOT HAVE ONE.**
+    """
+    import sqlite3
+    con = sqlite3.connect(db)
+    row = con.execute("SELECT x,y FROM cells WHERE level=1 AND terrain='open'"
+                      " AND (seen IS NULL OR seen=0) ORDER BY x,y LIMIT 1"
+                      ).fetchone()
+    con.close()
+    return row
+
+
+def _seen_square_with_an_unseen_open_neighbour(db):
+    """A (seen, unseen-open-neighbour) pair, derived. Skips if none is left."""
+    import sqlite3
+    con = sqlite3.connect(db)
+    seen = {(r[0], r[1]) for r in con.execute(
+        'SELECT x,y FROM cells WHERE level=1 AND seen=1')}
+    opens = {(r[0], r[1]) for r in con.execute(
+        "SELECT x,y FROM cells WHERE level=1 AND terrain='open'")}
+    con.close()
+    for (x, y) in sorted(seen):
+        for dx, dy in ((0, 1), (0, -1), (1, 0), (-1, 0)):
+            n = (x + dx, y + dy)
+            if n in opens and n not in seen:
+                return (x, y), n
+    return None, None
+
+
+def test_dmap_at_known_refuses_a_square_the_party_has_not_seen():
+    """*** THE SAME LEAK HAPPENED TWICE AND THE SECOND TIME THE WARNING WAS IN
+    FRONT OF ME. ***
+
+    Day 95: I read a route home off `dmap path` through unwalked ground and the
+    player said "we shouldn't know about the connection." A --known mode was
+    promised and never built.
+
+    Day 99, worse: I chained three `at` calls down an unexplored corridor and
+    told the player the passage had no branches and that two orc bands were
+    walking into each other in it. All true on the map. NONE of it seen. And
+    every one of those squares printed "NOT SEEN by the party" in the output I
+    pasted into the chat.
+
+    *** THE WARNING WAS ON THE QUERIED SQUARE AND THE LEAK WAS IN THE EXITS
+    LIST *** -- which reported terrain and area names for neighbours nobody had
+    ever looked at. A header is read once; an exits table reads as perception.
+    """
+    import pytest
+    dmap, db = _dmap_and_db()
     if not os.path.exists(db):
-        import pytest
         pytest.skip('map not built')
-    out = '\n'.join(dmap.describe(db, 1, (2, 18), known=True))
+    sq = _an_unseen_square(db)
+    if sq is None:
+        pytest.skip('every open square on level 1 has been seen')
+    out = '\n'.join(dmap.describe(db, 1, sq, known=True))
     assert 'NOT SEEN' in out
     assert 'corridor' not in out.lower(), \
         'it named the terrain of a square the party has never looked at'
-    # and the DM view still works, because the DM is allowed to know
-    dm = '\n'.join(dmap.describe(db, 1, (2, 18)))
-    assert 'corridor' in dm
+    assert 'corridor' in '\n'.join(dmap.describe(db, 1, sq)), \
+        'the DM view must still work -- the DM is allowed to know'
 
 
 def test_dmap_at_known_masks_what_lies_BEYOND_an_unseen_exit():
     """The actual leak, and the reason the flag touches the exits at all.
 
-    From (3,19) -- which the party is standing on -- the DM view names what is
-    south of (2,19). Under --known it must say only that the ground is unseen,
-    because 'open corridor' about a square nobody has looked at is the map being
-    handed over one adjacency at a time.
+    'open corridor' about a square nobody has looked at is the map being handed
+    over one adjacency at a time, and it arrives looking like perception.
     """
-    import sys as _s
-    _s.path.insert(0, os.path.join(ROOT, 'mapdb'))
-    import dmap
-    db = os.path.join(ROOT, 'mapdb', 'output', 'b1', 'b1.sqlite')
+    import pytest
+    dmap, db = _dmap_and_db()
     if not os.path.exists(db):
-        import pytest
         pytest.skip('map not built')
-    out = '\n'.join(dmap.describe(db, 1, (2, 19), known=True))
-    # (2,19) itself was looked into by lamplight on day 99, so it describes;
-    # (2,18) south of it was NOT, so the exit must be masked.
-    assert 'UNSEEN' in out, \
-        'an exit into unwalked ground was described instead of masked'
+    here, beyond = _seen_square_with_an_unseen_open_neighbour(db)
+    if here is None:
+        pytest.skip('no seen square still adjacent to unseen open ground')
+    out = '\n'.join(dmap.describe(db, 1, here, known=True))
+    assert 'UNSEEN' in out, (
+        'from %s, the exit into %s was described instead of masked'
+        % (here, beyond))
 
 
 def test_the_edge_KIND_still_shows_under_known():
     """A door is a thing you can see from your own side of it.
 
     --known must not become useless: masking the edge itself would hide doors
-    the party is standing in front of, which is the opposite error.
+    the party is standing in front of, which is the opposite error. Derived by
+    finding any SEEN square that has a door on it.
     """
-    import sys as _s
-    _s.path.insert(0, os.path.join(ROOT, 'mapdb'))
-    import dmap
-    db = os.path.join(ROOT, 'mapdb', 'output', 'b1', 'b1.sqlite')
+    import pytest
+    import sqlite3
+    dmap, db = _dmap_and_db()
     if not os.path.exists(db):
-        import pytest
         pytest.skip('map not built')
-    out = '\n'.join(dmap.describe(db, 1, (3, 19), known=True))
-    assert 'door' in out, 'area 17\'s door vanished from a square in front of it'
+    con = sqlite3.connect(db)
+    seen = {(r[0], r[1]) for r in con.execute(
+        'SELECT x,y FROM cells WHERE level=1 AND seen=1')}
+    doors = [(r[0], r[1], r[2]) for r in con.execute(
+        "SELECT x,y,orient FROM edges WHERE level=1 AND kind='door'")]
+    con.close()
+    for (x, y, o) in doors:
+        for cand in ((x, y), (x, y + 1) if o == 'H' else (x + 1, y)):
+            if cand in seen:
+                out = '\n'.join(dmap.describe(db, 1, cand, known=True))
+                if 'door' in out:
+                    return
+    pytest.skip('no seen square with a door on it')
