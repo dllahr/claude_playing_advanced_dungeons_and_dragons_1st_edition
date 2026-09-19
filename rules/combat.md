@@ -965,27 +965,33 @@ to apply — a cleric simply does not carry the thing.
 | **YRTONE and BLARTHO may NOT have** | dagger, sword, spear, arrow, bolt, javelin, hand axe — anything that cuts or pierces — **and MORNING STAR** |
 | **They may have** | **footman's flail** (carried), **sling** (carried), club, mace, quarterstaff, war hammer |
 
-> ### ⚠ A MORNING STAR IS NOT A MACE. Added 2026-09-19, player-caught.
->
-> The gnoll on day 99 dropped one and I offered it to the clerics as *"blunt,
-> which means a cleric may legally carry it."* **Wrong.** A morning star is a
-> **spiked** head — the table above even groups it with the Godentag and the
-> Holy Water Sprinkler, both spiked — and a spike pierces and sheds blood.
->
-> **The list of permitted weapons in the row above was already complete and
-> already excluded it.** The error was reading the weapon's silhouette instead of
-> reading this file. A mace and a war hammer are permitted because they are
-> *smooth* striking heads; the spikes are the whole difference.
->
-> **The permitted list is a WHITELIST. If a weapon is not on it, the answer is
-> no** — do not reason about whether it looks blunt.
-
 *source: **PHB p. 20**, THE CLERIC — verified from a 170 dpi page render, printed
 footer reads 20.*
 
 *(Caught 2026-09-02 when the party tried to buy a dagger for every character.
 It is a **multi-class exemption only**: PHB p. 32, "Cleric combinations (with
 fighter types) may use edged…" — neither of this party's clerics is multi-class.)*
+
+> ### ⚠ A MORNING STAR IS NOT A MACE. Added 2026-09-19, player-caught.
+>
+> The gnoll on day 99 dropped one and I offered it to the clerics as *"blunt,
+> which means a cleric may legally carry it."* **Wrong.** A morning star is a
+> **spiked** head — the weapon table in this file even groups it with the
+> Godentag and the Holy Water Sprinkler, both spiked — and a spike pierces and
+> sheds blood, which is precisely what p.20 forbids.
+>
+> **The permitted row above was already complete and already excluded it.** The
+> error was reading the weapon's silhouette instead of reading this file. A mace
+> and a war hammer are permitted because their heads are *smooth*; the spikes are
+> the whole difference.
+>
+> **The permitted list is a WHITELIST. If a weapon is not on it, the answer is
+> no** — do not reason about whether it looks blunt.
+>
+> ⚠ **And this note was first written ABOVE the `*source:*` line**, which broke
+> the citation association and turned `test_every_combat_table_is_cited` red — a
+> table and its provenance must stay adjacent. **Commentary goes below the
+> source line, never between it and the table.**
 
 ## Changing weapons in melee — the standing ruling
 
