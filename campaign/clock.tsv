@@ -942,3 +942,5 @@ when	exped	round	kind	anchor	detail	note
 2026-09-18	13	240	advance		4	day 99 rounds 236-240: Tristle backs away from (13,31) -- east along the turn and south-west down the corridor, forty feet, facing north the whole way -- and rejoins the column at (10,30).
 2026-09-18	13	240	check	240	d6=2	anchor 240 + 0
 2026-09-18	13	244	advance		4	day 99 rounds 240-244: thirty feet east and round the turn north to (13,31), in one body, at the cautious rate.
+2026-09-18	13	245	advance		1	day 99 expedition 13: the gnoll fight, one round -- it charged, missed, took a volley, broke and was killed at the break-off
+2026-09-18	13	249	advance		4	day 99 after the gnoll: nineteen missiles gathered off the corridor floor (10 arrows, 6 darts, 3 sling bullets) and Tristle goes over the body. Four rounds, against the day-95 precedent of five for two bodies plus arrows plus topping the lamp, and expedition 4's three for one kobold and its arrows. *** NINETEEN OF NINETEEN: no breakage, per the ruling written into rules/exploration.md today. Net zero on inventory, so no inventory_log row -- nothing was deducted when they were loosed
