@@ -717,6 +717,18 @@ geometry here is **curved**, which `DIAGONAL_WALLS.md` puts explicitly out of
 scope. **Different sheet, different failure mode** — do not go looking for the
 last map's bug.
 
+> ### ⚠ AND LEVEL 1 HAS A CURVE TOO — see `CURVED_CORRIDORS.md`
+>
+> Out of scope for detection is not out of scope for **reading**. A half-ellipse
+> corridor sweeps round area 12, and on day 99 `dmap at` reported its bend as a
+> **T-junction with two open exits** — both of which were the rock inside the
+> curve, at 0.00 and 0.23 open. It was narrated to the player as two ways on.
+>
+> **The rule, before narrating any junction: check the open fraction of each
+> candidate exit.** An "open" edge means the boundary is passable and the cell is
+> not solid; it does **not** mean the cell is floor. Two exits both under 0.40
+> means you are standing at a bend.
+
 ## KNOWN BUG in `dmap.py reach`
 
 On level 2 it reports `walkable 923 reached 925` — **reached exceeds walkable.**

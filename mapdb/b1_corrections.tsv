@@ -869,3 +869,37 @@ edge	6	20	V	wall	dl+claude	AUDITED day 95 with (6,20,H); 15.0 px, the thickest r
 # render; this one cites a die and a permission, and is the single least
 # defensible entry in this file. If it ever needs reversing, reverse it.
 edge	4	15	H	open	dl+claude	DM ADDITION day 99, PLAYER-PERMITTED, NOT on the printed map. An opening in the south wall of the (2,16)-(6,16) corridor at (4,16), leading south into (4,15). Added because six orcs used a pocket that had nowhere for them to go. Connectivity verified first: (4,15) already reaches 1,182 squares and every keyed area without it
+#
+# --- THE HALF-ELLIPSE CORRIDOR ROUND AREA 12, day 99 -------------------------
+# PLAYER-CAUGHT, 2026-09-19: "the corridor only goes in one direction, it
+# actually curves around in a half-circle... the top of the curve is (9,37) and
+# (10,37) when it is running east-west, then it continues to curve until it
+# reaches (6,34) where it is running north-south again."
+#
+# Verified against a 200 dpi render with the grid convention read out of
+# extract.py (V = EAST side of (x,y), H = NORTH side; dungeon y = ny-1-j).
+# Re-measured open fraction per square agreed with the extractor's own stored
+# values to a MEDIAN ABSOLUTE ERROR OF 0.009 over 1,665 cells, so the numbers
+# below are the sheet's, not a guess:
+#
+#   right leg N-S   (13,34) 1.00 -> (13,35) 0.62
+#   bend            (12,36) 0.95 -> (11,37) 0.53      <- DIAGONAL steps
+#   top, E-W        (10,37) 0.97    (9,37) 0.97
+#   bend            (8,37)  0.64 -> (7,36) 0.99       <- DIAGONAL steps
+#   left leg N-S    (6,35)  0.91 -> (6,34) 1.00
+#
+# The squares INSIDE the bends are the rock the curve cuts across, and they are
+# not ways on: (13,36) 0.00, (12,35) 0.23, (11,36) 0.37, (12,37) 0.00,
+# (7,37) 0.01, (8,36) 0.23, (6,36) 0.07, (7,35) 0.06.
+#
+# ELEVEN OF THE TWELVE EDGES ALONG THIS ARC WERE ALREADY OPEN -- two of them
+# corrected by hand previously (12,35,V hole=331 and 6,35,V hole=241, both at
+# confidence 10). Exactly ONE link was missing, and it is the one below.
+#
+# Its failure mode is already documented on (6,36,H) two bends away: "this is
+# not a dressed ruled wall, it is the edge of a LARGE MASS OF NATURAL ROCK with
+# a curved irregular boundary, which is exactly what an extractor built to
+# measure straight ruled bands scores badly." thick=12 hole=0 at confidence 3
+# is that same artifact -- a curved boundary sampled as if it were a straight
+# band. Opening it closes the arc.
+edge	7	35	H	open	dl+claude	the half-ellipse round area 12: last missing link of the arc, (7,36)|(7,35). thick=12 hole=0 at confidence 3, a CURVED rock boundary measured as a straight wall band -- same artifact as (6,36,H), audited day 95. Player-described and render-verified day 99; without it dmap path routed (13,35)->(6,34) SIX HUNDRED FEET through a secret door instead of round the curve
