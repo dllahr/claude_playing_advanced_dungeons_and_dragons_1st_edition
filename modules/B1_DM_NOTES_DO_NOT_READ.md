@@ -4419,3 +4419,36 @@ days inside the at-cost question. **She will say so if asked who buys the iron,
 and she will not volunteer it** (she has a market to run and did not connect it
 to the Ludbury man). Do not narrate it. **Let it arrive by a question** — at
 Mund's counter, or from Wend, or when L024's two numbers go up on the board.
+
+---
+
+## Day 99 — the orcs warn the party about AREA 22, and it is the real thing
+
+**Rolled d6=5: they answer and give something back.** The party had just spent two
+free surprise segments saying hello and handing them intelligence about the
+troglodytes for nothing. They reciprocate, and what they have to give is the most
+valuable thing anybody has given this party underground.
+
+> **Area 22, the Garden Room — GHOULS (1–2), hp 6, 4.** Stocking table row 20,
+> "overgrown garden." West and south of the (4,14) junction the party is standing
+> at, in the direction they have just announced they are walking.
+
+**WHY THE ORCS KNOW AND WHY THEY WOULD SAY SO.** Ghouls hunt anything living and
+these two live on this road. They have lost people to it. Warning a party that is
+walking into it costs them nothing and buys them a party that owes them.
+
+### ⛔ WHAT THE PLAYER MAY BE TOLD, AND IT IS NOT "GHOULS"
+
+**The warning arrives in an orc's mouth, not out of the Monster Manual.** He has
+no word for a ghoul and no interest in taxonomy. What he has is what it does:
+
+> *dead things, west — they take hold of you and then you cannot move.*
+
+**That one clause is the whole of the gift**, because paralysis is what would
+actually kill this party: hit points run 2 to 9 across eight people, three of
+them have 2 or 3, and a held character in a corridor is a dead one. The party
+gets the SYMPTOM and no name, which is exactly right — CHECKLIST §8 forbids the
+statistic and nothing forbids a survivor's account.
+
+**Do not confirm the identification if the player guesses it.** They are entitled
+to reason from "dead things that hold you" to whatever they like; that is play.
