@@ -824,3 +824,31 @@ edge	5	36	V	wall	dl+claude	AUDITED day 95 by INK THICKNESS against references on
 edge	1	20	V	false_door	dl+claude	*** THE MAP WAS MISSING A FALSE DOOR THAT B1 P.16 STATES IN WORDS. *** Extraction had (1,20,V) and (1,21,V) both as plain wall at confidence 9. Area 17 CHAR STORAGE CELLAR says outright: "There is a false door on the west wall of the room. It cannot be opened, although it does seem to rest in a frame and even will rattle or move ever so slightly when great strength is applied." Rendered at 200 dpi x10 and THE GLYPH IS THERE -- a rectangle sitting against the west wall, ON ONE SIDE of the line rather than straddling it, which is exactly how B1 legend draws FALSE DOOR as against DOOR. Placed at (1,20,V), the north half of the west wall, where the glyph sits. *** THIS IS THE THIRD TIME TODAY THE PRINTED PAGE BEAT THE EXTRACTOR IN THIS QUARTER *** -- after (10,40,H) plain door called secret and (10,41,V) portcullis called wall. The lesson from mapdb/README holds: when the room TEXT names a feature, go and look for the glyph rather than trusting the edge class
 edge	6	20	H	wall	dl+claude	AUDITED day 95 BY INK THICKNESS before the party searched it -- confidence was 3. SOLID: 14.0 px, against 12.0 for the confidence-9 walls beside it and 2.0 for a known opening. THICKER than a normal wall, not thinner. The low confidence is the classifier struggling with heavy ink at the map margin, not doubt about the edge
 edge	6	20	V	wall	dl+claude	AUDITED day 95 with (6,20,H); 15.0 px, the thickest reading in the north-east part of the smithy. Solid
+# *** FOUND IN PLAY, DAY 99, AND IT WANTS VERIFYING AGAINST THE PAGE. ***
+# Six orcs went south down the x=2 corridor across one hour of play and NOT ONE
+# came back past a party that was standing in its only known mouth. On the
+# extraction as it stood, the pocket (2,16)-(6,16) has exactly two exits: the
+# north end at (2,19), and area 19's south door at (6,16,H), WHICH THE PARTY HAD
+# SPIKED SHUT ITSELF twenty turns earlier. So there was nowhere for them to be.
+#
+# THAT IS NOT EVIDENCE ABOUT ORCS. IT IS EVIDENCE ABOUT THE MAP -- and this
+# quadrant was already the least trustworthy on the level: the DM notes flag
+# areas 10 and 11 as mis-mapped and say DO NOT ROUTE THE PARTY THROUGH THEM, and
+# every edge round y=14-15 here is a CONFIDENCE 3 call -- (3,15,V), (2,14,V),
+# (3,14,H), (3,14,V), (4,14,V), (6,14,V), (7,14,H).
+#
+# Rolled d6=6 on declared bands: the pocket CONNECTS SOUTH and the extraction
+# missed it, rather than there being a secret door (which was 1-3 and would have
+# been L051's territory). A MISSED OPENING IS NOT HIDDEN -- anybody standing in
+# that corridor with a lamp sees it, which is why the party finds it by walking
+# ten feet and not by searching.
+#
+# (4,15) and (4,14) are both real on the extraction and (4,14,H) is OPEN at
+# confidence 10, so the space below is solidly mapped. The wall call between the
+# corridor and it is the error.
+#
+# ⚠ NOT YET CHECKED AGAINST A PAGE RENDER. Provenance is PLAY, not the book, and
+# mapdb/README.md's rule stands: a call justified by nothing but convenience is
+# how six geometry errors happened. Render x=2-7, y=13-17 at high dpi and either
+# confirm this or reverse it.
+edge	4	15	H	open	dl+claude	FOUND IN PLAY day 99: the south wall of the (2,16)-(6,16) corridor is NOT continuous. There is an opening at (4,16) leading south into (4,15), and six orcs used it across an hour while the party held the only exit the extraction knew about. Confidence was 3 all round this block. VERIFY AGAINST THE PAGE
