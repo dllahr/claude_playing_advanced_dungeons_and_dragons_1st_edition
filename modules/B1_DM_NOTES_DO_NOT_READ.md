@@ -4497,3 +4497,45 @@ that means, the party finds it out by asking it or by fighting it**, and a
 seven-foot hyena-headed thing standing sentry in somebody else's corridor is a
 question worth letting them ask. It has no light of its own and does not need
 one.
+
+## Day 99 — the gnoll is dead. What is on the body, sealed before they search.
+
+Killed at round 245 without touching anybody. **hp 13, XP 28 + 2/hp = 54**, due
+when they walk out (B1 pays on a living exit only).
+
+| on the body | source |
+|---|---|
+| **a morning star** | d100 = **95** on MM p.46's weapon table — 86-100 is morning star |
+| **a sword** | *"All carry swords"* — MM p.46, not a roll |
+| **8 electrum, 5 gold** | individual treasure types **L** (2-12 ep, rolled 8) and **M** (2-8 gp, rolled 5) |
+| shabby armour | horn, metal plates and leather over a moth-eaten fur vest. MM p.46 description. Not worth carrying out and it will not fit anybody |
+
+⚠ **The two coin rolls are NOT in `rolls.tsv`** — `treasure.py` calls `random`
+directly rather than going through `dice.py`, so this table is the only record of
+them. Do not re-roll them. *(Worth fixing in the tool; noted, not done.)*
+
+**It never got to use the morning star.** It closed and swung and missed, and the
+weapon was still undetermined at that point because a miss rolls no damage — so
+the d100 above was rolled AFTER it died, which is legitimate and is the reason
+the body has a specific thing on it rather than whatever is convenient later.
+
+### What the party can work out, and what it cannot
+
+**Can**: it is warm-blooded, seven feet, hyena-headed, armed and armoured, and it
+came from the north. Tristle speaks gnoll. It is on friendly terms with orcs by
+its own book — *"providing the weaker types are not very much weaker in
+numbers"* — which is a real constraint on how Ruk's band would have treated it.
+
+**Cannot, and DO NOT VOLUNTEER**: that it came up from **area 48, the Arena
+Cavern, on level 2**; that B1's list gives 1-4 of them and **three remain at hp
+7, 6 and 3**; or why one was standing sentry alone that far from its band. The
+sealed note above says it plainly: *"the party finds it out by asking it or by
+fighting it."* **They fought it, so they did not find out.** That question is
+still open and it is a better one now than it was an hour ago.
+
+### Open thread this creates
+
+**Something warm, organised and not-orc is using the corridors north of (13,32),
+and there is now a body in them that its friends will find.** No timer on that,
+no manufactured urgency — but it is a real consequence and it should not be
+quietly dropped.

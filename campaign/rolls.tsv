@@ -8561,3 +8561,56 @@ when	exped	turn	notation	dice	modifier	total	hidden	reason
 2026-09-18			1d100	96	0	96		day 99 round 236: TRISTLE MOVE SILENTLY, backing away east and south from (13,31) to rejoin the party at (10,30) -- forty feet, in the dark, away from something warm he never identified. 30%. HIDDEN OUTCOME
 2026-09-18			d6	2	0	2		wandering check, anchor 240
 2026-09-18			1d6	3	0	3		day 99 round 240: WHAT DOES IT DO AS THE LAMP COMES ROUND THE TURN? It is stationary and awake, forty to fifty feet north up a dead-straight corridor with walls both sides, and a lantern has just appeared at the south end of it. Anything with eyes sees that; anything with infravision saw the glow before the lamp itself cleared the corner. DECLARED: 1-2 it comes at them; 3-4 it HOLDS and lets them come; 5-6 it gives ground north, out of the corridor
+2026-09-18			d6	3	0	3		surprise check, party
+2026-09-18			d6	2	0	2		surprise check, the thing north
+2026-09-18			1d100	17	0	17		day 99 round 245: FIRST CONTACT REACTION, DMG p.63 -- thirty feet, both sides expecting it, nobody surprised, nothing thrown. The party is advancing slowly with weapons in hand and has not spoken. *** AND TRISTLE SPEAKS ITS LANGUAGE. party_roster.md line 75 gives him common, elvish, GNOLL, hobgoblin, gnome, halfling, orcish -- the elf racial list -- and this is the THIRD ENTRY ON THAT ONE LINE TO DECIDE AN ENCOUNTER IN FIVE DAYS: gnome bought 588 lb of iron and a back door on the 95th, orcish bought two parleys this afternoon, and now gnoll. *** Tristle CHA 9, no reaction adjustment; this party has never had one. Rolled unmodified
+2026-09-18			d2	2	0	2		initiative, party
+2026-09-18			d2	1	0	1		initiative, monsters
+2026-09-18			d6	2	0	2		initiative, party
+2026-09-18			d6	5	0	5		initiative, monsters
+2026-09-18			1d3	2	0	2		day 99 fight round 1: WHICH OF RANK 1 DOES IT COME FOR? Yrtone, Dave and Torsat are abreast in a ten-foot corridor and it is charging thirty feet into them. 1=Yrtone (sling, LARGE SHIELD, AC 3), 2=Dave (short bow, SHIELD SLUNG, AC 4), 3=Torsat (bow, large shield, AC 3)
+2026-09-18			d20	7	0	7		the tall thing attacks AC 4
+2026-09-18			d20	1	0	1		Dave attacks with short bow
+2026-09-18			d20	11	0	11		Dave attacks with short bow
+2026-09-18			d20	18	0	18		Torsat attacks with short bow
+2026-09-18			1-6 (1d6)	1	0	1		Torsat damage, short bow
+2026-09-18			d20	14	0	14		Torsat attacks with short bow
+2026-09-18			d20	19	0	19		Tristle attacks with short bow
+2026-09-18			1-6 (1d6)	2	0	2		Tristle damage, short bow
+2026-09-18			d20	8	0	8		Tristle attacks with short bow
+2026-09-18			d20	11	0	11		Yrtone attacks with sling
+2026-09-18			d20	19	0	19		Blartho attacks with sling
+2026-09-18			2-5 (1d4+1)	2	1	3		Blartho damage, sling
+2026-09-18			d20	7	0	7		Dave attacks with short bow
+2026-09-18			d20	1	0	1		Dave attacks with short bow
+2026-09-18			d20	17	0	17		Torsat attacks with short bow
+2026-09-18			1-6 (1d6)	6	0	6		Torsat damage, short bow
+2026-09-18			d20	15	0	15		Torsat attacks with short bow
+2026-09-18			1-6 (1d6)	5	0	5		Torsat damage, short bow
+2026-09-18			d20	12	0	12		Tristle attacks with short bow
+2026-09-18			1-6 (1d6)	5	0	5		Tristle damage, short bow
+2026-09-18			d20	8	0	8		Tristle attacks with short bow
+2026-09-18			d20	14	0	14		Yrtone attacks with sling
+2026-09-18			d20	5	0	5		Blartho attacks with sling
+2026-09-18			1d2	1	0	1		day 99 fight round 1: DAVE'S FIRST ARROW WAS A NATURAL 1 AND THE THING WAS ALREADY IN AMONG RANK 1. *** rules/combat.md's standing DM ruling: 'throwing into a melee -- a natural 1 strikes a friendly at random among those engaged. No blanket penalty otherwise.' *** Engaged means rank 1, and Dave is the shooter, so it is Yrtone or Torsat. 1=Yrtone, 2=Torsat. AND THIS IS THE PRICE OF THE WHOLE SEQUENCE: the party declared a volley at thirty feet, LOST INITIATIVE 5 TO 2, and the thing crossed the gap before a single string was loosed -- so eight missiles declared at open range were loosed into a melee instead
+2026-09-18			1d6	2	0	2		day 99 fight round 1: DAVE'S ARROW INTO YRTONE. Short bow damage 1d6, and Dave's +3 STRENGTH DAMAGE DOES NOT APPLY -- characters.tsv says it in capitals: strength adjustments are for melee and HURLED weapons only, NEVER a bow. The 18/26 that makes him the strongest man in the party is worth nothing on a bowstring, in either direction
+2026-09-18			d20	15	0	15		Frython attacks with dart
+2026-09-18			d20	16	0	16		Frython attacks with dart
+2026-09-18			1-3 (1d3)	3	0	3		Frython damage, dart
+2026-09-18			d20	3	0	3		Frython attacks with dart
+2026-09-18			d20	9	0	9		Ista attacks with dart
+2026-09-18			d20	14	0	14		Ista attacks with dart
+2026-09-18			d20	20	0	20		Ista attacks with dart
+2026-09-18			1-3 (1d3)	2	0	2		Ista damage, dart
+2026-09-18			d100	88	0	88		morale
+2026-09-18			d20	9	0	9		Dave attacks with short bow
+2026-09-18			1-6 (1d6)	3	0	3		Dave damage, short bow
+2026-09-18			d20	15	0	15		Dave attacks with short bow
+2026-09-18			1-6 (1d6)	6	0	6		Dave damage, short bow
+2026-09-18			d20	14	0	14		Torsat attacks with short bow
+2026-09-18			1-6 (1d6)	3	0	3		Torsat damage, short bow
+2026-09-18			d20	16	0	16		Torsat attacks with short bow
+2026-09-18			1-6 (1d6)	3	0	3		Torsat damage, short bow
+2026-09-18			d20	13	0	13		Yrtone attacks with sling
+2026-09-18			2-5 (1d4+1)	1	1	2		Yrtone damage, sling
+2026-09-18			1d100	95	0	95		day 99: WHAT THE DEAD GNOLL WAS ARMED WITH. It missed, so damage was never rolled and the weapon was never fixed -- settling it now off the MM p.46 table rather than deciding it when the party searches the body. great bow 1-15, pole arm 16-50, two-handed sword 51-65, battle axe 66-85, morning star 86-100. All carry swords in addition
