@@ -59,6 +59,10 @@ CLASS_COLUMN = {'fighter': 'Fighter', 'cleric': 'Cleric', 'thief': 'Thief',
 HD_BANDS = ('up to 1-1', '1-1', '1', '1+', '2-3+', '4-5+', '6-7+', '8-9+',
             '10-11+', '12-13+', '14-15+', '16+')
 
+# A 0-level human is not a class and has no column in the character matrix as
+# `combat.md` carries it. See rules/zero-level.md.
+ZERO_LEVEL = ('normal man', 'normal men', '0 level', 'zero level', 'man-at-arms')
+
 
 # ------------------------------------------------------------------ lookups
 
@@ -127,6 +131,13 @@ def hd_band(hd):
 
 
 def proficiency_penalty(cls):
+    # A normal man has no class and therefore no proficiency slots. PHB p.105
+    # puts him on the FIGHTER side of matrix I.B, so he takes the fighter's
+    # penalty for anything but his own customary weapon. Stated here rather
+    # than left to crash, because it WILL come up the first time a 0-level NPC
+    # picks up something that is not his.
+    if cls.lower() in ZERO_LEVEL:
+        cls = 'Fighter'
     t = rules.find('Weapon proficiency')
     d = rules.as_dict(t)
     key = cls.title().replace('Magic-User', 'Magic-User')
@@ -179,6 +190,19 @@ def attack_modifiers(char, weapon, ranged=None, extra=()):
 
 
 def target_number(cls, ac):
+    # A NORMAL MAN IS NOT A CLASS. PHB p.105: "Normal men such as men-at-arms
+    # are always considered at level 0", and DMG p.74's matrix I.B carries a
+    # column headed 0 to the left of 1-2. That table lives in
+    # rules/zero-level.md with its own citation and is read from THERE -- it is
+    # not copied into combat.md, because no rules table is written twice.
+    #
+    # Brand stood in the formation for a full day of play with no stat line at
+    # all, and the first time the player said "everyone with missile weapons"
+    # the tool could not roll for him.
+    if cls.lower() in ZERO_LEVEL:
+        t = rules.find('To hit — 0-level HUMANS use the CHARACTER matrix, '
+                       'column 0')
+        return int(rules.lookup(t, str(ac), '0 level')), t['source']
     t, _ = _to_hit_tables()
     col = CLASS_COLUMN.get(cls.lower())
     if not col:
@@ -206,7 +230,11 @@ def resolve_attack(name, char, weapon, ac, extra=(), size='S/M', rng=None):
     nat = d.dice[0]
     lines.append('%s -- %s vs AC %s' % (name, weapon, ac))
     lines.append('    d20 = %d' % nat)
-    lines.append('    %d  base to hit, %s %s' % (base, cls, 'level 1'))
+    # The whole party is 1st level and this was hardcoded to say so. Brand
+    # is 0 level and it printed "Normal Man level 1", which is the kind of
+    # confident wrong label somebody later quotes.
+    lines.append('    %d  base to hit, %s level %s'
+                 % (base, cls, char.get('level') or '1'))
     for m in mods:
         lines.append('    ' + str(m))
     lines.append('    needs %d%s' % (need, '' if not mods else

@@ -425,3 +425,42 @@ def test_monster_xp_is_a_full_share_but_treasure_xp_is_not():
                           log=[dict(kind='treasure', xp='60',
                                     earned_by='all,N', notes='')])
     assert tot['A'] == 40 and tot['N'] == 20, 'treasure xp must stay halved'
+
+
+# ------------------------------------------- 0-level humans, added day 99
+# Brand stood in the marching order for a full day of play with no stat line at
+# all. The first time the player said "everyone with missile weapons",
+# combat.py raised ValueError: no to-hit column for class 'Normal Man'.
+
+def test_a_normal_man_hits_off_the_zero_level_column():
+    """PHB p.105: normal men are always level 0. DMG p.74 matrix I.B column 0."""
+    for ac, want in ((2, 19), (5, 16), (6, 15), (10, 11)):
+        base, src = combat.target_number('Normal Man', ac)
+        assert base == want, (ac, base, want)
+        assert 'DMG' in src
+
+
+def test_the_zero_level_column_is_not_a_second_copy_in_combat_md():
+    """No rules table is written twice -- it is READ from zero-level.md.
+
+    If someone ever pastes a 0-level column into combat.md's character matrix,
+    there are two numbers to keep in step and one of them will rot.
+    """
+    t = rules.find('To hit — 0-level HUMANS use the CHARACTER matrix, column 0')
+    assert '0 level' in t['columns']
+    chars = rules.find('To-hit, characters')
+    assert '0 level' not in chars['columns']
+    assert '0' not in chars['columns']
+
+
+def test_a_normal_man_is_not_given_a_fighters_table():
+    """A 0-level man is a full point worse than a 1st-level fighter."""
+    for ac in (2, 5, 6, 10):
+        assert (combat.target_number('Normal Man', ac)[0]
+                == combat.target_number('Fighter', ac)[0] + 1)
+
+
+def test_a_normal_man_takes_the_fighters_non_proficiency_penalty():
+    """He has no class and so no slots; stated rather than left to crash."""
+    assert (combat.proficiency_penalty('Normal Man')
+            == combat.proficiency_penalty('Fighter'))
