@@ -4663,3 +4663,45 @@ wing** — which is why B1 says the glow is *"enough to illuminate this portion 
 the room."* **Free to tell them: the count is plainly visible through the
 grilles.** Everything else about the cages stays as `bestiary/fire-beetle.md`
 rules it — no access, ever, and the food question has no answer.
+
+## Day 99 dusk — TOLLER. All four determinations sealed before the scene.
+
+**1. THE SHOP IS SHUT. d6 = 2** — *shut and gone; they wait for morning.* He is a
+one-man dealer and the night before market is when he is laying out a stall or
+already in bed for an early start. **Not a snub and not a puzzle** — give them a
+dark window and a locked door and let them decide what to do with the evening.
+
+**2. HIS WARMTH TOMORROW: d6 = 4 — warm.** Rolled now so the evening's choices
+cannot shape it. *A d6 warmth scale is used with Toller rather than a fresh DMG
+p.63 reaction, deliberately: he is a four-time counterparty with a record —
+~250 gp paid on sight of Wace's receipt, the wrestlers valued at 115 before he
+was asked, his own 20 gp margin volunteered openly, and on day 16 he advised
+AGAINST a city sale against his own interest. A stranger's reaction roll throws
+all of that away.*
+
+**3. WHAT THE BOOKS FETCH: d6 = 2 — the thin end. 2 gp the small volume.**
+No 1e core book prices a book, so this is a DM call on bands declared before the
+roll, the same procedure as the day-97 timber nails.
+
+| | | |
+|---|---|---|
+| 7 smaller volumes | 2 gp each | **14 gp** |
+| 3 large metal-bound (count double — the binding alone is worth something) | 4 gp each | **12 gp** |
+| | | **26 gp for the ten** |
+
+**Sanity anchor:** the diary is priced at *up to 50 gp* because it is a named
+wizard's hand in undecipherable runes. These are histories and treatises that
+B1 calls of no particular interest, in a market town whose book trade Toller
+himself once described as too thin for a city sale. **26 gp for 130 lb hauled
+twenty-two miles is a poor return and that is the honest answer.** Do not
+inflate it because the party worked for it.
+
+**4. THE SCROLLS AND THE WIRE: d6 = 3.** He takes the **three scrolls** — squarely
+his line — and is **blunt that the copper wire is a smith's business, not his.**
+He will name somebody; **MUND** is the obvious mouth, the party already deals
+with him, and he bought their at-cost iron in quantity on day 97.
+
+⚠ **DO NOT VOLUNTEER THE 26 gp BEFORE HE IS ASKED**, and do not have him open
+with it. His record is that he *states a valuation unprompted and honestly* —
+which means when he does say it, he says the low number without dressing it up,
+and that is more in character than a haggle.
