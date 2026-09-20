@@ -4742,3 +4742,51 @@ line ahead. **Give them the evidence plainly and let them do the arithmetic.**
 **No trap, no ambush, no monster.** The cost is time and it is entirely the
 consequence of a reasonable choice made on incomplete information. **That is
 the game working, not the game punishing them.**
+
+## Day 101 — THE WATERCOURSE. Sealed before the horses come over the rise.
+
+**THE CART WAS NEVER GOING TO DO IT AND THE HORSES ALWAYS WERE.**
+
+| | roll | outcome |
+|---|---|---|
+| the lightened cart | **d6 = 2** | barely any gain. **The ground is the problem, not the load** — still ~3 h/mile, so 3.5 miles is **~10½ hours** and it arrives at dusk or after |
+| the three led horses | **d6 = 5** | **near 2 mi/h.** Four feet that choose where they land against two wheels that cannot. 3.5 miles in **about an hour and three-quarters** |
+| Durnhak present? | **d6 = 5** | **there, with the bars out, AND SOMETHING ELSE** |
+| the something else | **d6 = 1** | **MORE GNOMES THAN THE FIVE** |
+| how many more | **2d4 = 5** | **TEN IN ALL** |
+
+**Timing:** first light out, ~1½ h down the trail and up the road, ~½ h to learn
+the waste, ~½ h repacking onto the horses. **The horse party makes the
+watercourse around ten in the morning.** The cart is hours behind and will be
+all day.
+
+### TEN GNOMES, and why that is the interesting number
+
+The party has reasoned off **five** since day 95 — *Durnhak and four others* —
+and five is also **B1's own maximum for area 38** (Gnomes 2-5). So the figure
+they have been using is the module's, and they never knew it.
+
+**This does not contradict B1.** Area 38's two-to-five are the gnomes **in the
+dungeon**. Ten at a watercourse on the far side of the crag, with the bars
+already out and a means of moving them, says the dungeon group is **a working
+party from somewhere**, not a population. *Where* is not decided and **must not
+be invented to fill the silence** — the same discipline as L056 and the unnamed
+god. If the party asks, Durnhak answers as much as a man answers about his own
+people to someone he has known six days.
+
+> **FREELY GIVEN: the count.** They can see ten gnomes. Nobody has to be told
+> what it implies, and **do not walk them to it** — Tristle speaks gnome, Dave
+> counts, and the arithmetic against "Durnhak and four others" is theirs.
+
+> **⚠ AND THE PARTY ARRIVES CARRYING HIS WHOLE ORDER ON THREE HORSES.**
+> DURNHAK RECEIVES: 196 spikes; 20 lb of nails; and 8 flasks of oil against the
+> 9 he is owed, so he is one short.
+>
+> **THE PARTY KEEPS NOTHING.** `light.py oilstate` reads **0 sealed** flasks and
+> one broached with 18 turns — and the three lanterns hold 8.6, 22.8 and 24.0
+> already poured. That is the whole of their light.
+>
+> They took that deliberately, and it deserves to be noticed by a gnome who
+> counts things for a living.
+> **That is a real cost and they took it deliberately.** It deserves to be
+> noticed by a gnome who counts things for a living.

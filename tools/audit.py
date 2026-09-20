@@ -200,8 +200,50 @@ HP_PAT = re.compile(r'\b(%s)\s*(?:/|\s+of\s+)\s*(%s)\b' % (NUM, NUM))
 XP_PAT = re.compile(r'\b(%s)\s*(?:xp|experience)\b' % NUM, re.I)
 
 
+# A hard-wrapped line is not a sentence. Markdown prose in this repo wraps at
+# about 79 columns, and splitting on every newline chopped clauses in half --
+# which breaks the checker BOTH ways. Day 101: "...carrying his whole order. On
+# day\n101 that is 196 spikes, 20 lb of nails, and every sealed flask..." split
+# at the wrap, so historical() never saw "day 101" and _nearest() bound the 20
+# from the NAILS to the "sealed flask" anchor. One wrap produced a false
+# positive out of two unrelated true statements.
+# A BLOCKQUOTE IS PROSE, and its `>` repeats on every wrapped line. Excluding
+# quoted lines from the join left exactly the sentence this was written for
+# still broken, because it lives in a `>` box -- which is where this repo puts
+# its most load-bearing paragraphs.
+_QUOTE = re.compile(r'^(\s*(?:>\s*)*)(.*)$')
+_STRUCTURAL = re.compile(r'^\s*(?:[|#]|[-*+]\s|\d+[.)]\s|```)')
+
+
+def unwrap(text):
+    """Join hard-wrapped prose lines back into whole sentences.
+
+    Blank lines still separate paragraphs. STRUCTURAL content -- table rows,
+    list items, headings, fences -- is never joined, because there a line really
+    is the unit. Blockquote markers are matched so that quoted prose joins to
+    quoted prose and never to the paragraph outside the box.
+    """
+    out = []
+    for ln in text.split('\n'):
+        pre, body = _QUOTE.match(ln).groups()
+        if not out:
+            out.append(ln)
+            continue
+        ppre, pbody = _QUOTE.match(out[-1]).groups()
+        joinable = (body.strip() and pbody.strip()
+                    and pre.strip() == ppre.strip()      # same quote depth
+                    and not _STRUCTURAL.match(body)
+                    and not _STRUCTURAL.match(pbody)
+                    and not re.search(r'[.!?:;]\s*$', pbody))
+        if joinable:
+            out[-1] = out[-1].rstrip() + ' ' + body.strip()
+        else:
+            out.append(ln)
+    return '\n'.join(out)
+
+
 def sentences(text):
-    for raw in re.split(r'(?<=[.!?:;])\s+|\n', text):
+    for raw in re.split(r'(?<=[.!?:;])\s+|\n', unwrap(text)):
         s = raw.strip()
         if s:
             yield s

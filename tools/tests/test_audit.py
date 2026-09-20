@@ -301,3 +301,54 @@ def test_the_skip_is_rows_only_and_not_the_whole_directory():
     assert not any(p.startswith('rules') for p in audit.SKIP_PATHS), (
         'rules/ must NOT be in SKIP_PATHS -- only its table ROWS are skipped')
     assert not any(p.startswith('bestiary') for p in audit.SKIP_PATHS)
+
+
+# ------------------------- a hard-wrapped line is not a sentence. Day 101.
+# sentences() split on EVERY newline, so markdown prose wrapped at ~79 columns
+# was chopped mid-clause. That breaks the checker both ways: a "day N" marker
+# wrapped away from its sentence never reaches historical(), and a figure
+# belonging to one noun gets bound to an anchor that happens to survive the cut.
+#
+# The live case: "...ON THREE HORSES. On day\n101 that is 196 spikes, 20 lb of
+# nails, and every sealed flask..." -- the wrap hid "day 101" AND bound the 20
+# from the NAILS to the "sealed flask" anchor. One line break, one false
+# positive, out of two unrelated true statements.
+
+def test_wrapped_prose_is_rejoined_before_it_is_split():
+    import audit
+    got = list(audit.sentences('the party carried on day\n101 eight flasks.'))
+    assert got == ['the party carried on day 101 eight flasks.'], got
+
+
+def test_a_blockquote_is_prose_and_joins_to_itself():
+    """This repo puts its load-bearing paragraphs in `>` boxes."""
+    import audit
+    got = list(audit.sentences('> a sentence that runs on\n> to the next line.'))
+    assert got == ['> a sentence that runs on to the next line.'], got
+
+
+def test_a_blockquote_never_joins_to_the_paragraph_outside_it():
+    import audit
+    got = list(audit.sentences('plain prose running on\n> quoted prose'))
+    assert len(got) == 2, got
+
+
+def test_table_rows_and_list_items_are_never_joined():
+    """There a line really IS the unit, and joining them invents sentences."""
+    import audit
+    assert len(list(audit.sentences('| a | 1 |\n| b | 2 |'))) == 2
+    assert len(list(audit.sentences('- one thing\n- another'))) == 2
+    assert len(list(audit.sentences('# heading\nprose under it'))) == 2
+    assert len(list(audit.sentences('| a | 1 |\n> quoted'))) == 2
+
+
+def test_a_blank_line_still_separates_paragraphs():
+    import audit
+    got = list(audit.sentences('first para runs on\n\nsecond para'))
+    assert got == ['first para runs on', 'second para'], got
+
+
+def test_a_finished_sentence_does_not_swallow_the_next_line():
+    import audit
+    got = list(audit.sentences('It ended here.\nA new one began.'))
+    assert got == ['It ended here.', 'A new one began.'], got
