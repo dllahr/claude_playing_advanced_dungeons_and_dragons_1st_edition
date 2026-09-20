@@ -27,6 +27,7 @@ it twice is the same as running it once.
 """
 import argparse
 import os
+import re
 import sqlite3
 import sys
 
@@ -367,6 +368,63 @@ def check(db, level, rows=None):
                            'it, the map is wrong and needs a correction, not a '
                            'world change' % (x, y, o))
         con.close()
+
+    # 2b. A VOID THAT CANNOT BE REPLAYED IS NOT A VOID.
+    #
+    #     Day 99, twice in one session. The party was told it had seen two doors
+    #     at (9,31) and (10,31). The player caught it that morning, and the
+    #     correction was written as a scope=CELL row whose NOTES COLUMN said
+    #     "I logged (9,31) and (10,31) as SEEN and they are not; those rows are
+    #     void." Every word of that was true and NONE of it was replayable:
+    #     replay() clears a sighting only on scope='seen' with change='no', so
+    #     the database kept seen=1 and the DM read the doors back to the player
+    #     that evening as ground they had already walked. The player had to
+    #     catch the same error a second time.
+    #
+    #     This is the project's oldest failure wearing a new hat -- a correction
+    #     living as PROSE IN A NOTES COLUMN instead of as an event, exactly like
+    #     the five purchases that hid in the notes of a funds row.
+    #
+    #     Advisory, not blocking, and deliberately narrow: it only speaks when a
+    #     note claims to void a SIGHTING and the row did not perform one. It
+    #     names the coordinates so the reader can check them in one glance.
+    #     Detection is STRUCTURAL and looks only at the `change` column. A first
+    #     version scanned the NOTE text for "void" plus coordinates and fired on
+    #     five false positives immediately -- every later note that merely
+    #     *discussed* the correction. Prose cannot be parsed for intent, and
+    #     CLAUDE.md is explicit that a checker which cries wolf gets LOOSENED.
+    #     The change column is the part the tool actually acts on, so that is
+    #     the only place worth looking.
+    #
+    #     Suppressed once the undo has actually been logged -- also structurally,
+    #     by looking for the real revert further down the log. The historical row
+    #     cannot be edited (this log is append-only), so the check has to notice
+    #     the fix rather than be told about it.
+    def _repaired(i, target):
+        for later in rows[i + 1:]:
+            if (later.get('target') or '') != target:
+                continue
+            sc, ch = later.get('scope', ''), (later.get('change') or '').strip()
+            if (sc == 'seen' and ch == 'no') or ch == REVERT:
+                return True
+        return False
+
+    for i, r in enumerate(rows):
+        change = (r.get('change') or '').strip()
+        if not change.lower().startswith('void'):
+            continue
+        if _repaired(i, r.get('target') or ''):
+            continue
+        scope = r.get('scope', '')
+        undo = ('`--change revert`' if scope in ('edge', 'cell', 'area')
+                else '`--scope seen --change no`')
+        out.append('  VOID IN THE CHANGE COLUMN: a %s row for %r has change=%r. '
+                   'replay() does not read that as an undo -- it writes the '
+                   'sentence into the map as a state and reverts NOTHING. Use '
+                   '%s. (Day 99: a cell row saying "the party cannot see this '
+                   'square at all" left both squares marked SEEN, and the DM '
+                   'read them back to the player as ground already walked.)'
+                   % (scope or '(none)', r.get('target'), change[:40], undo))
 
     # 3. Emplaced gear, and what that leaves carried.
     #    This used to WARN that a thing was "also still counted as carried",

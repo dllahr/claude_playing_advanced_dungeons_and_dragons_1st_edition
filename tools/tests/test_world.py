@@ -272,6 +272,62 @@ def test_check_flags_a_wall_that_the_party_walked_through(tmp_path):
     assert any('calls it a plain wall' in ln for ln in out)
 
 
+# --------------------------------------- a void that cannot be replayed is not
+# Day 99, caught by the player TWICE in one session. The party was told it had
+# seen two doors. The morning's correction was a scope=CELL row whose CHANGE
+# column read "VOID -- the party cannot see this square at all". replay() does
+# not read that as an undo: it writes the sentence into the map as a state and
+# reverts nothing. The database kept seen=1 and the DM read the doors back to
+# the player that evening as ground already walked.
+#
+# Detection is STRUCTURAL, on the change column. A first version scanned note
+# PROSE for "void" plus coordinates and produced five false positives on the
+# live log within a minute -- every later note that merely discussed the fix.
+
+
+def test_check_flags_a_void_announced_in_the_change_column(tmp_path):
+    db = make_db(tmp_path)
+    log = write_log(
+        tmp_path,
+        ('2026-01-01', 'b1', 13, 24, 1, 'seen', '0,1', 'yes', '', '', 'P', ''),
+        ('2026-01-02', 'b1', 13, 24, 1, 'cell', '0,1',
+         'VOID -- the party cannot see this square at all', '', '', 'C', ''))
+    out = world.check(db, 1, world.load(log, 'b1', 1))
+    assert any('VOID IN THE CHANGE COLUMN' in ln for ln in out), out
+    assert any('reverts NOTHING' in ln for ln in out), out
+
+
+def test_an_actual_seen_revert_is_not_flagged(tmp_path):
+    """The row that DOES the work must not be nagged about doing it."""
+    db = make_db(tmp_path)
+    log = write_log(
+        tmp_path,
+        ('2026-01-01', 'b1', 13, 24, 1, 'seen', '0,1', 'yes', '', '', 'P', ''),
+        ('2026-01-02', 'b1', 13, 27, 1, 'seen', '0,1', 'no', '', '', 'C',
+         'VOID -- the party has never seen (0,1); that sighting is void'))
+    out = world.check(db, 1, world.load(log, 'b1', 1))
+    assert not any('VOID IN THE CHANGE COLUMN' in ln for ln in out), out
+    assert ('cell', (0, 1)) not in world.current(world.load(log, 'b1', 1))['seen']
+
+
+def test_a_note_merely_discussing_a_void_is_not_flagged(tmp_path):
+    """The false-positive class that killed the first version of this check.
+
+    Five live rows tripped it: later notes explaining the correction, which
+    name coordinates that are legitimately seen again. Prose cannot be parsed
+    for intent, so the checker does not try.
+    """
+    db = make_db(tmp_path)
+    log = write_log(
+        tmp_path,
+        ('2026-01-01', 'b1', 13, 27, 1, 'seen', '0,1', 'yes', '', '', 'P',
+         'SEEN for the first time. The earlier sighting of (0,1) was VOID '
+         'and this one is not -- see the correction above.'))
+    out = world.check(db, 1, world.load(log, 'b1', 1))
+    assert not any('VOID IN THE CHANGE COLUMN' in ln for ln in out), out
+
+
+
 # ------------------------------- once-per-object, because prose failed twice
 # `rules/thief.md` has carried a box headed "THE LIMIT IS PER OBJECT, NOT A
 # PER-LEVEL BUDGET" since 2026-09-06, written after the DM got it wrong. On day
@@ -449,3 +505,45 @@ def test_the_edge_KIND_still_shows_under_known():
                 if 'door' in out:
                     return
     pytest.skip('no seen square with a door on it')
+
+
+def test_a_void_is_no_longer_flagged_once_the_real_revert_is_logged(tmp_path):
+    """The log is APPEND-ONLY, so the offending row can never be edited.
+
+    The check therefore has to notice the repair structurally rather than be
+    told about it, or it nags forever about something already fixed -- which
+    is how a checker teaches people to ignore it.
+    """
+    db = make_db(tmp_path)
+    log = write_log(
+        tmp_path,
+        ('2026-01-01', 'b1', 13, 24, 1, 'seen', '0,1', 'yes', '', '', 'P', ''),
+        ('2026-01-02', 'b1', 13, 24, 1, 'cell', '0,1',
+         'VOID -- the party cannot see this square at all', '', '', 'C', ''),
+        ('2026-01-03', 'b1', 13, 27, 1, 'seen', '0,1', 'no', '', '', 'C',
+         'the revert that the cell row above only claimed'))
+    out = world.check(db, 1, world.load(log, 'b1', 1))
+    assert not any('VOID IN THE CHANGE COLUMN' in ln for ln in out), out
+    assert ('cell', (0, 1)) not in world.current(world.load(log, 'b1', 1))['seen']
+
+
+def test_an_edge_void_is_cleared_by_a_real_revert(tmp_path):
+    db = make_db(tmp_path)
+    log = write_log(
+        tmp_path,
+        ('2026-01-01', 'b1', 3, 10, 1, 'edge', '0,0,V', 'spiked_open',
+         'iron spike', 2, 'T', ''),
+        ('2026-01-02', 'b1', 3, 11, 1, 'edge', '0,0,V',
+         'VOID -- the spiking did not happen', '', '', 'C', ''))
+    out = world.check(db, 1, world.load(log, 'b1', 1))
+    assert any('VOID IN THE CHANGE COLUMN' in ln for ln in out), out
+    log2 = write_log(
+        tmp_path,
+        ('2026-01-01', 'b1', 3, 10, 1, 'edge', '0,0,V', 'spiked_open',
+         'iron spike', 2, 'T', ''),
+        ('2026-01-02', 'b1', 3, 11, 1, 'edge', '0,0,V',
+         'VOID -- the spiking did not happen', '', '', 'C', ''),
+        ('2026-01-03', 'b1', 3, 12, 1, 'edge', '0,0,V', 'revert',
+         'iron spike', -2, 'C', 'the actual undo'))
+    out2 = world.check(db, 1, world.load(log2, 'b1', 1))
+    assert not any('VOID IN THE CHANGE COLUMN' in ln for ln in out2), out2
