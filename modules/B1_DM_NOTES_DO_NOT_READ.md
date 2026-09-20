@@ -4705,3 +4705,40 @@ with him, and he bought their at-cost iron in quantity on day 97.
 with it. His record is that he *states a valuation unprompted and honestly* —
 which means when he does say it, he says the low number without dressing it up,
 and that is more in character than a haggle.
+
+## Day 101 — THE LONG WAY IS THE WRONG CALL. d6 = 1. Do not soften it.
+
+The party chose the loop — Coll's trail, the fraying road, then **3.7 miles of
+open waste** from the road's end — over the two trackless miles round the north
+foot. **That ground had never been rolled for a cart.** They *rode* it on the
+98th, in the last of the light, and a ridden horse is not a loaded cart.
+
+**d6 = 1, the hard end of the declared band: the waste is worse under a wheel
+than it looked from the saddle.** Soft and broken; the wheels cut in. **Slower
+per mile than the north foot would have been**, so the longer route is also the
+slower one, and the choice cost them.
+
+| route | miles | cart pace | |
+|---|---|---|---|
+| round the north foot (**not taken**) | 2, all trackless | ~3 h/mile (sealed d6=3) | **~6 hours** |
+| the loop (**taken**) | 2.8 good + **3.7 waste** | ~1.5 h for the good; **~3.5 h/mile** for the waste | **13 hours+** |
+
+**THEY MUST FIND OUT EARLY AND CHEAPLY — that is what makes this fair.** Inside
+the first half-hour on the waste the carts have made perhaps a quarter-mile and
+it is unmistakable: wheels sinking, a man at each head, somebody walking the
+line ahead. **Give them the evidence plainly and let them do the arithmetic.**
+
+> **DO NOT tell them the north foot would have been faster.** They have never
+> taken a cart round it either. What they can see is what their own wheels are
+> doing on *this* ground, and that is enough to decide on.
+
+**The decision is theirs and both branches are real:**
+- **Push on** — most of the day, arriving late, possibly after dark, with
+  Durnhak expecting them.
+- **Turn back** — a quarter-mile out of the waste, a mile of road, 1.8 down
+  Coll's trail, then the north foot: they would reach the watercourse late, but
+  they would reach it.
+
+**No trap, no ambush, no monster.** The cost is time and it is entirely the
+consequence of a reasonable choice made on incomplete information. **That is
+the game working, not the game punishing them.**
