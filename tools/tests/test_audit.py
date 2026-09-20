@@ -258,3 +258,46 @@ def test_the_funds_anchor_still_catches_a_real_purse_claim():
                  'party funds stand at 7 gp'):
         findings, _ = run(text)
         assert [f for f in findings if f[1] == 'funds'], (text, findings)
+
+
+# ------------------- a transcribed book table is not a paraphrase. Day 99.
+# Completing DMG Appendix O in rules/equipment.md blocked a commit with three
+# findings, every one the same mistake the TSV case made a month earlier:
+#
+#     ropes    text says 50   tools say 10   <- "| Rope, 50' | 75 |"
+#     torches  text says 25   tools say 8    <- "| Torch | 25 |"
+#     funds    text says 1    tools say 1025 <- "| Purse | 1 |"
+#
+# Those are encumbrance figures out of the Dungeon Masters Guide.
+
+def test_a_book_table_row_in_rules_is_not_audited():
+    import audit
+    assert 'rules/' in audit.BOOK_TABLE_PATHS
+    assert 'bestiary/' in audit.BOOK_TABLE_PATHS
+
+
+def test_prose_is_still_audited_everywhere():
+    """The loosening must not become an exemption for whole files.
+
+    Only PIPE-TABLE ROWS are skipped, and only in the two directories that hold
+    transcribed book data. A sentence in rules/ that restates a running total is
+    exactly the class-C error this hook exists to catch.
+    """
+    import audit
+    findings, stats = audit.audit('The party has 50 ropes and 25 torches.')
+    names = {f[0] if isinstance(f, (list, tuple)) else str(f) for f in findings}
+    assert findings, 'a prose claim about ropes and torches must still be caught'
+    assert stats['checked'] >= 2
+
+
+def test_the_skip_is_rows_only_and_not_the_whole_directory():
+    """Guards the shape of the fix rather than its effect.
+
+    If somebody ever widens this to `SKIP_PATHS += ('rules/',)` the hook stops
+    reading the rules cache's prose entirely, and that prose is where the
+    campaign's rulings live.
+    """
+    import audit
+    assert not any(p.startswith('rules') for p in audit.SKIP_PATHS), (
+        'rules/ must NOT be in SKIP_PATHS -- only its table ROWS are skipped')
+    assert not any(p.startswith('bestiary') for p in audit.SKIP_PATHS)

@@ -382,6 +382,28 @@ SKIP_MARK = 'audit-skip'
 # to pass --no-verify. This is that, on the first occasion, by design.
 AUDIT_EXTENSIONS = ('.md',)
 
+# *** AND THE SAME CLASS OF FALSE POSITIVE, INSIDE A .md. Day 99, 2026-09-20. ***
+#
+# Completing Appendix O in `rules/equipment.md` blocked a commit with three
+# findings, all of them the SAME mistake the TSV case made:
+#
+#     MISMATCH  ropes    text says 50   tools say 10 ropes     <- "Rope, 50' | 75"
+#     MISMATCH  torches  text says 25   tools say 8 torches    <- "Torch | 25"
+#     MISMATCH  funds    text says 1    tools say 1,025 gp     <- "Purse | 1"
+#
+# Those are ENCUMBRANCE FIGURES OUT OF THE DUNGEON MASTERS GUIDE. Comparing a
+# book's weight table against the party's current rope count is comparing two
+# unrelated quantities that happen to share a noun -- categorically the same
+# error as auditing the logs, and just as incapable of producing signal.
+#
+# A transcribed book table is DATA WITH A CITATION, not a paraphrase. The
+# class-C errors this hook exists to catch are all SENTENCES: a running total
+# restated in prose, going stale while nothing recomputes it. So pipe-table rows
+# in the two directories that hold transcribed book data are skipped, and every
+# prose sentence in them is still audited -- as is every table anywhere else,
+# including the campaign's own.
+BOOK_TABLE_PATHS = ('rules/', 'bestiary/')
+
 
 def staged_text():
     """Added lines from the staged diff -- what is about to be committed.
@@ -407,6 +429,10 @@ def staged_text():
         if any(path.startswith(sk) for sk in SKIP_PATHS):
             continue
         if SKIP_MARK in ln:
+            continue
+        # A transcribed book table is data with a citation, not a paraphrase.
+        if (ln[1:].lstrip().startswith('|')
+                and any(path.startswith(b) for b in BOOK_TABLE_PATHS)):
             continue
         out.append(ln[1:])
     return '\n'.join(out)
