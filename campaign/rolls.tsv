@@ -8615,3 +8615,13 @@ when	exped	turn	notation	dice	modifier	total	hidden	reason
 2026-09-18			2-5 (1d4+1)	1	1	2		Yrtone damage, sling
 2026-09-18			1d100	95	0	95		day 99: WHAT THE DEAD GNOLL WAS ARMED WITH. It missed, so damage was never rolled and the weapon was never fixed -- settling it now off the MM p.46 table rather than deciding it when the party searches the body. great bow 1-15, pole arm 16-50, two-handed sword 51-65, battle axe 66-85, morning star 86-100. All carry swords in addition
 2026-09-19			1d8	1	0	1		day 99 round 249: YRTONE CASTS CURE LIGHT WOUNDS ON HERSELF, standing over the gnoll. 1d8, and she is down only 2 of 7 -- the overage is lost. Her first of two; Blartho still holds two
+2026-09-19			1d6	4	0	4		day 99 round 271: B1 LOCK ROLL, door (9,31,H) -- the WESTERLY of the two. Spent at the EXAMINATION per rules/b1-module.md: trying the latch is what spends it. 1-2 locked, 3-6 it opens. *** THIS IS THE DOOR'S ROLL, NOT A PICK ATTEMPT -- Tristle's and Ista's Open Locks on this door remain UNSPENT.
+2026-09-19			1d6	5	0	5		day 99 round 271: B1 LOCK ROLL, door (10,31,H) -- the EASTERLY of the two. Same rule, separate door, separate roll.
+2026-09-19			1d2	2	0	2		day 99 round 271: WHICH WAY DOES (9,31,H) SWING -- DM CALL, flagged as one. B1 does not state it and the map carries no opens_toward for either door. 1 = opens AWAY, north into the room beyond; 2 = opens TOWARD the party, south into the corridor. The hinge side is plainly visible on a five-inch door, so this is observation and costs no roll of the party's.
+2026-09-19			1d2	2	0	2		day 99 round 271: WHICH WAY DOES (10,31,H) SWING -- DM call, same basis.
+2026-09-19			1d100	14	0	14		day 99 round 272: HEAR NOISE, Tristle at the WESTERLY door (9,31,H). 15%. HIDDEN OUTCOME -- a failure is reported to the player as 'you hear nothing' and is indistinguishable from a true silence.
+2026-09-19			1d100	29	0	29		day 99 round 273: HEAR NOISE, Ista at the WESTERLY door (9,31,H). 10%. HIDDEN OUTCOME.
+2026-09-19			1d100	65	0	65		day 99 round 274: HEAR NOISE, Tristle at the EASTERLY door (10,31,H). 15%. HIDDEN OUTCOME.
+2026-09-19			1d100	90	0	90		day 99 round 275: HEAR NOISE, Ista at the EASTERLY door (10,31,H). 10%. HIDDEN OUTCOME.
+2026-09-19			1d6	3	0	3		day 99: WHAT THE SQUATTERS IN AREA 12 ARE DOING when Tristle's ear goes to the westerly door. DM-side, to ground what a successful Hear Noise actually delivers rather than inventing it to taste. 1-2 asleep or near it; 3-4 idle -- talking, eating, moving things about; 5-6 awake and busy. *** They have no reason to be alert: nothing has come at them and the fight was 300 feet away round a rock mass.
+2026-09-19			d6	5	0	5		wandering check, anchor 270

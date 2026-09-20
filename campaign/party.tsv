@@ -287,3 +287,4 @@ when	map	level	x	y	exped	turn	squares	feet	rate	why	route
 2026-09-19	b1	1	6	34			12	120	explore	day 99: following the curve. Standard formation, one body, explore rate. Round the half-ellipse from where the cut stone ends to where the corridor runs north-south again -- the far landmark the player named	13,35 12,35 12,36 11,36 11,37 10,37 9,37 8,37 8,36 7,36 7,35 6,35 6,34
 2026-09-19	b1	1	6	31	13	27	3	30	explore	day 99: thirty feet south down the straight run to the junction, standard formation, then a look east	6,34 6,33 6,32 6,31
 2026-09-19	b1	1	8	31	13	27	2	20	explore	day 99: east down the corridor from the junction, standard formation	6,31 7,31 8,31
+2026-09-19	b1	1	9	31	13	28	1	10	known	day 99: up to the doors. The line stands across (8,31) to (10,31) with Tristle and Ista working the two leaves; (9,31) is the anchor square	8,31 9,31

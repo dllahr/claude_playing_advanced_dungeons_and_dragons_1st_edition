@@ -948,3 +948,5 @@ when	exped	round	kind	anchor	detail	note
 2026-09-19	13	265	advance		13	day 99: 120 feet round the half-ellipse corridor, (13,35) to (6,34), standard formation at the explore rate. Twelve squares because the grid costs an extra square per bend; the real corridor is about eleven
 2026-09-19	13	268	advance		3	day 99: thirty feet south from (6,34) to the junction at (6,31), explore rate, and a look east down the corridor
 2026-09-19	13	270	advance		2	day 99: twenty feet east from the junction at (6,31) to (8,31), explore rate
+2026-09-19	13	276	advance		6	day 99: examining both doors -- latch, hinge side, sill, gap -- one round each, then four rounds of listening, Tristle and Ista independently at each door. The party's standing door routine and nothing beyond it
+2026-09-19	13	273	check	270	d6=5	anchor 270 + 3
