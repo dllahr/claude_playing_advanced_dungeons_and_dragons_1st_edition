@@ -130,6 +130,18 @@ The trigger is a **coherent boundary**, not a clock:
 > The mixed commit stands. History is not rewritten to tidy a mistake, and the
 > repair for a bad commit is the same as for a bad game event: **say so, and
 > move forward.**
+>
+> **SECOND VARIANT, SAME DAY — `git add -A` AS A SCRATCH BUFFER.**
+> `audit.py --staged` reads the index, so the obvious way to test a document
+> against it is `git add -A && python tools/audit.py --staged`. **That leaves
+> the index full**, and the next commit — `7ee7a84`, titled *"tools: audit.py
+> unwraps hard-wrapped prose"* — swept in `light.tsv`, `inventory_log.tsv`,
+> `rolls.tsv` and 48 lines of DM notes.
+>
+> **No hook was involved this time.** The cause is not refusal; it is that
+> `add -A` is being used as a verb meaning *"show me the diff"*. Either
+> `git reset` straight after the check, or run the checker on the file:
+> `python tools/audit.py path/to/file.md`.
 | **Before a risky refactor** | Today's `xp.py` reweighting would have been much easier to abandon. |
 
 ### Message convention — because `git log` is a session index
