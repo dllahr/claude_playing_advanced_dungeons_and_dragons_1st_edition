@@ -110,6 +110,26 @@ The trigger is a **coherent boundary**, not a clock:
 | **End of an in-game day** | Same trigger as the `calendar.md` row. Keeps play history granular enough to bisect. |
 | **End of an expedition** | The big narrative boundary. |
 | **After a `rules/` or `tools/` change — SEPARATELY from play** | So a bad rules edit can be reverted without unwinding a session of play. Never mix the two in one commit. |
+
+> ### ⚠ A BLOCKED COMMIT LEAVES THE INDEX FULLY STAGED. The next one sweeps it.
+>
+> *Day 99, 2026-09-19.* `git add -A && git commit` was **refused by the
+> `audit.py` hook**. The staged index survived the refusal. The next commit —
+> a `tools/` fix, staged with two explicit paths — picked up **all of it**:
+> `clock.tsv`, `party.tsv`, `world_changes.tsv` and 58 lines of DM notes went
+> into `c98bc34`, a commit whose message is about `xp.py`.
+>
+> **Naming paths on `git commit` does not narrow what is committed.** Only the
+> index decides, and a hook rejection does not clear it.
+>
+> **So after ANY refused commit: `git status --short` before the next one**, or
+> `git reset` to unstage and re-add deliberately. `reset` with no arguments is
+> not history rewriting and is not covered by the ban above — it only moves the
+> index. **`reset --hard` remains forbidden.**
+>
+> The mixed commit stands. History is not rewritten to tidy a mistake, and the
+> repair for a bad commit is the same as for a bad game event: **say so, and
+> move forward.**
 | **Before a risky refactor** | Today's `xp.py` reweighting would have been much easier to abandon. |
 
 ### Message convention — because `git log` is a session index
