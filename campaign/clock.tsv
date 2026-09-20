@@ -956,3 +956,7 @@ when	exped	round	kind	anchor	detail	note
 2026-09-19	13	320	advance		40	day 99: FOUR TURNS, seven searchers on the library's contents -- three oaken tables, two divans, the shelving, the scroll rack, the orcs' nest and the four bodies. Dave alone not searching: he holds both doors. Scale from the day-95 precedent, 'FOUR TURNS -- eight searchers on every one of...'
 2026-09-19	13	303	check	300	d6=3	anchor 300 + 3
 2026-09-20	13	330	advance		10	day 99: one turn on the beetle cages -- close examination of the grilles and the creatures, and Tristle prodding one through the bars with a ten-foot pole
+2026-09-20	13	342	advance		12	day 99: ten books and three scrolls off the shelves and the east-wall rack and into the sacks, one turn; then the cloaks up off both sills and all four jamb wedges prised out, two rounds
+2026-09-20	13	332	check	330	d6=3	anchor 330 + 2
+2026-09-20	13	356	advance		14	day 99 OUT, seven legs the player named: out the library door, west along y=31, north to the arc, ROUND THE HALF-ELLIPSE ON ITS SECOND CROSSING, south to the turn, west to (10,29), then 280 ft to the entrance junction THROUGH THE ONE-WAY SLAB AT (17,13,V) -- the standing route round the magic mouths, which emerges below them. Known rate throughout; avoid.tsv kept the router off the mouths' corridor and off Kell's grave
+2026-09-20	13	358	advance		2	day 99: the last fifty feet, out of the entrance hall and into daylight
