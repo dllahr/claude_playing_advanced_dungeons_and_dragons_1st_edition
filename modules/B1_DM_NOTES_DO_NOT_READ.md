@@ -4597,3 +4597,49 @@ searched** — it is not lying in view, and looking at the room does not find it
 B1: *"Quasqueton's library lies behind a pair of ornately carved oaken doors."*
 **Ornately carved** — the party examined both leaves and I described plain heavy
 wood. Correct it if they look again; do not pretend it was said.
+
+### Day 99 — the search. Two corrections to the entry above, both mine.
+
+**1. The nest is by the DOOR, not in the north-west corner.** The entry above
+placed the mirror *"in the orcs' bedding heap in the north-west corner"*; the
+narration to the player then said *"the orcs lived in the near corner"*, and
+near — coming through (9,31) — is the **south stem**. **The player's version
+wins, because it is the one he was told.** The nest is in the south stem around
+(9,32), against the wall beside the door they came through.
+
+**2. `d6=1` on what the orcs did with the room, and it half-contradicts the
+mirror placement.** The bands were: 1-2 scavenged nothing, 3-4 pulled things
+into the nest, 5-6 pulled things in AND broke something.
+
+**THE SEALED PLACEMENT WINS — it was sealed first, before the question was
+asked.** So the reading is: **they took the mirror and nothing else, and broke
+nothing.** The d6=1 governs everything other than the mirror, and it is the
+better answer anyway: *the room is otherwise exactly as Zelligar left it*, which
+is what makes the thirty-year-old dust and the untouched scroll rack land.
+
+I should not have rolled a question the notes had already answered. **Check the
+seal before rolling, not after.**
+
+### What the search actually turns up
+
+| found | where | note |
+|---|---|---|
+| **23 electrum** | on the four bodies | 5, 9, 2, 7. Worth **11 gp 5 sp** at 2 ep = 1 gp |
+| **A silver mirror, 90 g.p.** | the nest, wrapped in sacking | the room's stocked treasure, type Y |
+| **The floor** | the centre | dust swept back off **R & Z** in white granite inlaid into polished red |
+
+**NOT found, because it is not there:** no secret door. The map has no secret or
+concealed edge anywhere in x 7-13, y 29-37, and B1's own key for room 12 does
+not mention one. **Tristle's elf 2-in-6 is a TRUE NEGATIVE** — report "nothing"
+and do not roll theatre for it.
+
+**The books and scrolls: hold the module's line.** *"None of the books or
+scrolls is of any particular use or special interest to the adventurers,
+**despite how many they examine**."* They may read all they like. This is not a
+hidden outcome and not a trick — B1 has decided, and no search or spell changes
+it. **The four books found elsewhere are NOT these** and stay where the party
+has them.
+
+**The beetle cages:** *"There is no way to open or force the cages themselves."*
+Hold to that absolutely — no prising, no tools, no ingenuity. The module is
+explicit.
