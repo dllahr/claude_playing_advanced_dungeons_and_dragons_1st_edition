@@ -341,18 +341,31 @@ def test_the_purse_BREAKDOWN_reconciles_with_its_own_headline():
     import re
 
     def gp(pattern):
+        # *** THE SILVER IS OPTIONAL. *** gp_sp() prints "1,046 gp" with no
+        # silver at all when a figure lands on a whole gold, and the first
+        # version of this test REQUIRED the sp group -- so it went red on day
+        # 101 the moment the purse came out even. A test that only passes on
+        # untidy numbers is worse than no test.
         m = re.search(pattern, out)
         assert m, 'report did not contain %r' % pattern
         return (float(m.group(1).replace(',', ''))
-                + float(m.group(2)) / 10)
+                + float(m.group(2) or 0) / 10)
 
     out = ledger.report()
-    purse = gp(r'THE PURSE: ([\d,]+) gp (\d+) sp')
-    anch = gp(r'anchored at ([\d,]+) gp (\d+) sp')
-    ins = gp(r'in ([\d,]+) gp (\d+) sp')
-    outs = gp(r'out -([\d,]+) gp (\d+) sp')
-    # Exact to the copper. These are all sums of the same decimal column.
-    assert abs((anch + ins - outs) - purse) < 0.001, (anch, ins, outs, purse)
+    SP = r'(?: (\d+) sp)?'
+    purse = gp(r'THE PURSE: ([\d,]+) gp' + SP)
+    anch = gp(r'anchored at ([\d,]+) gp' + SP)
+    ins = gp(r'in ([\d,]+) gp' + SP)
+    outs = gp(r'out -([\d,]+) gp' + SP)
+    # *** EACH PRINTED FIGURE IS ROUNDED TO THE SILVER, so four of them cannot
+    # sum exactly. *** Day 101: the true purse was 1,046.05 and gp_sp printed
+    # "1,046 gp"; the breakdown summed to 1,046.1 and a 0.001 tolerance called
+    # that a failure. The looser bound here is DISPLAY ROUNDING and nothing
+    # else -- four figures, each at most half a silver out.
+    assert abs((anch + ins - outs) - purse) < 0.25, (anch, ins, outs, purse)
+    # And the part that CAN be exact, is: the headline must be the computed
+    # purse, not a number that merely looks close to it.
+    assert abs(purse - ledger.total()) < 0.05, (purse, ledger.total())
 
 
 # ------------------------------------------- a relocation is not a quantity
