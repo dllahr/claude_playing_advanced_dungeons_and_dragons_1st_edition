@@ -38,3 +38,4 @@ Frython	Magic-User	1	10	2	0	0	0	dart	-	INT	17	yes	2501	full
 Hask	Fighter	1	3	7	0	0	0	short sword,spear,sling	-	STR	11	no	2000	half
 Dellie	Cleric	1	6	5	0	0	-2	footman's flail,sling	-	WIS	16	yes	1501	half
 Ista	Thief	1	7	4	0	0	0	dart,spear	-	DEX	13	no	1251	half
+Brand	Normal Man	0	10	3	0	0	0	hand axe	-	-	-	no	-	half
