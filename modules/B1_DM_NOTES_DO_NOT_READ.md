@@ -4643,3 +4643,23 @@ has them.
 **The beetle cages:** *"There is no way to open or force the cages themselves."*
 Hold to that absolutely — no prising, no tools, no ingenuity. The module is
 explicit.
+
+### Day 99 — the cages, counted. Player asked; B1 gives no number.
+
+**FOUR CAGES** (d4=2, +2) set along the north wall of the cross's north wing,
+(9,35)-(10,35) — twenty feet of wall. Occupants rolled **per cage**, because
+after thirty years they would not be evenly stocked:
+
+| cage | beetles |
+|---|---|
+| 1 | **5** |
+| 2 | **4** |
+| 3 | **3** |
+| 4 | **3** |
+| | **FIFTEEN in all** |
+
+Each is 2½ ft long with three glow-glands, so that is **45 glands lighting the
+wing** — which is why B1 says the glow is *"enough to illuminate this portion of
+the room."* **Free to tell them: the count is plainly visible through the
+grilles.** Everything else about the cages stays as `bestiary/fire-beetle.md`
+rules it — no access, ever, and the food question has no answer.
