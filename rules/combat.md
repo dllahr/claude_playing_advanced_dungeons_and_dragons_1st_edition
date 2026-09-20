@@ -607,6 +607,65 @@ A 30-ft lantern therefore caps it at **60 ft**, before surprise takes its bite.
 And: *"surprise can be and often is unilateral… merely roll for the party which
 is subject to the condition and do not roll for the other."*
 
+### Can you IMPROVE your chance of surprising them? YES — and the book says how
+
+*Asked by the player day 99, standing at an unlocked door with four orcs talking
+behind it: "if we throw open the door suddenly will we get a bonus?"*
+
+**Two separate answers, and they are not the same question.**
+
+**1. Your own surprise die may vanish entirely.** Prior detection is *unilateral*
+— the quote directly above. If the party knows they are there and they do not
+know the party is there, **the party is not subject to the condition and no die
+is rolled for it at all.** That is not a bonus, it is the removal of a risk.
+
+**2. THEIR range can be widened, and the DMG explicitly invites the DM to do it
+for circumstances — not only for what a creature is:**
+
+> *"Party A is surprised only on a roll of 1, but party B surprises on 5 in 6
+> (d6, 1-5) **due to its nature or the particular set of circumstances which the
+> DM has noted are applicable to this encounter**."* — **DMG p. 62**
+
+And the circumstances that count are listed by name on the same page:
+
+> *"**Factors Contributing To Surprise:** …it simply represents actual surprise —
+> that is, the opponent was unprepared for the appearance/attack. The reason for
+> this could be **eating, sleeping, waste elimination, attention elsewhere, no
+> weapon ready**, etc."* — DMG p. 62
+
+⚠ **Count the shift in SIXTHS, and do not talk about percentages.** The book
+stops to correct exactly that error:
+
+> *"The favorable factor normally accruing to party A is 1, i.e., parties of this
+> sort are normally surprised on 1 or 2, but this party is surprised only on a
+> 1 — therefore they have an additional **1 in 6** to their favor (**and not a
+> 50% better chance**)."* — DMG p. 62
+
+**So: baseline 1-2, and each named circumstance the DM notes is worth one more
+pip.** Name them out loud when widening a range, so the number is auditable
+afterwards instead of being a feeling.
+
+**What cuts the other way, from the same page:** *light can spoil the chance*,
+and *noise* — including **"the effect of a fruitless attempt to open a door."**
+A door that turns out to be LOCKED makes the noise that costs the surprise. That
+is a real reason to spend the B1 lock roll at the examination rather than
+discovering it with a shoulder.
+
+### Opening a door into a room — the distance roll (DMG p. 62)
+
+> *"**Actual Area:** If the encountered party is in a small area, distance
+> between the two can be no greater than the maximum distance possible for
+> discovery of the one by the other, i.e. **opening a door into a 20' x 20' room
+> will mean the distance between the two parties can be under 10', 10' or
+> thereabouts, or 20' (d6, 1-2 = striking distance, 3-4 = 10' distance,
+> 5-6 = 20' distance)**."* — DMG p. 62
+
+**Where they are standing when the door opens is a ROLL, not a DM choice.** And
+if surprise exists at all, distance is further capped: *"Surprise can only be a
+factor in close encounter situations… the distance must be either 1" to 3"."*
+
+*source: all of the above from **DMG p. 62**, 190 dpi page render 2026-09-19.*
+
 ## Time
 
 - 1 turn = 10 melee rounds. 1 melee round = 10 segments.
