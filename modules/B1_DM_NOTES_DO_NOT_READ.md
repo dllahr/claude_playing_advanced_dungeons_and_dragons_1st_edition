@@ -4539,3 +4539,61 @@ still open and it is a better one now than it was an hour ago.
 and there is now a body in them that its friends will find.** No timer on that,
 no manufactured urgency — but it is a real consequence and it should not be
 quietly dropped.
+
+## Day 99 — AREA 12, THE LIBRARY, entered and cleared. What is in it.
+
+Four orc squatters (M1, hp 5,4,3,2) dead in the first surprise segment. **XP 54
+when they walk out** — 10 + 1/hp. Door shut behind the party from inside.
+
+### On the bodies — NOT YET FOUND, they have not searched
+
+**23 electrum**, MM individual type L (2-12 ep each): rolled **5, 9, 2, 7**.
+Worth 11 gp 5 sp at 2 ep = 1 gp. Rolled through `treasure.py`, which uses
+`random` and not `dice.py`, so **this line is the only record — do not re-roll.**
+
+Their gear is orc-shabby and worth nothing: notched blades, a bent spear, hide
+scraps. Nothing a party of nine wants.
+
+### The room's treasure — STOCKED: Y, silver mirror, 90 g.p.
+
+**Location decided now rather than when they ask:** in the orcs' bedding heap in
+the **north-west corner**, rolled inside a scrap of sacking. They took it off a
+wall or a table and kept it as loot without using it. **It needs the NEST
+searched** — it is not lying in view, and looking at the room does not find it.
+
+### B1's own description, and the two things worth the most
+
+*Module p. 12 (pdf p.13), read verbatim 2026-09-19.*
+
+- **The floor is the best thing here.** Deep dust over **polished red granite**,
+  inlaid in large blocks, stopping a foot short of every wall. In the very
+  centre, blocks of **white granite** set into the red form **R & Z** —
+  Rogahn and Zelligar, monogrammed into the floor of their own library. Under
+  dust, and the orcs' scuffing has already half-exposed it.
+- **FIRE BEETLES.** Small cages inset in the **north wall**, full of them,
+  throwing *"an eerie, glowing light… a reddish glow… forbidding and mysterious
+  when viewed from the entrance."* Thriving after thirty years on no visible
+  food. **There is no way to open or force the cages** — the module says so
+  outright, so no amount of prising works, and that must be held to.
+
+  > ⚠ **THIS ROOM IS LIT AND COSTS NO OIL.** That is worth more to this party
+  > than the mirror. Ista's lamp has ~16.5 turns and they have been rationing
+  > light all trip. **Do not point the implication out — let the player see it.**
+
+- Three large **oaken tables**, one each in the west, north and east wings.
+  Wooden chairs scattered. **Two plush divans** in two corners, rich fleecy
+  upholstery gone dusty and dingy. **Wall sconces** for torches all round.
+- Books, volumes and tomes, modestly supplied, plus **a few scrolls in a rack on
+  the east wall**. *"None of the books or scrolls is of any particular use or
+  special interest to the adventurers, despite how many they examine."*
+  **Hold to that.** They may read all they like and find nothing. It is not a
+  trick and not a hidden-outcome roll — the module has decided.
+
+  **THE FOUR BOOKS ARE NOT THESE.** Those were found elsewhere and merely
+  *"apparently belong in the library"*; they stay wherever the party has them.
+
+### The doors, for the record
+
+B1: *"Quasqueton's library lies behind a pair of ornately carved oaken doors."*
+**Ornately carved** — the party examined both leaves and I described plain heavy
+wood. Correct it if they look again; do not pretend it was said.

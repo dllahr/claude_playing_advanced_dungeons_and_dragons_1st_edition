@@ -73,8 +73,23 @@ def characters():
                               # would silently sweep the three henchmen into
                               # every 'all' award they were not present for.
                               is_party=(share == 'full'),
-                              next_level=int(r['next_level']))
+                              # A 0-LEVEL NORMAL MAN HAS NO THRESHOLD TO
+                              # REACH. rules/zero-level.md: 1e has no
+                              # 0-level-to-1st progression at all -- 1st
+                              # level BEGINS at 0 xp and the gate is
+                              # capacity, not points. So `-` is the
+                              # honest value and None is the honest
+                              # parse; int('-') crashed the whole tool
+                              # and the pre-commit hook the hour Brand
+                              # was given a stat line.
+                              next_level=_threshold(r['next_level']))
     return out
+
+
+def _threshold(v):
+    """XP needed for next level, or None for a character who has no next level."""
+    v = (v or '').strip()
+    return int(v) if v and v != '-' else None
 
 
 def totals(chars=None, log=None):
@@ -196,9 +211,15 @@ def main(argv=None):
     print('%-9s %-11s %-7s %8s %8s %8s' %
           ('', 'class', 'bonus', 'XP', 'next lvl', 'to go'))
     for n, c in sorted(chars.items(), key=lambda kv: -tot[kv[0]]):
-        print('%-9s %-11s %-7s %8d %8d %8d'
+        # A 0-level man has NO next level to print. 1e gives no 0-to-1st
+        # progression: 1st level begins at 0 xp and the gate is capacity, not
+        # points (rules/zero-level.md). Printing a threshold of 0 would read as
+        # "already there", and printing anything else would invent a rule.
+        nxt = c['next_level']
+        print('%-9s %-11s %-7s %8d %8s %8s'
               % (n, c['cls'], '+10%' if c['bonus'] else '-', tot[n],
-                 c['next_level'], max(0, c['next_level'] - tot[n])))
+                 nxt if nxt is not None else 'n/a',
+                 max(0, nxt - tot[n]) if nxt is not None else '-'))
     return 0
 
 

@@ -288,3 +288,4 @@ when	map	level	x	y	exped	turn	squares	feet	rate	why	route
 2026-09-19	b1	1	6	31	13	27	3	30	explore	day 99: thirty feet south down the straight run to the junction, standard formation, then a look east	6,34 6,33 6,32 6,31
 2026-09-19	b1	1	8	31	13	27	2	20	explore	day 99: east down the corridor from the junction, standard formation	6,31 7,31 8,31
 2026-09-19	b1	1	9	31	13	28	1	10	known	day 99: up to the doors. The line stands across (8,31) to (10,31) with Tristle and Ista working the two leaves; (9,31) is the anchor square	8,31 9,31
+2026-09-19	b1	1	10	33	13	28	3	30	known	day 99: into area 12, the library, and the door closed behind them	9,31 9,32 9,33 10,33
