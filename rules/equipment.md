@@ -156,32 +156,76 @@ layer read 2026-08-29. Assumes human-size.*
 
 | Item | gp weight | | Item | gp weight |
 |---|---|---|---|---|
-| Backpack | 20 | | Lantern | 60 |
-| Belt | 3 | | Mirror | 5 |
-| Belt pouch, large | 10 | | Pole, 10' | 100 |
-| Belt pouch, small | 5 | | Purse | 1 |
-| Boots, hard | 60 | | Quiver | 30 |
-| Boots, soft | 30 | | Rations, iron | 75 |
-| Bottles, flagons | 60 | | Rations, standard | 200 |
-| Bow, short | 50 | | Robe or cloak, folded / worn | **50 / 25** |
-| Candle | 5 | | Rope, 50' | 75 |
-| Clothes (1 set) | 30 | | Sack, large | 20 |
-| **Chest, small wooden** | **100-250** | | Sack, small | 5 |
-| Chest, large wooden | 500-1,500 | | Saddle, light horse | 250 |
+| Backpack | 20 | | Jewelry, large / small | 50 / 1-5 |
+| Belt | 3 | | Lantern | 60 |
+| Belt pouch, large | 10 | | Mirror | 5 |
+| Belt pouch, small | 5 | | Musical instrument | 350 |
+| **Book, large metal-bound** | **200** | | Pole, 10' | 100 |
+| Boots, hard | 60 | | Purse | 1 |
+| Boots, soft | 30 | | Quiver | 30 |
+| Bottles, flagons | 60 | | Rations, iron | 75 |
+| Bow, composite long | 80 | | Rations, standard | 200 |
+| Bow, composite short | 50 | | Robe or cloak, folded / worn | **50 / 25** |
+| Bow, long | 100 | | **Rod** | **60** |
+| Bow, short | 50 | | Rope, 50' | 75 |
+| Caltrop | 50 | | Sack, large | 20 |
+| Candle | 5 | | Sack, small | 5 |
+| Chest, large solid iron | 1,000-5,000 | | Saddle, light horse | 250 |
 | Chest, small solid iron | 200-500 | | Saddle, heavy horse | 500 |
-| Chest, large solid iron | 1,000-5,000 | | Saddlebag | 150 |
-| Cord, 10' | 2 | | Saddle blanket (pad) | 20 |
-| **Flask, empty** | **7** | | **Spike** | **10** |
-| **Flask, full** | **20** | | Staff | **100** |
-| Grapnel | 100 | | Tapestry (very small to huge) | 50-1,000+ |
-| Hand tool | 10 | | Tinderbox | **2** |
-| Helm | 45 | | Torch | **25** |
-| Helm, great | 100 | | Waterskin, empty | **5** |
-| Holy water / potion bottles | 25 | | Waterskin, full | 50 |
+| **Chest, small wooden** | **100-250** | | Saddlebag | 150 |
+| Chest, large wooden | 500-1,500 | | Saddle blanket (pad) | 20 |
+| Clothes (1 set) | 30 | | **Scroll case, bone or ivory** | **50** |
+| Cord, 10' | 2 | | **Scroll case, leather** | **25** |
+| Crossbow, heavy | 80 | | **Spike** | **10** |
+| Crossbow, light | 50 | | Staff | **100** |
+| Crystal ball, base and wrapping | 150 | | Tapestry (very small to huge) | 50-1,000+ |
+| **Flask, empty** | **7** | | Tinderbox | **2** |
+| **Flask, full** | **20** | | Torch | **25** |
+| Gem | 1-5 | | Wand, bone or ivory case | 60 |
+| Grapnel | 100 | | Wand, box | 80 |
+| Hand tool | 10 | | Wand, leather case | 30 |
+| Helm | 45 | | Waterskin, empty | **5** |
+| Helm, great | 100 | | Waterskin, full | 50 |
+| Holy water / potion bottles | 25 | | Horn | 50 |
 
 *source: **DMG p. 225** (Appendix O), ENCUMBRANCE OF STANDARD ITEMS, 400 dpi page
-renders of both columns 2026-08-31. Weapon weights are NOT on this page and are
-still uncached.*
+renders of both columns — left column re-read and the table COMPLETED 2026-09-20.
+Weapon weights other than bows and crossbows are NOT on this page and are still
+uncached.*
+
+> ### ⚠ THE FIRST TRANSCRIPTION OF THIS TABLE WAS INCOMPLETE. Fixed day 99.
+>
+> Asked at the table how many of the library's scrolls and books the party could
+> carry, and the cache could not answer: **fourteen entries were missing.**
+>
+> `Book, large metal-bound` · `Scroll case, bone or ivory` · `Scroll case,
+> leather` · `Rod` · `Horn` · `Caltrop` · `Gem` · `Jewelry` ·
+> `Musical instrument` · `Crystal ball` · `Crossbow, heavy` ·
+> `Crossbow, light` · and three of the four `Bow` rows.
+>
+> **Nothing was WRONG — things were ABSENT**, which is the failure a spot-check
+> never catches: every figure present matched the book, so the table looked
+> trustworthy. **Transcribe a table completely or mark it partial.** It was not
+> marked.
+>
+> **AND THE ANSWER TURNED ON A MISSING ROW.** The cache's only scroll-ish line
+> was *"Case, map or scroll (leather) — 15 sp"*, which is a **PRICE** off the
+> equipment list sitting in a table of **weights**. Reading across from it would
+> have given a scroll a weight of 15.
+
+> ### A SCROLL HAS NO WEIGHT IN APPENDIX O. ONLY ITS CASE DOES.
+>
+> The list prices a **scroll case** — bone or ivory 50, leather 25 — and never a
+> scroll. A **wand** is the same: no weight, only its case or box.
+>
+> **So scrolls are effectively free to carry, and the case is the load.** That is
+> the book's answer and it is better than a number would be: a sheaf of vellum
+> weighs nothing an adventurer needs to count, and what costs you is the rigid
+> thing you protect it in.
+>
+> A **book** is the opposite — **200 gp weight, twenty pounds, each**, and it is
+> the only book figure in 1e. Appendix O has no small book, so *"volumes and
+> tomes of various sizes"* is a DM call downward from 200, flagged when made.
 
 **Corrected 2026-08-31.** The earlier version of this table was read from the OCR
 text layer and the right-hand column had slipped by one row. Six values were
