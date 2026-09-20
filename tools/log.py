@@ -140,8 +140,21 @@ def check_evidence(ev):
     day number, not a path -- those are checked by entities.py resolving the
     scene itself.
     """
-    if not ev:
-        return
+    # *** AN EMPTY CITATION USED TO PASS, AND THE SUITE REQUIRED ONE ANYWAY. ***
+    # Day 100: three scenes were written with no --evidence at all. log.py took
+    # them, and test_entities.test_every_scene_cites_evidence_that_exists went
+    # red on the committed data -- which is precisely the divergence that test's
+    # own docstring was written about: two rules, one enforced on the way in and
+    # one only in the suite. The gap was that this function checked the SHAPE of
+    # a citation if there was one and never that there WAS one.
+    if not (ev or '').strip():          # '   ' is not a citation either
+        raise Refused(
+            'a scene must cite its evidence. Use --evidence with a scene id '
+            'like "99:18", a campaign file like "days.tsv" or '
+            '"sessions/day-099.md", or a rule like "rules/combat.md". '
+            'THE WHOLE POINT OF interactions.tsv IS THAT A SOCIAL EVENT CAN BE '
+            'LOOKED UP -- a scene nobody can chase back is the prose problem '
+            'this file was built to end.')
     head = ev.split(':')[0].split('#')[0].strip()
     if head.isdigit():
         return                                  # a scene id, e.g. "77:1"

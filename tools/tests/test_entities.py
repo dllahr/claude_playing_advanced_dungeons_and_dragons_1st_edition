@@ -219,10 +219,19 @@ def test_the_two_evidence_CHECKERS_agree():
     Whatever one accepts, the other must."""
     import log
     for ev in ('articles.md', 'articles.md:913', 'sessions/day-077.md:12',
-               '83:4', 'rules/combat.md', 'rules/combat.md:97', ''):
+               '83:4', 'rules/combat.md', 'rules/combat.md:97'):
         log.check_evidence(ev)                      # must not raise
     with pytest.raises(log.Refused):
         log.check_evidence('not a citation at all')
+    # *** AND AN EMPTY CITATION IS NOT A CITATION. ***
+    # This list used to contain '', so log.py accepted a scene with no evidence
+    # while the data test above demanded one -- the exact disagreement this
+    # test exists to forbid. Day 100: three scenes were written with no
+    # --evidence, log.py took all three, and the suite went red afterwards.
+    with pytest.raises(log.Refused):
+        log.check_evidence('')
+    with pytest.raises(log.Refused):
+        log.check_evidence('   ')
 
 
 def test_evidence_may_cite_RULES_but_never_the_manuals_or_the_DM_NOTES():
@@ -263,10 +272,14 @@ def test_log_py_REFUSES_evidence_that_is_a_sentence_not_a_citation():
 
 
 def test_log_py_ACCEPTS_the_three_shapes_that_ARE_citations():
-    """A bare file, a file:line, and a scene id. None of these may raise."""
+    """A bare file, a file:line, and a scene id. None of these may raise.
+
+    '' was in this list and should never have been: an absent citation is not
+    one of the shapes a citation takes. See the CHECKERS_agree test above.
+    """
     import log
     for ev in ('articles.md', 'articles.md:913', 'sessions/day-077.md:12',
-               '77:1', ''):
+               '77:1'):
         log.check_evidence(ev)
 
 

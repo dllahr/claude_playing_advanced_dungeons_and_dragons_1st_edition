@@ -279,6 +279,11 @@ def test_log_writes_a_scene_and_tells_you_how_to_cite_it(tmp_path, capsys):
     assert logmod.main(['--log-file', str(scratch), 'interaction',
                         '--people', "Rell's brother, Dave", '--kind', 'payment',
                         '--place', 'Wetherby', '--day', '77',
+                        # --evidence is REQUIRED as of day 100: log.py used to
+                        # accept a scene with no citation while the data test in
+                        # test_entities.py demanded one, so a row could be
+                        # written successfully and then fail the suite.
+                        '--evidence', 'days.tsv',
                         '--summary', 'an alias on each side resolves']) == 0
     out = capsys.readouterr().out
     assert 'cite this scene as 77:' in out
