@@ -326,17 +326,33 @@ def test_the_purse_BREAKDOWN_reconciles_with_its_own_headline():
     and the in/out summary beneath it did not, so the report printed a purse of
     1,036.4 over a sum that came to 748.4 -- the 288 gp of somebody else's wool.
     A breakdown that does not add up to the number above it is worse than none.
+
+    THE SILVER IS PART OF THE FIGURE. This test used to read only the gp of
+    the anchor, the in and the out -- throwing away three silver components --
+    and then allow 1.0 gp of slack to cover the damage. Three dropped tenths can
+    reach 2.7 gp, so it was guaranteed to fail on a true ledger sooner or later,
+    and on day 99 it did: anchor 595 gp 6 sp, in 733 gp 8 sp, out 304 gp 2 sp
+    reconciles EXACTLY to 1,025 gp 2 sp, and the truncated version was out by
+    1.2.
+
+    A tolerance that exists to absorb a parsing bug hides the thing the test is
+    for. Read the whole number and require it to be exact.
     """
     import re
+
+    def gp(pattern):
+        m = re.search(pattern, out)
+        assert m, 'report did not contain %r' % pattern
+        return (float(m.group(1).replace(',', ''))
+                + float(m.group(2)) / 10)
+
     out = ledger.report()
-    purse = float(re.search(r'THE PURSE: ([\d,]+) gp (\d+) sp', out).group(1)
-                  .replace(',', '')) + float(
-        re.search(r'THE PURSE: ([\d,]+) gp (\d+) sp', out).group(2)) / 10
-    anch = float(re.search(r'anchored at ([\d,]+) gp', out)
-                 .group(1).replace(',', ''))
-    ins = float(re.search(r'in ([\d,]+) gp', out).group(1).replace(',', ''))
-    outs = float(re.search(r'out -([\d,]+) gp', out).group(1).replace(',', ''))
-    assert abs((anch + ins - outs) - purse) < 1.0, (anch, ins, outs, purse)
+    purse = gp(r'THE PURSE: ([\d,]+) gp (\d+) sp')
+    anch = gp(r'anchored at ([\d,]+) gp (\d+) sp')
+    ins = gp(r'in ([\d,]+) gp (\d+) sp')
+    outs = gp(r'out -([\d,]+) gp (\d+) sp')
+    # Exact to the copper. These are all sums of the same decimal column.
+    assert abs((anch + ins - outs) - purse) < 0.001, (anch, ins, outs, purse)
 
 
 # ------------------------------------------- a relocation is not a quantity

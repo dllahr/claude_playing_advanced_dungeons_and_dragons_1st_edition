@@ -903,3 +903,28 @@ edge	4	15	H	open	dl+claude	DM ADDITION day 99, PLAYER-PERMITTED, NOT on the prin
 # is that same artifact -- a curved boundary sampled as if it were a straight
 # band. Opening it closes the arc.
 edge	7	35	H	open	dl+claude	the half-ellipse round area 12: last missing link of the arc, (7,36)|(7,35). thick=12 hole=0 at confidence 3, a CURVED rock boundary measured as a straight wall band -- same artifact as (6,36,H), audited day 95. Player-described and render-verified day 99; without it dmap path routed (13,35)->(6,34) SIX HUNDRED FEET through a secret door instead of round the curve
+#
+# --- AREA 12 IS A CROSS, NOT A BOX. Day 99, found at the table ------------
+# The party spiked the doors believing the room was sealed, which made its exits
+# load-bearing, and `dmap` reported FOUR ways out: two doors south and two OPEN
+# boundaries at (8,33,V) west and (9,34,H) north, both at confidence 3.
+#
+# They are not exits. They are the room's own WEST and NORTH WINGS, and B1's
+# text says so outright (module p.12): "There are three large oaken tables
+# within the room, one in each of the WEST, NORTH, and EAST WINGS of the room."
+# Three wings and a south stem -- a cruciform library. A flood fill across open
+# boundaries closes at twelve squares with exactly two doors out.
+#
+# WHY extents.py MISSED IT, and it is not a bug: rooms grow "within the wide
+# mask", and a corridor is defined as never containing a 2x2 block of open
+# floor. Each wing of a cross is ONE SQUARE WIDE, so the wings fail the wide
+# test and are classed as corridor. The rule is right for corridors and wrong
+# for any room with a narrow limb. THE EAST WING SURVIVED only because (11,33)
+# and (11,34) sit adjacent to the wide middle and were reached by the flood.
+#
+# This is L038 -- label-only area extents -- and it is the first time it has
+# changed an answer given to the player rather than a number in a file.
+member	8	33	-	12	dl+claude	area 12 LIBRARY, WEST WING. B1 p.12 names it: a table in the west wing. Excluded because a 1-wide limb fails extents.py's 2x2 wide test
+member	8	34	-	12	dl+claude	area 12 LIBRARY, WEST WING. Same
+member	9	35	-	12	dl+claude	area 12 LIBRARY, NORTH WING. B1 p.12: a table in the north wing. Same 1-wide-limb exclusion
+member	10	35	-	12	dl+claude	area 12 LIBRARY, NORTH WING. Same
