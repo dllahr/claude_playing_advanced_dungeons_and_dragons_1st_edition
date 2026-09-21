@@ -138,11 +138,25 @@ def test_check_warns_when_a_good_has_money_but_no_inventory_row():
     log = [dict(day='1', delta='110', asset='dragon_scales', reason='')]
     warns = [m for s, m in ledger.check(log, ) if s == 'WARN']
     assert not warns, 'dragon_scales has a zero row, so this must be quiet'
-    log = [dict(day='1', delta='-50', asset='tapestry', reason='')]
-    # tapestry IS held, so also quiet. Use an asset with no inventory row:
-    log = [dict(day='1', delta='-50', asset='salvage_misc', reason='')]
+
+    # *** THE EXAMPLE ASSET IS DERIVED, NOT NAMED. *** This test used to hardcode
+    # `salvage_misc` as "an asset with no inventory row", and on day 100 it got
+    # one -- the 117 gp lot Hask sold needed a leg at the id the money named.
+    # A test that hardcodes today's gap breaks the moment the gap is filled,
+    # which is the third time this campaign has pinned game state in a test.
+    logged = {r['asset'] for r in read_tsv(
+        os.path.join(ROOT, 'campaign', 'inventory_log.tsv'))}
+    ass = ledger.assets()
+    candidates = [a for a, v in ass.items()
+                  if v['kind'] not in ('service', 'money', 'debt')
+                  and a not in logged and a not in inv.FOREIGN]
+    assert candidates, ('every goods asset now has an inventory row, which is '
+                        'the ideal -- but then this check has nothing to prove '
+                        'and should be retired rather than fudged')
+    orphan = sorted(candidates)[0]
+    log = [dict(day='1', delta='-50', asset=orphan, reason='')]
     warns = [m for s, m in ledger.check(log) if s == 'WARN']
-    assert any('salvage_misc' in m for m in warns)
+    assert any(orphan in m for m in warns), (orphan, warns)
 
 
 def test_services_are_exempt_from_needing_an_inventory_row():
@@ -443,7 +457,10 @@ def test_the_salvage_is_IN_ONE_NAMED_PLACE_and_not_in_nine_backpacks():
                 'nine backpacks.' % (asset, holder))
             places.setdefault(holder.lower().split('--')[0].strip(),
                               []).append(asset)
-    assert len(places) == 1, (
+    # *** ZERO PLACES IS A VALID ANSWER: IT MEANS SOLD. *** On day 100 Hask sold
+    # the entire lot to Mund at the market, so the party owns none of it and
+    # there is nothing to locate. The invariant only bites while they HOLD it.
+    assert len(places) <= 1, (
         'the crag salvage is in %d different places and it travels as one '
         'stack: %r' % (len(places), places))
 
