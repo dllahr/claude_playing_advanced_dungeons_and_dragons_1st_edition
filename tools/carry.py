@@ -271,6 +271,140 @@ def report(log=None, bearers=None):
     return '\n'.join(out)
 
 
+def roster(log=None, bearers=None):
+    """Every person's kit, itemised, with their band. THE DESCRIPTIVE LIST.
+
+    A standing script rather than something typed out once, because a pasted
+    list is stale the instant a lantern changes hands -- which is exactly what
+    happened on day 103, one message after the list was given.
+    """
+    chars = characters()
+    st = state(log)
+    people = [n for n in chars if n in st or n in (bearers or [])]
+    order = sorted(people, key=lambda n: -person_load(n, log)[0])
+    shared_gp, _ = shared_total(log)
+    bearers = bearers or people
+    per_head = shared_gp / len(bearers) if bearers else 0.0
+    ass = invmod.ledgermod.assets()
+
+    out = []
+    for name in order:
+        own, lines, _ = person_load(name, log)
+        share = per_head if name in bearers else 0.0
+        total = own + share
+        alw = _allowance_lookup(chars[name].get('str', '') or '0')
+        bname, move = band_for(total, alw)
+        out.append('%s -- STR %s, allowance %+d, AC %s'
+                   % (name, chars[name].get('str', '?'), alw,
+                      chars[name].get('ac', '?')))
+        for asset, qty, unit, gp, why in sorted(lines,
+                                                key=lambda r: -(r[3] or 0)):
+            nm = (ass.get(asset) or {}).get('name', asset)
+            out.append('   %-18s %7s %-11s %7s %6s  %s'
+                       % (asset, invmod._fmt(qty), unit,
+                          ('%.0f' % gp) if gp is not None else '?',
+                          ('%.1f' % (gp / 10)) if gp is not None else '?',
+                          ('' if gp is not None else 'UNWEIGHED -- ') + nm[:30]))
+        if not lines:
+            out.append('   (nothing of his own)')
+        out.append('   own %.0f + %.0f share = %.0f gp-wt (%.1f lb)  %s, %s'
+                   % (own, share, total, total / 10, bname, move))
+        out.append('')
+    return '\n'.join(out).rstrip()
+
+
+def pack(log=None, bearers=None, target='heavy'):
+    """Fill the STRONGEST first, up to `target`, then the next strongest.
+
+    The player's rule, day 103: "start with the strongest, give him shared
+    weight until he is just within the 9-inch movement band. Then repeat for the
+    subsequently lower strength party members. Then let's see how much weight is
+    left over."
+
+    *** WHY IT IS THE RIGHT RULE AND NOT JUST A TIDY ONE. *** An even split is
+    what the party has been doing implicitly, and it is the worst possible
+    division here, because the allowance spans ELEVEN HUNDRED gp-weight. Dividing
+    348 lb ten ways puts 35 lb on a man with a +1,000 allowance and the same 35
+    lb on a man with none. Filling by strength converts Dave's slack into
+    somebody else's movement.
+
+    Returns (assignments, leftover, rows) -- leftover is what nobody can take
+    without dropping below the target band, and it is the number that decides
+    whether the party needs a mule.
+    """
+    chars = characters()
+    st = state(log)
+    people = bearers or [n for n in chars if n in st]
+    shared_gp, _ = shared_total(log)
+
+    ceiling = dict((n, c) for n, c, _m in BANDS)[target]
+    def _raw(score):
+        """18/26 sorts above 18, which sorts above 17."""
+        score = (score or '0').strip()
+        if '/' in score:
+            b, p = score.split('/', 1)
+            try:
+                return (int(b), int(p))
+            except ValueError:
+                return (0, 0)
+        try:
+            return (int(score), 0)
+        except ValueError:
+            return (0, 0)
+
+    # Allowance first, THEN raw Strength as the tie-break. Without the second
+    # key, Hask and Dellie at STR 11 were ordered BEHIND Frython at STR 8,
+    # because all three share a +0 allowance -- and the player's rule is
+    # "start with the strongest, then the subsequently lower strength members".
+    ranked = sorted(people,
+                    key=lambda n: (-_allowance_lookup(chars[n].get('str') or '0'),
+                                   tuple(-x for x in _raw(chars[n].get('str')))))
+
+    left = shared_gp
+    rows_ = []
+    for name in ranked:
+        own, _lines, _ = person_load(name, log)
+        alw = _allowance_lookup(chars[name].get('str', '') or '0')
+        room = max(0.0, (ceiling + alw) - own)
+        take = min(room, left)
+        left -= take
+        rows_.append((name, chars[name].get('str', '?'), alw, own, room, take,
+                      own + take))
+    return rows_, left, shared_gp
+
+
+def pack_report(log=None, bearers=None, target='heavy'):
+    band_move = dict((n, m) for n, _c, m in BANDS)[target]
+    rows_, left, shared_gp = pack(log, bearers, target)
+    out = []
+    out.append('FILL THE STRONGEST FIRST, up to the %r band (%s)'
+               % (target, band_move))
+    out.append('%-9s %6s %8s %7s %7s %7s %8s'
+               % ('', 'STR', 'allowance', 'own', 'room', 'takes', 'TOTAL'))
+    for name, strs, alw, own, room, take, tot in rows_:
+        out.append('%-9s %6s %+8d %7.0f %7.0f %7.0f %8.0f'
+                   % (name, strs, alw, own, room, take, tot))
+    taken = sum(r[5] for r in rows_)
+    out.append('')
+    out.append('   shared kit to place   %7.0f gp-wt  (%.1f lb)'
+               % (shared_gp, shared_gp / 10))
+    out.append('   placed                %7.0f gp-wt  (%.1f lb)'
+               % (taken, taken / 10))
+    out.append('   LEFT OVER             %7.0f gp-wt  (%.1f lb)'
+               % (left, left / 10))
+    if left <= 0:
+        spare = sum(r[4] for r in rows_) - taken
+        out.append('   -> IT ALL FITS, and there is %.0f gp-wt (%.1f lb) of '
+                   'room still unused.' % (spare, spare / 10))
+        out.append('      EVERY MEMBER IS WITHIN %s, so THE PARTY MOVES AT %s.'
+                   % (target, band_move))
+    else:
+        out.append('   -> %.1f lb CANNOT BE CARRIED at this band by anybody. '
+                   'It goes on a mule, stays behind, or the party accepts a '
+                   'slower rate.' % (left / 10))
+    return '\n'.join(out)
+
+
 def check(log=None):
     """[(severity, message)]. Reconcile the manifest against what is OWNED."""
     log = log if log is not None else rows()
@@ -324,6 +458,12 @@ def build_parser():
     sub = p.add_subparsers(dest='cmd')
     q = sub.add_parser('person', help='one person\'s load and band')
     q.add_argument('name')
+    sub.add_parser('roster', help="every person's kit, itemised")
+    pk = sub.add_parser('pack', help='fill the strongest first; '
+                        'report what is left over')
+    pk.add_argument('--target', default='heavy',
+                    choices=[n for n, _c, _m in BANDS],
+                    help='the band to fill each person up to')
     sub.add_parser('check', help='reconcile against what is OWNED')
     return p
 
@@ -332,6 +472,14 @@ def main(argv=None):
     a = build_parser().parse_args(argv)
     log = rows(a.log_file)
     bearers = [b.strip() for b in a.bearers.split(',')] if a.bearers else None
+
+    if a.cmd == 'roster':
+        print(roster(log, bearers))
+        return 0
+
+    if a.cmd == 'pack':
+        print(pack_report(log, bearers, a.target))
+        return 0
 
     if a.cmd == 'check':
         problems = check(log)

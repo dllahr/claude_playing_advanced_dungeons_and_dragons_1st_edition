@@ -149,3 +149,77 @@ def test_fewer_bearers_means_more_each():
     three = carry.report(bearers=['Dave', 'Yrtone', 'Tristle'])
     assert 'divided among 3 bearers' in three
     assert 'divided among 10 bearers' in ten
+
+
+# ----------------------------------- the two standing views, added day 103
+# Both of these were typed out by hand once and were stale ONE MESSAGE LATER,
+# when the second lantern moved from Yrtone to Dave. That is why they are
+# scripts.
+
+def test_roster_itemises_every_person_and_names_the_unweighed():
+    out = carry.roster()
+    for name in ('Dave', 'Tristle', 'Frython', 'Brand'):
+        assert name in out
+    assert 'UNWEIGHED' in out, (
+        'as long as any carried thing lacks a weight, the roster must SAY so '
+        'beside it -- an honest gap beats a total that quietly omits things')
+    assert 'gp-wt' in out and 'lb' in out
+
+
+def test_roster_says_so_when_somebody_carries_nothing_of_their_own():
+    """Brand signed on for no money and arrived with his own axe."""
+    assert 'nothing of his own' in carry.roster()
+
+
+# ------------------------------------------------- fill the strongest first
+
+def test_pack_fills_the_strongest_first():
+    rows, _left, _shared = carry.pack()
+    assert rows[0][0] == 'Dave', rows[0]
+    takes = [r[5] for r in rows]
+    assert takes[0] == max(takes), 'Dave has the +1,000 and should take most'
+
+
+def test_pack_breaks_ties_on_RAW_strength_not_just_allowance():
+    """*** WITHOUT THE SECOND SORT KEY THIS WAS WRONG. ***
+
+    Hask and Dellie at STR 11 were ordered BEHIND Frython at STR 8, because all
+    three share a +0 allowance. The rule is "start with the strongest, then the
+    subsequently lower strength members".
+    """
+    order = [r[0] for r in carry.pack()[0]]
+    assert order.index('Hask') < order.index('Frython')
+    assert order.index('Dellie') < order.index('Tristle')
+    assert order.index('Tristle') < order.index('Frython')
+
+
+def test_nobody_is_filled_past_the_target_band():
+    chars = carry.characters()
+    for name, _s, alw, _own, _room, _take, tot in carry.pack()[0]:
+        band, _move = carry.band_for(tot, alw)
+        assert band in ('normal', 'heavy'), (name, tot, alw, band)
+
+
+def test_pack_conserves_the_shared_weight():
+    """Placed plus left over must equal what there was. It is a division."""
+    rows, left, shared = carry.pack()
+    assert abs(sum(r[5] for r in rows) + left - shared) < 1e-6
+
+
+def test_a_harder_target_leaves_weight_behind():
+    """Filling everybody only to 12" cannot absorb 348 lb, and must say so."""
+    _rows, left, _shared = carry.pack(target='normal')
+    assert left > 0
+    assert 'CANNOT BE CARRIED' in carry.pack_report(target='normal')
+
+
+def test_the_easy_target_absorbs_it_all_and_says_the_party_rate():
+    out = carry.pack_report(target='heavy')
+    assert 'IT ALL FITS' in out
+    assert 'THE PARTY MOVES AT 9"' in out
+
+
+def test_fewer_bearers_can_make_it_stop_fitting():
+    """Three people cannot carry what ten can, and the tool must not pretend."""
+    _r, left, _s = carry.pack(bearers=['Dave', 'Frython', 'Brand'])
+    assert left > 0
