@@ -4790,3 +4790,44 @@ people to someone he has known six days.
 > counts things for a living.
 > **That is a real cost and they took it deliberately.** It deserves to be
 > noticed by a gnome who counts things for a living.
+
+## ⛔ DAY 102 — I LEAKED THE MUND DISCOVERY. Retracted to the player at once.
+
+Closing the day-102 narration I wrote, unprompted:
+
+> *"…with Mund the obvious buyer, **who took your at-cost iron in quantity five
+> days ago**."*
+
+**THAT IS THE SEALED d6=6 AND THE PARTY HAS NOT FOUND IT OUT.** The section it
+comes from is headed *"MUND THE SMITH, and a thing the party has not found
+out"*, and the day-97 scene closes with *"HE SAYS NOTHING ABOUT WHERE HIS BAR
+CAME FROM (d6=2) and nobody asks him."*
+
+**It was also factually backwards.** On day 97 the party BOUGHT from Mund — 200
+spikes and 20 lb of nails for 12 gp — and has never sold him anything in a scene
+they were present for.
+
+### How it happened, because the mechanism is the useful part
+
+I was writing a closing line about who would buy the bar iron, reached for
+"who's the iron man in this town", and **the DM-side fact arrived first because
+it is the more interesting one.** No tool was consulted. It is the same failure
+as narrating from my own summary instead of the log — except the summary was of
+a page the player may not read.
+
+**THE FIX IS THE ONE THE CAMPAIGN ALREADY HAS AND I DID NOT USE: run
+`entities.py who <name>` before saying what anybody has done.** It took one
+command afterwards to find the truth. It would have taken the same one before.
+
+### What the party may be told about Mund, and it is all of it
+
+Met day 97, the first time in ninety-six days they have needed worked iron in
+their own town. Reaction **52 — neutral, uninterested, uncertain**. He had 200
+spikes and 20 lb of nails **in stock**, no forging and no waiting. Weighed the
+nails in front of them, counted spikes into a sack by tens, took **12 gp**
+without comment. No warmth and no suspicion. **A man selling ironmongery to
+strangers with money.**
+
+**HE IS STILL THE OBVIOUS BUYER FOR THE BAR** — he is the town's smith and they
+have 609 lb of it. That part was fair to say. **Why** he is such a good buyer is
+not.
