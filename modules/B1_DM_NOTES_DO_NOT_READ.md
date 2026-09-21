@@ -4831,3 +4831,52 @@ strangers with money.**
 **HE IS STILL THE OBVIOUS BUYER FOR THE BAR** — he is the town's smith and they
 have 609 lb of it. That part was fair to say. **Why** he is such a good buyer is
 not.
+
+## Day 102 — THE MUND DISCOVERY IS PARTLY OUT, and the party earned it
+
+**The board reprice (L024, closed today and backfilled to day 94) did exactly
+what the day-97 note predicted:**
+
+> *"The moment that board carries two numbers, **MUND'S INPUT COST RISES** and
+> he is the customer who will notice first and mind most."*
+
+He noticed. And on **d6 = 5 — "he says more than he means to"** — in a live
+negotiation about iron, with the party asking him to buy 609 lb, he lets slip
+the first two of the three parts:
+
+| | now out? |
+|---|---|
+| (a) he buys iron off the party's at-cost board | **YES — said** |
+| (b) he buys a good deal of it | **YES — implied clearly** |
+| (c) he sells it on WORKED, at a margin | **not said. Let them get there.** |
+
+**THIS IS A LEGITIMATE REVEAL AND NOT A LEAK.** The d6 was rolled on *how open
+he is*, which is the mechanism by which such things are meant to surface; the
+context is a negotiation about iron prices; and **the party caused it** by
+repricing the board. Compare the day-102 leak, where I simply volunteered it in
+narration with no roll and no scene.
+
+**(c) is one inference away and it is theirs to make.** He is a smith, he buys
+bar off their board, and he sold them 200 finished spikes on day 97. Nobody has
+to be told.
+
+⚠ **AND THE JOKE IS NOW VISIBLE TO THEM IF THEY LOOK:** on the 97th they bought
+back 200 spikes, worked, from a man buying their bar at cost. **Do not point at
+it.**
+
+### The offer, redone
+
+| | |
+|---|---|
+| 29 bars, 609 lb | **146 gp** *(was 99 against the old board — void)* |
+| 20 ft fine copper wire | **5 gp** *(unchanged; the wire never depended on the board)* |
+| | **151 gp** |
+
+**Reaction 99 stands** — unchanged by any of this.
+
+**DURNHAK'S HALF COMES OUT AT 73 gp**, against the ~75 Tristle told him down a
+shaft on the 95th. **The estimate was good to a gold and a half.**
+
+Of that 73 he has already received 37, so **36 gp falls due to him** once this
+sells. The liability the party has been carrying against his name stood at about
+37 gp 5 sp, and that was very nearly right.
