@@ -10,6 +10,17 @@
 #   the player states them. Tristle's AC 4 is leather (8) with his DEX 18
 #   defensive adjustment of -4 (PHB p.11).
 #
+# str — THE STRENGTH SCORE ITSELF, added day 102, because ENCUMBRANCE NEEDS IT
+#   and it was not here. PHB Strength Table II's weight allowance is added to
+#   every encumbrance band, so without this column the party's carrying capacity
+#   cannot be computed at all -- and it could not be, for 102 days.
+#   *** IT WAS SCATTERED ACROSS THREE PLACES: party_roster.md's generation
+#   tables for the six PCs, campaign/rolls.tsv's day-39 dice for Hask, Dellie
+#   and Ista, and a day-98 roll for Brand. Dellie's had to be reconstructed by
+#   summing eighteen d6 out of the roll log. *** `prime`/`score` only carry
+#   Strength when it happens to BE the prime requisite, which is true for three
+#   characters of ten.
+#
 # melee_hit / melee_dmg — STRENGTH adjustments. They apply to melee and HURLED
 #   weapons only, never to a bow: see rules/abilities.md. Dave's 18/26 is the
 #   party's only one.
@@ -28,14 +39,14 @@
 #   Dave and Torsat in a 10-ft corridor a long sword reaches nothing. Do not
 #   'correct' it. See CHECKLIST.md section 3.
 #
-name	class	level	ac	hp_max	melee_hit	melee_dmg	missile_hit	proficient	bonus_weapons	prime	score	bonus	next_level	share	age
-Dave	Fighter	1	3	9	1	3	0	long sword,short bow,spear	-	STR	18/26	yes	2000	full	16
-Torsat	Fighter	1	3	6	0	0	0	long sword,short bow,spear	-	STR	13	no	2000	full	17
-Tristle	Thief	1	4	3	0	0	3	long sword,short bow	long sword,short bow	DEX	18	yes	1251	full	120
-Blartho	Cleric	1	3	2	0	0	0	footman's flail,sling	-	WIS	15	no	1501	full	19
-Yrtone	Cleric	1	3	7	0	0	0	footman's flail,sling	-	WIS	16	yes	1501	full	22
-Frython	Magic-User	1	10	2	0	0	0	dart	-	INT	17	yes	2501	full	29
-Hask	Fighter	1	3	7	0	0	0	short sword,spear,sling	-	STR	11	no	2000	half	41
-Dellie	Cleric	1	6	5	0	0	-2	footman's flail,sling	-	WIS	16	yes	1501	half	21
-Ista	Thief	1	8	4	0	0	0	dart,spear	-	DEX	13	no	1251	half	21
-Brand	Normal Man	0	10	3	0	0	0	hand axe	-	-	-	no	-	half	41
+name	class	level	ac	hp_max	melee_hit	melee_dmg	missile_hit	proficient	bonus_weapons	prime	score	bonus	next_level	share	age	str
+Dave	Fighter	1	3	9	1	3	0	long sword,short bow,spear	-	STR	18/26	yes	2000	full	16	18/26
+Torsat	Fighter	1	3	6	0	0	0	long sword,short bow,spear	-	STR	13	no	2000	full	17	13
+Tristle	Thief	1	4	3	0	0	3	long sword,short bow	long sword,short bow	DEX	18	yes	1251	full	120	10
+Blartho	Cleric	1	3	2	0	0	0	footman's flail,sling	-	WIS	15	no	1501	full	19	14
+Yrtone	Cleric	1	3	7	0	0	0	footman's flail,sling	-	WIS	16	yes	1501	full	22	14
+Frython	Magic-User	1	10	2	0	0	0	dart	-	INT	17	yes	2501	full	29	8
+Hask	Fighter	1	3	7	0	0	0	short sword,spear,sling	-	STR	11	no	2000	half	41	11
+Dellie	Cleric	1	6	5	0	0	-2	footman's flail,sling	-	WIS	16	yes	1501	half	21	11
+Ista	Thief	1	8	4	0	0	0	dart,spear	-	DEX	13	no	1251	half	21	12
+Brand	Normal Man	0	10	3	0	0	0	hand axe	-	-	-	no	-	half	41	9

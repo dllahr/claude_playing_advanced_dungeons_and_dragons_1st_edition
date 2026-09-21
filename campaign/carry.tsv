@@ -1,0 +1,133 @@
+# WHO IS CARRYING WHAT -- append-only. THE PACKED-LOAD MANIFEST.
+#
+# *** THIS FILE EXISTS BECAUSE THE PLAYER ASKED WHAT THE DATA STRUCTURE WAS AND
+# *** THE ANSWER WAS "THERE ISN'T ONE."
+#
+# Day 102. Per-person kit was being kept in the `holder` column of
+# inventory_log.tsv, which is FREE TEXT and holds one string per row -- so four
+# days of careful bookkeeping had been written as:
+#
+#     holder = WORN: Dave, Torsat, Yrtone, Blartho
+#     holder = ONE EACH: Dave, Torsat, Tristle, Frython, Hask, Ista -- 2 spare
+#     holder = 15 FRYTHON, 15 Ista
+#
+# One row, one quantity, four people, and the distribution in prose. THIRTY-THREE
+# distinct hand-typed holder strings were in use. `inventory.py --held-by Dave`
+# is a substring match on that text: it returns "banded_mail 4" -- the whole four
+# -- and cannot say Dave has one, and would miss him entirely had the string read
+# "the four in the front rank".
+#
+# THE PER-PERSON TABLE THE DM PRESENTED WAS ASSEMBLED BY HAND FROM THOSE STRINGS
+# and presented as though computed. That is the exact failure this repository
+# exists to prevent.
+#
+# *** WHY A NEW FILE AND NOT A NEW COLUMN. ***
+#
+# The first attempt added `holder` to state()'s cell key. It works, and it
+# FRAGMENTS THE OWNERSHIP HISTORY: historical holder strings are inconsistent, so
+# keying on them split every asset's running total into disconnected pieces and
+# `iron_spike` computed to -13 for one string and +13 for another. Reverted.
+#
+# L052 had already named both options, on day 95:
+#
+#   "Either inventory_log grows a notion of a packed load, OR THE OUTFITTING
+#    STEP STARTS PRODUCING A MANIFEST."
+#
+# This is the manifest. And the split is the right one on its own merits, because
+# OWNERSHIP AND CARRIAGE ARE DIFFERENT QUESTIONS: the party owns a kettle it is
+# not carrying and carries Ista's own hand axe it does not own. Same reason
+# light.tsv owns the oil, world_changes.tsv owns what is emplaced, and money.tsv
+# owns the coin.
+#
+#   inventory_log.tsv  ->  WHAT THE PARTY OWNS, and roughly where
+#   carry.tsv          ->  WHO IS CARRYING WHAT, per person, quantities summing
+#
+# *** THE VOCABULARY IS CLOSED AND tools/carry.py check ENFORCES IT. ***
+#
+#   who    a character name from campaign/characters.tsv, or the literal `party`
+#          for shared field kit whose bearer is not tracked.
+#   verb   anchor (sets outright) | move (adds, negative to remove)
+#   asset  an id from campaign/assets.tsv
+#   unit   as inventory_log spells it
+#
+# A free-typed holder is how this went wrong. There is no free text in `who`.
+#
+# *** WHAT `party` MEANS, PRECISELY. *** Shared kit that IS being carried, by
+# somebody, and the party has never tracked which somebody -- the rope, the
+# sacks, the rations, the torches. Its weight is real and must be apportioned
+# across whoever is on the expedition before any movement rate is believed. It
+# does NOT mean "somewhere among our possessions", which is what `spread` meant
+# in inventory_log and which on day 101 turned out to include a lean-to
+# twenty-two miles away.
+#
+# *** THIS FILE DOES NOT SAY WHAT IS OWNED. *** carry.py check reconciles it
+# against inventory.py: nothing may be carried in greater quantity than the party
+# owns, and anything carried that is owned by an individual (Ista's hand axe,
+# Brand's) is flagged rather than silently counted as party property.
+when	day	who	asset	verb	qty	unit	note
+2026-09-20	102	Dave	banded_mail	anchor	1	each	AC 3 with the large shield. STR 18/26 -- the party's only exceptional strength and a +1,000 gp weight allowance, which is why he is the one who carries awkward things.
+2026-09-20	102	Dave	shield_large	anchor	1	each	One of the two ORIGINAL large shields, 15 gp at generation.
+2026-09-20	102	Dave	long_sword	anchor	1	each
+2026-09-20	102	Dave	short_bow	anchor	1	each	Slung behind when the shield is up -- which costs him a point of AC when he fires, and did on day 99.
+2026-09-20	102	Dave	spear	anchor	1	each
+2026-09-20	102	Dave	dagger	anchor	1	each
+2026-09-20	102	Torsat	banded_mail	anchor	1	each	AC 3 with the large shield.
+2026-09-20	102	Torsat	shield_large	anchor	1	each	The other ORIGINAL large shield.
+2026-09-20	102	Torsat	long_sword	anchor	1	each
+2026-09-20	102	Torsat	short_bow	anchor	1	each
+2026-09-20	102	Torsat	spear	anchor	1	each
+2026-09-20	102	Torsat	dagger	anchor	1	each
+2026-09-20	102	Yrtone	banded_mail	anchor	1	each	AC 3 with the shield.
+2026-09-20	102	Yrtone	shield_large	anchor	1	each	UPGRADED from small wooden -- one of the pair taken off the bandits on expedition 4.
+2026-09-20	102	Yrtone	flail	anchor	1	each	Footman's flail. A cleric may not touch an edge or a point (PHB p.20), so this and the sling are the whole of her armoury.
+2026-09-20	102	Yrtone	sling	anchor	1	each
+2026-09-20	102	Yrtone	lantern	anchor	1	each	Full. 24.0 turns in it and never yet lit.
+2026-09-20	102	Blartho	banded_mail	anchor	1	each	AC 3 with the shield.
+2026-09-20	102	Blartho	shield_large	anchor	1	each	UPGRADED from small wooden -- the other bandit shield.
+2026-09-20	102	Blartho	flail	anchor	1	each
+2026-09-20	102	Blartho	sling	anchor	1	each
+2026-09-20	102	Hask	banded_mail	anchor	1	each	Bought at Ludbury, 180 gp the pair with Dellie's. AC 3 with the shield.
+2026-09-20	102	Hask	shield_small	anchor	1	each	Small WOODEN, handed on by Yrtone or Blartho when they took the bandit shields. Also -1 to AC; 3 lb against the large shield's 10.
+2026-09-20	102	Hask	short_sword	anchor	1	each
+2026-09-20	102	Hask	dagger	anchor	1	each
+2026-09-20	102	Dellie	banded_mail	anchor	1	each	*** SHE WEARS MAIL AND CARRIES A SHIELD AND IS STILL AC 6. *** DEX 4 is a +3 DEFENSIVE ADJUSTMENT (PHB p.11) -- banded alone would be AC 4, with the shield AC 3, and her Dexterity costs her three points of it. Worth knowing before anyone puts her in a front rank.
+2026-09-20	102	Dellie	shield_small	anchor	1	each	The other small wooden one.
+2026-09-20	102	Dellie	flail	anchor	1	each	Her spear was taken from her by the cleric prohibition on edged and pointed weapons.
+2026-09-20	102	Tristle	leather_armour	anchor	1	each	AC 4 -- leather 8 with DEX 18's -4 defensive adjustment, the best AC in the party and no metal on him at all.
+2026-09-20	102	Tristle	long_sword	anchor	1	each	+1 to hit, elf racial.
+2026-09-20	102	Tristle	short_bow	anchor	1	each	+4 to hit: +3 DEX missile adjustment and +1 elf racial. The best shot in the party by a distance.
+2026-09-20	102	Tristle	spear	anchor	1	each	*** DELIBERATELY NON-PROFICIENT, -3 EVERY TIME, AND CHECKLIST 3 SAYS DO NOT 'CORRECT' IT: a spear reaches from the SECOND RANK, and behind Dave and Torsat in a 10-ft corridor a long sword reaches nothing.
+2026-09-20	102	Tristle	dagger	anchor	1	each
+2026-09-20	102	Tristle	thieves_tools	anchor	1	set	*** WITHOUT THESE HE HAS NO LOCK OR TRAP FUNCTIONS AT ALL. 30 gp at generation. No weight recorded in assets.tsv.
+2026-09-20	102	Tristle	mallet	anchor	1	each	For spikes. No weight recorded.
+2026-09-20	102	Tristle	mirror	anchor	1	each	The party's working metal mirror -- used for looking round corners and for the mallet-and-mirror work on door jambs. NOT the silver mirror off the library orcs. No weight recorded.
+2026-09-20	102	Tristle	wooden_spike	anchor	4	each	No weight recorded.
+2026-09-20	102	Ista	leather_armour	anchor	1	each	Her own, bought day 39: she asked for leather, not mail -- "I'd be no use and I'd be slow". *** AC 8: a THIEF MAY NOT USE A SHIELD and DEX 13 gives no adjustment. Corrected from 7 on day 102.
+2026-09-20	102	Ista	dart	anchor	15	each
+2026-09-20	102	Ista	hand_axe	anchor	1	each	*** HERS, NOT THE PARTY'S. She brought it and it is hers to decide.
+2026-09-20	102	Ista	dagger	anchor	1	each
+2026-09-20	102	Ista	lantern	anchor	1	each	*** THE LANTERN AND THE FUEL ARE HER DUTY AND SHE ASKED FOR IT (articles.md: given as a DUTY it landed at 71 where a gift landed at 9). 8.6 turns in it.
+2026-09-20	102	Ista	joiners_set	anchor	1	set	Bern's trade. No weight recorded.
+2026-09-20	102	Frython	dart	anchor	15	each	*** THREE A ROUND, the party's highest volume of attacks. The day-77 anchor had given all fifteen darts to Ista and he has been throwing them since long before that.
+2026-09-20	102	Frython	dagger	anchor	1	each	Non-proficient, -5 for a magic-user, and he has never once used it.
+2026-09-20	102	Frython	ring_plain	anchor	1	each	*** UNIDENTIFIED. identify needs a pearl of at least 100 gp value, CONSUMED (PHB p.117), and Neot's went back to Neot unspent on day 91. No weight recorded.
+2026-09-20	102	Brand	hand_axe	anchor	0	each	*** HIS OWN AXE IS NOT IN THE PARTY'S BOOKS AT ALL and never has been -- he arrived with it on day 95. Zero here so the manifest records that he is armed without claiming his axe as party property.
+2026-09-20	102	party	rations_std	anchor	6.358	person-week	Four days to day 102 debited at twelve mouths. THE HEAVIEST SINGLE THING THE PARTY CARRIES at 200 gp-weight the person-week.
+2026-09-20	102	party	rations_iron	anchor	2.5	person-week
+2026-09-20	102	party	rope_50ft	anchor	3	each	Sound. Three, not nine -- six of those were bought for Durnhak on a bad stores account and reversed on day 102.
+2026-09-20	102	party	ten_foot_pole	anchor	3	each	Recovered from the smithy on day 99.
+2026-09-20	102	party	sack_large	anchor	9	each	One each for the nine regulars. The point of them is to have somewhere to put treasure.
+2026-09-20	102	party	waterskin	anchor	7	each	Seven for ten people. Water is also available from the Room of Pools.
+2026-09-20	102	party	torch	anchor	8	each
+2026-09-20	102	party	iron_spike	anchor	7	each	Carried. Seven more are emplaced in Quasqueton doors and world_changes.tsv owns those.
+2026-09-20	102	party	arrows	anchor	81	each
+2026-09-20	102	party	sling_bullet	anchor	30	each
+2026-09-20	102	party	dagger	anchor	2	each	Spare. Six are carried, one per non-cleric; the clerics may not touch them.
+2026-09-20	102	party	sling	anchor	2	each	Spare.
+2026-09-20	102	party	saw_crosscut	anchor	2	each
+2026-09-20	102	party	saw_hack	anchor	4	each
+2026-09-20	102	party	backpack	anchor	1	each
+2026-09-20	102	party	candle	anchor	6	each	No weight recorded.
+2026-09-20	102	party	tinder_box	anchor	1	each	No weight recorded.
+2026-09-20	102	party	garlic	anchor	1	each	No weight recorded.
+2026-09-20	102	party	holy_symbol	anchor	2	each	Yrtone's and Blartho's. Dellie has needed one since day 39. No weight recorded.
