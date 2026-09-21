@@ -53,17 +53,17 @@ salvage_misc	assorted salvage	salvage			Where a mixed sale was never itemised
 # ---- gear
 oil_flask	oil flask	light	20	gp-weight	Fuel is computed by tools/light.py from campaign/light.tsv, never counted here. *** WEIGHT CORRECTED 100 -> 20 on day 96: DMG p.225 Appendix O gives 'Flask, full' as 20. ***
 torch	torch	light	25	gp-weight	*** WEIGHT CORRECTED 100 -> 25 on day 96, DMG p.225. *** equipment.md already carried this one as a KNOWN OCR slip -- its own correction note reads 'Torch 60 -> 25' -- and assets.tsv had a third figure that matched neither.
-candle	candle	light
-tinder_box	tinder box, flint & steel	light
+candle	candle	light	5	gp-weight	APPENDIX O: 'Candle 5'. Six of them, 3 lb the lot.
+tinder_box	tinder box, flint & steel	light	2	gp-weight	APPENDIX O: 'Tinderbox 2'. The lightest thing on the manifest and the one nobody may forget.
 lantern	lantern, hooded	light	60	gp-weight	*** WEIGHT CORRECTED 300 -> 60 on day 96, DMG p.225. ***
 iron_spike	iron spike	tools	10	gp-weight	*** WEIGHT CORRECTED 50 -> 10 on day 96, DMG p.225. THE WORST OF THE FOUR: 200 spikes for Durnhak weighed 1,000 lb under the old figure and weigh 200 lb under the book. ***
 wooden_spike	wooden spike	tools
 rope_50ft	rope, 50 ft	tools	75	gp-weight	Six bought day 67 at 4 s.p. -- the purchase that had no row for eleven days
 ten_foot_pole	ten-foot pole	tools	100	gp-weight
-mallet	mallet	tools
-mirror	metal mirror	tools
-thieves_tools	thieves' picks and tools	tools
-joiners_set	joiner's set, small	tools
+mallet	mallet	tools	10	gp-weight	APPENDIX O 'Hand tool 10', at the player's direction day 103. Appendix O has no mallet and a mallet is a hand tool.
+mirror	metal mirror	tools	5	gp-weight	APPENDIX O: 'Mirror 5'. The party's WORKING metal mirror -- for looking round corners and the mallet-and-mirror work on door jambs. NOT mirror_silver, which is the 90 gp curio off the library orcs.
+thieves_tools	thieves' picks and tools	tools	10	gp-weight	10 gp-weight, at the player's direction day 103 -- the same as Appendix O's hand tool. *** WITHOUT THESE TRISTLE HAS NO LOCK OR TRAP FUNCTIONS AT ALL. 30 gp at generation and the cheapest pound the party carries.
+joiners_set	joiner's set, small	tools	80	gp-weight	A SMALL JOINER'S SET -- a tenon saw, two or three chisels, a mallet, a marking gauge, a try square, a brace and a couple of bits, and a rule. Eight-odd hand tools at Appendix O's 10 each = 80 gp-weight, which is also what the cobbler's toolbox out of area 13 was called. *** ISTA'S OWN, and she asked for these BEFORE she asked for armour: 'I can be a second pair of hands on a frame -- and that's a real thing, not a made-up job.'
 backpack	backpack, leather	tools	20	gp-weight
 keg_spigot	keg, small (~3 gallon), spigot and gimlet	tools
 rations_iron	rations, iron, 1 person-week	food	75	gp-weight	5 gp. They keep a month, which is what they are for

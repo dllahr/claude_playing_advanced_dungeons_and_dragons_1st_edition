@@ -133,3 +133,15 @@ when	day	who	asset	verb	qty	unit	note
 2026-09-20	102	party	holy_symbol	anchor	2	each	Yrtone's and Blartho's. Dellie has needed one since day 39. No weight recorded.
 2026-09-21	103	Yrtone	lantern	anchor	0	each	*** THE SECOND LANTERN GOES TO DAVE, day 103. *** She was the most heavily loaded person in the party at 1,114 gp-weight, carrying banded mail, a large shield, a flail AND a spare lamp, on a +200 allowance -- and Dave has a +1,000 allowance and nearly a whole band of slack. Moving 60 gp-weight off the heaviest and onto the strongest is the obvious trade and it was invisible until the manifest existed.
 2026-09-21	103	Dave	lantern	anchor	1	each	The SECOND lantern, full, 24.0 turns and never yet lit -- taken off Yrtone on day 103. Ista keeps the working lamp: articles.md records that the lantern and the fuel are HER DUTY and she asked for it, which landed at 71 where a gift to her landed at 9.
+2026-09-21	103	Dave	dagger	anchor	0	each	Sold day 103, half list. Ista keeps the party's only dagger.
+2026-09-21	103	Torsat	dagger	anchor	0	each	Sold day 103.
+2026-09-21	103	Tristle	dagger	anchor	0	each	Sold day 103.
+2026-09-21	103	Frython	dagger	anchor	0	each	Sold day 103. Non-proficient at -5 for a magic-user and never once used.
+2026-09-21	103	Hask	dagger	anchor	0	each	Sold day 103.
+2026-09-21	103	party	dagger	anchor	0	each	The two spares sold day 103. Seven went; Ista's is the last.
+2026-09-21	103	Dave	spear	anchor	0	each	Sold day 103. He keeps long sword and short bow.
+2026-09-21	103	Torsat	spear	anchor	0	each	Sold day 103.
+2026-09-21	103	Tristle	spear	anchor	0	each	Sold day 103. *** THE DELIBERATE NON-PROFICIENT SECOND-RANK REACH IS GONE WITH IT -- CHECKLIST 3 said not to 'correct' that spear, and it is not being corrected, it is being SOLD at the player's word with only one left in the party. Worth knowing before the next 10-ft corridor: behind Dave and Torsat a long sword reaches nothing, and Tristle now has only the bow.
+2026-09-21	103	Hask	spear	anchor	1	each	*** THE LAST SPEAR, AND TO THE ONE MAN PROFICIENT WITH IT WHO IS NOT ALREADY CARRYING A SWORD AND A BOW. characters.tsv: short sword, spear, sling. The player remembered he had used one and the sheet confirms it.
+2026-09-21	103	party	ten_foot_pole	anchor	1	each	*** TWO OF THE THREE LEFT IN WEND'S BARN, day 103. One comes underground. A pole is 100 gp-weight -- 10 lb, and 30 lb of the shared load was three of them.
+2026-09-21	103	party	torch	anchor	1	each	*** SEVEN OF THE EIGHT LEFT IN WEND'S BARN, day 103. *** ⚠ ONE TORCH IS AN HOUR OF LIGHT AND NOTHING BEHIND IT. The party's light is now Ista's lamp at 8.6 turns, Dave's full spare at 24.0, Yrtone's at 24.0 -- and ZERO SEALED OIL FLASKS, all eight having gone to Durnhak on the 101st. That is a real exposure and it is the player's call.
