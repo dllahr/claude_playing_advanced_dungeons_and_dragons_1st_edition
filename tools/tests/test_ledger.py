@@ -412,19 +412,40 @@ def test_inventory_ALLOWS_a_zero_qty_WHEN_a_holder_is_given(tmp_path):
         'multiply'
 
 
-def test_the_salvage_is_AT_THE_BASECAMP_and_not_in_nine_backpacks():
-    """Belt and braces on the thing the relocation exists to say.
+def test_the_salvage_is_IN_ONE_NAMED_PLACE_and_not_in_nine_backpacks():
+    """The invariant is in the NAME: one stated place, not nine backpacks.
 
-    Not a pinned quantity -- it asserts the HOLDER, which is the fact day 96
-    established and which no later purchase or sale can invalidate. If the party
-    fetches it, this test changes with the fiction, which is correct.
+    *** THIS TEST USED TO ASSERT "basecamp" AND WENT RED ON DAY 102, when the
+    party carted the whole 413 lb to Wethersby. *** Its own docstring had
+    predicted that -- "if the party fetches it, this test changes with the
+    fiction" -- but predicting a break is not the same as surviving one, and
+    this is the third time in this campaign a test has pinned a piece of game
+    state that play then moved past.
+
+    So it now asserts what the day-96 relocation actually exists to say, which
+    no journey invalidates: every piece of the crag salvage has a holder that
+    NAMES A PLACE, and they all name the SAME one. The failure it guards
+    against is the salvage quietly reverting to "spread" -- i.e. being carried
+    by nine people who are not carrying it.
     """
     st = inv.state()
-    for asset in ('chain_heavy', 'shovel', 'chisel', 'vise_iron'):
-        holders = {cell[2] for cell in st[asset].values()}
-        assert any('basecamp' in h.lower() for h in holders), (
-            '%s should be under the lean-to at Coll\'s basecamp; holder reads '
-            '%r' % (asset, holders))
+    VAGUE = ('spread', 'one each', '-', '')
+    places = {}
+    for asset in ('chain_heavy', 'shovel', 'chisel', 'vise_iron',
+                  'smith_tools', 'toolbox_mason', 'bellows_hand'):
+        for cell in st[asset].values():
+            if not cell[0]:
+                continue        # a zero cell records an absence, not a place
+            holder = (cell[2] or '').strip()
+            assert holder.lower() not in VAGUE, (
+                '%s holder is %r -- the crag salvage must name a PLACE. That '
+                'is the whole point of the day-96 relocation: it is NOT in '
+                'nine backpacks.' % (asset, holder))
+            places.setdefault(holder.lower().split('--')[0].strip(),
+                              []).append(asset)
+    assert len(places) == 1, (
+        'the crag salvage is in %d different places and it travels as one '
+        'stack: %r' % (len(places), places))
 
 
 def test_check_does_not_demand_an_inventory_row_for_an_asset_ANOTHER_TOOL_OWNS():
