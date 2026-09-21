@@ -205,6 +205,88 @@ def report(log=None, asset=None, held_by=None):
     return '\n'.join(lines).lstrip('\n') or 'nothing held'
 
 
+def gp_weight(asset, qty, ass=None):
+    """(gp-weight, note) for `qty` of `asset`, or (None, why) if unknown.
+
+    assets.tsv carries weight in TWO columns on purpose -- a number and its
+    unit -- because DMG Appendix O counts encumbrance in GP WEIGHT, ten to the
+    pound, while every merchant and cart in the fiction talks in POUNDS. A bare
+    number would be a unit kept in somebody's head.
+    """
+    ass = ass or ledgermod.assets()
+    a = ass.get(asset) or {}
+    w = (a.get('weight') or '').strip()
+    if not w:
+        return None, 'no weight in assets.tsv'
+    try:
+        w = float(w)
+    except ValueError:
+        return None, 'weight %r is not a number' % w
+    unit = (a.get('weight_unit') or '').strip().lower()
+    if unit.startswith('lb'):
+        return w * qty * 10.0, ''
+    return w * qty, ''
+
+
+def weigh(log=None, held_by=None):
+    """Every held thing, with its weight, grouped and totalled.
+
+    *** THIS IS WHAT L052 HAS BEEN BLOCKED ON SINCE DAY 95. *** The loop says
+    the party's real load has never been computed and that the first attempt put
+    them over the 6-inch band -- and its caveat is that `inventory_log` tracks
+    what the party OWNS AND HAS WITH IT, not WHAT WAS PACKED FOR A TRIP.
+
+    This does not solve that. It gives the arithmetic the loop needs and reports
+    the gap honestly: totals by HOLDER, so the reader can see what is actually
+    in hand versus what is in a barn twenty-two miles away, and an explicit list
+    of every held thing whose weight nobody has ever recorded.
+    """
+    st = state(log)
+    ass = ledgermod.assets()
+    by_holder, unknown = {}, []
+    for a in sorted(st):
+        for (cond, _u), (n, unit, holder, _note) in sorted(st[a].items()):
+            if not n:
+                continue
+            if held_by and held_by.lower() not in (holder or '').lower():
+                continue
+            gp, why = gp_weight(a, n, ass)
+            key = (holder or '-').strip() or '-'
+            by_holder.setdefault(key, []).append((a, n, unit, cond, gp, why))
+            if gp is None:
+                unknown.append((a, n, unit, key, why))
+
+    out, grand = [], 0.0
+    for holder in sorted(by_holder, key=lambda h: -sum(
+            r[4] or 0 for r in by_holder[h])):
+        rows_ = by_holder[holder]
+        sub = sum(r[4] or 0 for r in rows_)
+        grand += sub
+        out.append('')
+        out.append('== %s' % holder)
+        for a, n, unit, cond, gp, why in sorted(
+                rows_, key=lambda r: -(r[4] or 0)):
+            out.append('   %-18s %8s %-12s %-9s %10s %8s  %s'
+                       % (a, _fmt(n), unit, cond or '-',
+                          ('%.0f' % gp) if gp is not None else '?',
+                          ('%.1f' % (gp / 10.0)) if gp is not None else '?',
+                          why))
+        out.append('   %-18s %41s %8.1f lb' % ('', '%.0f gp-wt' % sub, sub / 10))
+    out.append('')
+    out.append('GRAND TOTAL %s gp-weight = %.1f lb'
+               % ('{:,.0f}'.format(grand), grand / 10))
+    if unknown:
+        out.append('')
+        out.append('NO WEIGHT RECORDED (%d held things) -- these are NOT in the '
+                   'totals above:' % len(unknown))
+        for a, n, unit, holder, why in unknown:
+            out.append('   %-18s %8s %-12s %-24s %s'
+                       % (a, _fmt(n), unit, holder[:24], why))
+    out.append('')
+    out.append('   columns: asset  qty  unit  condition  gp-weight  lb')
+    return '\n'.join(out).lstrip('\n')
+
+
 def check(log=None):
     """[(severity, message)]. Empty means the inventory hangs together."""
     log = log if log is not None else rows()
@@ -252,6 +334,7 @@ def build_parser():
     p.add_argument('--asset', help='one asset, broken out by condition')
     p.add_argument('--held-by', help='filter by holder')
     sub = p.add_subparsers(dest='cmd')
+    sub.add_parser('weigh', help='every held thing, with weights, grouped by holder and totalled')
     sub.add_parser('carried', help='spikes: owned minus emplaced')
     sub.add_parser('check', help='units, assets, verbs and negatives')
     return p
@@ -269,6 +352,10 @@ def main(argv=None):
             print('inventory OK: every asset resolves, every unit is in the '
                   'vocabulary, nothing is double-counted, nothing is negative.')
         return 1 if any(s == 'FAIL' for s, _ in problems) else 0
+
+    if a.cmd == 'weigh':
+        print(weigh(log, held_by=a.held_by))
+        return 0
 
     if a.cmd == 'carried':
         emplaced, _ = worldmod.deployed(worldmod.load())

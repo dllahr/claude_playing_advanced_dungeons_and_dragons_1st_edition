@@ -341,3 +341,66 @@ def test_gp_is_for_DEBTS_and_never_becomes_a_second_copy_of_the_purse():
                 'only; the purse is computed by ledger.py and must not be '
                 'mirrored here. (`gp-weight` is the WEIGHT of carried coin and '
                 'is a different unit.)' % (r['asset'], kind))
+
+
+# ------------------------------------- weights, added day 102 for L052
+# L052 has been blocked since day 95 on "the party's real load has never been
+# computed". inventory.py could list what is held and not weigh it, so the
+# arithmetic was done by hand every time and got a different answer every time.
+
+def test_gp_weight_reads_the_TWO_weight_columns():
+    """assets.tsv stores a number AND its unit, on purpose.
+
+    Appendix O counts encumbrance in GP WEIGHT, ten to the pound, while every
+    merchant and cart in the fiction talks in POUNDS. A bare number would be a
+    unit living in somebody's head -- which is the shape of every error this
+    project is about.
+    """
+    import inventory as inv2
+    from tsvlog import read_tsv as _rt
+    gp, why = inv2.gp_weight('iron_spike', 10)
+    assert gp == 100 and not why, (gp, why)           # 10 gp-wt each
+
+    # *** MOST ASSETS RECORD gp-weight AND TWO RECORD lb. *** My first version
+    # of this test assumed nails_timber was one of the lb ones because its note
+    # says "PER POUND" -- but its weight_unit is gp-weight and the qty unit is
+    # lb, so 10 gp-wt/lb x 20 lb = 200 and the function was right. The lb assets
+    # are DERIVED here rather than named, so this cannot go stale the way that
+    # assumption did.
+    ass = inv2.ledgermod.assets()
+    in_lb = [k for k, v in ass.items()
+             if (v.get('weight_unit') or '').strip().lower().startswith('lb')
+             and (v.get('weight') or '').strip()]
+    assert in_lb, 'no asset records weight in lb -- retire this half of the test'
+    a = sorted(in_lb)[0]
+    per = float(ass[a]['weight'])
+    gp, why = inv2.gp_weight(a, 3)
+    assert gp == per * 3 * 10, (a, gp, per)           # lb -> x10 for gp-weight
+    assert not why
+
+
+def test_an_unweighed_asset_says_so_instead_of_counting_as_zero():
+    """A missing weight must never silently total as nothing.
+
+    That is how a 421 lb load becomes invisible.
+    """
+    import inventory as inv2
+    gp, why = inv2.gp_weight('holy_symbol', 2)
+    assert gp is None and 'no weight' in why
+
+
+def test_weigh_totals_and_names_what_it_could_not_weigh():
+    import inventory as inv2
+    out = inv2.weigh()
+    assert 'GRAND TOTAL' in out
+    assert 'NO WEIGHT RECORDED' in out, (
+        'as long as any held asset lacks a weight, weigh() must say so '
+        'explicitly -- an honest gap beats a total that quietly omits things')
+    assert 'gp-weight' in out and 'lb' in out
+
+
+def test_weigh_can_be_filtered_to_one_holder():
+    import inventory as inv2
+    out = inv2.weigh(held_by='Tristle')
+    assert 'Tristle' in out
+    assert 'rations_std' not in out, 'the spread rations are not Tristle\'s'
