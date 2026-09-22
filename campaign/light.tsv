@@ -27,6 +27,17 @@
 #   `lantern-yrtone`, `torch-3`. Not the carrier: a lantern handed to somebody
 #   else is the same lantern and keeps its id and its half-burnt flask.
 #
+# who   *** RETIRED AS OF DAY 103 -- READ ONLY, for rows written before the
+#   fix below. *** Syncing this file against carry.tsv on day 103 found that
+#   BOTH files answered "who carries this lantern" -- exactly the shape of
+#   every drift this project exists to remove. carry.tsv is now the single
+#   "where is everything" log, so tools/light.py computes the LIVE carrier
+#   from carry.tsv (see its SOURCE_ASSET and campaign/assets.tsv's
+#   lantern_ista / lantern_yrtone) and this column is no longer read for
+#   that. New rows do not need to fill it in. It stays authoritative for one
+#   case only: `lantern-torsat`, given to the gnomes on day 95, seven days
+#   before carry.tsv existed, so carry.tsv has no row for it and never will.
+#
 # kind
 #   anchor    sets fuel outright and SUPERSEDES every row above it in game
 #             order. Use one when the log cannot be reconstructed further back.

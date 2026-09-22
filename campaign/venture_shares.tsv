@@ -1,0 +1,64 @@
+# THE CAP TABLE -- who owns the shares of the venture. Append-only.
+#
+# *** WHY THIS FILE EXISTS. *** The player, day 103: "let's track who owns the
+# shares of the venture" -- alongside an inventory of what it holds
+# (campaign/venture.tsv). The share structure has been sitting in
+# campaign/wool_venture.md's prose since day 16 and has never been queryable.
+#
+# *** WHAT A SHARE MEANS HERE, PRECISELY. *** wool_venture.md, "The shares":
+# capital returns off the top BEFORE anything is divided (CAPITAL RETURNS
+# FIRST), and only the PROFIT that remains after that is split by share. A
+# share is a claim on profit, not on the venture's capital or its physical
+# stock -- campaign/venture.tsv answers what the venture HOLDS and OWES;
+# this file answers who is entitled to a slice of what it EARNS.
+#
+# *** WHO HAS ACTUALLY PUT IN CAPITAL, AND WHO HAS NOT -- the player's own
+# reckoning, day 103, and the reason this file does not try to price a share
+# in gold: ***
+#
+#   THE PARTY  put in the 450 gp that bought the first lot (day 12-16) and the
+#              288 gp that bought the second (day 73-83). ALL of the venture's
+#              capital, both times, is the party's own coin.
+#   WEND       put in no coin. She took a full share "backing her own
+#              judgement" rather than the 20 gp fee offered (d6=1), and
+#              separately contributes her shop and her barn and is paid for
+#              her time -- a service, not capital. Her share is EARNED, not
+#              BOUGHT.
+#   THE HOLDERS put in no coin either. They chose "the floor price and a
+#              share" over "a good price and no share" for their WOOL, which
+#              the party bought from them AT THE FLOOR -- the wool itself was
+#              a sale to the party, not an investment in it. Their share is
+#              the PRICE of that choice, not a capital stake.
+#
+# So: 14 shares, one class, no capital weighting -- because no share was ever
+# priced against capital put in. Pricing what a share is "worth" is valuation,
+# and the player was explicit: figure that out when needed, not routinely.
+#
+# *** THE SIX HOLDERS ARE ONE ROW, `holders_six`. *** wool_venture.md names
+# four of six by description -- "Rell's brother, Ellery, Marrow, Ferd's old
+# master, and two more" -- and Rell's brother and Marrow resolve to people.tsv
+# (gyll, marrow). The other two are NEVER NAMED IN THE RECORD. Splitting six
+# shares across four knowns and two unknowns would invent an allocation nobody
+# agreed to, which this project does not do. `holders_six` is a documented
+# bucket, not a person, and it is closed vocabulary the same way `party` is in
+# carry.tsv.
+#
+# who     a character name (characters.tsv), a people.tsv id, `holders_six`,
+#         or `wend`.
+# verb    anchor (sets outright) | move (adds, negative to remove -- a share
+#         sold or transferred)
+# shares  in units of a WHOLE share; Hask and Dellie hold half each per the
+#         day-16 agreement (henchmen draw half where PCs draw full, the same
+#         line characters.tsv already draws for experience and treasure)
+#
+when	day	who	verb	shares	note
+2026-09-11	16	Dave	anchor	1	wool_venture.md, "The shares": the party -- six PCs at 1 each
+2026-09-11	16	Torsat	anchor	1
+2026-09-11	16	Tristle	anchor	1
+2026-09-11	16	Frython	anchor	1
+2026-09-11	16	Yrtone	anchor	1
+2026-09-11	16	Blartho	anchor	1
+2026-09-11	16	Hask	anchor	0.5	Henchman: half share, same line characters.tsv draws for XP and treasure
+2026-09-11	16	Dellie	anchor	0.5	Henchman: half share
+2026-09-11	16	wend	anchor	1	"She took the small fee and a full share (d6 = 1) rather than 20 gp and a half. She is backing her own judgement" -- wool_venture.md. Capital is 0; the share is earned, not bought
+2026-09-11	16	holders_six	anchor	6	The six wool-holders who chose "the floor price and a SHARE of any eventual profit" over "a good price and no share" (d6=6, all six took the share). Four are described in wool_venture.md and two never named: Rell's brother (people.tsv: gyll), Ellery, Marrow, Ferd's old master, and two more. ONE ROW because the record does not support splitting it further

@@ -76,12 +76,54 @@ import re
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import carry                                                    # noqa: E402
 import clock                                                    # noqa: E402
 import rules                                                    # noqa: E402
 from tsvlog import append, read_tsv, today                      # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 LOG = os.path.join(ROOT, 'campaign', 'light.tsv')
+
+# *** WHO CARRIES A SOURCE COMES FROM carry.tsv AS OF DAY 103, NOT FROM THIS
+# FILE'S OWN `who` COLUMN. *** Syncing the two on day 103 exposed exactly the
+# defect this project exists to remove -- light.tsv carried a carrier for
+# every source AND carry.tsv said who carries what, two logs answering one
+# question. `who` stays in this file's schema as historical colour on rows
+# written before the cross-reference existed, and remains the answer for a
+# source carry.tsv never reached (lantern-torsat, given to the gnomes on day
+# 95, seven days before carry.tsv existed). See assets.tsv's lantern_ista /
+# lantern_yrtone for why each surviving lamp got its own id.
+SOURCE_ASSET = {
+    'lantern-ista': 'lantern_ista',
+    'lantern-yrtone': 'lantern_yrtone',
+}
+
+
+def _carrier(sid, carry_state=None):
+    """Who bears `sid` right now, per carry.tsv -- or None if it has no row
+    there (an untracked source, or one that left play before carry.tsv did)."""
+    asset = SOURCE_ASSET.get(sid)
+    if not asset:
+        return None
+    st = carry_state if carry_state is not None else carry.state()
+    for who, cells in st.items():
+        for (a, _unit), qty in cells.items():
+            if a == asset and qty:
+                return who
+    return None
+
+
+def _apply_carriers(src, carry_state=None):
+    """Overwrite `who` on every source carry.tsv has an answer for, in place.
+
+    Shared by `state()` and by the CLI paths that call `_replay` directly for
+    a report, so the override is not something only half the tool applies.
+    """
+    for sid, s in src.items():
+        carrier = _carrier(sid, carry_state)
+        if carrier:
+            s['who'] = carrier
+    return src
 
 TABLE = 'Light sources'          # the heading in rules/exploration.md
 ROUNDS_PER_TURN = 10             # rules/exploration.md, Time: 1 turn = 10 rounds
@@ -495,13 +537,20 @@ def _replay(rows=None, at_round=None, cat=None, path=None, clock_log=None):
     return src, pool
 
 
-def state(rows=None, at_round=None, cat=None, path=None, clock_log=None):
+def state(rows=None, at_round=None, cat=None, path=None, clock_log=None,
+          carry_state=None):
     """{source id: its state now}, replayed from the log.
 
     `at_round` defaults to the live dungeon clock. Pass it explicitly in tests
     and anywhere the answer must not move under you.
+
+    `who` on the returned state is carry.tsv's answer wherever carry.tsv has
+    one -- see SOURCE_ASSET and `_carrier` above. Pass `carry_state` (the
+    output of `carry.state()`) to pin it in a test the same way `at_round`
+    pins the clock.
     """
-    return _replay(rows, at_round, cat, path, clock_log)[0]
+    src = _replay(rows, at_round, cat, path, clock_log)[0]
+    return _apply_carriers(src, carry_state)
 
 
 def oil_state(rows=None, at_round=None, cat=None, path=None, clock_log=None):
@@ -822,6 +871,7 @@ def main(argv=None):
             return 1
         append(a.log_file, row)
         src, pool = _replay(None, at_round=at, cat=cat, path=a.log_file)
+        _apply_carriers(src)
         if a.cmd in ('refill', 'new'):
             print(oil_report(pool, cat))
         word, fuel, gutter, warn = describe(src[a.source], at)
@@ -854,6 +904,7 @@ def main(argv=None):
                      r.get('fuel', ''), r.get('note', '')))
         print()
     src, pool = _replay(rows, at_round=at, cat=cat)
+    _apply_carriers(src)
 
     if a.cmd == 'remaining':
         print(remaining_report(src, at, cat, pool=pool))

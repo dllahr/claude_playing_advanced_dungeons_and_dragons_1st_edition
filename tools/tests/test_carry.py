@@ -83,6 +83,30 @@ def test_carriage_may_not_exceed_ownership():
     assert any('may not exceed ownership' in m for _s, m in problems), problems
 
 
+def test_an_owned_thing_with_nowhere_logged_fails_check():
+    """TIGHTENED DAY 103: located == owned, not located <= owned.
+
+    Dave's one long sword is real (characters.tsv/carry.tsv agree the party
+    owns one), so an EMPTY manifest is missing it -- the exact shape of the
+    headboard and the diary, which had an inventory_log row and no location
+    anywhere for seventy days.
+    """
+    problems = carry.check(_log())
+    assert any('located must equal owned' in m and 'long_sword' in m
+               for _s, m in problems), problems
+
+
+def test_places_and_non_pc_people_are_in_the_vocabulary():
+    """EXTENDED DAY 103: carry.tsv is now the single "where is everything" log."""
+    v = carry.who_vocabulary()
+    for n in ('wethersby', 'wend_barn', 'basecamp', 'toller', 'dill'):
+        assert n in v, '%r should resolve -- it is an id in people.tsv or ' \
+                        'places.tsv' % n
+    # a PC's identity-row id (lowercase) is NOT a second entry for that person
+    # -- Dave is `Dave` here, from characters.tsv, not also `dave`
+    assert 'dave' not in v
+
+
 def test_the_live_manifest_reconciles():
     assert [m for s, m in carry.check() if s == 'FAIL'] == []
 

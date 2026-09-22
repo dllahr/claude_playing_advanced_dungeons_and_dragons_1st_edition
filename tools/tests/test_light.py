@@ -687,3 +687,41 @@ def test_oil_used_on_something_other_than_a_lamp_comes_out_of_the_pool(tmp_path)
     assert pool['sealed'] == 2
     # 24 in the broached flask, 20 into the lamp, 2 onto the hinges -> 2 left.
     assert light.turns(pool['broached']) == pytest.approx(2.0)
+
+
+# ---------------------------------------- the carrier comes from carry.tsv
+
+def test_carry_tsv_overrides_the_stored_who(tmp_path, cat):
+    """Day 103: two logs answered "who carries this", and that is the exact
+    defect this project exists to remove. carry.tsv wins."""
+    log = rows_to_file(tmp_path, [
+        row(exped=13, round=0, source='lantern-yrtone', kind='new',
+            what='Lantern (hooded)', who='Yrtone'),
+        row(exped=13, round=0, source='lantern-yrtone', kind='lit'),
+    ])
+    carry_state = {'Dave': {('lantern_yrtone', 'each'): 1.0}}
+    s = light.state(light.load(log), at_round=0, cat=cat,
+                    carry_state=carry_state)['lantern-yrtone']
+    assert s['who'] == 'Dave', (
+        'the row said Yrtone; carry.tsv says Dave now holds it, and '
+        'carry.tsv is supposed to win')
+
+
+def test_a_source_with_no_carry_tsv_row_keeps_its_own_who(tmp_path, cat):
+    """lantern-torsat: given to the gnomes before carry.tsv existed, so
+    carry.tsv has no row for it and the historical `who` is all there is."""
+    log = rows_to_file(tmp_path, [
+        row(exped=4, round=0, source='lantern-torsat', kind='new',
+            what='Lantern (hooded)', who='Torsat'),
+        row(exped=4, round=0, source='lantern-torsat', kind='lit'),
+    ])
+    s = light.state(light.load(log), at_round=0, cat=cat,
+                    carry_state={})['lantern-torsat']
+    assert s['who'] == 'Torsat'
+
+
+def test_an_untracked_source_id_is_unaffected():
+    """SOURCE_ASSET only knows the two surviving lamps -- anything else (a
+    torch, a test fixture's made-up id) is untouched."""
+    assert light._carrier('torch-3', carry_state={}) is None
+    assert light._carrier('made-up-id', carry_state={'Dave': {}}) is None

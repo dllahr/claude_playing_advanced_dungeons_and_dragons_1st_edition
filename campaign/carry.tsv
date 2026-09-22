@@ -44,13 +44,41 @@
 #
 # *** THE VOCABULARY IS CLOSED AND tools/carry.py check ENFORCES IT. ***
 #
-#   who    a character name from campaign/characters.tsv, or the literal `party`
+#   who    a character name from campaign/characters.tsv, an id from
+#          campaign/people.tsv or campaign/places.tsv, or the literal `party`
 #          for shared field kit whose bearer is not tracked.
 #   verb   anchor (sets outright) | move (adds, negative to remove)
 #   asset  an id from campaign/assets.tsv
 #   unit   as inventory_log spells it
 #
 # A free-typed holder is how this went wrong. There is no free text in `who`.
+#
+# *** EXTENDED DAY 103: THIS FILE IS NOW THE SINGLE "WHERE IS EVERYTHING" LOG.
+# ***
+#
+# The player: "yes let's have carry.tsv become the single where is everything."
+# Up to here `who` closed on characters + `party` because the file only had to
+# say who in the field party was carrying what. inventory_log.tsv's `holder`
+# column carried everything ELSE -- Wend's barn, Toller's shop, Wethersby, a
+# named NPC -- as free text, THIRTY-THREE distinct hand-typed strings, and nine
+# of the ten rows below are the migration off that text.
+#
+# `who` now resolves against THREE closed lists, not one: characters.tsv (a
+# character, by name, e.g. `Dave`), people.tsv (an id, e.g. `toller`, `wend`,
+# `dill` -- excluding kind=pc, whose people are already covered by
+# characters.tsv under their Title-Case name), or places.tsv (an id, e.g.
+# `wethersby`, `wend_barn`, `basecamp`). `tools/carry.py check` now demands
+# LOCATED == OWNED, not merely located <= owned -- an owned thing with no row
+# here is the exact shape of the headboard and the diary, which had an
+# inventory_log row and no location anywhere for seventy days.
+#
+# `debt` assets (Fenn's 90 gp, Dill's 1.1 gp) are NOT here and never will be:
+# they are money owed, not a physical thing with a location, and belong to
+# inventory_log.tsv alone.
+#
+# inventory_log.tsv's `holder` column is retired as of this migration -- read
+# ONLY, for the historical record of who a row's writer believed held a thing
+# at the time. Going forward, WHERE something is lives here.
 #
 # *** WHAT `party` MEANS, PRECISELY. *** Shared kit that IS being carried, by
 # somebody, and the party has never tracked which somebody -- the rope, the
@@ -148,3 +176,45 @@ when	day	who	asset	verb	qty	unit	note
 2026-09-21	103	party	saw_crosscut	anchor	1	each	One of the two left in Wend's barn, day 103. 150 gp-weight each.
 2026-09-21	103	party	saw_hack	anchor	3	each	One of the four left in Wend's barn, day 103. 30 gp-weight each.
 2026-09-21	103	party	garlic	anchor	0	each	*** DONATED AT THE INN, day 103, at the player's word. *** Held since the day-77 anchor and never used. Never weighed either -- Appendix O has no garlic -- so it was one of the unweighed items, and giving it away is the cheapest way to stop owing it a number.
+#
+# --- MIGRATION, day 103: everything OWNED that had a free-text holder in
+# inventory_log.tsv and no row here. Located == owned is now enforced;
+# these rows are what makes it true. `debt` assets are deliberately absent --
+# see the header.
+#
+2026-09-21	103	wend_barn	torch	anchor	7	each	Seven of the eight torches, left in Wend's barn day 103 -- inventory_log's holder for `torch` said "1 with the party; 7 in Wend's barn, Wethersby". The one carried is the `party` row above.
+2026-09-21	103	wend_barn	ten_foot_pole	anchor	2	each	Two of the three poles, left in Wend's barn day 103. The one carried is the `party` row above.
+2026-09-21	103	wend_barn	saw_crosscut	anchor	1	each	The other crosscut saw, left in Wend's barn day 103. The one carried is the `party` row above.
+2026-09-21	103	wend_barn	saw_hack	anchor	1	each	The fourth hacksaw, left in Wend's barn day 103. The three carried are the `party` row above.
+2026-09-21	103	wend_barn	cloth_plant	anchor	1	set	The Ludbury loom, spindles, cards and dye -- inventory_log's holder read "Wend's barn" in free text since day 77. Never carried on an expedition; this is where it has sat since it came back from Ludbury.
+2026-09-21	103	wethersby	horse_riding	anchor	3	each	All three riding horses -- two anchored day 77, a third bought at Marchford day 87 and confirmed in Wethersby since the 93rd (inventory_log holder correction, day 96). None are on an expedition.
+2026-09-21	103	basecamp	mule	anchor	1	each	One of the two mules, at Coll's basecamp with the cart that stayed at the crag. inventory_log's day-101 holder correction: "1 at Coll's basecamp with the cart; 1 SOUTH with Hask and Dellie".
+2026-09-21	103	wethersby	mule	anchor	1	each	The other mule, gone south with Hask and Dellie on day 99 -- their destination and the cart's is Wethersby, per the same day-101 holder correction.
+2026-09-21	103	basecamp	cart	anchor	1	each	One of the two carts, at the crag with the party -- inventory_log's day-101 holder correction: "1 with the party at the crag; 1 SOUTH with Hask and Dellie". The day-77 anchor that said both were "Wethersby" was 24 days stale and had the DM narrating two carts at the crag all morning on day 101 before the player caught it.
+2026-09-21	103	wethersby	cart	anchor	1	each	The other cart, gone south with Hask and Dellie on day 99, carrying the kitchen haul and everything else out of the caves.
+2026-09-21	103	toller	diary_zelligar	anchor	1	each	Zelligar's diary, with Toller on open terms since day 32 and STILL THE PARTY'S -- backfilled day 102 after seventy days with an inventory row and no location anywhere.
+2026-09-21	103	toller	headboard_rosewood	anchor	1	each	The carved rosewood headboard, kept back when the bed frame sold so the set would not be broken up (player, day 102). With Toller on the same open terms as the diary.
+2026-09-21	103	toller	plaque_rogahn	anchor	1	each	Rogahn's silver plaque, the third piece of the set with the diary and the headboard. With Toller on open terms since day 32, confirmed the party's day 102.
+2026-09-21	103	toller	papers	anchor	1	bundle	The area 6 papers. Toller does the 86-marks date-work on them himself.
+2026-09-21	103	dill	hackles	anchor	1	set	Flax hackles, three real grades -- Trask handed Dill his own over on day 71.
+2026-09-21	103	wethersby	keg_spigot	anchor	1	set	Marked for sale, day 102. Bought to decant the SD barrel; never used, the barrel came out whole.
+2026-09-21	103	wethersby	comb_silver	anchor	1	each	Marked for sale, day 102.
+2026-09-21	103	wethersby	perfume	anchor	2	each	Marked for sale, day 102.
+2026-09-21	103	wethersby	tapestry	anchor	1	each	Marked for sale, day 102.
+2026-09-21	103	wethersby	morning_star	anchor	1	each	Off the gnoll, day 99 -- FORBIDDEN TO THE CLERICS, a spiked head, not a smooth one. Salvage iron, marked for sale.
+2026-09-21	103	wethersby	sword_gnollish	anchor	1	each	Off the gnoll, day 99. Oversized, unwieldy for anyone in the party -- carried out as iron, marked for sale.
+2026-09-21	103	party	mirror_silver	anchor	1	each	Area 12, the library, day 99 round 320. B1 treasure type Y, module valuation 90 gp -- NOT money until sold.
+2026-09-21	103	party	arrows	anchor	1	quiver	A quiver of unknown count off the bandits, expedition 4 -- separate from the 81 loose arrows above because the count in it has never been taken.
+2026-09-21	103	party	rope_50ft	move	1	each	The damaged rope -- sawn on the edge of a canted slab while Blartho was hauled forty feet dead-weight, chewed more than halfway through about eight feet from one end. NOT TO BE TRUSTED WITH A PERSON as it stands. A `move`, not an `anchor`: the `party` row above already anchors the 3 sound ropes at this (asset, unit), and an anchor here would have overwritten them instead of adding a fourth.
+#
+# --- LANTERN IDS SPLIT, day 103. Generic `lantern` above zeroed for Ista and
+# Dave; light.py now reads WHO CARRIES A LANTERN from these rows instead of
+# from light.tsv's own `who` column -- see light.tsv's day-103 note and
+# light.py's SOURCE_ASSET. Per-instance ids (lantern_ista, lantern_yrtone)
+# exist so this file and light.tsv can name the SAME physical lantern; see
+# assets.tsv for why.
+#
+2026-09-21	103	Ista	lantern	anchor	0	each	Superseded by lantern_ista below -- same lamp, specific id.
+2026-09-21	103	Ista	lantern_ista	anchor	1	each	Her own, 8.6 turns in it -- light.tsv's source `lantern-ista`.
+2026-09-21	103	Dave	lantern	anchor	0	each	Superseded by lantern_yrtone below -- same lamp, specific id.
+2026-09-21	103	Dave	lantern_yrtone	anchor	1	each	The spare, taken off Yrtone day 103, full at 24.0 turns -- light.tsv's source `lantern-yrtone`.

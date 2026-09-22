@@ -40,6 +40,18 @@
 # reconstructed history, for the same reason money.tsv anchors at day 39: the
 # old cells record a STATE and not the movements that produced it, and inventing
 # the movements would put false precision into an append-only log.
+#
+# *** `holder` IS RETIRED AS OF DAY 103 -- READ ONLY. ***
+#
+# The player: "let's have carry.tsv become the single where is everything."
+# This column was free text, ONE STRING PER ROW, and thirty-three distinct
+# hand-typed values were in use -- "WORN: Dave, Torsat, Yrtone, Blartho",
+# "15 FRYTHON, 15 Ista", "spread". campaign/carry.tsv now answers WHERE a
+# thing is, closed to character names plus people.tsv/places.tsv ids, and
+# `carry.py check` demands its total for every owned thing equal what this
+# file says is owned. What is written in `holder` below this point is a
+# historical note about who a row's writer believed held a thing AT THE TIME
+# -- it is not authoritative and new rows need not fill it in.
 when	day	asset	verb	qty	unit	condition	holder	evidence	note
 # ---- tools
 2026-09-11	77	iron_spike	anchor	22	each		spread	world.py deployed	TOTAL OWNED. 13 carried + 9 emplaced in the dungeon. CARRIED IS DERIVED -- do not anchor it here, or the two will drift the way the oil count did. The 9: three jamming the pit trap at (29,31), two holding the (17,13,V) one-way slab open, two each at (23,23,V) and (31,31,V) sealing area 34 since expedition 4
@@ -305,6 +317,10 @@ when	day	asset	verb	qty	unit	condition	holder	evidence	note
 2026-09-20	102	plaque_rogahn	move	1.0	each		Toller's shop -- OPEN TERMS, still the party's		*** BACKFILLED day 102. THE SET WAS NEVER BROKEN UP AND ONLY THE BED FRAME WAS SOLD. *** Player: 'I don't remember where we exactly sold the rosewood bed frame but we did not break up the set which includes the headboard - so as you say do the sensible reading. Also true of the silver plaque is part of the set.' *** THE DAY-32 TERMS, at reaction 95 -- the highest the party has had from him: Toller HOLDS the set, sells it when he judges best, SEPARATELY OR AS A SET, entirely his call. The party gave him discretion instead of instructions and that is the only reason he took it on. *** NEITHER OF THESE HAS EVER HAD AN INVENTORY ROW, in seventy days. Like the diary, they existed only in loops, rolls and scene prose -- invisible to every 'what do we own' query ever run. Three party-owned objects with a dealer and not one of them on the books.
 2026-09-21	103	dagger	move	-7.0	each		Wethersby		Sold, day 103, half list. One remains and it is Ista's.
 2026-09-21	103	spear	move	-2.0	each		Wethersby		Sold, day 103, half list. One remains and it goes to Hask, who is spear-proficient.
+2026-09-21	103	venture_capital	anchor	288.0	gp		the venture -- WEND'S TO COLLECT	money.tsv day 83	*** THE WOOL VENTURE OWES THE PARTY 288 GP. *** The day 73-83 buy of 36 tods at the art.7 floor (money.tsv, book=art7, does not move the purse) was the party's own capital, same shape as loan_fenn and loan_dill: a receivable, kind=debt, so it is the party's own asset and belongs here as well as in campaign/venture.tsv, which tracks the venture's side of the same debt. CAPITAL RETURNS FIRST (wool_venture.md) once this lot of wool sells.
+2026-09-21	103	lantern	move	-2.0	each	full	Ista, Yrtone		*** SPLIT ONTO PER-INSTANCE IDS, day 103 -- see lantern_ista and lantern_yrtone below. The generic `lantern` id is retired for current holdings; it stays in the historical rows above unedited.
+2026-09-21	103	lantern_ista	anchor	1.0	each	full	Ista		Ista's own, the area 6 closet lantern -- light.tsv's source `lantern-ista`. Split out of the generic `lantern` id, day 103, so carry.tsv and light.tsv can name the same physical object.
+2026-09-21	103	lantern_yrtone	anchor	1.0	each	full	Dave		The party's spare lamp, moved from Yrtone to Dave day 103 -- light.tsv's source `lantern-yrtone`. Split out of the generic `lantern` id for the same reason.
 2026-09-21	103	ten_foot_pole	move	0.0	each		1 with the party; 2 in Wend's barn, Wethersby		Two of the three left in the barn, day 103.
 2026-09-21	103	torch	move	0.0	each		1 with the party; 7 in Wend's barn, Wethersby		Seven of the eight left in the barn, day 103.
 2026-09-21	103	saw_crosscut	move	0.0	each		1 with the party; 1 in Wend's barn, Wethersby		One of two left in the barn, day 103.

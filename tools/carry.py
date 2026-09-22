@@ -49,6 +49,8 @@ import rules as rulesmod                                         # noqa: E402
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 LOG = os.path.join(ROOT, 'campaign', 'carry.tsv')
 CHARS = os.path.join(ROOT, 'campaign', 'characters.tsv')
+PEOPLE = os.path.join(ROOT, 'campaign', 'people.tsv')
+PLACES = os.path.join(ROOT, 'campaign', 'places.tsv')
 
 SHARED = 'party'
 
@@ -57,13 +59,35 @@ def characters():
     return {r['name']: r for r in read_tsv(CHARS)}
 
 
+def non_pc_people():
+    """{id: row} for people.tsv, EXCLUDING kind=pc -- those come from
+    characters.tsv under their Title-Case `name` and stay there, so `Dave`
+    (the character) and `dave` (the identity row) do not become two entries
+    for one person."""
+    return {r['id']: r for r in read_tsv(PEOPLE)
+            if (r.get('kind') or '').strip() != 'pc'}
+
+
+def places():
+    return {r['id']: r for r in read_tsv(PLACES)}
+
+
 def rows(path=None):
     return read_tsv(path or LOG)
 
 
 def who_vocabulary():
-    """The closed set. A free-typed holder is how this went wrong."""
-    return set(characters()) | {SHARED}
+    """The closed set: a character (by name), a place or person id, or `party`.
+
+    *** EXTENDED DAY 103. *** carry.tsv started as WHO IS CARRYING WHAT, closed
+    to the party's own characters. The player then asked for it to become the
+    single "where is everything" log, which means it has to be able to say a
+    thing is at Wend's barn or with Toller, not just in a character's hands.
+    Extending the vocabulary rather than inventing a second closed list keeps
+    the same guarantee: a free-typed holder is how this went wrong, so nothing
+    outside `characters.tsv`, `people.tsv` (id) or `places.tsv` (id) is legal.
+    """
+    return set(characters()) | set(non_pc_people()) | set(places()) | {SHARED}
 
 
 def state(log=None):
@@ -406,7 +430,16 @@ def pack_report(log=None, bearers=None, target='heavy'):
 
 
 def check(log=None):
-    """[(severity, message)]. Reconcile the manifest against what is OWNED."""
+    """[(severity, message)]. Reconcile the manifest against what is OWNED.
+
+    *** TIGHTENED DAY 103: located == owned, not located <= owned. ***
+    carry.tsv is now the single "where is everything" log, so an owned thing
+    with nowhere logged for it is exactly the bug this file exists to catch --
+    the same shape as the headboard and the diary, which went SEVENTY DAYS with
+    an inventory row and no location anywhere. `debt` assets (Fenn's and Dill's
+    loans) are excluded: they are not physical goods with a location, they are
+    money owed, and belong to inventory_log.tsv alone.
+    """
     log = log if log is not None else rows()
     st = state(log)
     vocab = who_vocabulary()
@@ -417,9 +450,10 @@ def check(log=None):
     for r in log:
         who = (r.get('who') or '').strip()
         if who and who not in vocab:
-            out.append(('FAIL', 'who=%r is not a character or %r. THE '
-                        'VOCABULARY IS CLOSED -- a free-typed holder is how '
-                        'this went wrong in the first place.' % (who, SHARED)))
+            out.append(('FAIL', 'who=%r is not a character, a place/person id,'
+                        ' or %r. THE VOCABULARY IS CLOSED -- a free-typed '
+                        'holder is how this went wrong in the first place.'
+                        % (who, SHARED)))
         a = (r.get('asset') or '').strip()
         if a and a not in ass:
             out.append(('FAIL', 'asset %r is not in campaign/assets.tsv' % a))
@@ -436,12 +470,41 @@ def check(log=None):
     carried = {}
     for who, cells in st.items():
         for (a, unit), q in cells.items():
-            carried[a] = carried.get(a, 0.0) + q
-    for a, q in sorted(carried.items()):
-        have = sum(c[0] for c in owned.get(a, {}).values())
+            carried[(a, unit)] = carried.get((a, unit), 0.0) + q
+
+    owned_by_unit = {}
+    for a, cells in owned.items():
+        if ass.get(a, {}).get('kind') == 'debt':
+            continue
+        if a in invmod.FOREIGN:
+            continue
+        for (cond, unit), (n, u, h, note) in cells.items():
+            if not n:
+                continue
+            owned_by_unit[(a, unit)] = owned_by_unit.get((a, unit), 0.0) + n
+
+    # iron_spike is a SPECIAL CASE, the same one inventory.py's own
+    # carried_spikes() carves out: some of what the party owns is emplaced in
+    # Quasqueton doors, and world_changes.tsv owns that fact, not carry.tsv or
+    # inventory_log.tsv. "Located" here means located BY THIS MANIFEST, which
+    # only ever covers what is carried -- so the comparison is against
+    # owned MINUS emplaced, exactly as inventory.py already computes it.
+    if ('iron_spike', 'each') in owned_by_unit:
+        emplaced, _ = invmod.worldmod.deployed(invmod.worldmod.load())
+        owned_by_unit[('iron_spike', 'each')] -= emplaced.get('iron spike', 0)
+
+    keys = set(carried) | set(owned_by_unit)
+    for a, unit in sorted(keys):
+        q = carried.get((a, unit), 0.0)
+        have = owned_by_unit.get((a, unit), 0.0)
         if q > have + 1e-9:
-            out.append(('FAIL', 'the manifest carries %g %s but the party owns '
-                        '%g -- carriage may not exceed ownership' % (q, a, have)))
+            out.append(('FAIL', 'the manifest carries %g %s of %s but the '
+                        'party owns %g -- carriage may not exceed ownership'
+                        % (q, unit, a, have)))
+        elif q < have - 1e-9:
+            out.append(('FAIL', 'the party owns %g %s of %s but the manifest '
+                        'places only %g -- located must equal owned, or the '
+                        'rest has no home logged anywhere' % (have, unit, a, q)))
 
     return out
 
