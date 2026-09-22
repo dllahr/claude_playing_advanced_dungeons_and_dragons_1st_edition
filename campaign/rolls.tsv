@@ -8762,3 +8762,10 @@ when	exped	turn	notation	dice	modifier	total	hidden	reason
 2026-09-21			1d6	6	0	6		Dave and Frython's surprise, DMG p.61-62 -- 1-2 surprised, mounted, riding the road, no special alertness declared
 2026-09-21			1d6	1	0	1		the bear's surprise -- same roll, 1-2 surprised
 2026-09-22			1d6	5	0	5		ten days camped at the watercourse (day 105-115) -- has Durnhak or one of his people turned up yet? 1-3 yes, at some point in the window; 4-6 still no sign
+2026-09-22			1d6	5	0	5		the cut mark at the mouth and under the slab, checked after ten days camped nearby -- has Durnhak's side of the channel been used at all? 1-2 nothing, mark unchanged, nothing under the slab; 3-4 the mark shows something was left, but the slab is empty now (already read, or moisture got it); 5-6 there's something there
+2026-09-22			1d6	2	0	2		what's under the slab: 1-2 a written message (gnomish script -- Tristle can read it), 3-4 a token/object with no words, 5-6 both, message and something with it
+2026-09-22			1d6	2	0	2		what the message says, why the delay: 1-2 trouble of their own (a collapse, a cave-in, something in the old workings), 3-4 the route off the crag is slower/harder than expected, this trip; 5-6 caution -- something or someone else has been seen near the crag and he's being careful
+2026-09-22			1d6	2	0	2		the trouble in the old workings, severity/tone of the message: 1-2 minor, just explaining the delay, no ask; 3-4 asks for more time, nothing more; 5-6 asks for something specific -- help, or a particular kind of aid
+2026-09-22			1d6	5	0	5		walking the watercourse for physical sign of gnomes -- tracks, cart ruts, anything: 1-3 nothing more than the message already told them; 4-6 something else noticed
+2026-09-22			1d6	4	0	4		what else is noticed along the watercourse: 1-2 old cart-track sign, gives a sense of their route off the crag; 3-4 sign of how long ago someone was last actually here in person (fresher or staler than the message suggests); 5-6 something unrelated to the gnomes entirely
+2026-09-22			1d10	10	0	10		how many days ago someone was last physically at the slab, within the ten-day camp window
