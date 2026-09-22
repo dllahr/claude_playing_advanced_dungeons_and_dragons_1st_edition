@@ -47,7 +47,8 @@ Initialised 2026-09-05. `.gitignore` keeps out `manuals/`, module PDFs,
 `mapdb/output/` and the conversation exports: 229 MB on disk, ~2 MB tracked.
 
 **Git is the safety net for the PROSE, not for the game state.** The TSVs are
-append-only and the tools have 171 tests, so both fail loudly when they break.
+append-only and the tools have hundreds of tests (`pytest --collect-only` for the
+current count), so both fail loudly when they break.
 The ten markdown files have no tool and no test — nothing fails when they rot,
 which is how a wrong thief percentage sat on `party_roster.md` for weeks and how
 `map_known.md` fell two expeditions behind. **Those are what git protects.**
@@ -396,11 +397,27 @@ DM to tell the player their spikes were in a door they had already recovered the
   Strength/Dexterity adjustments, so every modifier is applied consistently
 - **`campaign/inventory_log.tsv`** — what the party **owns**, append-only, quantities
   derived. **Every quantity carries its `unit`** and there is one row per
-  `(asset, condition)`. ⚠ **Oil, torches, candles and lanterns are NOT counted here** —
+  `(asset, condition)`. ⚠ **Oil FUEL LEVELS are NOT counted here** —
   `light.tsv` owns them, because that log knows which flasks have been broached. **Where
-  a thing is in the dungeon** is `world_changes.tsv`'s. *(The old `campaign/inventory.tsv`
+  a thing is in the dungeon** is `world_changes.tsv`'s. Its `holder` column is
+  **retired as of day 103, read-only** — `carry.tsv` is now the single answer to
+  where a thing is. *(The old `campaign/inventory.tsv`
   was retired to `deprecated/` on 2026-09-11: it was the one file still edited in place
   and it had rotted five times.)*
+- **`campaign/carry.tsv`** — **THE SINGLE "WHERE IS EVERYTHING" LOG**, append-only.
+  `who` is closed to a character name (`characters.tsv`), a `people.tsv`/`places.tsv`
+  id, or the literal `party` for shared kit whose bearer isn't tracked.
+  `tools/carry.py check` demands **located == owned**, not merely `<=`: an owned
+  thing with nowhere logged for it is the exact shape of the headboard and the
+  diary, which had an inventory row and no location anywhere for seventy days.
+  Also computes per-person encumbrance bands off the Strength allowance table and
+  `pack`s the shared kit onto the strongest bearers first
+- **`campaign/venture.tsv`** / **`campaign/venture_shares.tsv`** — **the wool/cloth
+  venture is NOT the party's property** (`wool_venture.md`). `venture_shares.tsv` is
+  the cap table (14 shares: 6 PCs at 1, Hask/Dellie at ½, Wend 1, the six holders as
+  one `holders_six` row). `venture.tsv` answers only (a) what the venture physically
+  holds and (b) who is owed what — **never (c) valuation**, which is figured out
+  only when needed. `tools/venture.py`
 - `campaign/world_changes.tsv` — what the party has **done to the dungeon**, and what
   gear it has left there. Append-only, reversible, replayed onto the map database
 - `campaign/hp_log.tsv` — every wound, heal and rest; current hp is computed, never stored
@@ -485,6 +502,8 @@ DM to tell the player their spikes were in a door they had already recovered the
 | **`tools/entities.py`** | **`who <name>` is the query this campaign never had** — every scene a person was in, with a day, a reaction and a citation. `check` refuses any name that does not resolve, so *Wetherby*/*Wethersby* and *"Rell's brother"*/*Gyll* are each one thing. **Run `who` before narrating anybody's past** |
 | **`tools/encounter.py`** | **the LIVE FIGHT**, computed from `campaign/encounter.tsv` — round, initiative, **who has declared**, **who HELD**, and monster hit points (`--hidden`; never shown otherwise). All of this used to live only in the DM's own narration, re-read every turn out of his own previous messages |
 | **`tools/inventory.py`** | **what the party OWNS**, computed from `campaign/inventory_log.tsv`. **One row per (asset, condition), with an explicit `unit`** — so `~2.5 IRON + 8 STANDARD` is two rows in person-weeks instead of one cell that read as the number 2. **`carried` derives spikes as owned − emplaced**, so the two can never drift |
+| **`tools/carry.py`** | **WHO IS CARRYING WHAT, and WHERE EVERYTHING ELSE IS**, computed from `campaign/carry.tsv`. `check` demands **located == owned**. `pack` fills the shared kit onto the strongest bearers first, up to a target encumbrance band, off the Strength allowance table in `rules/exploration.md` |
+| **`tools/venture.py`** | **the wool/cloth venture's holdings and money position**, computed from `campaign/venture.tsv`, and its **cap table** from `campaign/venture_shares.tsv`. Deliberately answers only (a) what it holds and (b) who is owed what — never a share's price |
 | **`tools/ledger.py`** | **the purse, computed from `campaign/money.tsv`** — never stored, never quoted from a cell. `check` is the double-entry audit: every movement names an asset, every *good* has an inventory row, and the computed purse is compared against the `inventory.tsv` cell rather than trusting it |
 | **`tools/audit.py`** | **checks the FIGURES in a block of text against the tool that owns each one.** `--text "…"` · a file · `--staged` · `--show` lists every truth it knows. **Wired into `tools/hooks/pre-commit`, so it runs on every commit and cannot be forgotten** — enable once per clone with `git config core.hooksPath tools/hooks`. It **blocks** on a mismatch; `audit-skip` in a line, or naming a day in the sentence, marks a figure as of-its-time. **If it ever cries wolf, LOOSEN THE CHECKER — do not learn to pass `--no-verify`** |
 | **the `auditor` agent** | `.claude/agents/auditor.md`. The half that needs reading comprehension. **Citation or nothing**, three verdicts, and **every verdict names its SOURCE TIER** — tier 1 the TSVs, tier 2 `rules/`, tier 3 the prose, which is *suggestive, never conclusive*. **Run it before asserting what an NPC previously said or did, and before writing any finding or rule into `articles.md` / `CHECKLIST.md` / `rules/`.** It may not read the DM notes |
@@ -493,7 +512,7 @@ DM to tell the player their spikes were in a door they had already recovered the
 | `tools/hp.py` | current hit points, negative values **not** clamped |
 | `tools/world.py` | replays world changes onto the map DB — **run after every rebuild** |
 | `tools/clock.py` | the dungeon clock and wandering checks |
-| `tools/light.py` | lantern oil and torch stubs, burnt against clock rounds; burn times come from `rules/exploration.md`, never from the code |
+| `tools/light.py` | lantern oil and torch stubs, burnt against clock rounds; burn times come from `rules/exploration.md`, never from the code. **Who carries a lantern comes from `carry.tsv`** as of day 103, not from `light.tsv`'s own `who` column — the two were answering the same question and drifting |
 | `tools/combat.py` | attacks, damage, saves, morale, initiative, surprise. ⚠ **`round` REFUSES to roll for a character with no `declare` row in the current round** — *THE DM DOES NOT DECLARE THE PARTY'S ACTIONS* stops being a sentence and becomes a required input. A **held** action counts as a declaration; a declaration **does not carry into the next round** |
 | `tools/rules.py` | parses `rules/*.md`; every table `combat.py` uses comes from there |
 | `tools/dice.py` | dice, including 1e range notation ("3-18" is 3d6, not a flat pick) |
