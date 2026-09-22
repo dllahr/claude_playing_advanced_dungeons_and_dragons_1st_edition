@@ -131,12 +131,14 @@ def test_a_venture_holding_never_appears_in_the_party_inventory():
 
 
 def test_the_live_split_matches_the_players_correction():
-    """wool-venture-1 is closed except one flagged open tail; ongoing-venture
-    holds the wool and owes only the party."""
+    """wool-venture-1 is fully closed -- the holders' 229 gp was found
+    discharged (calendar.md day 35) and the payable netted to zero on
+    re-check, day 103. ongoing-venture holds the wool and owes only the
+    party."""
     h1 = venture.holdings(venture='wool-venture-1')
     p1 = venture.position(venture='wool-venture-1')
     assert h1 == [], 'wool-venture-1 holds no physical stock any more'
-    assert [row[1] for row in p1] == ['venture_payable_holders']
+    assert p1 == [], 'wool-venture-1 owes nobody anything, discharged day 33-35'
 
     h2 = venture.holdings(venture='ongoing-venture')
     p2 = venture.position(venture='ongoing-venture')
