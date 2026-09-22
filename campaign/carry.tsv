@@ -139,6 +139,8 @@ when	day	who	asset	verb	qty	unit	note
 2026-09-20	102	Frython	dart	anchor	15	each	*** THREE A ROUND, the party's highest volume of attacks. The day-77 anchor had given all fifteen darts to Ista and he has been throwing them since long before that.
 2026-09-20	102	Frython	dagger	anchor	1	each	Non-proficient, -5 for a magic-user, and he has never once used it.
 2026-09-20	102	Frython	ring_plain	anchor	1	each	*** UNIDENTIFIED. identify needs a pearl of at least 100 gp value, CONSUMED (PHB p.117), and Neot's went back to Neot unspent on day 91. No weight recorded.
+2026-09-21	108	Frython	ring_plain	anchor	0	each	*** CORRECTION, PLAYER-CAUGHT: "it lists the ring under Frython, but Dave is wearing it." Superseded by the row below -- carry.tsv had never been told it changed hands.
+2026-09-21	108	Dave	ring_plain	anchor	1	each	*** UNIDENTIFIED, worn, not Frython's any more. Dave carries it to Wraye day 108 to ask Ordric about it. No weight recorded.
 2026-09-20	102	Brand	hand_axe	anchor	0	each	*** HIS OWN AXE IS NOT IN THE PARTY'S BOOKS AT ALL and never has been -- he arrived with it on day 95. Zero here so the manifest records that he is armed without claiming his axe as party property.
 2026-09-20	102	party	rations_std	anchor	6.358	person-week	Four days to day 102 debited at twelve mouths. THE HEAVIEST SINGLE THING THE PARTY CARRIES at 200 gp-weight the person-week.
 2026-09-20	102	party	rations_iron	anchor	2.5	person-week
