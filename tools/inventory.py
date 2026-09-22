@@ -86,6 +86,12 @@ FOREIGN = {
                  'and counting it here would recreate the drift that light.py '
                  'warned about twice',
     'coin': 'campaign/money.tsv -- tools/ledger.py',
+    'wool': 'campaign/venture.tsv -- tools/venture.py. The venture is NOT the '
+            'party\'s property (wool_venture.md), so its stock never belongs '
+            'here even when the money for it moves through the party\'s own '
+            'purse -- the sale of ongoing-venture\'s wool (day 108) is party '
+            'money by the day-103 finding that nobody else has a stake in it, '
+            'but the wool itself was always the venture\'s, never the party\'s',
 }
 
 

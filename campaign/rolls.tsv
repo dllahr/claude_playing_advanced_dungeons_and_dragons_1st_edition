@@ -8728,3 +8728,17 @@ when	exped	turn	notation	dice	modifier	total	hidden	reason
 2026-09-21			1d6	4	0	4		the two days on from Marchford to Ludbury, day 107-108: road trouble? 1-2 something, 3-6 ordinary traffic
 2026-09-21			1d6	4	0	4		what the road trouble to Marchford actually is: 1-2 weather/going, 3-4 another party on the road, 5-6 something hostile
 2026-09-21			1d6	3	0	3		who's on the road: 1-3 a stranger (local traffic), 4-5 Osk on his fortnightly run, 6 Pell
+2026-09-21			1d6	5	0	5		the watercourse party arrives and makes camp, day 105: does Durnhak or one of his people turn up quickly? 1-2 within a day, 3-4 a few days' wait, 5-6 longer, no sign of him yet
+2026-09-21			1d6	6	0	6		Ludbury wool market, day 108, three months on from the day-25/27 sale (1,200 gp for the clip, ~20 gp/tod realised): has the price moved? 1-2 down, 3-4 about the same, 5-6 up
+2026-09-21			1d6	6	0	6		how much has it moved, in gp/tod either way
+2026-09-21			1d6	4	0	4		the spread a Ludbury dealer takes buying raw wool and selling it on graded/sorted, as a fraction of the buying price: 1-2 small (a fifth), 3-4 middling (a third), 5-6 large (half again)
+2026-09-21			1d100	6	0	6		the wool buyer Hask approaches, FIRST CONTACT, DMG p.63. Hask CHA 8 = -5% (rules/abilities.md). Frython keeping the reckoning beside him, as asked
+2026-09-21			1d6	4	0	4		why this first buyer is violently hostile (1 adjusted): 1-2 ordinary rudeness, outsiders and haggling, nothing personal; 3-4 he's heard something specific about Wethersby's wool dealing; 5-6 unrelated bad temper, a bad morning of his own
+2026-09-21			1d100	34	0	34		a second wool buyer, first contact, DMG p.63. Hask CHA 8 = -5%
+2026-09-21			1d100	85	0	85		resolving the second buyer's 'uncertain, 55% prone toward negative' (29): 01-55 negative, 56-00 positive
+2026-09-21			1d6	3	0	3		does this second buyer say anything about why he was wary at first -- has he heard the same thing about Wethersby's wool floor? 1-2 no, just ordinary caution with an outsider; 3-6 yes, he's heard something too
+2026-09-21			2d6	1,1	0	2		his price for the 36 tods, against the ~26 gp/tod market figure Frython already has: variance in gp/tod, applied as a discount for his wariness
+2026-09-21			1d6	1	0	1		can this buyer name where he heard it, or is it just market talk with no clear source? 1-3 just talk, no name; 4-6 he can point to who/where
+2026-09-21			1d6	1	0	1		keeping at it -- more of the wool market asked, the same question put differently: does anyone actually name a source this time? 1-2 nothing further, same shape of talk with no name; 3-4 a description, not a name; 5-6 an actual name or a place to go
+2026-09-21			1d6	2	0	2		pressed to explain the logic -- if the party pays the floor AND hauls it themselves, why is that a problem for anyone: 1-2 it collapses, nobody can actually explain it when asked straight; 3-4 a real but DIFFERENT complaint comes out once pressed, not quite what was repeated; 5-6 someone gets visibly evasive/defensive, which is itself a lead
+2026-09-21			2d6	2,5	0	7		shopping the wool to more buyers: best price found, gp/tod above or below the ~26 established market figure (roll as +/- from 26, 7 is dead center)

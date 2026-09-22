@@ -133,8 +133,9 @@ def test_a_venture_holding_never_appears_in_the_party_inventory():
 def test_the_live_split_matches_the_players_correction():
     """wool-venture-1 is fully closed -- the holders' 229 gp was found
     discharged (calendar.md day 35) and the payable netted to zero on
-    re-check, day 103. ongoing-venture holds the wool and owes only the
-    party."""
+    re-check, day 103. ongoing-venture's 36 tods sold day 108 (936 gp) and
+    the 288 gp capital position discharged the same day -- both net to
+    nothing outstanding, same as wool-venture-1."""
     h1 = venture.holdings(venture='wool-venture-1')
     p1 = venture.position(venture='wool-venture-1')
     assert h1 == [], 'wool-venture-1 holds no physical stock any more'
@@ -142,8 +143,8 @@ def test_the_live_split_matches_the_players_correction():
 
     h2 = venture.holdings(venture='ongoing-venture')
     p2 = venture.position(venture='ongoing-venture')
-    assert [row[1] for row in h2] == ['wool']
-    assert [row[1] for row in p2] == ['venture_capital']
+    assert h2 == [], 'the 36 tods sold day 108 -- nothing physical left'
+    assert p2 == [], 'the 288 gp capital came back off the top of the sale'
 
 
 def test_negative_shares_fail():
