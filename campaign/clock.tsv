@@ -964,3 +964,5 @@ when	exped	round	kind	anchor	detail	note
 2026-09-22	14	0	jitter		30:4,60:0,90:5,120:5,150:3,180:3,210:2,240:4,270:0,300:5,330:2,360:2,390:1,420:4,450:4,480:0,510:2,540:2,570:3,600:5,630:2,660:1,690:1,720:2,750:1,780:4,810:1,840:4,870:1,900:3,930:3,960:0,990:4,1020:3,1050:5,1080:4,1110:2,1140:2,1170:3,1200:4,1230:4,1260:5,1290:3,1320:0,1350:0,1380:0,1410:4,1440:1,1470:2,1500:3,1530:5,1560:1,1590:2,1620:3,1650:3,1680:0,1710:2,1740:1,1770:3,1800:1	rolled in advance and HIDDEN; each is reported when its check fires
 2026-09-22	14	38	advance		38	day 118: entrance to (10,29) via the one-way slab and the standing route round the magic mouths, 340 ft
 2026-09-22	14	34	check	30	d6=3	anchor 30 + 4
+2026-09-22	14	64	advance		26	day 118: (10,29) to the unopened door at (6,31) via (13,34) and the area-12 arc, 240 ft total
+2026-09-22	14	60	check	60	d6=6	anchor 60 + 0

@@ -8834,3 +8834,6 @@ when	exped	turn	notation	dice	modifier	total	hidden	reason
 2026-09-22			1d6	6	0	6		OWED: 3rd crossing -- day 99 exp 13, row 262 (TO THE SMITHY, the long way). HIDDEN OUTCOME
 2026-09-22			1d6	3	0	3		OWED: 4th crossing -- day 99 exp 13, row 280 (OUT, the smithy route reversed, 'the sixth crossing of this ground'). HIDDEN OUTCOME
 2026-09-22			d6	3	0	3		wandering check, anchor 30
+2026-09-22			d6	6	0	6		wandering check, anchor 60
+2026-09-22			1d100	53	0	53		Tristle Hear Noise at the door (6,31,V), 15%, DMG/PHB p.28. HIDDEN OUTCOME
+2026-09-22			1d100	80	0	80		Ista Hear Noise at the door (6,31,V), 10%. HIDDEN OUTCOME
