@@ -966,3 +966,4 @@ when	exped	round	kind	anchor	detail	note
 2026-09-22	14	34	check	30	d6=3	anchor 30 + 4
 2026-09-22	14	64	advance		26	day 118: (10,29) to the unopened door at (6,31) via (13,34) and the area-12 arc, 240 ft total
 2026-09-22	14	60	check	60	d6=6	anchor 60 + 0
+2026-09-22	14	70	advance		6	day 118: (5,31) to the threshold of area 18's south door, known ground, 280 ft logged (overshot to 6,18 then corrected back to the threshold -- bookkeeping only, not a fictional backtrack)
