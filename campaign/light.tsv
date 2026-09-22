@@ -180,32 +180,4 @@ when	exped	round	source	kind	what	who	fuel	certainty	note
 2026-09-18	13	204	lantern-ista	refill		Ista		known	day 99 round 204: topped off at 3.6 turns, standing in a corridor that has had six orcs in it and with the way home 930 ft and ten turns off. Drawn off the broached flask as always, so none of the ten sealed is opened -- NINE OF THEM ARE DURNHAK'S and are owed him on the 101st.
 2026-09-20	13	358	lantern-ista	out				known	day 99: BLOWN OUT AT THE CAVE MOUTH, the moment they were in daylight. *** LOGGED THIS TIME, AND THAT IS THE POINT. On day 96 this exact lamp read BURNING for 854 rounds because it was blown out here and never logged -- and CLAUDE.md's own warning about it had been quoted in the same session and then violated. 8.6 turns left in it.
 2026-09-20	13	358	oil	oil		party	-8	known	day 101: ALL EIGHT SEALED FLASKS ONTO THE HORSES FOR DURNHAK, off the cart a quarter-mile into the waste. *** He asked for twelve and has had three; NINE ARE OWED AND THE PARTY HOLDS EIGHT -- Wethersby had two to sell and that was every flask in the town (d6=2, then d2=2). So he gets eight and is one short, and the party keeps NOTHING SEALED. *** The player chose it knowing: 'all of it including the flasks'. What is left is ONE BROACHED FLASK, 18 turns, and no reserve behind it -- and the three lanterns between them hold 8.6, 22.8 and 24.0 turns already poured. Logged HERE and not in inventory_log because light.tsv owns the oil count; log.py refused the inventory row and was right to.
-2026-09-21	13	358	lantern-yrtone	out		Dave		known	*** CARRIER CHANGE, NOT A STATE CHANGE: THIS LAMP IS NOW DAVE'S. *** Moved off Yrtone on day 103 because she was the most heavily loaded person in the party on a +200 allowance and he has +1,000 and most of a band of slack. It was already out and stays out. *** ⚠ AND IT SHOWS A SECOND SOURCE OF TRUTH: light.tsv carries a dlahr            console      Jul 16 20:01 
-dlahr            ttys000      Jul 16 20:01 
-dlahr            ttys001      Sep 15 17:26 
-dlahr            ttys002      Jul 20 10:46 
-dlahr            ttys003      Sep  7 17:29 
-dlahr            ttys004      Jul 19 14:23 
-dlahr            ttys005      Jul 19 15:02 
-dlahr            ttys006      Jul 19 15:07 
-dlahr            ttys007      Jul 19 15:12 
-dlahr            ttys008      Jul 19 15:16 
-dlahr            ttys019      Jul 24 20:10 
-dlahr            ttys025      Jul 25 22:50 
-dlahr            ttys026      Jul 26 15:04 
-dlahr            ttys029      Jul 27 10:20 
-dlahr            ttys012      Aug 14 12:44 
-dlahr            ttys013      Aug 14 15:22 
-dlahr            ttys018      Aug  5 10:39 
-dlahr            ttys021      Aug  7 07:34 
-dlahr            ttys022      Aug  7 07:54 
-dlahr            ttys033      Aug 14 22:39 
-dlahr            ttys034      Aug 23 16:03 
-dlahr            ttys035      Aug 14 23:10 
-dlahr            ttys036      Aug 14 23:59 
-dlahr            ttys032      Aug 21 15:06 
-dlahr            ttys011      Sep 15 19:33 
-dlahr            ttys009      Sep 11 17:45 
-dlahr            ttys010      Sep 12 23:19 
-dlahr            ttys015      Sep 12 18:55 
-dlahr            ttys017      Sep 14 08:46  for every source AND campaign/carry.tsv now says who carries what. Two logs answering one question is the shape of every drift in this project. Raised with the player day 103.
+2026-09-21	13	358	lantern-yrtone	out		Dave		known	*** CARRIER CHANGE, NOT A STATE CHANGE: THIS LAMP IS NOW DAVE'S. *** Moved off Yrtone on day 103 -- she was the most heavily loaded person in the party on a +200 allowance and he has +1,000 and most of a band of slack. It was already out and stays out. *** AND SYNCING IT EXPOSED A SECOND SOURCE OF TRUTH: light.tsv carries a carrier for every source AND campaign/carry.tsv now says who carries what. Two logs answering one question is the shape of every drift in this project. Raised for review day 103. *** THIS ROW WAS ALSO MANGLED ON FIRST WRITE: the note contained the word who in BACKTICKS inside a double-quoted bash string, so the shell ran the Unix who command and spliced 27 lines of tty listings into the log. Repaired, not reverted -- shell corruption is not an event.

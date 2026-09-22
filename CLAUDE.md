@@ -142,6 +142,22 @@ The trigger is a **coherent boundary**, not a clock:
 > `add -A` is being used as a verb meaning *"show me the diff"*. Either
 > `git reset` straight after the check, or run the checker on the file:
 > `python tools/audit.py path/to/file.md`.
+
+> ### ⚠ NEVER PUT BACKTICKS IN A BASH DOUBLE-QUOTED STRING. Day 103.
+>
+> A `--note` written for `light.py` contained the word *who* in backticks —
+> ``"light.tsv carries a `who` for every source"`` — inside a double-quoted
+> argument. **Bash ran the Unix `who` command** and spliced twenty-seven lines
+> of tty listings into `campaign/light.tsv`, shattering one row into
+> twenty-eight and breaking the suite.
+>
+> These notes are full of prose about code, so the temptation to backtick an
+> identifier is constant. **Use plain words, or single quotes, or a heredoc.**
+>
+> **Shell corruption is not an event**, so repairing it is not the forbidden
+> kind of revert: the append-only rule protects things that happened at the
+> table, and twenty-seven tty listings did not happen at the table. Repair it,
+> say so in the row, and move on.
 | **Before a risky refactor** | Today's `xp.py` reweighting would have been much easier to abandon. |
 
 ### Message convention — because `git log` is a session index
