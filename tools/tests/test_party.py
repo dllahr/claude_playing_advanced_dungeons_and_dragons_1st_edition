@@ -115,3 +115,60 @@ def test_the_live_log_has_the_party_somewhere_real():
     import dmap
     cells, _ = dmap.load(party.DB, level)
     assert (x, y) in cells, 'the party is standing off the map'
+
+
+# ------------------------------------------------- secret doors on a route
+
+@pytest.fixture
+def world_with_secret(tmp_path):
+    """(0,0)-(0,2) open corridor; a SECRET door on (0,1)'s east side."""
+    db = str(tmp_path / 'b1.sqlite')
+    con = sqlite3.connect(db)
+    con.executescript(open(SCHEMA).read())
+    con.execute("INSERT INTO levels (level,name) VALUES (1,'test')")
+    for x in (0, 1):
+        for y in range(3):
+            con.execute("INSERT INTO cells (level,x,y,terrain) "
+                        "VALUES (1,?,?,'open')", (x, y))
+    for x in (0, 1):
+        for y in range(3):
+            con.execute("INSERT INTO edges (level,x,y,orient,kind) "
+                        "VALUES (1,?,?,'H','open')", (x, y))
+            con.execute("INSERT INTO edges (level,x,y,orient,kind) "
+                        "VALUES (1,?,?,'V','open')", (x, y))
+    con.execute("UPDATE edges SET kind='secret', notes='a big printed S' "
+                "WHERE level=1 AND x=0 AND y=1 AND orient='V'")
+    con.commit(); con.close()
+    log = str(tmp_path / 'party.tsv')
+    open(log, 'w').write(HEADER)
+    return db, log
+
+
+def test_secrets_near_finds_a_door_on_the_stepped_cells_own_side(world_with_secret):
+    """(0,1,V) is stored under (0,1) itself -- the simple case."""
+    near = party.secrets_near([(0, 0), (0, 1), (0, 2)], db=world_with_secret[0])
+    assert [(x, y, o) for x, y, o, _n in near] == [(0, 1, 'V')]
+
+
+def test_secrets_near_finds_a_door_on_the_neighbours_side(world_with_secret):
+    """mapdb stores an edge ONCE -- (0,1,V) is also (1,1)'s WEST side, and a
+    route that only steps through (1,1), never (0,1), must still find it.
+    This is the case day 118's audit actually missed: the party crossed
+    (4,41), and the door was stored as (3,41,V) under its OTHER neighbour.
+    """
+    near = party.secrets_near([(1, 0), (1, 1), (1, 2)], db=world_with_secret[0])
+    assert [(x, y, o) for x, y, o, _n in near] == [(0, 1, 'V')]
+
+
+def test_secrets_near_is_silent_when_nothing_is_near(world_with_secret):
+    near = party.secrets_near([(0, 0)], db=world_with_secret[0])
+    assert near == []
+
+
+def test_move_prints_the_owed_check(world_with_secret, capsys):
+    db, log = world_with_secret
+    party.place('0,0', 'test', path=log)
+    party.main(['--db', db, '--log-file', log, 'move', '--to', '1,1'])
+    out = capsys.readouterr().out
+    assert 'KNOWN SECRET DOOR' in out
+    assert '0,1,V' in out

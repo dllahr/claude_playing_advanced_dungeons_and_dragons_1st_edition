@@ -29,6 +29,7 @@ deliberately a separate verb so that skipping the check is always explicit.
 """
 import argparse
 import os
+import sqlite3
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -266,6 +267,48 @@ def move(to, why='', rate='explore', db=None, path=None, map_name='b1',
     return steps, crossed, feet
 
 
+def secrets_near(steps, db=None, level=1):
+    """[(x, y, orient, notes)] -- every KNOWN secret door bordering a square
+    the party just walked through.
+
+    *** WHY THIS EXISTS. *** DMG p.97: an elf passing a secret door gets a
+    passive 1-in-6 check EVERY TIME, whether or not anyone is searching --
+    and it is not a once-per-object roll, so a corridor walked six times owes
+    six rolls. Day 118: the player asked whether that had been happening for
+    (3,41,V), and the answer was no -- four confirmed crossings (days 95 and
+    99), the door already known genuine since day 95's own audit (L051), and
+    not one passive roll made for any of them. The rule was never wrong; it
+    just had nothing in the code path that could not forget it.
+
+    All FOUR sides of each stepped cell are checked, because mapdb stores an
+    edge once, canonically, under only one of the two cells it borders
+    (mapdb/README.md: orient='V' is a cell's EAST side, 'H' its NORTH) -- so
+    a door on a cell's west or south side lives under the NEIGHBOUR's row,
+    not this one's, and checking only (x,y) misses exactly the cells most of
+    a route consists of.
+
+    This does not roll anything and does not resolve anything -- it only
+    makes the obligation impossible to walk past unnoticed. Whether a check
+    is still owed (has this elf, this door, already been rolled for) is the
+    DM's to track; this just keeps naming the door until somebody does.
+    """
+    db = db or DB
+    con = sqlite3.connect(db)
+    cur = con.cursor()
+    out = []
+    for x, y in steps:
+        for qx, qy, qo in ((x, y, 'V'), (x, y, 'H'),
+                           (x - 1, y, 'V'), (x, y - 1, 'H')):
+            cur.execute('SELECT x, y, orient, notes FROM edges WHERE '
+                        'level=? AND x=? AND y=? AND orient=? AND kind=?',
+                        (level, qx, qy, qo, 'secret'))
+            for row in cur.fetchall():
+                if row not in out:
+                    out.append(row)
+    con.close()
+    return out
+
+
 def _load(db, level):
     import dmap
     return dmap.load(db, level)
@@ -369,6 +412,12 @@ def main(argv=None):
             print('  crosses: %s' % ', '.join(
                 '%s at (%d,%d,%s)' % (k, e[0], e[1], e[2]) for k, e in crossed))
         print('  route: %s' % ' '.join('%d,%d' % s for s in steps))
+        level = where(a.log_file, a.map)[2]
+        near = secrets_near(steps, a.db, level)
+        if near:
+            print('  *** KNOWN SECRET DOOR ON THIS ROUTE -- an elf passive '
+                  '1-in-6 (DMG p.97) is owed EVERY pass, not once: %s'
+                  % ', '.join('(%d,%d,%s)' % (x, y, o) for x, y, o, _n in near))
         return 0
 
     if a.cmd == 'place':

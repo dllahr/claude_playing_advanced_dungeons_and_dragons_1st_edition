@@ -523,7 +523,7 @@ DM to tell the player their spikes were in a door they had already recovered the
 | `tools/dice.py` | dice, including 1e range notation ("3-18" is 3d6, not a flat pick) |
 | `tools/bestiary.py` | reads `bestiary/` — the campaign's own Monster Manual, one file per creature |
 | `tools/treasure.py` | the MM treasure-type appendix; the per-creature letters come from `bestiary/` |
-| `tools/party.py` | where the party is; **`move` refuses to cross a wall**, which freehand narration once did |
+| `tools/party.py` | where the party is; **`move` refuses to cross a wall**, which freehand narration once did. **It also PRINTS any known secret door the route passes**, both sides — DMG p.97's elf passive 1-in-6 is owed on EVERY pass, and day 118 found four crossings of a known door (L051, `(3,41,V)`) with no check ever rolled for any of them |
 | `tools/recall.py` | **every logged event for one character, across all seven TSVs, in order.** `python tools/recall.py Ista --exped 6`. **Run it before narrating anybody's past** — the prose files are an index, the TSVs are the evidence |
 | `tools/tsvlog.py` | the shared TSV reader every other tool uses; not run directly |
 
