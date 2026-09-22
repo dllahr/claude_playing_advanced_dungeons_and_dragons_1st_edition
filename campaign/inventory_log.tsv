@@ -307,3 +307,6 @@ when	day	asset	verb	qty	unit	condition	holder	evidence	note
 2026-09-21	103	spear	move	-2.0	each		Wethersby		Sold, day 103, half list. One remains and it goes to Hask, who is spear-proficient.
 2026-09-21	103	ten_foot_pole	move	0.0	each		1 with the party; 2 in Wend's barn, Wethersby		Two of the three left in the barn, day 103.
 2026-09-21	103	torch	move	0.0	each		1 with the party; 7 in Wend's barn, Wethersby		Seven of the eight left in the barn, day 103.
+2026-09-21	103	saw_crosscut	move	0.0	each		1 with the party; 1 in Wend's barn, Wethersby		One of two left in the barn, day 103.
+2026-09-21	103	saw_hack	move	0.0	each		3 with the party; 1 in Wend's barn, Wethersby		One of four left in the barn, day 103.
+2026-09-21	103	garlic	move	-1.0	each		the Inn, Wethersby -- DONATED		Donated at the Inn, day 103. Held since day 77 and never used.
