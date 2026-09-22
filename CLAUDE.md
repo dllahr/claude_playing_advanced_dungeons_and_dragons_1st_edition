@@ -412,12 +412,17 @@ DM to tell the player their spikes were in a door they had already recovered the
   diary, which had an inventory row and no location anywhere for seventy days.
   Also computes per-person encumbrance bands off the Strength allowance table and
   `pack`s the shared kit onto the strongest bearers first
-- **`campaign/venture.tsv`** / **`campaign/venture_shares.tsv`** — **the wool/cloth
-  venture is NOT the party's property** (`wool_venture.md`). `venture_shares.tsv` is
-  the cap table (14 shares: 6 PCs at 1, Hask/Dellie at ½, Wend 1, the six holders as
-  one `holders_six` row). `venture.tsv` answers only (a) what the venture physically
-  holds and (b) who is owed what — **never (c) valuation**, which is figured out
-  only when needed. `tools/venture.py`
+- **`campaign/venture.tsv`** / **`campaign/venture_shares.tsv`** — **TWO
+  VENTURES, NOT THE PARTY'S PROPERTY** (`wool_venture.md`). **`wool-venture-1`**
+  is the day 12-27 buy-and-sell, 14 shares (6 PCs at 1, Hask/Dellie at ½, Wend 1,
+  the six holders as one `holders_six` row) — **CLOSED**, except a flagged open
+  tail: 229 gp to the holders with no close row on `loops.tsv` L003.
+  **`ongoing-venture`** is everything since (the standing art.7 wool buy, the
+  cloth-making plant) — **party capital only, no other investor, no cap table**;
+  Wend is paid a **wage** to run it, not a share (checked against the record,
+  day 103). `venture.tsv` answers only (a) what each venture physically holds
+  and (b) who is owed what — **never (c) valuation**, figured out only when
+  needed. `tools/venture.py`
 - `campaign/world_changes.tsv` — what the party has **done to the dungeon**, and what
   gear it has left there. Append-only, reversible, replayed onto the map database
 - `campaign/hp_log.tsv` — every wound, heal and rest; current hp is computed, never stored

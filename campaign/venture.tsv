@@ -4,16 +4,48 @@
 # *** THIS IS NOT THE PARTY'S PROPERTY. *** wool_venture.md's own words, on the
 # return goods: "The return trade is the party's money, the party's judgement,
 # the party's risk... NOT in the shared pool." The venture is a separate thing
-# the party has a stake in (campaign/venture_shares.tsv says how big a stake),
-# and inventory_log.tsv / carry.tsv already answer what the PARTY owns and
-# carries. A physical thing belongs in exactly one of these logs, never both --
-# see carry.tsv's own header for what happened the last time one fact had two
-# homes.
+# the party has a stake in, and inventory_log.tsv / carry.tsv already answer
+# what the PARTY owns and carries. A physical thing belongs in exactly one of
+# these logs, never both -- see carry.tsv's own header for what happened the
+# last time one fact had two homes.
 #
 # *** SCOPE, PLAYER'S OWN WORDS, DAY 103: (a) what it physically holds and
 # (b) the money position -- who is owed what. NOT (c) valuation, which
 # depends on market positions and gets figured out when needed, not
 # routinely. *** So this file has no price column and computes none.
+#
+# *** TWO VENTURES, NOT ONE -- THE PLAYER'S OWN SPLIT, DAY 103. ***
+#
+#   wool-venture-1    The original day 12-16 buy and the day 25-27 Ludbury
+#                     sale. Fourteen shares (campaign/venture_shares.tsv),
+#                     six holders and Wend each earned a cut of PROFIT, not
+#                     capital. THE PLAYER: "Those accounts are all settled,
+#                     closed." Nothing new is expected to post here for it --
+#                     EXCEPT one open tail: see the `venture_payable_holders`
+#                     row below, which check() will not let silently vanish.
+#
+#   ongoing-venture   Everything since: the standing floor-price wool buy
+#                     under art.7 (money.tsv book=art7), and the cloth-making
+#                     plant and its wages, bought and run on the party's OWN
+#                     capital and buying power. *** CHECKED AGAINST THE RECORD,
+#                     DAY 103: NOBODY BUT THE PARTY HAS PUT CAPITAL IN. *** The
+#                     one apparent exception is Wend's 5 gp into the Fenn flax
+#                     deal (npcs.md) -- and she was MADE WHOLE, 5 gp plus 1 gp
+#                     interest, on day 88 (money.tsv, loop L048 close). No
+#                     live outside stake exists as of day 103.
+#
+#                     *** WEND'S PAY FOR RUNNING IT IS A WAGE, NOT A SHARE. ***
+#                     rolls.tsv, day ~33: she was offered the CHOICE, "buy a
+#                     share or take a wage, her choice" -- and
+#                     wool_venture.md settles which: "Wend runs it on a wage
+#                     and has said plainly she has never worked a loom." The
+#                     wage itself is still UNPRICED as of articles.md's day-72
+#                     standing structure ("still unpriced: Ede's wage, Dill's
+#                     wage, her own two hires, the loom"). So ongoing-venture
+#                     has NO cap table -- it is wholly the party's, and
+#                     venture_shares.tsv is scoped to wool-venture-1 alone.
+#
+# `venture` is closed: `wool-venture-1` | `ongoing-venture`.
 #
 # `asset` is one of:
 #   a real good        an id from assets.tsv (e.g. `wool`) -- answers (a)
@@ -33,7 +65,7 @@
 # verb    anchor (sets outright) | move (adds, negative to remove -- e.g. a
 #         payable discharged)
 #
-when	day	asset	verb	qty	unit	holder	evidence	note
-2026-09-21	103	wool	anchor	36	tod	wend	money.tsv:58 (day 83, book=art7)	*** THE SECOND WOOL BUY, DAY 73-83, NEVER GIVEN A PHYSICAL ROW ANYWHERE UNTIL NOW. *** 36 tods at the published 8 gp floor, 288 gp paid (book=art7 -- Wend's venture money, does not move the party's purse). It was tracked only as an EXPOSURE against art.7's 500 gp seasonal cap; nothing recorded that the party -- or anyone -- actually HOLDS 36 tods of wool. No sale of this lot is on record as of day 103, so it is presumed UNSOLD and with Wend, who holds the venture's stock. The first lot (day 12-16) is fully accounted for: it SOLD entire at Ludbury, day 25-27, and nothing of it remains
-2026-09-21	103	venture_capital	anchor	288	gp	party	money.tsv:58	The 288 gp of the day 73-83 wool buy is the party's own capital, same as the original 450. CAPITAL RETURNS FIRST (wool_venture.md) -- this is owed back to the party off the top the day this lot of wool sells, before any profit is divided by share. The original 450 gp was put in AND returned entirely within the day 12-16 to day 25-27 window, before the day-39 money anchor, so it has no separate row here -- it is closed history, not an open position
-2026-09-21	103	venture_payable_holders	anchor	229	gp	holders_six	wool_venture.md	*** OPEN, AND FLAGGED RATHER THAN ASSUMED DISCHARGED. *** wool_venture.md's day 25-27 reckoning: "Six holders' shares -- COIN, in the strongbox, coming home." campaign/loops.tsv L003 opened day 34 naming this exact 229 gp and has NO CLOSE ROW as of day 103 -- sixty-nine days. This project has already been burned once by a stale-looking-live warning (Ancel's "Unanswered", true for two days and quoted as live for forty-three). Anchored here as OWED rather than silently marked paid; if it was in fact handed over, the discharging event needs a negative row here AND an L003 close citing it
+when	day	venture	asset	verb	qty	unit	holder	evidence	note
+2026-09-21	103	ongoing-venture	wool	anchor	36	tod	wend	money.tsv:58 (day 83, book=art7)	*** THE STANDING ART.7 WOOL BUY, DAY 73-83, NEVER GIVEN A PHYSICAL ROW ANYWHERE UNTIL NOW. *** 36 tods at the published 8 gp floor, 288 gp paid (book=art7 -- Wend's venture money, does not move the party's purse). It was tracked only as an EXPOSURE against art.7's 500 gp seasonal cap; nothing recorded that the party -- or anyone -- actually HOLDS 36 tods of wool. No sale of this lot is on record as of day 103, so it is presumed UNSOLD and with Wend, who holds the venture's stock. THIS IS THE STANDING FLOOR-PRICE COMMITMENT (art.7, calendar.md day 39), not a re-run of wool-venture-1's profit-share deal -- the holders sold at the floor, plainly, and draw no share of what this lot fetches
+2026-09-21	103	ongoing-venture	venture_capital	anchor	288	gp	party	money.tsv:58	The 288 gp of the day 73-83 wool buy is the party's own capital -- ongoing-venture has no other investor (see header). CAPITAL RETURNS FIRST (wool_venture.md's rule, carried over) -- owed back to the party off the top the day this lot of wool sells; the PROFIT, if any, is the party's alone, since nobody else has a share of ongoing-venture
+2026-09-21	103	wool-venture-1	venture_payable_holders	anchor	229	gp	holders_six	wool_venture.md	*** OPEN, AND FLAGGED RATHER THAN ASSUMED DISCHARGED -- THE ONE LOOSE END IN AN OTHERWISE-CLOSED VENTURE. *** wool_venture.md's day 25-27 reckoning: "Six holders' shares -- COIN, in the strongbox, coming home." campaign/loops.tsv L003 opened day 34 naming this exact 229 gp and has NO CLOSE ROW as of day 103 -- sixty-nine days. The player says wool-venture-1's accounts are settled and closed; this row is why that needs a second look rather than a nod, the same way Ancel's "Unanswered" was quoted as live forty-three days after it was answered. If it was in fact handed over, the discharging event needs a negative row here AND an L003 close citing it

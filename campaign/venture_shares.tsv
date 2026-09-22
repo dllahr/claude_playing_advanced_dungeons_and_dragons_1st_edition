@@ -1,38 +1,45 @@
-# THE CAP TABLE -- who owns the shares of the venture. Append-only.
+# THE CAP TABLE -- who owns the shares of WOOL-VENTURE-1. Append-only.
 #
-# *** WHY THIS FILE EXISTS. *** The player, day 103: "let's track who owns the
-# shares of the venture" -- alongside an inventory of what it holds
-# (campaign/venture.tsv). The share structure has been sitting in
-# campaign/wool_venture.md's prose since day 16 and has never been queryable.
+# *** SCOPED TO ONE VENTURE, NOT TWO -- THE PLAYER'S OWN SPLIT, DAY 103. ***
+# "The shares you're talking about are just for the initial wool purchase at
+# the floor and selling in Ludbury, then giving a share of the profits to the
+# 6 holders and Wend. Those accounts are all settled, closed." That is
+# wool-venture-1: the day 12-16 buy and the day 25-27 Ludbury sale.
+#
+# EVERYTHING SINCE -- the standing floor-price wool buy under art.7 and the
+# cloth-making plant -- is `ongoing-venture` in campaign/venture.tsv, and it
+# has NO ROW HERE. Checked against the record, day 103: nobody but the party
+# has put capital into it, and Wend's pay for running it is a WAGE, not a
+# share (rolls.tsv, day ~33: she was offered the choice, "buy a share or take
+# a wage, her choice" -- wool_venture.md settles which: "Wend runs it on a
+# wage and has said plainly she has never worked a loom"). A wage is not a
+# claim on profit, so ongoing-venture has no cap table to keep.
+#
+# *** "SETTLED, CLOSED" HAS ONE OPEN TAIL. *** campaign/venture.tsv still
+# carries `venture_payable_holders`, 229 gp, flagged rather than assumed
+# discharged -- loop L003 opened day 34 naming this exact sum and has no
+# close row as of day 103. This file's own table below is not in doubt; the
+# question is only whether the LAST STEP of paying it out ever got logged.
 #
 # *** WHAT A SHARE MEANS HERE, PRECISELY. *** wool_venture.md, "The shares":
 # capital returns off the top BEFORE anything is divided (CAPITAL RETURNS
 # FIRST), and only the PROFIT that remains after that is split by share. A
-# share is a claim on profit, not on the venture's capital or its physical
-# stock -- campaign/venture.tsv answers what the venture HOLDS and OWES;
-# this file answers who is entitled to a slice of what it EARNS.
+# share is a claim on profit, not on capital or physical stock.
 #
-# *** WHO HAS ACTUALLY PUT IN CAPITAL, AND WHO HAS NOT -- the player's own
-# reckoning, day 103, and the reason this file does not try to price a share
-# in gold: ***
-#
-#   THE PARTY  put in the 450 gp that bought the first lot (day 12-16) and the
-#              288 gp that bought the second (day 73-83). ALL of the venture's
-#              capital, both times, is the party's own coin.
-#   WEND       put in no coin. She took a full share "backing her own
-#              judgement" rather than the 20 gp fee offered (d6=1), and
-#              separately contributes her shop and her barn and is paid for
-#              her time -- a service, not capital. Her share is EARNED, not
-#              BOUGHT.
-#   THE HOLDERS put in no coin either. They chose "the floor price and a
-#              share" over "a good price and no share" for their WOOL, which
-#              the party bought from them AT THE FLOOR -- the wool itself was
-#              a sale to the party, not an investment in it. Their share is
-#              the PRICE of that choice, not a capital stake.
+# *** WHO PUT IN CAPITAL, AND WHO DID NOT. *** THE PARTY put in the 450 gp
+# that bought the clip (day 12-16) -- all of wool-venture-1's capital is the
+# party's own coin. WEND put in no coin: she took a full share "backing her
+# own judgement" rather than the 20 gp fee offered (d6=1). Her share is
+# EARNED, not bought. THE HOLDERS put in no coin either: they chose "the
+# floor price and a share" over "a good price and no share" for their WOOL,
+# which the party bought from them AT THE FLOOR -- the wool itself was a
+# sale to the party, not an investment in it. Their share is the PRICE of
+# that choice.
 #
 # So: 14 shares, one class, no capital weighting -- because no share was ever
-# priced against capital put in. Pricing what a share is "worth" is valuation,
-# and the player was explicit: figure that out when needed, not routinely.
+# priced against capital put in. Pricing what a share is "worth" is
+# valuation, and the player was explicit: figure that out when needed, not
+# routinely.
 #
 # *** THE SIX HOLDERS ARE ONE ROW, `holders_six`. *** wool_venture.md names
 # four of six by description -- "Rell's brother, Ellery, Marrow, Ferd's old
@@ -52,7 +59,7 @@
 #         line characters.tsv already draws for experience and treasure)
 #
 when	day	who	verb	shares	note
-2026-09-11	16	Dave	anchor	1	wool_venture.md, "The shares": the party -- six PCs at 1 each
+2026-09-11	16	Dave	anchor	1	wool_venture.md, "The shares": the party -- six PCs at 1 each. wool-venture-1 ONLY -- CLOSED, day 25-27
 2026-09-11	16	Torsat	anchor	1
 2026-09-11	16	Tristle	anchor	1
 2026-09-11	16	Frython	anchor	1
@@ -60,5 +67,5 @@ when	day	who	verb	shares	note
 2026-09-11	16	Blartho	anchor	1
 2026-09-11	16	Hask	anchor	0.5	Henchman: half share, same line characters.tsv draws for XP and treasure
 2026-09-11	16	Dellie	anchor	0.5	Henchman: half share
-2026-09-11	16	wend	anchor	1	"She took the small fee and a full share (d6 = 1) rather than 20 gp and a half. She is backing her own judgement" -- wool_venture.md. Capital is 0; the share is earned, not bought
+2026-09-11	16	wend	anchor	1	"She took the small fee and a full share (d6 = 1) rather than 20 gp and a half. She is backing her own judgement" -- wool_venture.md. Capital is 0; the share is earned, not bought. FOR wool-venture-1 ONLY -- her ongoing-venture pay is a WAGE (see header), no share, and has no row here
 2026-09-11	16	holders_six	anchor	6	The six wool-holders who chose "the floor price and a SHARE of any eventual profit" over "a good price and no share" (d6=6, all six took the share). Four are described in wool_venture.md and two never named: Rell's brother (people.tsv: gyll), Ellery, Marrow, Ferd's old master, and two more. ONE ROW because the record does not support splitting it further

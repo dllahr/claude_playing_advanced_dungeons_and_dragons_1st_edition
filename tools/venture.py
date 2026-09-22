@@ -18,10 +18,14 @@ that out when needed, and not frequently." So this module computes neither a
 share price nor a venture net worth. `report()` is exactly (a) and (b);
 nothing here answers "what is a share worth".
 
-*** THE PARTY IS THE ONLY CAPITAL INVESTOR. *** Player, day 103: Wend and the
-six holders each earned their shares (her judgement, their wool at the floor);
-neither put in coin. So venture_shares.tsv carries no capital-weighting and
-this module does not compute one -- see its own header for the full reasoning.
+*** TWO VENTURES, NOT ONE. *** Player, day 103: the 14-share structure was
+`wool-venture-1` ALONE -- the day 12-16 buy and the day 25-27 Ludbury sale --
+and "those accounts are all settled, closed." Everything since is
+`ongoing-venture`: the standing art.7 wool buy and the cloth-making plant, on
+the party's OWN capital, no one else invested, and Wend is paid a WAGE for
+running it, not a share. So venture_shares.tsv has rows for wool-venture-1
+only; ongoing-venture has no cap table to keep. See venture.tsv's and
+venture_shares.tsv's own headers for the record this rests on.
 """
 import argparse
 import os
@@ -41,6 +45,7 @@ POSITION_ASSETS = {
     'venture_capital': 'owed BY the venture TO the party -- capital outstanding',
     'venture_payable_holders': 'owed BY the venture TO the six holders',
 }
+VENTURES = ('wool-venture-1', 'ongoing-venture')
 
 
 def rows(path=None):
@@ -80,12 +85,13 @@ def shares(log=None):
 
 
 def state(log=None):
-    """{asset: {(unit, holder): qty}}. Anchor sets outright; move adds.
+    """{venture: {asset: {(unit, holder): qty}}}. Anchor sets; move adds.
 
     Unlike inventory_log.tsv's state(), the key includes `holder`: a venture
     payable to `holders_six` and one to `party` are never the same debt, and
     there is no history of mixed holder strings here to fragment -- this file
-    started clean on day 103.
+    started clean on day 103. `venture` splits wool-venture-1 (closed) from
+    ongoing-venture (live, party capital only) -- see this file's own header.
     """
     log = log if log is not None else rows()
     out = {}
@@ -93,65 +99,87 @@ def state(log=None):
         a = (r.get('asset') or '').strip()
         if not a:
             continue
+        venture = (r.get('venture') or '').strip()
         unit = (r.get('unit') or 'each').strip()
         holder = (r.get('holder') or '').strip()
-        cell = out.setdefault(a, {}).setdefault((unit, holder), 0.0)
+        vt = out.setdefault(venture, {})
+        cell = vt.setdefault(a, {}).setdefault((unit, holder), 0.0)
         q = _num(r.get('qty'))
         if (r.get('verb') or '').strip() == 'anchor':
-            out[a][(unit, holder)] = q
+            vt[a][(unit, holder)] = q
         else:
-            out[a][(unit, holder)] = cell + q
+            vt[a][(unit, holder)] = cell + q
     return out
 
 
-def holdings(log=None):
-    """[(asset, unit, holder, qty)] for the physical goods -- (a)."""
+def holdings(log=None, venture=None):
+    """[(venture, asset, unit, holder, qty)] for the physical goods -- (a).
+
+    Pass `venture` to see just one; omit it for both.
+    """
     ass = ledgermod.assets()
     out = []
-    for a, cells in state(log).items():
-        if a in POSITION_ASSETS:
+    for vt, assets in state(log).items():
+        if venture and vt != venture:
             continue
-        for (unit, holder), q in cells.items():
-            if q:
-                out.append((a, unit, holder, q))
+        for a, cells in assets.items():
+            if a in POSITION_ASSETS:
+                continue
+            for (unit, holder), q in cells.items():
+                if q:
+                    out.append((vt, a, unit, holder, q))
     return sorted(out)
 
 
-def position(log=None):
-    """[(asset, holder, gp, note)] for capital/payable rows -- (b)."""
+def position(log=None, venture=None):
+    """[(venture, asset, holder, gp)] for capital/payable rows -- (b)."""
     out = []
-    for a in POSITION_ASSETS:
-        for (unit, holder), q in state(log).get(a, {}).items():
-            if q:
-                out.append((a, holder, q))
+    for vt, assets in state(log).items():
+        if venture and vt != venture:
+            continue
+        for a in POSITION_ASSETS:
+            for (unit, holder), q in assets.get(a, {}).items():
+                if q:
+                    out.append((vt, a, holder, q))
     return sorted(out)
 
 
 def report(log=None, slog=None):
     ass = ledgermod.assets()
-    out = ['VENTURE HOLDINGS -- (a) what it physically holds', '']
-    h = holdings(log)
-    if not h:
-        out.append('  nothing on record')
-    for a, unit, holder, q in h:
+    out = []
+    out.append('WOOL-VENTURE-1 -- CLOSED, day 25-27. The 14-share deal with '
+               'the holders and Wend; see `venture.py shares`.')
+    h1 = holdings(log, 'wool-venture-1')
+    p1 = position(log, 'wool-venture-1')
+    if not h1 and not p1:
+        out.append('  nothing open on record')
+    for _vt, a, unit, holder, q in h1:
         nm = (ass.get(a) or {}).get('name', a)
-        out.append('  %-14s %8s %-6s  held by %-12s  %s'
+        out.append('  holds   %-14s %8s %-6s  with %-12s  %s'
                    % (a, ('%g' % q), unit, holder, nm))
+    for _vt, a, holder, gp in p1:
+        out.append('  ⚠ OPEN  %-24s %8.0f gp -- the venture owes %s'
+                   % (a, gp, holder))
     out.append('')
-    out.append('MONEY POSITION -- (b) who is owed what')
-    out.append('')
-    p = position(log)
-    if not p:
+    out.append('ONGOING-VENTURE -- LIVE. Party capital only; no cap table '
+               '(see this file\'s header).')
+    h2 = holdings(log, 'ongoing-venture')
+    p2 = position(log, 'ongoing-venture')
+    if not h2 and not p2:
         out.append('  nothing on record')
-    for a, holder, gp in p:
+    for _vt, a, unit, holder, q in h2:
+        nm = (ass.get(a) or {}).get('name', a)
+        out.append('  holds   %-14s %8s %-6s  with %-12s  %s'
+                   % (a, ('%g' % q), unit, holder, nm))
+    for _vt, a, holder, gp in p2:
         direction = ('the venture owes the PARTY' if a == 'venture_capital'
                     else 'the venture owes %s' % holder)
-        out.append('  %-24s %8.0f gp -- %s' % (a, gp, direction))
+        out.append('  owes    %-24s %8.0f gp -- %s' % (a, gp, direction))
     out.append('')
     st = shares(slog if slog is not None else share_rows())
     total = sum(st.values())
-    out.append('CAP TABLE -- %g shares total (see `venture.py shares` for '
-               'the full table)' % total)
+    out.append('WOOL-VENTURE-1 CAP TABLE -- %g shares total (see '
+               '`venture.py shares` for the full table)' % total)
     return '\n'.join(out)
 
 
@@ -178,6 +206,10 @@ def check(log=None, slog=None):
     out = []
 
     for r in log:
+        venture = (r.get('venture') or '').strip()
+        if venture not in VENTURES:
+            out.append(('FAIL', 'venture %r is not one of %s'
+                        % (venture, list(VENTURES))))
         a = (r.get('asset') or '').strip()
         if a not in ass and a not in POSITION_ASSETS:
             out.append(('FAIL', 'asset %r is not in campaign/assets.tsv and '
@@ -190,12 +222,13 @@ def check(log=None, slog=None):
             out.append(('FAIL', 'holder %r is not a character, a place/'
                         'person id, or %r' % (holder, HOLDERS_GROUP)))
 
-    for a, cells in state(log).items():
-        for (unit, holder), q in cells.items():
-            if q < 0:
-                out.append(('FAIL', '%s (%s, holder %s) computes to %g -- a '
-                            'negative holding is not a thing'
-                            % (a, unit, holder or '-', q)))
+    for vt, assets in state(log).items():
+        for a, cells in assets.items():
+            for (unit, holder), q in cells.items():
+                if q < 0:
+                    out.append(('FAIL', '%s/%s (%s, holder %s) computes to '
+                                '%g -- a negative holding is not a thing'
+                                % (vt, a, unit, holder or '-', q)))
 
     svocab = share_vocabulary()
     for r in slog:
