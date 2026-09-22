@@ -49,6 +49,16 @@ read end to end. See `CHECKLIST.md` — read a module's front matter FIRST.*
 > not routine. *(Folding it in cost nothing that time only because Tristle's
 > listen succeeded and said the same thing better.)*
 >
+> ### ⚠ SWING DIRECTION IS READ, NOT ROLLED — day 118, player-caught
+>
+> The EXAMINE step above already says so — "the hinge side and so the swing" —
+> and the DM missed his own line and coin-flipped it (d1d2) at the door
+> `(5,31,V)`, treating a fixed physical fact about the door as if it were random
+> per attempt. **A door has one hinge side; examining it finds which one, it
+> does not decide it.** The lock roll (the table above) IS randomised, once,
+> at examination — that part was right. Swing never is. Corrected in
+> `world_changes.tsv`, same row, with the reasoning kept rather than reverted.
+>
 > **Everything else is a DECLARED action and must be asked for** — oiling,
 > spiking, picking, prising, battering, drifting pins. None of it is assumed.
 
