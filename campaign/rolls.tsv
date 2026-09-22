@@ -8839,3 +8839,4 @@ when	exped	turn	notation	dice	modifier	total	hidden	reason
 2026-09-22			1d100	80	0	80		Ista Hear Noise at the door (6,31,V), 10%. HIDDEN OUTCOME
 2026-09-22			1d2	2	0	2		door at (5,31,V)/(6,31) swing direction -- B1's printed map key shows only a plain rectangle glyph for DOOR, no hinge/arc, so swing is not extractable from the page. 1=opens toward the party (east, into 6,31), 2=opens away (west, into 5,31)
 2026-09-22			1d6	6	0	6		door (5,31,V), B1's own door rule, rolled at examination: 1-2 locked, 3-6 opens
+2026-09-22			1d6	2	0	2		did Durnhak actually spike the north door (6,18,H) behind the party after they left, day 99 -- he was given 4 spikes and the choice, never confirmed either way: 1-3 yes, he did; 4-6 no, he didn't bother (or reasoned the shaft itself was guard enough)
