@@ -311,3 +311,6 @@ when	map	level	x	y	exped	turn	squares	feet	rate	why	route
 2026-09-22	b1	1	4	19	14	76			PLACED	CORRECTION, PLAYER-CAUGHT: the DM sent the party south to (4,22) then west to (2,22)/(2,31), the route BACK TO the smithy, not the route the player asked for. Quoted: 'we head back west, out the smithy and then west, then south, then we look east' -- 'and then west' is a separate step after exiting, and from (4,19) west opens directly to (3,19) (world_changes.tsv day 99: 'the x=4 corridor runs straight 30 ft from (4,22) to (4,19) and then opens WEST to (3,19)'). Backing up to the exit, the last position that was actually right, to redo it correctly.	
 2026-09-22	b1	1	2	16	14	76	5	50	known	day 118: west out of the smithy corridor to (3,19)/(2,19), then south down the x=2 corridor to the turn -- the day-99 orc-chase route, retraced	4,19 3,19 2,19 2,18 2,17 2,16
 2026-09-22	b1	1	4	15	14	77	3	30	explore	day 118: east to the opening, then through it south -- new ground	2,16 3,16 4,16 4,15
+2026-09-22	b1	1	4	14	14	80	1	10	explore	day 118: south to the fork	4,15 4,14
+2026-09-22	b1	1	6	14	14	81	2	20	explore	day 118: east into the corridor, Tristle 40 ft ahead on infravision	4,14 5,14 6,14
+2026-09-22	b1	1	8	15	14	83	3	30	explore	day 118: continuing east and the passage turns north	6,14 7,14 7,15 8,15
