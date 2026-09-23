@@ -224,3 +224,5 @@ when	day	who	asset	verb	qty	unit	note
 2026-09-21	103	Dave	lantern_yrtone	anchor	1	each	The spare, taken off Yrtone day 103, full at 24.0 turns -- light.tsv's source `lantern-yrtone`.
 2026-09-22	118	party	bracelet_silver	anchor	1	each	Area 10 storeroom, day 118. B1 treasure type CC, module valuation 80 s.p. -- NOT money until sold.
 2026-09-23	118	party	morning_star_stone	anchor	1	each	Off the troglodyte near (7,29), day 118. Salvage only.
+2026-09-23	118	party	oil_flask	anchor	3	each	Carried into the dungeon for expedition 14, day 118 -- reserve for lantern refills beyond what is already poured. Retcon, player-established: "all the oil we owned previously was with us so the distinction didnt matter" -- this is the FIRST time carry.tsv has to split it, since most of the 56 sealed the party owns sits at Wends barn, not in anyones pack.
+2026-09-23	118	wend_barn	oil_flask	anchor	53	each	The rest of the partys 56 sealed flasks, stored with the cloth-plant kit -- not brought on expedition 14. 56 owned - 3 carried = 53.
