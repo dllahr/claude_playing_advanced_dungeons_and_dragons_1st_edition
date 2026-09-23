@@ -222,3 +222,4 @@ when	day	who	asset	verb	qty	unit	note
 2026-09-21	103	Ista	lantern_ista	anchor	1	each	Her own, 8.6 turns in it -- light.tsv's source `lantern-ista`.
 2026-09-21	103	Dave	lantern	anchor	0	each	Superseded by lantern_yrtone below -- same lamp, specific id.
 2026-09-21	103	Dave	lantern_yrtone	anchor	1	each	The spare, taken off Yrtone day 103, full at 24.0 turns -- light.tsv's source `lantern-yrtone`.
+2026-09-22	118	party	bracelet_silver	anchor	1	each	Area 10 storeroom, day 118. B1 treasure type CC, module valuation 80 s.p. -- NOT money until sold.

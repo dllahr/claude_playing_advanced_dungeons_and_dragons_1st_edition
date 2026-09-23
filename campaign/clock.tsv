@@ -992,3 +992,12 @@ when	exped	round	kind	anchor	detail	note
 2026-09-22	14	153	check	150	d6=1 -> Troglodytes (1-2)-AC 5, HD 2', hp 6,5, #AT 3, D 1-4/1-4/ 1-4, MV 120' (40'), Save F2, ML 9	anchor 150 + 3
 2026-09-22	14	163	advance		1	day 118: round 153, combat -- Dave and Torsat's surprise-segment volley
 2026-09-22	14	164	advance		1	day 118: round 153, the troglodyte fight
+2026-09-22	14	165	advance		1	day 118: Torsat searches the troglodyte bodies
+2026-09-22	14	167	advance		2	day 118: moving to (9,25) to search north and west walls
+2026-09-22	14	177	advance		10	day 118: turn spent searching the north wall at (9,25)
+2026-09-22	14	187	advance		10	day 118: turn spent searching the west wall at (9,25) -- FOUND
+2026-09-22	14	183	check	180	d6=2	anchor 180 + 3
+2026-09-22	14	197	advance		10	day 118: Tristle and Ista examine the secret door -- mechanism identified
+2026-09-22	14	198	advance		1	day 118: Yrtone triggers the plate and pushes the secret door open
+2026-09-22	14	199	advance		1	day 118: into the room, formation held
+2026-09-22	14	209	advance		10	day 118: thorough search of the room's contents, Dave guarding

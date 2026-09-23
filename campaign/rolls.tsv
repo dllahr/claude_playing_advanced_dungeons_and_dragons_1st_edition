@@ -8983,3 +8983,22 @@ when	exped	turn	notation	dice	modifier	total	hidden	reason
 2026-09-22			d20	12	0	12		Tristle attacks with short bow
 2026-09-22			1-6 (1d6)	3	0	3		Tristle damage, short bow
 2026-09-22			d20	3	0	3		Brand attacks with hand axe
+2026-09-22			d6	4	0	4		day 118: Tristle elf passive 1-in-6, passing (8,25,V) known secret door en route to (9,25)
+2026-09-22			d6	6	0	6		day 118: Blartho search, north wall of (9,25) [(9,25,H)], non-elf 1-in-6
+2026-09-22			d6	5	0	5		day 118: Yrtone search, north wall of (9,25) [(9,25,H)], non-elf 1-in-6
+2026-09-22			d6	6	0	6		day 118: Frython search, north wall of (9,25) [(9,25,H)], non-elf 1-in-6
+2026-09-22			d6	5	0	5		day 118: Hask search, north wall of (9,25) [(9,25,H)], non-elf 1-in-6
+2026-09-22			d6	3	0	3		day 118: Dellie search, north wall of (9,25) [(9,25,H)], non-elf 1-in-6
+2026-09-22			d6	5	0	5		day 118: Ista search, north wall of (9,25) [(9,25,H)], non-elf 1-in-6
+2026-09-22			d6	3	0	3		day 118: Brand search, north wall of (9,25) [(9,25,H)], non-elf 1-in-6
+2026-09-22			d6	2	0	2		day 118: Tristle search, north wall of (9,25) [(9,25,H)], elf 2-in-6
+2026-09-22			d6	3	0	3		day 118: Blartho search, west wall of (9,25) [(8,25,V)], non-elf 1-in-6
+2026-09-22			d6	6	0	6		day 118: Yrtone search, west wall of (9,25) [(8,25,V)], non-elf 1-in-6
+2026-09-22			d6	1	0	1		day 118: Frython search, west wall of (9,25) [(8,25,V)], non-elf 1-in-6
+2026-09-22			d6	3	0	3		day 118: Hask search, west wall of (9,25) [(8,25,V)], non-elf 1-in-6
+2026-09-22			d6	2	0	2		day 118: Dellie search, west wall of (9,25) [(8,25,V)], non-elf 1-in-6
+2026-09-22			d6	5	0	5		day 118: Ista search, west wall of (9,25) [(8,25,V)], non-elf 1-in-6
+2026-09-22			d6	4	0	4		day 118: Brand search, west wall of (9,25) [(8,25,V)], non-elf 1-in-6
+2026-09-22			d6	3	0	3		day 118: Tristle search, west wall of (9,25) [(8,25,V)], elf 2-in-6
+2026-09-22			d6	2	0	2		wandering check, anchor 180
+2026-09-22			d6	5	0	5		day 118: secret door (8,25,V) mechanism -- table declared before roll: 1=recessed depressible stone, 2=lean-push panel, 3=lever disguised as loose rock, 4=twisting keystone, 5=foot pressure plate, 6=counterweighted slab on a track
