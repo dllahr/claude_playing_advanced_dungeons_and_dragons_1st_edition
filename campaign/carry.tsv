@@ -234,3 +234,19 @@ when	day	who	asset	verb	qty	unit	note
 2026-09-23	118	party	nails_timber	move	25	lb	the area 11 supply room's box of nails
 2026-09-23	118	party	mortar_bag	move	1	each	the area 11 supply room's nearly-empty mortar sack
 2026-09-23	118	party	hardware_box	move	1	each	the area 11 supply room's hardware box
+2026-09-23	118	party	hand_axe	move	-6	each	packed into a sack, left under the basecamp lean-to
+2026-09-23	118	party	short_bow	move	-1	each	bundled with the spear and polearms, left under the basecamp lean-to
+2026-09-23	118	party	spear	move	-1	each	bundled with the bow and polearms, left under the basecamp lean-to
+2026-09-23	118	party	polearm_orc	move	-2	each	bundled and tied, too long for a sack, left under the basecamp lean-to
+2026-09-23	118	party	crossbow_light	move	-2	each	packed into the same sack as the axes, left under the basecamp lean-to
+2026-09-23	118	party	nails_timber	move	-25	lb	packed into a sack, left under the basecamp lean-to
+2026-09-23	118	party	mortar_bag	move	-1	each	already sacked, left under the basecamp lean-to
+2026-09-23	118	party	hardware_box	move	-1	each	already boxed, left under the basecamp lean-to
+2026-09-23	118	basecamp	hand_axe	move	6	each	stored under the lean-to, one sack with the crossbows
+2026-09-23	118	basecamp	short_bow	move	1	each	stored under the lean-to, bundled with the spear and polearms
+2026-09-23	118	basecamp	spear	move	1	each	stored under the lean-to, bundled with the bow and polearms
+2026-09-23	118	basecamp	polearm_orc	move	2	each	stored under the lean-to, bundled and tied
+2026-09-23	118	basecamp	crossbow_light	move	2	each	stored under the lean-to, same sack as the axes
+2026-09-23	118	basecamp	nails_timber	move	25	lb	stored under the lean-to, one sack
+2026-09-23	118	basecamp	mortar_bag	move	1	each	stored under the lean-to
+2026-09-23	118	basecamp	hardware_box	move	1	each	stored under the lean-to
