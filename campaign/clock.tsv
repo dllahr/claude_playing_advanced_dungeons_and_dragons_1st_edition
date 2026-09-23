@@ -1023,3 +1023,8 @@ when	exped	round	kind	anchor	detail	note
 2026-09-23	14	283	advance		1	day 118: moving to (3,25)
 2026-09-23	14	284	advance		1	day 118: moving to (3,25), second round
 2026-09-23	14	294	advance		10	day 118: turn spent searching the wall at (3,25) -- the diagonal search complete
+2026-09-23	14	304	advance		10	day 118: Tristle and Ista examine the newly found secret door at (5,27,H), rest hold position
+2026-09-23	14	305	advance		1	day 118: the door opens, round 304
+2026-09-23	14	305	check	300	d6=2	anchor 300 + 5
+2026-09-23	14	306	advance		1	day 118: round 305 -- Frython's sleep spell catches all seven orcs
+2026-09-23	14	307	advance		1	day 118: dispatching the sleeping orcs

@@ -187,3 +187,24 @@ when	day	exped	round	side	actor	verb	target	qty	detail
 2026-09-22	118		1	party	Brand	declare			everyone fires missile weapons at the closing troglodyte
 2026-09-23	118		1	monsters		damage	troglodyte	10	
 2026-09-23	118		1			end			day 118 round 244: single troglodyte killed, zero casualties, stone morning star recovered
+2026-09-23	118		1			start			day 118, round 304: the door at (5,27,H) opens into a room with occupants inside. Party surprised (die 1, standard 1-2), occupants not (die 4) -- single-side, 1 segment lost. Distance rolled 20ft (surprise-capped). Occupants used their free segment just reacting/closing (9ft, corrected movement rate) -- weapons not in hand, no attack possible that segment either way. Normal combat begins now.
+2026-09-23	118		1	party	Frython	declare			casts sleep, centred on the orc cluster, 1 segment -- fastest action this round
+2026-09-23	118		1	party	Dave	declare			switches short bow for sword and shield -- the whole round, no attack
+2026-09-23	118		1	party	Torsat	declare			switches short bow for sword and shield -- the whole round, no attack
+2026-09-23	118		1	party	Yrtone	declare			switches sling for flail -- free, attacks normally, holds the door
+2026-09-23	118		1	party	Blartho	declare			holding, per the plan: fire if orcs don't advance, hold if they do
+2026-09-23	118		1	party	Hask	declare			holding, per the plan: fire if orcs don't advance, hold if they do
+2026-09-23	118		1	party	Dellie	declare			holding, per the plan: fire if orcs don't advance, hold if they do
+2026-09-23	118		1	party	Ista	declare			holding, per the plan: fire if orcs don't advance, hold if they do
+2026-09-23	118		1	party	Brand	declare			holding, per the plan: fire if orcs don't advance, hold if they do
+2026-09-23	118		1	party	Tristle	declare			holding, per the plan: fire if orcs don't advance, hold if they do
+2026-09-23	118		1	monster		surprise			Frython's sleep spell (4d4=8, capped at the 7 present) caught EVERY orc in the room -- all 7 asleep, no save. Cast before any of them reached the door. Nobody in the party engaged in melee or fired a shot this round.
+2026-09-23	118		1	party	Dave	declare			kills a sleeping orc, automatic
+2026-09-23	118		1	party	Torsat	declare			kills a sleeping orc, automatic
+2026-09-23	118		1	party	Yrtone	declare			kills a sleeping orc, automatic
+2026-09-23	118		1	party	Tristle	declare			kills a sleeping orc, automatic
+2026-09-23	118		1	party	Ista	declare			kills a sleeping orc, automatic
+2026-09-23	118		1	party	Hask	declare			kills a sleeping orc, automatic
+2026-09-23	118		1	party	Blartho	declare			kills a sleeping orc, automatic
+2026-09-23	118		1	monster	all seven orcs	dead			killed while asleep, one per slayer, automatic per PHB p.68 -- Dave, Torsat, Yrtone, Tristle, Ista, Hask, Blartho each took one. Frython, Dellie, Brand did not need to.
+2026-09-23	118		1			end			day 118, round 305-306: all seven orcs killed asleep, zero party casualties, zero shots fired
