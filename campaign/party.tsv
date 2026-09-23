@@ -325,3 +325,14 @@ when	map	level	x	y	exped	turn	squares	feet	rate	why	route
 2026-09-22	b1	1	10	26			1	10	explore	day 118: continuing south, searching the west wall	10,27 10,26
 2026-09-22	b1	1	9	25			2	20	explore	day 118: following the wall around to search north and west	10,26 10,25 9,25
 2026-09-22	b1	1	8	25			1	10	explore	day 118: into the newly found room, formation held	9,25 8,25
+2026-09-22	b1	1	9	25			1	10	explore	day 118: back out through the secret door, closing it behind	8,25 9,25
+2026-09-22	b1	1	8	30			6	60	explore	day 118: to the corridor's north end, to begin searching the NW wall systematically	9,25 8,25 8,26 8,27 8,28 8,29 8,30
+2026-09-22	b1	1	9	25			6	60	explore	revert stray test	8,30 8,29 8,28 8,27 8,26 8,25 9,25
+2026-09-22	b1	1	9	25					PLACED	CORRECTION: the last two 'move' rows routed the party back through the closed/spiked-then-unspiked secret door twice -- the pathfinder took the shorter path without knowing the party had just declared it shut behind them. Neither re-entry happened in the fiction. Backing up to the real last position (9,25, door shut) to redo the route properly, around via the x=10 corridor.	
+2026-09-22	b1	1	10	30			6	60	explore	day 118: around via the x=10 corridor to the north end, avoiding the shut door	9,25 10,25 10,26 10,27 10,28 10,29 10,30
+2026-09-22	b1	1	8	30			2	20	explore	day 118: to the corridor's NW corner, to begin the systematic wall search	10,30 9,30 8,30
+2026-09-22	b1	1	7	29			2	20	explore	day 118: continuing southwest along the wall	8,30 8,29 7,29
+2026-09-23	b1	1	6	28			2	20	explore	day 118: continuing the systematic search along the continuous NW diagonal wall	7,29 7,28 6,28
+2026-09-23	b1	1	5	27			2	20	explore	day 118: continuing along the diagonal wall	6,28 6,27 5,27
+2026-09-23	b1	1	4	26			2	20	explore	day 118: continuing along the diagonal wall	5,27 5,26 4,26
+2026-09-23	b1	1	3	25			2	20	explore	day 118: last section of the diagonal wall	4,26 4,25 3,25

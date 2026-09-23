@@ -1001,3 +1001,25 @@ when	exped	round	kind	anchor	detail	note
 2026-09-22	14	198	advance		1	day 118: Yrtone triggers the plate and pushes the secret door open
 2026-09-22	14	199	advance		1	day 118: into the room, formation held
 2026-09-22	14	209	advance		10	day 118: thorough search of the room's contents, Dave guarding
+2026-09-22	14	211	advance		2	day 118: unspike and shut the secret door behind
+2026-09-22	14	213	advance		2	day 118: collecting spent missiles at the fight site
+2026-09-22	14	212	check	210	d6=6	anchor 210 + 2
+2026-09-22	14	220	advance		7	day 118: around via the x=10 corridor to (10,30)
+2026-09-22	14	222	advance		2	day 118: to (8,30), starting the NW wall search
+2026-09-22	14	232	advance		10	day 118: turn spent searching the wall at (8,30)
+2026-09-22	14	234	advance		2	day 118: moving to (7,29)
+2026-09-22	14	244	advance		10	day 118: turn spent searching the wall at (7,29)
+2026-09-22	14	244	check	240	d6=1 -> Troglodytes (1-2)-AC 5, HD 2', hp 6,5, #AT 3, D 1-4/1-4/ 1-4, MV 120' (40'), Save F2, ML 9	anchor 240 + 4
+2026-09-23	14	246	advance		2	day 118: finishing the troglodyte, searching the body, recovering missiles
+2026-09-23	14	247	advance		1	day 118: moving to (6,28)
+2026-09-23	14	248	advance		1	day 118: moving to (6,28), second round
+2026-09-23	14	258	advance		10	day 118: turn spent searching the wall at (6,28)
+2026-09-23	14	259	advance		1	day 118: moving to (5,27)
+2026-09-23	14	260	advance		1	day 118: moving to (5,27), second round
+2026-09-23	14	270	advance		10	day 118: turn spent searching the wall at (5,27)
+2026-09-23	14	270	check	270	d6=6	anchor 270 + 0
+2026-09-23	14	272	advance		2	day 118: moving to (4,26)
+2026-09-23	14	282	advance		10	day 118: turn spent searching the wall at (4,26)
+2026-09-23	14	283	advance		1	day 118: moving to (3,25)
+2026-09-23	14	284	advance		1	day 118: moving to (3,25), second round
+2026-09-23	14	294	advance		10	day 118: turn spent searching the wall at (3,25) -- the diagonal search complete

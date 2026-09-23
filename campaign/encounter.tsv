@@ -174,3 +174,16 @@ when	day	exped	round	side	actor	verb	target	qty	detail
 2026-09-22	118		4	monsters		damage	troglodyte	13	
 2026-09-22	118		4	monster	troglodyte	dead			troglodyte B: hp 5, took 13 damage -- dead. Both troglodytes down, no party casualties.
 2026-09-22	118		4			end			day 118, round 153ish: both troglodytes killed, zero party casualties after the surprise/distance/movement corrections. Dave, Torsat unhurt.
+2026-09-22	118		1			start			day 118, round 244: one troglodyte, wandering, near (7,29). Party surprised (die 2, standard 1-2 threshold despite guards posted -- this one just came up bad luck), monster not (die 3). Distance rolled 30ft, capped for surprise. 2 lost segments: troglodyte closes 24ft (12ft/segment, corrected rate) but does NOT reach melee (6ft short) and has no ranged option (morning star, rolled unarmed-of-missiles). Zero damage this phase. Normal combat resumes with it 6ft off.
+2026-09-22	118		1	party	Dave	declare			everyone fires missile weapons at the closing troglodyte
+2026-09-22	118		1	party	Torsat	declare			everyone fires missile weapons at the closing troglodyte
+2026-09-22	118		1	party	Blartho	declare			everyone fires missile weapons at the closing troglodyte
+2026-09-22	118		1	party	Yrtone	declare			everyone fires missile weapons at the closing troglodyte
+2026-09-22	118		1	party	Frython	declare			everyone fires missile weapons at the closing troglodyte
+2026-09-22	118		1	party	Hask	declare			everyone fires missile weapons at the closing troglodyte
+2026-09-22	118		1	party	Dellie	declare			everyone fires missile weapons at the closing troglodyte
+2026-09-22	118		1	party	Ista	declare			everyone fires missile weapons at the closing troglodyte
+2026-09-22	118		1	party	Tristle	declare			everyone fires missile weapons at the closing troglodyte
+2026-09-22	118		1	party	Brand	declare			everyone fires missile weapons at the closing troglodyte
+2026-09-23	118		1	monsters		damage	troglodyte	10	
+2026-09-23	118		1			end			day 118 round 244: single troglodyte killed, zero casualties, stone morning star recovered
