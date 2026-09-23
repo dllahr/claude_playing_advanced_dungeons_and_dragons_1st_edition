@@ -1,9 +1,50 @@
 #!/usr/bin/env python3
 """WHO IS CARRYING WHAT, and what it does to their movement rate.
 
-    python tools/carry.py                 # the whole manifest, per person
-    python tools/carry.py person Dave     # one person's load and band
-    python tools/carry.py check           # reconcile against what is OWNED
+COMMANDS
+    python tools/carry.py                       # (no subcommand) the whole
+                                                  # manifest, per person, plus
+                                                  # the shared-kit apportionment
+    python tools/carry.py person Dave            # one person's load, gp-weight,
+                                                  # and their encumbrance band
+    python tools/carry.py roster                 # every person's kit, itemised
+    python tools/carry.py pack [--target BAND]   # fill the strongest bearers
+                                                  # first, up to BAND (default
+                                                  # 'heavy'); reports what is
+                                                  # left unpacked
+    python tools/carry.py check                  # reconcile this manifest
+                                                  # against what the party OWNS;
+                                                  # exit 1 on any FAIL
+
+Global options (before the subcommand):
+    --log-file PATH   override campaign/carry.tsv (tests use this)
+    --bearers "Dave,Ista,..."   who is actually on THIS trip. Shared `party`
+                      kit is apportioned across these people, not the whole
+                      roster. Applies to the default report, `person` and
+                      `pack`; `check` and `roster` ignore it.
+
+INPUT FILES (read-only -- this module has no write path of its own)
+    campaign/carry.tsv           the manifest itself: who/what/verb/qty/unit
+    campaign/characters.tsv      the six PCs plus henchmen, for `person` and
+                                  Strength-based encumbrance allowances
+    campaign/people.tsv          non-PC `who` ids (NPCs), for the closed
+                                  who-vocabulary `check` enforces
+    campaign/places.tsv          place `who` ids (Wethersby, Wend's barn, the
+                                  basecamp, ...), same vocabulary
+    campaign/inventory_log.tsv   what the party OWNS, via tools/inventory.py --
+                                  `check` reconciles carried against this
+    campaign/assets.tsv          asset identities, via tools/inventory.py
+    campaign/world_changes.tsv   iron_spike's emplaced-in-doors count, via
+                                  tools/world.py -- `check` subtracts it before
+                                  comparing carried against owned
+    rules/exploration.md         the Strength encumbrance-allowance table, via
+                                  tools/rules.py
+
+    A `FOREIGN` asset (oil_flask, coin, wool -- see tools/inventory.py's
+    FOREIGN dict) is never reconciled against inventory_log.tsv here, because
+    a DIFFERENT log owns its total (light.tsv, money.tsv, venture.tsv). A row
+    naming one is a location note about part of that total, not a claim
+    `check` verifies in full.
 
 *** WHY THIS IS A SEPARATE LOG FROM inventory_log.tsv. ***
 
@@ -495,6 +536,17 @@ def check(log=None):
 
     keys = set(carried) | set(owned_by_unit)
     for a, unit in sorted(keys):
+        if a in invmod.FOREIGN:
+            # A FOREIGN asset's total is owned by another log (see
+            # inventory.py's FOREIGN dict), so it was never added to
+            # owned_by_unit above -- but if a row here still NAMES it (e.g.
+            # noting which of the party's oil flasks are physically in the
+            # dungeon vs. at Wend's barn), that is a location note about part
+            # of a total this file does not track, not a claim to reconcile
+            # against `have=0`. Skip it entirely rather than FAIL a carried
+            # amount against an ownership figure this file was never going
+            # to have.
+            continue
         q = carried.get((a, unit), 0.0)
         have = owned_by_unit.get((a, unit), 0.0)
         if q > have + 1e-9:
@@ -514,20 +566,43 @@ def check(log=None):
 def build_parser():
     p = argparse.ArgumentParser(
         prog='carry.py',
-        description='Who is carrying what, and what it does to their movement.')
-    p.add_argument('--log-file', default=LOG)
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+        description='Who is carrying what, and what it does to their '
+                     'movement rate.',
+        epilog='No subcommand prints the full manifest (same as `roster` '
+               'plus the shared-kit apportionment). Reads campaign/carry.tsv '
+               '(its own log), campaign/characters.tsv, people.tsv and '
+               'places.tsv (the who-vocabulary), and -- via tools/inventory.py '
+               '-- campaign/inventory_log.tsv and assets.tsv for `check`, plus '
+               'campaign/world_changes.tsv (iron_spike emplaced) and '
+               'rules/exploration.md (Strength allowances). It never writes; '
+               'append rows to carry.tsv directly. See the module docstring '
+               '(head -60 tools/carry.py) for the full file-by-file '
+               'breakdown, including which assets (oil_flask, coin, wool) are '
+               "FOREIGN and skipped by `check` because another log owns them.")
+    p.add_argument('--log-file', default=LOG,
+                    help='override campaign/carry.tsv (tests use this)')
     p.add_argument('--bearers', help='comma-separated; who is actually on the '
-                   'trip. The shared kit is divided among THEM, not the roster')
-    sub = p.add_subparsers(dest='cmd')
-    q = sub.add_parser('person', help='one person\'s load and band')
-    q.add_argument('name')
-    sub.add_parser('roster', help="every person's kit, itemised")
-    pk = sub.add_parser('pack', help='fill the strongest first; '
-                        'report what is left over')
+                   'trip. The shared `party` kit is divided among THEM, not '
+                   'the whole roster. Used by the default report, `person` '
+                   'and `pack`; ignored by `check` and `roster`')
+    sub = p.add_subparsers(dest='cmd', metavar='{person,roster,pack,check}',
+                            help='omit for the full manifest')
+    q = sub.add_parser('person', help="one person's load in gp-weight and "
+                        'their encumbrance band (reads characters.tsv for '
+                        'Strength; --bearers sets who shares the party kit)')
+    q.add_argument('name', help='a character name from campaign/characters.tsv')
+    sub.add_parser('roster', help="every person's kit, itemised (ignores "
+                    '--bearers)')
+    pk = sub.add_parser('pack', help='fill the strongest bearers first, up '
+                        'to --target; report what is left over unpacked')
     pk.add_argument('--target', default='heavy',
                     choices=[n for n, _c, _m in BANDS],
-                    help='the band to fill each person up to')
-    sub.add_parser('check', help='reconcile against what is OWNED')
+                    help='the encumbrance band to fill each person up to '
+                         '(default: heavy)')
+    sub.add_parser('check', help='reconcile this manifest against what the '
+                    'party OWNS (inventory_log.tsv via tools/inventory.py); '
+                    'prints FAIL/OK lines and exits 1 on any FAIL')
     return p
 
 
