@@ -117,6 +117,28 @@ def test_the_live_log_has_the_party_somewhere_real():
     assert (x, y) in cells, 'the party is standing off the map'
 
 
+# ------------------------------------------------- rates track carried load
+
+def test_rates_are_not_a_frozen_dict():
+    """Day 118: RATES used to be {'explore': 90, ...}, hardcoded to whatever
+    band the party happened to be in when it was cached ('heavy', 9") and
+    never revisited when the band changed. current_rates() must derive the
+    numbers fresh from campaign/carry.tsv every call, per the PHB p.102
+    ratios (explore = band inches x10 ft/turn, known x5 that, flee x10 that)."""
+    rates = party.current_rates()
+    assert rates['known'] == rates['explore'] * 5
+    assert rates['flee'] == rates['explore'] * 10
+    assert rates['explore'] % 10 == 0, 'should be inches x 10, a whole band'
+
+
+def test_rates_fall_back_when_carry_data_is_unreadable():
+    """A fixture with no campaign/carry.tsv or characters.tsv (tmp_path,
+    elsewhere in this file) must not crash move() -- it should fall back to
+    a sane default rather than raise."""
+    rates = party.current_rates(carry_log=[], bearers=['Nobody'])
+    assert rates['explore'] > 0
+
+
 # ------------------------------------------------- secret doors on a route
 
 @pytest.fixture

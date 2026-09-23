@@ -119,7 +119,63 @@ DB = os.path.join(ROOT, 'mapdb', 'output', 'b1', 'b1.sqlite')
 # Feet per turn for dmap's --rate, by how the party is moving.
 # rules/exploration.md, PHB p.102: exploring is the rate per TURN, a known route
 # is five times faster, fleeing and combat ten times.
-RATES = {'explore': 90, 'known': 450, 'flee': 900}
+#
+# *** THESE ARE NOT CONSTANTS. *** rules/exploration.md derives them from "this
+# party at 9"" -- the party's OWN current movement band, in the encumbrance
+# sense (campaign/carry.tsv, tools/carry.py), not a fixed number. The 90/450/900
+# below were frozen at the day the party was "heavy" (9") and NEVER UPDATED when
+# the band changed -- caught day 118 when ~150 lb of orc salvage and area 11
+# supplies pushed the party to "very heavy" (6") and this file was still quietly
+# assuming 9", overstating explore speed (and every rounds-elapsed estimate that
+# followed from it, and therefore every wandering check's timing) by 50%.
+# Fixed: `current_rates()` below asks carry.py what band the party ACTUALLY
+# fits at right now and derives explore/known/flee from THAT, every call.
+RATE_NAMES = ('explore', 'known', 'flee')
+_FALLBACK_INCHES = 9  # only used if carry.py's own data cannot be read at all
+
+# inches -> ft/turn for each named rate, per the PHB p.102 ratios: explore is
+# the band's own rate; known route is 5x; fleeing/combat is 10x.
+_RATE_MULT = {'explore': 10, 'known': 50, 'flee': 100}
+
+
+def _band_inches(carry_log=None, bearers=None):
+    """The whole party's CURRENT movement rate in inches, from what is
+    actually packed right now (campaign/carry.tsv) against what each
+    person's Strength allows -- the same fill-the-strongest-first
+    apportionment `carry.py pack` uses, since that is the sensible
+    distribution, not an even split across everyone regardless of Strength.
+    Falls back to _FALLBACK_INCHES if carry.py's own data is unreadable
+    (a fresh test fixture with no characters.tsv, for instance)."""
+    try:
+        import carry
+    except Exception:
+        return _FALLBACK_INCHES
+    for name, _ceiling, move in carry.BANDS:
+        try:
+            inches = int(move.split('"')[0].split('-')[0])
+        except ValueError:
+            continue
+        try:
+            _rows, left, _shared = carry.pack(log=carry_log, bearers=bearers,
+                                              target=name)
+        except Exception:
+            return _FALLBACK_INCHES
+        if left <= 1e-6:
+            return inches
+    return 3  # nothing fits even 'encumbered' cleanly; the slowest bracket
+
+
+def current_rates(carry_log=None, bearers=None):
+    """{'explore': ft/turn, 'known': ft/turn, 'flee': ft/turn}, derived fresh
+    from the party's actual current carried load. See the comment above --
+    this replaces a frozen RATES dict that silently went stale."""
+    inches = _band_inches(carry_log, bearers)
+    return {name: inches * mult for name, mult in _RATE_MULT.items()}
+
+
+# Kept only so `--rate` has a fixed set of CHOICES for argparse; the actual
+# ft/turn VALUES always come from current_rates(), never from this dict.
+RATES = {name: None for name in RATE_NAMES}
 
 
 def parse_cell(text):
@@ -403,7 +459,7 @@ def main(argv=None):
             return 1
         print('party -> (%d,%d)   %d squares, %d feet'
               % (steps[-1][0], steps[-1][1], len(steps) - 1, feet))
-        rate = RATES[a.rate]
+        rate = current_rates()[a.rate]
         rounds = max(1, int(round(feet / rate * 10)))
         print('  %s rate, %d ft/turn -> about %d round(s)'
               % (a.rate, rate, rounds))
