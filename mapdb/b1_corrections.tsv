@@ -608,6 +608,17 @@ member	9	29	-	none	dl+claude	flooded from area 11 across a diagonal
 member	8	30	-	none	dl+claude	flooded from area 11 across a diagonal
 member	9	30	-	none	dl+claude	flooded from area 11 across a diagonal
 
+# --- AREA 11's OWN SECRET DOOR, missing entirely until day 118. ---
+# DM notes describe it in prose ("diagonal SE wall with the secret door centred
+# on the corner where (5,28)(6,28)(5,27)(6,27) meet") but it was never turned
+# into an edge -- every edge at that corner read plain `open`. Found in play
+# day 118 when Brand (5,27) and Yrtone/Hask/Brand (6,28) all rolled successful
+# 1-in-6 searches against a door the database did not know existed, and the
+# gap was only caught because the player asked directly whether one was there.
+# Placed on (5,27,H) -- one edge has to carry a "corner" description, and the
+# party's own successful roll landed on that square.
+edge	5	27	H	secret	claude	area 11's own entrance, centred on the (5,28)(6,28)(5,27)(6,27) corner per DM notes; never encoded before today. FOUND day 118, not yet opened.
+
 # --- SECRET DOOR INTO AREA 8, 2026-09-06, from the player's printed map.
 # In the wall between (10,24) and (11,24) -- i.e. the EAST wall of the 20-ft
 # x=10 passage, opening into the Wizard's Workroom.
