@@ -328,3 +328,13 @@ when	day	asset	verb	qty	unit	condition	holder	evidence	note
 2026-09-21	103	garlic	move	-1.0	each		the Inn, Wethersby -- DONATED		Donated at the Inn, day 103. Held since day 77 and never used.
 2026-09-22	118	bracelet_silver	move	1.0	each				found in a thorough search of area 10's storeroom, day 118 -- shelving and old crates, this among them
 2026-09-23	118	morning_star_stone	move	1.0	each				recovered off the troglodyte killed near (7,29), day 118
+2026-09-23	118	hand_axe	move	6.0	each				off six of the seven orcs, area 11, day 118 -- salvage, likely sold in town
+2026-09-23	118	short_bow	move	1.0	each				off one orc, area 11, day 118 -- salvage
+2026-09-23	118	spear	move	1.0	each				off one orc, area 11, day 118 -- salvage
+2026-09-23	118	polearm_orc	move	2.0	each				off two orcs, area 11, day 118 -- salvage, type unspecified
+2026-09-23	118	crossbow_light	move	2.0	each				off two orcs, area 11, day 118 -- salvage
+2026-09-23	118	nails_timber	move	25.0	each				box of nails, area 11 supply room, day 118 -- estimated 25 lb, no count given by the module
+2026-09-23	118	mortar_bag	move	1.0	each				the nearly-empty mortar sack, area 11, day 118
+2026-09-23	118	hardware_box	move	1.0	each				the hardware box, area 11, day 118
+2026-09-23	118	nails_timber	move	-25.0	each				CORRECTION same session: wrong unit, should be lb not each -- nails_timber is priced per pound. See the next row.
+2026-09-23	118	nails_timber	move	25.0	lb				box of nails, area 11 supply room, day 118 -- estimated 25 lb, no count given by the module

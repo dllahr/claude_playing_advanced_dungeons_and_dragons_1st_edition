@@ -226,3 +226,11 @@ when	day	who	asset	verb	qty	unit	note
 2026-09-23	118	party	morning_star_stone	anchor	1	each	Off the troglodyte near (7,29), day 118. Salvage only.
 2026-09-23	118	wend_barn	oil_flask	anchor	52	each	FIXED, stored with the cloth-plant kit, not brought on expedition 14. 57 ever acquired (55 Ludbury day 108 + 2 Wethersby day 103) minus 5 carried into the dungeon = 52. This does NOT move when the round-230 lantern retcon opens a carried flask -- the barn is in Wethersby, not the dungeon.
 2026-09-23	118	party	oil_flask	anchor	4	each	CURRENTLY sealed and in hand: 5 carried into the dungeon for expedition 14 (2 already carried + 3 additional, player-established) MINUS 1 opened for the round-230 lantern-ista retcon refill -- that flask had to come out of what the party had with them, not the barn. 52 (barn) + 4 (carried) = 56, matching light.py oilstate.
+2026-09-23	118	party	hand_axe	move	6	each	off six orcs, area 11, day 118 -- salvage for town
+2026-09-23	118	party	short_bow	move	1	each	off an orc, area 11, day 118 -- salvage for town
+2026-09-23	118	party	spear	move	1	each	off an orc, area 11, day 118 -- salvage for town
+2026-09-23	118	party	polearm_orc	move	2	each	off two orcs, area 11, day 118 -- salvage for town
+2026-09-23	118	party	crossbow_light	move	2	each	off two orcs, area 11, day 118 -- salvage for town
+2026-09-23	118	party	nails_timber	move	25	lb	the area 11 supply room's box of nails
+2026-09-23	118	party	mortar_bag	move	1	each	the area 11 supply room's nearly-empty mortar sack
+2026-09-23	118	party	hardware_box	move	1	each	the area 11 supply room's hardware box
