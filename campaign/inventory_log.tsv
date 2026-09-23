@@ -338,3 +338,5 @@ when	day	asset	verb	qty	unit	condition	holder	evidence	note
 2026-09-23	118	hardware_box	move	1.0	each				the hardware box, area 11, day 118
 2026-09-23	118	nails_timber	move	-25.0	each				CORRECTION same session: wrong unit, should be lb not each -- nails_timber is priced per pound. See the next row.
 2026-09-23	118	nails_timber	move	25.0	lb				box of nails, area 11 supply room, day 118 -- estimated 25 lb, no count given by the module
+2026-09-23	119	rope_heavy_200ft	move	1.0	each				area 11 supply room, day 119 -- the 200 ft coil of very heavy rope
+2026-09-23	119	iron_spike	move	50.0	each				area 11 supply room, day 119 -- the box of 50 iron spikes (the box itself left behind)
