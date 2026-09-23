@@ -171,3 +171,60 @@ def test_member_correction_that_matches_no_square_is_reported(tmp_path):
     n, problems = build.apply_corrections(db, tsv, 1, quiet=True)
     assert n == 0
     assert len(problems) == 1 and 'matched nothing' in problems[0]
+
+
+# --------------------------------------------------- provenance: play vs extraction
+
+def test_provenance_defaults_to_extraction_and_carries_no_marker(tmp_path):
+    """The ordinary case, seven columns, exactly as every existing row is."""
+    db = tiny_db(str(tmp_path / 'o.sqlite'))
+    tsv = write(tmp_path / 'o.tsv',
+                ('edge', '4', '5', 'H', 'open', 'dl', 'misread as a wall'))
+    n, problems = build.apply_corrections(db, tsv, 1, quiet=True)
+    assert (n, problems) == (1, [])
+    con = sqlite3.connect(db)
+    notes = con.execute("SELECT notes FROM edges WHERE x=4 AND y=5 AND orient='H'"
+                        ).fetchone()[0]
+    con.close()
+    assert build.PLAY_OVERRIDE_MARKER not in notes
+
+
+def test_provenance_play_prefixes_the_marker(tmp_path):
+    """day 99's (4,15,H): not a misread, a deliberate addition, player-permitted."""
+    db = tiny_db(str(tmp_path / 'p.sqlite'))
+    tsv = write(tmp_path / 'p.tsv',
+                ('edge', '4', '5', 'H', 'open', 'dl+claude', 'orcs needed somewhere '
+                 'to have gone', 'play'))
+    n, problems = build.apply_corrections(db, tsv, 1, quiet=True)
+    assert (n, problems) == (1, [])
+    con = sqlite3.connect(db)
+    notes = con.execute("SELECT notes FROM edges WHERE x=4 AND y=5 AND orient='H'"
+                        ).fetchone()[0]
+    con.close()
+    assert build.PLAY_OVERRIDE_MARKER in notes
+    assert 'orcs needed somewhere to have gone' in notes
+
+
+def test_an_unknown_provenance_is_reported_not_silently_applied(tmp_path):
+    db = tiny_db(str(tmp_path / 'q.sqlite'))
+    tsv = write(tmp_path / 'q.tsv',
+                ('edge', '4', '5', 'H', 'open', 'dl', 'n', 'guess'))
+    n, problems = build.apply_corrections(db, tsv, 1, quiet=True)
+    assert n == 0
+    assert len(problems) == 1 and 'provenance' in problems[0]
+
+
+def test_the_shipped_b1_override_is_marked_play():
+    """The one row this whole mechanism was built for."""
+    root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    path = os.path.join(root, 'b1_corrections.tsv')
+    found = False
+    for line in open(path):
+        line = line.split('#')[0].strip()
+        if not line:
+            continue
+        f = [c.strip() for c in line.split('\t') if c.strip()]
+        if f[:4] == ['edge', '4', '15', 'H']:
+            found = True
+            assert len(f) > 7 and f[7] == 'play'
+    assert found, 'the (4,15,H) DM addition is missing from b1_corrections.tsv'

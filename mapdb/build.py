@@ -159,6 +159,11 @@ def write_db(db, run, key, level, name, source, schema='schema.sql'):
     con.close()
 
 
+PLAY_OVERRIDE_MARKER = (
+    '*** PLAY OVERRIDE -- NOT ON THE PRINTED PAGE. A page-render check should '
+    'SKIP this cell/edge, not flag it as a mismatch. ***')
+
+
 def apply_corrections(db, path, level, quiet=False):
     """Overlay human corrections. Applied last, so they always win.
 
@@ -166,6 +171,20 @@ def apply_corrections(db, path, level, quiet=False):
     directly in SQLite dies at the next run. Recording it here makes it durable
     and doubles as a regression set: after a threshold change, re-run and check
     that none of these had to move.
+
+    *** TWO KINDS OF ROW, AND THEY ARE NOT THE SAME CLAIM. *** Most corrections
+    fix a MISREAD of the printed page -- the classifier saw a numeral as rock,
+    the S-glyph as furniture. An eighth column, `provenance`, marks the other
+    kind: `play` means the party and the DM agreed to put something on the map
+    that the PAGE DOES NOT SHOW AT ALL -- day 99's opening at (4,15,H), added
+    because six orcs needed somewhere to have gone, with the player's own
+    permission on record and connectivity checked before it was applied.
+    Omit the column, or write `extraction`, for the ordinary kind.
+
+    A `play` row gets `PLAY_OVERRIDE_MARKER` prefixed onto its note, so it is
+    greppable, so a future page-render verification pass knows to SKIP it
+    instead of reporting a correct correction as a mismatch against a page it
+    was never trying to match.
 
     Returns (applied, problems).
     """
@@ -189,6 +208,14 @@ def apply_corrections(db, path, level, quiet=False):
             continue
         who = f[5] if len(f) > 5 else '?'
         note = f[6] if len(f) > 6 else ''
+        provenance = f[7] if len(f) > 7 else 'extraction'
+        if provenance not in ('extraction', 'play'):
+            problems.append('%s:%d provenance %r is neither extraction nor '
+                            'play: %r' % (path, ln, provenance, raw.strip()))
+            continue
+        if provenance == 'play':
+            note = (PLAY_OVERRIDE_MARKER + ' ' + note) if note \
+                else PLAY_OVERRIDE_MARKER
         if what == 'cell':
             cur = con.execute(
                 "UPDATE cells SET terrain=?, confidence=10,"

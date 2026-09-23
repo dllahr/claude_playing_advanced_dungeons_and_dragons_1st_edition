@@ -640,6 +640,22 @@ reachability check. `merge_lv2.sql` deletes level 2 first, so it is idempotent.
 stamps every row at the level you pass. Level 2 therefore has its own
 `b1_lv2_corrections.tsv` (177 rows) and its own key module `b1_lv2_key.py`.
 
+### Two kinds of correction, and they are not the same claim
+
+Day 118: the player asked, of `(4,15,H)`, "what's the right way to store this" —
+a passage the DM added mid-session to explain where six orcs went, with the
+player's explicit permission, that **is not on the printed page at all.** Most
+rows in a corrections file fix a MISREAD of the page; this kind asserts
+something the page never showed. Conflating them means a future page-render
+verification pass reports a correct, deliberate override as a mismatch.
+
+**`apply_corrections` takes an optional 8th column, `provenance`.** Omit it, or
+write `extraction`, for the ordinary case. Write `play` for a deliberate,
+player-permitted departure from the page — it prefixes `build.PLAY_OVERRIDE_MARKER`
+onto the stored note, so any future check that renders the page and diffs it
+against the database can `grep` for that marker and skip the cell/edge instead
+of flagging it. `(4,15,H)` in `b1_corrections.tsv` is the one example so far.
+
 ## THE SHEET HAS A SECOND LEGEND
 
 Page 1 prints DOOR / SECRET DOOR / FALSE DOOR / ONE-WAY SECRET DOOR / STAIRS /

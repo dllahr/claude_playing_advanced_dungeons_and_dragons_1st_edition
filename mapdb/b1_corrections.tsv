@@ -1,6 +1,14 @@
 # Human corrections to B1, Quasqueton upper level.
 # APPLIED LAST by build.py, so these always win over the classifier.
-# Format: what  x  y  orient  value  who  note      (see corrections.tsv)
+# Format: what  x  y  orient  value  who  note  [provenance]      (see corrections.tsv)
+#
+# `provenance`, the optional 8th column: `extraction` (default, omit the
+# column) fixes a MISREAD of the printed page. `play` means the page shows
+# something else ENTIRELY and the party and DM agreed to put this on the map
+# anyway -- day 99's opening at (4,15,H) is the one example so far. A `play`
+# row gets a fixed marker prefixed onto its stored note (build.py's
+# PLAY_OVERRIDE_MARKER) so a page-render verification pass can grep for it and
+# skip the cell/edge instead of reporting a correct override as a mismatch.
 #
 # --- furniture drawn inside a room, read as structure -------------------------
 # Both of these were found by the room-size cross-check, not by reachability.
@@ -868,7 +876,7 @@ edge	6	20	V	wall	dl+claude	AUDITED day 95 with (6,20,H); 15.0 px, the thickest r
 # ⚠ IT IS AN INVENTION AND THE FILE SAYS SO. Every other row here cites a page
 # render; this one cites a die and a permission, and is the single least
 # defensible entry in this file. If it ever needs reversing, reverse it.
-edge	4	15	H	open	dl+claude	DM ADDITION day 99, PLAYER-PERMITTED, NOT on the printed map. An opening in the south wall of the (2,16)-(6,16) corridor at (4,16), leading south into (4,15). Added because six orcs used a pocket that had nowhere for them to go. Connectivity verified first: (4,15) already reaches 1,182 squares and every keyed area without it
+edge	4	15	H	open	dl+claude	An opening in the south wall of the (2,16)-(6,16) corridor at (4,16), leading south into (4,15). Added because six orcs used a pocket that had nowhere for them to go. Connectivity verified first: (4,15) already reaches 1,182 squares and every keyed area without it	play
 #
 # --- THE HALF-ELLIPSE CORRIDOR ROUND AREA 12, day 99 -------------------------
 # PLAYER-CAUGHT, 2026-09-19: "the corridor only goes in one direction, it
