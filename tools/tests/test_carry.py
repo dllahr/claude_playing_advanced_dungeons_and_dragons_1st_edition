@@ -238,9 +238,15 @@ def test_a_harder_target_leaves_weight_behind():
 
 
 def test_the_easy_target_absorbs_it_all_and_says_the_party_rate():
-    out = carry.pack_report(target='heavy')
+    """Day 118: orc salvage (six hand axes, a short bow, a spear, two
+    polearms, two light crossbows) plus the area 11 supply room's nails,
+    mortar and hardware box added ~150 lb of shared kit. 'heavy' (9") no
+    longer absorbs all of it -- 'very heavy' (6") is now the target that
+    does, which is exactly what the player computed at the table before
+    this was logged."""
+    out = carry.pack_report(target='very heavy')
     assert 'IT ALL FITS' in out
-    assert 'THE PARTY MOVES AT 9"' in out
+    assert 'THE PARTY MOVES AT 6"' in out
 
 
 def test_fewer_bearers_can_make_it_stop_fitting():
