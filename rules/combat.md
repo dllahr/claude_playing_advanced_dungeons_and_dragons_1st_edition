@@ -529,6 +529,69 @@ negates his own segments on dexterity is **not frozen and not a free target, and
 that is the whole of it**. His opponents are not inactive, so nothing multiplies:
 he acts at his **normal rate of fire, once**.
 
+> ### ⚠ THE "ENTIRE ROUND" LANGUAGE IS ABOUT ATTACK RATE ONLY — NOT MOVEMENT
+>
+> Day 118, player-caught. The DM let a surprised-side monster use its FULL
+> round's movement rate within a single surprise segment (i.e. treated 12"
+> of movement as available in one segment, not one-tenth of it). **The "as if
+> the segment were an entire round" sentence is scoped to attacks** — the
+> quote's own subject is "the surprising party will be able to attempt
+> **telling blows**… the discharge of arrows…". Movement is never mentioned.
+> **Movement in a surprise segment prorates normally: round-rate ÷ 10.** A
+> creature with MV 12" (120 ft/round) covers **12 ft in one segment**, not
+> 120. Getting this backwards can turn "surprised and inactive" into "closes
+> the whole room and gets there anyway," which defeats the entire point of
+> the mechanic.
+
+> ### ⚠ ENCOUNTER DISTANCE IS CAPPED WHENEVER SURPRISE IS INDICATED — day 118
+>
+> DMG p.62, DISTANCE, item 5: *"Surprise can only be a factor in close
+> encounter situations. If either or both parties are surprised, the
+> distance must be either 1″ to 3″ [10-30 ft] or it must be less."* This
+> OVERRIDES the base 5″-10″ (d6+4) roll, and it triggers on **either** side
+> being surprised, not just both. The DM rolled the base distance (and even
+> then used the wrong formula, 2d6×10, for it) on an encounter where a
+> surprise die had already come up hot. **Check for surprise before you
+> settle distance, not after** — the base roll never applies if surprise is
+> live for anyone.
+
+> ### ⚠ A WATCH ACTIVELY POSTED CAN CANCEL A MONSTER'S SPECIAL SURPRISE BONUS
+>
+> Ruled day 118. DMG p.62's "Factors Contributing to Surprise" explicitly
+> invites the DM to shift a side's surprise chance in sixths for
+> circumstances — *"attention elsewhere, no weapon ready"* worsens it, and
+> the DMG gives no reason the inverse can't improve it. **Characters
+> specifically posted as a dedicated watch, facing the threat direction with
+> weapons ready, is the textbook opposite of "attention elsewhere."** Ruling:
+> a posted watch cancels a monster's ABOVE-BASELINE surprise chance (e.g. a
+> troglodyte's chameleon-skin 1-4 reverts to the standard 1-2) but does not
+> grant anything BETTER than standard — there is no textual basis for going
+> below baseline just for standing guard.
+>
+> **Check `bestiary/*.md` for a non-standard `Surprises On` BEFORE rolling
+> the party's die, not after**, same as the elf-passive-checks safeguard.
+
+> ### ⚠ DMG p.62's OWN TABLE AND ITS OWN WORKED EXAMPLE CONTRADICT EACH OTHER
+>
+> Found day 118, checked against page renders of both p.61 and p.62 — not a
+> misreading, an actual self-contradiction in the book. The p.62 table says
+> the LOWER of two same-range dice (e.g. party=1, monster=2) is the side
+> that gets surprised. The very next paragraph's worked example ("Party A is
+> surprised on 1 or 2, B only on 1. A rolls 2, B rolls 1, so **A** is
+> inactive") has the HIGHER roller surprised instead. **Both readings cannot
+> be right, and nothing on the page resolves it.**
+>
+> **It did not matter for day 118's fight and may never matter again**: the
+> ambiguity only lives in the case where BOTH sides' rolls independently
+> qualify as surprise under their OWN thresholds. The much more common case —
+> one side's roll falls outside its own threshold entirely — is unambiguous
+> and doesn't touch this table row at all; it is a plain single-side case
+> (`ONE side surprised: the surprised side's own die roll`, the row already
+> cached above). **Reach for the difference table (DMG p.61, bottom right)
+> only when both sides' individual rolls clear their own thresholds.** If
+> this exact tied-range ambiguity ever becomes load-bearing, stop and ask
+> rather than picking a side of the contradiction silently.
+
 > *Caught by the player 2026-09-13, day 79, within the hour of this section
 > being written — the DM told him Tristle's bow fired at 3x because the rule had
 > been cached WITHOUT ITS SUBJECT. That is the same defect, in the same file,

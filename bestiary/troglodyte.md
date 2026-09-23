@@ -39,6 +39,19 @@ python tools/combat.py surprise --who party --surprised-on 4 \
     --why "troglodyte chameleon skin, MM p.97"
 ```
 
+**Third mis-roll, day 118 — a THIRD encounter this campaign, and it produced
+a genuine rules find, not just a repeat.** The default 1-4 was missed again
+(costing nothing this time, since it was caught before the fight's outcome
+was finalized), but the correction turned up a real mitigating factor: **a
+character or pair specifically posted as a dedicated watch, weapons ready,
+facing the threat direction, cancels the chameleon bonus back to the
+standard 1-2** — DMG p.62's own "Factors Contributing to Surprise" sanctions
+shifting the chance for exactly this kind of circumstance. See the three
+boxes under "What a segment buys" in `rules/combat.md` for the full chain
+(this also caught a movement-rate error and a distance-formula error in the
+same fight). **Check whether the party has a watch posted before applying
+the flat 1-4** — it may not apply.
+
 ## Special attacks
 
 | Attack | Trigger | Save | Effect | Duration |
