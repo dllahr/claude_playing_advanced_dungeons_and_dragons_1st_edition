@@ -8840,3 +8840,146 @@ when	exped	turn	notation	dice	modifier	total	hidden	reason
 2026-09-22			1d2	2	0	2		door at (5,31,V)/(6,31) swing direction -- B1's printed map key shows only a plain rectangle glyph for DOOR, no hinge/arc, so swing is not extractable from the page. 1=opens toward the party (east, into 6,31), 2=opens away (west, into 5,31)
 2026-09-22			1d6	6	0	6		door (5,31,V), B1's own door rule, rolled at examination: 1-2 locked, 3-6 opens
 2026-09-22			1d6	2	0	2		did Durnhak actually spike the north door (6,18,H) behind the party after they left, day 99 -- he was given 4 spikes and the choice, never confirmed either way: 1-3 yes, he did; 4-6 no, he didn't bother (or reasoned the shaft itself was guard enough)
+2026-09-22			d6	3	0	3		wandering check, anchor 90
+2026-09-22			d6	6	0	6		day 118: Blartho search, wall south of (9,29) [(9,28,H)], non-elf 1-in-6
+2026-09-22			d6	5	0	5		day 118: Yrtone search, wall south of (9,29) [(9,28,H)], non-elf 1-in-6
+2026-09-22			d6	2	0	2		day 118: Frython search, wall south of (9,29) [(9,28,H)], non-elf 1-in-6
+2026-09-22			d6	6	0	6		day 118: Hask search, wall south of (9,29) [(9,28,H)], non-elf 1-in-6
+2026-09-22			d6	5	0	5		day 118: Dellie search, wall south of (9,29) [(9,28,H)], non-elf 1-in-6
+2026-09-22			d6	2	0	2		day 118: Ista search, wall south of (9,29) [(9,28,H)], non-elf 1-in-6
+2026-09-22			d6	1	0	1		day 118: Brand search, wall south of (9,29) [(9,28,H)], non-elf 1-in-6
+2026-09-22			d6	6	0	6		day 118: Tristle search, wall south of (9,29) [(9,28,H)], elf 2-in-6
+2026-09-22			d6	6	0	6		wandering check, anchor 120
+2026-09-22			d6	3	0	3		day 118: Blartho search, west wall of (10,28) [(9,28,V)], non-elf 1-in-6
+2026-09-22			d6	2	0	2		day 118: Yrtone search, west wall of (10,28) [(9,28,V)], non-elf 1-in-6
+2026-09-22			d6	2	0	2		day 118: Frython search, west wall of (10,28) [(9,28,V)], non-elf 1-in-6
+2026-09-22			d6	4	0	4		day 118: Hask search, west wall of (10,28) [(9,28,V)], non-elf 1-in-6
+2026-09-22			d6	3	0	3		day 118: Dellie search, west wall of (10,28) [(9,28,V)], non-elf 1-in-6
+2026-09-22			d6	1	0	1		day 118: Ista search, west wall of (10,28) [(9,28,V)], non-elf 1-in-6
+2026-09-22			d6	5	0	5		day 118: Brand search, west wall of (10,28) [(9,28,V)], non-elf 1-in-6
+2026-09-22			d6	1	0	1		day 118: Tristle search, west wall of (10,28) [(9,28,V)], elf 2-in-6
+2026-09-22			d6	6	0	6		day 118: Blartho search, west wall of (10,27) [(9,27,V)], non-elf 1-in-6
+2026-09-22			d6	5	0	5		day 118: Yrtone search, west wall of (10,27) [(9,27,V)], non-elf 1-in-6
+2026-09-22			d6	5	0	5		day 118: Frython search, west wall of (10,27) [(9,27,V)], non-elf 1-in-6
+2026-09-22			d6	4	0	4		day 118: Hask search, west wall of (10,27) [(9,27,V)], non-elf 1-in-6
+2026-09-22			d6	5	0	5		day 118: Dellie search, west wall of (10,27) [(9,27,V)], non-elf 1-in-6
+2026-09-22			d6	1	0	1		day 118: Ista search, west wall of (10,27) [(9,27,V)], non-elf 1-in-6
+2026-09-22			d6	3	0	3		day 118: Brand search, west wall of (10,27) [(9,27,V)], non-elf 1-in-6
+2026-09-22			d6	6	0	6		day 118: Tristle search, west wall of (10,27) [(9,27,V)], elf 2-in-6
+2026-09-22			d6	3	0	3		day 118: Blartho search, west wall of (10,26) [(9,26,V)], non-elf 1-in-6
+2026-09-22			d6	3	0	3		day 118: Yrtone search, west wall of (10,26) [(9,26,V)], non-elf 1-in-6
+2026-09-22			d6	3	0	3		day 118: Frython search, west wall of (10,26) [(9,26,V)], non-elf 1-in-6
+2026-09-22			d6	2	0	2		day 118: Hask search, west wall of (10,26) [(9,26,V)], non-elf 1-in-6
+2026-09-22			d6	6	0	6		day 118: Dellie search, west wall of (10,26) [(9,26,V)], non-elf 1-in-6
+2026-09-22			d6	3	0	3		day 118: Ista search, west wall of (10,26) [(9,26,V)], non-elf 1-in-6
+2026-09-22			d6	5	0	5		day 118: Brand search, west wall of (10,26) [(9,26,V)], non-elf 1-in-6
+2026-09-22			d6	1	0	1		day 118: Tristle search, west wall of (10,26) [(9,26,V)], elf 2-in-6
+2026-09-22			d6	1	0	1		wandering check, anchor 150
+2026-09-22			d6	4	0	4		wandering table, level 1
+2026-09-22			2d6	3,5	0	8		day 118: round 153, troglodyte encounter -- base distance roll (x10), capped by 30ft lantern at 60ft
+2026-09-22			d6	4	0	4		day 118: round 153, troglodyte encounter -- party surprise, 2-in-6, guards posted per declared search formation
+2026-09-22			d6	1	0	1		day 118: round 153, troglodyte encounter -- monster surprise, 2-in-6
+2026-09-22			d20	13	0	13		Dave attacks with short bow
+2026-09-22			d20	1	0	1		Dave attacks with short bow
+2026-09-22			d20	13	0	13		Dave attacks with short bow
+2026-09-22			d20	13	0	13		Torsat attacks with short bow
+2026-09-22			d20	1	0	1		Torsat attacks with short bow
+2026-09-22			d20	5	0	5		Torsat attacks with short bow
+2026-09-22			d6	5	0	5		initiative, party
+2026-09-22			d6	5	0	5		initiative, monsters
+2026-09-22			d20	13	0	13		Blartho attacks with sling
+2026-09-22			d20	15	0	15		Yrtone attacks with sling
+2026-09-22			d20	8	0	8		Frython attacks with dart
+2026-09-22			d20	8	0	8		Frython attacks with dart
+2026-09-22			d20	1	0	1		Frython attacks with dart
+2026-09-22			d20	11	0	11		Hask attacks with sling
+2026-09-22			d20	20	0	20		Dellie attacks with sling
+2026-09-22			2-5 (1d4+1)	1	1	2		Dellie damage, sling
+2026-09-22			d20	13	0	13		Ista attacks with dart
+2026-09-22			d20	13	0	13		Ista attacks with dart
+2026-09-22			d20	8	0	8		Ista attacks with dart
+2026-09-22			d20	9	0	9		Tristle attacks with short bow
+2026-09-22			d20	15	0	15		Tristle attacks with short bow
+2026-09-22			1-6 (1d6)	4	0	4		Tristle damage, short bow
+2026-09-22			d20	20	0	20		Dave attacks with short bow
+2026-09-22			1-6 (1d6)	1	0	1		Dave damage, short bow
+2026-09-22			d20	13	0	13		Dave attacks with short bow
+2026-09-22			d20	19	0	19		Torsat attacks with short bow
+2026-09-22			1-6 (1d6)	2	0	2		Torsat damage, short bow
+2026-09-22			d20	1	0	1		Torsat attacks with short bow
+2026-09-22			d20	4	0	4		troglodyte A attack 1 attacks AC 3
+2026-09-22			d20	6	0	6		troglodyte A attack 2 attacks AC 3
+2026-09-22			d20	15	0	15		troglodyte A attack 3 attacks AC 3
+2026-09-22			1-3 (1d3)	2	0	2		troglodyte A attack 3 damage
+2026-09-22			d20	18	0	18		troglodyte A attack 4 attacks AC 3
+2026-09-22			1-3 (1d3)	3	0	3		troglodyte A attack 4 damage
+2026-09-22			d20	20	0	20		troglodyte A attack 5 attacks AC 3
+2026-09-22			1-3 (1d3)	3	0	3		troglodyte A attack 5 damage
+2026-09-22			d20	16	0	16		troglodyte A attack 6 attacks AC 3
+2026-09-22			1-3 (1d3)	1	0	1		troglodyte A attack 6 damage
+2026-09-22			d20	15	0	15		troglodyte A attack 7 attacks AC 3
+2026-09-22			1-3 (1d3)	1	0	1		troglodyte A attack 7 damage
+2026-09-22			d20	8	0	8		troglodyte A attack 8 attacks AC 3
+2026-09-22			d20	11	0	11		troglodyte A attack 9 attacks AC 3
+2026-09-22			d20	13	0	13		troglodyte A attacks AC 3
+2026-09-22			1-3 (1d3)	1	0	1		troglodyte A damage
+2026-09-22			d20	2	0	2		troglodyte A attacks AC 3
+2026-09-22			d20	15	0	15		troglodyte A attacks AC 3
+2026-09-22			2-5 (1d4+1)	4	1	5		troglodyte A damage
+2026-09-22			d20	7	0	7		troglodyte A attacks AC 3
+2026-09-22			d20	17	0	17		troglodyte A attacks AC 3
+2026-09-22			1-3 (1d3)	1	0	1		troglodyte A damage
+2026-09-22			d20	5	0	5		troglodyte A attacks AC 3
+2026-09-22			d20	14	0	14		troglodyte A attacks AC 3
+2026-09-22			1-3 (1d3)	1	0	1		troglodyte A damage
+2026-09-22			d20	10	0	10		troglodyte A attacks AC 3
+2026-09-22			d20	18	0	18		troglodyte A attacks AC 3
+2026-09-22			2-5 (1d4+1)	1	1	2		troglodyte A damage
+2026-09-22			d20	14	0	14		troglodyte B attacks AC 3
+2026-09-22			1-3 (1d3)	2	0	2		troglodyte B damage
+2026-09-22			d20	6	0	6		troglodyte B attacks AC 3
+2026-09-22			d20	11	0	11		troglodyte B attacks AC 3
+2026-09-22			d20	15	0	15		troglodyte B attacks AC 3
+2026-09-22			1-3 (1d3)	2	0	2		troglodyte B damage
+2026-09-22			d20	14	0	14		troglodyte B attacks AC 3
+2026-09-22			1-3 (1d3)	3	0	3		troglodyte B damage
+2026-09-22			d20	4	0	4		troglodyte B attacks AC 3
+2026-09-22			d20	10	0	10		troglodyte B attacks AC 3
+2026-09-22			d20	10	0	10		troglodyte B attacks AC 3
+2026-09-22			d20	10	0	10		troglodyte B attacks AC 3
+2026-09-22			1-3 (1d3)	3	0	3		day 118, round 153, CORRECTED: encounter distance capped at 1-3 inches (10-30ft) because surprise is indicated (DMG p.62 Distance/Surprise); supersedes the earlier 2d6x10 roll
+2026-09-22			d100	100	0	100		day 118: troglodyte A weapon roll -- MM p.97, 25 javelin/35 battle axe/45 morning star/50 sword/else unarmed
+2026-09-22			d100	100	0	100		day 118: troglodyte B weapon roll -- MM p.97, 25 javelin/35 battle axe/45 morning star/50 sword/else unarmed
+2026-09-22			d20	19	0	19		Dave attacks with short bow
+2026-09-22			1-6 (1d6)	5	0	5		Dave damage, short bow
+2026-09-22			d20	18	0	18		Dave attacks with short bow
+2026-09-22			1-6 (1d6)	1	0	1		Dave damage, short bow
+2026-09-22			d20	14	0	14		Dave attacks with short bow
+2026-09-22			d20	17	0	17		Torsat attacks with short bow
+2026-09-22			1-6 (1d6)	4	0	4		Torsat damage, short bow
+2026-09-22			d20	9	0	9		Torsat attacks with short bow
+2026-09-22			d20	3	0	3		Torsat attacks with short bow
+2026-09-22			d100	24	0	24		morale
+2026-09-22			d6	2	0	2		initiative, party
+2026-09-22			d6	1	0	1		initiative, monsters
+2026-09-22			d20	2	0	2		Dave attacks with short bow
+2026-09-22			d20	14	0	14		Dave attacks with short bow
+2026-09-22			d20	5	0	5		Torsat attacks with short bow
+2026-09-22			d20	1	0	1		Torsat attacks with short bow
+2026-09-22			d20	8	0	8		Blartho attacks with sling
+2026-09-22			d20	10	0	10		Yrtone attacks with sling
+2026-09-22			d20	17	0	17		Hask attacks with sling
+2026-09-22			2-5 (1d4+1)	4	1	5		Hask damage, sling
+2026-09-22			d20	15	0	15		Dellie attacks with sling
+2026-09-22			d20	2	0	2		Frython attacks with dart
+2026-09-22			d20	11	0	11		Frython attacks with dart
+2026-09-22			d20	6	0	6		Frython attacks with dart
+2026-09-22			d20	10	0	10		Ista attacks with dart
+2026-09-22			d20	3	0	3		Ista attacks with dart
+2026-09-22			d20	19	0	19		Ista attacks with dart
+2026-09-22			1-3 (1d3)	3	0	3		Ista damage, dart
+2026-09-22			d20	15	0	15		Tristle attacks with short bow
+2026-09-22			1-6 (1d6)	2	0	2		Tristle damage, short bow
+2026-09-22			d20	12	0	12		Tristle attacks with short bow
+2026-09-22			1-6 (1d6)	3	0	3		Tristle damage, short bow
+2026-09-22			d20	3	0	3		Brand attacks with hand axe

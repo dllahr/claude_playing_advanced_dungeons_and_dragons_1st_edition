@@ -128,3 +128,49 @@ when	day	exped	round	side	actor	verb	target	qty	detail
 2026-09-19	99		1	monsters	orc-3	dead			hp 3. UNTOUCHED by the front rank -- the d4s sent every one of their five hits elsewhere -- and killed by TRISTLE'S FIRST ARROW for 6 a heartbeat later
 2026-09-19	99		1	monsters	orc-4	dead			hp 2. Torsat's first arrow, 4
 2026-09-19	99		1			end			AREA 12, THE LIBRARY. FOUR ORCS DEAD IN THE FIRST SURPRISE SEGMENT; segments 2 and 3 never used and not a single one of them acted. *** NOBODY IN THE PARTY WAS TOUCHED. *** Surprise d6=3 against a range widened to 1-4, and no die rolled for the party at all (prior detection is unilateral, DMG p.62). Distance d6=1, STRIKING DISTANCE -- they were right at the door. Front rank fired at the DMG p.62 TRIPLE RATE for ready missiles: Dave 6 arrows (3 hits, 3+4+5), Torsat 6 (2 hits, 4+3), Yrtone 3 sling bullets (all missed). Nineteen damage, and the five hits were distributed BY d4 rather than assigned, which is why orc-3 came through the front rank's whole volley untouched. Tristle's first arrow finished him for 6. *** TORSAT ROLLED A NATURAL 1 and it is NOT friendly fire: the into-melee ruling needs somebody engaged and downrange, and nobody was -- the party was all behind the front rank shooting forward through a doorway, and Ista had hauled the leaf back along the wall and stepped clear. *** XP WHEN THEY GET OUT: orc 10 + 1/hp (rules/experience.md, DMG Appendix E p.208). hp 5,4,3,2 -> 15+14+13+12 = 54. Earned by the eight on expedition 13.
+2026-09-22	118		1			start			day 118, round 153: troglodytes (2), wandering, approaching down the x=10 corridor from the south, encounter distance 60ft, monsters surprised (d6=1, lose 1 segment), party not surprised (d6=4)
+2026-09-22	118		1	party	Dave	declare			surprise segment: short bow, rapid fire (3x normal rate, weapon already in hand) at the near troglodyte, medium range ~60ft
+2026-09-22	118		1	party	Torsat	declare			surprise segment: short bow, rapid fire (3x normal rate, weapon already in hand) at the near troglodyte, medium range ~60ft
+2026-09-22	118		1	party	Blartho	declare			readying weapon -- no missile in hand this segment, cannot fire yet
+2026-09-22	118		1	party	Yrtone	declare			readying weapon -- no missile in hand this segment, cannot fire yet
+2026-09-22	118		1	party	Frython	declare			readying dart -- no missile in hand this segment, cannot fire yet
+2026-09-22	118		1	party	Hask	declare			readying weapon -- no missile in hand this segment, cannot fire yet
+2026-09-22	118		1	party	Dellie	declare			readying weapon -- no missile in hand this segment, cannot fire yet
+2026-09-22	118		1	party	Ista	declare			readying dart -- no missile in hand this segment, cannot fire yet
+2026-09-22	118		1	party	Brand	declare			readying weapon -- no missile in hand this segment, cannot fire yet
+2026-09-22	118		1	party	Tristle	declare			readying short bow -- no missile in hand this segment, cannot fire yet
+2026-09-22	118		2			initiative			round 2 begins
+2026-09-22	118		2	party	Dave	declare			round 2: short bow, normal rate, at the approaching troglodyte
+2026-09-22	118		2	party	Torsat	declare			round 2: short bow, normal rate, at the approaching troglodyte
+2026-09-22	118		2	party	Blartho	declare			sling at the approaching troglodyte
+2026-09-22	118		2	party	Yrtone	declare			sling at the approaching troglodyte
+2026-09-22	118		2	party	Frython	declare			dart at the approaching troglodyte
+2026-09-22	118		2	party	Hask	declare			sling at the approaching troglodyte
+2026-09-22	118		2	party	Dellie	declare			sling at the approaching troglodyte
+2026-09-22	118		2	party	Ista	declare			dart at the approaching troglodyte
+2026-09-22	118		2	party	Tristle	declare			short bow, normal rate, at the approaching troglodyte
+2026-09-22	118		2	party	Brand	declare			hand axe -- out of range at this distance, holds
+2026-09-22	118		2	party	Brand	declare			hand axe -- out of range at this distance, holds
+2026-09-22	118		2	monsters		damage	troglodyte	9	
+2026-09-22	118		2	monster	troglodyte	dead			troglodyte A: hp 6, took 9 damage this round -- dead
+2026-09-22	118		2	monster		surprise			CORRECTION: rounds 1-2 above are VOID. bestiary/troglodyte.md: troglodytes surprise the party on 1-4 (chameleon skin), not the default 1-2 -- missed before rolling. Redone: party surprise die 4 (within 1-4 = surprised), monster surprise die 1 (within their own 1-2 = surprised), both surprised -> difference 3, higher die (party) loses 3 segments. Troglodyte A is NOT dead -- that kill did not happen. Troglodytes A and B each got 3 free segments (claw/claw/bite x3) against Dave and Torsat respectively, who were standing forward as guards. Dave: 10 dmg, -1 hp, unconscious. Torsat: 7 dmg, -1 hp, unconscious. Both troglodytes now in melee. Normal round-by-round combat begins now for the rest of the party.
+2026-09-22	118		3			initiative			round 3 begins
+2026-09-22	118		3	monster		surprise			SECOND CORRECTION, player-caught (movement rate, guard mitigation, distance formula). Guards posted (Dave/Torsat) restore party's surprise threshold to standard 1-2, negating the troglodyte chameleon 1-4 bonus -- party's own die (4) no longer qualifies, PARTY NOT SURPRISED. Monsters' own die (1) still qualifies on their standard 1-2 -- MONSTERS SURPRISED, single-side rule, 1 segment lost (not 3). Encounter distance re-rolled correctly per DMG p.62 (surprise caps distance at 1-3in/10-30ft, not the 60ft used before): rolled 3in = 30ft. Troglodyte movement corrected to 12ft/segment (not full round-rate per segment): in their 1 free segment they close to 18ft, NOT melee range. Both rolled unarmed (d100=100,100) so no javelin option either. NO DAMAGE OCCURS this segment. Dave and Torsat's hp restored to full via hp.py anchor -- see hp_log.tsv. Troglodyte A is NOT dead -- revert that too. Normal round-by-round combat begins now at 18ft, party not surprised, fully able to act.
+2026-09-22	118		3	party	Dave	declare			surprise segment (corrected, monsters surprised not party): short bow, 3x normal rate = 6 shots total, weapon already in hand, at 30ft short range
+2026-09-22	118		3	party	Torsat	declare			surprise segment (corrected, monsters surprised not party): short bow, 3x normal rate = 6 shots total, weapon already in hand, at 30ft short range
+2026-09-22	118		3	monsters		damage	troglodyte	10	
+2026-09-22	118		3	monster	troglodyte	dead			troglodyte A: hp 6, took 10 damage across the corrected surprise-segment volley (6 shots each from Dave and Torsat, short range) -- dead, legitimately this time
+2026-09-22	118		4			initiative			round 4 begins
+2026-09-22	118		4	party	Dave	declare			round: short bow, normal rate at the remaining troglodyte
+2026-09-22	118		4	party	Torsat	declare			round: short bow, normal rate at the remaining troglodyte
+2026-09-22	118		4	party	Blartho	declare			round: sling at the remaining troglodyte
+2026-09-22	118		4	party	Yrtone	declare			round: sling at the remaining troglodyte
+2026-09-22	118		4	party	Frython	declare			round: dart at the remaining troglodyte
+2026-09-22	118		4	party	Hask	declare			round: sling at the remaining troglodyte
+2026-09-22	118		4	party	Dellie	declare			round: sling at the remaining troglodyte
+2026-09-22	118		4	party	Ista	declare			round: dart at the remaining troglodyte
+2026-09-22	118		4	party	Tristle	declare			round: short bow, normal rate at the remaining troglodyte
+2026-09-22	118		4	party	Brand	declare			round: hand axe, long range 30ft at the remaining troglodyte
+2026-09-22	118		4	monsters		damage	troglodyte	13	
+2026-09-22	118		4	monster	troglodyte	dead			troglodyte B: hp 5, took 13 damage -- dead. Both troglodytes down, no party casualties.
+2026-09-22	118		4			end			day 118, round 153ish: both troglodytes killed, zero party casualties after the surprise/distance/movement corrections. Dave, Torsat unhurt.

@@ -974,3 +974,21 @@ when	exped	round	kind	anchor	detail	note
 2026-09-22	14	81	advance		1	day 118: to the fork at (4,14)
 2026-09-22	14	83	advance		2	day 118: east into the new corridor
 2026-09-22	14	86	advance		3	day 118: east then the passage turns, to (8,15)
+2026-09-22	14	92	advance		6	day 118: north up the unexplored corridor to (8,20)
+2026-09-22	14	96	advance		4	day 118: following the corridor northwest into area 10
+2026-09-22	14	95	check	90	d6=3	anchor 90 + 5
+2026-09-22	14	102	advance		6	day 118: following the NW wall deeper into the room
+2026-09-22	14	113	advance		11	day 118: following the corridor's bend northeast
+2026-09-22	14	117	advance		4	day 118: correction -- continuing through the opening to the northwest
+2026-09-22	14	118	advance		1	day 118: moving to (9,29) to begin the wall search
+2026-09-22	14	128	advance		10	day 118: turn spent searching the wall south of (9,29)
+2026-09-22	14	125	check	120	d6=6	anchor 120 + 5
+2026-09-22	14	130	advance		2	day 118: moving to (10,28)
+2026-09-22	14	140	advance		10	day 118: turn spent searching the west wall at (10,28)
+2026-09-22	14	141	advance		1	day 118: moving to (10,27)
+2026-09-22	14	151	advance		10	day 118: turn spent searching the west wall at (10,27)
+2026-09-22	14	152	advance		1	day 118: moving to (10,26)
+2026-09-22	14	162	advance		10	day 118: turn spent searching the west wall at (10,26)
+2026-09-22	14	153	check	150	d6=1 -> Troglodytes (1-2)-AC 5, HD 2', hp 6,5, #AT 3, D 1-4/1-4/ 1-4, MV 120' (40'), Save F2, ML 9	anchor 150 + 3
+2026-09-22	14	163	advance		1	day 118: round 153, combat -- Dave and Torsat's surprise-segment volley
+2026-09-22	14	164	advance		1	day 118: round 153, the troglodyte fight
