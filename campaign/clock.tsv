@@ -1029,3 +1029,9 @@ when	exped	round	kind	anchor	detail	note
 2026-09-23	14	306	advance		1	day 118: round 305 -- Frython's sleep spell catches all seven orcs
 2026-09-23	14	307	advance		1	day 118: dispatching the sleeping orcs
 2026-09-23	14	310	advance		3	day 118: dragging orc bodies into the corridor, then into area 11
+2026-09-23	14	320	advance		10	day 118: thorough search of area 11, Dave guarding the door
+2026-09-23	14	326	advance		6	day 118: Tristle searches the seven orc bodies in the corridor
+2026-09-23	14	334	advance		8	day 118: leaving area 11, heading back toward the corridor
+2026-09-23	14	332	check	330	d6=4	anchor 330 + 2
+2026-09-23	14	342	advance		8	day 118: to (10,29), corrected explore rate (60 ft/turn, very heavy load)
+2026-09-23	14	355	advance		13	day 118: known route back to the entrance
