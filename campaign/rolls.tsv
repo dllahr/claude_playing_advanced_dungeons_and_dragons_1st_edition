@@ -9283,3 +9283,5 @@ when	exped	turn	notation	dice	modifier	total	hidden	reason
 2026-09-24			d100	30	0	30		day 119 round 326: Tristle Hear Noise at the door (8,8,V), 15%
 2026-09-24			d100	46	0	46		day 119 round 326: Ista Hear Noise at the door (8,8,V), 10%
 2026-09-24			d6	3	0	3		wandering check, anchor 330
+2026-09-24			d6	1	0	1		day 119: DM placement of the room-20 treasure, DECLARED FIRST: 1-2 lying in plain view on the floor, 3-6 concealed (needs a search of the room's contents)
+2026-09-24			d4	4	0	4		day 119: which square of area 20 the ring lies on. DECLARED FIRST: 1=(6,7) 2=(7,7) 3=(6,8) 4=(7,8)

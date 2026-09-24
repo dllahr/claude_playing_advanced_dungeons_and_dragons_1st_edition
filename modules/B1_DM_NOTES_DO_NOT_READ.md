@@ -4887,3 +4887,6 @@ PROCESS ERROR, mine: I advanced eight turns in one loop and ran past this check;
 
 ## Day 119, round 245 -- wandering check, spent
 Anchor-240 check fired at 245: level-1 table d6=4, Troglodytes 1-2. Approach d6 (1-2 = up the dead-end x=13 passage) = 5: **they never came near the door**; the check is spent and the party never knew. Clock set back one round from 246 to 245 because the 10-round step overran the event.
+
+## Day 119 -- area 20 treasure placement (module leaves it blank)
+Gold ring (non-magical, 10 gp), treasure AA. Placement rolled BEFORE the party arrived: d6=1 (1-2 = in plain view on the floor) -> lying in plain view. Square: see the d4 in rolls.tsv (1=(6,7) 2=(7,7) 3=(6,8) 4=(7,8)).
