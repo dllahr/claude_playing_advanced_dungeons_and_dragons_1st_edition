@@ -1081,3 +1081,11 @@ when	map	exped	turn	level	scope	target	change	item	qty	who	note
 2026-09-23	b1	16	27	1	edge	14,13,V	spiked_open	iron_spike	-2	claude	LEDGER CORRECTION day 119: the row above named the item 'iron_spike' (underscore); every spike row in this log since exp.3 says 'iron spike' (space) and carry.py's emplaced count reads only that spelling, so the two spikes were not counted. Cancels it; the next row re-books them.
 2026-09-23	b1	16	27	1	edge	14,13,V	spiked_open	iron spike	2	Tristle	LEDGER CORRECTION day 119: the two doorstop spikes at the bottom of the door, re-booked under the spelling the ledger reads. 7 -> 5 carried.
 2026-09-23	b1	16	39	1	edge	14,5,H	unlocked			Tristle,Ista	day 119: EXAMINED per the standing door routine, one round. B1 LOCK ROLL SPENT AT THE EXAMINATION: d6=3, not locked, it opens. Latch is a plain iron bar-latch on the south face reached through the gap. Swing and hinge side read as physical facts and fixed once: it opens AWAY from the party, south into area 21, hinged on the WEST edge (undetermined fact settled on d2=2 swing / d2=1 hinge, table declared before the dice, not re-rollable). Sill dust: undisturbed. Gap: no light and no draught -- dark and still beyond. Not opened, not listened at.
+2026-09-23	b1	16	40	1	edge	14,5,H	open			Yrtone	day 119: Yrtone pushes the examined door open (hinged west, swings away south into area 21); everyone with a missile weapon ready in the lane formation, Yrtone steps back into position. Nothing living in view.
+2026-09-23	b1	16	40	1	seen	14,5	yes			party	day 119: lamplight south through the opened door at (14,5,H) into area 21
+2026-09-23	b1	16	40	1	seen	14,4	yes			party	day 119: lamplight south through the opened door at (14,5,H) into area 21
+2026-09-23	b1	16	40	1	seen	14,3	yes			party	day 119: lamplight south through the opened door at (14,5,H) into area 21
+2026-09-23	b1	16	40	1	seen	13,5	yes			party	day 119: lamplight south through the opened door at (14,5,H) into area 21
+2026-09-23	b1	16	40	1	seen	13,4	yes			party	day 119: lamplight south through the opened door at (14,5,H) into area 21
+2026-09-23	b1	16	40	1	seen	12,5	yes			party	day 119: lamplight south through the opened door at (14,5,H) into area 21
+2026-09-23	b1	16	40	1	seen	12,4	yes			party	day 119: lamplight south through the opened door at (14,5,H) into area 21
