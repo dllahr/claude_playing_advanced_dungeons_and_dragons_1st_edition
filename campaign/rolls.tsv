@@ -9301,3 +9301,37 @@ when	exped	turn	notation	dice	modifier	total	hidden	reason
 2026-09-24			d20	20	0	20		Torsat attacks with short bow
 2026-09-24			1-6 (1d6)	6	0	6		Torsat damage, short bow
 2026-09-24			d6	3	0	3		day 119 round 419: did ghoul B, 60 ft north of the corridor mouth in the north arm with a straight sight line down x=10, notice the lantern or the fight? DECLARED FIRST: 1-2 it did and is coming, 3-6 it did not
+2026-09-24			d3	2	0	2		day 119: how many man-tall pale mushrooms stand within the lamp of the party at (10,11) in area 22 (the module's giant grove is placed further north, beyond the light)
+2026-09-24			d12	1	0	1		day 119: squares of the man-tall mushrooms, first N used. 1=(9,11) 2=(8,11) 3=(7,11) 4=(9,12) 5=(8,12) 6=(10,12) 7=(10,13) 8=(10,14) 9=(11,12) 10=(12,12) 11=(11,13) 12=(12,13)
+2026-09-24			d12	3	0	3		day 119: squares of the man-tall mushrooms, first N used. 1=(9,11) 2=(8,11) 3=(7,11) 4=(9,12) 5=(8,12) 6=(10,12) 7=(10,13) 8=(10,14) 9=(11,12) 10=(12,12) 11=(11,13) 12=(12,13)
+2026-09-24			d12	6	0	6		day 119: squares of the man-tall mushrooms, first N used. 1=(9,11) 2=(8,11) 3=(7,11) 4=(9,12) 5=(8,12) 6=(10,12) 7=(10,13) 8=(10,14) 9=(11,12) 10=(12,12) 11=(11,13) 12=(12,13)
+2026-09-24			d20	18	0	18		Dave attacks with short bow
+2026-09-24			1-6 (1d6)	4	0	4		Dave damage, short bow
+2026-09-24			d20	17	0	17		Dave attacks with short bow
+2026-09-24			1-6 (1d6)	6	0	6		Dave damage, short bow
+2026-09-24			d20	2	0	2		Torsat attacks with short bow
+2026-09-24			d20	3	0	3		Torsat attacks with short bow
+2026-09-24			d20	1	0	1		Tristle attacks with short bow
+2026-09-24			d20	8	0	8		Tristle attacks with short bow
+2026-09-24			1-6 (1d6)	4	0	4		Tristle damage, short bow
+2026-09-24			d20	16	0	16		Yrtone attacks with sling
+2026-09-24			2-7 (1d6+1)	5	1	6		Yrtone damage, sling
+2026-09-24			d20	13	0	13		Ista attacks with dart
+2026-09-24			1-2 (1d2)	1	0	1		Ista damage, dart
+2026-09-24			d20	19	0	19		Ista attacks with dart
+2026-09-24			1-2 (1d2)	2	0	2		Ista damage, dart
+2026-09-24			d20	7	0	7		Ista attacks with dart
+2026-09-24			d20	17	0	17		Frython attacks with dart
+2026-09-24			1-2 (1d2)	2	0	2		Frython damage, dart
+2026-09-24			d20	14	0	14		Frython attacks with dart
+2026-09-24			1-2 (1d2)	1	0	1		Frython damage, dart
+2026-09-24			d20	18	0	18		Frython attacks with dart
+2026-09-24			1-2 (1d2)	1	0	1		Frython damage, dart
+2026-09-24			d20	14	0	14		Blartho attacks with sling
+2026-09-24			2-7 (1d6+1)	6	1	7		Blartho damage, sling
+2026-09-24			d20	11	0	11		Dellie attacks with sling
+2026-09-24			d20	17	0	17		Hask attacks with sling
+2026-09-24			2-7 (1d6+1)	6	1	7		Hask damage, sling
+2026-09-24			d20	13	0	13		Brand attacks with hand axe
+2026-09-24			d6	6	0	6		Brand damage, hand axe (thrown) -- combat.py hit his d20=13 then crashed on the weapon name 'hand axe' (PHB table says 'Axe, hand or throwing'); the hit stands, this is the damage die
+2026-09-24			d6	6	0	6		wandering check, anchor 420
