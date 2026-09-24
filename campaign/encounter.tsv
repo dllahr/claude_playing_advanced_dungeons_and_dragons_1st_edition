@@ -210,3 +210,17 @@ when	day	exped	round	side	actor	verb	target	qty	detail
 2026-09-23	118		1			end			day 118, round 305-306: all seven orcs killed asleep, zero party casualties, zero shots fired
 2026-09-24	119		1			start			day 119, expedition 16, round 419: area 22, the Garden Room, from the corridor mouth at (10,10). One ghoul (hp 6) crouched at (11,11), 14 ft diagonal from the lead rank.
 2026-09-24	119		1	monsters	ghoul A	surprise			party d6=3 not surprised; ghoul d6=1 on 1-2: SURPRISED, one segment lost (its own die)
+2026-09-24	119		1	party	Dave	declare			fires his bow at the creature (armed, arrow knocked, surprise segment, 3x rate)
+2026-09-24	119		1	party	Torsat	declare			fires his bow at the creature (armed, arrow knocked, surprise segment, 3x rate)
+2026-09-24	119		1	party	Yrtone	declare			slings at the creature (spun up, regular rate)
+2026-09-24	119		1	party	Tristle	declare			fires his bow at the creature -- second rank, no line past the corner, DM ruling
+2026-09-24	119		1	party	Ista	declare			throws darts at the creature -- second rank, no line past the corner, DM ruling
+2026-09-24	119		1	party	Frython	declare			throws darts at the creature -- second rank or behind, no line past the corner, DM ruling
+2026-09-24	119		1	party	Blartho	declare			slings at the creature -- behind, no line past the corner, DM ruling
+2026-09-24	119		1	party	Dellie	declare			slings at the creature -- behind, no line past the corner, DM ruling
+2026-09-24	119		1	party	Hask	declare			slings at the creature -- behind, no line past the corner, DM ruling
+2026-09-24	119		1	party	Brand	declare			throws his hand axe at the creature -- behind, no line past the corner, DM ruling
+2026-09-24	119		1	monsters		damage	ghoul	5	
+2026-09-24	119		1	monsters		damage	ghoul	6	
+2026-09-24	119		1		ghoul	dead			
+2026-09-24	119		1			end			day 119 round 419: the creature at (11,11) is dead in the first third of the surprise segment (arrows from Dave and Torsat). No other creature has been seen.
