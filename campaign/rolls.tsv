@@ -9255,3 +9255,5 @@ when	exped	turn	notation	dice	modifier	total	hidden	reason
 2026-09-23			d6	1	0	1		day 119: B1 door lock roll at the examination of (10,2,H) -- 1-2 locked, 3-6 opens (rules/b1-module.md)
 2026-09-23			1-2 (1d2)	1	0	1		day 119: (10,2,H) swing, fixed once (undetermined fact, table declared before the die): 1 = opens toward the party into the corridor, 2 = opens away, north
 2026-09-23			1-2 (1d2)	1	0	1		day 119: (10,2,H) hinge side, fixed once: 1 = hinged on the west edge, 2 = hinged on the east edge
+2026-09-23			d100	21	0	21		day 119: Tristle listens at (10,2,H), thief hear noise 15% (HIDDEN OUTCOME)
+2026-09-23			d100	11	0	11		day 119: Ista listens at (10,2,H), thief hear noise 10% (HIDDEN OUTCOME)
