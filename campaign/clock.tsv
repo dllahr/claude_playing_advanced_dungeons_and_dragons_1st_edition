@@ -1137,3 +1137,8 @@ when	exped	round	kind	anchor	detail	note
 2026-09-24	16	395	advance		1	day 119: Tristle examines the ring closely without touching it
 2026-09-24	16	395	check	390	d6=5	anchor 390 + 5
 2026-09-24	16	397	advance		2	day 119: Tristle works the ring into a sack laid open on the floor with the pole, and lifts the sack by its neck
+2026-09-24	16	399	advance		2	day 119: out of the chamber to the door at (8,8,V)
+2026-09-24	16	400	advance		1	day 119: Yrtone opens the door at (8,8,V) from inside
+2026-09-24	16	401	advance		1	day 119: the party passes through the door at (8,8,V)
+2026-09-24	16	402	advance		1	day 119: the door at (8,8,V) is pulled shut behind the last of them
+2026-09-24	16	406	advance		4	day 119: back the known way to the junction at (10,3), Tristle 40 ft ahead
