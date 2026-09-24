@@ -382,3 +382,4 @@ when	map	level	x	y	exped	turn	squares	feet	rate	why	route
 2026-09-24	b1	1	10	9			3	30	explore	day 119: north up the x=10 corridor, slowly and cautiously, Tristle between rank 1 and 2, to the last square short of the room's mouth	10,6 10,7 10,8 10,9
 2026-09-24	b1	1	10	10			1	10	explore	day 119: to the last square of the corridor, at the mouth of area 22; slowly, Tristle between rank 1 and 2	10,9 10,10
 2026-09-24	b1	1	10	11			1	10	explore	day 119: carefully and slowly 10 ft forward into area 22, formation kept	10,10 10,11
+2026-09-24	b1	1	8	11			2	20	explore	day 119: cautiously west along the south wall of area 22's west arm, round the ruined mushrooms and clear of the puffballs, to where the west end shows	10,11 9,11 8,11
