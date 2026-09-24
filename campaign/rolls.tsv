@@ -9252,3 +9252,6 @@ when	exped	turn	notation	dice	modifier	total	hidden	reason
 2026-09-23			1-2 (1d2)	2	0	2		day 119: (14,5,H) swing, fixed once (undetermined fact, table declared before the die): 1 = opens toward the party into the stub, 2 = opens away into area 21
 2026-09-23			1-2 (1d2)	1	0	1		day 119: (14,5,H) hinge side, fixed once: 1 = hinged on the west edge, 2 = hinged on the east edge
 2026-09-23			d6	3	0	3		wandering check, anchor 60
+2026-09-23			d6	1	0	1		day 119: B1 door lock roll at the examination of (10,2,H) -- 1-2 locked, 3-6 opens (rules/b1-module.md)
+2026-09-23			1-2 (1d2)	1	0	1		day 119: (10,2,H) swing, fixed once (undetermined fact, table declared before the die): 1 = opens toward the party into the corridor, 2 = opens away, north
+2026-09-23			1-2 (1d2)	1	0	1		day 119: (10,2,H) hinge side, fixed once: 1 = hinged on the west edge, 2 = hinged on the east edge
