@@ -387,3 +387,4 @@ when	map	level	x	y	exped	turn	squares	feet	rate	why	route
 2026-09-24	b1	1	8	11			1	10	explore	day 119: cautiously, back west past the wall	9,11 8,11
 2026-09-24	b1	1	7	11			1	10	explore	day 119: cautiously, west to the ruined far mushroom	8,11 7,11
 2026-09-24	b1	1	6	11			1	10	explore	day 119: cautiously, one square further west along the south wall	7,11 6,11
+2026-09-24	b1	1	9	12			4	40	explore	day 119: back east along the north wall of area 22's west arm, keeping clear of the mushrooms and puffballs, to where the wall ends	6,11 6,12 7,12 8,12 9,12

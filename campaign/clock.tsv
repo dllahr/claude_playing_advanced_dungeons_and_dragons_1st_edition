@@ -1160,3 +1160,5 @@ when	exped	round	kind	anchor	detail	note
 2026-09-24	16	442	advance		3	day 119: recovering the six arrows from the wreck of the far mushroom
 2026-09-24	16	444	advance		2	day 119: cautiously, slowly: one square further west along the south wall
 2026-09-24	16	447	advance		3	day 119: recovering the arrows that flew past to the foot of the west end
+2026-09-24	16	451	advance		4	day 119: back east along the north wall of the west arm of area 22 to (9,12), formation kept
+2026-09-24	16	451	check	450	d6=4	anchor 450 + 1

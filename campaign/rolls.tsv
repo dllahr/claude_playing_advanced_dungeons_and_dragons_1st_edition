@@ -9335,3 +9335,4 @@ when	exped	turn	notation	dice	modifier	total	hidden	reason
 2026-09-24			d20	13	0	13		Brand attacks with hand axe
 2026-09-24			d6	6	0	6		Brand damage, hand axe (thrown) -- combat.py hit his d20=13 then crashed on the weapon name 'hand axe' (PHB table says 'Axe, hand or throwing'); the hit stands, this is the damage die
 2026-09-24			d6	6	0	6		wandering check, anchor 420
+2026-09-24			d6	4	0	4		wandering check, anchor 450
