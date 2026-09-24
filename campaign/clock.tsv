@@ -1128,3 +1128,7 @@ when	exped	round	kind	anchor	detail	note
 2026-09-24	16	356	advance		3	day 119: Tristle called back and the party advances into the chamber of area 20
 2026-09-24	16	357	advance		1	day 119: the party draws back to the mouth of the chamber
 2026-09-24	16	360	advance		3	day 119: Tristle eases forward to pole's length of the ring in the north-east corner of area 20 and nudges it with the 10-ft pole
+2026-09-24	16	361	advance		1	day 119: the party takes up (6,7), Dave with his bow to the south
+2026-09-24	16	371	advance		10	day 119: thorough search of area 20's room, turn 1 of 2, all but Dave, the area about the ring left alone
+2026-09-24	16	362	check	360	d6=4	anchor 360 + 2
+2026-09-24	16	381	advance		10	day 119: thorough search of area 20's room, turn 2 of 2, all but Dave, the area about the ring left alone
