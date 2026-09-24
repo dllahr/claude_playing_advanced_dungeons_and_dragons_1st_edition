@@ -372,3 +372,4 @@ when	map	level	x	y	exped	turn	squares	feet	rate	why	route
 2026-09-24	b1	1	5	9			5	50	explore	day 119: following the winding corridor inward, Tristle 40 ft ahead, mapping -- leg to (5,9)	5,4 5,5 5,6 5,7 5,8 5,9
 2026-09-24	b1	1	8	9			3	30	explore	day 119: following the winding corridor inward, Tristle 40 ft ahead, mapping -- leg to (8,9)	5,9 6,9 7,9 8,9
 2026-09-24	b1	1	6	5			6	60	explore	day 119: following the winding corridor inward, Tristle 40 ft ahead, mapping -- leg to (6,5)	8,9 8,8 8,7 8,6 8,5 7,5 6,5
+2026-09-24	b1	1	6	7			2	20	explore	day 119: Tristle called back, the party advances into the dead-end chamber of area 20	6,5 6,6 6,7
