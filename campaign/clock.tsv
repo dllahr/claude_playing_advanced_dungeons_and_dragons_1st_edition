@@ -1089,3 +1089,6 @@ when	exped	round	kind	anchor	detail	note
 2026-09-23	16	195	advance		10	day 119: thorough search of area 21's contents, turn 8 of 8, Dave guarding the door
 2026-09-23	16	120	correct		-75	day 119: I looped eight 10-round advances for the area 21 contents search and ran past the round-120 wandering event. The search was interrupted at round 120 (five rounds into turn 1), so rounds 121-195 did not happen; the 150 and 180 checks stay as rolled (empty).
 2026-09-23	16	195	advance		75	day 119: rest of the thorough search of area 21's contents (turns 1-8 total, 5 rounds already done), Dave guarding the door
+2026-09-23	16	205	advance		10	day 119: thorough search of the stage slab, turn 1 of 2, Dave at the door
+2026-09-23	16	215	advance		10	day 119: thorough search of the stage slab, turn 2 of 2, Dave at the door
+2026-09-23	16	213	check	210	d6=6	anchor 210 + 3
