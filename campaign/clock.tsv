@@ -1068,3 +1068,5 @@ when	exped	round	kind	anchor	detail	note
 2026-09-23	16	83	advance		1	day 119: Tristle works at the lock on (10,2,H)
 2026-09-23	16	84	advance		1	day 119: Ista works at the lock on (10,2,H)
 2026-09-23	16	89	advance		5	day 119: oiling the hinges of the door at (10,2,H) and letting it soak
+2026-09-23	16	99	advance		10	day 119: Tristle and Ista drift the hinge pins of (10,2,H), quiet work, a turn
+2026-09-23	16	90	check	90	d6=2	anchor 90 + 0
