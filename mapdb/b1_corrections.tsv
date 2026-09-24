@@ -948,3 +948,9 @@ member	8	33	-	12	dl+claude	area 12 LIBRARY, WEST WING. B1 p.12 names it: a table
 member	8	34	-	12	dl+claude	area 12 LIBRARY, WEST WING. Same
 member	9	35	-	12	dl+claude	area 12 LIBRARY, NORTH WING. B1 p.12: a table in the north wing. Same 1-wide-limb exclusion
 member	10	35	-	12	dl+claude	area 12 LIBRARY, NORTH WING. Same
+edge	11	6	H	open	dl+claude	area 21 MEETING ROOM: a straight-walled 20x70 ft rectangle (x=11-12, y=4-10) -- verified against a crop of the printed level-1 map, day 119. This interior mark is a DRAWN BENCH (ten are inked, some tilted) read as a wall/stair. Not a boundary.
+edge	11	6	V	open	dl+claude	area 21 MEETING ROOM: a straight-walled 20x70 ft rectangle (x=11-12, y=4-10) -- verified against a crop of the printed level-1 map, day 119. This interior mark is a DRAWN BENCH (ten are inked, some tilted) read as a wall/stair. Not a boundary.
+edge	12	6	H	open	dl+claude	area 21 MEETING ROOM: a straight-walled 20x70 ft rectangle (x=11-12, y=4-10) -- verified against a crop of the printed level-1 map, day 119. This interior mark is a DRAWN BENCH (ten are inked, some tilted) read as a wall/stair. Not a boundary.
+edge	11	8	H	open	dl+claude	area 21 MEETING ROOM: a straight-walled 20x70 ft rectangle (x=11-12, y=4-10) -- verified against a crop of the printed level-1 map, day 119. This interior mark is a DRAWN BENCH (ten are inked, some tilted) read as a wall/stair. Not a boundary.
+edge	11	8	V	open	dl+claude	area 21 MEETING ROOM: a straight-walled 20x70 ft rectangle (x=11-12, y=4-10) -- verified against a crop of the printed level-1 map, day 119. This interior mark is a DRAWN BENCH (ten are inked, some tilted) read as a wall/stair. Not a boundary.
+edge	11	9	H	open	dl+claude	area 21 MEETING ROOM: a straight-walled 20x70 ft rectangle (x=11-12, y=4-10) -- verified against a crop of the printed level-1 map, day 119. This interior mark is a DRAWN BENCH (ten are inked, some tilted) read as a wall/stair. Not a boundary.
