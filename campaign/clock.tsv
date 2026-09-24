@@ -1076,3 +1076,15 @@ when	exped	round	kind	anchor	detail	note
 2026-09-23	16	109	advance		1	day 119: Yrtone opens the door into area 21
 2026-09-23	16	111	advance		2	day 119: into area 21, looking north
 2026-09-23	16	115	advance		4	day 119: door shut behind, two floor spikes eased in quietly, cloaks laid along the bottom edge
+2026-09-23	16	125	advance		10	day 119: thorough search of area 21's contents, turn 1 of 8, Dave guarding the door
+2026-09-23	16	120	check	120	d6=1 -> Ores (1 -4)-AC 6, HD 1, hp 6,4,3,1, #AT 1, D1 -6 or by wea¬ pon, MV 90' (30'), Save FI, ML 8	anchor 120 + 0
+2026-09-23	16	135	advance		10	day 119: thorough search of area 21's contents, turn 2 of 8, Dave guarding the door
+2026-09-23	16	145	advance		10	day 119: thorough search of area 21's contents, turn 3 of 8, Dave guarding the door
+2026-09-23	16	155	advance		10	day 119: thorough search of area 21's contents, turn 4 of 8, Dave guarding the door
+2026-09-23	16	150	check	150	d6=4	anchor 150 + 0
+2026-09-23	16	165	advance		10	day 119: thorough search of area 21's contents, turn 5 of 8, Dave guarding the door
+2026-09-23	16	175	advance		10	day 119: thorough search of area 21's contents, turn 6 of 8, Dave guarding the door
+2026-09-23	16	185	advance		10	day 119: thorough search of area 21's contents, turn 7 of 8, Dave guarding the door
+2026-09-23	16	183	check	180	d6=5	anchor 180 + 3
+2026-09-23	16	195	advance		10	day 119: thorough search of area 21's contents, turn 8 of 8, Dave guarding the door
+2026-09-23	16	120	correct		-75	day 119: I looped eight 10-round advances for the area 21 contents search and ran past the round-120 wandering event. The search was interrupted at round 120 (five rounds into turn 1), so rounds 121-195 did not happen; the 150 and 180 checks stay as rolled (empty).

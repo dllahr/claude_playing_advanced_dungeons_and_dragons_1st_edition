@@ -4880,3 +4880,7 @@ shaft on the 95th. **The estimate was good to a gold and a half.**
 Of that 73 he has already received 37, so **36 gp falls due to him** once this
 sells. The liability the party has been carrying against his name stood at about
 37 gp 5 sp, and that was very nearly right.
+
+## Day 119, round 120 -- wandering encounter at the spiked door of area 21
+Anchor-120 check fired: level-1 table d6=1, Orcs, d4=4 appear (hp 6,4,3,1). Approach d6 (1-2 = they come up the dead-end x=13 passage) = 1: **four orcs are in the passage at (13,5), outside the door at (12,5,V)**, which is floor-spiked from inside (2 spikes) with cloaks along the sill. Party is inside searching area 21's contents (5 rounds into an 8-turn search; Dave at the door). Perception at round 120: the leaf jolts against the spikes and harsh voices are heard through it. Nothing is given away about number or kind. Encounter NOT yet opened in encounter.tsv -- it opens when the player declares.
+PROCESS ERROR, mine: I advanced eight turns in one loop and ran past this check; the clock was set back to 120 with `clock.py correct`. Checks 150 and 180 had already rolled empty and stay as rolled.

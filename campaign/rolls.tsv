@@ -9264,3 +9264,9 @@ when	exped	turn	notation	dice	modifier	total	hidden	reason
 2026-09-23			d6	4	0	4		day 119: B1 door lock roll at the examination of (12,5,V), the door in the west wall at the passage's north end -- 1-2 locked, 3-6 opens (rules/b1-module.md)
 2026-09-23			1-2 (1d2)	2	0	2		day 119: (12,5,V) swing, fixed once (undetermined fact, table declared before the die): 1 = opens toward the party into the passage (east), 2 = opens away west into the room
 2026-09-23			1-2 (1d2)	1	0	1		day 119: (12,5,V) hinge side, fixed once: 1 = hinged on the north edge, 2 = hinged on the south edge
+2026-09-23			d6	1	0	1		wandering check, anchor 120
+2026-09-23			d6	1	0	1		wandering table, level 1
+2026-09-23			d6	4	0	4		wandering check, anchor 150
+2026-09-23			d6	5	0	5		wandering check, anchor 180
+2026-09-23			d6	1	0	1		day 119 round 120: wandering encounter -- does it come up the dead-end x=13 passage to the spiked door of area 21? DECLARED FIRST: 1-2 it does, 3-6 it never leaves the through corridors and the check is spent
+2026-09-23			d4	4	0	4		day 119 round 120: number of orcs appearing (1-4), rolled in case the d6 brings them to the door
