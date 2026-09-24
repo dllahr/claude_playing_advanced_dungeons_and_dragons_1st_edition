@@ -23,7 +23,7 @@ party reached the garden.
 | Number Appearing | 2-24 |
 | Treasure Type | B, T |
 | % in Lair | 20 |
-| XP Value | **NOT YET WORKED** *(DMG App. E has it; look it up before awarding, do not guess)* |
+| XP Value | **65 + 2/hp** *(DMG App. E p. 201, read off a 250 dpi render rotated 270 degrees, 2026-09-24)* |
 | Morale | **NONE. "Ghoul packs always attack without fear."** |
 | Surprised On | 2 |
 | Surprises On | 2 |
@@ -68,4 +68,4 @@ B1's ML 9 is Basic D&D. The MM says they never flee, so it is ignored here.
 
 ## Play record
 
-*(nothing yet — first contact will be in area 22, expedition 16, day 119)*
+**Day 119, round 419, expedition 16, area 22 mouth end.** One ghoul (hp 6) met crouched at (11,11) from the corridor mouth at (10,10). Party 3 (not surprised), ghoul 1 on 1-2 (SURPRISED, one segment lost). Dave (bow, 3x in the surprise segment) hit for 5 and Torsat (bow) for a natural 20 and 6: dead in the first third. **Award 77** (65 + 2x6). A second ghoul (hp 4) is stocked in the north arm and has not been met.

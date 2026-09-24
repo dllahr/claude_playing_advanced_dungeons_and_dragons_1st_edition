@@ -22,6 +22,7 @@ unrotated page finds nothing.
 | Rat, giant | 1/2 | 7 | 20 | 7 + 1/hp |
 | **Orc** | **1** | 6 | 19 | **10 + 1/hp** |
 | Troglodyte | 2 | 5 | 16 | 36 + 2/hp |
+| Ghoul | 2 | 6 | 16 | 65 + 2/hp |
 
 *source: **DMG Appendix E**, pp. 197, 205, 209, 213 (pdf pages 196, 204, 208,
 212), 190 dpi page renders rotated 270°, read 2026-08-28.*

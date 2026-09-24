@@ -602,6 +602,29 @@ Possible in a surprise segment: avoiding, parleying, waiting, **missile
 discharge**, setting weapons against a charge, and **1-segment spells** — which is
 most 1st-level magic-user spells. Longer spells may only be *begun*.
 
+### Which missiles are "ready" for the 3x rate — PLAYER'S STANDING RULING, day 119
+
+The DMG's *"providing the weapon/missiles are ready"* needs a decision per weapon.
+The player stated the standing ruling on 2026-09-24 (*"I think you've ruled in the
+past that bows have their arrows knocked and are ready so they fire at 3x rate,
+slings need to be 'spun up' so they fire at their regular rate"*). It was **not
+in this cache before**; it is written here so it stops living in his memory.
+
+| weapon | in a surprise segment |
+|---|---|
+| **Bow, arrow knocked** (Dave, Torsat, Tristle with the standard formation) | **3x** the normal rate |
+| **Sling** | **regular rate** — it has to be spun up |
+| **Darts, hand axes** (hand-hurled, in hand) | DM read: ready, so 3x per DMG p. 62's *"hand-hurled weapons"*. **Not yet confirmed by the player.** |
+
+*source: **PLAYER'S RULING 2026-09-24**; the darts row is the DM's reading of DMG p. 62.*
+
+### A LINE OF FIRE IS A LINE OF SIGHT — day 119
+
+A target that can be seen only from one square of a corridor mouth (it sits round
+the corner of the wall) can be shot only from that square. The ranks behind have
+no lane whether or not anybody is in contact. *(Area 22's mouth: the ghoul at
+(11,11) was visible from (10,10) only.)* **DM ruling, not a book rule.**
+
 ### Dexterity, per individual (DMG p. 62)
 
 > *"if there is a dexterity penalty, the individual will suffer that many
