@@ -263,3 +263,4 @@ when	day	who	asset	verb	qty	unit	note
 2026-09-24	119	party	iron_spike	move	2	each	two floor spikes prised out of the (12,5,V) door and back in the party kit
 2026-09-24	119	party	gold_ring_plain	anchor	1	each	Area 20 dead end room, day 119. B1 treasure type AA, module valuation 10 g.p. -- NOT money until sold. In a sack, untouched by hand.
 2026-09-24	119	party	oil_flask	anchor	1	each	CURRENTLY sealed and in hand: 2 minus 1 opened at round 406 of expedition 16 to top off lantern-ista at the junction (10,3) (broached flask emptied first, 17.4 turns left in the new broached one). light.py oilstate: 53 sealed = 52 barn + 1 party.
+2026-09-24	119	party	iron_spike	move	-1	each	one spike gently emplaced in the secret door at (8,25,V) from inside area 10

@@ -4912,3 +4912,6 @@ The party shot the trunk at (10,16): Torsat 1 dmg and Tristle 4 dmg hit it (5 in
 
 ## Day 119 -- the north end of area 22
 One more giant trunk-stemmed mushroom (d4=1) at **(12,19)**, NE corner against the north wall, NOT yet in the lamp (36 ft from (10,16)). The semicircular outcrop at the north end is at (11,19), also beyond the lamp. Yrtone's sling bullet lies in the hollow under the fallen trunk at (10,17); Dave's arrow is near (10,18).
+
+## Day 119 -- area 10 census (the module's d20 table, one roll per container)
+Code -> contents per the module: 1 TL barley, 2 B wheat flour, 3 FT rye flour, 4 MK salt pork, 5 GG dill pickles, 6 HU raisins, 7 EJ fish in brine, 8 Y dried apples, 9 PF whole peas, 10 SD ale, 11 Z honey, 12 AW wine, 13 OG water, 14 XR soft soap, 15 LC salt, 16 VW lard, 17 QS seasoning, 18 RH sunflower seeds, 19 UT hard candy, 20 JS dried mushrooms. The party knows ONLY SD = ale. Counts and sizes are in world_changes.tsv (area 10, round 570) and the rolls log. Note honey, salt and wine weigh more than the liquid-equivalent figure and flours, mushrooms, raisins and apples much less; the size-based weights given to the player are liquid-equivalent.
