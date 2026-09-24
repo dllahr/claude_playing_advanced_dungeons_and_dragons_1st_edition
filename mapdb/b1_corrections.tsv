@@ -60,6 +60,7 @@ edge	30	19	V	secret	dl	area 32 ADVISOR'S CHAMBER: its west wall — "access only
 # The corridor east of it is the west dead end; the door is obvious from that
 # side and unnoticeable from the entrance-corridor face, hence one_way.
 edge	17	13	V	one_way	dl	area 1: one-way secret door, back of alcove pair 2; operable from the EAST (dead-end) side only
+edge	14	13	V	one_way	claude	area 1: the WEST alcove of pair 2, the mirror of (17,13,V) -- one-way secret door in the back of the alcove, operable from the WEST (dead-end, (14,13)) side only. Not on the extraction (it read a plain wall, thick=12); found by search in play day 119 under the same standing ruling that a deliberate search from the guard side finds it without a roll.
 #
 # --- area 27: furniture on the room's east side read as two doors -------------
 # Found in play 2026-08-25 while the party was approaching the room. Both edges
