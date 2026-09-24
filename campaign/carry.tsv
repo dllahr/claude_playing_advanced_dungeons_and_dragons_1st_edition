@@ -284,3 +284,8 @@ when	day	who	asset	verb	qty	unit	note
 2026-09-24	119	party	mallet	move	1	each	the mallet, common pool, from Tristle, day 119
 2026-09-24	119	Tristle	mirror	move	-1	each	Tristle gives his (small) mirror to the common pool, at the player's word, day 119
 2026-09-24	119	party	mirror	move	1	each	the small mirror, common pool, from Tristle, day 119
+2026-09-24	119	party	sling_bullet	move	-30	each	the 30 sling bullets shared out among the four slingers, at the player's word, day 119
+2026-09-24	119	Yrtone	sling_bullet	move	8	each	Yrtone's share of the 30 sling bullets (8; 30 does not divide by four, so Yrtone and Blartho took the extra one each), day 119
+2026-09-24	119	Blartho	sling_bullet	move	8	each	Blartho's share of the 30 sling bullets (8), day 119
+2026-09-24	119	Dellie	sling_bullet	move	7	each	Dellie's share of the 30 sling bullets (7), day 119
+2026-09-24	119	Hask	sling_bullet	move	7	each	Hask's share of the 30 sling bullets (7), day 119
