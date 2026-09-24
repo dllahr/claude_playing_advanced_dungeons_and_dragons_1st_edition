@@ -4896,3 +4896,6 @@ Two ghouls (hp 6 and 4). Region d6 x2 = 3 and 6: **ghoul A (hp 6) at the mouth e
 
 ## Day 119 round 419 -- ghoul B did not notice
 d6=3 on the noticed-the-lantern-or-the-fight roll (1-2 = it did): ghoul B (hp 4) at (10,17) is unaware and stays put. Ghoul A (hp 6) is dead at (11,11) with two arrows (Dave, Torsat) lying by it. The giant-mushroom grove is placed in the north arm beyond y=14 (DM call: the module gives none).
+
+## Day 119 -- area 22, what stands in the lamp from (10,11)
+Two man-tall pale mushrooms (d3=2, d12 = 1 and 3): one at **(9,11)**, directly west and adjacent to the party, and one at **(7,11)** at the west edge of the light. Also the SE-corner outcrop at (12,11)-(12,12), overgrown; low giant-puffball clumps and shelf fungi on the walls. NO giant trunk-stemmed grove in the light: it is in the north arm beyond y=14, where ghoul B is at (10,17). Any other placement is a DM call to be rolled and written here first.
