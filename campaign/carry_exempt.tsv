@@ -1,0 +1,14 @@
+# SHARED-KIT EXEMPTIONS -- append-only, and the current set is DERIVED.
+#
+# WHY THIS FILE EXISTS: the shared `party` kit in carry.tsv has no bearer, and
+# tools/carry.py divides it among "everybody on the trip". The player decided
+# (day 119) that TRISTLE carries none of it, so his own kit alone sets his
+# movement and he can scout at a full 12". That is a standing arrangement, not a
+# property of one trip, so it is a row here rather than a --bearers flag that has
+# to be remembered every time. carry.py and party.py both read it whenever no
+# explicit --bearers / log override is given.
+#
+# One row per CHANGE. `action` is `exempt` or `resume`; the latest row for a name
+# wins. Anyone with no row shares the kit as before.
+date	day	who	action	note
+2026-09-24	119	Tristle	exempt	Player's standing instruction, day 119: "remove all of [the shared weight] from Tristle and get his movement rate up to 12 inches." The other nine can still carry the whole shared kit at heavy (9 inches) with 200 gp-wt spare, so the party rate is unchanged.

@@ -150,6 +150,11 @@ def _band_inches(carry_log=None, bearers=None):
         import carry
     except Exception:
         return _FALLBACK_INCHES
+    if bearers is None and carry_log is None:
+        try:
+            bearers = carry.default_bearers()   # standing exemptions
+        except Exception:
+            bearers = None
     for name, _ceiling, move in carry.BANDS:
         try:
             inches = int(move.split('"')[0].split('-')[0])

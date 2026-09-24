@@ -253,3 +253,40 @@ def test_fewer_bearers_can_make_it_stop_fitting():
     """Three people cannot carry what ten can, and the tool must not pretend."""
     _r, left, _s = carry.pack(bearers=['Dave', 'Frython', 'Brand'])
     assert left > 0
+
+
+# ------------------------------------------- standing exemptions (day 119)
+
+def test_standing_exempt_latest_row_per_name_wins(tmp_path):
+    """Tristle is exempt from the shared kit by the player's standing
+    instruction of day 119. The file is append-only; `resume` undoes it."""
+    f = tmp_path / 'carry_exempt.tsv'
+    f.write_text('# c\ndate\tday\twho\taction\tnote\n'
+                 '2026-09-24\t119\tTristle\texempt\tx\n'
+                 '2026-09-24\t119\tDave\texempt\tx\n'
+                 '2026-09-25\t120\tDave\tresume\tx\n')
+    assert carry.standing_exempt(str(f)) == {'Tristle'}
+
+
+def test_a_missing_exempt_file_means_nobody_is_exempt(tmp_path):
+    assert carry.standing_exempt(str(tmp_path / 'nope.tsv')) == set()
+
+
+def test_the_live_exemption_keeps_tristle_at_twelve_inches():
+    """`person Tristle` used to charge him a share even when he was not among
+    the bearers. With the standing exemption his own kit alone sets his rate."""
+    import subprocess
+    out = subprocess.run([sys.executable, os.path.join(TOOLS, 'carry.py'),
+                          'person', 'Tristle'], capture_output=True,
+                         text=True).stdout
+    assert '0 share of the common kit' in out
+    assert 'movement 12"' in out
+
+
+def test_the_party_rate_survives_the_exemption():
+    """The other nine must still be able to carry the shared kit at the party
+    rate, or the exemption has only moved the problem onto them."""
+    b = carry.default_bearers()
+    assert b is not None and 'Tristle' not in b
+    _rows, left, _shared = carry.pack(bearers=b, target='heavy')
+    assert left <= 1e-6

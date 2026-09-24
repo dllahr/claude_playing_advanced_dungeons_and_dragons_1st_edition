@@ -92,6 +92,7 @@ LOG = os.path.join(ROOT, 'campaign', 'carry.tsv')
 CHARS = os.path.join(ROOT, 'campaign', 'characters.tsv')
 PEOPLE = os.path.join(ROOT, 'campaign', 'people.tsv')
 PLACES = os.path.join(ROOT, 'campaign', 'places.tsv')
+EXEMPT = os.path.join(ROOT, 'campaign', 'carry_exempt.tsv')
 
 SHARED = 'party'
 
@@ -129,6 +130,29 @@ def who_vocabulary():
     outside `characters.tsv`, `people.tsv` (id) or `places.tsv` (id) is legal.
     """
     return set(characters()) | set(non_pc_people()) | set(places()) | {SHARED}
+
+
+def standing_exempt(path=None):
+    """{who} currently EXEMPT from the shared kit, from campaign/carry_exempt.tsv
+    (append-only; the latest `exempt`/`resume` row per name wins)."""
+    cur = {}
+    for r in read_tsv(path or EXEMPT, missing_ok=True):
+        who = (r.get('who') or '').strip()
+        if who:
+            cur[who] = (r.get('action') or '').strip().lower() == 'exempt'
+    return {w for w, on in cur.items() if on}
+
+
+def default_bearers(log=None):
+    """Who shares the `party` kit when nobody has said otherwise: everyone
+    carrying anything, minus the standing exemptions. None when nobody is
+    exempt, which means "everyone", exactly as before."""
+    ex = standing_exempt()
+    if not ex:
+        return None
+    chars = characters()
+    st = state(log)
+    return [n for n in chars if n in st and n not in ex]
 
 
 def state(log=None):
@@ -610,6 +634,8 @@ def main(argv=None):
     a = build_parser().parse_args(argv)
     log = rows(a.log_file)
     bearers = [b.strip() for b in a.bearers.split(',')] if a.bearers else None
+    if bearers is None and a.log_file == LOG:
+        bearers = default_bearers(log)     # standing exemptions, campaign/carry_exempt.tsv
 
     if a.cmd == 'roster':
         print(roster(log, bearers))
@@ -637,7 +663,8 @@ def main(argv=None):
             return 1
         shared_gp, _ = shared_total(log)
         people = bearers or [n for n in chars if n in state(log)]
-        share = shared_gp / len(people) if people else 0.0
+        share = (shared_gp / len(people)
+                 if people and a.name in people else 0.0)
         own, lines, _ = person_load(a.name, log, share)
         alw = _allowance_lookup(chars[a.name].get('str', '') or '0')
         print('%s -- STR %s, allowance %+d gp-weight'
