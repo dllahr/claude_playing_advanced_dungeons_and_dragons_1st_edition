@@ -229,3 +229,13 @@ when	day	exped	round	side	actor	verb	target	qty	detail
 2026-09-24	119		1	party	Torsat	declare			fires his bow at the tall mushroom (hit)
 2026-09-24	119		1	party	Tristle	declare			fires his bow at the tall mushroom (hit)
 2026-09-24	119		1	party	Yrtone	declare			slings at the tall mushroom (miss)
+2026-09-24	119		1	party	Yrtone	declare			drops her sling, takes up her flail, and tries to turn undead (d20=11 vs 16, failed; no further attempt by her)
+2026-09-24	119		1	party	Ista	declare			throws a dart at the creature
+2026-09-24	119		1	party	Frython	declare			throws a dart at the creature
+2026-09-24	119		1	party	Blartho	declare			slings at the creature
+2026-09-24	119		1	party	Dellie	declare			slings at the creature
+2026-09-24	119		1	party	Hask	declare			slings at the creature
+2026-09-24	119		1	party	Brand	declare			throws his hand axe at the creature
+2026-09-24	119		1	monsters		damage	ghoul	5	
+2026-09-24	119		1		ghoul	dead			
+2026-09-24	119		1			end			day 119 round 456: the second ghoul (hp 4) shot dead in the open before contact: Torsat 1 and Dellie 4. Yrtone's turn attempt failed (11 vs 16). No wounds to the party.
