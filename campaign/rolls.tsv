@@ -9336,3 +9336,5 @@ when	exped	turn	notation	dice	modifier	total	hidden	reason
 2026-09-24			d6	6	0	6		Brand damage, hand axe (thrown) -- combat.py hit his d20=13 then crashed on the weapon name 'hand axe' (PHB table says 'Axe, hand or throwing'); the hit stands, this is the damage die
 2026-09-24			d6	6	0	6		wandering check, anchor 420
 2026-09-24			d6	4	0	4		wandering check, anchor 450
+2026-09-24			d6	3	0	3		day 119 round ~453: party steps onto (10,12), in the straight line down x=10 from ghoul B at (10,17), 50 ft, lantern visible. Does it notice? DECLARED FIRST: 1 = notices and is coming, 2-6 = does not
+2026-09-24			d4	1	0	1		day 119: depth of the sunken pit at (11,12)-(11,13), area 22, in feet minus 1: result+1 = 2..5 ft (the module says only 'sunken pits, each 10x20')

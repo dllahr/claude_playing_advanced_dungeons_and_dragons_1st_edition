@@ -4899,3 +4899,7 @@ d6=3 on the noticed-the-lantern-or-the-fight roll (1-2 = it did): ghoul B (hp 4)
 
 ## Day 119 -- area 22, what stands in the lamp from (10,11)
 Two man-tall pale mushrooms (d3=2, d12 = 1 and 3): one at **(9,11)**, directly west and adjacent to the party, and one at **(7,11)** at the west edge of the light. Also the SE-corner outcrop at (12,11)-(12,12), overgrown; low giant-puffball clumps and shelf fungi on the walls. NO giant trunk-stemmed grove in the light: it is in the north arm beyond y=14, where ghoul B is at (10,17). Any other placement is a DM call to be rolled and written here first.
+
+## Day 119 -- area 22, the sunken pit at the mouth end, and a correction to my own narration
+The printed map puts the FIRST of the two sunken pits at x=11, y=12-13 (10x20 ft), directly beside the party's path at (10,11)/(10,12). The DB has it as a 'stairs' edge at (11,12,H). **I did not mention it when the party stood at (10,11); it was in the lamp. I said so when they reached (10,12).** Depth d4=1 -> 2 ft deep (the module gives none): a shallow sunken bed full of growth, no fall hazard. The second pit is at x=11, y=15-16, just beyond the lamp from (10,12).
+Ghoul B (hp 4) at (10,17): d6=3 on the noticed-the-lamp-down-x=10 roll from (10,12) (1 = notices) -> still unaware.
