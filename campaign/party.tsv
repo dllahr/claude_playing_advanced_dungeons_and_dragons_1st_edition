@@ -391,3 +391,5 @@ when	map	level	x	y	exped	turn	squares	feet	rate	why	route
 2026-09-24	b1	1	10	12			1	10	explore	day 119: 10 ft east to the junction of the west arm and the north arm of area 22, then a look round	9,12 10,12
 2026-09-24	b1	1	10	13			1	10	explore	day 119: north along the west wall of the north arm of area 22, standard formation, to where the larger shapes show in the light	10,12 10,13
 2026-09-24	b1	1	10	15			2	20	explore	day 119: north up the west side of the north arm of area 22, recovering missiles as they go	10,13 10,14 10,15
+2026-09-24	b1	1	10	14			1	10	explore	day 119: the party draws back about 10 ft south while Dave and Torsat go to the trunk	10,15 10,14
+2026-09-24	b1	1	10	12			2	20	flee	day 119: everyone backs away south from the released spores, 40 ft from the fallen mushroom	10,14 10,13 10,12
