@@ -1314,3 +1314,4 @@ when	map	exped	turn	level	scope	target	change	item	qty	who	note
 2026-09-24	b1	16	430	1	seen	7,12	yes			party	day 119: from (8,11) in the west arm of area 22, the lamp's 30 ft to the arm's west end
 2026-09-24	b1	16	430	1	seen	6,12	yes			party	day 119: from (8,11) in the west arm of area 22, the lamp's 30 ft to the arm's west end
 2026-09-24	b1	16	430	1	seen	5,12	yes			party	day 119: from (8,11) in the west arm of area 22, the lamp's 30 ft to the arm's west end
+2026-09-24	b1	16	447	1	cell	9,11	searched			party	day 119 rounds 430-447: every missile shot at the mushrooms recovered -- from the near wreck at (9,11) the four sling bullets, the six darts and Brand's hand axe; from the far wreck at (7,11) the six arrows; and the arrows that flew on, from the foot of the west end at (6,11). Nothing lost or broken (no breakage rule, rules/exploration.md). No inventory change. Party ends at (6,11).
