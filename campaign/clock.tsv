@@ -1113,3 +1113,5 @@ when	exped	round	kind	anchor	detail	note
 2026-09-24	16	303	check	300	d6=5	anchor 300 + 3
 2026-09-24	16	317	advance		8	day 119: north up the x=4 corridor to (4,10), Tristle 40 ft ahead, mapping
 2026-09-24	16	323	advance		6	day 119: east along y=10 to the corner at (9,10), Tristle 40 ft ahead, mapping
+2026-09-24	16	325	advance		2	day 119: south to the door, Tristle called back
+2026-09-24	16	326	advance		1	day 119: Tristle and Ista examine the door at (8,8,V)

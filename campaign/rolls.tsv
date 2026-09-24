@@ -9277,3 +9277,6 @@ when	exped	turn	notation	dice	modifier	total	hidden	reason
 2026-09-24			d6	5	0	5		day 119 round 245: wandering encounter (troglodytes 1-2) -- does it come up the dead-end x=13 passage to the spiked door of area 21? DECLARED FIRST: 1-2 it does, 3-6 it never leaves the through corridors and the check is spent
 2026-09-24			d6	3	0	3		wandering check, anchor 270
 2026-09-24			d6	5	0	5		wandering check, anchor 300
+2026-09-24			d6	3	0	3		day 119 round 325: B1 lock roll for the door at (8,8,V), spent at the examination (1-2 locked, 3-6 opens), Tristle and Ista examining
+2026-09-24			d2	2	0	2		day 119 round 325: swing of the door at (8,8,V), settled once. DECLARED FIRST: 1 = opens TOWARD the party (east, into the corridor), 2 = opens AWAY (west, into area 20's passage)
+2026-09-24			d2	1	0	1		day 119 round 325: hinge edge of the door at (8,8,V), settled once. DECLARED FIRST: 1 = hinged on the NORTH edge, 2 = hinged on the SOUTH edge
