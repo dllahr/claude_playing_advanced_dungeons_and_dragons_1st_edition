@@ -4903,3 +4903,6 @@ Two man-tall pale mushrooms (d3=2, d12 = 1 and 3): one at **(9,11)**, directly w
 ## Day 119 -- area 22, the sunken pit at the mouth end, and a correction to my own narration
 The printed map puts the FIRST of the two sunken pits at x=11, y=12-13 (10x20 ft), directly beside the party's path at (10,11)/(10,12). The DB has it as a 'stairs' edge at (11,12,H). **I did not mention it when the party stood at (10,11); it was in the lamp. I said so when they reached (10,12).** Depth d4=1 -> 2 ft deep (the module gives none): a shallow sunken bed full of growth, no fall hazard. The second pit is at x=11, y=15-16, just beyond the lamp from (10,12).
 Ghoul B (hp 4) at (10,17): d6=3 on the noticed-the-lamp-down-x=10 roll from (10,12) (1 = notices) -> still unaware.
+
+## Day 119 -- the giant-mushroom grove in area 22 begins at y=16
+Two trunk-stemmed giants (2d2=2) at **(10,16)** and **(12,16)**; the grove runs on north from there beyond the lamp. **Ghoul B (hp 4) is at (10,17), directly behind the trunk at (10,16)**, so the trunk hides it from the party and the party's light from it. Noticed-the-lamp rolls so far: d6 = 3 (round 419, at the mouth), 3 (10,12), 5 (10,13; 1-2 = notices). It is unaware.
