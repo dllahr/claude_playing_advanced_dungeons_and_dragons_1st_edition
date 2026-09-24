@@ -300,6 +300,10 @@ def weapon_damage(weapon, size='S/M'):
                 return d[k][col]
     col = 'vs L' if str(size).upper().startswith('L') else 'vs S or M'
     w = weapon.strip().lower()
+    # The party says "hand axe"; the PHB prints "Axe, hand or throwing". Day 119:
+    # a volley crashed here AFTER the d20s had been rolled and logged.
+    w = {'hand axe': 'axe, hand or throwing',
+         'throwing axe': 'axe, hand or throwing'}.get(w, w)
     for k in d:
         if k.lower() == w:
             return d[k][col]

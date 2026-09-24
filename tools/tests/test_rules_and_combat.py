@@ -464,3 +464,11 @@ def test_a_normal_man_takes_the_fighters_non_proficiency_penalty():
     """He has no class and so no slots; stated rather than left to crash."""
     assert (combat.proficiency_penalty('Normal Man')
             == combat.proficiency_penalty('Fighter'))
+
+
+def test_hand_axe_resolves_by_the_name_the_party_uses():
+    """Day 119: Brand's thrown hand axe raised KeyError after the d20 was rolled
+    and logged, because the PHB table prints 'Axe, hand or throwing'."""
+    import combat
+    spec = combat.weapon_damage('hand axe')
+    assert spec == combat.weapon_damage('Axe, hand or throwing')
