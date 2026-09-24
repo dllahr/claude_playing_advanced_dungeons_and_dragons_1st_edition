@@ -400,3 +400,9 @@ when	map	level	x	y	exped	turn	squares	feet	rate	why	route
 2026-09-24	b1	1	11	18			1	10	explore	day 119: east one square along the south edge of the north end to recover missiles from the fallen mushroom and the north wall	10,18 11,18
 2026-09-24	b1	1	12	18			1	10	explore	day 119: east to the east wall of the north end of area 22	11,18 12,18
 2026-09-24	b1	1	12	13			5	50	explore	day 119: back south along the east wall of the north arm of area 22, squeezing past the standing giant mushroom at (12,16), to the south end of the arm	12,18 12,17 12,16 12,15 12,14 12,13
+2026-09-24	b1	1	10	3			12	120	known	day 119: back through area 22's mouth and down the x=10 corridor to the junction at (10,3), the known way	12,13 12,12 12,11 11,11 10,11 10,10 10,9 10,8 10,7 10,6 10,5 10,4 10,3
+2026-09-24	b1	1	14	5			8	80	known	day 119: through the open doorway at (10,2,H) and east along y=2, then north up the x=14 corridor to the door at (14,5,H)	10,3 10,2 11,2 12,2 13,2 14,2 14,3 14,4 14,5
+2026-09-24	b1	1	14	5					PLACED	day 119 ROUTE CORRECTION for the (12,13)->(10,3) row two rows up: the tool routed the party over the SE outcrop at (12,11) and over the dead creature at (11,11). The party actually went round both: (12,13) (12,14) (11,14) (10,14) (10,13) (10,12) (10,11) (10,10) then south down x=10 to (10,3), 14 squares not 12; the round charge already covers it. The party is at (14,5), the door at (14,5,H) ahead.	
+2026-09-24	b1	1	14	6			1	10	known	day 119: through the door at (14,5,H)	14,5 14,6
+2026-09-24	b1	1	13	19			14	140	known	day 119: north up the x=13 corridor, the known way, Tristle 40 ft ahead	14,6 13,6 13,7 13,8 13,9 13,10 13,11 13,12 13,13 13,14 13,15 13,16 13,17 13,18 13,19
+2026-09-24	b1	1	9	25			16	160	known	day 119: east to (16,19), south to (16,21), west along y=21 and south down x=10 to (9,25), the known way, Tristle 40 ft ahead	13,19 14,19 15,19 16,19 16,20 16,21 15,21 14,21 13,21 12,21 11,21 10,21 10,22 10,23 10,24 10,25 9,25
