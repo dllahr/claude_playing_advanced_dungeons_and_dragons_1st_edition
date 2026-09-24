@@ -4906,3 +4906,6 @@ Ghoul B (hp 4) at (10,17): d6=3 on the noticed-the-lamp-down-x=10 roll from (10,
 
 ## Day 119 -- the giant-mushroom grove in area 22 begins at y=16
 Two trunk-stemmed giants (2d2=2) at **(10,16)** and **(12,16)**; the grove runs on north from there beyond the lamp. **Ghoul B (hp 4) is at (10,17), directly behind the trunk at (10,16)**, so the trunk hides it from the party and the party's light from it. Noticed-the-lamp rolls so far: d6 = 3 (round 419, at the mouth), 3 (10,12), 5 (10,13; 1-2 = notices). It is unaware.
+
+## Day 119, round 456 -- ghoul B is alerted
+The party shot the trunk at (10,16): Torsat 1 dmg and Tristle 4 dmg hit it (5 in all), Dave (natural 1) and Yrtone missed and their shots flew on past it into the dark next to ghoul B at (10,17). DM ruling, no roll: missiles thudding into a trunk 10 ft away and stray shots landing beside it alert it. **It comes, and it attacks without fear (MM: no morale).** It emerges into the light at ~20 ft after the first volley, closing at 9 ft per segment (MV 9"); growth hinders but it is at home. Neither side surprised. hp 4.

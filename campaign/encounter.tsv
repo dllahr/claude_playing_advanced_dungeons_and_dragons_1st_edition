@@ -224,3 +224,8 @@ when	day	exped	round	side	actor	verb	target	qty	detail
 2026-09-24	119		1	monsters		damage	ghoul	6	
 2026-09-24	119		1		ghoul	dead			
 2026-09-24	119		1			end			day 119 round 419: the creature at (11,11) is dead in the first third of the surprise segment (arrows from Dave and Torsat). No other creature has been seen.
+2026-09-24	119		1			start			day 119, expedition 16, round 456: area 22 north arm, party at (10,13). First rank and Tristle fired at the giant mushroom at (10,16); a second ghoul (hp 4) stocked at (10,17) directly behind it, alerted by the missiles that missed and the thudding, comes out at ~20 ft and closes at 9 ft/segment. Neither side surprised.
+2026-09-24	119		1	party	Dave	declare			fires his bow at the tall mushroom (nat 1, miss)
+2026-09-24	119		1	party	Torsat	declare			fires his bow at the tall mushroom (hit)
+2026-09-24	119		1	party	Tristle	declare			fires his bow at the tall mushroom (hit)
+2026-09-24	119		1	party	Yrtone	declare			slings at the tall mushroom (miss)

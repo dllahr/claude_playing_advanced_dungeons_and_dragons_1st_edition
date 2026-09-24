@@ -9344,3 +9344,9 @@ when	exped	turn	notation	dice	modifier	total	hidden	reason
 2026-09-24			d3	3	0	3		day 119: columns of the giant mushrooms at the lamp's edge, first N used: 1=x10 2=x11 3=x12 (one per square max; re-roll duplicates by moving to the next column)
 2026-09-24			d3	2	0	2		day 119: columns of the giant mushrooms at the lamp's edge, first N used: 1=x10 2=x11 3=x12 (one per square max; re-roll duplicates by moving to the next column)
 2026-09-24			d3	1	0	1		day 119: columns of the giant mushrooms at the lamp's edge, first N used: 1=x10 2=x11 3=x12 (one per square max; re-roll duplicates by moving to the next column)
+2026-09-24			d20	1	0	1		Dave attacks with short bow
+2026-09-24			d20	17	0	17		Torsat attacks with short bow
+2026-09-24			1-6 (1d6)	1	0	1		Torsat damage, short bow
+2026-09-24			d20	10	0	10		Tristle attacks with short bow
+2026-09-24			1-6 (1d6)	4	0	4		Tristle damage, short bow
+2026-09-24			d20	8	0	8		Yrtone attacks with sling
