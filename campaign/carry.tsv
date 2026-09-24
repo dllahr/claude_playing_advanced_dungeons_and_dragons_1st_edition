@@ -274,3 +274,13 @@ when	day	who	asset	verb	qty	unit	note
 2026-09-24	119	Tristle	arrows	move	81	each	Tristle carries the party's arrows (81 loose), at the player's word, day 119; he draws for Dave and Torsat as before
 2026-09-24	119	party	arrows	move	-1	quiver	the quiver of unknown count off the bandits goes to Tristle, at the player's word, day 119
 2026-09-24	119	Tristle	arrows	move	1	quiver	the quiver of unknown count, with Tristle, at the player's word, day 119
+2026-09-24	119	party	morning_star_stone	move	-1	each	DROPPED, abandoned in area 10 at (8,25), day 119, at the player's word: 'we drop the stone morning star'
+2026-09-24	119	Tristle	arrows	move	-54	each	arrows shared out equally among the three archers, at the player's word, day 119: 81 loose = 27 each; Tristle keeps 27
+2026-09-24	119	Dave	arrows	move	27	each	Dave's share of the 81 loose arrows, day 119
+2026-09-24	119	Torsat	arrows	move	27	each	Torsat's share of the 81 loose arrows, day 119
+2026-09-24	119	Tristle	arrows	move	-1	quiver	the bandits' quiver of unknown count given to Dave (one item cannot be split), day 119
+2026-09-24	119	Dave	arrows	move	1	quiver	the bandits' quiver of unknown count, with Dave, day 119
+2026-09-24	119	Tristle	mallet	move	-1	each	Tristle gives the mallet to the common pool, at the player's word, day 119, to get him back to 12 inches
+2026-09-24	119	party	mallet	move	1	each	the mallet, common pool, from Tristle, day 119
+2026-09-24	119	Tristle	mirror	move	-1	each	Tristle gives his (small) mirror to the common pool, at the player's word, day 119
+2026-09-24	119	party	mirror	move	1	each	the small mirror, common pool, from Tristle, day 119
