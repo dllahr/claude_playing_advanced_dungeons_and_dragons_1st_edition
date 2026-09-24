@@ -1168,3 +1168,15 @@ when	map	exped	turn	level	scope	target	change	item	qty	who	note
 2026-09-23	b1	16	109	1	seen	11,6	yes			party	day 119: lamplight west through the opened door at (12,5,V) into area 21
 2026-09-23	b1	16	109	1	seen	12,7	yes			party	day 119: lamplight west through the opened door at (12,5,V) into area 21
 2026-09-23	b1	16	109	1	seen	11,7	yes			party	day 119: lamplight west through the opened door at (12,5,V) into area 21
+2026-09-23	b1	16	111	1	seen	11,8	yes			party	day 119: in area 21, lamplight north to about thirty feet
+2026-09-23	b1	16	111	1	seen	12,8	yes			party	day 119: in area 21, lamplight north to about thirty feet
+2026-09-23	b1	16	111	1	seen	11,7	yes			party	day 119: in area 21, lamplight north to about thirty feet
+2026-09-23	b1	16	111	1	seen	12,7	yes			party	day 119: in area 21, lamplight north to about thirty feet
+2026-09-23	b1	16	111	1	seen	11,6	yes			party	day 119: in area 21, lamplight north to about thirty feet
+2026-09-23	b1	16	111	1	seen	12,6	yes			party	day 119: in area 21, lamplight north to about thirty feet
+2026-09-23	b1	16	111	1	seen	11,5	yes			party	day 119: in area 21, lamplight north to about thirty feet
+2026-09-23	b1	16	111	1	seen	12,5	yes			party	day 119: in area 21, lamplight north to about thirty feet
+2026-09-23	b1	16	111	1	seen	11,4	yes			party	day 119: in area 21, lamplight north to about thirty feet
+2026-09-23	b1	16	111	1	seen	12,4	yes			party	day 119: in area 21, lamplight north to about thirty feet
+2026-09-23	b1	16	113	1	edge	12,5,V	closed			party	day 119: pulled shut behind the party from inside area 21 after a look north showed nothing moving
+2026-09-23	b1	16	115	1	edge	12,5,V	spiked_shut	iron spike	2	Tristle	day 119: two FLOOR spikes, from INSIDE -- the door opens away from the passage, so from the room it swings TOWARD the party and the strong method applies -- eased in by hand, no hammering, quiet. Cloaks laid along the bottom edge to kill the light line. 5 -> 3 carried.

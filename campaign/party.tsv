@@ -361,3 +361,4 @@ when	map	level	x	y	exped	turn	squares	feet	rate	why	route
 2026-09-23	b1	1	10	2			22	220	known	day 119: back round the curve and along the loop by the route just walked, to the door north of (10,2)	4,14 3,14 2,14 2,13 2,12 3,12 3,11 3,10 3,9 3,8 3,7 3,6 3,5 3,4 3,3 3,2 4,2 5,2 6,2 7,2 8,2 9,2 10,2
 2026-09-23	b1	1	13	3			4	40	explore	day 119: through the doorway at (10,2,H) and east along the inner passage, Tristle 40 ft ahead, mapping	10,2 10,3 11,3 12,3 13,3
 2026-09-23	b1	1	13	4			1	10	explore	day 119: up the passage behind Tristle and Ista, who go to the door	13,3 13,4
+2026-09-23	b1	1	11	5			3	30	explore	day 119: into area 21 through the door at (12,5,V), Tristle 40 ft ahead	13,4 13,5 12,5 11,5
