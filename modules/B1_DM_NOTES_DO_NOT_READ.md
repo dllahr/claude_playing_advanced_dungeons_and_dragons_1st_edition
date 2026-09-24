@@ -4909,3 +4909,6 @@ Two trunk-stemmed giants (2d2=2) at **(10,16)** and **(12,16)**; the grove runs 
 
 ## Day 119, round 456 -- ghoul B is alerted
 The party shot the trunk at (10,16): Torsat 1 dmg and Tristle 4 dmg hit it (5 in all), Dave (natural 1) and Yrtone missed and their shots flew on past it into the dark next to ghoul B at (10,17). DM ruling, no roll: missiles thudding into a trunk 10 ft away and stray shots landing beside it alert it. **It comes, and it attacks without fear (MM: no morale).** It emerges into the light at ~20 ft after the first volley, closing at 9 ft per segment (MV 9"); growth hinders but it is at home. Neither side surprised. hp 4.
+
+## Day 119 -- the north end of area 22
+One more giant trunk-stemmed mushroom (d4=1) at **(12,19)**, NE corner against the north wall, NOT yet in the lamp (36 ft from (10,16)). The semicircular outcrop at the north end is at (11,19), also beyond the lamp. Yrtone's sling bullet lies in the hollow under the fallen trunk at (10,17); Dave's arrow is near (10,18).
