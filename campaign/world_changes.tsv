@@ -1159,3 +1159,12 @@ when	map	exped	turn	level	scope	target	change	item	qty	who	note
 2026-09-23	b1	16	106	1	seen	13,4	yes			party	day 119: walked or lit east along the inner passage from the doorway at (10,2,H)
 2026-09-23	b1	16	106	1	seen	13,5	yes			party	day 119: walked or lit east along the inner passage from the doorway at (10,2,H)
 2026-09-23	b1	16	108	1	edge	12,5,V	unlocked			Tristle,Ista	day 119: EXAMINED per the standing door routine, one round. B1 LOCK ROLL SPENT AT THE EXAMINATION: d6=4, not locked, it opens. Plain iron bar-latch on the west face. Swing and hinge fixed once (undetermined fact settled on d2=2 swing / d2=1 hinge, table declared before the dice, not re-rollable): it opens AWAY from the party, west into area 21 (the meeting room), hinged on the NORTH edge -- so the hinges are on the far side and cannot be oiled from the passage. Sill dust: undisturbed. Gap: no light, no draught. Not opened, not listened at.
+2026-09-23	b1	16	109	1	edge	12,5,V	open			Yrtone	day 119: Yrtone pushes the examined door open (hinged north, swings away west into area 21, the meeting room); everyone with a missile weapon ready in the lane formation, Yrtone steps back into position. Nothing living in view.
+2026-09-23	b1	16	109	1	seen	12,5	yes			party	day 119: lamplight west through the opened door at (12,5,V) into area 21
+2026-09-23	b1	16	109	1	seen	11,5	yes			party	day 119: lamplight west through the opened door at (12,5,V) into area 21
+2026-09-23	b1	16	109	1	seen	12,4	yes			party	day 119: lamplight west through the opened door at (12,5,V) into area 21
+2026-09-23	b1	16	109	1	seen	11,4	yes			party	day 119: lamplight west through the opened door at (12,5,V) into area 21
+2026-09-23	b1	16	109	1	seen	12,6	yes			party	day 119: lamplight west through the opened door at (12,5,V) into area 21
+2026-09-23	b1	16	109	1	seen	11,6	yes			party	day 119: lamplight west through the opened door at (12,5,V) into area 21
+2026-09-23	b1	16	109	1	seen	12,7	yes			party	day 119: lamplight west through the opened door at (12,5,V) into area 21
+2026-09-23	b1	16	109	1	seen	11,7	yes			party	day 119: lamplight west through the opened door at (12,5,V) into area 21
