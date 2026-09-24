@@ -1274,3 +1274,6 @@ when	map	exped	turn	level	scope	target	change	item	qty	who	note
 2026-09-24	b1	16	395	1	cell	6,8	searched			Tristle	day 119 round 394-395: Tristle looked the ring over closely against the west wall of area 20 without touching it: a plain band of yellow metal, no stone, no engraving, no tarnish, no needle, hinge or catch. Nothing to find; no dice rolled.
 2026-09-24	b1	16	400	1	edge	8,8,V	open			Yrtone	day 119: pulled open from the inside (hinged north, the leaf swinging toward the party), the x=9 corridor beyond empty and quiet
 2026-09-24	b1	16	403	1	edge	8,8,V	closed			party	day 119: pulled shut behind the party, unspiked -- standing rule
+2026-09-24	b1	16	410	1	seen	10,7	yes			party	day 119: north up the x=10 corridor to (10,6), lamp along: the corridor to 30 ft, where a coat of growth begins at the edge of the light
+2026-09-24	b1	16	410	1	seen	10,8	yes			party	day 119: north up the x=10 corridor to (10,6), lamp along: the corridor to 30 ft, where a coat of growth begins at the edge of the light
+2026-09-24	b1	16	410	1	seen	10,9	yes			party	day 119: north up the x=10 corridor to (10,6), lamp along: the corridor to 30 ft, where a coat of growth begins at the edge of the light
