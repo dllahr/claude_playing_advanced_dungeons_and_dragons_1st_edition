@@ -1096,3 +1096,28 @@ when	map	exped	turn	level	scope	target	change	item	qty	who	note
 2026-09-23	b1	16	40	1	edge	14,5,H	open			claude	day 119 CORRECTION to the two rows above: the door swings AWAY from the party, south, into the x=14 CORRIDOR at (14,5) -- not into area 21. The swing/hinge facts (away, hinged west) stand; only the room I named was wrong. Corridor runs south (14,5)..(14,2), 10 ft wide, walls both sides, turning west at (14,2).
 2026-09-23	b1	16	41	1	edge	14,5,H	closed			party	day 119: pulled shut behind the party on the way south (standing rule)
 2026-09-23	b1	16	41	1	seen	14,2	yes			party	day 119: batch
+2026-09-23	b1	16	41	1	seen	13,10	yes			party	day 119: batch check
+2026-09-23	b1	16	41	1	seen	15,19	yes			party	day 119: walked or lit on the day-119 exploration west of (16,19); logged in one batch, the earlier legs were not logged as seen at the time
+2026-09-23	b1	16	41	1	seen	14,19	yes			party	day 119: walked or lit on the day-119 exploration west of (16,19); logged in one batch, the earlier legs were not logged as seen at the time
+2026-09-23	b1	16	41	1	seen	13,19	yes			party	day 119: walked or lit on the day-119 exploration west of (16,19); logged in one batch, the earlier legs were not logged as seen at the time
+2026-09-23	b1	16	41	1	seen	14,13	yes			party	day 119: walked or lit on the day-119 exploration west of (16,19); logged in one batch, the earlier legs were not logged as seen at the time
+2026-09-23	b1	16	41	1	seen	14,6	yes			party	day 119: walked or lit on the day-119 exploration west of (16,19); logged in one batch, the earlier legs were not logged as seen at the time
+2026-09-23	b1	16	41	1	seen	14,5	yes			party	day 119: walked or lit on the day-119 exploration west of (16,19); logged in one batch, the earlier legs were not logged as seen at the time
+2026-09-23	b1	16	41	1	seen	14,4	yes			party	day 119: walked or lit on the day-119 exploration west of (16,19); logged in one batch, the earlier legs were not logged as seen at the time
+2026-09-23	b1	16	41	1	seen	14,3	yes			party	day 119: walked or lit on the day-119 exploration west of (16,19); logged in one batch, the earlier legs were not logged as seen at the time
+2026-09-23	b1	16	41	1	seen	13,2	yes			party	day 119: walked or lit on the day-119 exploration west of (16,19); logged in one batch, the earlier legs were not logged as seen at the time
+2026-09-23	b1	16	41	1	seen	12,2	yes			party	day 119: walked or lit on the day-119 exploration west of (16,19); logged in one batch, the earlier legs were not logged as seen at the time
+2026-09-23	b1	16	41	1	seen	11,2	yes			party	day 119: walked or lit on the day-119 exploration west of (16,19); logged in one batch, the earlier legs were not logged as seen at the time
+2026-09-23	b1	16	41	1	seen	10,2	yes			party	day 119: walked or lit on the day-119 exploration west of (16,19); logged in one batch, the earlier legs were not logged as seen at the time
+2026-09-23	b1	16	41	1	seen	13,18	yes			party	day 119: walked or lit on the day-119 exploration west of (16,19); logged in one batch, the earlier legs were not logged as seen at the time
+2026-09-23	b1	16	41	1	seen	13,17	yes			party	day 119: walked or lit on the day-119 exploration west of (16,19); logged in one batch, the earlier legs were not logged as seen at the time
+2026-09-23	b1	16	41	1	seen	13,16	yes			party	day 119: walked or lit on the day-119 exploration west of (16,19); logged in one batch, the earlier legs were not logged as seen at the time
+2026-09-23	b1	16	41	1	seen	13,15	yes			party	day 119: walked or lit on the day-119 exploration west of (16,19); logged in one batch, the earlier legs were not logged as seen at the time
+2026-09-23	b1	16	41	1	seen	13,14	yes			party	day 119: walked or lit on the day-119 exploration west of (16,19); logged in one batch, the earlier legs were not logged as seen at the time
+2026-09-23	b1	16	41	1	seen	13,13	yes			party	day 119: walked or lit on the day-119 exploration west of (16,19); logged in one batch, the earlier legs were not logged as seen at the time
+2026-09-23	b1	16	41	1	seen	13,12	yes			party	day 119: walked or lit on the day-119 exploration west of (16,19); logged in one batch, the earlier legs were not logged as seen at the time
+2026-09-23	b1	16	41	1	seen	13,11	yes			party	day 119: walked or lit on the day-119 exploration west of (16,19); logged in one batch, the earlier legs were not logged as seen at the time
+2026-09-23	b1	16	41	1	seen	13,9	yes			party	day 119: walked or lit on the day-119 exploration west of (16,19); logged in one batch, the earlier legs were not logged as seen at the time
+2026-09-23	b1	16	41	1	seen	13,8	yes			party	day 119: walked or lit on the day-119 exploration west of (16,19); logged in one batch, the earlier legs were not logged as seen at the time
+2026-09-23	b1	16	41	1	seen	13,7	yes			party	day 119: walked or lit on the day-119 exploration west of (16,19); logged in one batch, the earlier legs were not logged as seen at the time
+2026-09-23	b1	16	41	1	seen	13,6	yes			party	day 119: walked or lit on the day-119 exploration west of (16,19); logged in one batch, the earlier legs were not logged as seen at the time
