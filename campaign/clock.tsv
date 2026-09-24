@@ -1185,3 +1185,6 @@ when	exped	round	kind	anchor	detail	note
 2026-09-24	16	502	advance		1	day 119: one square east to (11,18)
 2026-09-24	16	506	advance		4	day 119: recovering every missile from the fallen mushroom, the corner and the foot of the north wall
 2026-09-24	16	509	advance		3	day 119: Tristle probes the platform against the north wall with the 10-ft pole
+2026-09-24	16	510	advance		1	day 119: east to the east wall at (12,18)
+2026-09-24	16	510	check	510	d6=4	anchor 510 + 0
+2026-09-24	16	516	advance		6	day 119: south along the east wall of the north arm to (12,13), squeezing past the mushroom at (12,16)

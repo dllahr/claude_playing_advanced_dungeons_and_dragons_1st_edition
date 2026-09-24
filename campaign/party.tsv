@@ -398,3 +398,5 @@ when	map	level	x	y	exped	turn	squares	feet	rate	why	route
 2026-09-24	b1	1	10	17			1	10	explore	day 119: north 10 ft beside the fallen trunk to where the north end of area 22 shows in the lamp	10,16 10,17
 2026-09-24	b1	1	10	18			1	10	explore	day 119: north 10 ft to (10,18), finding Dave's arrow on the way	10,17 10,18
 2026-09-24	b1	1	11	18			1	10	explore	day 119: east one square along the south edge of the north end to recover missiles from the fallen mushroom and the north wall	10,18 11,18
+2026-09-24	b1	1	12	18			1	10	explore	day 119: east to the east wall of the north end of area 22	11,18 12,18
+2026-09-24	b1	1	12	13			5	50	explore	day 119: back south along the east wall of the north arm of area 22, squeezing past the standing giant mushroom at (12,16), to the south end of the arm	12,18 12,17 12,16 12,15 12,14 12,13
