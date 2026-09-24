@@ -379,3 +379,5 @@ when	map	level	x	y	exped	turn	squares	feet	rate	why	route
 2026-09-24	b1	1	9	8			1	10	known	day 119: through the door at (8,8,V) into the x=9 corridor	8,8 9,8
 2026-09-24	b1	1	10	3			20	200	known	day 119: north to the corner, west along y=10, south down x=4 and east along y=3 to the junction at (10,3), Tristle 40 ft ahead at 12 inches, the known way	9,8 9,9 9,10 8,10 7,10 6,10 5,10 4,10 4,9 4,8 4,7 4,6 4,5 4,4 4,3 5,3 6,3 7,3 8,3 9,3 10,3
 2026-09-24	b1	1	10	6			3	30	explore	day 119: north up the x=10 corridor, Tristle 40 ft ahead on infravision at 12 inches, to where the growths show at the edge of the light	10,3 10,4 10,5 10,6
+2026-09-24	b1	1	10	9			3	30	explore	day 119: north up the x=10 corridor, slowly and cautiously, Tristle between rank 1 and 2, to the last square short of the room's mouth	10,6 10,7 10,8 10,9
+2026-09-24	b1	1	10	10			1	10	explore	day 119: to the last square of the corridor, at the mouth of area 22; slowly, Tristle between rank 1 and 2	10,9 10,10

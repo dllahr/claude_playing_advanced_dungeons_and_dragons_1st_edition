@@ -4890,3 +4890,6 @@ Anchor-240 check fired at 245: level-1 table d6=4, Troglodytes 1-2. Approach d6 
 
 ## Day 119 -- area 20 treasure placement (module leaves it blank)
 Gold ring (non-magical, 10 gp), treasure AA. Placement rolled BEFORE the party arrived: d6=1 (1-2 = in plain view on the floor) -> lying in plain view. Square: see the d4 in rolls.tsv (1=(6,7) 2=(7,7) 3=(6,8) 4=(7,8)).
+
+## Day 119 -- area 22 ghoul placement (rolled before the party got there)
+Two ghouls (hp 6 and 4). Region d6 x2 = 3 and 6: **ghoul A (hp 6) at the mouth end**, d6=2 -> **(11,11)**, which is diagonal to the corridor's last square (10,10) and NOT visible from (10,9) (the wall at (10,10,V) and room 21's north wall block it). **Ghoul B (hp 4) in the north arm**, row d7=5 -> y=17, column d3=1 -> x=10: **(10,17)**. The garden's geometry is from the printed map: west arm y=11-12 running west from x=12 to x=5, the north arm x=10-12 running from y=13 up to y=19, two 10x20 sunken pits in the north arm, semicircular outcrops at the west end, the north end and the south-east corner (12,11-12). NOTE (11,11) is next to the SE-corner outcrop. Ghouls hunt in packs and are undead: **no infravision return** -- Tristle's report of "nothing warm" is true and says nothing about them. Elves are immune to their paralysis (only Tristle).

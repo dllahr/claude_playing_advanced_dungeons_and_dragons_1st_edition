@@ -9287,3 +9287,10 @@ when	exped	turn	notation	dice	modifier	total	hidden	reason
 2026-09-24			d4	4	0	4		day 119: which square of area 20 the ring lies on. DECLARED FIRST: 1=(6,7) 2=(7,7) 3=(6,8) 4=(7,8)
 2026-09-24			d6	4	0	4		wandering check, anchor 360
 2026-09-24			d6	5	0	5		wandering check, anchor 390
+2026-09-24			d6	3	0	3		day 119: DM placement of the two ghouls in area 22, before the party reaches it. DECLARED FIRST, per ghoul: 1-2 west arm (x=5..9,y=11..12), 3-4 the mouth end (x=10..12,y=11..12), 5-6 the north arm (x=10..12,y=13..19)
+2026-09-24			d6	6	0	6		day 119: DM placement of the two ghouls in area 22, before the party reaches it. DECLARED FIRST, per ghoul: 1-2 west arm (x=5..9,y=11..12), 3-4 the mouth end (x=10..12,y=11..12), 5-6 the north arm (x=10..12,y=13..19)
+2026-09-24			d6	2	0	2		day 119: ghoul A, mouth end of area 22, which square. DECLARED FIRST: 1=(10,11) 2=(11,11) 3=(12,11) 4=(10,12) 5=(11,12) 6=(12,12)
+2026-09-24			1-7 (1d7)	5	0	5		day 119: ghoul B, north arm of area 22, row: 1..7 = y=13..19
+2026-09-24			d3	1	0	1		day 119: ghoul B, north arm, column: 1=x10 2=x11 3=x12
+2026-09-24			d6	3	0	3		surprise check, the party arriving at (10,10), lamp lit, moving slowly
+2026-09-24			d6	1	0	1		surprise check, the ghoul at (11,11), 14 ft diagonal from (10,10)
