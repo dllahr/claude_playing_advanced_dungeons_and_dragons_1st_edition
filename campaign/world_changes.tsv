@@ -1180,3 +1180,18 @@ when	map	exped	turn	level	scope	target	change	item	qty	who	note
 2026-09-23	b1	16	111	1	seen	12,4	yes			party	day 119: in area 21, lamplight north to about thirty feet
 2026-09-23	b1	16	113	1	edge	12,5,V	closed			party	day 119: pulled shut behind the party from inside area 21 after a look north showed nothing moving
 2026-09-23	b1	16	115	1	edge	12,5,V	spiked_shut	iron spike	2	Tristle	day 119: two FLOOR spikes, from INSIDE -- the door opens away from the passage, so from the room it swings TOWARD the party and the strong method applies -- eased in by hand, no hammering, quiet. Cloaks laid along the bottom edge to kill the light line. 5 -> 3 carried.
+2026-09-23	b1	16	195	1	seen	11,4	yes			party	day 119: worked the length of area 21 in the thorough search, lamp along; the whole hall including the stage end
+2026-09-23	b1	16	195	1	seen	12,4	yes			party	day 119: worked the length of area 21 in the thorough search, lamp along; the whole hall including the stage end
+2026-09-23	b1	16	195	1	seen	11,5	yes			party	day 119: worked the length of area 21 in the thorough search, lamp along; the whole hall including the stage end
+2026-09-23	b1	16	195	1	seen	12,5	yes			party	day 119: worked the length of area 21 in the thorough search, lamp along; the whole hall including the stage end
+2026-09-23	b1	16	195	1	seen	11,6	yes			party	day 119: worked the length of area 21 in the thorough search, lamp along; the whole hall including the stage end
+2026-09-23	b1	16	195	1	seen	12,6	yes			party	day 119: worked the length of area 21 in the thorough search, lamp along; the whole hall including the stage end
+2026-09-23	b1	16	195	1	seen	11,7	yes			party	day 119: worked the length of area 21 in the thorough search, lamp along; the whole hall including the stage end
+2026-09-23	b1	16	195	1	seen	12,7	yes			party	day 119: worked the length of area 21 in the thorough search, lamp along; the whole hall including the stage end
+2026-09-23	b1	16	195	1	seen	11,8	yes			party	day 119: worked the length of area 21 in the thorough search, lamp along; the whole hall including the stage end
+2026-09-23	b1	16	195	1	seen	12,8	yes			party	day 119: worked the length of area 21 in the thorough search, lamp along; the whole hall including the stage end
+2026-09-23	b1	16	195	1	seen	11,9	yes			party	day 119: worked the length of area 21 in the thorough search, lamp along; the whole hall including the stage end
+2026-09-23	b1	16	195	1	seen	12,9	yes			party	day 119: worked the length of area 21 in the thorough search, lamp along; the whole hall including the stage end
+2026-09-23	b1	16	195	1	seen	11,10	yes			party	day 119: worked the length of area 21 in the thorough search, lamp along; the whole hall including the stage end
+2026-09-23	b1	16	195	1	seen	12,10	yes			party	day 119: worked the length of area 21 in the thorough search, lamp along; the whole hall including the stage end
+2026-09-23	b1	16	195	1	area	21	searched			Yrtone,Torsat,Tristle,Frython,Ista,Brand,Blartho,Hask,Dellie	day 119 rounds 115-195: thorough search of the CONTENTS (not the walls), everyone on every section, Dave guarding the door. 8 turns = 20x70 ft as four 20x20 areas, doubled for ten benches. Ten benches, the stage slab and the banners handled. Nothing found; no trap, no creature, no treasure (none placed per the DM key). Interrupted at round 120 by a disturbance at the door that passed; the clock was set back from 195 to 120 and the search resumed.
