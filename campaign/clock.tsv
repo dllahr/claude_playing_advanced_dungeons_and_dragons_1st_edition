@@ -1117,3 +1117,6 @@ when	exped	round	kind	anchor	detail	note
 2026-09-24	16	326	advance		1	day 119: Tristle and Ista examine the door at (8,8,V)
 2026-09-24	16	327	advance		1	day 119: Tristle and Ista listen at the door at (8,8,V)
 2026-09-24	16	328	advance		1	day 119: Yrtone pushes open the door at (8,8,V), party ready in the lane formation
+2026-09-24	16	329	advance		1	day 119: the door at (8,8,V) is pulled shut
+2026-09-24	16	333	advance		4	day 119: south down the x=9 corridor to (9,4), Tristle 40 ft ahead, mapping
+2026-09-24	16	331	check	330	d6=3	anchor 330 + 1
