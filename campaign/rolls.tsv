@@ -9381,3 +9381,30 @@ when	exped	turn	notation	dice	modifier	total	hidden	reason
 2026-09-24			d6	2	0	2		day 119: squares of those giant mushrooms, first N used, re-roll duplicates: 1=(11,17) 2=(12,17) 3=(11,18) 4=(12,18) 5=(10,19) 6=(12,19)
 2026-09-24			d6	2	0	2		day 119: squares of those giant mushrooms, first N used, re-roll duplicates: 1=(11,17) 2=(12,17) 3=(11,18) 4=(12,18) 5=(10,19) 6=(12,19)
 2026-09-24			d6	2	0	2		day 119: squares of those giant mushrooms, first N used, re-roll duplicates: 1=(11,17) 2=(12,17) 3=(11,18) 4=(12,18) 5=(10,19) 6=(12,19)
+2026-09-24			4d8	1,5,3,2	0	11		day 119: DM call, hit points of the giant trunk-stemmed mushroom at (12,19), HD 4 like the first
+2026-09-24			d20	12	0	12		Dave attacks with short bow
+2026-09-24			1-6 (1d6)	1	0	1		Dave damage, short bow
+2026-09-24			d20	11	0	11		Dave attacks with short bow
+2026-09-24			1-6 (1d6)	2	0	2		Dave damage, short bow
+2026-09-24			d20	17	0	17		Torsat attacks with short bow
+2026-09-24			1-6 (1d6)	4	0	4		Torsat damage, short bow
+2026-09-24			d20	15	0	15		Torsat attacks with short bow
+2026-09-24			1-6 (1d6)	5	0	5		Torsat damage, short bow
+2026-09-24			d20	4	0	4		Tristle attacks with short bow
+2026-09-24			d20	19	0	19		Tristle attacks with short bow
+2026-09-24			1-6 (1d6)	1	0	1		Tristle damage, short bow
+2026-09-24			d20	8	0	8		Yrtone attacks with sling
+2026-09-24			d20	1	0	1		Blartho attacks with sling
+2026-09-24			d20	17	0	17		Dellie attacks with sling
+2026-09-24			2-7 (1d6+1)	3	1	4		Dellie damage, sling
+2026-09-24			d20	13	0	13		Hask attacks with sling
+2026-09-24			2-7 (1d6+1)	4	1	5		Hask damage, sling
+2026-09-24			d20	1	0	1		Ista attacks with dart
+2026-09-24			d20	2	0	2		Ista attacks with dart
+2026-09-24			d20	12	0	12		Ista attacks with dart
+2026-09-24			d20	2	0	2		Frython attacks with dart
+2026-09-24			d20	20	0	20		Frython attacks with dart
+2026-09-24			1-2 (1d2)	2	0	2		Frython damage, dart
+2026-09-24			d20	1	0	1		Frython attacks with dart
+2026-09-24			d20	7	0	7		Brand attacks with hand axe
+2026-09-24			3d4	3,4,3	0	10		day 119 round ~491: rounds the cloud from the second felled giant mushroom at (12,19) hangs thick (same ruling as the first: obscures vision, unpleasant to breathe, no damage, no save)
