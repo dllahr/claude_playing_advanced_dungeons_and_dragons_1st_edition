@@ -395,3 +395,4 @@ when	map	level	x	y	exped	turn	squares	feet	rate	why	route
 2026-09-24	b1	1	10	12			2	20	flee	day 119: everyone backs away south from the released spores, 40 ft from the fallen mushroom	10,14 10,13 10,12
 2026-09-24	b1	1	10	15			3	30	explore	day 119: north again up the west side of the north arm to where the mushroom was chopped down, the spores settled	10,12 10,13 10,14 10,15
 2026-09-24	b1	1	10	16			1	10	explore	day 119: 10 ft north onto the stump's square, then a look around	10,15 10,16
+2026-09-24	b1	1	10	17			1	10	explore	day 119: north 10 ft beside the fallen trunk to where the north end of area 22 shows in the lamp	10,16 10,17
