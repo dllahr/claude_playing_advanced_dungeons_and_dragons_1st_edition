@@ -4918,3 +4918,6 @@ Code -> contents per the module: 1 TL barley, 2 B wheat flour, 3 FT rye flour, 4
 
 ## Day 119, round 574 -- a wandering berserker at (9,25)
 Anchor-570 check fired at 574: level-1 table d6=6, Berserkers 1-2; count d2=1 (one), hp 5+1=6; approach d6=3 (1-3 = they come upon the party); direction d2=2, from the south along the x=9-10 passage; distance d3=2 -> 20 ft; party surprised (d6=1) and lost one segment, berserker d6=4 not surprised. It charged the front rank and struck twice (attacks 19, 20 vs need 16; 8+7=15): **Yrtone 7 -> -8**, unconscious and bleeding 1/round, dead at -10. Front-rank target d3=1 (Yrtone).
+
+## Day 119 round 575 -- the berserker's save is VOID
+I applied the PHB's INT-13 save (berserker INT 14, d20 19 vs 17) AFTER the player had declared a round on the standing no-save ruling. Player objected; correct. The round is replayed: **command worked**, the berserker sleeps this round (1-round duration), its two swings (8, 3) void, Hask's blow (d20 19, damage 2) stands on a helpless target. **Berserker hp 6 - 2 = 4.** It wakes as round 2 begins. Which rule applies going forward is the player's call, to be asked between encounters.

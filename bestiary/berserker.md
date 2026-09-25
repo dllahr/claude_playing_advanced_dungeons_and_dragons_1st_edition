@@ -59,7 +59,7 @@ surrender. The only thing that has ever moved them off this party was Blartho's
 *command* spell — they are men, they understand common, and *command* allows no
 saving throw against anything under 6 hit dice.
 
-> **CORRECTED day 119: THAT LINE WAS INCOMPLETE.** PHB p.44 gives a save to creatures with **Intelligence 13 OR MORE** *or* 6+ HD. A berserker's Intelligence is *average to very* (MM p.67), so **roll it** (8-15, 1d8+7) and if it is 13+ it saves **as F1: Spell 17** (DMG p.79). Day 119's berserker rolled INT 14 and saved (d20 19) against Blartho's *command* "Sleep!". The two earlier stoppings (expedition 3) were run without the INT check.
+> **DAY 119 — A DISPUTED POINT, AND THE PLAYER WAS RIGHT ABOUT THE PROCESS.** PHB p.44 says creatures of **Intelligence 13 or more**, or 6+ HD, get a save against *command*; a berserker is *average to very* (MM p.67), so a strict reading rolls its INT and gives a save at 13+. **This file said, and expedition 3 ran, "no saving throw under 6 hit dice".** On day 119 the player declared a whole round (Blartho's *command*, Dave and Torsat swapping to swords, Hask stepping in) **on that ruling**, and I changed it mid-round and had the berserker save. **That was wrong: a ruling is set BEFORE the declarations.** The round was replayed under the ruling in force: *command* worked. **GOING FORWARD IS UNDECIDED — the player to choose between the PHB's INT-13 save and the standing no-save reading, between encounters.** Until he does, the standing reading (no save) applies.
 
 ## Module conversion — B1
 
