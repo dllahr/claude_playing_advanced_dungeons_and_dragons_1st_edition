@@ -102,3 +102,4 @@ when	exped	turn	who	kind	delta	reason
 2026-09-24	16	574	Yrtone	anchor	-8	day 119 RESET, redone: the anchor above stored +8 by a bug (abs) and is VOID; Yrtone is -8, unconscious, BLEEDING, not yet bound, back to the end of the surprise segment
 2026-09-24	16	575	Yrtone	stabilise	0	day 119 round 575 (reset round 1): Tristle bound her wounds; bleeding stops (DMG p.82)
 2026-09-24	16	575	Yrtone	heal	6	day 119 round 575 (reset round 1): Dellie's cure light wounds, 1d8 = 6 (Dellie's only 1st-level cure, memorised, spent). -8 + 6 = -2: still unconscious; comatose 1-6 turns and a week's rest after (DMG p.82)
+2026-09-24	16	576	Yrtone	heal	1	day 119 round 576: Blartho's cure light wounds, 1d8 = 1 (one of his two; one left). -2 + 1 = -1: still unconscious, bleeding stopped. Coma 1d6 = 6 turns, then a full week's rest (DMG p.82)
