@@ -289,3 +289,8 @@ when	day	who	asset	verb	qty	unit	note
 2026-09-24	119	Blartho	sling_bullet	move	8	each	Blartho's share of the 30 sling bullets (8), day 119
 2026-09-24	119	Dellie	sling_bullet	move	7	each	Dellie's share of the 30 sling bullets (7), day 119
 2026-09-24	119	Hask	sling_bullet	move	7	each	Hask's share of the 30 sling bullets (7), day 119
+2026-09-24	119	party	cask_b	move	2	each	the 2 sealed 'B' cask(s), 40 lb each, carried out of area 10, day 119
+2026-09-24	119	party	cask_lc	move	1	each	the 1 sealed 'LC' cask(s), 40 lb each, carried out of area 10, day 119
+2026-09-24	119	party	cask_qs	move	2	each	the 2 sealed 'QS' cask(s), 40 lb each, carried out of area 10, day 119
+2026-09-24	119	party	cask_rh	move	1	each	the 1 sealed 'RH' cask(s), 40 lb each, carried out of area 10, day 119
+2026-09-24	119	party	cask_vw	move	1	each	the 1 sealed 'VW' cask(s), 40 lb each, carried out of area 10, day 119

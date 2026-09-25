@@ -342,3 +342,8 @@ when	day	asset	verb	qty	unit	condition	holder	evidence	note
 2026-09-23	119	iron_spike	move	50.0	each				area 11 supply room, day 119 -- the box of 50 iron spikes (the box itself left behind)
 2026-09-24	119	gold_ring_plain	move	1.0	each				found in plain view on the floor of area 20, day 119, dragged to the west wall with the 10-ft pole and slid into a sack with it, never touched by hand
 2026-09-24	119	morning_star_stone	move	-1.0	each				DROPPED in area 10 at (8,25), day 119 -- the player: 'we drop the stone morning star'. Salvage only; a stone-headed morning star off the troglodyte near (7,29), day 118. Abandoned, not sold: no money row.
+2026-09-24	119	cask_b	move	2.0	each				taken from area 10, day 119 -- 'B' casks, 3 gallon, sealed, from the storeroom census
+2026-09-24	119	cask_lc	move	1.0	each				taken from area 10, day 119 -- 'LC' casks, 3 gallon, sealed, from the storeroom census
+2026-09-24	119	cask_qs	move	2.0	each				taken from area 10, day 119 -- 'QS' casks, 3 gallon, sealed, from the storeroom census
+2026-09-24	119	cask_rh	move	1.0	each				taken from area 10, day 119 -- 'RH' casks, 3 gallon, sealed, from the storeroom census
+2026-09-24	119	cask_vw	move	1.0	each				taken from area 10, day 119 -- 'VW' casks, 3 gallon, sealed, from the storeroom census
