@@ -350,3 +350,5 @@ when	day	who	asset	verb	qty	unit	note
 2026-09-24	120	horse_yrtone	waterskin	move	7	each	to Yrtone's horse in the even split, day 120 (2,225 gp-wt of cargo; the pack horse keeps 2,217)
 2026-09-24	120	horse_pack	rope_50ft	move	-3	each	the load split evenly across the two horses, at the player's word, day 120: this part to Yrtone's horse
 2026-09-24	120	horse_yrtone	rope_50ft	move	3	each	to Yrtone's horse in the even split, day 120 (2,225 gp-wt of cargo; the pack horse keeps 2,217)
+2026-09-24	120	horse_pack	rations_std	move	-6.358	person-week	all eaten, at the player's word, day 120 (a simplification, see inventory_log)
+2026-09-24	120	party	rations_iron	move	-2.5	person-week	all eaten, same instruction, day 120
