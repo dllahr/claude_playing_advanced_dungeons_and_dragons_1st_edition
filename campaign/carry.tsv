@@ -408,3 +408,23 @@ when	day	who	asset	verb	qty	unit	note
 2026-09-24	121	horse_yrtone	hardware_box	move	-1	each	sold to Mund, day 121
 2026-09-24	121	horse_pack	nails_timber	move	-12	lb	sold to Mund, day 121
 2026-09-24	121	horse_yrtone	nails_timber	move	-13	lb	sold to Mund, day 121
+2026-09-24	121	horse_pack	rope_heavy_200ft	move	-1	each	left at Wend's barn, day 121, at the player's word (45 of the 50 spikes; the heavy 200-ft coil, the mortar and the short bow)
+2026-09-24	121	wend_barn	rope_heavy_200ft	move	1	each	left at Wend's barn by Dave, Tristle and Frython, day 121; Orm and Rowe, who mind the carts there, took it in
+2026-09-24	121	horse_pack	mortar_bag	move	-1	each	left at Wend's barn, day 121, at the player's word (45 of the 50 spikes; the heavy 200-ft coil, the mortar and the short bow)
+2026-09-24	121	wend_barn	mortar_bag	move	1	each	left at Wend's barn by Dave, Tristle and Frython, day 121; Orm and Rowe, who mind the carts there, took it in
+2026-09-24	121	horse_pack	short_bow	move	-1	each	left at Wend's barn, day 121, at the player's word (45 of the 50 spikes; the heavy 200-ft coil, the mortar and the short bow)
+2026-09-24	121	wend_barn	short_bow	move	1	each	left at Wend's barn by Dave, Tristle and Frython, day 121; Orm and Rowe, who mind the carts there, took it in
+2026-09-24	121	horse_pack	iron_spike	move	-23	each	left at Wend's barn, day 121, at the player's word (45 of the 50 spikes; the heavy 200-ft coil, the mortar and the short bow)
+2026-09-24	121	wend_barn	iron_spike	move	23	each	left at Wend's barn by Dave, Tristle and Frython, day 121; Orm and Rowe, who mind the carts there, took it in
+2026-09-24	121	horse_yrtone	iron_spike	move	-22	each	left at Wend's barn, day 121, at the player's word (45 of the 50 spikes; the heavy 200-ft coil, the mortar and the short bow)
+2026-09-24	121	wend_barn	iron_spike	move	22	each	left at Wend's barn by Dave, Tristle and Frython, day 121; Orm and Rowe, who mind the carts there, took it in
+2026-09-24	121	horse_yrtone	cask_b	move	-1	each	unloaded at the Inn, Wethersby, day 121, at the player's word ('we'll take the casks with us to the Inn')
+2026-09-24	121	wethersby	cask_b	move	1	each	at the Inn in Wethersby, sealed, unopened, day 121
+2026-09-24	121	horse_yrtone	cask_lc	move	-1	each	unloaded at the Inn, Wethersby, day 121, at the player's word ('we'll take the casks with us to the Inn')
+2026-09-24	121	wethersby	cask_lc	move	1	each	at the Inn in Wethersby, sealed, unopened, day 121
+2026-09-24	121	horse_yrtone	cask_qs	move	-1	each	unloaded at the Inn, Wethersby, day 121, at the player's word ('we'll take the casks with us to the Inn')
+2026-09-24	121	wethersby	cask_qs	move	1	each	at the Inn in Wethersby, sealed, unopened, day 121
+2026-09-24	121	horse_pack	cask_rh	move	-1	each	unloaded at the Inn, Wethersby, day 121, at the player's word ('we'll take the casks with us to the Inn')
+2026-09-24	121	wethersby	cask_rh	move	1	each	at the Inn in Wethersby, sealed, unopened, day 121
+2026-09-24	121	horse_pack	cask_vw	move	-1	each	unloaded at the Inn, Wethersby, day 121, at the player's word ('we'll take the casks with us to the Inn')
+2026-09-24	121	wethersby	cask_vw	move	1	each	at the Inn in Wethersby, sealed, unopened, day 121
