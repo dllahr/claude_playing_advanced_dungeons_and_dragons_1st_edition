@@ -4921,3 +4921,6 @@ Anchor-570 check fired at 574: level-1 table d6=6, Berserkers 1-2; count d2=1 (o
 
 ## Day 119 round 575 -- the berserker's save is VOID
 I applied the PHB's INT-13 save (berserker INT 14, d20 19 vs 17) AFTER the player had declared a round on the standing no-save ruling. Player objected; correct. The round is replayed: **command worked**, the berserker sleeps this round (1-round duration), its two swings (8, 3) void, Hask's blow (d20 19, damage 2) stands on a helpless target. **Berserker hp 6 - 2 = 4.** It wakes as round 2 begins. Which rule applies going forward is the player's call, to be asked between encounters.
+
+## Day 119 -- RESET of round 1 against the berserker
+Player asked to undo the round entirely; agreed. State restored to the end of the surprise segment: clock 574, Yrtone -8 unconscious BLEEDING and unbound, berserker hp 6 UNHURT (Hask's 2 undone), INT 14 (kept: it is a property of the man, not of the round), everyone's weapons as before (Dave, Torsat with bows; Hask with his sling). Ruling in force from the start of the reset round: PHB p.44, INT 13+ saves vs command (the berserker's save would be a fresh d20 vs 17). Old dice (initiative 4-4, the berserker's swings 8 and 3, Hask's 19 and 2, the first INT/save) are void.
