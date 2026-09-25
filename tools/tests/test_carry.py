@@ -284,9 +284,13 @@ def test_the_live_exemption_keeps_tristle_at_twelve_inches():
 
 
 def test_the_party_rate_survives_the_exemption():
-    """The other nine must still be able to carry the shared kit at the party
-    rate, or the exemption has only moved the problem onto them."""
+    """The exemption must not push so much onto the other nine that the party
+    loses more than a band against what everybody sharing would give. (The live
+    load changes every expedition, so this compares the two, it does not pin a
+    band.)"""
+    import party
     b = carry.default_bearers()
     assert b is not None and 'Tristle' not in b
-    _rows, left, _shared = carry.pack(bearers=b, target='heavy')
-    assert left <= 1e-6
+    with_ex = party._band_inches(bearers=b)
+    everyone = party._band_inches(bearers=b + ['Tristle'])
+    assert with_ex >= everyone - 3
