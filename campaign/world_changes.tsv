@@ -1404,3 +1404,8 @@ when	map	exped	turn	level	scope	target	change	item	qty	who	note
 2026-09-24	b1	16	580	1	edge	8,25,V	open			Hask	day 119: the foot-plate pressed and the panel opened, swinging west into area 10; Yrtone carried through unconscious
 2026-09-24	b1	16	583	1	edge	8,25,V	closed			party	day 119: pulled shut behind the party from inside area 10
 2026-09-24	b1	16	585	1	edge	8,25,V	spiked_shut	iron spike	2	Tristle	day 119: two spikes eased in quietly by hand from the room side (quiet work, no extra check). 5 -> 3 carried.
+2026-09-24	b1	16	949	1	edge	8,25,V	revert	iron spike	-2	Tristle	day 119: both spikes drawn by hand before leaving area 10. 3 -> 5 carried.
+2026-09-24	b1	16	950	1	edge	8,25,V	open			Hask	day 119: the panel opened from inside, swinging west toward the party; the passage beyond quiet
+2026-09-24	b1	16	952	1	edge	8,25,V	closed			party	day 119: pulled shut behind the party from the corridor side, unspiked, the foot-plate left as found
+2026-09-24	b1	16	971	1	edge	16,6,H	open			Dave	day 119: opened for the party to pass, the outer wooden door, oiled long ago
+2026-09-24	b1	16	974	1	edge	16,6,H	closed			party	day 119: pulled shut behind the party, standing rule

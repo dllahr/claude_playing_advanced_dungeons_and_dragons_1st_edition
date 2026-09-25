@@ -409,3 +409,10 @@ when	map	level	x	y	exped	turn	squares	feet	rate	why	route
 2026-09-24	b1	1	8	25			1	10	known	day 119: through the secret door at (8,25,V) into area 10	9,25 8,25
 2026-09-24	b1	1	9	25			1	10	known	day 119: through the secret door out of area 10, the party carrying seven casks	8,25 9,25
 2026-09-24	b1	1	8	25			1	10	known	day 119: back through the secret door into area 10, Yrtone carried unconscious between two of them	9,25 8,25
+2026-09-24	b1	1	9	25			1	10	known	day 119: out through the secret door in standard formation, Tristle 40 ft ahead, Yrtone between the second and third ranks	8,25 9,25
+2026-09-24	b1	1	10	21			5	50	known	day 119: the known way out, standard formation, Tristle 40 ft ahead at 12 inches	9,25 9,24 9,23 9,22 10,22 10,21
+2026-09-24	b1	1	16	21			6	60	known	day 119: the known way out, standard formation, Tristle 40 ft ahead at 12 inches	10,21 11,21 12,21 13,21 14,21 15,21 16,21
+2026-09-24	b1	1	16	19			2	20	known	day 119: the known way out, standard formation, Tristle 40 ft ahead at 12 inches	16,21 16,20 16,19
+2026-09-24	b1	1	16	13			12	120	known	day 119: east to (19,19), south down x=19 to (19,13), west through the slab at (17,13,V) to (16,13), the known way out, Tristle 40 ft ahead	16,19 17,19 18,19 19,19 19,18 19,17 19,16 19,15 19,14 19,13 18,13 17,13 16,13
+2026-09-24	b1	1	16	7			6	60	known	day 119: south down the x=16 corridor to the door at (16,6,H)	16,13 16,12 16,11 16,10 16,9 16,8 16,7
+2026-09-24	b1	1	16	1			6	60	known	day 119: through the outer door and south to the entrance	16,7 16,6 16,5 16,4 16,3 16,2 16,1

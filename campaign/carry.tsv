@@ -311,3 +311,4 @@ when	day	who	asset	verb	qty	unit	note
 2026-09-24	119	party	cask_b	move	-1	each	one 'B' cask left behind in area 10 to cut the load by 80 lb, day 119
 2026-09-24	119	party	cask_qs	move	-1	each	one 'QS' cask left behind in area 10 to cut the load by 80 lb, day 119
 2026-09-24	119	party	oil_flask	anchor	0	each	CURRENTLY sealed and in hand: 1 minus 1 opened at round 945 of expedition 16 to top off lantern-ista after the rest (broached flask emptied first, 23.5 turns left in the new broached one). light.py oilstate: 52 sealed = the 52 in Wend's barn, none in hand.
+2026-09-24	119	party	iron_spike	move	2	each	the two spikes drawn from the secret door at (8,25,V) before leaving area 10
