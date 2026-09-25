@@ -153,8 +153,11 @@ def main(argv=None):
             return 1
         # `stabilise` carries no amount: aid stops the bleeding and restores
         # nothing (DMG p.82). Giving it a delta would make it look like healing.
+        # An `anchor` SETS hp outright and may be NEGATIVE (a man at -8 is not at
+        # 8): day 119 an anchor of -8 was stored as +8 by the abs() below.
         delta = 0 if a.cmd == 'stabilise' else (
-            -abs(a.amount) if a.cmd == 'damage' else abs(a.amount))
+            -abs(a.amount) if a.cmd == 'damage' else
+            (a.amount if a.cmd == 'anchor' else abs(a.amount)))
         append(a.log_file, dict(when=today(), exped=a.exped, turn=a.turn,
                                 who=a.who, kind=a.cmd, delta=delta,
                                 reason=a.reason))

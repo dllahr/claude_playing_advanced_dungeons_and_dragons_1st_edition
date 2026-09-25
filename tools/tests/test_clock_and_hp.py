@@ -360,3 +360,15 @@ def test_further_damage_REOPENS_it(tmp_path):
 def test_an_unstabilised_negative_still_reports_the_bleeding(tmp_path):
     assert 'bleeding 1 hp/round' in hpmod.condition(-1, False)
     assert hpmod.condition(-10, True) == 'DEAD'
+
+
+def test_an_hp_anchor_may_be_negative(tmp_path):
+    """Day 119: `hp.py anchor Yrtone -8` stored +8 (abs). An anchor sets hp
+    outright and a man at -8 is at -8."""
+    import subprocess, sys, os
+    log = tmp_path / 'hp.tsv'
+    log.write_text('when\texped\tturn\twho\tkind\tdelta\treason\n')
+    r = subprocess.run([sys.executable, os.path.join(TOOLS, 'hp.py'),
+                        '--log-file', str(log), 'anchor', 'Dave', '-8'],
+                       capture_output=True, text=True)
+    assert '-8' in r.stdout, r.stdout + r.stderr
