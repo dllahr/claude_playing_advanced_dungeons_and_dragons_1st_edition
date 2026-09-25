@@ -76,7 +76,7 @@ saving throw against anything under 6 hit dice.
 |---|---|---|
 | 3 | first pair, corridor | Both stopped by Blartho's *command*. 60 XP. |
 | 3 | second pair, out of the crossing's south arm at round 224, carrying no light | Both killed — Torsat with a natural 20, Tristle with the spear. **Dave was dropped to −1 in round 1.** 29 XP, 11 gp, 20 sp, plus a broad sword and a long sword as salvage. |
-| 16 | (9,25), day 119, round 574 | ONE berserker (hp 6), a wandering encounter from the south, 20 ft. Party surprised (d6=1, one segment lost); it charged and hit Yrtone twice, 8 and 7, dropping her from 7 to -8. Blartho's *command* "Sleep!": it rolled INT 14 and SAVED (19 vs 17). Round 1: initiative tied; it missed Torsat twice (8, 3 vs 15), Hask hit it for 2. |
+| 16 | (9,25), day 119, round 574 | ONE berserker (hp 6), a wandering encounter from the south, 20 ft. Party surprised (d6=1, one segment lost); it charged and hit Yrtone twice, 8 and 7, dropping her from 7 to -8. Round 1: initiative tied; Blartho's *command* "Sleep!" WORKED (no save, the ruling in force; the INT and save dice I rolled were void), so it slept the round and its swings were void; Hask hit it for 2; Tristle bound Yrtone. |
 
 **They carried no light**, both times. They see well enough without it, or they
 know the ground.
