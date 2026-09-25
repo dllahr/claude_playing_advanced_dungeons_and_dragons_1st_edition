@@ -9613,3 +9613,6 @@ when	exped	turn	notation	dice	modifier	total	hidden	reason
 2026-09-24			d20	3	0	3		berserker attack 2 attacks AC 4
 2026-09-24			d20	19	0	19		Hask attacks with short sword
 2026-09-24			1-6 (1d6)	2	0	2		Hask damage, short sword
+2026-09-24			d6	4	0	4		initiative, party
+2026-09-24			d6	2	0	2		initiative, monsters
+2026-09-24			d8	6	0	6		day 119 round 575: Yrtone cure light wounds from Dellie, 1d8 hp; she is at -8

@@ -252,3 +252,12 @@ when	day	exped	round	side	actor	verb	target	qty	detail
 2026-09-24	119		2			end			VOID -- day 119 round 574-575: the fight is RESET at the player's word. Round 1 (command, weapon swaps, Hask's blow, Tristle's binding) is undone entirely; its dice are void.
 2026-09-24	119		1			start			day 119, expedition 16, round 574 (RESET): the x=9-10 passage at (9,25), the party out of the secret door to area 10, carrying seven casks. One berserker (hp 6 UNHURT, INT 14, AC 7) at Yrtone's side after charging from 20 ft and striking her twice (she is -8, unconscious, bleeding, unbound). The party has just lost its surprise segment; round 1 begins with fresh initiative. Ruling in force: PHB p.44, command allows a save at INT 13+ or 6+ HD.
 2026-09-24	119		1	party	party	surprise			party d6=1 on 1-2: SURPRISED, one segment lost, spent; berserker d6=4 not surprised. Segment over.
+2026-09-24	119		1	party	Frython	declare			casts sleep (1 segment), centred so the circle takes in the berserker and none of the party
+2026-09-24	119		1	party	Dave	declare			switches from bow to sword and shield (the whole round, no attack)
+2026-09-24	119		1	party	Torsat	declare			switches from bow to sword and shield (the whole round, no attack)
+2026-09-24	119		1	party	Hask	declare			advances to the front, drops his sling for his short sword, and attacks (sling to sword is free)
+2026-09-24	119		1	party	Ista	declare			drops back out of the way
+2026-09-24	119		1	party	Tristle	declare			binds Yrtone's wounds
+2026-09-24	119		1	party	Dellie	declare			casts cure light wounds on Yrtone (5 segments, touch)
+2026-09-24	119		1		berserker	dead			
+2026-09-24	119		1			end			day 119 round 574-575 (reset round 1): the berserker slept to Frython's sleep, no save, and was slain in his sleep by Hask. Yrtone bound by Tristle and cured by Dellie (-8 -> -2). No other wounds.
