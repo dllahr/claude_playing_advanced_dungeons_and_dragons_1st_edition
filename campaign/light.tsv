@@ -209,3 +209,5 @@ when	exped	round	source	kind	what	who	fuel	certainty	note
 2026-09-24	16	585	lantern-ista	out		Ista		known	day 119 round 585: put out for the rest in area 10, as the player said; hooded lanterns keep burning, so it is OUT
 2026-09-24	16	945	lantern-ista	refill		Ista		known	day 119 round 945: topped off after the rest, lantern still OUT: 6.1 of 24 turns left; the broached flask first, then the last sealed one opened for the remainder. Player standing OK to manage and be told.
 2026-09-24	16	946	lantern-ista	lit		Ista		known	day 119: relit to leave area 10, standard formation
+2026-09-24	16	966	lantern-ista	anchor		Ista	16.0	known	day 119 round 966: out of the dungeon at night; the walk down to the basecamp is an hour at the casks' pace (6 turns burnt, outside the dungeon clock): 22.0 - 6.0 = 16.0 turns on arrival
+2026-09-24	16	966	lantern-ista	out		Ista		known	day 119: shut off at the basecamp
