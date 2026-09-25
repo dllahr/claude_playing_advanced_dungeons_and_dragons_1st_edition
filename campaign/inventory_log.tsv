@@ -364,3 +364,4 @@ when	day	asset	verb	qty	unit	condition	holder	evidence	note
 2026-09-24	121	cask_lc	move	-1.0	each				SOLD to Holt, day 121, 6.0 gp. See money.tsv.
 2026-09-24	121	cask_vw	move	-1.0	each				SOLD to Holt, day 121, 2.3 gp. See money.tsv.
 2026-09-24	121	cask_qs	move	-1.0	each				SOLD to Holt, day 121, 2.4 gp. See money.tsv.
+2026-09-24	121	rations_std	move	10.0	person-week				Bought day 121 at Wethersby market, 30 gp, ten person-weeks for eleven mouths for six days. See money.tsv.

@@ -438,3 +438,4 @@ when	day	who	asset	verb	qty	unit	note
 2026-09-25	122	party	oil_flask	anchor	20	each	TWENTY sealed flasks in the carts, going up to the crag, day 122, at the player's word. light.py oilstate: 47 sealed = 27 barn + 20 carts.
 2026-09-25	121	wend_barn	oil_flask	anchor	47	each	UNDONE at the player's word: the trip to the crag never happened, the twenty flasks are back in the barn. light.py oilstate: 47 sealed.
 2026-09-25	121	party	oil_flask	anchor	0	each	UNDONE: no flasks in the carts; the party holds no sealed flasks in hand.
+2026-09-24	121	party	rations_std	move	10	person-week	ten person-weeks of standard rations bought day 121 for the crag run, 30 gp; 2,000 gp-wt for the carts
