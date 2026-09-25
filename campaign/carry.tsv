@@ -433,3 +433,4 @@ when	day	who	asset	verb	qty	unit	note
 2026-09-24	121	wethersby	cask_vw	move	-1	each	sold to Holt at the Inn, day 121
 2026-09-24	121	wethersby	cask_qs	move	-1	each	sold to Holt at the Inn, day 121
 2026-09-24	121	wethersby	cask_rh	move	0	each	the sunflower-seed cask, opened, the party resealed it; Holt passed on it. Still at the Inn, day 121. Kept sealed against vermin (B1: an opened container left unsealed draws vermin).
+2026-09-24	121	wend_barn	oil_flask	anchor	47	each	52 minus 5 sold by Wend since day 115, at 1 gp a flask (money.tsv day 121). light.py oilstate agrees.
