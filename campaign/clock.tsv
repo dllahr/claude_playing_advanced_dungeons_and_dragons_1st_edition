@@ -1205,3 +1205,8 @@ when	exped	round	kind	anchor	detail	note
 2026-09-24	16	544	check	540	d6=3	anchor 540 + 4
 2026-09-24	16	560	advance		10	day 119: everyone but Dave catalogues the containers of area 10, turn 2 of 3, Dave watching the secret door
 2026-09-24	16	570	advance		10	day 119: everyone but Dave catalogues the containers of area 10, turn 3 of 3, Dave watching the secret door
+2026-09-24	16	571	advance		1	day 119: Tristle draws the gentle spike from the secret door at (8,25,V)
+2026-09-24	16	572	advance		1	day 119: Yrtone presses the foot-plate from inside? no: the panel is pushed open from inside area 10, swinging toward the party's west side
+2026-09-24	16	573	advance		1	day 119: through the door out of area 10
+2026-09-24	16	574	advance		1	day 119: the secret door at (8,25,V) pulled shut behind the last of them
+2026-09-24	16	574	check	570	d6=1 -> Berserkers (1-2)-AC 7, HD 1 +1’, hp 5,4, #AT 1, D 1-8 or by weapon, MV 90' (30'), Save FI, ML 12	anchor 570 + 4

@@ -239,3 +239,5 @@ when	day	exped	round	side	actor	verb	target	qty	detail
 2026-09-24	119		1	monsters		damage	ghoul	5	
 2026-09-24	119		1		ghoul	dead			
 2026-09-24	119		1			end			day 119 round 456: the second ghoul (hp 4) shot dead in the open before contact: Torsat 1 and Dellie 4. Yrtone's turn attempt failed (11 vs 16). No wounds to the party.
+2026-09-24	119		1			start			day 119, expedition 16, round 574: the x=9-10 passage at (9,25), the party just out of the secret door to area 10, carrying seven casks. One berserker (hp 6, AC 7) came up the passage from the south, no light, 20 ft off.
+2026-09-24	119		1	party	party	surprise			party d6=1 on 1-2: SURPRISED, one segment lost (its own die); berserker d6=4 not surprised

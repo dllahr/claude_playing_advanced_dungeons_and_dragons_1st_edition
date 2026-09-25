@@ -4915,3 +4915,6 @@ One more giant trunk-stemmed mushroom (d4=1) at **(12,19)**, NE corner against t
 
 ## Day 119 -- area 10 census (the module's d20 table, one roll per container)
 Code -> contents per the module: 1 TL barley, 2 B wheat flour, 3 FT rye flour, 4 MK salt pork, 5 GG dill pickles, 6 HU raisins, 7 EJ fish in brine, 8 Y dried apples, 9 PF whole peas, 10 SD ale, 11 Z honey, 12 AW wine, 13 OG water, 14 XR soft soap, 15 LC salt, 16 VW lard, 17 QS seasoning, 18 RH sunflower seeds, 19 UT hard candy, 20 JS dried mushrooms. The party knows ONLY SD = ale. Counts and sizes are in world_changes.tsv (area 10, round 570) and the rolls log. Note honey, salt and wine weigh more than the liquid-equivalent figure and flours, mushrooms, raisins and apples much less; the size-based weights given to the player are liquid-equivalent.
+
+## Day 119, round 574 -- a wandering berserker at (9,25)
+Anchor-570 check fired at 574: level-1 table d6=6, Berserkers 1-2; count d2=1 (one), hp 5+1=6; approach d6=3 (1-3 = they come upon the party); direction d2=2, from the south along the x=9-10 passage; distance d3=2 -> 20 ft; party surprised (d6=1) and lost one segment, berserker d6=4 not surprised. It charged the front rank and struck twice (attacks 19, 20 vs need 16; 8+7=15): **Yrtone 7 -> -8**, unconscious and bleeding 1/round, dead at -10. Front-rank target d3=1 (Yrtone).

@@ -294,3 +294,4 @@ when	day	who	asset	verb	qty	unit	note
 2026-09-24	119	party	cask_qs	move	2	each	the 2 sealed 'QS' cask(s), 40 lb each, carried out of area 10, day 119
 2026-09-24	119	party	cask_rh	move	1	each	the 1 sealed 'RH' cask(s), 40 lb each, carried out of area 10, day 119
 2026-09-24	119	party	cask_vw	move	1	each	the 1 sealed 'VW' cask(s), 40 lb each, carried out of area 10, day 119
+2026-09-24	119	party	iron_spike	move	1	each	the spike drawn from the secret door at (8,25,V) before leaving area 10

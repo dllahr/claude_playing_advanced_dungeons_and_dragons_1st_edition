@@ -9590,3 +9590,17 @@ when	exped	turn	notation	dice	modifier	total	hidden	reason
 2026-09-24			d2	1	0	1		day 119: area 10 census, which stack: 1 northwest wall, 2 east wall (south)
 2026-09-24			d2	2	0	2		day 119: area 10 census, which stack: 1 northwest wall, 2 east wall (south)
 2026-09-24			d6	3	0	3		wandering check, anchor 540
+2026-09-24			d6	1	0	1		wandering check, anchor 570
+2026-09-24			d6	6	0	6		wandering table, level 1
+2026-09-24			d6	3	0	3		day 119 round 574: wandering encounter (berserkers 1-2), party at (9,25) in the open x=10 passage system, carrying seven casks. Do they come upon the party? DECLARED FIRST: 1-3 they do, 4-6 they are elsewhere and the check is spent
+2026-09-24			d2	1	0	1		day 119 round 574: berserkers appearing, 1-2 (hp 5,4 stocked for two, so two if d2=2)
+2026-09-24			d2	2	0	2		day 119 round 574: berserkers approach: 1 from the north along x=10, 2 from the south along x=10
+2026-09-24			d6	1	0	1		surprise check, the party at (9,25), lamp lit, carrying seven casks, just shut the secret door
+2026-09-24			d6	4	0	4		surprise check, the berserker coming up the x=10 passage from the south, no light
+2026-09-24			d3	2	0	2		day 119 round 574: encounter distance to the berserker in tens of feet (surprise indicated: 1-3 inches, DMG p.61-62)
+2026-09-24			2-7 (1d6+1)	5	1	6		day 119 round 574: berserker hit points (MM: 2-7 hp), one berserker
+2026-09-24			d3	1	0	1		day 119 round 574: which front-rank man the charging berserker hits first: 1 Yrtone, 2 Dave, 3 Torsat
+2026-09-24			d20	19	0	19		berserker attack 1 attacks AC 3
+2026-09-24			1-8 (1d8)	8	0	8		berserker attack 1 damage
+2026-09-24			d20	20	0	20		berserker attack 2 attacks AC 3
+2026-09-24			1-8 (1d8)	7	0	7		berserker attack 2 damage
