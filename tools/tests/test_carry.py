@@ -250,8 +250,21 @@ def test_the_easy_target_absorbs_it_all_and_says_the_party_rate():
 
 
 def test_fewer_bearers_can_make_it_stop_fitting():
-    """Three people cannot carry what ten can, and the tool must not pretend."""
-    _r, left, _s = carry.pack(bearers=['Dave', 'Frython', 'Brand'])
+    """Three people cannot carry what ten can, and the tool must not pretend.
+    (A synthetic kit, not the live one: the live load changes every day and a
+    pack horse took most of it on day 120.)"""
+    log = _log(('d', '1', 'party', 'rope_50ft', 'anchor', '200', 'each', ''))
+    _r, left, _s = carry.pack(log=log, bearers=['Dave', 'Frython', 'Brand'])
+    assert left > 0
+
+
+def test_a_bearer_over_the_band_on_his_own_kit_is_not_within_it():
+    """Day 120: `pack --target normal` said EVERY MEMBER IS WITHIN normal (12")
+    while Blartho's OWN kit, 745 gp-wt, sat above his normal ceiling of 550.
+    A bearer already over the band by himself leaves weight that cannot be
+    carried at that band, even with no shared kit at all."""
+    log = _log(('d', '1', 'Blartho', 'banded_mail', 'anchor', '2', 'each', ''))
+    _r, left, _s = carry.pack(log=log, bearers=['Blartho'], target='normal')
     assert left > 0
 
 

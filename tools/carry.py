@@ -450,15 +450,26 @@ def pack(log=None, bearers=None, target='heavy'):
                                    tuple(-x for x in _raw(chars[n].get('str')))))
 
     left = shared_gp
+    overage = 0.0
     rows_ = []
     for name in ranked:
         own, _lines, _ = person_load(name, log)
         alw = _allowance_lookup(chars[name].get('str', '') or '0')
         room = max(0.0, (ceiling + alw) - own)
+        # Day 120: a bearer whose OWN kit already exceeds the band's ceiling has
+        # room 0, but the old code then reported "EVERY MEMBER IS WITHIN <band>"
+        # -- Blartho at 745 of personal kit was called 'normal' (12") when his
+        # ceiling is 550. The overage is weight that cannot be carried at this
+        # band, so it counts as left over.
+        overage += max(0.0, own - (ceiling + alw))
         take = min(room, left)
         left -= take
         rows_.append((name, chars[name].get('str', '?'), alw, own, room, take,
                       own + take))
+    # Personal kit above a bearer's own ceiling cannot be handed on by this
+    # routine (it is armour, weapons, worn gear); it counts as weight that cannot
+    # be carried at this band.
+    left += overage
     return rows_, left, shared_gp
 
 
