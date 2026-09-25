@@ -1210,3 +1210,4 @@ when	exped	round	kind	anchor	detail	note
 2026-09-24	16	573	advance		1	day 119: through the door out of area 10
 2026-09-24	16	574	advance		1	day 119: the secret door at (8,25,V) pulled shut behind the last of them
 2026-09-24	16	574	check	570	d6=1 -> Berserkers (1-2)-AC 7, HD 1 +1’, hp 5,4, #AT 1, D 1-8 or by weapon, MV 90' (30'), Save FI, ML 12	anchor 570 + 4
+2026-09-24	16	575	advance		1	day 119: round 1 of the fight with the berserker in the passage at (9,25)

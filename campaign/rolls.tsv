@@ -9604,3 +9604,12 @@ when	exped	turn	notation	dice	modifier	total	hidden	reason
 2026-09-24			1-8 (1d8)	8	0	8		berserker attack 1 damage
 2026-09-24			d20	20	0	20		berserker attack 2 attacks AC 3
 2026-09-24			1-8 (1d8)	7	0	7		berserker attack 2 damage
+2026-09-24			d6	4	0	4		initiative, party
+2026-09-24			d6	4	0	4		initiative, monsters
+2026-09-24			8-15 (1d8+7)	7	7	14		day 119 round 575: this berserker's Intelligence (MM: average to very = 8-15); 13+ earns a saving throw vs the command spell, PHB p.44
+2026-09-24			d20	19	0	19		day 119 round 575: the berserker (INT 14) saves vs the command spell 'Sleep', as F1: Spell column 17 (DMG p.79), meet or beat
+2026-09-24			d4	3	0	3		day 119 round 575: which adjacent man the berserker swings at (it saved vs the command): 1 Yrtone (down), 2 Dave (bow in hand, shield off), 3 Torsat (same), 4 Hask (stepping in)
+2026-09-24			d20	8	0	8		berserker attack 1 attacks AC 4
+2026-09-24			d20	3	0	3		berserker attack 2 attacks AC 4
+2026-09-24			d20	19	0	19		Hask attacks with short sword
+2026-09-24			1-6 (1d6)	2	0	2		Hask damage, short sword

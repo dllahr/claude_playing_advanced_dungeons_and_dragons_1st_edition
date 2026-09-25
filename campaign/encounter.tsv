@@ -241,3 +241,10 @@ when	day	exped	round	side	actor	verb	target	qty	detail
 2026-09-24	119		1			end			day 119 round 456: the second ghoul (hp 4) shot dead in the open before contact: Torsat 1 and Dellie 4. Yrtone's turn attempt failed (11 vs 16). No wounds to the party.
 2026-09-24	119		1			start			day 119, expedition 16, round 574: the x=9-10 passage at (9,25), the party just out of the secret door to area 10, carrying seven casks. One berserker (hp 6, AC 7) came up the passage from the south, no light, 20 ft off.
 2026-09-24	119		1	party	party	surprise			party d6=1 on 1-2: SURPRISED, one segment lost (its own die); berserker d6=4 not surprised
+2026-09-24	119		1	party	Blartho	declare			casts command 'Sleep!' at the man (1 segment): the man rolled INT 14 and SAVED (d20=19 vs 17), no effect
+2026-09-24	119		1	party	Dave	declare			switches from bow to sword and shield (the whole round, no attack)
+2026-09-24	119		1	party	Torsat	declare			switches from bow to sword and shield (the whole round, no attack)
+2026-09-24	119		1	party	Hask	declare			moves to the front over Yrtone, drops his sling for his short sword, and attacks (sling to sword is free)
+2026-09-24	119		1	party	Tristle	declare			binds Yrtone's wounds (bleeding stops)
+2026-09-24	119		1	monsters		damage	berserker	2	
+2026-09-24	119		2			initiative			round 2 begins
