@@ -316,3 +316,25 @@ when	day	who	asset	verb	qty	unit	note
 2026-09-24	120	basecamp	horse_riding	move	3	each	all three riding horses at Coll's basecamp, tethered on a long line since day 117, per the transcript lines cited in the row above. THE MULES ARE NOT RESOLVED: the day-103 rows put one at the basecamp with a cart that has since been placed in Wethersby; nothing found says where either mule is now.
 2026-09-24	120	basecamp	mule	move	-1	each	PLAYER'S WORD, day 120: 'the mules are with the carts'. The carts are in Wethersby (transcript line 52061), so both mules are there. This row takes the day-103 basecamp mule off the basecamp.
 2026-09-24	120	wethersby	mule	move	1	each	the second mule, with the carts in Wethersby, per the player, day 120. Both mules are with the carts, in Wethersby.
+2026-09-24	120	party	cask_b	move	-1	each	onto the pack horse, at the player's word, day 120 (payload 4,450 gp-wt at half move: 5,000 less pack saddle 250 and panniers 300, rules/equipment.md)
+2026-09-24	120	horse_pack	cask_b	move	1	each	loaded on the pack horse, day 120; the horse carries 4,442 gp-wt of a 4,450 payload
+2026-09-24	120	party	cask_lc	move	-1	each	onto the pack horse, at the player's word, day 120 (payload 4,450 gp-wt at half move: 5,000 less pack saddle 250 and panniers 300, rules/equipment.md)
+2026-09-24	120	horse_pack	cask_lc	move	1	each	loaded on the pack horse, day 120; the horse carries 4,442 gp-wt of a 4,450 payload
+2026-09-24	120	party	cask_qs	move	-1	each	onto the pack horse, at the player's word, day 120 (payload 4,450 gp-wt at half move: 5,000 less pack saddle 250 and panniers 300, rules/equipment.md)
+2026-09-24	120	horse_pack	cask_qs	move	1	each	loaded on the pack horse, day 120; the horse carries 4,442 gp-wt of a 4,450 payload
+2026-09-24	120	party	cask_rh	move	-1	each	onto the pack horse, at the player's word, day 120 (payload 4,450 gp-wt at half move: 5,000 less pack saddle 250 and panniers 300, rules/equipment.md)
+2026-09-24	120	horse_pack	cask_rh	move	1	each	loaded on the pack horse, day 120; the horse carries 4,442 gp-wt of a 4,450 payload
+2026-09-24	120	party	cask_vw	move	-1	each	onto the pack horse, at the player's word, day 120 (payload 4,450 gp-wt at half move: 5,000 less pack saddle 250 and panniers 300, rules/equipment.md)
+2026-09-24	120	horse_pack	cask_vw	move	1	each	loaded on the pack horse, day 120; the horse carries 4,442 gp-wt of a 4,450 payload
+2026-09-24	120	party	rations_std	move	-6.358	person-week	onto the pack horse, at the player's word, day 120 (payload 4,450 gp-wt at half move: 5,000 less pack saddle 250 and panniers 300, rules/equipment.md)
+2026-09-24	120	horse_pack	rations_std	move	6.358	person-week	loaded on the pack horse, day 120; the horse carries 4,442 gp-wt of a 4,450 payload
+2026-09-24	120	party	banded_mail	move	-1	each	onto the pack horse, at the player's word, day 120 (payload 4,450 gp-wt at half move: 5,000 less pack saddle 250 and panniers 300, rules/equipment.md)
+2026-09-24	120	horse_pack	banded_mail	move	1	each	loaded on the pack horse, day 120; the horse carries 4,442 gp-wt of a 4,450 payload
+2026-09-24	120	party	waterskin	move	-7	each	onto the pack horse, at the player's word, day 120 (payload 4,450 gp-wt at half move: 5,000 less pack saddle 250 and panniers 300, rules/equipment.md)
+2026-09-24	120	horse_pack	waterskin	move	7	each	loaded on the pack horse, day 120; the horse carries 4,442 gp-wt of a 4,450 payload
+2026-09-24	120	party	rope_50ft	move	-4	each	onto the pack horse, at the player's word, day 120 (payload 4,450 gp-wt at half move: 5,000 less pack saddle 250 and panniers 300, rules/equipment.md)
+2026-09-24	120	horse_pack	rope_50ft	move	4	each	loaded on the pack horse, day 120; the horse carries 4,442 gp-wt of a 4,450 payload
+2026-09-24	120	party	sling_bullet	move	-8	each	onto the pack horse, at the player's word, day 120 (payload 4,450 gp-wt at half move: 5,000 less pack saddle 250 and panniers 300, rules/equipment.md)
+2026-09-24	120	horse_pack	sling_bullet	move	8	each	loaded on the pack horse, day 120; the horse carries 4,442 gp-wt of a 4,450 payload
+2026-09-24	120	party	candle	move	-6	each	onto the pack horse, at the player's word, day 120 (payload 4,450 gp-wt at half move: 5,000 less pack saddle 250 and panniers 300, rules/equipment.md)
+2026-09-24	120	horse_pack	candle	move	6	each	loaded on the pack horse, day 120; the horse carries 4,442 gp-wt of a 4,450 payload
