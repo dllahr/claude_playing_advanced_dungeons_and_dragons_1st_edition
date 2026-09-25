@@ -353,3 +353,9 @@ when	day	asset	verb	qty	unit	condition	holder	evidence	note
 2026-09-24	120	rations_iron	move	-2.5	person-week				ALL EATEN, same instruction, day 120. The player said 'all our rations'; the iron rations (lifted back out of the smithy fire pit day 99) are counted in that. Tell me if he meant only the standard ones.
 2026-09-24	121	sword_broad	move	1.0	each				RETCON at the player's word, day 121: the berserker's broad sword, picked up in the passage at (9,25) on day 119 after the fight. He meant to and the DM never offered it. Carried to Wethersby on the horses.
 2026-09-24	121	bracelet_silver	move	-1.0	each				SOLD to Toller, day 121, 8 gp. See money.tsv.
+2026-09-24	121	hand_axe	move	-6.0	each				SOLD to Mund, day 121, 3.0 gp. See money.tsv.
+2026-09-24	121	sword_broad	move	-1.0	each				SOLD to Mund, day 121, 5.0 gp. See money.tsv.
+2026-09-24	121	crossbow_light	move	-2.0	each				SOLD to Mund, day 121, 12.0 gp. See money.tsv.
+2026-09-24	121	polearm_orc	move	-2.0	each				SOLD to Mund, day 121, 5.0 gp. See money.tsv.
+2026-09-24	121	spear	move	-1.0	each				SOLD to Mund, day 121, 0.5 gp. See money.tsv.
+2026-09-24	121	hardware_box	move	-1.0	each				SOLD to Mund, day 121, 20.0 gp. See money.tsv.
