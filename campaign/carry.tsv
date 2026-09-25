@@ -352,3 +352,15 @@ when	day	who	asset	verb	qty	unit	note
 2026-09-24	120	horse_yrtone	rope_50ft	move	3	each	to Yrtone's horse in the even split, day 120 (2,225 gp-wt of cargo; the pack horse keeps 2,217)
 2026-09-24	120	horse_pack	rations_std	move	-6.358	person-week	all eaten, at the player's word, day 120 (a simplification, see inventory_log)
 2026-09-24	120	party	rations_iron	move	-2.5	person-week	all eaten, same instruction, day 120
+2026-09-24	121	horse_yrtone	banded_mail	move	-1	each	Yrtone's own kit goes back to her at the Inn in Wethersby for her week of rest, day 121, at the player's word
+2026-09-24	121	Yrtone	banded_mail	move	1	each	back with Yrtone, in her room at the Inn, day 121
+2026-09-24	121	party	flail	move	-1	each	Yrtone's own kit goes back to her at the Inn in Wethersby for her week of rest, day 121, at the player's word
+2026-09-24	121	Yrtone	flail	move	1	each	back with Yrtone, in her room at the Inn, day 121
+2026-09-24	121	party	shield_large	move	-1	each	Yrtone's own kit goes back to her at the Inn in Wethersby for her week of rest, day 121, at the player's word
+2026-09-24	121	Yrtone	shield_large	move	1	each	back with Yrtone, in her room at the Inn, day 121
+2026-09-24	121	party	sling	move	-1	each	Yrtone's own kit goes back to her at the Inn in Wethersby for her week of rest, day 121, at the player's word
+2026-09-24	121	Yrtone	sling	move	1	each	back with Yrtone, in her room at the Inn, day 121
+2026-09-24	121	horse_pack	sling_bullet	move	-8	each	Yrtone's own kit goes back to her at the Inn in Wethersby for her week of rest, day 121, at the player's word
+2026-09-24	121	Yrtone	sling_bullet	move	8	each	back with Yrtone, in her room at the Inn, day 121
+2026-09-24	121	party	holy_symbol	move	-1	each	Yrtone's own kit goes back to her at the Inn in Wethersby for her week of rest, day 121, at the player's word
+2026-09-24	121	Yrtone	holy_symbol	move	1	each	back with Yrtone, in her room at the Inn, day 121
