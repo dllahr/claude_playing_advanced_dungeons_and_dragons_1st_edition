@@ -364,3 +364,36 @@ when	day	who	asset	verb	qty	unit	note
 2026-09-24	121	Yrtone	sling_bullet	move	8	each	back with Yrtone, in her room at the Inn, day 121
 2026-09-24	121	party	holy_symbol	move	-1	each	Yrtone's own kit goes back to her at the Inn in Wethersby for her week of rest, day 121, at the player's word
 2026-09-24	121	Yrtone	holy_symbol	move	1	each	back with Yrtone, in her room at the Inn, day 121
+2026-09-24	121	basecamp	hand_axe	move	0	each	RETCON at the player's word, day 121: 'we brought everything from the basecamp with us, I did say we load everything up' (the instruction is at transcript line 60306: 'load the other horse up with as much stuff as they can safely carry'). The stash under the lean-to went onto the two horses on day 120, split evenly.
+2026-09-24	121	basecamp	hand_axe	move	-3	each	the basecamp stash taken up on day 120: this part to the pack horse
+2026-09-24	121	horse_pack	hand_axe	move	3	each	from the basecamp lean-to on day 120 (retcon), day 121 row
+2026-09-24	121	basecamp	short_bow	move	-1	each	the basecamp stash taken up on day 120: this part to the pack horse
+2026-09-24	121	horse_pack	short_bow	move	1	each	from the basecamp lean-to on day 120 (retcon), day 121 row
+2026-09-24	121	basecamp	polearm_orc	move	-1	each	the basecamp stash taken up on day 120: this part to the pack horse
+2026-09-24	121	horse_pack	polearm_orc	move	1	each	from the basecamp lean-to on day 120 (retcon), day 121 row
+2026-09-24	121	basecamp	crossbow_light	move	-1	each	the basecamp stash taken up on day 120: this part to the pack horse
+2026-09-24	121	horse_pack	crossbow_light	move	1	each	from the basecamp lean-to on day 120 (retcon), day 121 row
+2026-09-24	121	basecamp	nails_timber	move	-12	lb	the basecamp stash taken up on day 120: this part to the pack horse
+2026-09-24	121	horse_pack	nails_timber	move	12	lb	from the basecamp lean-to on day 120 (retcon), day 121 row
+2026-09-24	121	basecamp	mortar_bag	move	-1	each	the basecamp stash taken up on day 120: this part to the pack horse
+2026-09-24	121	horse_pack	mortar_bag	move	1	each	from the basecamp lean-to on day 120 (retcon), day 121 row
+2026-09-24	121	basecamp	rope_heavy_200ft	move	-1	each	the basecamp stash taken up on day 120: this part to the pack horse
+2026-09-24	121	horse_pack	rope_heavy_200ft	move	1	each	from the basecamp lean-to on day 120 (retcon), day 121 row
+2026-09-24	121	basecamp	iron_spike	move	-25	each	the basecamp stash taken up on day 120: this part to the pack horse
+2026-09-24	121	horse_pack	iron_spike	move	25	each	from the basecamp lean-to on day 120 (retcon), day 121 row
+2026-09-24	121	basecamp	hand_axe	move	-3	each	the basecamp stash taken up on day 120: this part to Yrtone's horse
+2026-09-24	121	horse_yrtone	hand_axe	move	3	each	from the basecamp lean-to on day 120 (retcon), day 121 row
+2026-09-24	121	basecamp	spear	move	-1	each	the basecamp stash taken up on day 120: this part to Yrtone's horse
+2026-09-24	121	horse_yrtone	spear	move	1	each	from the basecamp lean-to on day 120 (retcon), day 121 row
+2026-09-24	121	basecamp	polearm_orc	move	-1	each	the basecamp stash taken up on day 120: this part to Yrtone's horse
+2026-09-24	121	horse_yrtone	polearm_orc	move	1	each	from the basecamp lean-to on day 120 (retcon), day 121 row
+2026-09-24	121	basecamp	crossbow_light	move	-1	each	the basecamp stash taken up on day 120: this part to Yrtone's horse
+2026-09-24	121	horse_yrtone	crossbow_light	move	1	each	from the basecamp lean-to on day 120 (retcon), day 121 row
+2026-09-24	121	basecamp	nails_timber	move	-13	lb	the basecamp stash taken up on day 120: this part to Yrtone's horse
+2026-09-24	121	horse_yrtone	nails_timber	move	13	lb	from the basecamp lean-to on day 120 (retcon), day 121 row
+2026-09-24	121	basecamp	hardware_box	move	-1	each	the basecamp stash taken up on day 120: this part to Yrtone's horse
+2026-09-24	121	horse_yrtone	hardware_box	move	1	each	from the basecamp lean-to on day 120 (retcon), day 121 row
+2026-09-24	121	basecamp	iron_spike	move	-25	each	the basecamp stash taken up on day 120: this part to Yrtone's horse
+2026-09-24	121	horse_yrtone	iron_spike	move	25	each	from the basecamp lean-to on day 120 (retcon), day 121 row
+2026-09-24	121	horse_yrtone	sword_broad	move	1	each	the berserker's broad sword, on Yrtone's horse (retcon), day 121
+2026-09-24	121	party	bracelet_silver	move	-1	each	sold to Toller, day 121
