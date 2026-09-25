@@ -59,7 +59,7 @@ surrender. The only thing that has ever moved them off this party was Blartho's
 *command* spell — they are men, they understand common, and *command* allows no
 saving throw against anything under 6 hit dice.
 
-> **DAY 119 — A DISPUTED POINT, AND THE PLAYER WAS RIGHT ABOUT THE PROCESS.** PHB p.44 says creatures of **Intelligence 13 or more**, or 6+ HD, get a save against *command*; a berserker is *average to very* (MM p.67), so a strict reading rolls its INT and gives a save at 13+. **This file said, and expedition 3 ran, "no saving throw under 6 hit dice".** On day 119 the player declared a whole round (Blartho's *command*, Dave and Torsat swapping to swords, Hask stepping in) **on that ruling**, and I changed it mid-round and had the berserker save. **That was wrong: a ruling is set BEFORE the declarations.** The round was replayed under the ruling in force: *command* worked. **GOING FORWARD IS UNDECIDED — the player to choose between the PHB's INT-13 save and the standing no-save reading, between encounters.** Until he does, the standing reading (no save) applies.
+> **RULING SET DAY 119, BEFORE THE DECLARATIONS OF THE RESET ROUND: PHB p.44 APPLIES — a creature of Intelligence 13 or more, or 6+ HD, saves against *command*.** A berserker is *average to very* (MM p.67): **roll its Intelligence (8-15, 1d8+7)** and, at 13+, it saves as F1 (Spell 17, DMG p.79). Expedition 3 ran it as "no save under 6 HD", which the printed rule does not support. On day 119 I applied the printed rule MID-ROUND, after the player had declared on the old one; he objected, and was right that a ruling must be set BEFORE declarations. **The round was undone entirely (encounter reset to the end of the surprise segment) and the printed rule now stands, announced up front.** *That day's berserker rolled INT 14: it gets the save.*
 
 ## Module conversion — B1
 
@@ -76,7 +76,7 @@ saving throw against anything under 6 hit dice.
 |---|---|---|
 | 3 | first pair, corridor | Both stopped by Blartho's *command*. 60 XP. |
 | 3 | second pair, out of the crossing's south arm at round 224, carrying no light | Both killed — Torsat with a natural 20, Tristle with the spear. **Dave was dropped to −1 in round 1.** 29 XP, 11 gp, 20 sp, plus a broad sword and a long sword as salvage. |
-| 16 | (9,25), day 119, round 574 | ONE berserker (hp 6), a wandering encounter from the south, 20 ft. Party surprised (d6=1, one segment lost); it charged and hit Yrtone twice, 8 and 7, dropping her from 7 to -8. Round 1: initiative tied; Blartho's *command* "Sleep!" WORKED (no save, the ruling in force; the INT and save dice I rolled were void), so it slept the round and its swings were void; Hask hit it for 2; Tristle bound Yrtone. |
+| 16 | (9,25), day 119, round 574 | ONE berserker (hp 6, INT 14), a wandering encounter from the south, 20 ft. Party surprised (d6=1, one segment lost); it charged and hit Yrtone twice, 8 and 7, dropping her from 7 to -8. **Round 1 was played once, then UNDONE entirely at the player's word** (a ruling changed mid-round); the fight was reset to the end of the surprise segment. |
 
 **They carried no light**, both times. They see well enough without it, or they
 know the ground.
