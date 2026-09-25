@@ -406,3 +406,5 @@ when	day	who	asset	verb	qty	unit	note
 2026-09-24	121	horse_yrtone	polearm_orc	move	-1	each	sold to Mund, day 121
 2026-09-24	121	horse_yrtone	spear	move	-1	each	sold to Mund, day 121
 2026-09-24	121	horse_yrtone	hardware_box	move	-1	each	sold to Mund, day 121
+2026-09-24	121	horse_pack	nails_timber	move	-12	lb	sold to Mund, day 121
+2026-09-24	121	horse_yrtone	nails_timber	move	-13	lb	sold to Mund, day 121
