@@ -428,3 +428,8 @@ when	day	who	asset	verb	qty	unit	note
 2026-09-24	121	wethersby	cask_rh	move	1	each	at the Inn in Wethersby, sealed, unopened, day 121
 2026-09-24	121	horse_pack	cask_vw	move	-1	each	unloaded at the Inn, Wethersby, day 121, at the player's word ('we'll take the casks with us to the Inn')
 2026-09-24	121	wethersby	cask_vw	move	1	each	at the Inn in Wethersby, sealed, unopened, day 121
+2026-09-24	121	wethersby	cask_b	move	-1	each	sold to Holt at the Inn, day 121
+2026-09-24	121	wethersby	cask_lc	move	-1	each	sold to Holt at the Inn, day 121
+2026-09-24	121	wethersby	cask_vw	move	-1	each	sold to Holt at the Inn, day 121
+2026-09-24	121	wethersby	cask_qs	move	-1	each	sold to Holt at the Inn, day 121
+2026-09-24	121	wethersby	cask_rh	move	0	each	the sunflower-seed cask, opened, the party resealed it; Holt passed on it. Still at the Inn, day 121. Kept sealed against vermin (B1: an opened container left unsealed draws vermin).

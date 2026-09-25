@@ -102,3 +102,7 @@ when	day	delta	unit	asset	qty	counterparty	interaction	reason	book
 2026-09-24	121	20.0	gp	hardware_box	-1	Mund	-	day 121: SOLD TO MUND at his forge, the box of assorted hardware, Mund's flagged DM-call price. Half the PHB list for used arms (rules/equipment.md), the hardware at his quoted 20 gp.	
 2026-09-24	121	6.25	gp	nails_timber	-25	Mund	-	day 121: THE AREA 11 BOX OF TIMBER NAILS (25 lb, the module gives no count, the DM's estimate) SOLD TO MUND at 2 sp 5 cp the pound, half his own selling price of 5 sp (day 97), the campaign's used-goods rate. A DM-call price, flagged.	
 2026-09-24	121	-0.3	sp	lodging	3	Holt, the Inn, Wethersby	-	day 121: a merchant's meal (1 sp, PHB) each for Dave, Tristle and Frython at the Inn after Toller, Mund and the barn.	
+2026-09-24	121	0.7	gp	cask_b	-1	Holt	-	day 121: SOLD TO HOLT at the Inn, the wheat flour, ~14 lb, with its cask, at his offered price (a DM-call price, no book prices bulk goods; flagged).	
+2026-09-24	121	6.0	gp	cask_lc	-1	Holt	-	day 121: SOLD TO HOLT at the Inn, the salt, ~30 lb, with its cask, at his offered price (a DM-call price, no book prices bulk goods; flagged).	
+2026-09-24	121	2.3	gp	cask_vw	-1	Holt	-	day 121: SOLD TO HOLT at the Inn, the lard, ~23 lb, with its cask, at his offered price (a DM-call price, no book prices bulk goods; flagged).	
+2026-09-24	121	2.4	gp	cask_qs	-1	Holt	-	day 121: SOLD TO HOLT at the Inn, the seasoning, ~8 lb, with its cask, at his offered price (a DM-call price, no book prices bulk goods; flagged).	

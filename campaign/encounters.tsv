@@ -74,3 +74,4 @@ exped	kind	encounter	xp	earned_by	source	notes
 16	treasure	the silver bracelet, sold to Toller day 121	8	all,Hask,Dellie,Ista	DMG p.85, 1 gp = 1 xp on treasure GAINED, as for the iron	The module valued it at 80 s.p.; Toller paid 8 gp. The gold ring (10 gp) is NOT yet sold and earns nothing yet.
 16	treasure	the orc and berserker arms and the hardware box, sold to Mund day 121	45	all,Hask,Dellie,Ista	1 gp = 1 xp, DMG p.85 (expedition 4's arms salvage precedent)	45 gp 5 sp realised (3 + 5 + 12 + 5 + 0.5 + 20), rounded down to 45 xp. The gold ring is not sold and earns nothing yet.
 16	treasure	the area 11 box of timber nails, sold to Mund day 121	6	all,Hask,Dellie,Ista	1 gp = 1 xp, DMG p.85	6 gp 2 sp 5 cp realised, rounded down to 6 xp.
+16	treasure	four casks (flour, salt, lard, seasoning) sold to Holt day 121	11	all,Hask,Dellie,Ista	1 gp = 1 xp, DMG p.85	11 gp 4 sp realised (7 sp + 6 gp + 2 gp 3 sp + 2 gp 4 sp), rounded down to 11 xp.
