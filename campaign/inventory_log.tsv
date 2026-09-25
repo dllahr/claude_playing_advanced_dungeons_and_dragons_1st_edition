@@ -347,3 +347,5 @@ when	day	asset	verb	qty	unit	condition	holder	evidence	note
 2026-09-24	119	cask_qs	move	2.0	each				taken from area 10, day 119 -- 'QS' casks, 3 gallon, sealed, from the storeroom census
 2026-09-24	119	cask_rh	move	1.0	each				taken from area 10, day 119 -- 'RH' casks, 3 gallon, sealed, from the storeroom census
 2026-09-24	119	cask_vw	move	1.0	each				taken from area 10, day 119 -- 'VW' casks, 3 gallon, sealed, from the storeroom census
+2026-09-24	119	cask_b	move	-1.0	each				LEFT BEHIND in area 10, day 119, at the player's word: one 'B' cask (40 lb) to cut the load by 80 lb with one QS. Abandoned, not sold: no money row.
+2026-09-24	119	cask_qs	move	-1.0	each				LEFT BEHIND in area 10, day 119, at the player's word: one 'QS' cask (40 lb) to cut the load by 80 lb with one QS. Abandoned, not sold: no money row.

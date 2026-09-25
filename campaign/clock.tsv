@@ -1220,3 +1220,23 @@ when	exped	round	kind	anchor	detail	note
 2026-09-24	16	582	advance		2	day 119: back through the secret door into area 10 carrying Yrtone
 2026-09-24	16	583	advance		1	day 119: the secret door at (8,25,V) pulled shut behind the last of them
 2026-09-24	16	585	advance		2	day 119: two iron spikes eased in quietly by hand at the foot of the secret door at (8,25,V), from inside area 10
+2026-09-24	16	705	advance		120	REST 2.0 h — day 119: first two-hour watch (Dave and Torsat) of the rest in area 10, lantern out, Yrtone in her coma, secret door spiked
+2026-09-24	16	602	check	600	not rolled	inside a long rest; the module gives 1 checks per night instead of the normal schedule
+2026-09-24	16	634	check	630	not rolled	inside a long rest; the module gives 1 checks per night instead of the normal schedule
+2026-09-24	16	662	check	660	not rolled	inside a long rest; the module gives 1 checks per night instead of the normal schedule
+2026-09-24	16	692	check	690	not rolled	inside a long rest; the module gives 1 checks per night instead of the normal schedule
+2026-09-24	16	645	check	rest watch 1	d6=3	rest watch 1
+2026-09-24	16	825	advance		120	REST 2.0 h — day 119: second two-hour watch (Tristle and Ista) of the rest in area 10, lantern out; Yrtone's coma ends in this watch
+2026-09-24	16	724	check	720	not rolled	inside a long rest; the module gives 1 checks per night instead of the normal schedule
+2026-09-24	16	752	check	750	not rolled	inside a long rest; the module gives 1 checks per night instead of the normal schedule
+2026-09-24	16	780	check	780	not rolled	inside a long rest; the module gives 1 checks per night instead of the normal schedule
+2026-09-24	16	815	check	810	not rolled	inside a long rest; the module gives 1 checks per night instead of the normal schedule
+2026-09-24	16	765	check	rest watch 1	d6=3	rest watch 1
+2026-09-24	16	945	advance		120	REST 2.0 h — day 119: third two-hour watch (Hask) of the rest in area 10, lantern out; after four hours' rest the casters study for half an hour (Blartho and Dellie two spells each, Frython one)
+2026-09-24	16	844	check	840	not rolled	inside a long rest; the module gives 1 checks per night instead of the normal schedule
+2026-09-24	16	870	check	870	not rolled	inside a long rest; the module gives 1 checks per night instead of the normal schedule
+2026-09-24	16	904	check	900	not rolled	inside a long rest; the module gives 1 checks per night instead of the normal schedule
+2026-09-24	16	934	check	930	not rolled	inside a long rest; the module gives 1 checks per night instead of the normal schedule
+2026-09-24	16	885	check	rest watch 1	d6=1 -> Giant Rats (2-5)-AC 7, HD7 2 , hp 4,3,2,1,1, #AT 1, D 1 -3 + disease, MV 120' (40') swimming 60' (20'), Save NM, ML 8	rest watch 1
+2026-09-24	16	885	correct		-60	day 119: the third watch's rest call ran to round 945 past a check that fired at round 885; back to 885 to resolve it where the party is. The study (825-855) is before it and stands.
+2026-09-24	16	945	advance		60	REST 1.0 h — day 119: the rest of Hask's watch in area 10, lantern out (the watch's one check already rolled)

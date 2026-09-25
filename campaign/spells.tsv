@@ -161,3 +161,8 @@ when	exped	round	who	spell	event	note
 2026-09-24	-	day 119, round 574, the passage at (9,25), reset round 1	Dellie	cure light wounds	cast	ON YRTONE at -8: 1d8 = 6 -> -2. Her only cure, spent.
 2026-09-24	-	day 119, round 575, the passage at (9,25)	Blartho	cure light wounds	cast	ON YRTONE at -2: 1d8 = 1 -> -1. One of his two; ONE LEFT.
 2026-09-24	-	day 119, round 578, the passage at (9,25)	Blartho	cure light wounds	cast	ON YRTONE at -1: 1d8 = 3 -> +2. His SECOND and LAST cure; none left today.
+2026-09-24	-	day 119, rounds 825-855, area 10, after a four-hour rest	Blartho	cure light wounds	memorised	1 of 2, after the four-hour rest in area 10 and fifteen minutes' prayer, day 119 round 825-855.
+2026-09-24	-	day 119, rounds 825-855, area 10, after a four-hour rest	Blartho	cure light wounds	memorised	2 of 2. His *command* was never spent and stays memorised.
+2026-09-24	-	day 119, rounds 825-855, area 10, after a four-hour rest	Dellie	cure light wounds	memorised	Her spent cure re-memorised, 15 minutes (day 119, area 10).
+2026-09-24	-	day 119, rounds 825-855, area 10, after a four-hour rest	Dellie	cure light wounds	memorised	SECOND CURE, at the player's word: she gave up one of her two lights (never cast) and took cure light wounds in its place, 15 minutes. Now: light x1, cure light wounds x2.
+2026-09-24	-	day 119, rounds 825-855, area 10, after a four-hour rest	Frython	sleep	memorised	His one slot, re-learned after the rest, 15 minutes (day 119, area 10).

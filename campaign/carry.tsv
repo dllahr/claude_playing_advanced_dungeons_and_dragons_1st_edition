@@ -308,3 +308,6 @@ when	day	who	asset	verb	qty	unit	note
 2026-09-24	119	party	sling_bullet	move	8	each	Yrtone's sling_bullet, common pool while she is in her coma, day 119
 2026-09-24	119	Yrtone	holy_symbol	move	-1	each	Yrtone is in a coma; her gear goes into the common pool for the others to carry, at the player's word, day 119
 2026-09-24	119	party	holy_symbol	move	1	each	Yrtone's holy_symbol, common pool while she is in her coma, day 119
+2026-09-24	119	party	cask_b	move	-1	each	one 'B' cask left behind in area 10 to cut the load by 80 lb, day 119
+2026-09-24	119	party	cask_qs	move	-1	each	one 'QS' cask left behind in area 10 to cut the load by 80 lb, day 119
+2026-09-24	119	party	oil_flask	anchor	0	each	CURRENTLY sealed and in hand: 1 minus 1 opened at round 945 of expedition 16 to top off lantern-ista after the rest (broached flask emptied first, 23.5 turns left in the new broached one). light.py oilstate: 52 sealed = the 52 in Wend's barn, none in hand.

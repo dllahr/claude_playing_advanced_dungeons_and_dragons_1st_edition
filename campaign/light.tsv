@@ -206,3 +206,5 @@ when	exped	round	source	kind	what	who	fuel	certainty	note
 2026-09-23	16	89	lantern-ista	draw		Ista	2	known	day 119: two turns of oil off the broached flask worked into the hinges of (10,2,H) -- NOT into the lamp. Same bookkeeping as the (4,37,V) hinge job.
 2026-09-24	16	215	lantern-ista	refill		Ista		known	day 119 round 215: topped off in the hall of area 21, 2.5 of 24 turns left, standing instruction; the broached flask (10.0 turns) first, then a sealed one opened for the remainder
 2026-09-24	16	406	lantern-ista	refill		Ista		known	day 119 round 406: topped off at the junction at (10,3), 4.9 of 24 turns left; the broached flask (12.5 turns) first, then a sealed one opened for the remainder. Player standing OK to manage this and be told.
+2026-09-24	16	585	lantern-ista	out		Ista		known	day 119 round 585: put out for the rest in area 10, as the player said; hooded lanterns keep burning, so it is OUT
+2026-09-24	16	945	lantern-ista	refill		Ista		known	day 119 round 945: topped off after the rest, lantern still OUT: 6.1 of 24 turns left; the broached flask first, then the last sealed one opened for the remainder. Player standing OK to manage and be told.
