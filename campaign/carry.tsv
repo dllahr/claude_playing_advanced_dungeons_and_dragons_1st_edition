@@ -338,3 +338,15 @@ when	day	who	asset	verb	qty	unit	note
 2026-09-24	120	horse_pack	sling_bullet	move	8	each	loaded on the pack horse, day 120; the horse carries 4,442 gp-wt of a 4,450 payload
 2026-09-24	120	party	candle	move	-6	each	onto the pack horse, at the player's word, day 120 (payload 4,450 gp-wt at half move: 5,000 less pack saddle 250 and panniers 300, rules/equipment.md)
 2026-09-24	120	horse_pack	candle	move	6	each	loaded on the pack horse, day 120; the horse carries 4,442 gp-wt of a 4,450 payload
+2026-09-24	120	horse_pack	cask_b	move	-1	each	the load split evenly across the two horses, at the player's word, day 120: this part to Yrtone's horse
+2026-09-24	120	horse_yrtone	cask_b	move	1	each	to Yrtone's horse in the even split, day 120 (2,225 gp-wt of cargo; the pack horse keeps 2,217)
+2026-09-24	120	horse_pack	cask_lc	move	-1	each	the load split evenly across the two horses, at the player's word, day 120: this part to Yrtone's horse
+2026-09-24	120	horse_yrtone	cask_lc	move	1	each	to Yrtone's horse in the even split, day 120 (2,225 gp-wt of cargo; the pack horse keeps 2,217)
+2026-09-24	120	horse_pack	cask_qs	move	-1	each	the load split evenly across the two horses, at the player's word, day 120: this part to Yrtone's horse
+2026-09-24	120	horse_yrtone	cask_qs	move	1	each	to Yrtone's horse in the even split, day 120 (2,225 gp-wt of cargo; the pack horse keeps 2,217)
+2026-09-24	120	horse_pack	banded_mail	move	-1	each	the load split evenly across the two horses, at the player's word, day 120: this part to Yrtone's horse
+2026-09-24	120	horse_yrtone	banded_mail	move	1	each	to Yrtone's horse in the even split, day 120 (2,225 gp-wt of cargo; the pack horse keeps 2,217)
+2026-09-24	120	horse_pack	waterskin	move	-7	each	the load split evenly across the two horses, at the player's word, day 120: this part to Yrtone's horse
+2026-09-24	120	horse_yrtone	waterskin	move	7	each	to Yrtone's horse in the even split, day 120 (2,225 gp-wt of cargo; the pack horse keeps 2,217)
+2026-09-24	120	horse_pack	rope_50ft	move	-3	each	the load split evenly across the two horses, at the player's word, day 120: this part to Yrtone's horse
+2026-09-24	120	horse_yrtone	rope_50ft	move	3	each	to Yrtone's horse in the even split, day 120 (2,225 gp-wt of cargo; the pack horse keeps 2,217)
