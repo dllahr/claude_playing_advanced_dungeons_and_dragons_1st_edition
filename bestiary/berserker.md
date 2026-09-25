@@ -59,6 +59,8 @@ surrender. The only thing that has ever moved them off this party was Blartho's
 *command* spell — they are men, they understand common, and *command* allows no
 saving throw against anything under 6 hit dice.
 
+> **CORRECTED day 119: THAT LINE WAS INCOMPLETE.** PHB p.44 gives a save to creatures with **Intelligence 13 OR MORE** *or* 6+ HD. A berserker's Intelligence is *average to very* (MM p.67), so **roll it** (8-15, 1d8+7) and if it is 13+ it saves **as F1: Spell 17** (DMG p.79). Day 119's berserker rolled INT 14 and saved (d20 19) against Blartho's *command* "Sleep!". The two earlier stoppings (expedition 3) were run without the INT check.
+
 ## Module conversion — B1
 
 | | B1 prints | Monster Manual | Use |
@@ -77,3 +79,4 @@ saving throw against anything under 6 hit dice.
 
 **They carried no light**, both times. They see well enough without it, or they
 know the ground.
+| 16 | (9,25), day 119, round 574 | ONE berserker (hp 6), a wandering encounter from the south, 20 ft. Party surprised (d6=1, one segment lost); it charged and hit Yrtone twice, 8 and 7, dropping her from 7 to -8. Blartho's *command* "Sleep!": it rolled INT 14 and SAVED (19 vs 17). Round 1: initiative tied; it missed Torsat twice (8, 3 vs 15), Hask hit it for 2. |
