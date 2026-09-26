@@ -10763,3 +10763,11 @@ when	exped	turn	notation	dice	modifier	total	hidden	reason
 2026-09-26			d3	3	0	3		day 138 round 91: distance in tens of feet at which three orcs come up the corridor into Dave's lantern light at (10,10)
 2026-09-26			d6	3	0	3		surprise check, Dave at (10,10) with the lantern beside him, awake, facing south, and the rest of the party in the garden
 2026-09-26			d6	5	0	5		surprise check, the three orcs (surprised on 2)
+2026-09-26			d6	3	0	3		initiative, party
+2026-09-26			d6	4	0	4		initiative, monsters
+2026-09-26			d20	14	0	14		orc A attacks AC 3
+2026-09-26			d20	18	0	18		orc B attacks AC 3
+2026-09-26			1-8 (1d8)	6	0	6		orc B damage
+2026-09-26			d20	3	0	3		Dave attacks with short bow
+2026-09-26			d20	16	0	16		Dave attacks with short bow
+2026-09-26			1-6 (1d6)	4	0	4		Dave damage, short bow
