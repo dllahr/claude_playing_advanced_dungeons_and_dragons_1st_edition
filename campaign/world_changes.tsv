@@ -1446,3 +1446,4 @@ when	map	exped	turn	level	scope	target	change	item	qty	who	note
 2026-09-26	b1	21	20	1	edge	8,25,V	open			Hask	day 126: held open for the eight barrels
 2026-09-26	b1	21	28	1	edge	8,25,V	closed			party	day 126: pulled shut behind the last barrel, unspiked
 2026-09-26	b1	21	37	1	area	10	searched			party	day 126 rounds 10-37: EIGHT SOUND BARRELS (36 gal: B x2, TL, LC x2, HU, UT, AW) pulled clear of the stacks and rolled out through the secret door (8,25,V), pulled shut behind them unspiked, and up the corridor to the cave mouth (16,1), Tristle 40 ft ahead. Chosen by dice from the 26 sound barrels because the player named none. LEFT IN AREA 10: 25 barrels (18 sound, 7 slack).
+2026-09-26	b1	22	15	1	edge	8,25,V	closed			party	day 126: opened from the corridor side, the party in, pulled shut behind them, unspiked
