@@ -5155,3 +5155,6 @@ Player's correction: the game is PETTEIA; renamed everywhere. Best of three by b
 
 ## Days 136 night to 137 -- hacksaws, the Inn, the road north
 Two of the three hacksaws left at the barn. Night at the Inn on the tab (10 gp off Holt's account, balance 384.15). MIRROR: the silver mirror (the module's 90 gp, off the library orcs) was NEVER sold: no money row; it is still in the party's kit; the metal mirror is the working one (5 gp-wt). Toller would pay the module value. Durnhak added to the agendas (A019, weekly from day 129). README gets a section on offscreen.py status. Day 137: lunch for ten (10 sp), the three horses packed with the shared kit, all ten of the party walking, 21 miles, at the basecamp at dusk; dinner 0.48 (camp food 5.76). No dice.
+
+## Day 137 morning -- the silver mirror sold before the road north
+The player wanted the mirror sold to Toller before leaving town; I had already run the trip north in one go. It fits without an undo: an hour at Toller's pitch, out at about half past nine, still at the basecamp at dusk. Sold at the module's 90 gp at full value as with the bracelet, comb and tapestry. XP 90 shared. Purse and XP as computed.
