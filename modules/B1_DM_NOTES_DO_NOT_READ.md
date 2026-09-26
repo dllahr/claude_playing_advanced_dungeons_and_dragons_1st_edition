@@ -4996,3 +4996,6 @@ WHAT IT LOOKS LIKE WHEN THEY COME BACK
 - The gap between (9,11) and (10,11) is untouched mold. The corridor growth is untouched, only smoke-stained.
 - Giant puffballs near the trails burst, spore residue like grey flour over the burnt strips. Smell of burnt fungus and scorched cellar that lasts days. No living thing found, none stocked (both ghouls dead).
 - Nothing revealed under the mold: no hidden feature here.
+
+## Day 124 -- doors left OPEN on the retreat (player's correction)
+The player: all the doors open behind the party; (10,2) is off its hinges (since day 119); (14,5) left open; the secret door (14,13,V) is spiked open. (16,6,H) taken as open too. Effect: open doors along the whole route from the garden to the cave mouth; nothing else changes. The smoke can drift out along the corridor.
