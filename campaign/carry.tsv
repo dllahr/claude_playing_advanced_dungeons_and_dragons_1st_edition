@@ -445,3 +445,17 @@ when	day	who	asset	verb	qty	unit	note
 2026-09-25	122	party	oil_flask	anchor	20	each	TWENTY sealed flasks in the carts, going up to the crag, day 122. light.py oilstate: 47 sealed = 27 barn + 20 carts.
 2026-09-25	123	party	oil_flask	anchor	3	each	THREE sealed flasks taken into the caves from the basecamp, day 123, at the player's word; the other seventeen of the twenty stay in the carts at the camp.
 2026-09-25	123	basecamp	oil_flask	anchor	17	each	SEVENTEEN sealed flasks left in the carts at Coll's basecamp, day 123. light.py oilstate: 47 sealed = 27 barn + 17 camp + 3 in hand.
+2026-09-25	123	party	camp_food	move	-20	person-week	LEFT AT THE BASECAMP for the sledge-way crew, day 123: it never came into the caves. Player-caught: the load and the movement rate had been counting it.
+2026-09-25	123	basecamp	camp_food	move	20	person-week	the crew's raw camp food, in the carts at Coll's basecamp, day 123 (140 person-days)
+2026-09-25	123	horse_pack	rope_50ft	move	-1	each	the horses are at the camp; what they carried goes into the caves on the party's backs, day 123
+2026-09-25	123	party	rope_50ft	move	1	each	taken off the pack horse at the camp, day 123
+2026-09-25	123	horse_pack	candle	move	-6	each	off the pack horse at the camp, day 123
+2026-09-25	123	party	candle	move	6	each	taken into the caves, day 123
+2026-09-25	123	horse_pack	iron_spike	move	-2	each	off the pack horse at the camp, day 123
+2026-09-25	123	party	iron_spike	move	2	each	taken into the caves, day 123
+2026-09-25	123	horse_yrtone	waterskin	move	-7	each	off the horse at the camp, day 123
+2026-09-25	123	party	waterskin	move	7	each	the party's seven waterskins, taken into the caves, day 123
+2026-09-25	123	horse_yrtone	rope_50ft	move	-3	each	off the horse at the camp, day 123
+2026-09-25	123	party	rope_50ft	move	3	each	taken into the caves, day 123
+2026-09-25	123	horse_yrtone	iron_spike	move	-3	each	off the horse at the camp, day 123
+2026-09-25	123	party	iron_spike	move	3	each	taken into the caves, day 123
