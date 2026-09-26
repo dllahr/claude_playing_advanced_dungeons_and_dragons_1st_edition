@@ -1458,3 +1458,6 @@ when	day	who	asset	verb	qty	unit	note
 2026-09-30	138	party	oil_flask	move	-2	each	CORRECTION day 138: the two lanterns were refilled from the party's flasks at the basecamp, so two of the four in hand are gone; light.py's pool is 24 sealed + one broached, of which 23 sealed are at the basecamp
 2026-09-30	138	basecamp	oil_flask	move	-3	each	three flasks taken to make five in hand, at the player's word, day 138
 2026-09-30	138	party	oil_flask	move	3	each	five flasks in hand for the caves, day 138
+2026-09-30	138	party	hand_axe	move	3	each	the three orc axes picked up from the pile by the corridor wall of area 22, day 138 (salvage)
+2026-09-30	138	party	spear	move	2	each	the two orc spears picked up, day 138 (salvage)
+2026-09-30	138	party	polearm_orc	move	1	each	the orc polearm picked up, day 138 (salvage)
