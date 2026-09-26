@@ -4999,3 +4999,6 @@ WHAT IT LOOKS LIKE WHEN THEY COME BACK
 
 ## Day 124 -- doors left OPEN on the retreat (player's correction)
 The player: all the doors open behind the party; (10,2) is off its hinges (since day 119); (14,5) left open; the secret door (14,13,V) is spiked open. (16,6,H) taken as open too. Effect: open doors along the whole route from the garden to the cave mouth; nothing else changes. The smoke can drift out along the corridor.
+
+## Day 124 -- Hask rides after the carts; the party helps Coll (about 11:15 am on)
+Carts left the basecamp about 8:00 (my figure; earlier said only 'early morning'), 2.2 mph loaded. Hask on foot from the cave entrance to the basecamp about 40 minutes, mounts about noon, rides 6 mph (DMG light mount 60 miles a day): meets the carts about 2:20 pm on the made road, about 13.8 miles from the basecamp; passes the word ('bring back every flask in Wend's barn'; 27 sealed there, none in the carts), turns back and is at the basecamp about 4:40 pm. He did not have to stay in town. Party (eight) works two hours with Coll on the outcrop line, the work face about a third of the way up from the basecamp. No dice, no wandering ruling (outdoors).
