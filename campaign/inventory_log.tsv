@@ -495,3 +495,4 @@ when	day	asset	verb	qty	unit	condition	holder	evidence	note
 2026-09-26	136	camp_food	move	-1.14	person-week				dinner day 135 at the basecamp, breakfast and lunch day 136: eight mouths (Rowe and seven of the party) at a third of a person-day each meal, 8 person-days
 2026-09-26	137	camp_food	move	-0.48	person-week				dinner at the basecamp, day 137: ten mouths at a third of a person-day each
 2026-09-26	137	mirror_silver	move	-1.0	each				SOLD to Toller, day 137, 90 gp. See money.tsv.
+2026-09-26	138	camp_food	move	-0.48	person-week				breakfast at the basecamp, day 138: ten mouths at a third of a person-day each

@@ -5164,3 +5164,6 @@ Told from offscreen A019 tick 1 (day 136, progress). Authored to what Tristle's 
 
 ## Day 137 evening -- the working purse (audit-skip)
 Standing rule (player): the party carries 100 gp when it goes north and balances it in town. Booked in carry.tsv as `coin`, a hundred gold pieces, against `party` (audit-skip); assets.tsv gives coin a weight of 1 gp-weight a coin, so the purse is 10 lb of load (shared kit 2,451 gp-wt, party rate unchanged at 9"). The ledger total is untouched: coin is a FOREIGN asset. The 36 gp for Durnhak on day 139 comes out of it. (audit-skip)
+
+## Day 138 -- expedition 28, to the corridor of area 22
+About 7 am, nine rounds from the mouth to the corridor. Party body at (10,5) with the lantern (30 ft light reaches (10,8)); Tristle at (10,9) in the dark on infravision (nothing warm). What is perceived from here: the smell of burnt fungus and scorched cellar, still strong at six days (burn was day 124 round 36); NOT the garden (the lamp does not reach it and infravision shows heat only). Untouched growth in the corridor mouth, smoke-stained. Nothing fired. The garden's damage is as ruled on day 124 (DM notes), unseen. Everyone with a missile weapon ready.
