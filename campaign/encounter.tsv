@@ -284,3 +284,10 @@ when	day	exped	round	side	actor	verb	target	qty	detail
 2026-09-26	138	28	1	monsters		damage	orc B	4	Dave's second arrow, hp 4
 2026-09-26	138	28	1		orc B	dead			Dave's arrow
 2026-09-26	138	28	2			initiative			round 2 begins
+2026-09-26	138	28	2	party	Dave	declare			switches to sword and shield
+2026-09-26	138	28	2	party	Yrtone	declare			attacks the orcs
+2026-09-26	138	28	2	party	Torsat	declare			attacks the orcs
+2026-09-26	138	28	2	party	Hask	declare			steps up to the second rank and attacks the orc with his spear
+2026-09-26	138	28	2	party	Blartho	declare			steps up to the second rank and casts cure light wounds on Dave
+2026-09-26	138	28	2	monsters		damage	orc A	1	Hask's spear from the second rank, hp 6 to 5
+2026-09-26	138	28	3			initiative			round 3 begins

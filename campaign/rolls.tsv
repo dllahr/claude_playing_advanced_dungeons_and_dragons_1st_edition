@@ -10771,3 +10771,16 @@ when	exped	turn	notation	dice	modifier	total	hidden	reason
 2026-09-26			d20	3	0	3		Dave attacks with short bow
 2026-09-26			d20	16	0	16		Dave attacks with short bow
 2026-09-26			1-6 (1d6)	4	0	4		Dave damage, short bow
+2026-09-26			d6	1	0	1		initiative, party
+2026-09-26			d6	2	0	2		initiative, monsters
+2026-09-26			d3	2	0	2		day 138 round 92: which front-rank man each orc (A then C) swings at: 1 Dave, 2 Yrtone, 3 Torsat
+2026-09-26			d3	2	0	2		day 138 round 92: which front-rank man each orc (A then C) swings at: 1 Dave, 2 Yrtone, 3 Torsat
+2026-09-26			d20	18	0	18		orc A attacks AC 3
+2026-09-26			1-8 (1d8)	3	0	3		orc A damage
+2026-09-26			d20	18	0	18		orc C attacks AC 3
+2026-09-26			1-8 (1d8)	3	0	3		orc C damage
+2026-09-26			d20	7	0	7		Torsat attacks with long sword
+2026-09-26			d20	14	0	14		Hask attacks with spear
+2026-09-26			1-6 (1d6)	1	0	1		Hask damage, spear
+2026-09-26			d20	10	0	10		Yrtone attacks with footman's flail
+2026-09-26			d8	1	0	1		day 138 round 92: Blartho's cure light wounds on Dave (1d8), touch, 5 segments, from the second rank
