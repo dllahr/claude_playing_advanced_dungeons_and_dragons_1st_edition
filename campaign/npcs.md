@@ -292,7 +292,7 @@ is known and other turned-off hands are scattered about who would confirm them.
 | name | who | how found |
 |---|---|---|
 | **Coll** | ~40. Eleven years a hired hand for **Rell** | **Day 10.** Confessed unasked that they were waiting to rob somebody and had not, only because the road was empty. Handed Dave his billhook handle-first before walking into town. **Spotted the second pair himself next morning** |
-| **Wat** | 18, Coll's sister's boy, three years on the same land | With Coll. Would go anywhere; Coll is the one who asks the hard questions for him |
+| **Wat** | 18, Coll's sister's boy, three years on the same land | With Coll. Would go anywhere; Coll is the one who asks the hard questions for him **WEND'S STANDING COURIER (player's ruling, day 135): when something has to be carried, money to Cuddy at Draycot or Lyde's quarterly board, WEND HIRES WAT to take it, at 3 sp a day and the hack (her day-56 price).** About 40 miles to Draycot and 51 to Lyde, a day or so each way on the hack; she pays it from the purse she keeps |
 | **Ferd** | ~30, shepherd, off a holding eight miles the far side of town | **Day 11.** Went to ground on seeing the party. **A natural 5** — the violently-hostile band — pulled to 50 by an unarmed approach and to **129 by Dave sitting down in his mail** |
 | **Ged** | ~30, Ferd's neighbour, not kin | With Ferd. *"I'd have gone down the hole and all, for a wage."* |
 
