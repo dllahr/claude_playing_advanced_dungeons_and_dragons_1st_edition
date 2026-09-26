@@ -1442,3 +1442,4 @@ when	map	exped	turn	level	scope	target	change	item	qty	who	note
 2026-09-26	b1	20	48	1	edge	14,5,H	open			party	day 124: PLAYER'S CORRECTION to the retreat from area 22: the party leaves the doors OPEN behind it, not pulled shut. (14,5,H) left open.
 2026-09-26	b1	20	48	1	edge	16,6,H	open			party	day 124: PLAYER'S CORRECTION: left open behind the party on the way out to the cave entrance. Both times through, coming in and going out, it was not pulled to.
 2026-09-26	b1	20	48	1	edge	10,2,H	leaf removed			party	day 124: the leaf stays off the hinges, as it has since day 119: nothing to close. The secret door (14,13,V) stays spiked open.
+2026-09-26	b1	21	10	1	edge	8,25,V	closed			party	day 126: opened from the corridor side, the party in, pulled shut behind them, unspiked
