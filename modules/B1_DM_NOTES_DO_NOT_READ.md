@@ -4972,3 +4972,6 @@ Two carts loaded to the 8,000 gp-wt call (DM figure, not a book's): cart 1 OG2 P
 
 ## Day 124 -- up to the cave entrance with all the oil
 All seventeen basecamp flasks (340 gp-wt) to the party, 20 in hand now. Whole party of nine; packed rate very heavy 6", so the half-hour outcrop takes an hour: about 9:15 to 10:15 am. No dice; the dungeon clock stays at round 131 of expedition 19 until they go in (expedition 20).
+
+## Day 124 -- expedition 20, to the mouth of area 22
+About 10:20 am at the cave mouth; 14 rounds to the corridor of area 22 (doors at (16,6), (14,5) and (10,2) passed and pulled shut behind, the one-way slab at (14,13) known). No dice fired. Party body at (10,5), Tristle 40 ft ahead at (10,9), the last square of the corridor and the mouth of the garden. Lantern topped off to 24 turns (broached flask first), Frython carrying it.
