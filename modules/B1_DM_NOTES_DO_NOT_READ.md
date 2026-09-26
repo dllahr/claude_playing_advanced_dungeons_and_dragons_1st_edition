@@ -5104,3 +5104,6 @@ Back down the goat line about 2:15 pm, the horses tethered; the fire and dinner 
 
 ## Day 130 -- everything loaded for Wethersby; no Halm
 Halm did NOT set out (d6 = 4, declared first; audit-skip). Loads by dice, then the biggest that fits, then the sundries: cart 1 B, TL, cask QS, Y with the oil and a share of the rope; cart 2 PF, UT with the rest of it, the sacks and the crosscut saw; horse 1 Z kilderkin and QS (4,610); horse 2 LC (4,600); horse 3 SD kilderkin and HU (4,670). Everyone walks with the animals (ten of the party, Rowe and Orm), out at about 7:30, Wethersby about 5 pm at cart pace; the road empty of anything that would be Halm. Camp food 5.39 after breakfast and lunch. Nineteen containers and the four sledges stay. No wilderness encounters.
+
+## Day 130 evening -- Halm asked in person
+The party went to Halm's yard and asked him; he said yes at once (his standing want is a run, asked once on day 40; asked to his face it is work, not a gift). Terms: 8 sp a day for the man, cart and mule, written down by Wend in the morning; owed on his return. Cart, mule and Halm at the barn at first light on day 131. No dice, no reaction roll. Loop L061 noted.
