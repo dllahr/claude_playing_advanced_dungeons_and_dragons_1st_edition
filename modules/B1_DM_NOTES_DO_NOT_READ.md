@@ -5038,3 +5038,6 @@ Rations: the player said 'leave enough of the standard rations (back at the entr
 
 ## Day 126 -- rations left at the mouth; expedition 23 back into area 10
 The player asked for the same amount left at the cave entrance as left near area 10: three person-weeks at the cave mouth, three inside area 10; the party keeps 3.81. Rate stays 9". Brand's whereabouts unchanged (basecamp; the player has not said he comes up). Round 11 of expedition 23, about 4:26 pm, in area 10, door pulled shut, elf passive rolled, nothing fired. Crew ETA at the mouth about 4:35: the 15 barrels and the rations stand there unattended for a few minutes, then the crew take the barrels.
+
+## Day 126 -- third trip, seven barrels (expedition 23, rounds 11-37)
+Rations by the door taken up again; QS, Z, HU, TL, OG, SD, UT picked by dice from the 11 sound (DM weights: QS 196 lb, Z 530, HU 237, TL 290, OG 400, SD 460, UT 388). Left in area 10: 11 barrels, 4 sound (B, QS, JS, EJ) and 7 slack (TL, Y, LC, OG, VW, FT, GG). Nothing fired. About 4:52 pm at the mouth. Brand came up with the crew (his instruction, as the player says) and waits at the mouth; resumed in carry_exempt. The crew arrived at the mouth about 4:35 and have started: two teams, the first two sledges left about 4:45 with 15 barrels then standing; not yet booked below the mouth.
