@@ -1,0 +1,7 @@
+# OFFSCREEN TICKS -- one row per turn of an agenda, and one per delivery. Append-only.
+#
+# `tick` rows: the day the tick FELL DUE (not the day it was rolled), the agenda id, the
+# tick number, the die (blank for an auto table), the kind and the news. `deliver` rows mark
+# a tick told to the party, with the day it was told. Everything else is derived by
+# tools/offscreen.py. THE NEWS COLUMN IS DM EYES ONLY UNTIL DELIVERED.
+day	agenda	tick	action	roll	kind	news	delivered_day

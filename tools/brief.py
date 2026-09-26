@@ -43,6 +43,7 @@ import inventory as invmod                                      # noqa: E402
 import entities as entmod                                       # noqa: E402
 import build_campaign_db as dbmod                               # noqa: E402
 import overland as landmod                                      # noqa: E402
+import offscreen as offmod                                      # noqa: E402
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
@@ -178,10 +179,24 @@ def brief(day=None, touching=None):
                         'starts -- there is no `close`)\n'
                  + run(['tools/clock.py', 'status']))
     parts.append(RULE + '\n' + loopmod.report(day=today_n))
+    # Offscreen agendas: COUNTS ONLY. The player's ruling was that the rolls stay
+    # hidden until they are relevant; `offscreen.py news --who NAME` is what to run
+    # when the party meets or writes to the person.
+    waiting = offmod.news_summary()
+    owed = offmod.owed_count(today_n)
+    parts.append(RULE + '\nOFFSCREEN  (NPC agendas, hidden until met)\n'
+                 + ('  %d tick(s) OWED: run  python tools/offscreen.py tick\n'
+                    % owed if owed else '  no ticks owed\n')
+                 + ('  waiting: ' + ', '.join('%s %d' % (w, c) for w, c
+                                               in sorted(waiting.items()))
+                    if waiting else '  no news waiting')
+                 + '\n  read it with:  python tools/offscreen.py news --who NAME')
     if touching:
         parts.append(RULE + '\nLOOPS TOUCHING %s\n%s'
                      % (touching, loopmod.report(touching=touching,
                                                  day=today_n)))
+        parts.append(RULE + '\nOFFSCREEN NEWS FOR %s\n%s'
+                     % (touching, offmod.news_text(touching)))
         for name in [n.strip() for n in touching.split(',') if n.strip()]:
             parts.append(RULE + '\n' + entmod.who(name))
     bad = entmod.check() + landmod.check()

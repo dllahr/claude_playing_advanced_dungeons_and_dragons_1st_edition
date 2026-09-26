@@ -1,0 +1,19 @@
+# OFFSCREEN AGENDAS -- what an NPC is doing about a loop while the party is elsewhere.
+#
+# Append-only. One row per EVENT: `open`, `pause`, `resume`, `close`. What is active is
+# DERIVED from the latest row for each id. tools/offscreen.py reads this and rolls the
+# ticks; tools/log.py `day` runs it on every new campaign day.
+#
+# THE TABLE IS WRITTEN HERE BEFORE THE FIRST ROLL, which is the same "declared first"
+# discipline as everywhere else. Syntax: `d6|1-2=progress:text|3-4=hold:text|5-6=resolve:text`
+# kinds: progress (something moved) | hold (nothing yet) | resolve (done, the agenda closes
+# itself) | due (a fixed obligation). `auto|due:text` has no die. Cadence is in campaign days
+# (the player set weekly, day 135). Ceiling is the most ticks it will ever run; after that it
+# sits until somebody touches it.
+#
+# THE NEWS IS HIDDEN UNTIL THE PARTY MEETS THE PERSON (player, day 135): `offscreen.py news
+# --who NAME`, then `deliver`. Roll results go to rolls.tsv like every other roll.
+#
+# NO MANUFACTURED URGENCY: a tick may move, hold or finish a thing already in the record. It
+# does not invent a new problem.
+day	id	action	who	loop	cadence	ceiling	task	table	note

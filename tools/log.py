@@ -280,6 +280,17 @@ def do_day(a):
             % (a.day, last))
     print(_write(a.log_file or DAYS, dict(
         day=a.day, when=today(), where=a.where or '', summary=a.summary or '')))
+    # Opening a day is the ONLY way a day begins, so it is where the NPCs' offscreen
+    # agendas catch up (tools/offscreen.py). The COUNT is printed and never the
+    # results: the player's ruling was 'record the rolls, do not show me until it is
+    # relevant', and a printed result is a shown result.
+    if not a.log_file:
+        try:
+            import offscreen
+            n = offscreen.tick(a.day)
+            print('offscreen: %d tick(s) rolled and held, hidden until met' % n)
+        except Exception as e:                       # never block a day on it
+            print('offscreen: WARNING the tick did not run: %s' % e)
     return 0
 
 
