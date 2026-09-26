@@ -4984,3 +4984,15 @@ North trail 91 ft (13 flasks) from the platform (11,19) via (10,19) down x=10 to
 
 ## Day 124 -- the oil lit, rounds 34-38
 Tristle lit the east end of the west trail (9,11) at round 36 and the south end of the north trail (10,11) at round 37, back at (10,10) at 38. Burn 3 rounds a foot, spread 10 ft a segment: west trail and platform burn out about round 39-40; the north trail's far end (11,19) lit about round 38 and burns out about round 41. DM call for the growth: wet fungus and mould smoulder and steam rather than burn; dry dead mats and any shelf fungus within a foot or two of the trail catch; puffballs near the trail burst in the heat and add spore cloud to the smoke (as day 119: blurred sight, coughing, no damage). Nothing else placed in the garden; no dice.
+
+## Day 124 -- RULING, HIDDEN FROM THE PLAYER: what the fire did to area 22 (dice in rolls.tsv, declared first)
+Module: the garden is thriving, "some strange magic ... keeps this incredible garden alive"; carpet of molds on floor, walls and parts of the ceiling; fungi of every kind. Severity d6 = 5: STRIPS PLUS PATCHES. Regrowth d6 = 6: NONE for days (the magic is slow; it does not undo a fire in an afternoon). Air d3 = 2: the garden's air is not fit to breathe until TWO HOURS after the oil dies (about round 41 + 120 = round 161); the corridor clears sooner (about an hour). Ghoul's rags at (11,11) d6 = 5: did NOT catch; the body is where it lay, scorched at most by heat.
+
+WHAT IT LOOKS LIKE WHEN THEY COME BACK
+- NORTH TRAIL: a black stripe a foot wide down the whole x=10 line from (10,11) to (10,19), the mold under it burned to a crust of ash, a scorched fringe 1-3 ft each side, the wet growth beyond blackened and slumped where steam blew out of it. Soot on the walls and ceiling above the line.
+- PATCHES of dry growth burned out beside the trails, 10-20 ft across, bare grey stone showing through in each: (9,14)-(9,15) west of the trail; (11,17)-(12,18) round the stump and the fallen trunk, the trunk half burned and blackened, cap a puddle of charred pulp; the north end round the platform at (11,19) and the corner at (12,19); the west arm round (7,11)-(8,11) where the wrecked mushroom stump stood.
+- PLATFORMS: the mold burned off both. (11,19) the same waist-high half-round of plain dressed stone the pole rapped on day 119, nothing on it or in it, black-streaked. (5,11) the same, plain stone, never opened or probed: nothing on it either (module: semicircular stone formations overgrown with fungoid matter, nothing more).
+- WEST TRAIL: a black stripe from (5,11) east to (9,11), fringe scorched, thicker soot near the platform.
+- The gap between (9,11) and (10,11) is untouched mold. The corridor growth is untouched, only smoke-stained.
+- Giant puffballs near the trails burst, spore residue like grey flour over the burnt strips. Smell of burnt fungus and scorched cellar that lasts days. No living thing found, none stocked (both ghouls dead).
+- Nothing revealed under the mold: no hidden feature here.

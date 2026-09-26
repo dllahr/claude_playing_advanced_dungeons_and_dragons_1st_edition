@@ -463,3 +463,4 @@ when	map	level	x	y	exped	turn	squares	feet	rate	why	route
 2026-09-26	b1	1	9	12	20	33	4	40	known	day 124: finishing the west trail at (9,11), standing at (9,12) beside its end	5,12 6,12 7,12 8,12 9,12
 2026-09-26	b1	1	10	10	20	33	3	30	known	day 124: the party to (10,10), the corridor's last square at the mouth of area 22, stepping wide of the oil	9,12 9,11 10,11 10,10
 2026-09-26	b1	1	10	10	20	38			PLACED	day 124: Tristle went out to (9,11) and (10,11) to light the oil and came back; the party body stays at (10,10) throughout	
+2026-09-26	b1	1	16	1	20	38	39	390	known	day 124: back down the corridor away from the smoke to the cave entrance to wait, doors pulled shut behind, Tristle 40 ft ahead	10,10 10,9 10,8 10,7 10,6 10,5 10,4 10,3 10,2 11,2 12,2 13,2 14,2 14,3 14,4 14,5 14,6 13,6 13,7 13,8 13,9 13,10 13,11 13,12 13,13 14,13 15,13 16,13 16,12 16,11 16,10 16,9 16,8 16,7 16,6 16,5 16,4 16,3 16,2 16,1
