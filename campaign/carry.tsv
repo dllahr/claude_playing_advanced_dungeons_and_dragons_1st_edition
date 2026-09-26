@@ -1383,3 +1383,16 @@ when	day	who	asset	verb	qty	unit	note
 2026-09-28	134	basecamp	camp_food	move	-0.62	person-week	breakfast at the basecamp, day 134: thirteen mouths, a third of a person-day each
 2026-09-28	134	basecamp	camp_food	move	-0.62	person-week	lunch on the road home, day 134: thirteen mouths, a third of a person-day each
 2026-09-28	134	wend_barn	camp_food	move	5.71	person-week	bought at Wethersby market, day 134, for the trip back up to the basecamp; at the barn tonight
+2026-09-29	135	party	rations_std	move	-0.38	person-week	lunch on the road to the basecamp, day 135: eight mouths, a third of a person-day each
+2026-09-29	135	wend_barn	camp_food	move	-5.71	person-week	the five days of camp food loaded on the cart for the basecamp, day 135
+2026-09-29	135	basecamp	camp_food	move	5.71	person-week	at Coll basecamp at dusk, day 135; booked on departure
+2026-09-29	135	wend_barn	oil_flask	move	-23	each	the barn's oil loaded on the cart to be taken back to the basecamp and left there, at the player's word, day 135
+2026-09-29	135	basecamp	oil_flask	move	23	each	at Coll basecamp at dusk, day 135, left in the lean-to; booked on departure
+2026-09-29	135	wethersby	cart	move	-1	each	one cart to the basecamp with Rowe, day 135
+2026-09-29	135	basecamp	cart	move	1	each	at Coll basecamp at dusk, day 135; booked on departure
+2026-09-29	135	wethersby	mule	move	-1	each	the mule with it, day 135
+2026-09-29	135	basecamp	mule	move	1	each	at Coll basecamp at dusk, day 135; booked on departure
+2026-09-29	135	basecamp	cart	move	-2	each	CORRECTION day 135: the two carts came home to Wethersby with the caravans (days 130, 132 and 134) and the log still had them at the basecamp
+2026-09-29	135	wethersby	cart	move	2	each	the two carts at Wethersby, home from the last load on day 134
+2026-09-29	135	basecamp	mule	move	-2	each	CORRECTION day 135: the two mules came home too
+2026-09-29	135	wethersby	mule	move	2	each	the two mules at Wethersby, home from the last load on day 134
