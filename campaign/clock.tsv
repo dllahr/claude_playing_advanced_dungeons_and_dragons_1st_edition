@@ -1370,3 +1370,11 @@ when	exped	round	kind	anchor	detail	note
 2026-09-26	22	9	advance		9	day 126: from the cave mouth down the corridor and south to (16,21), Tristle 40 ft ahead
 2026-09-26	22	13	advance		4	day 126: west along the passage to the secret door of area 10
 2026-09-26	22	15	advance		2	day 126: the party closes up, Tristle opens the secret door, all in and pulled shut
+2026-09-26	22	25	advance		10	day 126: the rations left by the door, the seven barrels (Z, AW, Y, MK, PF, B, RH) pulled clear of the stacks and lined up
+2026-09-26	22	25	check	extra	d6=2	extra
+2026-09-26	22	32	advance		7	day 126: each barrel rolled through the secret door in turn
+2026-09-26	22	32	check	extra	d6=3	extra
+2026-09-26	22	35	advance		3	day 126: barrels rolled from the secret door to (16,21)
+2026-09-26	22	34	check	30	d6=4	anchor 30 + 4
+2026-09-26	22	41	advance		6	day 126: barrels rolled up the corridor and out through the open doors to the cave mouth
+2026-09-26	22	41	check	extra	d6=4	extra

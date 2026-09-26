@@ -1156,3 +1156,12 @@ when	day	who	asset	verb	qty	unit	note
 2026-09-26	126	cave_mouth	barrel_hu	move	1	each	rolled out of area 10 to the cave mouth, day 126
 2026-09-26	126	cave_mouth	barrel_ut	move	1	each	rolled out of area 10 to the cave mouth, day 126
 2026-09-26	126	cave_mouth	barrel_aw	move	1	each	rolled out of area 10 to the cave mouth, day 126
+2026-09-26	126	party	rations_std	move	-3	person-week	left inside area 10 by the secret door, the room's entrance, to bring the party's rate back up to 9 inches, at the player's word (pick up on the way out), day 126
+2026-09-26	126	area_10	rations_std	move	3	person-week	left inside area 10 by the secret door, day 126, three person-weeks of standard rations
+2026-09-26	126	cave_mouth	barrel_z	move	1	each	rolled out of area 10 to the cave mouth, day 126, second trip
+2026-09-26	126	cave_mouth	barrel_aw	move	1	each	rolled out of area 10 to the cave mouth, day 126, second trip
+2026-09-26	126	cave_mouth	barrel_y	move	1	each	rolled out of area 10 to the cave mouth, day 126, second trip
+2026-09-26	126	cave_mouth	barrel_mk	move	1	each	rolled out of area 10 to the cave mouth, day 126, second trip
+2026-09-26	126	cave_mouth	barrel_pf	move	1	each	rolled out of area 10 to the cave mouth, day 126, second trip
+2026-09-26	126	cave_mouth	barrel_b	move	1	each	rolled out of area 10 to the cave mouth, day 126, second trip
+2026-09-26	126	cave_mouth	barrel_rh	move	1	each	rolled out of area 10 to the cave mouth, day 126, second trip
