@@ -299,3 +299,16 @@ when	day	exped	round	side	actor	verb	target	qty	detail
 2026-09-26	138	28	3	party	Hask	declare			attacks
 2026-09-26	138	28	3	monsters		damage	orc A	2	Torsat's long sword, hp 5 to 3
 2026-09-26	138	28	4			initiative			round 4 begins
+2026-09-26	138	28	4	party	Dave	declare			melee attack on the orcs
+2026-09-26	138	28	4	party	Yrtone	declare			melee attack on the orcs
+2026-09-26	138	28	4	party	Torsat	declare			melee attack on the orcs
+2026-09-26	138	28	4	party	Hask	declare			melee attack on the orcs
+2026-09-26	138	28	4	party	Dellie	declare			casts cure light wounds on Dave
+2026-09-26	138	28	4		Frython	hold			readies a ranged attack to fire if the orcs leave melee
+2026-09-26	138	28	4		Ista	hold			readies a ranged attack to fire if the orcs leave melee
+2026-09-26	138	28	4		Tristle	hold			readies a ranged attack to fire if the orcs leave melee
+2026-09-26	138	28	4	monsters		damage	orc A	4	Torsat's natural 20, hp 3 to dead
+2026-09-26	138	28	4		orc A	dead			Torsat
+2026-09-26	138	28	4	monsters		damage	orc C	5	Frython's dart 1, Ista's dart 1, Tristle's arrow 3, as he broke off; hp 3
+2026-09-26	138	28	4		orc C	dead			the held missiles as he left melee
+2026-09-26	138	28	4			end			day 138 rounds 91-94, expedition 28: THREE ORCS (hp 6, 4, 3) killed at the mouth of area 22. B by Dave's arrow in round 1; A by Torsat's natural 20 in round 4; C by the held darts and Tristle's arrow as his morale broke. Dave took 6 (to 3 of 9) and was cured twice (9 of 9 at the end); Yrtone took 6 (to 1 of 7) and was cured by Blartho (6 of 7). XP 10 + 1 per hp: 16 + 14 + 13 = 43.
