@@ -1410,3 +1410,7 @@ when	map	exped	turn	level	scope	target	change	item	qty	who	note
 2026-09-24	b1	16	971	1	edge	16,6,H	open			Dave	day 119: opened for the party to pass, the outer wooden door, oiled long ago
 2026-09-24	b1	16	974	1	edge	16,6,H	closed			party	day 119: pulled shut behind the party, standing rule
 2026-09-24	b1	16	966	1	area	entrance	party exited -- EXPEDITION 16 ENDS			party	day 119: OUT AT ROUND 966, sixteen hours and six minutes under, six of them a rest in area 10 (three watches, spells recovered). Party alive; Yrtone at 2 of 7 hp out of a coma, to rest a week (DMG p.82), walking between the second and third ranks. Carrying five sealed casks (B, LC, QS, RH, VW), the gold ring, the arrows and the rest. XP from day 119's kills is banked with the exit (DMG p.85): two ghouls 77 + 73, a berserker 16, the 78-point earlier awards stand.
+2026-09-25	b1	17	6	1	edge	16,6,H	open			Dave	day 123: opened to go in, expedition 17
+2026-09-25	b1	17	9	1	edge	16,6,H	closed			party	day 123: pulled shut behind the party, standing rule
+2026-09-25	b1	17	16	1	edge	8,25,V	open			Hask	day 123: the foot-plate pressed and the panel opened west into area 10, party in formation
+2026-09-25	b1	17	18	1	edge	8,25,V	closed			party	day 123: pulled shut behind the party from inside area 10, unspiked

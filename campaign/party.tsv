@@ -417,3 +417,11 @@ when	map	level	x	y	exped	turn	squares	feet	rate	why	route
 2026-09-24	b1	1	16	7			6	60	known	day 119: south down the x=16 corridor to the door at (16,6,H)	16,13 16,12 16,11 16,10 16,9 16,8 16,7
 2026-09-24	b1	1	16	1			6	60	known	day 119: through the outer door and south to the entrance	16,7 16,6 16,5 16,4 16,3 16,2 16,1
 2026-09-24	b1	1	16	1					PLACED	day 119: out of the dungeon at round 966; the walk down to the basecamp is outside the map	
+2026-09-25	b1	1	16	5	17		4	40	known	day 123: in from the entrance up the x=16 corridor, Tristle 40 ft ahead	16,1 16,2 16,3 16,4 16,5
+2026-09-25	b1	1	16	7	17		2	20	known	day 123: through the outer door	16,5 16,6 16,7
+2026-09-25	b1	1	16	13	17		6	60	known	day 123: north up the x=16 corridor to (16,13)	16,7 16,8 16,9 16,10 16,11 16,12 16,13
+2026-09-25	b1	1	16	19	17		12	120	known	day 123: through the slab at (17,13,V), east to (19,19)..., round to (16,19), the known way	16,13 17,13 18,13 19,13 19,14 19,15 19,16 19,17 19,18 19,19 18,19 17,19 16,19
+2026-09-25	b1	1	16	21	17		2	20	known	day 123: south to (16,21)	16,19 16,20 16,21
+2026-09-25	b1	1	10	21	17		6	60	known	day 123: west along y=21	16,21 15,21 14,21 13,21 12,21 11,21 10,21
+2026-09-25	b1	1	9	25	17		5	50	known	day 123: down the x=10 passage to (9,25)	10,21 10,22 10,23 10,24 10,25 9,25
+2026-09-25	b1	1	8	25	17		1	10	known	day 123: through the secret door into area 10	9,25 8,25
