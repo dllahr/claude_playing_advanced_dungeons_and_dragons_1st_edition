@@ -105,6 +105,37 @@ trouble or not at all.
 - Therefore: hooding buys **light discipline and instant relighting**, not heat-sight. To
   use infravision, the source must be **extinguished** or the viewer must separate from it.
 
+### What infravision shows in ordinary dark ground (DMG p.59, ruling of day 138)
+
+*Set at the player's word, day 138, after the DM read the passage too strictly (only hot or
+cold things seen, a cellar "completely blank"). The page render was checked.*
+
+DMG p.59, *Infravision*: a dungeon room "might look completely blank" if walls, floor and
+furnishings are all one temperature, **but** *"Openings in the walls should show up rather
+plainly, as space anywhere else will, and if you are generous, you can allow different
+substances to radiate differently even if at the same temperature… Note that air currents
+might show as cold or warm layers. **Except where very warm or very cold objects are
+concerned, vision of this sort is roughly equal to human norm on a dark and cloudy night at
+best.**"*
+
+**The ruling: an infravision user in unlit ground sees as on a dark, cloudy night, out to the
+60' range.**
+
+- **Sees:** the outline of the room; walls, corners and **openings** (plainly); large masses and
+  silhouettes (heaps of rubble, a cart, timbers, a pillar, a pit's edge against the floor);
+  air currents as cold or warm layers; anything warm or cold, at its full range.
+- **Different materials** (wood, iron, stone, earth) show as fainter or darker patches
+  against one another, discernible **if he takes care scanning** (a round, not a glance).
+- **Does not see:** colour, writing, small things (a pickaxe, a coin, a door's hinges, a
+  trap's trigger), fine surface detail, or the far side of anything solid.
+- **Does not stack with light:** unchanged. A burning lamp, hooded or not, washes it out
+  within about 30', and it takes two segments to adjust after normal vision (DMG p.59).
+- Footprints of warm or cold creatures show for **2 rounds** after passing (DMG p.59).
+
+*source: **DMG p.59**, INFRAVISION & ULTRAVISION, page render; the 'dark and cloudy night'
+reading is the player's and is a DM RULING, not a printed number. The 30' washout radius is the
+earlier house rule above.*
+
 ### Troglodyte camouflage vs. infravision
 
 Troglodyte chameleon skin gives surprise on 1–4 **by sight only**. It conceals nothing from
