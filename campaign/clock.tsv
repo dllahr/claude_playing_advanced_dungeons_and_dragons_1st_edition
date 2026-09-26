@@ -1270,3 +1270,15 @@ when	exped	round	kind	anchor	detail	note
 2026-09-25	17	17	advance		1	day 123: through the secret door into area 10
 2026-09-25	17	18	advance		1	day 123: the secret door at (8,25,V) pulled shut behind the last of them
 2026-09-25	17	22	advance		4	day 123: the ropes, the crosscut saw, the sacks and the ten-foot pole left in area 10; the B and QS casks and the HU, TL and Y firkins picked up
+2026-09-25	17	23	advance		1	day 123: the secret door at (8,25,V) opened from inside, everyone ready
+2026-09-25	17	24	advance		1	day 123: out through the secret door
+2026-09-25	17	25	advance		1	day 123: the secret door at (8,25,V) pulled shut behind
+2026-09-25	17	27	advance		2	day 123: the known way out to 10,21
+2026-09-25	17	29	advance		2	day 123: the known way out to 16,21
+2026-09-25	17	30	advance		1	day 123: the known way out to 16,19
+2026-09-25	17	34	advance		4	day 123: the known way out to 16,13
+2026-09-25	17	33	check	30	d6=4	anchor 30 + 3
+2026-09-25	17	37	advance		3	day 123: the known way out to 16,5
+2026-09-25	17	38	advance		1	day 123: the outer door at (16,6,H) opened
+2026-09-25	17	39	advance		1	day 123: the outer door at (16,6,H) pulled shut behind the last of them
+2026-09-25	17	41	advance		2	day 123: south to the entrance

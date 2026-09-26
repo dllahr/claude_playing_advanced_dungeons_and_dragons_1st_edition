@@ -425,3 +425,10 @@ when	map	level	x	y	exped	turn	squares	feet	rate	why	route
 2026-09-25	b1	1	10	21	17		6	60	known	day 123: west along y=21	16,21 15,21 14,21 13,21 12,21 11,21 10,21
 2026-09-25	b1	1	9	25	17		5	50	known	day 123: down the x=10 passage to (9,25)	10,21 10,22 10,23 10,24 10,25 9,25
 2026-09-25	b1	1	8	25	17		1	10	known	day 123: through the secret door into area 10	9,25 8,25
+2026-09-25	b1	1	9	25	17		1	10	known	day 123: out through the secret door with the casks and firkins	8,25 9,25
+2026-09-25	b1	1	10	21	17		5	50	known	day 123: the known way out, standard formation, Tristle between ranks 1 and 2, the casks and firkins ready to drop	9,25 9,24 9,23 9,22 10,22 10,21
+2026-09-25	b1	1	16	21	17		6	60	known	day 123: the known way out, standard formation, Tristle between ranks 1 and 2, the casks and firkins ready to drop	10,21 11,21 12,21 13,21 14,21 15,21 16,21
+2026-09-25	b1	1	16	19	17		2	20	known	day 123: the known way out, standard formation, Tristle between ranks 1 and 2, the casks and firkins ready to drop	16,21 16,20 16,19
+2026-09-25	b1	1	16	13	17		12	120	known	day 123: the known way out, standard formation, Tristle between ranks 1 and 2, the casks and firkins ready to drop	16,19 17,19 18,19 19,19 19,18 19,17 19,16 19,15 19,14 19,13 18,13 17,13 16,13
+2026-09-25	b1	1	16	5	17		8	80	known	day 123: the known way out, standard formation, Tristle between ranks 1 and 2, the casks and firkins ready to drop	16,13 16,12 16,11 16,10 16,9 16,8 16,7 16,6 16,5
+2026-09-25	b1	1	16	1	17		4	40	known	day 123: south to the entrance, the casks and firkins still on their backs	16,5 16,4 16,3 16,2 16,1
