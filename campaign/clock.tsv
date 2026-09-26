@@ -1438,3 +1438,21 @@ when	exped	round	kind	anchor	detail	note
 2026-09-26	26	180	check	180	not rolled	inside a long rest; the module gives 1 checks per night instead of the normal schedule
 2026-09-26	26	90	check	rest watch 1	d6=1 -> Berserkers (1-2)-AC 7, HD 1 +1’, hp 5,4, #AT 1, D 1-8 or by weapon, MV 90' (30'), Save FI, ML 12	rest watch 1
 2026-09-26	26	90	correct		-90	the rest call ran the whole three hours (to round 180) past the check that fired at round 90; the encounter is resolved at round 90 where the party is, and the remaining ninety rounds of the watch are charged after it (day 126 night, expedition 26)
+2026-09-26	26	180	advance		90	REST 1.5 h — day 126 night: the rest of the first watch and the change of the watch; the first check of the night already fired and was resolved
+2026-09-26	26	300	advance		120	REST 2.0 h — day 126 night: watching the barrels, no check in these hours
+2026-09-26	26	210	check	210	not rolled	inside a long rest; the module gives 0 checks per night instead of the normal schedule
+2026-09-26	26	241	check	240	not rolled	inside a long rest; the module gives 0 checks per night instead of the normal schedule
+2026-09-26	26	274	check	270	not rolled	inside a long rest; the module gives 0 checks per night instead of the normal schedule
+2026-09-26	26	360	advance		60	REST 1.0 h — day 126 night: watching the barrels at the cave mouth, the second rest check falls in this hour
+2026-09-26	26	303	check	300	not rolled	inside a long rest; the module gives 1 checks per night instead of the normal schedule
+2026-09-26	26	330	check	330	not rolled	inside a long rest; the module gives 1 checks per night instead of the normal schedule
+2026-09-26	26	330	check	rest watch 1	d6=6	rest watch 1
+2026-09-26	26	390	advance		30	REST 0.5 h — day 126 night: watching the barrels, no check in these hours
+2026-09-26	26	364	check	360	not rolled	inside a long rest; the module gives 0 checks per night instead of the normal schedule
+2026-09-26	26	420	advance		30	REST 0.5 h — day 126 night: watching the barrels at the cave mouth, the third rest check falls in this half hour
+2026-09-26	26	391	check	390	not rolled	inside a long rest; the module gives 1 checks per night instead of the normal schedule
+2026-09-26	26	405	check	rest watch 1	d6=4	rest watch 1
+2026-09-26	26	510	advance		90	REST 1.5 h — day 126 night: watching the barrels until first light
+2026-09-26	26	422	check	420	not rolled	inside a long rest; the module gives 0 checks per night instead of the normal schedule
+2026-09-26	26	454	check	450	not rolled	inside a long rest; the module gives 0 checks per night instead of the normal schedule
+2026-09-26	26	481	check	480	not rolled	inside a long rest; the module gives 0 checks per night instead of the normal schedule

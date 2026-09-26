@@ -5060,3 +5060,6 @@ CHECK: extra (rest watch 1) at round 90: d6 = 1; level 1 table d6 = 6, BERSERKER
 
 ## Day 126 round 90 -- the berserkers die in the first surprise segment
 Ruling applied (rules/combat.md, DMG p.62): the surprising side is the one NOT surprised, so the party got the 3x rate for bows at the ready: six arrows a segment each, Dave and Torsat (Dave hit twice with his six shots, damage 3 and 1; Torsat hit four times with his six, damage 2, 5, 5, 1). Berserker B (hp 4) took Torsat's 2 and 5; A (hp 5) took Dave's 3 and 1 and Torsat's 5. Both dead before they acted; no second segment needed. XP 29 (10 + 1/hp, 15 + 14). I narrated the pair as visible at 20 ft in a dark corridor; no darkness penalty was applied. Bodies at the corridor north of the mouth, unsearched (treasure type K individually, 20 sp earlier). Camp-food dinner corrected to 18 mouths.
+
+## Day 126 night into 127 -- the watch resumed
+The two remaining rest checks were placed by dice in an hour of the second window and a half hour of the third (rolls.tsv) and the rest was run in short blocks so nothing could be overrun: neither fired. First light about 5:30 am, round 510 of expedition 26. The party did not sleep a full eight hours (the fight broke the first watch), so no spells are recovered by that night's rest beyond what they had; nobody had spent any. Bodies unsearched.
