@@ -1205,3 +1205,12 @@ when	day	who	asset	verb	qty	unit	note
 2026-09-26	126	basecamp	camp_food	move	-0.05	person-week	correction to the day-126 dinner: eighteen mouths, not seventeen
 2026-09-26	127	party	long_sword	move	1	each	a berserker's long sword taken off the body at the cave mouth, day 127, salvage
 2026-09-26	127	party	sword_broad	move	1	each	a berserker's broad sword taken off the body at the cave mouth, day 127, salvage
+2026-09-26	127	basecamp	camp_food	move	-0.86	person-week	breakfast at Coll basecamp, day 127 (eighteen mouths, a third of a person-day each)
+2026-09-26	127	cave_mouth	barrel_qs	move	-1	each	sledged down the outcrop by the party's two teams on the crew's two sledges, day 127
+2026-09-26	127	basecamp	barrel_qs	move	1	each	at Coll basecamp by the lean-to, day 127, unopened
+2026-09-26	127	cave_mouth	barrel_vw	move	-1	each	sledged down the outcrop by the party's two teams on the crew's two sledges, day 127
+2026-09-26	127	basecamp	barrel_vw	move	1	each	at Coll basecamp by the lean-to, day 127, unopened
+2026-09-26	127	cave_mouth	barrel_aw	move	-1	each	sledged down the outcrop by the party's two teams on the crew's two sledges, day 127
+2026-09-26	127	basecamp	barrel_aw	move	1	each	at Coll basecamp by the lean-to, day 127, unopened
+2026-09-26	127	cave_mouth	barrel_b	move	-1	each	sledged down the outcrop by the party's two teams on the crew's two sledges, day 127
+2026-09-26	127	basecamp	barrel_b	move	1	each	at Coll basecamp by the lean-to, day 127, unopened
