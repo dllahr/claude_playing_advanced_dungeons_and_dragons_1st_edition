@@ -1214,3 +1214,12 @@ when	day	who	asset	verb	qty	unit	note
 2026-09-26	127	basecamp	barrel_aw	move	1	each	at Coll basecamp by the lean-to, day 127, unopened
 2026-09-26	127	cave_mouth	barrel_b	move	-1	each	sledged down the outcrop by the party's two teams on the crew's two sledges, day 127
 2026-09-26	127	basecamp	barrel_b	move	1	each	at Coll basecamp by the lean-to, day 127, unopened
+2026-09-26	127	basecamp	camp_food	move	-0.9	person-week	lunch at Coll basecamp, day 127 (nineteen mouths with Yrtone, a third of a person-day each)
+2026-09-26	127	cave_mouth	barrel_sd	move	-1	each	sledged down the outcrop, day 127, third run, four sledges
+2026-09-26	127	basecamp	barrel_sd	move	1	each	at Coll basecamp by the lean-to, day 127, unopened
+2026-09-26	127	cave_mouth	barrel_y	move	-1	each	sledged down the outcrop, day 127, third run, four sledges
+2026-09-26	127	basecamp	barrel_y	move	1	each	at Coll basecamp by the lean-to, day 127, unopened
+2026-09-26	127	cave_mouth	barrel_aw	move	-1	each	sledged down the outcrop, day 127, third run, four sledges
+2026-09-26	127	basecamp	barrel_aw	move	1	each	at Coll basecamp by the lean-to, day 127, unopened
+2026-09-26	127	cave_mouth	barrel_hu	move	-1	each	sledged down the outcrop, day 127, third run, four sledges
+2026-09-26	127	basecamp	barrel_hu	move	1	each	at Coll basecamp by the lean-to, day 127, unopened
