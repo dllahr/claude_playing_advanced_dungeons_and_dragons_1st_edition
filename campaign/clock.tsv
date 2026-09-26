@@ -1482,3 +1482,6 @@ when	exped	round	kind	anchor	detail	note
 2026-09-26	28	91	check	90	d6=1 -> Ores (1 -4)-AC 6, HD 1, hp 6,4,3,1, #AT 1, D1 -6 or by wea¬ pon, MV 90' (30'), Save FI, ML 8	anchor 90 + 1
 2026-09-26	28	91	correct		-7	the search turn ran past the wandering check that fired at round 91; the encounter is resolved at round 91 where the party is, and the rest of the search charged after it (day 138, expedition 28)
 2026-09-26	28	95	advance		4	day 138: the fight with the three orcs at the mouth of area 22, rounds 91-94
+2026-09-26	28	98	advance		3	day 138: the rest of turn 8 of the search (the south-east outcrop) while Dave, Torsat and Tristle gather the missiles and go through the three orcs in the corridor
+2026-09-26	28	108	advance		10	day 138: turn 9 of the search: the west platform at (5,11), all nine together
+2026-09-26	28	118	advance		10	day 138: turn 10 of the search: the north platform at (11,19) and the corner, all nine together
