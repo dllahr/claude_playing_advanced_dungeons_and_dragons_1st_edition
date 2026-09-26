@@ -5167,3 +5167,6 @@ Standing rule (player): the party carries 100 gp when it goes north and balances
 
 ## Day 138 -- expedition 28, to the corridor of area 22
 About 7 am, nine rounds from the mouth to the corridor. Party body at (10,5) with the lantern (30 ft light reaches (10,8)); Tristle at (10,9) in the dark on infravision (nothing warm). What is perceived from here: the smell of burnt fungus and scorched cellar, still strong at six days (burn was day 124 round 36); NOT the garden (the lamp does not reach it and infravision shows heat only). Untouched growth in the corridor mouth, smoke-stained. Nothing fired. The garden's damage is as ruled on day 124 (DM notes), unseen. Everyone with a missile weapon ready.
+
+## Day 138 round 10 -- first look into the burnt garden, from (10,9)
+Lantern 30 ft: they see (10,10) to (10,12). Ruling from day 124: the north trail is a black stripe a foot wide from (10,11) north, crust of ash where the mold burned, a scorched fringe 1-3 ft, wet growth beyond blackened and slumped, soot on walls and ceiling above; grey spore residue like flour from the puffballs near the trail. The gap between (9,11) and (10,11) is untouched mold. NOT visible from here: the ghoul's body at (11,11), the patches and the two platforms (all beyond 30 ft or round the corner). No regrowth (d6 = 6). Air fit. Nothing warm; nothing fired.

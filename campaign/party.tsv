@@ -497,3 +497,4 @@ when	map	level	x	y	exped	turn	squares	feet	rate	why	route
 2026-09-26	b1	1	16	1	25	22	26	260	known	day 126: rolling three barrels north to the cave mouth, Tristle 40 ft ahead	16,21 16,20 16,19 17,19 18,19 19,19 19,18 19,17 19,16 19,15 19,14 19,13 18,13 17,13 16,13 16,12 16,11 16,10 16,9 16,8 16,7 16,6 16,5 16,4 16,3 16,2 16,1
 2026-09-26	b1	1	10	9	28	0	38	380	known	day 138: standard formation, Tristle 40 ft ahead, to the corridor at the mouth of area 22	16,1 16,2 16,3 16,4 16,5 16,6 16,7 16,8 16,9 16,10 16,11 16,12 16,13 15,13 14,13 13,13 13,12 13,11 13,10 13,9 13,8 13,7 13,6 14,6 14,5 14,4 14,3 14,2 13,2 12,2 11,2 10,2 10,3 10,4 10,5 10,6 10,7 10,8 10,9
 2026-09-26	b1	1	10	5	28	9			PLACED	day 138: with Tristle 40 ft ahead at (10,9), the last square of the corridor, the party body stops at (10,5)	
+2026-09-26	b1	1	10	9	28	9	4	40	known	day 138: the party closes up with Tristle at the mouth of area 22 and looks in with the lantern	10,5 10,6 10,7 10,8 10,9
