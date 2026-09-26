@@ -1428,3 +1428,8 @@ when	day	who	asset	verb	qty	unit	note
 2026-09-29	135	wend_barn	cask_qs	move	-1	each	sold to Holt, day 135 (holt_lot)
 2026-09-29	135	wend_barn	cask_b	move	-1	each	sold to Holt, day 135 (holt_lot)
 2026-09-29	135	basecamp	barrel_tl	move	-1	each	sold to Holt, day 135 (holt_lot), still at the basecamp; the party brings it down
+2026-09-29	135	wend_barn	barrel_ft	move	-1	each	emptied and cleaned, now barrel_empty, day 135
+2026-09-29	135	wend_barn	barrel_y	move	-1	each	the ruined Y barrel, emptied and cleaned, now barrel_empty, day 135
+2026-09-29	135	wend_barn	barrel_empty	move	2	each	the two emptied barrels, scoured and drying at Wend's barn, day 135
+2026-09-29	135	wend_barn	rope_heavy_200ft	move	-1	each	given to Coll, day 135, his to use as he sees fit
+2026-09-29	135	wend_barn	mortar_bag	move	-1	each	given to Coll, day 135, his to use as he sees fit

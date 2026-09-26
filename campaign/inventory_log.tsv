@@ -475,3 +475,8 @@ when	day	asset	verb	qty	unit	condition	holder	evidence	note
 2026-09-29	135	cask_qs	move	-1.0	each				sold to Holt, day 135, on the agreed schedule (holt_lot); goods drawn from Wend's barn as he needs them
 2026-09-29	135	cask_b	move	-1.0	each				sold to Holt, day 135, on the agreed schedule (holt_lot); goods drawn from Wend's barn as he needs them
 2026-09-29	135	barrel_tl	move	-1.0	each				the third TL barrel, at the basecamp, sold to Holt with the rest, day 135; to be brought down
+2026-09-26	135	barrel_ft	move	-1.0	each				emptied and cleaned at Wend's barn on day 135: the ruined rye tipped on the midden; the barrel is now barrel_empty
+2026-09-26	135	barrel_y	move	-1.0	each				the ruined apples tipped on the midden; the barrel emptied and cleaned on day 135, now barrel_empty
+2026-09-26	135	barrel_empty	move	2.0	each				the emptied FT and Y barrels, scrubbed and drying, day 135
+2026-09-26	135	rope_heavy_200ft	move	-1.0	each				GIVEN TO COLL, day 135: 'his to use as he sees fit'. Dave told him at the barn.
+2026-09-26	135	mortar_bag	move	-1.0	each				GIVEN TO COLL, day 135: 'his to use as he sees fit'.
