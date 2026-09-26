@@ -1202,3 +1202,4 @@ when	day	who	asset	verb	qty	unit	note
 2026-09-26	126	basecamp	barrel_og	move	1	each	at Coll basecamp by the lean-to, day 126, unopened
 2026-09-26	126	cave_mouth	barrel_lc	move	-1	each	sledged down the outcrop by Coll's crew, day 126, third runs before dark
 2026-09-26	126	basecamp	barrel_lc	move	1	each	at Coll basecamp by the lean-to, day 126, unopened
+2026-09-26	126	basecamp	camp_food	move	-0.05	person-week	correction to the day-126 dinner: eighteen mouths, not seventeen
