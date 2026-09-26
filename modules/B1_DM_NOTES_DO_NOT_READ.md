@@ -5131,3 +5131,6 @@ Deal: the sound goods 420.6 gp (the tally 419.18 plus the last TL barrel, 1.43, 
 
 ## Day 135 -- while the eight are away: barrels, and Coll
 Dave, Tristle and Frython: the ruined FT and Y barrels emptied (tipped on Wend's midden), scoured with river sand and hot water, left upside down with the bungs out to dry in the barn loft: about half a day's work for three; ruled no roll, the staves were sound and only the contents had gone. Booked as barrel_empty x2 (100 lb each). The heavy rope and the mortar given to Coll at the barn (his: work tools); Coll: no use for the water. The OG water (two barrels and two kilderkins) is still in its containers. Nothing fired.
+
+## Day 135 afternoon -- the odds and ends sold
+Water tipped into Wend's yard trough (two barrels and two kilderkins), stood up to dry: booked as barrel_empty and kilderkin_empty. Toller: comb 5, tapestry 40 (module values), perfume 3 a bottle (my figure), 51 gp; Mund: morning star and the gnoll sword as iron, 2 gp 10 sp each (half the list, halved again for the oversize), 5 gp; Holt: the keg 1 gp on the account. Purse 2,254 gp 3 sp. XP 57 (51, 5, 1) with the usual shares: Dave 994, Tristle 962. Nothing fired.

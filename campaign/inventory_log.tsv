@@ -480,3 +480,15 @@ when	day	asset	verb	qty	unit	condition	holder	evidence	note
 2026-09-26	135	barrel_empty	move	2.0	each				the emptied FT and Y barrels, scrubbed and drying, day 135
 2026-09-26	135	rope_heavy_200ft	move	-1.0	each				GIVEN TO COLL, day 135: 'his to use as he sees fit'. Dave told him at the barn.
 2026-09-26	135	mortar_bag	move	-1.0	each				GIVEN TO COLL, day 135: 'his to use as he sees fit'.
+2026-09-26	135	barrel_og	move	-2.0	each				the water tipped into Wend's yard trough at Coll's word and the container stood up to dry, day 135; now empty
+2026-09-26	135	kilderkin_og	move	-2.0	each				the water tipped into Wend's yard trough at Coll's word and the container stood up to dry, day 135; now empty
+2026-09-26	135	barrel_empty	move	2.0	each				the two OG water barrels, emptied into the yard trough and stood up to dry, day 135
+2026-09-26	135	kilderkin_empty	move	2.0	each				the two OG water kilderkins, emptied and stood up to dry, day 135
+2026-09-26	135	comb_silver	move	-1.0	each				sold to Toller, day 135. See money.tsv / the Holt account.
+2026-09-26	135	tapestry	move	-1.0	each				sold to Toller, day 135. See money.tsv / the Holt account.
+2026-09-26	135	perfume	move	-2.0	each				sold to Toller, day 135. See money.tsv / the Holt account.
+2026-09-26	135	morning_star	move	-1.0	each				sold to Mund, day 135. See money.tsv / the Holt account.
+2026-09-26	135	sword_gnollish	move	-1.0	each				sold to Mund, day 135. See money.tsv / the Holt account.
+2026-09-26	135	keg_spigot	move	-1.0	each				sold to Holt, day 135. See money.tsv / the Holt account.
+2026-09-26	135	keg_spigot	move	1.0	each				CORRECTION: cancels the wrong-unit removal row; the keg is booked in sets
+2026-09-26	135	keg_spigot	move	-1.0	set				the small keg with spigot and gimlet SOLD to Holt on the account, day 135, 1 gp credited

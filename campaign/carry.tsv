@@ -1433,3 +1433,15 @@ when	day	who	asset	verb	qty	unit	note
 2026-09-29	135	wend_barn	barrel_empty	move	2	each	the two emptied barrels, scoured and drying at Wend's barn, day 135
 2026-09-29	135	wend_barn	rope_heavy_200ft	move	-1	each	given to Coll, day 135, his to use as he sees fit
 2026-09-29	135	wend_barn	mortar_bag	move	-1	each	given to Coll, day 135, his to use as he sees fit
+2026-09-29	135	wend_barn	barrel_og	move	-2	each	tipped into the yard trough and stood up to dry, now empty, day 135
+2026-09-29	135	wend_barn	kilderkin_og	move	-2	each	tipped into the yard trough and stood up to dry, now empty, day 135
+2026-09-29	135	wend_barn	barrel_empty	move	2	each	the two emptied OG barrels, drying, day 135
+2026-09-29	135	wend_barn	kilderkin_empty	move	2	each	the two emptied OG kilderkins, drying, day 135
+2026-09-29	135	wethersby	comb_silver	move	-1	each	sold, day 135
+2026-09-29	135	wethersby	tapestry	move	-1	each	sold, day 135
+2026-09-29	135	wethersby	perfume	move	-2	each	sold, day 135
+2026-09-29	135	wethersby	morning_star	move	-1	each	sold, day 135
+2026-09-29	135	wethersby	sword_gnollish	move	-1	each	sold, day 135
+2026-09-29	135	wethersby	keg_spigot	move	-1	each	sold, day 135
+2026-09-29	135	wethersby	keg_spigot	move	1	each	CORRECTION: the keg was booked in sets; cancelling the wrong-unit row above
+2026-09-29	135	wethersby	keg_spigot	move	-1	set	the small keg with its spigot and gimlet, on the Holt account, day 135
