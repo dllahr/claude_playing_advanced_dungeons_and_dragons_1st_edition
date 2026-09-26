@@ -4930,3 +4930,6 @@ Six hours, lantern out, three watches (Dave+Torsat, Tristle+Ista, Hask). Yrtone'
 
 ## Day 123 -- the four kilderkins in area 10
 Rolled and pulled down: SD (ale), JS (dried mushrooms), OG (water), PF (whole peas). Hoop d6: SD 1 slack, JS 6, OG 6, PF 1 slack. Weights (DM estimate, cask 50 lb + contents): SD ~230 lb, JS ~80, OG ~200, PF ~165. Contents of JS, OG, PF are NOT known to the party.
+
+## Day 123 -- all sixteen kilderkins checked (hoop d6, 1 = slack)
+SOUND 12: SD 1, JS 2, OG 1, PF 2, RH 1, TL 1, XR 1, Y 1, Z 2. SLACK 4: SD 1, OG 1, PF 2. Contents and DM weight estimates (cask 50 lb + 18 gal of goods): SD ale ~230, JS dried mushrooms ~80, OG water ~200, PF peas ~165, RH sunflower seeds ~110, TL barley ~145, XR soft soap ~200, Y dried apples ~80, Z honey ~265. The party knows ONLY SD (ale) and RH (seeds).
