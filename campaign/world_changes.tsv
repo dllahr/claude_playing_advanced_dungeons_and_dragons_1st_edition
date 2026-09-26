@@ -1420,3 +1420,7 @@ when	map	exped	turn	level	scope	target	change	item	qty	who	note
 2026-09-25	b1	17	40	1	edge	16,6,H	open			Dave	day 123: opened on the way out
 2026-09-25	b1	17	39	1	edge	16,6,H	closed			party	day 123: pulled shut behind the party on the way out (the record logs the opening after the crossing; they opened it, passed, and shut it)
 2026-09-25	b1	17	41	1	area	entrance	party exited -- EXPEDITION 17 ENDS			party	day 123: OUT AT ROUND 41 with the B and QS casks and the HU, TL and Y firkins, all unopened; three ropes, the crosscut saw, the sacks and the ten-foot pole left in area 10. No encounter. Lantern out with about 23 turns.
+2026-09-25	b1	18	6	1	edge	16,6,H	open			Dave	day 123: opened to go in, expedition 18
+2026-09-25	b1	18	8	1	edge	16,6,H	closed			party	day 123: pulled shut behind the party
+2026-09-25	b1	18	20	1	edge	8,25,V	open			Hask	day 123: opened, expedition 18
+2026-09-25	b1	18	22	1	edge	8,25,V	closed			party	day 123: pulled shut behind, unspiked

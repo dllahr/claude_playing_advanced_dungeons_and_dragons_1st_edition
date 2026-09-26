@@ -1282,3 +1282,17 @@ when	exped	round	kind	anchor	detail	note
 2026-09-25	17	38	advance		1	day 123: the outer door at (16,6,H) opened
 2026-09-25	17	39	advance		1	day 123: the outer door at (16,6,H) pulled shut behind the last of them
 2026-09-25	17	41	advance		2	day 123: south to the entrance
+2026-09-25	18	0	start			day 123, expedition 18: back into Quasqueton after carrying the casks and firkins down to the basecamp; to area 10 again
+2026-09-25	18	0	jitter		30:0,60:0,90:5,120:2,150:2,180:5,210:0,240:0,270:1,300:0,330:3,360:5,390:1,420:1,450:4,480:4,510:0,540:4,570:5,600:0,630:0,660:0,690:0,720:2,750:1,780:3,810:2,840:0,870:4,900:3,930:3,960:0,990:5,1020:5,1050:4,1080:1,1110:2,1140:5,1170:0,1200:4,1230:5,1260:3,1290:0,1320:5,1350:4,1380:0,1410:1,1440:5,1470:2,1500:0,1530:1,1560:3,1590:5,1620:0,1650:4,1680:4,1710:3,1740:3,1770:5,1800:2	rolled in advance and HIDDEN; each is reported when its check fires
+2026-09-25	18	1	advance		1	day 123: walking to 16,5
+2026-09-25	18	2	advance		1	day 123: the outer door at (16,6,H) opened
+2026-09-25	18	3	advance		1	day 123: walking to 16,7
+2026-09-25	18	4	advance		1	day 123: the outer door pulled shut behind
+2026-09-25	18	5	advance		1	day 123: walking to 16,13
+2026-09-25	18	8	advance		3	day 123: walking to 16,19
+2026-09-25	18	9	advance		1	day 123: walking to 16,21
+2026-09-25	18	10	advance		1	day 123: walking to 10,21
+2026-09-25	18	11	advance		1	day 123: walking to 9,25
+2026-09-25	18	12	advance		1	day 123: the foot-plate and the secret door at (8,25,V) opened
+2026-09-25	18	13	advance		1	day 123: walking to 8,25
+2026-09-25	18	14	advance		1	day 123: the secret door pulled shut behind the last of them
