@@ -44,6 +44,20 @@ kind of number:
 | Lard | staple | 4 | per lb | DM CALL, day 121 | Fresh |
 | Salt | staple | 8 | per lb | DM CALL, day 121 | Fresh |
 | Seasoning (dried herbs and spice) | staple | 12 | per lb | DM CALL, day 121 | Fresh; the herbs end. True spice would be dearer |
+| Rye flour | staple | 2 | per lb | DM CALL, day 135 | Fresh, the same as wheat flour. Needs a cook and a fire |
+| Barley | staple | 2 | per lb | DM CALL, day 135 | Fresh |
+| Peas, dried whole | staple | 3 | per lb | DM CALL, day 135 | Fresh |
+| Apples, dried | staple | 8 | per lb | DM CALL, day 135 | Fresh |
+| Raisins | staple | 12 | per lb | DM CALL, day 135 | Fresh |
+| Pickles, dill, in brine | staple | 3 | per lb | DM CALL, day 135 | Fresh |
+| Salt pork | staple | 8 | per lb | DM CALL, day 135 | Fresh |
+| Fish in brine | staple | 5 | per lb | DM CALL, day 135 | Fresh |
+| Mushrooms, dried | staple | 20 | per lb | DM CALL, day 135 | Fresh; a delicacy |
+| Honey | staple | 20 | per lb | DM CALL, day 135 | Fresh |
+| Candy, hard | staple | 30 | per lb | DM CALL, day 135 | Fresh; sugar is dear |
+| Soap, soft | staple | 6 | per lb | DM CALL, day 135 | Fresh |
+| Wine, cellar (stale AW stock) | food | 40 | per pint | DM CALL, day 135 | Fresh price of ordinary wine, four-tenths of the PHB 'good' pint (100 cp); a 36-gallon barrel is 288 pints |
+| Sunflower seeds, water | staple | 0 | per lb | DM CALL, day 135 | Holt passed on the RH seeds (day 121) and there is no market for stale water |
 | Wool-headed ale (strong SD stock ale) | food | 30 | per pint | CAMPAIGN, day 71 | 3 sp: Holt's board price, "threepence a pint", the name the party gave it, and what the party paid for a round of nine (27 sp, transcript line 29932). Three times ordinary ale. **A 36-gallon barrel is 288 pints, 43.2 gp gross** (an earlier '85 gp' figure counted the pints twice) |
 | Lodging and board, the Inn | lodging | 200 | per person-night | CAMPAIGN, since expedition 4 | 1 gp, the traveller's rate for the party. Not the workers' rate |
 
@@ -67,3 +81,32 @@ the raw food:** that is the price of packing, keeping and needing no fire and no
 is left at the book's figure on purpose.
 
 *source: **DM CALL / player's reasoning, day 121**; the labour figures are the player's, from a search, and are an anchor, not a citation.*
+
+## Goods in the area-10 containers — what is inside, by weight (day 135)
+
+| Mark | Goods | Barrel (lb) | Kilderkin (lb) | Firkin (lb) | Cask (lb) |
+|---|---|---|---|---|---|
+| B | wheat flour | 170 | - | - | 14 |
+| LC | salt | 360 | - | - | 30 |
+| QS | seasoning | 96 | - | - | 8 |
+| VW | lard | 276 | - | 68 | 23 |
+| RH | sunflower seeds | 120 | 60 | - | 10 |
+| SD | ale (pints: 288, 144) | 360 | 180 | - | - |
+| AW | wine (pints: 288) | 300 | - | - | - |
+| EJ | fish in brine | 324 | - | - | - |
+| FT | rye flour | 180 | - | - | - |
+| GG | dill pickles | 288 | - | - | - |
+| MK | salt pork | 324 | - | - | - |
+| UT | hard candy | 288 | - | - | - |
+| JS | dried mushrooms | 60 | 30 | - | - |
+| OG | water | 300 | 150 | - | - |
+| PF | whole peas | 230 | 115 | - | - |
+| XR | soft soap | 300 | 150 | - | - |
+| Z | honey | 430 | 215 | - | - |
+| HU | raisins | 137 | - | 34 | - |
+| TL | barley | 190 | 95 | 47 | - |
+| Y | dried apples | 60 | 30 | 14 | - |
+
+*source: **DM CALL, day 135**: the container weight (barrel 100 lb, kilderkin 50 lb, firkin 25 lb, cask 10 lb, rules/equipment.md) subtracted from the DM's estimate of the whole thing, worked out on day 123 from the contents' weight. NOT what the party can tell, which is only heft. Liquids by the pint: 288 pints in a barrel, 144 in a kilderkin.*
+
+**A container whose hoops went slack and were driven home** (the party's repairs, days 124 and 126): on opening, d6, 1-2 the contents are ruined by air and damp, 3-6 stale but sound. *DM CALL, day 135.* Salt cannot spoil; it cakes, and sells at half.
