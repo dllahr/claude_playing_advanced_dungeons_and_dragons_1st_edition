@@ -1461,3 +1461,7 @@ when	map	exped	turn	level	scope	target	change	item	qty	who	note
 2026-09-26	b1	24	63	1	edge	8,25,V	open			Hask	day 126: held open for the eight barrels
 2026-09-26	b1	24	71	1	edge	8,25,V	closed			party	day 126: pulled shut behind the last barrel, unspiked
 2026-09-26	b1	24	80	1	area	10	searched			party	day 126 rounds 52-80: the spikes drawn, EIGHT BARRELS (EJ, QS, VW, LC, OG, JS, Y, GG), chosen by dice from the eleven left, rolled out through the secret door (8,25,V), pulled shut behind, and up to the cave mouth. LEFT IN AREA 10: THREE BARRELS (B, TL, FT), all sound.
+2026-09-26	b1	25	11	1	edge	8,25,V	closed			party	day 126: opened, the party in, pulled shut behind, unspiked
+2026-09-26	b1	25	16	1	edge	8,25,V	open			Hask	day 126: held open for the three barrels
+2026-09-26	b1	25	19	1	edge	8,25,V	closed			party	day 126: pulled shut behind the last barrel, unspiked
+2026-09-26	b1	25	28	1	area	10	searched			party	day 126 rounds 0-28: the three barrels that remained (B, TL, FT) pulled clear and rolled out through the secret door (8,25,V), pulled shut behind, and up to the cave mouth. Every barrel of the day-119 census has now left the storeroom: 33 barrels, 16 kilderkins, 4 firkins, 7 casks.

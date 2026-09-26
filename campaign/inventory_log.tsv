@@ -418,3 +418,6 @@ when	day	asset	verb	qty	unit	condition	holder	evidence	note
 2026-09-26	126	barrel_js	move	1.0	each				taken from area 10, day 126, unopened, rolled to the cave mouth (fourth trip)
 2026-09-26	126	barrel_y	move	1.0	each				taken from area 10, day 126, unopened, rolled to the cave mouth (fourth trip)
 2026-09-26	126	barrel_gg	move	1.0	each				taken from area 10, day 126, unopened, rolled to the cave mouth (fourth trip)
+2026-09-26	126	barrel_b	move	1.0	each				taken from area 10, day 126, unopened, rolled to the cave mouth (fifth trip, the last three)
+2026-09-26	126	barrel_tl	move	1.0	each				taken from area 10, day 126, unopened, rolled to the cave mouth (fifth trip, the last three)
+2026-09-26	126	barrel_ft	move	1.0	each				taken from area 10, day 126, unopened, rolled to the cave mouth (fifth trip, the last three)

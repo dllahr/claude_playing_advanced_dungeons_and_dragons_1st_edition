@@ -489,3 +489,9 @@ when	map	level	x	y	exped	turn	squares	feet	rate	why	route
 2026-09-26	b1	1	9	25	24	71	1	10	known	day 126: out through the secret door with eight barrels	8,25 9,25
 2026-09-26	b1	1	16	21	24	71	11	110	known	day 126: rolling eight barrels along the known route, Tristle 40 ft ahead	9,25 9,24 9,23 9,22 10,22 10,21 11,21 12,21 13,21 14,21 15,21 16,21
 2026-09-26	b1	1	16	1	24	74	26	260	known	day 126: rolling eight barrels north to the cave mouth, Tristle 40 ft ahead	16,21 16,20 16,19 17,19 18,19 19,19 19,18 19,17 19,16 19,15 19,14 19,13 18,13 17,13 16,13 16,12 16,11 16,10 16,9 16,8 16,7 16,6 16,5 16,4 16,3 16,2 16,1
+2026-09-26	b1	1	16	21	25	0	26	260	known	day 126: standard formation, Tristle 40 ft ahead, the known way south	16,1 16,2 16,3 16,4 16,5 16,6 16,7 16,8 16,9 16,10 16,11 16,12 16,13 17,13 18,13 19,13 19,14 19,15 19,16 19,17 19,18 19,19 18,19 17,19 16,19 16,20 16,21
+2026-09-26	b1	1	9	25	25	0	11	110	known	day 126: on to the secret door of area 10	16,21 15,21 14,21 13,21 12,21 11,21 10,21 10,22 10,23 10,24 10,25 9,25
+2026-09-26	b1	1	8	25	25	9	1	10	known	day 126: through the secret door into area 10, pulled shut behind	9,25 8,25
+2026-09-26	b1	1	9	25	25	19	1	10	known	day 126: out through the secret door with three barrels	8,25 9,25
+2026-09-26	b1	1	16	21	25	19	11	110	known	day 126: rolling three barrels along the known route, Tristle 40 ft ahead	9,25 9,24 9,23 9,22 10,22 10,21 11,21 12,21 13,21 14,21 15,21 16,21
+2026-09-26	b1	1	16	1	25	22	26	260	known	day 126: rolling three barrels north to the cave mouth, Tristle 40 ft ahead	16,21 16,20 16,19 17,19 18,19 19,19 19,18 19,17 19,16 19,15 19,14 19,13 18,13 17,13 16,13 16,12 16,11 16,10 16,9 16,8 16,7 16,6 16,5 16,4 16,3 16,2 16,1

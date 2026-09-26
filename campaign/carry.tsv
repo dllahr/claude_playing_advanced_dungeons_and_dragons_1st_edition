@@ -1190,3 +1190,10 @@ when	day	who	asset	verb	qty	unit	note
 2026-09-26	126	basecamp	barrel_mk	move	1	each	at Coll basecamp by the lean-to, day 126, unopened
 2026-09-26	126	cave_mouth	barrel_z	move	-1	each	sledged down the outcrop by Coll's crew, day 126, first runs
 2026-09-26	126	basecamp	barrel_z	move	1	each	at Coll basecamp by the lean-to, day 126, unopened
+2026-09-26	126	cave_mouth	barrel_b	move	1	each	rolled out of area 10 to the cave mouth, day 126, fifth trip
+2026-09-26	126	cave_mouth	barrel_tl	move	1	each	rolled out of area 10 to the cave mouth, day 126, fifth trip
+2026-09-26	126	cave_mouth	barrel_ft	move	1	each	rolled out of area 10 to the cave mouth, day 126, fifth trip
+2026-09-26	126	cave_mouth	barrel_og	move	-1	each	sledged down the outcrop by Coll's crew, day 126, second runs
+2026-09-26	126	basecamp	barrel_og	move	1	each	at Coll basecamp by the lean-to, day 126, unopened
+2026-09-26	126	cave_mouth	barrel_rh	move	-1	each	sledged down the outcrop by Coll's crew, day 126, second runs
+2026-09-26	126	basecamp	barrel_rh	move	1	each	at Coll basecamp by the lean-to, day 126, unopened
