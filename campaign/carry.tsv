@@ -1338,3 +1338,29 @@ when	day	who	asset	verb	qty	unit	note
 2026-09-27	130	basecamp	saw_crosscut	move	-1	each	loaded on cart 2 at Coll basecamp, day 130
 2026-09-27	130	wend_barn	saw_crosscut	move	1	each	off cart 2 at Wend's barn, day 130; booked on departure
 2026-09-27	130	basecamp	camp_food	move	-1.14	person-week	breakfast and lunch, day 130: twelve mouths each (ten of the party, Rowe and Orm), a third of a person-day each
+2026-09-28	132	basecamp	barrel_b	move	-1	each	loaded on Halm cart at Coll basecamp, day 132, for Wend's barn
+2026-09-28	132	wend_barn	barrel_b	move	1	each	to be unloaded at Wend's barn, day 132 dusk, off Halm cart; booked on departure
+2026-09-28	132	basecamp	barrel_sd	move	-1	each	loaded on Halm cart at Coll basecamp, day 132, for Wend's barn
+2026-09-28	132	wend_barn	barrel_sd	move	1	each	to be unloaded at Wend's barn, day 132 dusk, off Halm cart; booked on departure
+2026-09-28	132	basecamp	barrel_aw	move	-1	each	loaded on cart 1 at Coll basecamp, day 132, for Wend's barn
+2026-09-28	132	wend_barn	barrel_aw	move	1	each	to be unloaded at Wend's barn, day 132 dusk, off cart 1; booked on departure
+2026-09-28	132	basecamp	barrel_tl	move	-1	each	loaded on cart 1 at Coll basecamp, day 132, for Wend's barn
+2026-09-28	132	wend_barn	barrel_tl	move	1	each	to be unloaded at Wend's barn, day 132 dusk, off cart 1; booked on departure
+2026-09-28	132	basecamp	barrel_ft	move	-1	each	loaded on cart 2 at Coll basecamp, day 132, for Wend's barn
+2026-09-28	132	wend_barn	barrel_ft	move	1	each	to be unloaded at Wend's barn, day 132 dusk, off cart 2; booked on departure
+2026-09-28	132	basecamp	barrel_rh	move	-1	each	loaded on cart 2 at Coll basecamp, day 132, for Wend's barn
+2026-09-28	132	wend_barn	barrel_rh	move	1	each	to be unloaded at Wend's barn, day 132 dusk, off cart 2; booked on departure
+2026-09-28	132	basecamp	barrel_y	move	-1	each	loaded on cart 2 at Coll basecamp, day 132, for Wend's barn
+2026-09-28	132	wend_barn	barrel_y	move	1	each	to be unloaded at Wend's barn, day 132 dusk, off cart 2; booked on departure
+2026-09-28	132	basecamp	kilderkin_sd	move	-1	each	loaded on horse 1 at Coll basecamp, day 132, for Wend's barn
+2026-09-28	132	wend_barn	kilderkin_sd	move	1	each	to be unloaded at Wend's barn, day 132 dusk, off horse 1; booked on departure
+2026-09-28	132	basecamp	barrel_js	move	-1	each	loaded on horse 1 at Coll basecamp, day 132, for Wend's barn
+2026-09-28	132	wend_barn	barrel_js	move	1	each	to be unloaded at Wend's barn, day 132 dusk, off horse 1; booked on departure
+2026-09-28	132	basecamp	barrel_og	move	-1	each	loaded on horse 2 at Coll basecamp, day 132, for Wend's barn
+2026-09-28	132	wend_barn	barrel_og	move	1	each	to be unloaded at Wend's barn, day 132 dusk, off horse 2; booked on departure
+2026-09-28	132	basecamp	barrel_lc	move	-1	each	loaded on horse 3 at Coll basecamp, day 132, for Wend's barn
+2026-09-28	132	wend_barn	barrel_lc	move	1	each	to be unloaded at Wend's barn, day 132 dusk, off horse 3; booked on departure
+2026-09-28	131	party	rations_std	move	-0.62	person-week	lunch on the road to the basecamp, day 131: thirteen mouths (ten of the party, Rowe, Orm, Halm), a third of a person-day each
+2026-09-28	131	basecamp	camp_food	move	-0.62	person-week	dinner at the basecamp, day 131: thirteen mouths, a third of a person-day each
+2026-09-28	132	basecamp	camp_food	move	-0.62	person-week	breakfast at the basecamp, day 132: thirteen mouths, a third of a person-day each
+2026-09-28	132	basecamp	camp_food	move	-0.62	person-week	lunch on the road home, day 132: thirteen mouths, a third of a person-day each

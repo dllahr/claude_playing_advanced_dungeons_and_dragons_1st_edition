@@ -5107,3 +5107,6 @@ Halm did NOT set out (d6 = 4, declared first; audit-skip). Loads by dice, then t
 
 ## Day 130 evening -- Halm asked in person
 The party went to Halm's yard and asked him; he said yes at once (his standing want is a run, asked once on day 40; asked to his face it is work, not a gift). Terms: 8 sp a day for the man, cart and mule, written down by Wend in the morning; owed on his return. Cart, mule and Halm at the barn at first light on day 131. No dice, no reaction roll. Loop L061 noted.
+
+## Days 130 night to 132 -- the second run to the basecamp, fast-forwarded at the player's word
+Night at the Inn (10 gp). Day 131: Wend wrote Halm's hire at the barn at first light; three carts, three mules, three horses, ten of the party, Rowe, Orm and Halm out for the basecamp, 21 miles, at cart pace, there about 5 pm, a night at the lean-to. Day 132: loaded at first light by dice and biggest-that-fits: Halm's cart B and SD barrel; cart 1 AW, TL; cart 2 FT, RH, Y; horse 1 SD kilderkin and JS; horse 2 OG; horse 3 LC; out about 7:30, Wethersby about 5 pm. Eight barrels stay at the basecamp (AW, EJ, GG, TL, UT, VW, Z, Z: 33,260 gp-wt); four sledges; camp food 3.53. Rations 8.62. No wilderness encounters; nothing to interrupt. Halm owed 16 sp; the party has not paid.
