@@ -330,6 +330,22 @@ is also the clearest statement in either book of how the bands are read: the S
 number is the top of short, the M number the top of medium, the L number the top
 of long, and beyond L is out of range.
 
+### Flaming oil — the area of a flask (DMG p. 64)
+
+| Item | Size | Area of effect | Splash | Direct hit |
+|---|---|---|---|---|
+| Oil, alight | 1 pint (16 oz) | **3' diameter** | 1-3 hp | 2-12 hp, then 1-6 the second round, then it burns out |
+
+Read from a 150-dpi render of DMG p. 64, 2026-09-26. **The book says 3', not 5'**: a flask of oil covers a
+circle 3' across, about **7 square feet** (π × 1.5²). A lantern's spill is **2' diameter** (DMG p. 65,
+LIGHTING OIL, text layer only). Walking through or standing in flaming oil: **1-6 hp per melee round**
+(DMG p. 65). **The book gives NO burn time for a poured puddle** and none for how fast fire runs along a
+trail; the only duration printed is for oil on a creature (1-3 segments splashed, two rounds direct hit).
+A 1'-wide trail is not in the book: it is the player's use of the 7-square-foot figure, 7 feet of trail per
+flask.
+
+*source: **DMG p. 64**, GRENADE-LIKE MISSILES, effect table and Size line; DMG p. 65 for the lantern and standing-in-oil lines.*
+
 Missile modifiers: **−5 at long range, −2 at medium** — *verified from a 300 dpi
 render of **DMG p. 74** 2026-08-29; the line "Missiles: −5 at **long** range, −2
 at **medium** range." is printed under each attack matrix on pp. 74–75.* The PHB
