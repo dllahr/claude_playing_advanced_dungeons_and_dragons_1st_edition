@@ -241,3 +241,6 @@ when	exped	round	source	kind	what	who	fuel	certainty	note
 2026-09-26	25	0	lantern-ista	refill		Ista		known	day 126 round 0: topped off at the cave mouth, standing instruction. Player standing OK to manage and be told.
 2026-09-26	25	0	lantern-ista	lit				known	day 126: lit at the cave mouth
 2026-09-26	25	28	lantern-ista	out				known	day 126: out at the cave mouth, daylight
+2026-09-26	26	510	lantern-ista	refill		Ista		known	day 127 round 510: topped off at first light at the cave mouth before the search of the corridor, standing instruction. Player standing OK to manage and be told.
+2026-09-26	26	510	lantern-ista	lit				known	day 127: lit for the search of the corridor north of the mouth
+2026-09-26	26	515	lantern-ista	out				known	day 127: out again at the mouth

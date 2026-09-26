@@ -5063,3 +5063,8 @@ Ruling applied (rules/combat.md, DMG p.62): the surprising side is the one NOT s
 
 ## Day 126 night into 127 -- the watch resumed
 The two remaining rest checks were placed by dice in an hour of the second window and a half hour of the third (rolls.tsv) and the rest was run in short blocks so nothing could be overrun: neither fired. First light about 5:30 am, round 510 of expedition 26. The party did not sleep a full eight hours (the fight broke the first watch), so no spells are recovered by that night's rest beyond what they had; nobody had spent any. Bodies unsearched.
+
+## Day 127 -- the berserkers searched (expedition 26, rounds 510-515)
+Tristle, Dave and Torsat, five rounds, the rest guarding. Treasure type K x2: eleven and ten silver, twenty-one in all (booked to the purse, coin). Weapons d6: 3 long sword, 1 broad sword (salvage for Mund). No armour: berserkers scorn it, AC 7 is none; I had narrated 'ragged mail' in the dark the night before, corrected to scraps of ring sewn on hide. All twelve arrows recovered. Ista's lantern topped off at first light and lit for five rounds. Nothing fired.
+
+A junk row ('area 22, change x') was written to world_changes.tsv by a mistyped command on day 127 and removed as shell corruption, not an event (CLAUDE.md, day 103 precedent); it would have set area 22 to the state 'x'.
