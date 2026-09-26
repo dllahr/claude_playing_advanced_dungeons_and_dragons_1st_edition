@@ -5026,3 +5026,6 @@ Dave paid Coll 98 sp (purse 2,176 gp 8 sp). Yrtone left the Inn on foot about on
 
 ## Day 126 -- CORRECTION to the time on the trail (player's word)
 The half-hour between the basecamp and the cave mouth is the time AT 9" (the pace the party has been keeping), not at 12" as I scaled it. So: 9" = 30 minutes, 6" = 45, 12" = 22 or 23. I had used 40 minutes at 9" and an hour at 6", so the day-123 and day-124 walks were narrated too long. Today: gear on 1:30, up 1:45 to 2:15 at 9", into the caves about 2:15, at the secret door about 2:25. Nothing else in the record changes: the dungeon clock is in rounds.
+
+## Day 126 -- eight barrels rolled out to the cave mouth (expedition 21, rounds 10-37)
+Picked by dice from the 26 sound (the player named none): B x2, TL, LC x2, HU, UT, AW. Left: 25 barrels, 18 sound and 7 slack: B2 PF1 TL1 Y1 Z2 QS2 LC1 OG1 HU1 JS1 SD1 RH1 AW1 UT1 MK1 EJ1 sound, TL1 Y1 LC1 OG1 VW1 FT1 GG1 slack. DM weights (barrel 100 lb plus contents by the day-121 cask figures): B 270 lb, TL 290, LC 460, HU 237, UT 388, AW 400. Three noise checks, anchor 30 silent, nothing fired. About 3:20 pm at the mouth, lantern out. The party is at the cave mouth with eight barrels; the sledge-way is ready and the crew haul from here (loop L064).

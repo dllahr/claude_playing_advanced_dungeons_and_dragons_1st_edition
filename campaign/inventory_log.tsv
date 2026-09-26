@@ -390,3 +390,9 @@ when	day	asset	verb	qty	unit	condition	holder	evidence	note
 2026-09-26	125	camp_food	move	-1.52	person-week				breakfast and lunch at Coll basecamp, day 125: sixteen mouths each meal (nine of the party, Coll, six hands) at a third of a person-day, 0.76 + 0.76
 2026-09-26	125	camp_food	move	-0.86	person-week				dinner at Coll basecamp, day 125: eighteen mouths (nine of the party, Coll, six hands, Rowe and Orm) at a third of a person-day each, 0.86 of a person-week
 2026-09-26	126	camp_food	move	-1.72	person-week				breakfast and lunch at Coll basecamp, day 126: eighteen mouths each meal (nine of the party, Coll, six hands, Rowe and Orm) at a third of a person-day, 0.86 + 0.86
+2026-09-26	126	barrel_b	move	2.0	each				taken from area 10, day 126, unopened, rolled to the cave mouth
+2026-09-26	126	barrel_tl	move	1.0	each				taken from area 10, day 126, unopened, rolled to the cave mouth
+2026-09-26	126	barrel_lc	move	2.0	each				taken from area 10, day 126, unopened, rolled to the cave mouth
+2026-09-26	126	barrel_hu	move	1.0	each				taken from area 10, day 126, unopened, rolled to the cave mouth
+2026-09-26	126	barrel_ut	move	1.0	each				taken from area 10, day 126, unopened, rolled to the cave mouth
+2026-09-26	126	barrel_aw	move	1.0	each				taken from area 10, day 126, unopened, rolled to the cave mouth

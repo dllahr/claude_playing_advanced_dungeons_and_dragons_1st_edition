@@ -1150,3 +1150,9 @@ when	day	who	asset	verb	qty	unit	note
 2026-09-26	126	Hask	spear	move	1	each	kitted up again at Coll basecamp, day 126, to go up to the caves
 2026-09-26	126	basecamp	oil_flask	move	-4	each	four flasks taken from the carts, day 126, for the caves
 2026-09-26	126	party	oil_flask	move	4	each	four sealed flasks in hand, day 126
+2026-09-26	126	cave_mouth	barrel_b	move	2	each	rolled out of area 10 to the cave mouth, day 126
+2026-09-26	126	cave_mouth	barrel_tl	move	1	each	rolled out of area 10 to the cave mouth, day 126
+2026-09-26	126	cave_mouth	barrel_lc	move	2	each	rolled out of area 10 to the cave mouth, day 126
+2026-09-26	126	cave_mouth	barrel_hu	move	1	each	rolled out of area 10 to the cave mouth, day 126
+2026-09-26	126	cave_mouth	barrel_ut	move	1	each	rolled out of area 10 to the cave mouth, day 126
+2026-09-26	126	cave_mouth	barrel_aw	move	1	each	rolled out of area 10 to the cave mouth, day 126
