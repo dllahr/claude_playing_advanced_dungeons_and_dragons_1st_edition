@@ -134,3 +134,8 @@ the same number every time.*
 >
 > *This is why the lookup came before the map. `CLAUDE.md`: no rules table is
 > written twice, and a table that exists in the book should never be invented.*
+
+## The trail between Coll's basecamp and the cave mouth — time at each pace
+
+**Half an hour at a 9" pace** (two miles of unmade outcrop; the pace the party has kept up it. Player's word, 2026-09-26, correcting the DM's scaling). Scale by the inches: **6" is 45 minutes, 12" about 22 minutes.** The DM had scaled it from 12" and made every walk longer than the player's. *source: **CAMPAIGN**, player's ruling 2026-09-26; `campaign/places.tsv` (basecamp, cave_mouth).*
+
