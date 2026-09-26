@@ -429,3 +429,5 @@ when	day	asset	verb	qty	unit	condition	holder	evidence	note
 2026-09-26	127	camp_food	move	-0.9	person-week				lunch at Coll basecamp, day 127: nineteen mouths (ten of the party with Yrtone arrived, Coll, six hands, Rowe and Orm) at a third of a person-day each, 0.9 of a person-week
 2026-09-26	127	camp_food	move	-0.9	person-week				dinner at Coll basecamp, day 127: nineteen mouths (ten of the party, Coll, six hands, Rowe and Orm) at a third of a person-day each, 0.9 of a person-week
 2026-09-26	128	camp_food	move	-1.8	person-week				breakfast and lunch, day 128: nineteen mouths each at a third of a person-day (the caravan's road lunch and the trio's at the watercourse), 0.9 + 0.9
+2026-09-26	128	sledge	move	4.0	each				four sledges built at Coll basecamp on the party's paid job (two for the sledge-way, two improvised on day 127); the party's, kept at the basecamp
+2026-09-26	128	camp_food	move	-0.29	person-week				lunch and dinner on the road for Dave, Tristle and Yrtone walking to Wethersby, day 128: three mouths at two-thirds of a person-day, 0.29 of a person-week

@@ -1292,3 +1292,5 @@ when	day	who	asset	verb	qty	unit	note
 2026-09-27	128	basecamp	camp_food	move	-0.9	person-week	lunch, day 128: the caravan on the road and the three at the watercourse (nineteen mouths, a third of a person-day each)
 2026-09-27	128	basecamp	horse_riding	move	-3	each	CORRECTION day 128: the three horses went with the caravan, packed, and the log still had them at the basecamp
 2026-09-27	128	wethersby	horse_riding	move	3	each	the three horses with the caravan, booked at Wethersby on departure, day 128
+2026-09-27	128	basecamp	sledge	move	4	each	the four sledges built at Coll basecamp on the party's paid job, standing in the yard, day 128
+2026-09-27	128	basecamp	camp_food	move	-0.29	person-week	lunch and dinner on the road for Dave, Tristle and Yrtone, day 128 (three mouths, two-thirds of a person-day each)
