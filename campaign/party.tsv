@@ -458,3 +458,6 @@ when	map	level	x	y	exped	turn	squares	feet	rate	why	route
 2026-09-25	b1	1	10	9	20	0	38	380	known	day 124: standard formation, Tristle 40 ft ahead, the known way to the mouth of area 22	16,1 16,2 16,3 16,4 16,5 16,6 16,7 16,8 16,9 16,10 16,11 16,12 16,13 15,13 14,13 13,13 13,12 13,11 13,10 13,9 13,8 13,7 13,6 14,6 14,5 14,4 14,3 14,2 13,2 12,2 11,2 10,2 10,3 10,4 10,5 10,6 10,7 10,8 10,9
 2026-09-25	b1	1	10	5	20	14			PLACED	day 124: CORRECTION to the last move. With Tristle 40 ft ahead the party body stops at (10,5) and Tristle is at (10,9), the last square of the corridor; the row before put the party body at (10,9) and Tristle inside the garden.	
 2026-09-26	b1	1	10	19	20	14	14	140	known	day 124: standard formation, Tristle scouting ahead, into area 22 and north along x=10 to the north end	10,5 10,6 10,7 10,8 10,9 10,10 10,11 10,12 10,13 10,14 10,15 10,16 10,17 10,18 10,19
+2026-09-26	b1	1	10	11	20	26	8	80	known	day 124: pouring the north trail south along x=10 to (10,11)	10,19 10,18 10,17 10,16 10,15 10,14 10,13 10,12 10,11
+2026-09-26	b1	1	5	12	20	29	6	60	known	day 124: to the west end of area 22 to pour the platform	10,11 10,12 9,12 8,12 7,12 6,12 5,12
+2026-09-26	b1	1	9	12	20	33	4	40	known	day 124: finishing the west trail at (9,11), standing at (9,12) beside its end	5,12 6,12 7,12 8,12 9,12

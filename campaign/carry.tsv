@@ -907,3 +907,4 @@ when	day	who	asset	verb	qty	unit	note
 2026-09-26	124	Ista	lantern_ista	move	1	each	Ista's own lantern again, day 124
 2026-09-26	124	Tristle	ten_foot_pole	move	-1	each	CORRECTION day 124: the pole went to Tristle's own kit on day 123 and put him at 9 inches, against the player's standing instruction (day 119) that Tristle carry none of the shared weight and keep 12 inches. Back into the common kit; he uses it, the others carry it.
 2026-09-26	124	party	ten_foot_pole	move	1	each	the ten-foot pole back in the common kit, day 124
+2026-09-26	124	party	oil_flask	move	-20	each	poured out as oil trails in area 22, day 124 (19 sealed and the broached flask)

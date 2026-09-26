@@ -4978,3 +4978,6 @@ About 10:20 am at the cave mouth; 14 rounds to the corridor of area 22 (doors at
 
 ## Day 124 -- to (10,19), the north end of area 22
 Round 19 of expedition 20, about 10:40 am. Along x=10 by the day-119 path (both ghouls dead, the trunks felled at (10,16) and (12,19), the platform at (11,19) probed). Nothing fired. The party body is at (10,19); Tristle cannot be 40 ft ahead here (the room ends), so he waits at the north wall. Lantern back with Ista. The five days since day 119 slumped the fallen caps to soft rot: colour only.
+
+## Day 124 -- the oil laid in area 22, rounds 19-33 (NOT LIT)
+North trail 91 ft (13 flasks) from the platform (11,19) via (10,19) down x=10 to (10,11); west trail 42 ft (6 flasks) from (5,11) to (9,11); the broached flask (0.64 pint) on the platform at (5,11). The two trails end ten feet apart at (10,11) and (9,11): NOT connected, and the player was told. Party ends at (9,12). No burn-time or spread ruling yet: the book gives none (rules/combat.md); to be announced BEFORE anyone lights. Oil pool: 27 sealed flasks, all in Wend's barn. Lanterns: Ista 22 turns, Dave's spare 24. Nothing fired on the clock.
