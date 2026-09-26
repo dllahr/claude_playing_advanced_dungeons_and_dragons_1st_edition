@@ -1032,3 +1032,121 @@ when	day	who	asset	verb	qty	unit	note
 2026-09-26	125	basecamp	oil_flask	move	27	each	arrived in the carts at Coll basecamp at dusk, day 125, sealed
 2026-09-26	125	basecamp	camp_food	move	-0.86	person-week	dinner at Coll basecamp, day 125 (eighteen mouths, a third of a person-day each)
 2026-09-26	126	basecamp	camp_food	move	-1.72	person-week	breakfast and lunch at Coll basecamp, day 126 (eighteen mouths each, a third of a person-day each)
+2026-09-26	126	basecamp	arrows	move	-27	each	taken back from the lean-to at Coll basecamp, day 126
+2026-09-26	126	Dave	arrows	move	27	each	kitted up again at Coll basecamp, day 126, to go up to the caves
+2026-09-26	126	basecamp	arrows	move	-1	quiver	taken back from the lean-to at Coll basecamp, day 126
+2026-09-26	126	Dave	arrows	move	1	quiver	kitted up again at Coll basecamp, day 126, to go up to the caves
+2026-09-26	126	basecamp	banded_mail	move	-1	each	taken back from the lean-to at Coll basecamp, day 126
+2026-09-26	126	Dave	banded_mail	move	1	each	kitted up again at Coll basecamp, day 126, to go up to the caves
+2026-09-26	126	basecamp	lantern_yrtone	move	-1	each	taken back from the lean-to at Coll basecamp, day 126
+2026-09-26	126	Dave	lantern_yrtone	move	1	each	kitted up again at Coll basecamp, day 126, to go up to the caves
+2026-09-26	126	basecamp	long_sword	move	-1	each	taken back from the lean-to at Coll basecamp, day 126
+2026-09-26	126	Dave	long_sword	move	1	each	kitted up again at Coll basecamp, day 126, to go up to the caves
+2026-09-26	126	basecamp	ring_plain	move	-1	each	taken back from the lean-to at Coll basecamp, day 126
+2026-09-26	126	Dave	ring_plain	move	1	each	kitted up again at Coll basecamp, day 126, to go up to the caves
+2026-09-26	126	basecamp	shield_large	move	-1	each	taken back from the lean-to at Coll basecamp, day 126
+2026-09-26	126	Dave	shield_large	move	1	each	kitted up again at Coll basecamp, day 126, to go up to the caves
+2026-09-26	126	basecamp	short_bow	move	-1	each	taken back from the lean-to at Coll basecamp, day 126
+2026-09-26	126	Dave	short_bow	move	1	each	kitted up again at Coll basecamp, day 126, to go up to the caves
+2026-09-26	126	basecamp	arrows	move	-27	each	taken back from the lean-to at Coll basecamp, day 126
+2026-09-26	126	Torsat	arrows	move	27	each	kitted up again at Coll basecamp, day 126, to go up to the caves
+2026-09-26	126	basecamp	banded_mail	move	-1	each	taken back from the lean-to at Coll basecamp, day 126
+2026-09-26	126	Torsat	banded_mail	move	1	each	kitted up again at Coll basecamp, day 126, to go up to the caves
+2026-09-26	126	basecamp	long_sword	move	-1	each	taken back from the lean-to at Coll basecamp, day 126
+2026-09-26	126	Torsat	long_sword	move	1	each	kitted up again at Coll basecamp, day 126, to go up to the caves
+2026-09-26	126	basecamp	shield_large	move	-1	each	taken back from the lean-to at Coll basecamp, day 126
+2026-09-26	126	Torsat	shield_large	move	1	each	kitted up again at Coll basecamp, day 126, to go up to the caves
+2026-09-26	126	basecamp	short_bow	move	-1	each	taken back from the lean-to at Coll basecamp, day 126
+2026-09-26	126	Torsat	short_bow	move	1	each	kitted up again at Coll basecamp, day 126, to go up to the caves
+2026-09-26	126	basecamp	arrows	move	-27	each	taken back from the lean-to at Coll basecamp, day 126
+2026-09-26	126	Tristle	arrows	move	27	each	kitted up again at Coll basecamp, day 126, to go up to the caves
+2026-09-26	126	basecamp	leather_armour	move	-1	each	taken back from the lean-to at Coll basecamp, day 126
+2026-09-26	126	Tristle	leather_armour	move	1	each	kitted up again at Coll basecamp, day 126, to go up to the caves
+2026-09-26	126	basecamp	long_sword	move	-1	each	taken back from the lean-to at Coll basecamp, day 126
+2026-09-26	126	Tristle	long_sword	move	1	each	kitted up again at Coll basecamp, day 126, to go up to the caves
+2026-09-26	126	basecamp	short_bow	move	-1	each	taken back from the lean-to at Coll basecamp, day 126
+2026-09-26	126	Tristle	short_bow	move	1	each	kitted up again at Coll basecamp, day 126, to go up to the caves
+2026-09-26	126	basecamp	thieves_tools	move	-1	set	taken back from the lean-to at Coll basecamp, day 126
+2026-09-26	126	Tristle	thieves_tools	move	1	set	kitted up again at Coll basecamp, day 126, to go up to the caves
+2026-09-26	126	basecamp	wooden_spike	move	-4	each	taken back from the lean-to at Coll basecamp, day 126
+2026-09-26	126	Tristle	wooden_spike	move	4	each	kitted up again at Coll basecamp, day 126, to go up to the caves
+2026-09-26	126	basecamp	banded_mail	move	-1	each	taken back from the lean-to at Coll basecamp, day 126
+2026-09-26	126	Blartho	banded_mail	move	1	each	kitted up again at Coll basecamp, day 126, to go up to the caves
+2026-09-26	126	basecamp	flail	move	-1	each	taken back from the lean-to at Coll basecamp, day 126
+2026-09-26	126	Blartho	flail	move	1	each	kitted up again at Coll basecamp, day 126, to go up to the caves
+2026-09-26	126	basecamp	holy_symbol	move	-1	each	taken back from the lean-to at Coll basecamp, day 126
+2026-09-26	126	Blartho	holy_symbol	move	1	each	kitted up again at Coll basecamp, day 126, to go up to the caves
+2026-09-26	126	basecamp	shield_large	move	-1	each	taken back from the lean-to at Coll basecamp, day 126
+2026-09-26	126	Blartho	shield_large	move	1	each	kitted up again at Coll basecamp, day 126, to go up to the caves
+2026-09-26	126	basecamp	sling	move	-1	each	taken back from the lean-to at Coll basecamp, day 126
+2026-09-26	126	Blartho	sling	move	1	each	kitted up again at Coll basecamp, day 126, to go up to the caves
+2026-09-26	126	basecamp	sling_bullet	move	-8	each	taken back from the lean-to at Coll basecamp, day 126
+2026-09-26	126	Blartho	sling_bullet	move	8	each	kitted up again at Coll basecamp, day 126, to go up to the caves
+2026-09-26	126	basecamp	dart	move	-15	each	taken back from the lean-to at Coll basecamp, day 126
+2026-09-26	126	Frython	dart	move	15	each	kitted up again at Coll basecamp, day 126, to go up to the caves
+2026-09-26	126	basecamp	banded_mail	move	-1	each	taken back from the lean-to at Coll basecamp, day 126
+2026-09-26	126	Dellie	banded_mail	move	1	each	kitted up again at Coll basecamp, day 126, to go up to the caves
+2026-09-26	126	basecamp	flail	move	-1	each	taken back from the lean-to at Coll basecamp, day 126
+2026-09-26	126	Dellie	flail	move	1	each	kitted up again at Coll basecamp, day 126, to go up to the caves
+2026-09-26	126	basecamp	holy_symbol	move	-1	each	taken back from the lean-to at Coll basecamp, day 126
+2026-09-26	126	Dellie	holy_symbol	move	1	each	kitted up again at Coll basecamp, day 126, to go up to the caves
+2026-09-26	126	basecamp	shield_small	move	-1	each	taken back from the lean-to at Coll basecamp, day 126
+2026-09-26	126	Dellie	shield_small	move	1	each	kitted up again at Coll basecamp, day 126, to go up to the caves
+2026-09-26	126	basecamp	sling	move	-1	each	taken back from the lean-to at Coll basecamp, day 126
+2026-09-26	126	Dellie	sling	move	1	each	kitted up again at Coll basecamp, day 126, to go up to the caves
+2026-09-26	126	basecamp	sling_bullet	move	-7	each	taken back from the lean-to at Coll basecamp, day 126
+2026-09-26	126	Dellie	sling_bullet	move	7	each	kitted up again at Coll basecamp, day 126, to go up to the caves
+2026-09-26	126	basecamp	dagger	move	-1	each	taken back from the lean-to at Coll basecamp, day 126
+2026-09-26	126	Ista	dagger	move	1	each	kitted up again at Coll basecamp, day 126, to go up to the caves
+2026-09-26	126	basecamp	dart	move	-15	each	taken back from the lean-to at Coll basecamp, day 126
+2026-09-26	126	Ista	dart	move	15	each	kitted up again at Coll basecamp, day 126, to go up to the caves
+2026-09-26	126	basecamp	hand_axe	move	-1	each	taken back from the lean-to at Coll basecamp, day 126
+2026-09-26	126	Ista	hand_axe	move	1	each	kitted up again at Coll basecamp, day 126, to go up to the caves
+2026-09-26	126	basecamp	joiners_set	move	-1	set	taken back from the lean-to at Coll basecamp, day 126
+2026-09-26	126	Ista	joiners_set	move	1	set	kitted up again at Coll basecamp, day 126, to go up to the caves
+2026-09-26	126	basecamp	lantern_ista	move	-1	each	taken back from the lean-to at Coll basecamp, day 126
+2026-09-26	126	Ista	lantern_ista	move	1	each	kitted up again at Coll basecamp, day 126, to go up to the caves
+2026-09-26	126	basecamp	leather_armour	move	-1	each	taken back from the lean-to at Coll basecamp, day 126
+2026-09-26	126	Ista	leather_armour	move	1	each	kitted up again at Coll basecamp, day 126, to go up to the caves
+2026-09-26	126	basecamp	backpack	move	-1	each	taken back from the lean-to at Coll basecamp, day 126
+2026-09-26	126	party	backpack	move	1	each	kitted up again at Coll basecamp, day 126, to go up to the caves
+2026-09-26	126	basecamp	candle	move	-6	each	taken back from the lean-to at Coll basecamp, day 126
+2026-09-26	126	party	candle	move	6	each	kitted up again at Coll basecamp, day 126, to go up to the caves
+2026-09-26	126	basecamp	gold_ring_plain	move	-1	each	taken back from the lean-to at Coll basecamp, day 126
+2026-09-26	126	party	gold_ring_plain	move	1	each	kitted up again at Coll basecamp, day 126, to go up to the caves
+2026-09-26	126	basecamp	iron_spike	move	-10	each	taken back from the lean-to at Coll basecamp, day 126
+2026-09-26	126	party	iron_spike	move	10	each	kitted up again at Coll basecamp, day 126, to go up to the caves
+2026-09-26	126	basecamp	mallet	move	-1	each	taken back from the lean-to at Coll basecamp, day 126
+2026-09-26	126	party	mallet	move	1	each	kitted up again at Coll basecamp, day 126, to go up to the caves
+2026-09-26	126	basecamp	mirror	move	-1	each	taken back from the lean-to at Coll basecamp, day 126
+2026-09-26	126	party	mirror	move	1	each	kitted up again at Coll basecamp, day 126, to go up to the caves
+2026-09-26	126	basecamp	mirror_silver	move	-1	each	taken back from the lean-to at Coll basecamp, day 126
+2026-09-26	126	party	mirror_silver	move	1	each	kitted up again at Coll basecamp, day 126, to go up to the caves
+2026-09-26	126	basecamp	rations_std	move	-9.81	person-week	taken back from the lean-to at Coll basecamp, day 126
+2026-09-26	126	party	rations_std	move	9.81	person-week	kitted up again at Coll basecamp, day 126, to go up to the caves
+2026-09-26	126	basecamp	rope_50ft	move	-1	each	taken back from the lean-to at Coll basecamp, day 126
+2026-09-26	126	party	rope_50ft	move	1	each	kitted up again at Coll basecamp, day 126, to go up to the caves
+2026-09-26	126	basecamp	saw_hack	move	-3	each	taken back from the lean-to at Coll basecamp, day 126
+2026-09-26	126	party	saw_hack	move	3	each	kitted up again at Coll basecamp, day 126, to go up to the caves
+2026-09-26	126	basecamp	ten_foot_pole	move	-1	each	taken back from the lean-to at Coll basecamp, day 126
+2026-09-26	126	party	ten_foot_pole	move	1	each	kitted up again at Coll basecamp, day 126, to go up to the caves
+2026-09-26	126	basecamp	tinder_box	move	-1	each	taken back from the lean-to at Coll basecamp, day 126
+2026-09-26	126	party	tinder_box	move	1	each	kitted up again at Coll basecamp, day 126, to go up to the caves
+2026-09-26	126	basecamp	torch	move	-1	each	taken back from the lean-to at Coll basecamp, day 126
+2026-09-26	126	party	torch	move	1	each	kitted up again at Coll basecamp, day 126, to go up to the caves
+2026-09-26	126	basecamp	waterskin	move	-7	each	taken back from the lean-to at Coll basecamp, day 126
+2026-09-26	126	party	waterskin	move	7	each	kitted up again at Coll basecamp, day 126, to go up to the caves
+2026-09-26	126	basecamp	banded_mail	move	-1	each	taken back from the lean-to at Coll basecamp, day 126
+2026-09-26	126	Hask	banded_mail	move	1	each	kitted up again at Coll basecamp, day 126, to go up to the caves
+2026-09-26	126	basecamp	shield_small	move	-1	each	taken back from the lean-to at Coll basecamp, day 126
+2026-09-26	126	Hask	shield_small	move	1	each	kitted up again at Coll basecamp, day 126, to go up to the caves
+2026-09-26	126	basecamp	short_sword	move	-1	each	taken back from the lean-to at Coll basecamp, day 126
+2026-09-26	126	Hask	short_sword	move	1	each	kitted up again at Coll basecamp, day 126, to go up to the caves
+2026-09-26	126	basecamp	sling	move	-1	each	taken back from the lean-to at Coll basecamp, day 126
+2026-09-26	126	Hask	sling	move	1	each	kitted up again at Coll basecamp, day 126, to go up to the caves
+2026-09-26	126	basecamp	sling_bullet	move	-7	each	taken back from the lean-to at Coll basecamp, day 126
+2026-09-26	126	Hask	sling_bullet	move	7	each	kitted up again at Coll basecamp, day 126, to go up to the caves
+2026-09-26	126	basecamp	spear	move	-1	each	taken back from the lean-to at Coll basecamp, day 126
+2026-09-26	126	Hask	spear	move	1	each	kitted up again at Coll basecamp, day 126, to go up to the caves
+2026-09-26	126	basecamp	oil_flask	move	-4	each	four flasks taken from the carts, day 126, for the caves
+2026-09-26	126	party	oil_flask	move	4	each	four sealed flasks in hand, day 126

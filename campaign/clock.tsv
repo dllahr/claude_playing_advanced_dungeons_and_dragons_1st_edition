@@ -1352,3 +1352,7 @@ when	exped	round	kind	anchor	detail	note
 2026-09-26	20	34	check	30	d6=2	anchor 30 + 4
 2026-09-26	20	38	advance		4	day 124: Tristle takes Ista's lantern, lights the east end of the west trail at (9,11) and the south end of the north trail at (10,11), and rejoins the party at (10,10)
 2026-09-26	20	48	advance		10	day 124: back down the corridor away from the smoke, three doors pulled shut, to the cave entrance
+2026-09-26	21	0	start			day 126, expedition 21: about half past two in the afternoon, into Quasqueton from the cave mouth with four flasks of oil, eight of the party (Yrtone on the road from Wethersby), standard formation, Tristle 40 ft ahead, towards area 10
+2026-09-26	21	0	jitter		30:2,60:3,90:5,120:1,150:3,180:0,210:1,240:3,270:3,300:2,330:1,360:3,390:1,420:0,450:3,480:5,510:4,540:2,570:1,600:0,630:0,660:4,690:1,720:2,750:1,780:5,810:0,840:4,870:2,900:2,930:5,960:4,990:2,1020:2,1050:4,1080:0,1110:2,1140:3,1170:3,1200:5,1230:1,1260:4,1290:1,1320:2,1350:3,1380:5,1410:3,1440:0,1470:2,1500:0,1530:1,1560:2,1590:1,1620:0,1650:0,1680:1,1710:1,1740:4,1770:0,1800:4	rolled in advance and HIDDEN; each is reported when its check fires
+2026-09-26	21	6	advance		6	day 126: from the cave mouth down the corridor, through the open door at (16,6) and past the one-way slab, Tristle 40 ft ahead
+2026-09-26	21	8	advance		2	day 126: west along the passage to the secret door of area 10 at (9,25)

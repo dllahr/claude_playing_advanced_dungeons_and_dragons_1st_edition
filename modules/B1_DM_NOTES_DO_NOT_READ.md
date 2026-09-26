@@ -5020,3 +5020,6 @@ Dinner debited (18 mouths, 0.86 person-week, camp food 14.43). Dave invited anyb
 
 ## Day 126 -- the sledge-way stands
 Night quiet; day opens at first light. Party (nine, gear in the lean-to) works with Coll: 12.25 man-days left at dawn from 36.75/49, nine party man-days plus the crew's seven a day, so the road stands in about six hours, early afternoon. Breakfast and lunch debited (1.72, camp food 12.71). Coll pronounces it done; the wages (98 sp) fall due; the player has not paid them yet. Crew ready to haul from day 127 (L064). Yrtone fit at the Inn. No dice.
+
+## Day 126 afternoon -- wages paid, Yrtone sets out, expedition 21 to the secret door of area 10
+Dave paid Coll 98 sp (purse 2,176 gp 8 sp). Yrtone left the Inn on foot about one pm, alone (no horse in town, all three at the basecamp); a cold camp by the road; at the basecamp about midday on day 127. Party of eight geared up, four flasks (three sealed and the flask opened for the lantern: 19.2 turns of broached oil), rate 9" so forty minutes up the sledge-way (1:45 to 2:25); no smoke or smell at the cave mouth (the garden's air was fit two days ago). Into the caves about 2:30, eight rounds to the secret door at (9,25); Tristle at (9,25), the party body at (10,22). Elf passive rolled at both known secret doors. Nothing fired. Camp food 12.71, oil at the basecamp 23 sealed.
