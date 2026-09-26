@@ -1311,3 +1311,15 @@ when	exped	round	kind	anchor	detail	note
 2026-09-25	19	0	jitter		30:0,60:2,90:0,120:0,150:4,180:4,210:1,240:0,270:1,300:3,330:0,360:1,390:0,420:3,450:2,480:0,510:0,540:3,570:1,600:2,630:1,660:1,690:1,720:2,750:0,780:4,810:0,840:4,870:2,900:5,930:5,960:1,990:1,1020:3,1050:3,1080:1,1110:3,1140:0,1170:4,1200:1,1230:1,1260:3,1290:0,1320:2,1350:3,1380:4,1410:4,1440:1,1470:4,1500:5,1530:4,1560:1,1590:1,1620:5,1650:3,1680:1,1710:1,1740:4,1770:2,1800:1	rolled in advance and HIDDEN; each is reported when its check fires
 2026-09-25	19	8	advance		8	day 123: from the cave mouth down the corridor, past the one-way slab and west to the secret door of area 10, Tristle 40 ft ahead
 2026-09-25	19	9	advance		1	day 123: door (8,25,V) unspiked, opened, the party in, and closed behind them
+2026-09-25	19	10	advance		1	day 123: door (8,25,V) spiked from the room side, two spikes, quiet
+2026-09-25	19	20	advance		10	day 123: turn 1 of the storeroom work: hoops driven on the slack kilderkins (Tristle, Ista) and barrels checked by the rest
+2026-09-25	19	20	check	extra	d6=6	extra
+2026-09-25	19	30	advance		10	day 123: turn 2 of the storeroom work: hoops driven on the slack kilderkins (Tristle, Ista) and barrels checked by the rest
+2026-09-25	19	30	check	30	d6=6	anchor 30 + 0
+2026-09-25	19	30	check	extra	d6=6	extra
+2026-09-25	19	40	advance		10	day 123: turn 3 of checking the barrels, hoops and staves, all hands
+2026-09-25	19	50	advance		10	day 123: turn 4 of checking the barrels, hoops and staves, all hands
+2026-09-25	19	60	advance		10	day 123: turn 5 of checking the barrels, hoops and staves, all hands
+2026-09-25	19	70	advance		10	day 123: turn 6 of checking the barrels, hoops and staves, all hands
+2026-09-25	19	62	check	60	d6=3	anchor 60 + 2
+2026-09-25	19	80	advance		10	day 123: turn 7 of checking the barrels, hoops and staves, all hands
