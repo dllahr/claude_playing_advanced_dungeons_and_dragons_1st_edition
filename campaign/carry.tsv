@@ -472,3 +472,13 @@ when	day	who	asset	verb	qty	unit	note
 2026-09-25	123	party	firkin_hu	move	1	each	picked up in area 10, day 123, unopened
 2026-09-25	123	party	firkin_tl	move	1	each	picked up in area 10, day 123, unopened
 2026-09-25	123	party	firkin_y	move	1	each	picked up in area 10, day 123, unopened
+2026-09-25	123	party	cask_b	move	-1	each	carried down the outcrop to Coll's basecamp, day 123, stored in the lean-to
+2026-09-25	123	basecamp	cask_b	move	1	each	in the lean-to at Coll's basecamp, day 123, unopened
+2026-09-25	123	party	cask_qs	move	-1	each	carried down the outcrop to Coll's basecamp, day 123, stored in the lean-to
+2026-09-25	123	basecamp	cask_qs	move	1	each	in the lean-to at Coll's basecamp, day 123, unopened
+2026-09-25	123	party	firkin_hu	move	-1	each	carried down the outcrop to Coll's basecamp, day 123, stored in the lean-to
+2026-09-25	123	basecamp	firkin_hu	move	1	each	in the lean-to at Coll's basecamp, day 123, unopened
+2026-09-25	123	party	firkin_tl	move	-1	each	carried down the outcrop to Coll's basecamp, day 123, stored in the lean-to
+2026-09-25	123	basecamp	firkin_tl	move	1	each	in the lean-to at Coll's basecamp, day 123, unopened
+2026-09-25	123	party	firkin_y	move	-1	each	carried down the outcrop to Coll's basecamp, day 123, stored in the lean-to
+2026-09-25	123	basecamp	firkin_y	move	1	each	in the lean-to at Coll's basecamp, day 123, unopened
