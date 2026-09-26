@@ -1406,3 +1406,12 @@ when	exped	round	kind	anchor	detail	note
 2026-09-26	24	42	check	extra	d6=2	extra
 2026-09-26	24	52	advance		10	day 126: turn 4 of driving hoops home on the seven slack barrels (mallet, joiner's hammer, two hand-axe poll drifts; the rest steadying them)
 2026-09-26	24	52	check	extra	d6=4	extra
+2026-09-26	24	53	advance		1	day 126: spikes drawn from the door (8,25,V) by hand, quietly
+2026-09-26	24	63	advance		10	day 126: the eight barrels (EJ, QS, VW, LC, OG, JS, Y, GG) pulled clear of the stacks and lined up
+2026-09-26	24	63	check	60	d6=6	anchor 60 + 3
+2026-09-26	24	63	check	extra	d6=1 -> Kobolds (1 -6)-AC 7, HDV 2 , hp4,3,3,2,2,1,#AT 1, D 1-4 or weapon -1, MV 90’ (30’), Save NM, ML 6	extra
+2026-09-26	24	71	advance		8	day 126: each barrel rolled through the secret door in turn
+2026-09-26	24	71	check	extra	d6=5	extra
+2026-09-26	24	74	advance		3	day 126: barrels rolled from the secret door to (16,21)
+2026-09-26	24	80	advance		6	day 126: barrels rolled up the corridor and out through the open doors to the cave mouth
+2026-09-26	24	80	check	extra	d6=5	extra

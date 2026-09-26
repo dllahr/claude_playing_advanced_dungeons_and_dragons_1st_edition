@@ -1178,3 +1178,15 @@ when	day	who	asset	verb	qty	unit	note
 2026-09-26	126	cave_mouth	barrel_ut	move	1	each	rolled out of area 10 to the cave mouth, day 126, third trip
 2026-09-26	126	cave_mouth	rations_std	move	-3	person-week	picked up at the cave mouth, day 126, before going back into area 10
 2026-09-26	126	party	rations_std	move	3	person-week	the three person-weeks left at the cave mouth taken up again, day 126
+2026-09-26	126	cave_mouth	barrel_ej	move	1	each	rolled out of area 10 to the cave mouth, day 126, fourth trip
+2026-09-26	126	cave_mouth	barrel_qs	move	1	each	rolled out of area 10 to the cave mouth, day 126, fourth trip
+2026-09-26	126	cave_mouth	barrel_vw	move	1	each	rolled out of area 10 to the cave mouth, day 126, fourth trip
+2026-09-26	126	cave_mouth	barrel_lc	move	1	each	rolled out of area 10 to the cave mouth, day 126, fourth trip
+2026-09-26	126	cave_mouth	barrel_og	move	1	each	rolled out of area 10 to the cave mouth, day 126, fourth trip
+2026-09-26	126	cave_mouth	barrel_js	move	1	each	rolled out of area 10 to the cave mouth, day 126, fourth trip
+2026-09-26	126	cave_mouth	barrel_y	move	1	each	rolled out of area 10 to the cave mouth, day 126, fourth trip
+2026-09-26	126	cave_mouth	barrel_gg	move	1	each	rolled out of area 10 to the cave mouth, day 126, fourth trip
+2026-09-26	126	cave_mouth	barrel_mk	move	-1	each	sledged down the outcrop by Coll's crew, day 126, first runs
+2026-09-26	126	basecamp	barrel_mk	move	1	each	at Coll basecamp by the lean-to, day 126, unopened
+2026-09-26	126	cave_mouth	barrel_z	move	-1	each	sledged down the outcrop by Coll's crew, day 126, first runs
+2026-09-26	126	basecamp	barrel_z	move	1	each	at Coll basecamp by the lean-to, day 126, unopened
