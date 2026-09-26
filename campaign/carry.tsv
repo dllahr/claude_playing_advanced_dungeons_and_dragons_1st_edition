@@ -1223,3 +1223,35 @@ when	day	who	asset	verb	qty	unit	note
 2026-09-26	127	basecamp	barrel_aw	move	1	each	at Coll basecamp by the lean-to, day 127, unopened
 2026-09-26	127	cave_mouth	barrel_hu	move	-1	each	sledged down the outcrop, day 127, third run, four sledges
 2026-09-26	127	basecamp	barrel_hu	move	1	each	at Coll basecamp by the lean-to, day 127, unopened
+2026-09-26	127	cave_mouth	barrel_lc	move	-1	each	sledged down the outcrop, day 127, run 4, four sledges
+2026-09-26	127	basecamp	barrel_lc	move	1	each	at Coll basecamp by the lean-to, day 127, unopened
+2026-09-26	127	cave_mouth	barrel_gg	move	-1	each	sledged down the outcrop, day 127, run 4, four sledges
+2026-09-26	127	basecamp	barrel_gg	move	1	each	at Coll basecamp by the lean-to, day 127, unopened
+2026-09-26	127	cave_mouth	barrel_z	move	-1	each	sledged down the outcrop, day 127, run 4, four sledges
+2026-09-26	127	basecamp	barrel_z	move	1	each	at Coll basecamp by the lean-to, day 127, unopened
+2026-09-26	127	cave_mouth	barrel_pf	move	-1	each	sledged down the outcrop, day 127, run 4, four sledges
+2026-09-26	127	basecamp	barrel_pf	move	1	each	at Coll basecamp by the lean-to, day 127, unopened
+2026-09-26	127	cave_mouth	barrel_tl	move	-1	each	sledged down the outcrop, day 127, run 5, four sledges
+2026-09-26	127	basecamp	barrel_tl	move	1	each	at Coll basecamp by the lean-to, day 127, unopened
+2026-09-26	127	cave_mouth	barrel_qs	move	-1	each	sledged down the outcrop, day 127, run 5, four sledges
+2026-09-26	127	basecamp	barrel_qs	move	1	each	at Coll basecamp by the lean-to, day 127, unopened
+2026-09-26	127	cave_mouth	barrel_ut	move	-1	each	sledged down the outcrop, day 127, run 5, four sledges
+2026-09-26	127	basecamp	barrel_ut	move	1	each	at Coll basecamp by the lean-to, day 127, unopened
+2026-09-26	127	cave_mouth	barrel_ft	move	-1	each	sledged down the outcrop, day 127, run 5, four sledges
+2026-09-26	127	basecamp	barrel_ft	move	1	each	at Coll basecamp by the lean-to, day 127, unopened
+2026-09-26	127	cave_mouth	barrel_b	move	-1	each	sledged down the outcrop, day 127, run 6, four sledges
+2026-09-26	127	basecamp	barrel_b	move	1	each	at Coll basecamp by the lean-to, day 127, unopened
+2026-09-26	127	cave_mouth	barrel_ej	move	-1	each	sledged down the outcrop, day 127, run 6, four sledges
+2026-09-26	127	basecamp	barrel_ej	move	1	each	at Coll basecamp by the lean-to, day 127, unopened
+2026-09-26	127	cave_mouth	barrel_b	move	-1	each	sledged down the outcrop, day 127, run 6, four sledges
+2026-09-26	127	basecamp	barrel_b	move	1	each	at Coll basecamp by the lean-to, day 127, unopened
+2026-09-26	127	cave_mouth	barrel_tl	move	-1	each	sledged down the outcrop, day 127, run 6, four sledges
+2026-09-26	127	basecamp	barrel_tl	move	1	each	at Coll basecamp by the lean-to, day 127, unopened
+2026-09-26	127	cave_mouth	barrel_b	move	-1	each	sledged down the outcrop, day 127, run 7, four sledges
+2026-09-26	127	basecamp	barrel_b	move	1	each	at Coll basecamp by the lean-to, day 127, unopened
+2026-09-26	127	cave_mouth	barrel_hu	move	-1	each	sledged down the outcrop, day 127, run 7, four sledges
+2026-09-26	127	basecamp	barrel_hu	move	1	each	at Coll basecamp by the lean-to, day 127, unopened
+2026-09-26	127	cave_mouth	barrel_lc	move	-1	each	sledged down the outcrop, day 127, run 7, four sledges
+2026-09-26	127	basecamp	barrel_lc	move	1	each	at Coll basecamp by the lean-to, day 127, unopened
+2026-09-26	127	cave_mouth	barrel_ut	move	-1	each	sledged down the outcrop, day 127, run 7, four sledges
+2026-09-26	127	basecamp	barrel_ut	move	1	each	at Coll basecamp by the lean-to, day 127, unopened
