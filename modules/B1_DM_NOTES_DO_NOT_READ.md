@@ -5080,3 +5080,6 @@ MY ERROR: my replies from the dawn report onward said the rations stood at the c
 
 ## Day 127 evening -- the last run
 About 6 pm, dark (the player's word), Tristle alone at the cave mouth for about an hour and a half with his bow ready: HIDE IN SHADOWS d100 rolled and logged (30% is his figure), result NOT told to the player as asked; one rest check for the interval, silent, nothing fired. The party's sledges up empty (30 min), loaded (10), down (40) in the dark with lanterns; JS, TL, Y at the basecamp about 7:30; Tristle came down with the party. Every container from area 10 is below the cave mouth: the thirty-three barrels at the basecamp or with Wend, and the kilderkins split between the basecamp (SD2 XR1 Z2) and Wend's barn (eleven). Dinner about 7:45 (19 mouths, 0.9; camp food 9.19 person-weeks).
+
+## Day 127 evening -- Dave's thanks
+Ten gold pieces out of the purse, one each to six hands, Rowe and Orm and two to Coll, on top of the promised 98 sp (audit-skip). Played from the record: a bonus for work done lands (gifts fail, work lands, articles.md); Orm and Rowe's 'will not take pay' is pride, not plenty, and this is pay for the extra days, so they accept. No dice.
