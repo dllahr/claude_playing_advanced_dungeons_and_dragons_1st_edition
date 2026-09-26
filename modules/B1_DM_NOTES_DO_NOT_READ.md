@@ -5017,3 +5017,6 @@ Hask's gear off in the lean-to (all nine now without kit). Breakfast and lunch d
 
 ## Day 125 evening -- dinner, dances, and Dave's ask
 Dinner debited (18 mouths, 0.86 person-week, camp food 14.43). Dave invited anybody to dance; Ferd and Wat volunteered (colour only). Coll agreed to keep the crew for the hauling: the days the road saves are days already paid (seven working days in full), so the men haul on them for nothing more; past the seven, the same rate; outcrop only, never into the caves. Loop opened. No dice, no reaction roll (known NPC).
+
+## Day 126 -- the sledge-way stands
+Night quiet; day opens at first light. Party (nine, gear in the lean-to) works with Coll: 12.25 man-days left at dawn from 36.75/49, nine party man-days plus the crew's seven a day, so the road stands in about six hours, early afternoon. Breakfast and lunch debited (1.72, camp food 12.71). Coll pronounces it done; the wages (98 sp) fall due; the player has not paid them yet. Crew ready to haul from day 127 (L064). Yrtone fit at the Inn. No dice.
