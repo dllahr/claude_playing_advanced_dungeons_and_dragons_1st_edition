@@ -1396,3 +1396,13 @@ when	exped	round	kind	anchor	detail	note
 2026-09-26	24	6	advance		6	day 126: from the cave mouth down the corridor and south to (16,21), Tristle 40 ft ahead
 2026-09-26	24	9	advance		3	day 126: west along the passage to the secret door of area 10
 2026-09-26	24	11	advance		2	day 126: Tristle opens the secret door, all in and pulled shut
+2026-09-26	24	12	advance		1	day 126: door (8,25,V) spiked from the room side, two spikes, gently and quietly
+2026-09-26	24	22	advance		10	day 126: turn 1 of driving hoops home on the seven slack barrels (mallet, joiner's hammer, two hand-axe poll drifts; the rest steadying them)
+2026-09-26	24	22	check	extra	d6=5	extra
+2026-09-26	24	32	advance		10	day 126: turn 2 of driving hoops home on the seven slack barrels (mallet, joiner's hammer, two hand-axe poll drifts; the rest steadying them)
+2026-09-26	24	32	check	extra	d6=1 -> Berserkers (1-2)-AC 7, HD 1 +1’, hp 5,4, #AT 1, D 1-8 or by weapon, MV 90' (30'), Save FI, ML 12	extra
+2026-09-26	24	42	advance		10	day 126: turn 3 of driving hoops home on the seven slack barrels (mallet, joiner's hammer, two hand-axe poll drifts; the rest steadying them)
+2026-09-26	24	34	check	30	d6=3	anchor 30 + 4
+2026-09-26	24	42	check	extra	d6=2	extra
+2026-09-26	24	52	advance		10	day 126: turn 4 of driving hoops home on the seven slack barrels (mallet, joiner's hammer, two hand-axe poll drifts; the rest steadying them)
+2026-09-26	24	52	check	extra	d6=4	extra

@@ -5044,3 +5044,6 @@ Rations by the door taken up again; QS, Z, HU, TL, OG, SD, UT picked by dice fro
 
 ## Day 126 -- expedition 24, back into area 10 with the rations
 Rations at the mouth taken up (the party carries all 6.81 person-weeks); rate 9" with eight bearers. Round 11, about 5:07 pm, in area 10, door pulled shut; nothing fired. 11 barrels left: 4 sound (B, QS, JS, EJ), 7 slack.
+
+## Day 126 -- the seven slack barrels mended (expedition 24, rounds 11-52)
+Door spiked (two spikes, Dave, 10 -> 8). Repair ruled ordinary work, no roll: a barrel has twice a kilderkin's hoops, so two turns a barrel per worker; four workers (mallet, Ista's joiner's hammer, two hand-axe polls for drifts), 7 barrels in four turns. HAMMERING LOUD: one extra check a turn. **ROUND 32, TURN-2 EXTRA: d6 = 1, level 1 table d6 = 6, BERSERKERS. Count d2 = 1 (one berserker, hp 5). Approach d6 = 4 (declared first: 1-3 they come to the passage outside the secret door, 4-6 never near): NEVER CAME NEAR, THE CHECK IS SPENT, THE PARTY NEVER KNEW.** Turns 3 and 4 extras silent. About 5:55 pm at round 52. All eleven barrels sound: B1 QS1 JS1 EJ1 sound already, TL Y LC OG VW FT GG mended.

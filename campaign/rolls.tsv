@@ -10236,3 +10236,11 @@ when	exped	turn	notation	dice	modifier	total	hidden	reason
 2026-09-26			d6	6	0	6	yes	wandering jitter, anchor 1800
 2026-09-26			d6	3	0	3		day 126: Tristle elf passive 1-in-6, passing known secret door (10,24,V) going in
 2026-09-26			d6	5	0	5		day 126: Tristle elf passive 1-in-6, passing known secret door (8,25,V) going in
+2026-09-26			d6	5	0	5		wandering check, anchor extra
+2026-09-26			d6	1	0	1		wandering check, anchor extra
+2026-09-26			d6	6	0	6		wandering table, level 1
+2026-09-26			d2	1	0	1		day 126 round 32: berserkers (level 1 table d6=6) -- how many? 1 or 2 (hp 5 and 4 listed)
+2026-09-26			d6	4	0	4		day 126 round 32: the berserkers, drawn by the hammering in area 10 (an extra check for that noise): DECLARED FIRST: 1-3 they come to the passage outside the secret door at (9,25); 4-6 they never come near, the check is spent
+2026-09-26			d6	3	0	3		wandering check, anchor 30
+2026-09-26			d6	2	0	2		wandering check, anchor extra
+2026-09-26			d6	4	0	4		wandering check, anchor extra
