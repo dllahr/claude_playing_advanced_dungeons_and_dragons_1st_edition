@@ -903,3 +903,5 @@ when	day	who	asset	verb	qty	unit	note
 2026-09-25	124	wend_barn	firkin_y	move	1	each	to be unloaded at Wend barn by Rowe and Orm, day 124 dusk; booked on departure, no wilderness encounters on the road
 2026-09-25	124	basecamp	oil_flask	move	-17	each	all seventeen sealed flasks taken out of the carts, day 124, to go up to the cave entrance
 2026-09-25	124	party	oil_flask	move	17	each	taken up from Coll basecamp to the cave entrance, day 124
+2026-09-26	124	Frython	lantern_ista	move	-1	each	back to Ista at the mouth of area 22, day 124, at the player's word
+2026-09-26	124	Ista	lantern_ista	move	1	each	Ista's own lantern again, day 124

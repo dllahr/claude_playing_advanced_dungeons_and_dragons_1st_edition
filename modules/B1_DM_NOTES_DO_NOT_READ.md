@@ -4975,3 +4975,6 @@ All seventeen basecamp flasks (340 gp-wt) to the party, 20 in hand now. Whole pa
 
 ## Day 124 -- expedition 20, to the mouth of area 22
 About 10:20 am at the cave mouth; 14 rounds to the corridor of area 22 (doors at (16,6), (14,5) and (10,2) passed and pulled shut behind, the one-way slab at (14,13) known). No dice fired. Party body at (10,5), Tristle 40 ft ahead at (10,9), the last square of the corridor and the mouth of the garden. Lantern topped off to 24 turns (broached flask first), Frython carrying it.
+
+## Day 124 -- to (10,19), the north end of area 22
+Round 19 of expedition 20, about 10:40 am. Along x=10 by the day-119 path (both ghouls dead, the trunks felled at (10,16) and (12,19), the platform at (11,19) probed). Nothing fired. The party body is at (10,19); Tristle cannot be 40 ft ahead here (the room ends), so he waits at the north wall. Lantern back with Ista. The five days since day 119 slumped the fallen caps to soft rot: colour only.
