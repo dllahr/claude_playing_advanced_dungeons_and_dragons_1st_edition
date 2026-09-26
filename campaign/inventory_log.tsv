@@ -441,3 +441,5 @@ when	day	asset	verb	qty	unit	condition	holder	evidence	note
 2026-09-26	130	camp_food	move	-1.14	person-week				breakfast and lunch, day 130: twelve mouths each at a third of a person-day, 0.57 + 0.57
 2026-09-26	131	rations_std	move	-0.62	person-week				lunch on the road to the basecamp, day 131: thirteen mouths at a third of a person-day each
 2026-09-26	132	camp_food	move	-1.86	person-week				dinner day 131, breakfast and lunch day 132: thirteen mouths each meal at a third of a person-day, 0.62 x 3
+2026-09-26	133	rations_std	move	-0.62	person-week				lunch on the road to the basecamp, day 133: thirteen mouths at a third of a person-day each
+2026-09-26	134	camp_food	move	-1.86	person-week				dinner day 133, breakfast and lunch day 134: thirteen mouths each meal at a third of a person-day, 0.62 x 3
