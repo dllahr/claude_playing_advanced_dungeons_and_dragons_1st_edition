@@ -1294,3 +1294,12 @@ when	day	who	asset	verb	qty	unit	note
 2026-09-27	128	wethersby	horse_riding	move	3	each	the three horses with the caravan, booked at Wethersby on departure, day 128
 2026-09-27	128	basecamp	sledge	move	4	each	the four sledges built at Coll basecamp on the party's paid job, standing in the yard, day 128
 2026-09-27	128	basecamp	camp_food	move	-0.29	person-week	lunch and dinner on the road for Dave, Tristle and Yrtone, day 128 (three mouths, two-thirds of a person-day each)
+2026-09-27	129	party	gold_ring_plain	move	-1	each	sold to Toller, day 129
+2026-09-27	129	party	sword_broad	move	-1	each	sold to Mund, day 129
+2026-09-27	129	party	long_sword	move	-1	each	the berserker's long sword sold to Mund, day 129
+2026-09-27	129	party	rations_std	move	-0.43	person-week	road lunch for the caravan, day 129 (nine mouths)
+2026-09-27	129	basecamp	camp_food	move	-0.43	person-week	dinner at the basecamp, day 129 (nine mouths)
+2026-09-27	129	wethersby	cart	move	-2	each	the two carts leave Wethersby for the basecamp with Rowe and Orm and seven of the party, day 129
+2026-09-27	129	basecamp	cart	move	2	each	the two carts at Coll basecamp at dusk, day 129; booked on departure
+2026-09-27	129	wethersby	mule	move	-2	each	the two mules leave Wethersby for the basecamp with Rowe and Orm and seven of the party, day 129
+2026-09-27	129	basecamp	mule	move	2	each	the two mules at Coll basecamp at dusk, day 129; booked on departure
