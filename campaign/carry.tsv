@@ -874,3 +874,11 @@ when	day	who	asset	verb	qty	unit	note
 2026-09-25	123	party	rations_std	move	10	person-week	back in the common kit, day 123
 2026-09-25	123	cave_mouth	waterskin	move	-7	each	taken back from the heap at the cave mouth, day 123
 2026-09-25	123	party	waterskin	move	7	each	back in the common kit, day 123
+2026-09-25	123	Dave	firkin_vw	move	-1	each	carried down the outcrop by Dave and left in the lean-to at Coll basecamp, day 123
+2026-09-25	123	basecamp	firkin_vw	move	1	each	in the lean-to at Coll basecamp, day 123, unopened
+2026-09-25	123	Frython	rope_50ft	move	-3	each	carried down by Frython and left at Coll basecamp, day 123
+2026-09-25	123	basecamp	rope_50ft	move	3	each	left in the lean-to at Coll basecamp, day 123
+2026-09-25	123	Frython	saw_crosscut	move	-1	each	carried down by Frython and left at Coll basecamp, day 123
+2026-09-25	123	basecamp	saw_crosscut	move	1	each	left in the lean-to at Coll basecamp, day 123
+2026-09-25	123	Frython	sack_large	move	-9	each	carried down by Frython and left at Coll basecamp, day 123
+2026-09-25	123	basecamp	sack_large	move	9	each	left in the lean-to at Coll basecamp, day 123
