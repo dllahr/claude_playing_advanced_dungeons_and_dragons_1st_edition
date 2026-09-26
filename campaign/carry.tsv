@@ -441,3 +441,5 @@ when	day	who	asset	verb	qty	unit	note
 2026-09-24	121	party	rations_std	move	10	person-week	ten person-weeks of standard rations bought day 121 for the crag run, 30 gp; 2,000 gp-wt for the carts
 2026-09-25	122	party	camp_food	move	20	person-week	for the sledge-way crew, in the carts, day 122
 2026-09-25	122	Dellie	holy_symbol	move	1	each	Dellie's own holy symbol, bought day 122
+2026-09-25	122	wend_barn	oil_flask	anchor	27	each	47 minus the twenty loaded into the carts for the crag on the morning of day 122, as the player said on day 121 and did not restate after the undo (the DM loaded them again and said so).
+2026-09-25	122	party	oil_flask	anchor	20	each	TWENTY sealed flasks in the carts, going up to the crag, day 122. light.py oilstate: 47 sealed = 27 barn + 20 carts.
