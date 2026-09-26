@@ -511,3 +511,4 @@ when	map	level	x	y	exped	turn	squares	feet	rate	why	route
 2026-09-26	b1	1	10	4	29	8			PLACED	day 138: the party body at (10,4), Tristle 40 ft ahead at (10,8) among the orcs' arms	
 2026-09-26	b1	1	25	10	29	10	37	370	known	day 138: standard formation, Tristle 40 ft ahead, with the orcs' arms, back the way they came and east and north to area 30	10,4 10,3 10,2 11,2 12,2 13,2 14,2 14,3 14,4 14,5 14,6 13,6 13,7 13,8 13,9 13,10 13,11 13,12 13,13 14,13 15,13 16,13 17,13 18,13 19,13 20,13 21,13 22,13 23,13 24,13 25,13 26,13 27,13 27,12 27,11 27,10 26,10 25,10
 2026-09-26	b1	1	25	10	29	21			PLACED	day 138: Tristle at (22,9) at the wrecked door of the access room, the party body 40 ft back at (25,10)	
+2026-09-26	b1	1	21	10	29	19	6	60	known	day 138: standard formation into the access room of area 30 and west and south to the head of the stair down, Tristle 40 ft ahead	25,10 24,10 23,10 22,10 22,9 21,9 21,10

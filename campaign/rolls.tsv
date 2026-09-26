@@ -10877,3 +10877,6 @@ when	exped	turn	notation	dice	modifier	total	hidden	reason
 2026-09-26			d6	6	0	6	yes	wandering jitter, anchor 1740
 2026-09-26			d6	1	0	1	yes	wandering jitter, anchor 1770
 2026-09-26			d6	6	0	6	yes	wandering jitter, anchor 1800
+2026-09-26			d6	1	0	1		day 138 afternoon: are Durnhak's gnomes in their cavern (area 38, below the access stair) right now? DECLARED FIRST: 1-3 some are there working, 4-6 away (Durnhak has just answered the slab: the meeting is tomorrow). Hidden, not to be reported.
+2026-09-26			d6	4	0	4		day 138: if gnomes are in area 38, are any within sight of the foot of the stair (1-2 yes: Tristle's infravision sees warm shapes at up to 60 ft) or else only heard? Hidden.
+2026-09-26			d100	95	0	95		day 138: Tristle Hear Noise (15%) at the head of the stair down from area 30, listening for tapping or voices from the cavern below. Hidden, not to be reported.
