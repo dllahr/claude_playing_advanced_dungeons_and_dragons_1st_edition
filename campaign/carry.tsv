@@ -1262,3 +1262,31 @@ when	day	who	asset	verb	qty	unit	note
 2026-09-26	127	basecamp	barrel_tl	move	1	each	at Coll basecamp by the lean-to, day 127, unopened
 2026-09-26	127	cave_mouth	barrel_y	move	-1	each	sledged down the outcrop in the dark, day 127, the last run
 2026-09-26	127	basecamp	barrel_y	move	1	each	at Coll basecamp by the lean-to, day 127, unopened
+2026-09-27	128	basecamp	barrel_lc	move	-1	each	loaded on cart 1 at Coll basecamp, day 128, for Wend's barn
+2026-09-27	128	wend_barn	barrel_lc	move	1	each	to be unloaded at Wend's barn, day 128 dusk, off cart 1; booked on departure
+2026-09-27	128	basecamp	barrel_hu	move	-1	each	loaded on cart 1 at Coll basecamp, day 128, for Wend's barn
+2026-09-27	128	wend_barn	barrel_hu	move	1	each	to be unloaded at Wend's barn, day 128 dusk, off cart 1; booked on departure
+2026-09-27	128	basecamp	firkin_vw	move	-1	each	loaded on cart 1 at Coll basecamp, day 128, for Wend's barn
+2026-09-27	128	wend_barn	firkin_vw	move	1	each	to be unloaded at Wend's barn, day 128 dusk, off cart 1; booked on departure
+2026-09-27	128	basecamp	barrel_mk	move	-1	each	loaded on cart 2 at Coll basecamp, day 128, for Wend's barn
+2026-09-27	128	wend_barn	barrel_mk	move	1	each	to be unloaded at Wend's barn, day 128 dusk, off cart 2; booked on departure
+2026-09-27	128	basecamp	barrel_b	move	-1	each	loaded on cart 2 at Coll basecamp, day 128, for Wend's barn
+2026-09-27	128	wend_barn	barrel_b	move	1	each	to be unloaded at Wend's barn, day 128 dusk, off cart 2; booked on departure
+2026-09-27	128	basecamp	firkin_tl	move	-1	each	loaded on cart 2 at Coll basecamp, day 128, for Wend's barn
+2026-09-27	128	wend_barn	firkin_tl	move	1	each	to be unloaded at Wend's barn, day 128 dusk, off cart 2; booked on departure
+2026-09-27	128	basecamp	cask_b	move	-1	each	loaded on cart 2 at Coll basecamp, day 128, for Wend's barn
+2026-09-27	128	wend_barn	cask_b	move	1	each	to be unloaded at Wend's barn, day 128 dusk, off cart 2; booked on departure
+2026-09-27	128	basecamp	barrel_b	move	-1	each	loaded on horse 1 at Coll basecamp, day 128, for Wend's barn
+2026-09-27	128	wend_barn	barrel_b	move	1	each	to be unloaded at Wend's barn, day 128 dusk, off horse 1; booked on departure
+2026-09-27	128	basecamp	kilderkin_xr	move	-1	each	loaded on horse 1 at Coll basecamp, day 128, for Wend's barn
+2026-09-27	128	wend_barn	kilderkin_xr	move	1	each	to be unloaded at Wend's barn, day 128 dusk, off horse 1; booked on departure
+2026-09-27	128	basecamp	kilderkin_z	move	-1	each	loaded on horse 2 at Coll basecamp, day 128, for Wend's barn
+2026-09-27	128	wend_barn	kilderkin_z	move	1	each	to be unloaded at Wend's barn, day 128 dusk, off horse 2; booked on departure
+2026-09-27	128	basecamp	barrel_qs	move	-1	each	loaded on horse 2 at Coll basecamp, day 128, for Wend's barn
+2026-09-27	128	wend_barn	barrel_qs	move	1	each	to be unloaded at Wend's barn, day 128 dusk, off horse 2; booked on departure
+2026-09-27	128	basecamp	barrel_og	move	-1	each	loaded on horse 3 at Coll basecamp, day 128, for Wend's barn
+2026-09-27	128	wend_barn	barrel_og	move	1	each	to be unloaded at Wend's barn, day 128 dusk, off horse 3; booked on departure
+2026-09-27	128	basecamp	firkin_hu	move	-1	each	loaded on horse 3 at Coll basecamp, day 128, for Wend's barn
+2026-09-27	128	wend_barn	firkin_hu	move	1	each	to be unloaded at Wend's barn, day 128 dusk, off horse 3; booked on departure
+2026-09-27	128	basecamp	camp_food	move	-0.9	person-week	breakfast at Coll basecamp, day 128 (nineteen mouths, a third of a person-day each)
+2026-09-27	128	basecamp	camp_food	move	-0.9	person-week	lunch, day 128: the caravan on the road and the three at the watercourse (nineteen mouths, a third of a person-day each)
