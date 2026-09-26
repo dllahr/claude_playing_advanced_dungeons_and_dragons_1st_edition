@@ -739,3 +739,71 @@ when	day	who	asset	verb	qty	unit	note
 2026-09-25	123	cave_mouth	kilderkin_pf	move	4	each	rolled out of area 10 to the cave mouth, day 123
 2026-09-25	123	area_10	ten_foot_pole	move	-1	each	taken up by Tristle to carry out, day 123
 2026-09-25	123	Tristle	ten_foot_pole	move	1	each	carried out of area 10, day 123
+2026-09-25	123	Torsat	arrows	move	-27	each	stripped off at the cave mouth for the second carry down, day 123
+2026-09-25	123	cave_mouth	arrows	move	27	each	left in a heap at the cave mouth while six carry kilderkins down, day 123
+2026-09-25	123	Torsat	banded_mail	move	-1	each	stripped off at the cave mouth for the second carry down, day 123
+2026-09-25	123	cave_mouth	banded_mail	move	1	each	left in a heap at the cave mouth while six carry kilderkins down, day 123
+2026-09-25	123	Torsat	long_sword	move	-1	each	stripped off at the cave mouth for the second carry down, day 123
+2026-09-25	123	cave_mouth	long_sword	move	1	each	left in a heap at the cave mouth while six carry kilderkins down, day 123
+2026-09-25	123	Torsat	shield_large	move	-1	each	stripped off at the cave mouth for the second carry down, day 123
+2026-09-25	123	cave_mouth	shield_large	move	1	each	left in a heap at the cave mouth while six carry kilderkins down, day 123
+2026-09-25	123	Torsat	short_bow	move	-1	each	stripped off at the cave mouth for the second carry down, day 123
+2026-09-25	123	cave_mouth	short_bow	move	1	each	left in a heap at the cave mouth while six carry kilderkins down, day 123
+2026-09-25	123	Blartho	banded_mail	move	-1	each	stripped off at the cave mouth for the second carry down, day 123
+2026-09-25	123	cave_mouth	banded_mail	move	1	each	left in a heap at the cave mouth while six carry kilderkins down, day 123
+2026-09-25	123	Blartho	flail	move	-1	each	stripped off at the cave mouth for the second carry down, day 123
+2026-09-25	123	cave_mouth	flail	move	1	each	left in a heap at the cave mouth while six carry kilderkins down, day 123
+2026-09-25	123	Blartho	holy_symbol	move	-1	each	stripped off at the cave mouth for the second carry down, day 123
+2026-09-25	123	cave_mouth	holy_symbol	move	1	each	left in a heap at the cave mouth while six carry kilderkins down, day 123
+2026-09-25	123	Blartho	shield_large	move	-1	each	stripped off at the cave mouth for the second carry down, day 123
+2026-09-25	123	cave_mouth	shield_large	move	1	each	left in a heap at the cave mouth while six carry kilderkins down, day 123
+2026-09-25	123	Blartho	sling	move	-1	each	stripped off at the cave mouth for the second carry down, day 123
+2026-09-25	123	cave_mouth	sling	move	1	each	left in a heap at the cave mouth while six carry kilderkins down, day 123
+2026-09-25	123	Blartho	sling_bullet	move	-8	each	stripped off at the cave mouth for the second carry down, day 123
+2026-09-25	123	cave_mouth	sling_bullet	move	8	each	left in a heap at the cave mouth while six carry kilderkins down, day 123
+2026-09-25	123	Hask	banded_mail	move	-1	each	stripped off at the cave mouth for the second carry down, day 123
+2026-09-25	123	cave_mouth	banded_mail	move	1	each	left in a heap at the cave mouth while six carry kilderkins down, day 123
+2026-09-25	123	Hask	shield_small	move	-1	each	stripped off at the cave mouth for the second carry down, day 123
+2026-09-25	123	cave_mouth	shield_small	move	1	each	left in a heap at the cave mouth while six carry kilderkins down, day 123
+2026-09-25	123	Hask	short_sword	move	-1	each	stripped off at the cave mouth for the second carry down, day 123
+2026-09-25	123	cave_mouth	short_sword	move	1	each	left in a heap at the cave mouth while six carry kilderkins down, day 123
+2026-09-25	123	Hask	sling	move	-1	each	stripped off at the cave mouth for the second carry down, day 123
+2026-09-25	123	cave_mouth	sling	move	1	each	left in a heap at the cave mouth while six carry kilderkins down, day 123
+2026-09-25	123	Hask	sling_bullet	move	-7	each	stripped off at the cave mouth for the second carry down, day 123
+2026-09-25	123	cave_mouth	sling_bullet	move	7	each	left in a heap at the cave mouth while six carry kilderkins down, day 123
+2026-09-25	123	Hask	spear	move	-1	each	stripped off at the cave mouth for the second carry down, day 123
+2026-09-25	123	cave_mouth	spear	move	1	each	left in a heap at the cave mouth while six carry kilderkins down, day 123
+2026-09-25	123	Dellie	banded_mail	move	-1	each	stripped off at the cave mouth for the second carry down, day 123
+2026-09-25	123	cave_mouth	banded_mail	move	1	each	left in a heap at the cave mouth while six carry kilderkins down, day 123
+2026-09-25	123	Dellie	flail	move	-1	each	stripped off at the cave mouth for the second carry down, day 123
+2026-09-25	123	cave_mouth	flail	move	1	each	left in a heap at the cave mouth while six carry kilderkins down, day 123
+2026-09-25	123	Dellie	holy_symbol	move	-1	each	stripped off at the cave mouth for the second carry down, day 123
+2026-09-25	123	cave_mouth	holy_symbol	move	1	each	left in a heap at the cave mouth while six carry kilderkins down, day 123
+2026-09-25	123	Dellie	shield_small	move	-1	each	stripped off at the cave mouth for the second carry down, day 123
+2026-09-25	123	cave_mouth	shield_small	move	1	each	left in a heap at the cave mouth while six carry kilderkins down, day 123
+2026-09-25	123	Dellie	sling	move	-1	each	stripped off at the cave mouth for the second carry down, day 123
+2026-09-25	123	cave_mouth	sling	move	1	each	left in a heap at the cave mouth while six carry kilderkins down, day 123
+2026-09-25	123	Dellie	sling_bullet	move	-7	each	stripped off at the cave mouth for the second carry down, day 123
+2026-09-25	123	cave_mouth	sling_bullet	move	7	each	left in a heap at the cave mouth while six carry kilderkins down, day 123
+2026-09-25	123	Ista	dagger	move	-1	each	stripped off at the cave mouth for the second carry down, day 123
+2026-09-25	123	cave_mouth	dagger	move	1	each	left in a heap at the cave mouth while six carry kilderkins down, day 123
+2026-09-25	123	Ista	dart	move	-15	each	stripped off at the cave mouth for the second carry down, day 123
+2026-09-25	123	cave_mouth	dart	move	15	each	left in a heap at the cave mouth while six carry kilderkins down, day 123
+2026-09-25	123	Ista	hand_axe	move	-1	each	stripped off at the cave mouth for the second carry down, day 123
+2026-09-25	123	cave_mouth	hand_axe	move	1	each	left in a heap at the cave mouth while six carry kilderkins down, day 123
+2026-09-25	123	Ista	joiners_set	move	-1	set	stripped off at the cave mouth for the second carry down, day 123
+2026-09-25	123	cave_mouth	joiners_set	move	1	set	left in a heap at the cave mouth while six carry kilderkins down, day 123
+2026-09-25	123	Ista	lantern_ista	move	-1	each	stripped off at the cave mouth for the second carry down, day 123
+2026-09-25	123	Frython	lantern_ista	move	1	each	taken by Frython, who goes in with Dave and Tristle, day 123
+2026-09-25	123	Ista	leather_armour	move	-1	each	stripped off at the cave mouth for the second carry down, day 123
+2026-09-25	123	cave_mouth	leather_armour	move	1	each	left in a heap at the cave mouth while six carry kilderkins down, day 123
+2026-09-25	123	party	rations_std	move	-10	person-week	left in the heap at the cave mouth, not needed on a short trip in, day 123
+2026-09-25	123	cave_mouth	rations_std	move	10	person-week	left in the heap at the cave mouth, day 123
+2026-09-25	123	party	waterskin	move	-7	each	left in the heap at the cave mouth, not needed on a short trip in, day 123
+2026-09-25	123	cave_mouth	waterskin	move	7	each	left in the heap at the cave mouth, day 123
+2026-09-25	123	cave_mouth	kilderkin_sd	move	-2	each	carried down the outcrop to Coll basecamp (horses: SD x2 and one OG; Torsat/Blartho the other OG; Ista/Hask and Dellie/Brand the two PF), day 123
+2026-09-25	123	basecamp	kilderkin_sd	move	2	each	set down in the lean-to at Coll basecamp, day 123, unopened
+2026-09-25	123	cave_mouth	kilderkin_og	move	-2	each	carried down the outcrop to Coll basecamp (horses: SD x2 and one OG; Torsat/Blartho the other OG; Ista/Hask and Dellie/Brand the two PF), day 123
+2026-09-25	123	basecamp	kilderkin_og	move	2	each	set down in the lean-to at Coll basecamp, day 123, unopened
+2026-09-25	123	cave_mouth	kilderkin_pf	move	-2	each	carried down the outcrop to Coll basecamp (horses: SD x2 and one OG; Torsat/Blartho the other OG; Ista/Hask and Dellie/Brand the two PF), day 123
+2026-09-25	123	basecamp	kilderkin_pf	move	2	each	set down in the lean-to at Coll basecamp, day 123, unopened
