@@ -459,3 +459,16 @@ when	day	who	asset	verb	qty	unit	note
 2026-09-25	123	party	rope_50ft	move	3	each	taken into the caves, day 123
 2026-09-25	123	horse_yrtone	iron_spike	move	-3	each	off the horse at the camp, day 123
 2026-09-25	123	party	iron_spike	move	3	each	taken into the caves, day 123
+2026-09-25	123	party	rope_50ft	move	-3	each	left in area 10, day 123
+2026-09-25	123	area_10	rope_50ft	move	3	each	left in the storeroom by the party, day 123, to pick up on the way out
+2026-09-25	123	party	saw_crosscut	move	-1	each	left in area 10, day 123
+2026-09-25	123	area_10	saw_crosscut	move	1	each	left in the storeroom, day 123
+2026-09-25	123	party	sack_large	move	-9	each	all nine large sacks left in area 10, day 123 (they carry no loot sacks in)
+2026-09-25	123	area_10	sack_large	move	9	each	left in the storeroom, day 123
+2026-09-25	123	party	ten_foot_pole	move	-1	each	left in area 10, day 123
+2026-09-25	123	area_10	ten_foot_pole	move	1	each	left in the storeroom, day 123
+2026-09-25	123	party	cask_b	move	1	each	the 'B' cask left behind on day 119, picked up again, day 123
+2026-09-25	123	party	cask_qs	move	1	each	the 'QS' cask left behind on day 119, picked up again, day 123
+2026-09-25	123	party	firkin_hu	move	1	each	picked up in area 10, day 123, unopened
+2026-09-25	123	party	firkin_tl	move	1	each	picked up in area 10, day 123, unopened
+2026-09-25	123	party	firkin_y	move	1	each	picked up in area 10, day 123, unopened

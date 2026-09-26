@@ -367,3 +367,8 @@ when	day	asset	verb	qty	unit	condition	holder	evidence	note
 2026-09-24	121	rations_std	move	10.0	person-week				Bought day 121 at Wethersby market, 30 gp, ten person-weeks for eleven mouths for six days. See money.tsv.
 2026-09-25	122	camp_food	move	20.0	person-week				Bought day 122 for the sledge-way workers, 4 gp 11 sp, seven men ten days doubled. See money.tsv.
 2026-09-25	122	holy_symbol	move	1.0	each				A wooden holy symbol for Dellie, day 122, 7 sp.
+2026-09-25	123	cask_b	move	1.0	each				PICKED UP AGAIN in area 10, day 123: the B cask left behind on day 119
+2026-09-25	123	cask_qs	move	1.0	each				PICKED UP AGAIN in area 10, day 123: the QS cask left behind on day 119
+2026-09-25	123	firkin_hu	move	1.0	each				taken from area 10, day 123, unopened
+2026-09-25	123	firkin_tl	move	1.0	each				taken from area 10, day 123, unopened
+2026-09-25	123	firkin_y	move	1.0	each				taken from area 10, day 123, unopened

@@ -1414,3 +1414,4 @@ when	map	exped	turn	level	scope	target	change	item	qty	who	note
 2026-09-25	b1	17	9	1	edge	16,6,H	closed			party	day 123: pulled shut behind the party, standing rule
 2026-09-25	b1	17	16	1	edge	8,25,V	open			Hask	day 123: the foot-plate pressed and the panel opened west into area 10, party in formation
 2026-09-25	b1	17	18	1	edge	8,25,V	closed			party	day 123: pulled shut behind the party from inside area 10, unspiked
+2026-09-25	b1	17	22	1	area	10	searched			party	day 123 rounds 18-22: gear left in the storeroom (three 50-ft ropes, the crosscut saw, all nine sacks, the ten-foot pole) and the B and QS casks picked up again with the HU, TL and Y firkins, all unopened. Party at 6 inches with 907 gp-wt spare.
