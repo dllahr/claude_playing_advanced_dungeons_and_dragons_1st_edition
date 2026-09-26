@@ -5158,3 +5158,6 @@ Two of the three hacksaws left at the barn. Night at the Inn on the tab (10 gp o
 
 ## Day 137 morning -- the silver mirror sold before the road north
 The player wanted the mirror sold to Toller before leaving town; I had already run the trip north in one go. It fits without an undo: an hour at Toller's pitch, out at about half past nine, still at the basecamp at dusk. Sold at the module's 90 gp at full value as with the bracelet, comb and tapestry. XP 90 shared. Purse and XP as computed.
+
+## Day 137 dusk -- the slab: Durnhak has answered
+Told from offscreen A019 tick 1 (day 136, progress). Authored to what Tristle's day-117 word asked (when and where; the 36 gp; help on the lower level): a meeting at the watercourse at noon on day 139, waiting until dark; the coin; the lower level to be talked about, not written. Trio out on the horses at about half past six, at the slab about 7:15, home by about 8 in the dark by the goat line; nothing on the way. The other seven made the camp and dinner. THE PARTY MUST BRING 36 GP: the purse is Wend's, in Wethersby; whether they have it in hand has not been checked; ask the player, do not assume. Agenda A019 stays open (ceiling 12) for his next word.
