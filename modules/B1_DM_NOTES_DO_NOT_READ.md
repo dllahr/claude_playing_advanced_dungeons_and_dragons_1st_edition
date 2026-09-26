@@ -5134,3 +5134,6 @@ Dave, Tristle and Frython: the ruined FT and Y barrels emptied (tipped on Wend's
 
 ## Day 135 afternoon -- the odds and ends sold
 Water tipped into Wend's yard trough (two barrels and two kilderkins), stood up to dry: booked as barrel_empty and kilderkin_empty. Toller: comb 5, tapestry 40 (module values), perfume 3 a bottle (my figure), 51 gp; Mund: morning star and the gnoll sword as iron, 2 gp 10 sp each (half the list, halved again for the oversize), 5 gp; Holt: the keg 1 gp on the account. Purse 2,254 gp 3 sp. XP 57 (51, 5, 1) with the usual shares: Dave 994, Tristle 962. Nothing fired.
+
+## Day 135 late afternoon -- Wend's news, from the offscreen ticks (eight delivered)
+A001 tick 1 hold, tick 2 progress: ELLERY answered (author: he took the floor and the share at their word, heard the rumour and did not credit it). A002 tick 1 progress, tick 2 hold: OSK said YES (author: 5 sp a cart-day on the road with its mule, nothing standing; the sheet drafted, unsigned). A003 two holds. A004 tick 1 progress, tick 2 hold: she asked COLL first (author: he has no objection if the tenancy is written down and his crew is not asked to work Gyll's ground unpaid). Cuddy's tick (the church's man) is NOT told: it is his, not Wend's, and stays hidden until Cuddy, Yrtone or the hall says. Nothing money moved.

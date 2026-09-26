@@ -14,3 +14,11 @@ day	agenda	tick	action	roll	kind	news	delivered_day
 135	A003	2	tick	2	hold	Nothing new on the Ludbury rumour.	
 135	A004	2	tick	5	hold	Wend has not got to the eleven this week: the barn, the holders and the wool come first.	
 83	A014	1	tick	1	resolve	The man from Cuddy's house has come to Draycot. WHO he is, his rank and what he says are the DM's to author when the party meets Cuddy or Yrtone hears.	
+128	A001	1	deliver				135
+128	A002	1	deliver				135
+128	A003	1	deliver				135
+128	A004	1	deliver				135
+135	A001	2	deliver				135
+135	A002	2	deliver				135
+135	A003	2	deliver				135
+135	A004	2	deliver				135
