@@ -372,3 +372,9 @@ when	day	asset	verb	qty	unit	condition	holder	evidence	note
 2026-09-25	123	firkin_hu	move	1.0	each				taken from area 10, day 123, unopened
 2026-09-25	123	firkin_tl	move	1.0	each				taken from area 10, day 123, unopened
 2026-09-25	123	firkin_y	move	1.0	each				taken from area 10, day 123, unopened
+2026-09-25	123	kilderkin_js	move	2.0	each				taken from area 10, day 123, unopened, rolled to the cave mouth
+2026-09-25	123	kilderkin_rh	move	1.0	each				taken from area 10, day 123, unopened, rolled to the cave mouth
+2026-09-25	123	kilderkin_tl	move	1.0	each				taken from area 10, day 123, unopened, rolled to the cave mouth
+2026-09-25	123	kilderkin_xr	move	1.0	each				taken from area 10, day 123, unopened, rolled to the cave mouth
+2026-09-25	123	kilderkin_y	move	1.0	each				taken from area 10, day 123, unopened, rolled to the cave mouth
+2026-09-25	123	kilderkin_z	move	2.0	each				taken from area 10, day 123, unopened, rolled to the cave mouth
