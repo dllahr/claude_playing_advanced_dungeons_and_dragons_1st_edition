@@ -5008,3 +5008,6 @@ Gear off in the lean-to (eight people, all but Hask; shared kit too). Lunch debi
 
 ## Day 124 evening -- dinner and Tristle's ballet
 Dinner debited (16 mouths, 0.76 person-week, camp food now 16.81). Wages for the sledge-way paid in full, 98 sp, at the player's word (supersedes my note that they would fall). Tristle's ballet for Coll: Dave and Torsat hum somberly, then sillier. No dice.
+
+## Day 124 into 125 -- the night at the basecamp
+Bed about 9 pm after the ballet, first light about 6 am, no dice (no wilderness encounters). Lean-to to Coll and the hands; party outside. Everyone at full hit points; no spells were cast on day 124. The garden's air is not fit to breathe until about two hours after the oil died (round 41 of expedition 20), a matter of dungeon-clock arithmetic for when they go back.
