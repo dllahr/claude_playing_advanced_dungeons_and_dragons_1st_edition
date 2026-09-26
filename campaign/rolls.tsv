@@ -10330,3 +10330,72 @@ when	exped	turn	notation	dice	modifier	total	hidden	reason
 2026-09-26			d6	3	0	3		wandering check, anchor extra
 2026-09-26			d28	15	0	15		day 126: which barrel the crew's second sledges take down, pick 1 of 2, by position among the 28 standing at the cave mouth
 2026-09-26			d27	18	0	18		day 126: which barrel the crew's second sledges take down, pick 2 of 2, by position among the 27 standing at the cave mouth
+2026-09-26			d29	16	0	16		day 126: which barrel the crew's third sledges take down before dark, pick 1 of 2, by position among the 29 standing at the cave mouth
+2026-09-26			d28	13	0	13		day 126: which barrel the crew's third sledges take down before dark, pick 2 of 2, by position among the 28 standing at the cave mouth
+2026-09-26			d6	3	0	3	yes	wandering jitter, anchor 30
+2026-09-26			d6	6	0	6	yes	wandering jitter, anchor 60
+2026-09-26			d6	6	0	6	yes	wandering jitter, anchor 90
+2026-09-26			d6	6	0	6	yes	wandering jitter, anchor 120
+2026-09-26			d6	3	0	3	yes	wandering jitter, anchor 150
+2026-09-26			d6	1	0	1	yes	wandering jitter, anchor 180
+2026-09-26			d6	1	0	1	yes	wandering jitter, anchor 210
+2026-09-26			d6	2	0	2	yes	wandering jitter, anchor 240
+2026-09-26			d6	5	0	5	yes	wandering jitter, anchor 270
+2026-09-26			d6	4	0	4	yes	wandering jitter, anchor 300
+2026-09-26			d6	1	0	1	yes	wandering jitter, anchor 330
+2026-09-26			d6	5	0	5	yes	wandering jitter, anchor 360
+2026-09-26			d6	2	0	2	yes	wandering jitter, anchor 390
+2026-09-26			d6	3	0	3	yes	wandering jitter, anchor 420
+2026-09-26			d6	5	0	5	yes	wandering jitter, anchor 450
+2026-09-26			d6	2	0	2	yes	wandering jitter, anchor 480
+2026-09-26			d6	2	0	2	yes	wandering jitter, anchor 510
+2026-09-26			d6	6	0	6	yes	wandering jitter, anchor 540
+2026-09-26			d6	6	0	6	yes	wandering jitter, anchor 570
+2026-09-26			d6	6	0	6	yes	wandering jitter, anchor 600
+2026-09-26			d6	1	0	1	yes	wandering jitter, anchor 630
+2026-09-26			d6	6	0	6	yes	wandering jitter, anchor 660
+2026-09-26			d6	4	0	4	yes	wandering jitter, anchor 690
+2026-09-26			d6	6	0	6	yes	wandering jitter, anchor 720
+2026-09-26			d6	1	0	1	yes	wandering jitter, anchor 750
+2026-09-26			d6	2	0	2	yes	wandering jitter, anchor 780
+2026-09-26			d6	4	0	4	yes	wandering jitter, anchor 810
+2026-09-26			d6	6	0	6	yes	wandering jitter, anchor 840
+2026-09-26			d6	5	0	5	yes	wandering jitter, anchor 870
+2026-09-26			d6	2	0	2	yes	wandering jitter, anchor 900
+2026-09-26			d6	5	0	5	yes	wandering jitter, anchor 930
+2026-09-26			d6	5	0	5	yes	wandering jitter, anchor 960
+2026-09-26			d6	3	0	3	yes	wandering jitter, anchor 990
+2026-09-26			d6	5	0	5	yes	wandering jitter, anchor 1020
+2026-09-26			d6	4	0	4	yes	wandering jitter, anchor 1050
+2026-09-26			d6	6	0	6	yes	wandering jitter, anchor 1080
+2026-09-26			d6	3	0	3	yes	wandering jitter, anchor 1110
+2026-09-26			d6	3	0	3	yes	wandering jitter, anchor 1140
+2026-09-26			d6	1	0	1	yes	wandering jitter, anchor 1170
+2026-09-26			d6	4	0	4	yes	wandering jitter, anchor 1200
+2026-09-26			d6	5	0	5	yes	wandering jitter, anchor 1230
+2026-09-26			d6	2	0	2	yes	wandering jitter, anchor 1260
+2026-09-26			d6	2	0	2	yes	wandering jitter, anchor 1290
+2026-09-26			d6	4	0	4	yes	wandering jitter, anchor 1320
+2026-09-26			d6	6	0	6	yes	wandering jitter, anchor 1350
+2026-09-26			d6	5	0	5	yes	wandering jitter, anchor 1380
+2026-09-26			d6	6	0	6	yes	wandering jitter, anchor 1410
+2026-09-26			d6	4	0	4	yes	wandering jitter, anchor 1440
+2026-09-26			d6	6	0	6	yes	wandering jitter, anchor 1470
+2026-09-26			d6	4	0	4	yes	wandering jitter, anchor 1500
+2026-09-26			d6	6	0	6	yes	wandering jitter, anchor 1530
+2026-09-26			d6	4	0	4	yes	wandering jitter, anchor 1560
+2026-09-26			d6	2	0	2	yes	wandering jitter, anchor 1590
+2026-09-26			d6	3	0	3	yes	wandering jitter, anchor 1620
+2026-09-26			d6	1	0	1	yes	wandering jitter, anchor 1650
+2026-09-26			d6	6	0	6	yes	wandering jitter, anchor 1680
+2026-09-26			d6	6	0	6	yes	wandering jitter, anchor 1710
+2026-09-26			d6	4	0	4	yes	wandering jitter, anchor 1740
+2026-09-26			d6	3	0	3	yes	wandering jitter, anchor 1770
+2026-09-26			d6	5	0	5	yes	wandering jitter, anchor 1800
+2026-09-26			d6	1	0	1		wandering check, anchor rest watch 1
+2026-09-26			d6	6	0	6		wandering table, level 1
+2026-09-26			d2	2	0	2		day 126 round 90 (night at the cave mouth): berserkers (level 1 table d6=6) -- how many? 1 or 2 (hp 5 and 4 listed)
+2026-09-26			d6	2	0	2		day 126 round 90: the berserkers at night: DECLARED FIRST: 1-3 they come to the party at the cave mouth from inside the caves; 4-6 they never come near, the check is spent
+2026-09-26			d3	2	0	2		day 126 round 90: distance in tens of feet at which the two berserkers come out of the dark corridor onto the watchers at the cave mouth
+2026-09-26			d6	5	0	5		surprise check, party watchers (Dave and Torsat awake in the dark, the rest asleep)
+2026-09-26			d6	2	0	2		surprise check, the two berserkers (surprised on 2, MM p. 67)

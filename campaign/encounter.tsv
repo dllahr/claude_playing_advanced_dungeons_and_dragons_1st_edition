@@ -261,3 +261,4 @@ when	day	exped	round	side	actor	verb	target	qty	detail
 2026-09-24	119		1	party	Dellie	declare			casts cure light wounds on Yrtone (5 segments, touch)
 2026-09-24	119		1		berserker	dead			
 2026-09-24	119		1			end			day 119 round 574-575 (reset round 1): the berserker slept to Frython's sleep, no save, and was slain in his sleep by Hask. Yrtone bound by Tristle and cured by Dellie (-8 -> -2). No other wounds.
+2026-09-26	126	26	1			start			day 126 round 90 of expedition 26 (about 10:30 pm): TWO BERSERKERS (hp 5 and 4, AC 7, MV 12) come down the corridor out of the caves at night onto the party's watch at the cave mouth (16,1), at 20 ft. Watchers Dave and Torsat awake, not surprised (d6=5); the berserkers ARE surprised (d6=2) and lose 2 segments; the rest of the party asleep on the shelf outside. Dark corridor, no lantern lit.
