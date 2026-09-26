@@ -338,6 +338,12 @@ of long, and beyond L is out of range.
 
 *source: **DMG p. 64**, GRENADE-LIKE MISSILES, effect table and Size line; DMG p. 65 for the lantern and standing-in-oil lines.*
 
+**DM CALL, announced 2026-09-26 before the party lit anything (NOT a book figure):** a poured 1'-wide track is
+7 ft of trail per flask. A lantern flame held to the oil lights it. Flame runs an **unbroken** trail at about
+**10 ft a segment** and does **not** cross a gap. Each foot burns about **3 rounds**. Standing in flaming oil is
+1-6 hp per round (DMG p. 65), stepping or leaping over a 1' track is safe. Burning oil throws thick, acrid smoke
+that blurs sight and stings the eyes in a closed room. What the damp growth does is ruled as it is seen.
+
 Read from a 150-dpi render of DMG p. 64, 2026-09-26. **The book says 3', not 5'**: a flask of oil covers a
 circle 3' across, about **7 square feet** (π × 1.5²). A lantern's spill is **2' diameter** (DMG p. 65,
 LIGHTING OIL, text layer only). Walking through or standing in flaming oil: **1-6 hp per melee round**
