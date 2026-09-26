@@ -1348,3 +1348,5 @@ when	exped	round	kind	anchor	detail	note
 2026-09-26	20	29	advance		3	day 124: round to the west end of the arm at (5,12), keeping off the oil
 2026-09-26	20	30	advance		1	day 124: the last flask, the broached one, poured over the platform at (5,11)
 2026-09-26	20	33	advance		3	day 124: the west trail poured east from (5,11) to (9,11): six flasks, a 1-ft track 42 ft long
+2026-09-26	20	34	advance		1	day 124: the party from (9,12) to the mouth of area 22 at (10,10)
+2026-09-26	20	34	check	30	d6=2	anchor 30 + 4
