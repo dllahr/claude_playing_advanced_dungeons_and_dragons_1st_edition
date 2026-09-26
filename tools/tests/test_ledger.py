@@ -379,7 +379,12 @@ def test_the_purse_BREAKDOWN_reconciles_with_its_own_headline():
     assert abs((anch + ins - outs) - purse) < 0.25, (anch, ins, outs, purse)
     # And the part that CAN be exact, is: the headline must be the computed
     # purse, not a number that merely looks close to it.
-    assert abs(purse - ledger.total()) < 0.05, (purse, ledger.total())
+    # The headline is printed to the SILVER, a tenth of a gold piece in this
+    # campaign's decimal, and the printer TRUNCATES, so it can sit nearly a whole
+    # tenth under the exact figure. Day 135: 2,253.455 printed as 2,253 gp 4 sp,
+    # 0.055 out, and the old 0.05 bound called that a failure. It is display
+    # rounding and nothing else; the exact total is compared elsewhere.
+    assert abs(purse - ledger.total()) < 0.1, (purse, ledger.total())
 
 
 # ------------------------------------------- a relocation is not a quantity
