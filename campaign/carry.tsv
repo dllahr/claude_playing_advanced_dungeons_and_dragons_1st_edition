@@ -908,3 +908,108 @@ when	day	who	asset	verb	qty	unit	note
 2026-09-26	124	Tristle	ten_foot_pole	move	-1	each	CORRECTION day 124: the pole went to Tristle's own kit on day 123 and put him at 9 inches, against the player's standing instruction (day 119) that Tristle carry none of the shared weight and keep 12 inches. Back into the common kit; he uses it, the others carry it.
 2026-09-26	124	party	ten_foot_pole	move	1	each	the ten-foot pole back in the common kit, day 124
 2026-09-26	124	party	oil_flask	move	-20	each	poured out as oil trails in area 22, day 124 (19 sealed and the broached flask)
+2026-09-26	124	Dave	arrows	move	-27	each	taken off at Coll basecamp to work on the sledge-way, day 124
+2026-09-26	124	basecamp	arrows	move	27	each	left in the lean-to at Coll basecamp while the party works on the sledge-way, day 124
+2026-09-26	124	Dave	arrows	move	-1	quiver	taken off at Coll basecamp to work on the sledge-way, day 124
+2026-09-26	124	basecamp	arrows	move	1	quiver	left in the lean-to at Coll basecamp while the party works on the sledge-way, day 124
+2026-09-26	124	Dave	banded_mail	move	-1	each	taken off at Coll basecamp to work on the sledge-way, day 124
+2026-09-26	124	basecamp	banded_mail	move	1	each	left in the lean-to at Coll basecamp while the party works on the sledge-way, day 124
+2026-09-26	124	Dave	lantern_yrtone	move	-1	each	taken off at Coll basecamp to work on the sledge-way, day 124
+2026-09-26	124	basecamp	lantern_yrtone	move	1	each	left in the lean-to at Coll basecamp while the party works on the sledge-way, day 124
+2026-09-26	124	Dave	long_sword	move	-1	each	taken off at Coll basecamp to work on the sledge-way, day 124
+2026-09-26	124	basecamp	long_sword	move	1	each	left in the lean-to at Coll basecamp while the party works on the sledge-way, day 124
+2026-09-26	124	Dave	ring_plain	move	-1	each	taken off at Coll basecamp to work on the sledge-way, day 124
+2026-09-26	124	basecamp	ring_plain	move	1	each	left in the lean-to at Coll basecamp while the party works on the sledge-way, day 124
+2026-09-26	124	Dave	shield_large	move	-1	each	taken off at Coll basecamp to work on the sledge-way, day 124
+2026-09-26	124	basecamp	shield_large	move	1	each	left in the lean-to at Coll basecamp while the party works on the sledge-way, day 124
+2026-09-26	124	Dave	short_bow	move	-1	each	taken off at Coll basecamp to work on the sledge-way, day 124
+2026-09-26	124	basecamp	short_bow	move	1	each	left in the lean-to at Coll basecamp while the party works on the sledge-way, day 124
+2026-09-26	124	Torsat	arrows	move	-27	each	taken off at Coll basecamp to work on the sledge-way, day 124
+2026-09-26	124	basecamp	arrows	move	27	each	left in the lean-to at Coll basecamp while the party works on the sledge-way, day 124
+2026-09-26	124	Torsat	banded_mail	move	-1	each	taken off at Coll basecamp to work on the sledge-way, day 124
+2026-09-26	124	basecamp	banded_mail	move	1	each	left in the lean-to at Coll basecamp while the party works on the sledge-way, day 124
+2026-09-26	124	Torsat	long_sword	move	-1	each	taken off at Coll basecamp to work on the sledge-way, day 124
+2026-09-26	124	basecamp	long_sword	move	1	each	left in the lean-to at Coll basecamp while the party works on the sledge-way, day 124
+2026-09-26	124	Torsat	shield_large	move	-1	each	taken off at Coll basecamp to work on the sledge-way, day 124
+2026-09-26	124	basecamp	shield_large	move	1	each	left in the lean-to at Coll basecamp while the party works on the sledge-way, day 124
+2026-09-26	124	Torsat	short_bow	move	-1	each	taken off at Coll basecamp to work on the sledge-way, day 124
+2026-09-26	124	basecamp	short_bow	move	1	each	left in the lean-to at Coll basecamp while the party works on the sledge-way, day 124
+2026-09-26	124	Tristle	arrows	move	-27	each	taken off at Coll basecamp to work on the sledge-way, day 124
+2026-09-26	124	basecamp	arrows	move	27	each	left in the lean-to at Coll basecamp while the party works on the sledge-way, day 124
+2026-09-26	124	Tristle	leather_armour	move	-1	each	taken off at Coll basecamp to work on the sledge-way, day 124
+2026-09-26	124	basecamp	leather_armour	move	1	each	left in the lean-to at Coll basecamp while the party works on the sledge-way, day 124
+2026-09-26	124	Tristle	long_sword	move	-1	each	taken off at Coll basecamp to work on the sledge-way, day 124
+2026-09-26	124	basecamp	long_sword	move	1	each	left in the lean-to at Coll basecamp while the party works on the sledge-way, day 124
+2026-09-26	124	Tristle	short_bow	move	-1	each	taken off at Coll basecamp to work on the sledge-way, day 124
+2026-09-26	124	basecamp	short_bow	move	1	each	left in the lean-to at Coll basecamp while the party works on the sledge-way, day 124
+2026-09-26	124	Tristle	thieves_tools	move	-1	set	taken off at Coll basecamp to work on the sledge-way, day 124
+2026-09-26	124	basecamp	thieves_tools	move	1	set	left in the lean-to at Coll basecamp while the party works on the sledge-way, day 124
+2026-09-26	124	Tristle	wooden_spike	move	-4	each	taken off at Coll basecamp to work on the sledge-way, day 124
+2026-09-26	124	basecamp	wooden_spike	move	4	each	left in the lean-to at Coll basecamp while the party works on the sledge-way, day 124
+2026-09-26	124	Blartho	banded_mail	move	-1	each	taken off at Coll basecamp to work on the sledge-way, day 124
+2026-09-26	124	basecamp	banded_mail	move	1	each	left in the lean-to at Coll basecamp while the party works on the sledge-way, day 124
+2026-09-26	124	Blartho	flail	move	-1	each	taken off at Coll basecamp to work on the sledge-way, day 124
+2026-09-26	124	basecamp	flail	move	1	each	left in the lean-to at Coll basecamp while the party works on the sledge-way, day 124
+2026-09-26	124	Blartho	holy_symbol	move	-1	each	taken off at Coll basecamp to work on the sledge-way, day 124
+2026-09-26	124	basecamp	holy_symbol	move	1	each	left in the lean-to at Coll basecamp while the party works on the sledge-way, day 124
+2026-09-26	124	Blartho	shield_large	move	-1	each	taken off at Coll basecamp to work on the sledge-way, day 124
+2026-09-26	124	basecamp	shield_large	move	1	each	left in the lean-to at Coll basecamp while the party works on the sledge-way, day 124
+2026-09-26	124	Blartho	sling	move	-1	each	taken off at Coll basecamp to work on the sledge-way, day 124
+2026-09-26	124	basecamp	sling	move	1	each	left in the lean-to at Coll basecamp while the party works on the sledge-way, day 124
+2026-09-26	124	Blartho	sling_bullet	move	-8	each	taken off at Coll basecamp to work on the sledge-way, day 124
+2026-09-26	124	basecamp	sling_bullet	move	8	each	left in the lean-to at Coll basecamp while the party works on the sledge-way, day 124
+2026-09-26	124	Frython	dart	move	-15	each	taken off at Coll basecamp to work on the sledge-way, day 124
+2026-09-26	124	basecamp	dart	move	15	each	left in the lean-to at Coll basecamp while the party works on the sledge-way, day 124
+2026-09-26	124	Dellie	banded_mail	move	-1	each	taken off at Coll basecamp to work on the sledge-way, day 124
+2026-09-26	124	basecamp	banded_mail	move	1	each	left in the lean-to at Coll basecamp while the party works on the sledge-way, day 124
+2026-09-26	124	Dellie	flail	move	-1	each	taken off at Coll basecamp to work on the sledge-way, day 124
+2026-09-26	124	basecamp	flail	move	1	each	left in the lean-to at Coll basecamp while the party works on the sledge-way, day 124
+2026-09-26	124	Dellie	holy_symbol	move	-1	each	taken off at Coll basecamp to work on the sledge-way, day 124
+2026-09-26	124	basecamp	holy_symbol	move	1	each	left in the lean-to at Coll basecamp while the party works on the sledge-way, day 124
+2026-09-26	124	Dellie	shield_small	move	-1	each	taken off at Coll basecamp to work on the sledge-way, day 124
+2026-09-26	124	basecamp	shield_small	move	1	each	left in the lean-to at Coll basecamp while the party works on the sledge-way, day 124
+2026-09-26	124	Dellie	sling	move	-1	each	taken off at Coll basecamp to work on the sledge-way, day 124
+2026-09-26	124	basecamp	sling	move	1	each	left in the lean-to at Coll basecamp while the party works on the sledge-way, day 124
+2026-09-26	124	Dellie	sling_bullet	move	-7	each	taken off at Coll basecamp to work on the sledge-way, day 124
+2026-09-26	124	basecamp	sling_bullet	move	7	each	left in the lean-to at Coll basecamp while the party works on the sledge-way, day 124
+2026-09-26	124	Ista	dagger	move	-1	each	taken off at Coll basecamp to work on the sledge-way, day 124
+2026-09-26	124	basecamp	dagger	move	1	each	left in the lean-to at Coll basecamp while the party works on the sledge-way, day 124
+2026-09-26	124	Ista	dart	move	-15	each	taken off at Coll basecamp to work on the sledge-way, day 124
+2026-09-26	124	basecamp	dart	move	15	each	left in the lean-to at Coll basecamp while the party works on the sledge-way, day 124
+2026-09-26	124	Ista	hand_axe	move	-1	each	taken off at Coll basecamp to work on the sledge-way, day 124
+2026-09-26	124	basecamp	hand_axe	move	1	each	left in the lean-to at Coll basecamp while the party works on the sledge-way, day 124
+2026-09-26	124	Ista	joiners_set	move	-1	set	taken off at Coll basecamp to work on the sledge-way, day 124
+2026-09-26	124	basecamp	joiners_set	move	1	set	left in the lean-to at Coll basecamp while the party works on the sledge-way, day 124
+2026-09-26	124	Ista	lantern_ista	move	-1	each	taken off at Coll basecamp to work on the sledge-way, day 124
+2026-09-26	124	basecamp	lantern_ista	move	1	each	left in the lean-to at Coll basecamp while the party works on the sledge-way, day 124
+2026-09-26	124	Ista	leather_armour	move	-1	each	taken off at Coll basecamp to work on the sledge-way, day 124
+2026-09-26	124	basecamp	leather_armour	move	1	each	left in the lean-to at Coll basecamp while the party works on the sledge-way, day 124
+2026-09-26	124	party	backpack	move	-1	each	taken off at Coll basecamp to work on the sledge-way, day 124
+2026-09-26	124	basecamp	backpack	move	1	each	left in the lean-to at Coll basecamp while the party works on the sledge-way, day 124
+2026-09-26	124	party	candle	move	-6	each	taken off at Coll basecamp to work on the sledge-way, day 124
+2026-09-26	124	basecamp	candle	move	6	each	left in the lean-to at Coll basecamp while the party works on the sledge-way, day 124
+2026-09-26	124	party	gold_ring_plain	move	-1	each	taken off at Coll basecamp to work on the sledge-way, day 124
+2026-09-26	124	basecamp	gold_ring_plain	move	1	each	left in the lean-to at Coll basecamp while the party works on the sledge-way, day 124
+2026-09-26	124	party	iron_spike	move	-10	each	taken off at Coll basecamp to work on the sledge-way, day 124
+2026-09-26	124	basecamp	iron_spike	move	10	each	left in the lean-to at Coll basecamp while the party works on the sledge-way, day 124
+2026-09-26	124	party	mallet	move	-1	each	taken off at Coll basecamp to work on the sledge-way, day 124
+2026-09-26	124	basecamp	mallet	move	1	each	left in the lean-to at Coll basecamp while the party works on the sledge-way, day 124
+2026-09-26	124	party	mirror	move	-1	each	taken off at Coll basecamp to work on the sledge-way, day 124
+2026-09-26	124	basecamp	mirror	move	1	each	left in the lean-to at Coll basecamp while the party works on the sledge-way, day 124
+2026-09-26	124	party	mirror_silver	move	-1	each	taken off at Coll basecamp to work on the sledge-way, day 124
+2026-09-26	124	basecamp	mirror_silver	move	1	each	left in the lean-to at Coll basecamp while the party works on the sledge-way, day 124
+2026-09-26	124	party	rations_std	move	-9.81	person-week	taken off at Coll basecamp to work on the sledge-way, day 124
+2026-09-26	124	basecamp	rations_std	move	9.81	person-week	left in the lean-to at Coll basecamp while the party works on the sledge-way, day 124
+2026-09-26	124	party	rope_50ft	move	-1	each	taken off at Coll basecamp to work on the sledge-way, day 124
+2026-09-26	124	basecamp	rope_50ft	move	1	each	left in the lean-to at Coll basecamp while the party works on the sledge-way, day 124
+2026-09-26	124	party	saw_hack	move	-3	each	taken off at Coll basecamp to work on the sledge-way, day 124
+2026-09-26	124	basecamp	saw_hack	move	3	each	left in the lean-to at Coll basecamp while the party works on the sledge-way, day 124
+2026-09-26	124	party	ten_foot_pole	move	-1	each	taken off at Coll basecamp to work on the sledge-way, day 124
+2026-09-26	124	basecamp	ten_foot_pole	move	1	each	left in the lean-to at Coll basecamp while the party works on the sledge-way, day 124
+2026-09-26	124	party	tinder_box	move	-1	each	taken off at Coll basecamp to work on the sledge-way, day 124
+2026-09-26	124	basecamp	tinder_box	move	1	each	left in the lean-to at Coll basecamp while the party works on the sledge-way, day 124
+2026-09-26	124	party	torch	move	-1	each	taken off at Coll basecamp to work on the sledge-way, day 124
+2026-09-26	124	basecamp	torch	move	1	each	left in the lean-to at Coll basecamp while the party works on the sledge-way, day 124
+2026-09-26	124	party	waterskin	move	-7	each	taken off at Coll basecamp to work on the sledge-way, day 124
+2026-09-26	124	basecamp	waterskin	move	7	each	left in the lean-to at Coll basecamp while the party works on the sledge-way, day 124
+2026-09-26	124	basecamp	camp_food	move	-0.71	person-week	lunch at Coll basecamp, day 124 (fifteen mouths, a third of a person-day each)
