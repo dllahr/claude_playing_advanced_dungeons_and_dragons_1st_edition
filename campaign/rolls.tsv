@@ -9772,3 +9772,8 @@ when	exped	turn	notation	dice	modifier	total	hidden	reason
 2026-09-25			d6	2	0	2		day 123, area 10: hoop and stave check of the TWELVE remaining kilderkins in the stacks, in this order: SD, JS, OG, PF, PF, PF, RH, TL, XR, Y, Z, Z. DECLARED FIRST: 1 = a slack hoop, 2-6 = sound
 2026-09-25			d6	6	0	6		day 123, area 10: hoop and stave check of the TWELVE remaining kilderkins in the stacks, in this order: SD, JS, OG, PF, PF, PF, RH, TL, XR, Y, Z, Z. DECLARED FIRST: 1 = a slack hoop, 2-6 = sound
 2026-09-25			d6	5	0	5		wandering check, anchor 30
+2026-09-25			d6	2	0	2		wandering check, anchor extra
+2026-09-25			d6	2	0	2		wandering check, anchor 60
+2026-09-25			d6	4	0	4		wandering check, anchor extra
+2026-09-25			d6	4	0	4		day 123: Tristle elf passive 1-in-6, passing (8,25,V) (known secret door) with the kilderkins
+2026-09-25			d6	3	0	3		wandering check, anchor extra

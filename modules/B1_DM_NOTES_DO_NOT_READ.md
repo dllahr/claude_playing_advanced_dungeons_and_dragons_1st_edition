@@ -4933,3 +4933,6 @@ Rolled and pulled down: SD (ale), JS (dried mushrooms), OG (water), PF (whole pe
 
 ## Day 123 -- all sixteen kilderkins checked (hoop d6, 1 = slack)
 SOUND 12: SD 1, JS 2, OG 1, PF 2, RH 1, TL 1, XR 1, Y 1, Z 2. SLACK 4: SD 1, OG 1, PF 2. Contents and DM weight estimates (cask 50 lb + 18 gal of goods): SD ale ~230, JS dried mushrooms ~80, OG water ~200, PF peas ~165, RH sunflower seeds ~110, TL barley ~145, XR soft soap ~200, Y dried apples ~80, Z honey ~265. The party knows ONLY SD (ale) and RH (seeds).
+
+## Day 123 -- the eight kilderkins rolled out
+Rounds 44-70, expedition 18. JS x2, RH, TL, XR, Y, Z x2 rolled from area 10 to the cave mouth, Tristle 40 ft ahead. 26 rounds of rolling (7 to the secret door and through it, 2 to (16,21), 6 to (16,1)); three noise checks (extra) rolled d6 = 2, 4 and one more, plus the anchor check at round 60 (d6 = 2); none fired. Nothing met. Elf passive at (8,25,V) rolled and logged. The VW firkin was NOT carried out: eight rollers plus Tristle scouting is the whole party of nine, so nobody was left to carry it. It is still against the wall of area 10.
