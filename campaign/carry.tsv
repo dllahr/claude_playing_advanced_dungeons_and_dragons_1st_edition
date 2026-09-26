@@ -1446,3 +1446,8 @@ when	day	who	asset	verb	qty	unit	note
 2026-09-29	135	wethersby	keg_spigot	move	1	each	CORRECTION: the keg was booked in sets; cancelling the wrong-unit row above
 2026-09-29	135	wethersby	keg_spigot	move	-1	set	the small keg with its spigot and gimlet, on the Holt account, day 135
 2026-09-30	136	basecamp	camp_food	move	-1.14	person-week	dinner day 135, breakfast and lunch day 136 at the basecamp for the eight (eight mouths, three meals), the older stock first
+2026-09-30	136	party	saw_hack	move	-2	each	two of the three hacksaws left at Wend's barn, day 136, before the night at the Inn
+2026-09-30	136	wend_barn	saw_hack	move	2	each	two hacksaws left at Wend's barn, day 136
+2026-09-30	137	wethersby	horse_riding	move	-3	each	the three horses go north with the party, packed, day 137
+2026-09-30	137	basecamp	horse_riding	move	3	each	at Coll basecamp at dusk, day 137
+2026-09-30	137	basecamp	camp_food	move	-0.48	person-week	dinner at the basecamp, day 137 (ten mouths)

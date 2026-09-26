@@ -5152,3 +5152,6 @@ L011 was closed on day 95 and Holt told on day 93; my day-136 note that he still
 
 ## Day 136 dusk -- Petteia (renamed from the wrong spelling), and the eight come home
 Player's correction: the game is PETTEIA; renamed everywhere. Best of three by bare d6s: Tristle 2 v 1, Dave 5 v 3, Dave 4 v 1: Dave 2-1. The eight (Rowe with the cart, Yrtone, Torsat, Blartho, Hask, Dellie, Ista, Brand) back at Wethersby at dusk with the last TL barrel (sold to Holt: not the party's), the oil and the rest of the camp food left in the lean-to at the basecamp. Their camp food debited (1.14). The night at the Inn is not yet decided or charged.
+
+## Days 136 night to 137 -- hacksaws, the Inn, the road north
+Two of the three hacksaws left at the barn. Night at the Inn on the tab (10 gp off Holt's account, balance 384.15). MIRROR: the silver mirror (the module's 90 gp, off the library orcs) was NEVER sold: no money row; it is still in the party's kit; the metal mirror is the working one (5 gp-wt). Toller would pay the module value. Durnhak added to the agendas (A019, weekly from day 129). README gets a section on offscreen.py status. Day 137: lunch for ten (10 sp), the three horses packed with the shared kit, all ten of the party walking, 21 miles, at the basecamp at dusk; dinner 0.48 (camp food 5.76). No dice.

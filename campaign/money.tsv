@@ -143,3 +143,4 @@ when	day	delta	unit	asset	qty	counterparty	interaction	reason	book
 2026-09-26	135	2.5	gp	morning_star	-1	Mund	-	day 135: the gnoll's morning star sold to Mund as iron at half the PHB list (5 gp), the used-arms rate	
 2026-09-26	135	2.5	gp	sword_gnollish	-1	Mund	-	day 135: the gnoll-sized sword sold to Mund as iron: half the broad sword's list (10 gp) is 5 gp, halved again for the crude oversize, 2 gp 10 sp	
 2026-09-26	135	-0.8	sp	wages	-16	Halm	-	day 135: HALM PAID for the second run: two days (133 and 134) at 8 sp, 16 sp: 5 sp teamster (DMG p.28) and 3 sp for the mule, rules/prices.md	
+2026-09-26	137	-0.5	sp	lodging	10	Wethersby market and the Inn	-	day 137: lunch for the road north, ten merchant's meals (bread, cheese, cold meat) at 1 sp each, PHB p.35	
