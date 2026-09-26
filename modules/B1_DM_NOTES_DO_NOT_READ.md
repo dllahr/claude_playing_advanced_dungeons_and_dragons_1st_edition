@@ -5140,3 +5140,6 @@ A001 tick 1 hold, tick 2 progress: ELLERY answered (author: he took the floor an
 
 ## Day 135 -- the Osk sheet accepted
 Dave: 'we accept the terms'. L039 closed. The party's carts are hired to Osk at 5 sp a cart-day on the road only. Income is a hidden fortnightly tick (A018, d6: 1-2 one cart, 3-6 both; thirty or sixty silver a run; audit-skip), paid to Wend who keeps the purse; the money is booked from the purse when told, dated the day due (asset cart_hire). NOT SETTLED and told to the player: what happens when the party wants the carts on Osk's run days. Nobody has said. No dice.
+
+## Day 135 evening -- the Inn
+The trio's pints and beds go on Holt's tab: accounts.tsv rows, balance about 394 gp after the coin, the keg and tonight. The night's board and the ale are NOT coin. The eight are due at dusk tomorrow (day 136). The trio has a full night at the Inn; the next day opens when the player says.
