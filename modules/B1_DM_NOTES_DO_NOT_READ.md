@@ -5014,3 +5014,6 @@ Bed about 9 pm after the ballet, first light about 6 am, no dice (no wilderness 
 
 ## Day 125 -- the party works the day with Coll; the carts come home at dusk
 Hask's gear off in the lean-to (all nine now without kit). Breakfast and lunch debited (0.76 each, camp food 15.29). Nine people, about eight hours: nine man-days on top of the crew's seven. Sledge-way: about 36.75 of 49 man-days done at dusk; crew alone finishes the afternoon of day 127, ready day 128. Rowe and Orm arrive at dusk with the two carts and 27 sealed flasks, unloaded the eleven kilderkins and the Y firkin at the barn as told; L063's oil is at the basecamp. Dinner not yet debited. No dice.
+
+## Day 125 evening -- dinner, dances, and Dave's ask
+Dinner debited (18 mouths, 0.86 person-week, camp food 14.43). Dave invited anybody to dance; Ferd and Wat volunteered (colour only). Coll agreed to keep the crew for the hauling: the days the road saves are days already paid (seven working days in full), so the men haul on them for nothing more; past the seven, the same rate; outcrop only, never into the caves. Loop opened. No dice, no reaction roll (known NPC).
