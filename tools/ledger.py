@@ -118,7 +118,7 @@ def total(log=None, day=None, book=None):
             out = _delta(r)
         else:
             out += _delta(r)
-    return round(out, 2)
+    return round(out, 3)     # a copper piece is 0.005 gp; two decimals lost it (day 122)
 
 
 # The seasonal commitment, articles.md art. 7. The CAP is the party's, the

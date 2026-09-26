@@ -365,5 +365,5 @@ when	day	asset	verb	qty	unit	condition	holder	evidence	note
 2026-09-24	121	cask_vw	move	-1.0	each				SOLD to Holt, day 121, 2.3 gp. See money.tsv.
 2026-09-24	121	cask_qs	move	-1.0	each				SOLD to Holt, day 121, 2.4 gp. See money.tsv.
 2026-09-24	121	rations_std	move	10.0	person-week				Bought day 121 at Wethersby market, 30 gp, ten person-weeks for eleven mouths for six days. See money.tsv.
-2026-09-25	122	camp_food	move	140.0	person-day				Bought day 122 for the sledge-way workers, 4 gp 11 sp, seven men ten days doubled. See money.tsv.
+2026-09-25	122	camp_food	move	20.0	person-week				Bought day 122 for the sledge-way workers, 4 gp 11 sp, seven men ten days doubled. See money.tsv.
 2026-09-25	122	holy_symbol	move	1.0	each				A wooden holy symbol for Dellie, day 122, 7 sp.
