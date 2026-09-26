@@ -5011,3 +5011,6 @@ Dinner debited (16 mouths, 0.76 person-week, camp food now 16.81). Wages for the
 
 ## Day 124 into 125 -- the night at the basecamp
 Bed about 9 pm after the ballet, first light about 6 am, no dice (no wilderness encounters). Lean-to to Coll and the hands; party outside. Everyone at full hit points; no spells were cast on day 124. The garden's air is not fit to breathe until about two hours after the oil died (round 41 of expedition 20), a matter of dungeon-clock arithmetic for when they go back.
+
+## Day 125 -- the party works the day with Coll; the carts come home at dusk
+Hask's gear off in the lean-to (all nine now without kit). Breakfast and lunch debited (0.76 each, camp food 15.29). Nine people, about eight hours: nine man-days on top of the crew's seven. Sledge-way: about 36.75 of 49 man-days done at dusk; crew alone finishes the afternoon of day 127, ready day 128. Rowe and Orm arrive at dusk with the two carts and 27 sealed flasks, unloaded the eleven kilderkins and the Y firkin at the barn as told; L063's oil is at the basecamp. Dinner not yet debited. No dice.
