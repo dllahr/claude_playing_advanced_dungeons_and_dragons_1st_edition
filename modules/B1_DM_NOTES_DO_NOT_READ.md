@@ -5137,3 +5137,6 @@ Water tipped into Wend's yard trough (two barrels and two kilderkins), stood up 
 
 ## Day 135 late afternoon -- Wend's news, from the offscreen ticks (eight delivered)
 A001 tick 1 hold, tick 2 progress: ELLERY answered (author: he took the floor and the share at their word, heard the rumour and did not credit it). A002 tick 1 progress, tick 2 hold: OSK said YES (author: 5 sp a cart-day on the road with its mule, nothing standing; the sheet drafted, unsigned). A003 two holds. A004 tick 1 progress, tick 2 hold: she asked COLL first (author: he has no objection if the tenancy is written down and his crew is not asked to work Gyll's ground unpaid). Cuddy's tick (the church's man) is NOT told: it is his, not Wend's, and stays hidden until Cuddy, Yrtone or the hall says. Nothing money moved.
+
+## Day 135 -- the Osk sheet accepted
+Dave: 'we accept the terms'. L039 closed. The party's carts are hired to Osk at 5 sp a cart-day on the road only. Income is a hidden fortnightly tick (A018, d6: 1-2 one cart, 3-6 both; thirty or sixty silver a run; audit-skip), paid to Wend who keeps the purse; the money is booked from the purse when told, dated the day due (asset cart_hire). NOT SETTLED and told to the player: what happens when the party wants the carts on Osk's run days. Nobody has said. No dice.
