@@ -31,11 +31,14 @@ kind of number:
 | Tailor | wage | 20 | per day | DMG p. 28 | 2 sp |
 | Limner | wage | 100 | per day | DMG p. 28 | 10 sp |
 | Coll's hand (semi-skilled crew) | wage | 15 | per day | CAMPAIGN, day 121 | 1.5 sp, the upper end of medieval unskilled labour (1-1.5 silver pennies) |
+| Coll, as foreman of the sledge-way | wage | 50 | per day | CAMPAIGN, day 122 | 5 sp: rated a teamster (DMG p. 28), because he is organising how to move heavy things |
+| Halm, with his own cart and mule | hire | 80 | per day | DM CALL, day 122 | 5 sp teamster (DMG p. 28) + 3 sp for the mule (`rules/equipment.md`, hiring an animal); he owns cart and mule, so it is a hire, not a wage. Joins about day 130 |
 | Rations, standard | food | 600 | per person-week | PHB p. 35 | 3 gp; about 43 cp a day. Packed, no fire, keeps a week or so |
 | Rations, iron | food | 1000 | per person-week | PHB p. 35 | 5 gp; keeps a month |
 | Ale, pint | food | 10 | per pint | PHB p. 35 | 1 sp, ordinary ale |
 | Wine, pint, good | food | 100 | per pint | PHB p. 35 | 10 sp |
 | Merchant's meal | food | 10 | per meal | PHB p. 35 | 1 sp |
+| Symbol, holy, wooden | misc | 140 | each | PHB p. 35 | 7 sp; iron is 2 gp. `rules/equipment.md` |
 | Camp food (raw, cooked by the eater) | food | 6.5 | per person-day | DM CALL, day 121 | About two-thirds of a 1 sp wage; medieval labour spent up to two-thirds on food. **The raw-food price, about a sixth of rations** |
 | Flour | staple | 2 | per lb | DM CALL, day 121 | Fresh. Needs a cook and a fire |
 | Lard | staple | 4 | per lb | DM CALL, day 121 | Fresh |
