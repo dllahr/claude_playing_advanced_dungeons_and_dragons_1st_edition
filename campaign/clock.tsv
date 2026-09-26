@@ -1485,3 +1485,6 @@ when	exped	round	kind	anchor	detail	note
 2026-09-26	28	98	advance		3	day 138: the rest of turn 8 of the search (the south-east outcrop) while Dave, Torsat and Tristle gather the missiles and go through the three orcs in the corridor
 2026-09-26	28	108	advance		10	day 138: turn 9 of the search: the west platform at (5,11), all nine together
 2026-09-26	28	118	advance		10	day 138: turn 10 of the search: the north platform at (11,19) and the corner, all nine together
+2026-09-26	28	128	advance		10	day 138: everyone at the first sunken pit at (11,12)-(11,13), looking to see what it was for: its edge, its floor, its walls
+2026-09-26	28	120	check	120	d6=3	anchor 120 + 0
+2026-09-26	28	138	advance		10	day 138: everyone at the second sunken pit at (11,15)-(11,16), the same
