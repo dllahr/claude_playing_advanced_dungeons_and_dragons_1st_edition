@@ -291,3 +291,11 @@ when	day	exped	round	side	actor	verb	target	qty	detail
 2026-09-26	138	28	2	party	Blartho	declare			steps up to the second rank and casts cure light wounds on Dave
 2026-09-26	138	28	2	monsters		damage	orc A	1	Hask's spear from the second rank, hp 6 to 5
 2026-09-26	138	28	3			initiative			round 3 begins
+2026-09-26	138	28	3	party	Blartho	declare			casts cure light wounds on Yrtone
+2026-09-26	138	28	3	party	Dellie	declare			moves up and casts cure light wounds on Dave
+2026-09-26	138	28	3	party	Dave	declare			attacks
+2026-09-26	138	28	3	party	Yrtone	declare			attacks
+2026-09-26	138	28	3	party	Torsat	declare			attacks
+2026-09-26	138	28	3	party	Hask	declare			attacks
+2026-09-26	138	28	3	monsters		damage	orc A	2	Torsat's long sword, hp 5 to 3
+2026-09-26	138	28	4			initiative			round 4 begins

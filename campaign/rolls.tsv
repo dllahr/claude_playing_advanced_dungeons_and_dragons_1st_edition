@@ -10784,3 +10784,17 @@ when	exped	turn	notation	dice	modifier	total	hidden	reason
 2026-09-26			1-6 (1d6)	1	0	1		Hask damage, spear
 2026-09-26			d20	10	0	10		Yrtone attacks with footman's flail
 2026-09-26			d8	1	0	1		day 138 round 92: Blartho's cure light wounds on Dave (1d8), touch, 5 segments, from the second rank
+2026-09-26			d6	6	0	6		initiative, party
+2026-09-26			d6	5	0	5		initiative, monsters
+2026-09-26			d20	1	0	1		Dave attacks with long sword
+2026-09-26			d20	16	0	16		Torsat attacks with long sword
+2026-09-26			1-8 (1d8)	2	0	2		Torsat damage, long sword
+2026-09-26			d20	4	0	4		Yrtone attacks with footman's flail
+2026-09-26			d20	4	0	4		Hask attacks with spear
+2026-09-26			d8	5	0	5		day 138 round 93: Blartho's cure light wounds on Yrtone (1d8) then Dellie's on Dave (1d8), touch from the ranks behind
+2026-09-26			d8	1	0	1		day 138 round 93: Blartho's cure light wounds on Yrtone (1d8) then Dellie's on Dave (1d8), touch from the ranks behind
+2026-09-26			d3	2	0	2		day 138 round 93: which front-rank man each orc (A then C) swings at: 1 Dave, 2 Yrtone, 3 Torsat
+2026-09-26			d3	1	0	1		day 138 round 93: which front-rank man each orc (A then C) swings at: 1 Dave, 2 Yrtone, 3 Torsat
+2026-09-26			d20	15	0	15		orc A attacks AC 3
+2026-09-26			d20	5	0	5		orc C attacks AC 3
+2026-09-26			d100	73	0	73		morale
