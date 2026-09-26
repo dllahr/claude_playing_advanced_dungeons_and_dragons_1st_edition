@@ -5005,3 +5005,6 @@ Carts left the basecamp about 8:00 (my figure; earlier said only 'early morning'
 
 ## Day 124 afternoon -- the party works the rest of the day with Coll
 Gear off in the lean-to (eight people, all but Hask; shared kit too). Lunch debited (15 mouths, 0.71 person-week). About 2:30 to 7:00 pm, eight people for four and a half hours, 36 man-hours; Hask back at the basecamp about 4:40 (his own choice whether he joins; his kit is on him). The party's labour: the crosscut saw and ropes from the lean-to are used. Total credit for the day beside the crew: about 6.75 man-days with the earlier two hours, about one crew-day; finish brought forward from the evening of day 129 to the morning of day 129. Wages: the crew draws a day less. No dice.
+
+## Day 124 evening -- dinner and Tristle's ballet
+Dinner debited (16 mouths, 0.76 person-week, camp food now 16.81). Wages for the sledge-way paid in full, 98 sp, at the player's word (supersedes my note that they would fall). Tristle's ballet for Coll: Dave and Torsat hum somberly, then sillier. No dice.

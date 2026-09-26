@@ -1013,3 +1013,4 @@ when	day	who	asset	verb	qty	unit	note
 2026-09-26	124	party	waterskin	move	-7	each	taken off at Coll basecamp to work on the sledge-way, day 124
 2026-09-26	124	basecamp	waterskin	move	7	each	left in the lean-to at Coll basecamp while the party works on the sledge-way, day 124
 2026-09-26	124	basecamp	camp_food	move	-0.71	person-week	lunch at Coll basecamp, day 124 (fifteen mouths, a third of a person-day each)
+2026-09-26	124	basecamp	camp_food	move	-0.76	person-week	dinner at Coll basecamp, day 124 (sixteen mouths, a third of a person-day each)

@@ -386,3 +386,4 @@ when	day	asset	verb	qty	unit	condition	holder	evidence	note
 2026-09-25	124	camp_food	move	-0.86	person-week				breakfast at Coll basecamp, day 124: eighteen mouths at a third of a person-day each = 0.86 of a person-week
 2026-09-25	124	rations_std	move	-0.19	person-week				four road lunches for Rowe and Orm, one each way, a third of a day's ration each: 4/21 of a person-week
 2026-09-26	124	camp_food	move	-0.71	person-week				lunch at Coll basecamp, day 124: fifteen mouths (eight of the party, Coll and six hands) at a third of a person-day each, 0.71 of a person-week
+2026-09-26	124	camp_food	move	-0.76	person-week				dinner at Coll basecamp, day 124: sixteen mouths (nine of the party with Hask back, Coll and six hands) at a third of a person-day each, 0.76 of a person-week, cooked by Ista's direction
