@@ -5146,3 +5146,6 @@ The trio's pints and beds go on Holt's tab: accounts.tsv rows, balance about 394
 
 ## Day 136 -- the papers read against the barrels (L050, L011)
 Frython, a day in Toller's shop. d100 = 18 vs 90 (75 + 15 for the decoded marks): success. Authored to the bounds the day-39 notes set and no further: the papers' provisioning shorthand IS the twenty barrel codes (so the mark on SD was the storekeeper's code, not a brewhouse: L011); the 86 marks stay unanchored and the counter unnamed, but the sealed undrawn stores make the marks worse, which the day-39 notes said they would. The journal's CONTENT stays shut. Nothing invented about what the marks mean or who made them. Agenda A007 closed. Not yet told to Holt.
+
+## Day 136 late afternoon -- housekeeping and Pentelitha
+L011 was closed on day 95 and Holt told on day 93; my day-136 note that he still needed telling was wrong and is corrected in the loop. L050 closed. Pentelitha: the player's addition, accepted: Holt keeps a set in the common room, added to people.tsv; no rules on the record, the player defines them. First game by a bare d6 each, Tristle 2, Dave 1: Tristle. No money staked. The eight are due at dusk.
