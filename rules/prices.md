@@ -41,7 +41,7 @@ kind of number:
 | Lard | staple | 4 | per lb | DM CALL, day 121 | Fresh |
 | Salt | staple | 8 | per lb | DM CALL, day 121 | Fresh |
 | Seasoning (dried herbs and spice) | staple | 12 | per lb | DM CALL, day 121 | Fresh; the herbs end. True spice would be dearer |
-| Wool-headed ale (strong SD stock ale) | food | 30 | per pint | CAMPAIGN, day 71 | 3 sp: Holt's own price, "threepence a pint", the name the party gave it. Three times ordinary ale |
+| Wool-headed ale (strong SD stock ale) | food | 30 | per pint | CAMPAIGN, day 71 | 3 sp: Holt's board price, "threepence a pint", the name the party gave it, and what the party paid for a round of nine (27 sp, transcript line 29932). Three times ordinary ale. **A 36-gallon barrel is 288 pints, 43.2 gp gross** (an earlier '85 gp' figure counted the pints twice) |
 | Lodging and board, the Inn | lodging | 200 | per person-night | CAMPAIGN, since expedition 4 | 1 gp, the traveller's rate for the party. Not the workers' rate |
 
 *source: wage rows **DMG p. 28**, STANDARD HIRELINGS TABLE, `rules/equipment.md`; food and drink rows **PHB p. 35**, EQUIPPING THE CHARACTER, `rules/equipment.md`; the rest are the CAMPAIGN and DM CALL rows marked in the Source column, all set or approved by the player on day 121 unless a day is given.*
