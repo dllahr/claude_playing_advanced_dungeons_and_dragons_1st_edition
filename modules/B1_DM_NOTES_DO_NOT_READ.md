@@ -4927,3 +4927,6 @@ Player asked to undo the round entirely; agreed. State restored to the end of th
 
 ## Day 119, the rest in area 10 (rounds 585-945)
 Six hours, lantern out, three watches (Dave+Torsat, Tristle+Ista, Hask). Yrtone's 6-turn coma ended about round 636, in the first watch. Study after four hours (round 825): Blartho CLW x2, Dellie CLW x1 and swapping a light for a CLW (two spells), Frython sleep, half an hour in all. Rest checks: three rolled; the round-885 check fired: level-1 table d6=5, Giant Rats 2-5 (hp 4,3,2,1,1); approach d6=5 (1-3 = they come to the passage outside the door) -> they never came near; SPENT, the party never knew. The rest call ran to 945 past it and the clock was corrected back to 885 (my process error again, same as the round-120 one).
+
+## Day 123 -- the four kilderkins in area 10
+Rolled and pulled down: SD (ale), JS (dried mushrooms), OG (water), PF (whole peas). Hoop d6: SD 1 slack, JS 6, OG 6, PF 1 slack. Weights (DM estimate, cask 50 lb + contents): SD ~230 lb, JS ~80, OG ~200, PF ~165. Contents of JS, OG, PF are NOT known to the party.

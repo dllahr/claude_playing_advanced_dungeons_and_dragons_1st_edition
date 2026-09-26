@@ -1424,3 +1424,4 @@ when	map	exped	turn	level	scope	target	change	item	qty	who	note
 2026-09-25	b1	18	8	1	edge	16,6,H	closed			party	day 123: pulled shut behind the party
 2026-09-25	b1	18	20	1	edge	8,25,V	open			Hask	day 123: opened, expedition 18
 2026-09-25	b1	18	22	1	edge	8,25,V	closed			party	day 123: pulled shut behind, unspiked
+2026-09-25	b1	18	24	1	area	10	searched			party	day 123 rounds 14-24: the party found and pulled down four kilderkins from the stacks -- SD, JS, OG and PF, one each -- and checked their hoops and staves. d6 per container (1 = slack hoop): SD 1 SLACK, JS 6 sound, OG 6 sound, PF 1 SLACK. The two slack ones need the mallet; nothing driven yet. The last firkin (VW) is to be carried, not rolled. Tristle scouts ahead when they roll.
