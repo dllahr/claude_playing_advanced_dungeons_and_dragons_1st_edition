@@ -26,7 +26,7 @@
 # would be quoted.
 id	name	kind	weight	weight_unit	notes
 # ---- money and money-like
-coin	gold pieces	money			The purse. Lives WITH WEND in Wethersby; the party carries a working purse only. articles.md art. 1 assumes this custody
+coin	gold pieces	money	1	gp-weight	The purse. Lives WITH WEND in Wethersby; the party carries a working purse only. articles.md art. 1 assumes this custody *** WEIGHT ADDED DAY 137: ONE GP-WEIGHT PER COIN (PHB Appendix O: ten to the pound), so the working purse the party carries counts against its load. Only the carried part is in carry.tsv (unit gp); the TOTAL is still ledger.py's. STANDING RULE (player, day 137; audit-skip): the party carries a WORKING PURSE OF A HUNDRED GOLD PIECES; in town it is balanced against Wend's purse: more than 100, leave the extra; fewer, take some. (audit-skip)
 # ---- services and obligations: money that leaves for something that is not a thing
 service	a service rendered	service			Generic. Prefer a more specific id where one exists
 wages	wages and hire	service			The standing roll, drovers, carriers, day labour

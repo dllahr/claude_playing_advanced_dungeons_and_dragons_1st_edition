@@ -5161,3 +5161,6 @@ The player wanted the mirror sold to Toller before leaving town; I had already r
 
 ## Day 137 dusk -- the slab: Durnhak has answered
 Told from offscreen A019 tick 1 (day 136, progress). Authored to what Tristle's day-117 word asked (when and where; the 36 gp; help on the lower level): a meeting at the watercourse at noon on day 139, waiting until dark; the coin; the lower level to be talked about, not written. Trio out on the horses at about half past six, at the slab about 7:15, home by about 8 in the dark by the goat line; nothing on the way. The other seven made the camp and dinner. THE PARTY MUST BRING 36 GP: the purse is Wend's, in Wethersby; whether they have it in hand has not been checked; ask the player, do not assume. Agenda A019 stays open (ceiling 12) for his next word.
+
+## Day 137 evening -- the working purse (audit-skip)
+Standing rule (player): the party carries 100 gp when it goes north and balances it in town. Booked in carry.tsv as `coin`, a hundred gold pieces, against `party` (audit-skip); assets.tsv gives coin a weight of 1 gp-weight a coin, so the purse is 10 lb of load (shared kit 2,451 gp-wt, party rate unchanged at 9"). The ledger total is untouched: coin is a FOREIGN asset. The 36 gp for Durnhak on day 139 comes out of it. (audit-skip)
