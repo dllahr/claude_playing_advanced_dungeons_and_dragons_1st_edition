@@ -5143,3 +5143,6 @@ Dave: 'we accept the terms'. L039 closed. The party's carts are hired to Osk at 
 
 ## Day 135 evening -- the Inn
 The trio's pints and beds go on Holt's tab: accounts.tsv rows, balance about 394 gp after the coin, the keg and tonight. The night's board and the ale are NOT coin. The eight are due at dusk tomorrow (day 136). The trio has a full night at the Inn; the next day opens when the player says.
+
+## Day 136 -- the papers read against the barrels (L050, L011)
+Frython, a day in Toller's shop. d100 = 18 vs 90 (75 + 15 for the decoded marks): success. Authored to the bounds the day-39 notes set and no further: the papers' provisioning shorthand IS the twenty barrel codes (so the mark on SD was the storekeeper's code, not a brewhouse: L011); the 86 marks stay unanchored and the counter unnamed, but the sealed undrawn stores make the marks worse, which the day-39 notes said they would. The journal's CONTENT stays shut. Nothing invented about what the marks mean or who made them. Agenda A007 closed. Not yet told to Holt.
