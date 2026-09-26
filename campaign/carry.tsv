@@ -885,3 +885,19 @@ when	day	who	asset	verb	qty	unit	note
 2026-09-25	123	cave_mouth	kilderkin_pf	move	-2	each	loaded on the horses by Rowe and Orm and led down to Coll basecamp, day 123
 2026-09-25	123	basecamp	kilderkin_pf	move	2	each	in the lean-to at Coll basecamp, day 123, unopened
 2026-09-25	123	basecamp	camp_food	move	-0.86	person-week	eaten at the dinner at Coll basecamp, day 123 (eighteen mouths, a third of a person-day each)
+2026-09-25	124	basecamp	camp_food	move	-0.86	person-week	breakfast at Coll basecamp, day 124 (eighteen mouths, a third of a person-day each)
+2026-09-25	124	party	rations_std	move	-0.19	person-week	four road lunches for Rowe and Orm, day 124 (one each way)
+2026-09-25	124	basecamp	kilderkin_og	move	-2	each	loaded on the two carts at Coll basecamp, day 124, for Wend barn (Rowe and Orm; due at dusk)
+2026-09-25	124	wend_barn	kilderkin_og	move	2	each	to be unloaded at Wend barn by Rowe and Orm, day 124 dusk; booked on departure, no wilderness encounters on the road
+2026-09-25	124	basecamp	kilderkin_pf	move	-4	each	loaded on the two carts at Coll basecamp, day 124, for Wend barn (Rowe and Orm; due at dusk)
+2026-09-25	124	wend_barn	kilderkin_pf	move	4	each	to be unloaded at Wend barn by Rowe and Orm, day 124 dusk; booked on departure, no wilderness encounters on the road
+2026-09-25	124	basecamp	kilderkin_rh	move	-1	each	loaded on the two carts at Coll basecamp, day 124, for Wend barn (Rowe and Orm; due at dusk)
+2026-09-25	124	wend_barn	kilderkin_rh	move	1	each	to be unloaded at Wend barn by Rowe and Orm, day 124 dusk; booked on departure, no wilderness encounters on the road
+2026-09-25	124	basecamp	kilderkin_js	move	-2	each	loaded on the two carts at Coll basecamp, day 124, for Wend barn (Rowe and Orm; due at dusk)
+2026-09-25	124	wend_barn	kilderkin_js	move	2	each	to be unloaded at Wend barn by Rowe and Orm, day 124 dusk; booked on departure, no wilderness encounters on the road
+2026-09-25	124	basecamp	kilderkin_tl	move	-1	each	loaded on the two carts at Coll basecamp, day 124, for Wend barn (Rowe and Orm; due at dusk)
+2026-09-25	124	wend_barn	kilderkin_tl	move	1	each	to be unloaded at Wend barn by Rowe and Orm, day 124 dusk; booked on departure, no wilderness encounters on the road
+2026-09-25	124	basecamp	kilderkin_y	move	-1	each	loaded on the two carts at Coll basecamp, day 124, for Wend barn (Rowe and Orm; due at dusk)
+2026-09-25	124	wend_barn	kilderkin_y	move	1	each	to be unloaded at Wend barn by Rowe and Orm, day 124 dusk; booked on departure, no wilderness encounters on the road
+2026-09-25	124	basecamp	firkin_y	move	-1	each	loaded on the two carts at Coll basecamp, day 124, for Wend barn (Rowe and Orm; due at dusk)
+2026-09-25	124	wend_barn	firkin_y	move	1	each	to be unloaded at Wend barn by Rowe and Orm, day 124 dusk; booked on departure, no wilderness encounters on the road
