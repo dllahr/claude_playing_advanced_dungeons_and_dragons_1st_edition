@@ -1378,3 +1378,8 @@ when	exped	round	kind	anchor	detail	note
 2026-09-26	22	34	check	30	d6=4	anchor 30 + 4
 2026-09-26	22	41	advance		6	day 126: barrels rolled up the corridor and out through the open doors to the cave mouth
 2026-09-26	22	41	check	extra	d6=4	extra
+2026-09-26	23	0	start			day 126, expedition 23: about 4:15 pm, back into Quasqueton from the cave mouth to area 10 for more barrels, seven of the party and Tristle scouting 40 ft ahead; three person-weeks of rations left at the cave mouth and three inside area 10; Brand at the basecamp
+2026-09-26	23	0	jitter		30:3,60:1,90:4,120:4,150:3,180:1,210:0,240:0,270:1,300:1,330:2,360:5,390:3,420:1,450:2,480:5,510:4,540:2,570:1,600:0,630:4,660:4,690:0,720:0,750:2,780:2,810:3,840:5,870:1,900:4,930:4,960:5,990:0,1020:4,1050:3,1080:4,1110:1,1140:4,1170:3,1200:2,1230:4,1260:5,1290:1,1320:0,1350:2,1380:3,1410:1,1440:0,1470:4,1500:2,1530:1,1560:4,1590:3,1620:2,1650:5,1680:2,1710:3,1740:0,1770:5,1800:0	rolled in advance and HIDDEN; each is reported when its check fires
+2026-09-26	23	6	advance		6	day 126: from the cave mouth down the corridor and south to (16,21), Tristle 40 ft ahead
+2026-09-26	23	9	advance		3	day 126: west along the passage to the secret door of area 10
+2026-09-26	23	11	advance		2	day 126: Tristle opens the secret door, all in and pulled shut

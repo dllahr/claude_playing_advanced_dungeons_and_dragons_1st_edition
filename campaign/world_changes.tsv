@@ -1450,3 +1450,4 @@ when	map	exped	turn	level	scope	target	change	item	qty	who	note
 2026-09-26	b1	22	25	1	edge	8,25,V	open			Hask	day 126: held open for the seven barrels
 2026-09-26	b1	22	32	1	edge	8,25,V	closed			party	day 126: pulled shut behind the last barrel, unspiked
 2026-09-26	b1	22	41	1	area	10	searched			party	day 126 rounds 15-41: SEVEN SOUND BARRELS (Z, AW, Y, MK, PF, B, RH), chosen by dice, rolled out through the secret door (8,25,V), pulled shut behind, and up to the cave mouth. Three person-weeks of standard rations left inside area 10 by the door, to be picked up on the way out. LEFT IN AREA 10: 18 barrels (11 sound, 7 slack), and the rations.
+2026-09-26	b1	23	11	1	edge	8,25,V	closed			party	day 126: opened, the party in, pulled shut behind, unspiked
