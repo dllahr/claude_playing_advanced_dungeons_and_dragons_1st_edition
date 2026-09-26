@@ -176,3 +176,7 @@ when	exped	round	who	spell	event	note
 2026-09-30	28	93	Blartho	cure light wounds	cast	day 138, the orc fight, round 93: on Yrtone, 1d8 = 5 (1 to 6 of 7). His second cure; command is what he has left.
 2026-09-30	28	93	Dellie	cure light wounds	cast	day 138, the orc fight, round 93: on Dave, 1d8 = 1 (4 to 5 of 9). One of her two cures spent, one left.
 2026-09-30	28	94	Dellie	cure light wounds	cast	day 138, the orc fight, round 94: on Dave, 1d8 = 7 (to 9 of 9, the top). Her second cure: she has none left.
+2026-09-30	28	147	Yrtone	cure light wounds	cast	day 138 at the basecamp: on herself, 1d8 = 3, one point missing (6 to 7 of 7): a whole slot for one point.
+2026-09-30	-	day 138, the basecamp, after a four-hour rest and half an hour of prayer and study (about 9:30 am to 2 pm)	Blartho	cure light wounds	memorised	2 of 2 re-memorised, command still memorised: the DMG p.40 four-hour minimum then fifteen minutes to a spell, his loadout as before.
+2026-09-30	-	day 138, the basecamp, after a four-hour rest and half an hour of prayer and study	Dellie	cure light wounds	memorised	2 of 2 re-memorised after the four-hour rest (her light is still memorised).
+2026-09-30	-	day 138, the basecamp, after a four-hour rest and half an hour of prayer and study	Yrtone	cure light wounds	memorised	The one she spent on herself re-memorised: cure light wounds x2, command x1 as before.

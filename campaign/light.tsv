@@ -249,3 +249,5 @@ when	exped	round	source	kind	what	who	fuel	certainty	note
 2026-09-26	28	10	lantern-yrtone	lit		Dave		known	day 138: the spare lantern lit, set on the floor beside Dave at (10,10)
 2026-09-26	28	138	lantern-yrtone	out				known	day 138: Dave's lantern put out in area 22 before the walk out
 2026-09-26	28	147	lantern-ista	out				known	day 138: out at the cave mouth, daylight
+2026-09-26	28	147	lantern-ista	refill		Ista		known	day 138 at the basecamp: refilled from the oil, at the player's word
+2026-09-26	28	147	lantern-yrtone	refill		Dave		known	day 138 at the basecamp: refilled from the oil, at the player's word

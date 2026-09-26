@@ -1454,3 +1454,4 @@ when	day	who	asset	verb	qty	unit	note
 2026-09-30	137	party	mirror_silver	move	-1	each	sold to Toller, day 137
 2026-09-30	137	party	coin	move	100	gp	THE WORKING PURSE, a standing rule (player, day 137): the party carries 100 gp of the purse; in town it is balanced against Wend's purse. Part of the ledger total, NOT additional to it. Took a hundred gold pieces north on day 137 (audit-skip).
 2026-09-30	138	basecamp	camp_food	move	-0.48	person-week	breakfast at the basecamp, day 138 (ten mouths)
+2026-09-30	138	basecamp	camp_food	move	-0.48	person-week	lunch at the basecamp, day 138 (ten mouths)
