@@ -734,3 +734,8 @@ when	day	who	asset	verb	qty	unit	note
 2026-09-25	123	basecamp	kilderkin_y	move	1	each	in the lean-to at Coll basecamp, day 123, unopened
 2026-09-25	123	cave_mouth	kilderkin_z	move	-1	each	loaded on a horse by Rowe and Orm and led down to Coll basecamp, day 123
 2026-09-25	123	basecamp	kilderkin_z	move	1	each	in the lean-to at Coll basecamp, day 123, unopened
+2026-09-25	123	cave_mouth	kilderkin_sd	move	2	each	rolled out of area 10 to the cave mouth, day 123
+2026-09-25	123	cave_mouth	kilderkin_og	move	2	each	rolled out of area 10 to the cave mouth, day 123
+2026-09-25	123	cave_mouth	kilderkin_pf	move	4	each	rolled out of area 10 to the cave mouth, day 123
+2026-09-25	123	area_10	ten_foot_pole	move	-1	each	taken up by Tristle to carry out, day 123
+2026-09-25	123	Tristle	ten_foot_pole	move	1	each	carried out of area 10, day 123

@@ -1323,3 +1323,12 @@ when	exped	round	kind	anchor	detail	note
 2026-09-25	19	70	advance		10	day 123: turn 6 of checking the barrels, hoops and staves, all hands
 2026-09-25	19	62	check	60	d6=3	anchor 60 + 2
 2026-09-25	19	80	advance		10	day 123: turn 7 of checking the barrels, hoops and staves, all hands
+2026-09-25	19	81	advance		1	day 123: door (8,25,V) unspiked by hand, quietly; the ten-foot pole taken up
+2026-09-25	19	91	advance		10	day 123: the eight kilderkins (SD x2, OG x2, PF x4) lined up and rolled to the secret door
+2026-09-25	19	90	check	90	d6=4	anchor 90 + 0
+2026-09-25	19	91	check	extra	d6=4	extra
+2026-09-25	19	99	advance		8	day 123: each kilderkin rolled through the secret door in turn
+2026-09-25	19	99	check	extra	d6=3	extra
+2026-09-25	19	101	advance		2	day 123: kilderkins rolled from the secret door to (16,21)
+2026-09-25	19	107	advance		6	day 123: kilderkins rolled up the corridor to the cave mouth
+2026-09-25	19	107	check	extra	d6=4	extra

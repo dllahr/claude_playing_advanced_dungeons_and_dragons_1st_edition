@@ -4945,3 +4945,6 @@ About 3:35 pm, out of the caves clock. Player retcon accepted: two horses and Ro
 
 ## Day 123 -- the barrels checked, expedition 19 rounds 10-80
 Door (8,25,V) spiked (two spikes, Dave, quiet). 33 barrels by mark: B4 PF1 TL3 Y2 Z2 QS2 LC3 OG2 HU2 JS1 VW1 SD1 RH1 AW2 UT2 MK1 FT1 EJ1 GG1 (marks less the kilderkins, casks and firkins taken). Hoop d6: SLACK TL1 Y1 LC1 OG1 VW1 FT1 GG1 (7), 26 sound. Kilderkin repair ruled ordinary work, no roll: slack hoops driven home with mallet and a spike as drift, one turn each per worker, hammering loud (one extra check per turn, two turns, nothing came). Contents and weights (barrel 460 lb full of liquid; DM estimate cask 100 lb + 36 gal of goods): the party still knows only SD and RH. About 4:55 pm at round 80. Rowe and Orm and the horses back at the cave mouth by now.
+
+## Day 123 -- the last eight kilderkins rolled out, rounds 80-107
+SD x2, OG x2, PF x4 rolled to the cave mouth, Tristle 40 ft ahead with the ten-foot pole; eight rollers (everyone else). Left in area 10: VW firkin, three of the four ropes (audit-skip), crosscut saw, 9 sacks, the 33 barrels. Five checks (four extras d6 = 6, 4, 3, 4 with the earlier ones, anchor 90 d6 = 4): none fired. Elf passive rolled at each known secret door. About 5:20 pm. Rowe and Orm with three horses at the cave mouth.
