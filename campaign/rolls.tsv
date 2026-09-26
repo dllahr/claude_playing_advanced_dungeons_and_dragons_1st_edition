@@ -10754,3 +10754,12 @@ when	exped	turn	notation	dice	modifier	total	hidden	reason
 2026-09-26			d6	2	0	2	yes	wandering jitter, anchor 1770
 2026-09-26			d6	5	0	5	yes	wandering jitter, anchor 1800
 2026-09-26			d6	4	0	4		day 138: has anything living moved into the burnt garden (area 22) in the fourteen days since the party last left it (day 124)? DECLARED FIRST: 1 yes, something has settled there (then the level 1 table d6 for what); 2-6 nothing living
+2026-09-26			d6	5	0	5		wandering check, anchor 30
+2026-09-26			d6	6	0	6		wandering check, anchor 60
+2026-09-26			d6	1	0	1		wandering check, anchor 90
+2026-09-26			d6	1	0	1		wandering table, level 1
+2026-09-26			d4	3	0	3		day 138 round 91: orcs (level 1 table d6=1, 1-4 listed) -- how many? d4
+2026-09-26			d6	3	0	3		day 138 round 91: the orcs during the thorough search of area 22: DECLARED FIRST: 1-3 they come to the party (down the corridor from the south to Dave at (10,10)); 4-6 they never come near, the check is spent
+2026-09-26			d3	3	0	3		day 138 round 91: distance in tens of feet at which three orcs come up the corridor into Dave's lantern light at (10,10)
+2026-09-26			d6	3	0	3		surprise check, Dave at (10,10) with the lantern beside him, awake, facing south, and the rest of the party in the garden
+2026-09-26			d6	5	0	5		surprise check, the three orcs (surprised on 2)

@@ -1469,3 +1469,15 @@ when	exped	round	kind	anchor	detail	note
 2026-09-26	28	9	advance		9	day 138: from the cave mouth up through the open doors and along the corridor to the mouth of area 22, Tristle 40 ft ahead, everyone with a missile weapon ready
 2026-09-26	28	10	advance		1	day 138: the party closes up on Tristle at (10,9) and looks into area 22 with the lantern
 2026-09-26	28	18	advance		8	day 138: eight of the party and Tristle walk the west arm, then the north arm of area 22, looking for living creatures and not searching, and back to Dave
+2026-09-26	28	28	advance		10	day 138: turn 1 of the thorough search of the contents of area 22: the mouth end and the first squares, Dave guarding the corridor
+2026-09-26	28	38	advance		10	day 138: turn 2: the west arm, square by square
+2026-09-26	28	35	check	30	d6=5	anchor 30 + 5
+2026-09-26	28	48	advance		10	day 138: turn 3: the west arm, the far end and the platform at its end
+2026-09-26	28	58	advance		10	day 138: turn 4: the north arm, the near end
+2026-09-26	28	68	advance		10	day 138: turn 5: the north arm, both sides, and the fallen trunk and stump
+2026-09-26	28	64	check	60	d6=6	anchor 60 + 4
+2026-09-26	28	78	advance		10	day 138: turn 6: the first sunken pit at (11,12)-(11,13), all nine searching it together
+2026-09-26	28	88	advance		10	day 138: turn 7: the second sunken pit at (11,15)-(11,16), all nine together
+2026-09-26	28	98	advance		10	day 138: turn 8: the south-east outcrop at (12,11)-(12,12), all nine together
+2026-09-26	28	91	check	90	d6=1 -> Ores (1 -4)-AC 6, HD 1, hp 6,4,3,1, #AT 1, D1 -6 or by wea¬ pon, MV 90' (30'), Save FI, ML 8	anchor 90 + 1
+2026-09-26	28	91	correct		-7	the search turn ran past the wandering check that fired at round 91; the encounter is resolved at round 91 where the party is, and the rest of the search charged after it (day 138, expedition 28)
