@@ -10662,3 +10662,8 @@ when	exped	turn	notation	dice	modifier	total	hidden	reason
 2026-09-26			d8	8	0	8		day 132: what goes on horse 3, draw 2, among the 8 containers left at the basecamp (capacity 4750 gp-wt, 4600.0 used)
 2026-09-26			d8	3	0	3		day 132: what goes on horse 3, draw 2, among the 8 containers left at the basecamp (capacity 4750 gp-wt, 4600.0 used)
 2026-09-26			d8	4	0	4		day 132: what goes on horse 3, draw 2, among the 8 containers left at the basecamp (capacity 4750 gp-wt, 4600.0 used)
+2026-09-26			d2	2	0	2		day 135: which of the two OG kilderkins Dave opens with Holt: 1 = the one that always had sound hoops, 2 = the one whose slack hoops the party drove home on day 124
+2026-09-26			d4	2	0	2		day 135: which of the four PF kilderkins is opened: 1-2 = the two whose hoops were sound, 3-4 = the two whose slack hoops were driven home on day 124
+2026-09-26			d6	1	0	1		day 135: condition of the FT barrel contents, opened with Holt (its hoops had gone slack and were mended on day 124/126): 1-2 ruined by air and damp, 3-6 stale but sound like the rest
+2026-09-26			d6	4	0	4		day 135: condition of the GG barrel contents, opened with Holt (its hoops had gone slack and were mended on day 124/126): 1-2 ruined by air and damp, 3-6 stale but sound like the rest
+2026-09-26			d6	3	0	3		day 135: condition of the OG kilderkin contents, opened with Holt (its hoops had gone slack and were mended on day 124/126): 1-2 ruined by air and damp, 3-6 stale but sound like the rest

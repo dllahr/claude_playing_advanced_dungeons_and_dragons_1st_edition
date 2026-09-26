@@ -1396,3 +1396,5 @@ when	day	who	asset	verb	qty	unit	note
 2026-09-29	135	wethersby	cart	move	2	each	the two carts at Wethersby, home from the last load on day 134
 2026-09-29	135	basecamp	mule	move	-2	each	CORRECTION day 135: the two mules came home too
 2026-09-29	135	wethersby	mule	move	2	each	the two mules at Wethersby, home from the last load on day 134
+2026-09-29	135	wethersby	cask_rh	move	-1	each	carried from the Inn to Wend's barn by Dave, day 135
+2026-09-29	135	wend_barn	cask_rh	move	1	each	at Wend's barn, sealed, day 135 (it had sat at the Inn since day 121)
