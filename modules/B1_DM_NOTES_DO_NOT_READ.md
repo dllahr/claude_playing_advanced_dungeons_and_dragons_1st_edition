@@ -4963,3 +4963,6 @@ About 7:40 pm at the mouth; PF 1650 each on a horse (one horse each, the third l
 
 ## Day 123 -- dinner at the basecamp, about 8:45 pm
 Ista cooks from the raw camp food and Dave keeps the party listening to her; eighteen mouths (party nine, Rowe, Orm, Coll, six hands), a third of a person-day each: six person-days off the stock (0.86 person-week). The sledge-way's first day is not reported beyond what is on record; Coll and the hands were not asked. No dice.
+
+## Day 123 into 124 -- the night at the basecamp
+Bed about 9:30 pm, first light about 6 am, no dice: the campaign rules out wilderness encounters, and nobody was asked for watches. Lean-to (sleeps eight): six hands, Orm, Rowe, Coll, who split it as they can; the party outside.
