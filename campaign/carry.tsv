@@ -901,3 +901,5 @@ when	day	who	asset	verb	qty	unit	note
 2026-09-25	124	wend_barn	kilderkin_y	move	1	each	to be unloaded at Wend barn by Rowe and Orm, day 124 dusk; booked on departure, no wilderness encounters on the road
 2026-09-25	124	basecamp	firkin_y	move	-1	each	loaded on the two carts at Coll basecamp, day 124, for Wend barn (Rowe and Orm; due at dusk)
 2026-09-25	124	wend_barn	firkin_y	move	1	each	to be unloaded at Wend barn by Rowe and Orm, day 124 dusk; booked on departure, no wilderness encounters on the road
+2026-09-25	124	basecamp	oil_flask	move	-17	each	all seventeen sealed flasks taken out of the carts, day 124, to go up to the cave entrance
+2026-09-25	124	party	oil_flask	move	17	each	taken up from Coll basecamp to the cave entrance, day 124

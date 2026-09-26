@@ -4969,3 +4969,6 @@ Bed about 9:30 pm, first light about 6 am, no dice: the campaign rules out wilde
 
 ## Day 124 morning -- carts to Wethersby, ride to the watercourse
 Two carts loaded to the 8,000 gp-wt call (DM figure, not a book's): cart 1 OG2 PF1 RH1 JS1 = 7,550 plus the Y firkin 390 = 7,940; cart 2 PF3 TL1 JS1 Y1 = 8,000. Eleven kilderkins (most that fit, lightest first). Left at the basecamp: SD2, XR, Z2 (11,900), firkins HU, TL, VW, casks B, QS. Rowe and Orm, four road lunches from the standard rations, unload at Wend's barn, return; arrive at dusk, back at the basecamp dusk day 125. Dave, Tristle, Frython rode to the watercourse: Durnhak d6=4, nothing new. Breakfast debited (0.86 person-week camp food).
+
+## Day 124 -- up to the cave entrance with all the oil
+All seventeen basecamp flasks (340 gp-wt) to the party, 20 in hand now. Whole party of nine; packed rate very heavy 6", so the half-hour outcrop takes an hour: about 9:15 to 10:15 am. No dice; the dungeon clock stays at round 131 of expedition 19 until they go in (expedition 20).
