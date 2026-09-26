@@ -4960,3 +4960,6 @@ Player's plan: the trio does not wait at the mouth; goes down with the gear and 
 
 ## Day 123 -- the last two PF on the horses, all down to the basecamp
 About 7:40 pm at the mouth; PF 1650 each on a horse (one horse each, the third led free), about an hour down at the party's very-heavy 6", about 8:40 pm at the basecamp. No dice, dungeon clock still round 131. Everything the party took from area 10 is now at the basecamp: all sixteen kilderkins (first eight JS2 RH1 TL1 XR1 Y1 Z2, second eight SD2 OG2 PF4), the four firkins, two casks, and the gear. 33 barrels remain in area 10.
+
+## Day 123 -- dinner at the basecamp, about 8:45 pm
+Ista cooks from the raw camp food and Dave keeps the party listening to her; eighteen mouths (party nine, Rowe, Orm, Coll, six hands), a third of a person-day each: six person-days off the stock (0.86 person-week). The sledge-way's first day is not reported beyond what is on record; Coll and the hands were not asked. No dice.

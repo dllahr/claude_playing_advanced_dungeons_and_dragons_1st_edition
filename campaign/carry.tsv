@@ -884,3 +884,4 @@ when	day	who	asset	verb	qty	unit	note
 2026-09-25	123	basecamp	sack_large	move	9	each	left in the lean-to at Coll basecamp, day 123
 2026-09-25	123	cave_mouth	kilderkin_pf	move	-2	each	loaded on the horses by Rowe and Orm and led down to Coll basecamp, day 123
 2026-09-25	123	basecamp	kilderkin_pf	move	2	each	in the lean-to at Coll basecamp, day 123, unopened
+2026-09-25	123	basecamp	camp_food	move	-0.86	person-week	eaten at the dinner at Coll basecamp, day 123 (eighteen mouths, a third of a person-day each)

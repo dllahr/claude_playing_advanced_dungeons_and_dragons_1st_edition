@@ -382,3 +382,4 @@ when	day	asset	verb	qty	unit	condition	holder	evidence	note
 2026-09-25	123	kilderkin_og	move	2.0	each				taken from area 10, day 123, unopened, rolled to the cave mouth
 2026-09-25	123	kilderkin_pf	move	4.0	each				taken from area 10, day 123, unopened, rolled to the cave mouth
 2026-09-25	123	firkin_vw	move	1.0	each				taken from area 10 by Dave, day 123, unopened
+2026-09-25	123	camp_food	move	-0.86	person-week				eaten at the dinner at Coll basecamp, day 123: eighteen mouths (nine of the party, Rowe, Orm, Coll and six hands) at a third of a person-day each = six person-days, 0.86 of a person-week, cooked by Ista's direction
