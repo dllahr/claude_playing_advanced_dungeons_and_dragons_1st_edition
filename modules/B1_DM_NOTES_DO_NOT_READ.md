@@ -5101,3 +5101,6 @@ The RH cask: the carry log has it at the Inn since day 121 (unloaded there 'we'l
 
 ## Day 129 afternoon -- the trio wait at the basecamp
 Back down the goat line about 2:15 pm, the horses tethered; the fire and dinner started about half past five; the caravan (seven of the party, Rowe and Orm, two carts) in at dusk, about 6:45 pm, after 21 miles at cart pace. Twelve mouths at dinner from the camp food (0.57 person-week, camp food 6.53). Nothing on the record has been moved: the thirty containers, the sealed oil, the ropes, the sacks, the saw and the four sledges are all still at the lean-to. No dice.
+
+## Day 130 -- everything loaded for Wethersby; no Halm
+Halm did NOT set out (d6 = 4, declared first; audit-skip). Loads by dice, then the biggest that fits, then the sundries: cart 1 B, TL, cask QS, Y with the oil and a share of the rope; cart 2 PF, UT with the rest of it, the sacks and the crosscut saw; horse 1 Z kilderkin and QS (4,610); horse 2 LC (4,600); horse 3 SD kilderkin and HU (4,670). Everyone walks with the animals (ten of the party, Rowe and Orm), out at about 7:30, Wethersby about 5 pm at cart pace; the road empty of anything that would be Halm. Camp food 5.39 after breakfast and lunch. Nineteen containers and the four sledges stay. No wilderness encounters.

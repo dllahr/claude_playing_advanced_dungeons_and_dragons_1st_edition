@@ -438,3 +438,4 @@ when	day	asset	verb	qty	unit	condition	holder	evidence	note
 2026-09-26	129	camp_food	move	-0.43	person-week				dinner at the basecamp, day 129: nine mouths (seven of the party, Rowe and Orm) at a third of a person-day each
 2026-09-26	129	rations_std	move	-0.14	person-week				lunch on the road for Dave, Tristle and Yrtone riding to the basecamp, day 129: three mouths at a third of a person-day each
 2026-09-26	129	camp_food	move	-0.14	person-week				dinner at the basecamp, day 129: the trio's three mouths on top of the nine already booked for the caravan, a third of a person-day each
+2026-09-26	130	camp_food	move	-1.14	person-week				breakfast and lunch, day 130: twelve mouths each at a third of a person-day, 0.57 + 0.57
