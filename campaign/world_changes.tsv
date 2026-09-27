@@ -1485,3 +1485,4 @@ when	map	exped	turn	level	scope	target	change	item	qty	who	note
 2026-09-26	b1	29	23	1	seen	23,9	yes			party	day 138: the access room of area 30 and the head of the stair down, by lantern
 2026-09-26	b1	29	23	1	seen	22,8	yes			party	day 138: the access room of area 30 and the head of the stair down, by lantern
 2026-09-26	b1	29	7	1	edge	10,40,H	spiked_shut	iron spike	2	party	day 138 round 72: the party shuts the door of area 13 from inside and spikes it, two jamb wedges driven gently by hand and mallet handle (it swings north into the corridor, away from the room, so the jamb method, the weaker), a cloak laid along the lower edge to stop the light under the door
+2026-09-26	b1	29	11	1	edge	10,40,H	unspiked	iron spike	-2	party	day 138 round 109: both jamb wedges drawn and the cloak recovered off the lower edge; the door of area 13 shut behind the party on the way out, unspiked, unlocked, not sealed

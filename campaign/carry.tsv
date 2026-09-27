@@ -1476,3 +1476,5 @@ when	day	who	asset	verb	qty	unit	note
 2026-09-26	138	party	pegs_box	move	1	each	the box of wooden pegs from area 13, day 138
 2026-09-26	138	party	mallet	move	8	each	the eight mallets from area 13, day 138
 2026-09-26	138	party	iron_spike	move	-2	each	the two jamb wedges driven into the door of area 13 at (10,40,H), day 138 (emplaced, world_changes)
+2026-09-26	138	party	iron_spike	move	2	each	the two jamb wedges drawn from the door of area 13 at (10,40,H), day 138
+2026-09-26	138	cave_mouth	barrel_empty	move	8	each	the eight sound empty barrels from area 13, rolled out to the cave mouth, day 138

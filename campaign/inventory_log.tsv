@@ -502,3 +502,4 @@ when	day	asset	verb	qty	unit	condition	holder	evidence	note
 2026-09-26	138	polearm_orc	move	1.0	each				off the three orcs killed at the mouth of area 22, day 138, picked up from the corridor wall: salvage for Mund
 2026-09-26	138	pegs_box	move	1	each	sound	spread	-	TAKEN FROM AREA 13, day 138: the box of wooden pegs off the implement room shelf (B1 area 13 key). Never taken before; the DM's list of the room on day 138 was wrong on other things and right on this one.
 2026-09-26	138	mallet	move	8	each	sound	spread	-	TAKEN FROM AREA 13, day 138: the eight mallets left there on day 95 to make room for the arrows. Booked to the party as they were lifted.
+2026-09-26	138	barrel_empty	move	8	each	sound	spread	-	TAKEN FROM AREA 13, day 138: the eight sound empty 36-gallon barrels (marks WT, LO, two worn past reading, SD, KB, CN, TV; WT, KB and CN mended by Ista and Tristle), rolled out to the cave mouth. The other three (VN, HM, PA) are rotted through and left.
