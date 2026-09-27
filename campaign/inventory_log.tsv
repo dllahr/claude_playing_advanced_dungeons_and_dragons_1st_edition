@@ -506,3 +506,5 @@ when	day	asset	verb	qty	unit	condition	holder	evidence	note
 2026-09-26	138	camp_food	move	-0.48	person-week				dinner at the basecamp, day 138: ten mouths at a third of a person-day each
 2026-09-26	139	camp_food	move	-0.48	person-week				breakfast at the basecamp, day 139: ten mouths at a third of a person-day each
 2026-09-26	139	camp_food	move	-0.52	person-week				lunch at the watercourse, day 139: eleven mouths (the ten and Durnhak) at a third of a person-day each
+2026-09-27	139	long_sword	move	1.0	each	sound	spread	-	OFF THE ORC, day 139: weapons-carried table (bestiary/orc.md) d100=22, sword and spear. Salvage for Mund.
+2026-09-27	139	spear	move	1.0	each	sound	spread	-	OFF THE ORC, day 139: the same d100=22 roll, sword and spear.

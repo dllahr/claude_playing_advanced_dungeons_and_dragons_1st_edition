@@ -1502,3 +1502,5 @@ when	day	who	asset	verb	qty	unit	note
 2026-09-26	139	party	coin	move	-36	gp	the 36 gp paid to Durnhak at the watercourse, day 139
 2026-09-26	139	party	oil_flask	move	-1	each	one sealed flask given to Durnhak, day 139
 2026-09-26	139	party	camp_food	move	-0.52	person-week	lunch at the watercourse, day 139: ten of the party and Durnhak, eleven mouths at a third of a person-day each
+2026-09-27	139	party	long_sword	move	1	each	off the orc, day 139, salvage for Mund
+2026-09-27	139	party	spear	move	1	each	off the orc, day 139, salvage for Mund
