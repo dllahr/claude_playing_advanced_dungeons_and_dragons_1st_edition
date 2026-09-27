@@ -5234,3 +5234,6 @@ Tristle: 'Friends of Durnhak, ten of us; we have finished exploring the upper le
 
 ## Day 139-ish round 40 (still day 138) -- the gnome's next question (HIDDEN ROLL)
 Tristle names the deal (hauling metal, selling it, selling him supplies): TRUE, and it matches what the five know. Does the gnome show himself? d6 = 6 (declared first: 1-3 to the edge of the light, 4-6 he stays in the dark and asks): HE STAYS IN THE DARK. He concedes the point in one line ('that much is so', not more) and asks the question the record says they care about: what else the party has carried out of the halls above (what it has taken), a question he will not explain. No reason given, no name, no count of his own people. Round 40, nothing fired.
+
+## Round 41 (day 138) -- Tristle declines the gnome's question (no dice)
+Tristle will discuss what has been taken only with Durnhak's friend present, and with Durnhak. The gnome takes it without heat (it is a fair answer and a gnome's own way). He tells the party ONE thing: Durnhak is not in this hall (true; nobody is hurt by it, and the party knows Durnhak is to be at the watercourse at noon tomorrow). He then asks, as the record has Durnhak's own note: if it is a thing to be talked over with Durnhak, WHY come down before the talking. He has still not shown himself, named himself or given the gnomes' number. Round 41, nothing fired.
