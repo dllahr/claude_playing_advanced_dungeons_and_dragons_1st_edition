@@ -1495,3 +1495,4 @@ when	day	who	asset	verb	qty	unit	note
 2026-09-26	138	basecamp	barrel_empty	move	8	each	the eight empty barrels sledged down to the basecamp, day 138
 2026-09-26	138	cave_mouth	sledge	move	-4	each	the four sledges taken down the sledge-way loaded, day 138
 2026-09-26	138	basecamp	sledge	move	4	each	the four sledges at the basecamp again, day 138
+2026-09-26	138	basecamp	camp_food	move	-0.48	person-week	dinner at the basecamp, day 138 (ten mouths)
