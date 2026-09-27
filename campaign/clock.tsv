@@ -1545,3 +1545,6 @@ when	exped	round	kind	anchor	detail	note
 2026-09-27	30	23	advance		1	day 139: the party crosses to the door and Tristle listens
 2026-09-27	30	28	advance		5	day 139: the hinges of the door (21,8,V) soak after oiling
 2026-09-27	30	28	check	extra	d6=5	extra
+2026-09-27	30	38	advance		10	day 139: a full turn's soak on the seized hinge pins of (21,8,V) before drifting again
+2026-09-27	30	34	check	30	d6=1 -> Ores (1-8)-AC 6, HD 1, hp 6,5,5,4,4,3,3,2, #AT 1, D 1-6 or by weapon, MV 90' (30'), Save FI, ML 8	anchor 30 + 4
+2026-09-27	30	34	correct		-4	the 10-round soak on the hinge pins ran past the round-34 wandering check; resolving it there, where the party actually was
