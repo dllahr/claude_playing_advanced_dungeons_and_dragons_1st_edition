@@ -1551,3 +1551,7 @@ when	exped	round	kind	anchor	detail	note
 2026-09-27	30	37	advance		3	day 139: recover missiles, search the orc's body, back to the door
 2026-09-27	30	47	advance		10	day 139: a turn of quiet work drifting the pins of (21,8,V) with a mallet-handle and an iron spike for a drift
 2026-09-27	30	49	advance		2	day 139: the pins come free, the leaf pulled off its hinges and set aside
+2026-09-27	30	56	advance		7	day 139: standard formation down the passage from (21,8) to (27,8)
+2026-09-27	30	58	advance		2	day 139: north through the corridor bend to the threshold of area 39
+2026-09-27	30	68	advance		10	day 139: Dave and Torsat guard the passage at (27,10); the other eight search the walls and contents of area 39, one thorough turn
+2026-09-27	30	60	check	60	d6=6	anchor 60 + 0

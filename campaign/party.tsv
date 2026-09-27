@@ -525,3 +525,5 @@ when	map	level	x	y	exped	turn	squares	feet	rate	why	route
 2026-09-27	b1	2	20	13	30				PLACED	day 139: the party down the stair of area 30 to its foot in area 38, standard formation, lantern lit; level change, so placed	
 2026-09-27	b1	2	20	9	30		4	40	explore	day 139: new standard formation (Yrtone/Dave/Torsat, Frython/Ista/Tristle, Hask/Brand, Blartho/Dellie) moves south through the gap in the hall's south wall to (20,9) to look around	20,13 20,12 20,11 20,10 20,9
 2026-09-27	b1	2	21	8	30		2	20	explore	day 139: the party approaches the door at (21,8) to examine and listen	20,9 20,8 21,8
+2026-09-27	b1	2	27	8	30		6	60	explore	day 139: standard formation (Tristle and Ista back in rank 2) heads down the passage east of the door (21,8,V), lantern lit	21,8 22,8 23,8 24,8 25,8 26,8 27,8
+2026-09-27	b1	2	27	10	30		2	20	explore	day 139: standard formation, north through the corridor bend to the threshold of the room beyond	27,8 27,9 27,10
