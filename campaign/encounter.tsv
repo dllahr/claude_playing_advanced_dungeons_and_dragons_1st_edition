@@ -343,3 +343,17 @@ when	day	exped	round	side	actor	verb	target	qty	detail
 2026-09-27	139	30	1	monsters		damage	troglodyte	13	
 2026-09-27	139	30	1	monster	troglodyte	dead			round 1, 13 damage vs 4 hp, dead before its own segment (party won initiative 2 v 1)
 2026-09-27	139	30	1			end			round 1: the troglodyte dies to the volley
+2026-09-27	139	30	1			start			day 139 round 155, cavern of area 41: the second troglodyte, hp 10, seen at 30 ft, not surprised; the party held ready and fires as soon as it's seen
+2026-09-27	139	30	1	party	Dave	declare			fires his short bow at the troglodyte, held ready
+2026-09-27	139	30	1	party	Torsat	declare			fires his short bow at the troglodyte, held ready
+2026-09-27	139	30	1	party	Tristle	declare			fires his short bow at the troglodyte, held ready
+2026-09-27	139	30	1	party	Yrtone	declare			fires her sling at the troglodyte, held ready
+2026-09-27	139	30	1	party	Blartho	declare			fires her sling at the troglodyte, held ready
+2026-09-27	139	30	1	party	Dellie	declare			fires her sling at the troglodyte, held ready
+2026-09-27	139	30	1	party	Hask	declare			fires his sling at the troglodyte, held ready
+2026-09-27	139	30	1	party	Frython	declare			throws darts at the troglodyte, held ready
+2026-09-27	139	30	1	party	Ista	declare			throws darts at the troglodyte, held ready
+2026-09-27	139	30	1	party	Brand	declare			throws his hand axe at the troglodyte, held ready
+2026-09-27	139	30	1	monsters		damage	troglodyte	14	
+2026-09-27	139	30	1	monster	troglodyte	dead			the readied volley, 14 damage vs 10 hp, dead before it closes
+2026-09-27	139	30	1			end			the second troglodyte dies to the readied volley
