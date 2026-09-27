@@ -5377,3 +5377,6 @@ Dave and Torsat guard the passage at (27,10) facing south. The other eight searc
 
 ## Day 139 round 68-70 -- the sword, plaque and letter taken
 Booked to the party: sword_barbarian, plaque_chief, letter_thanks (assets.tsv added; inventory_log; carry.tsv). Two rounds to lift them off the wall and pouch the letter. The player asked whether the wall pass had been the full 'everybody on every section' method or the fast fan-out -- told honestly it was the fast one (1 turn, one roll per section, 8 sections/8 searchers); the map data was checked before resolving and there is genuinely nothing hidden here regardless of method, so no re-roll is owed.
+
+## Day 139 rounds 70-140 -- the full eight-turn pass of area 39 (everybody on every section)
+At the player's word, re-run as the thorough method: 8 sections, every one of the eight searchers rolling on every section, 8 turns (80 rounds), round 70 to 140. Two anchor checks fell in the span: round 92 (anchor 90+2), d6=2, silent; round 120 (anchor 120+0), d6=4, silent. Result unchanged from the fast pass: nothing found, nothing hidden (mapdb carries no door or secret edge anywhere bordering this room). About 4:50 pm.

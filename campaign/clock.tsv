@@ -1556,3 +1556,9 @@ when	exped	round	kind	anchor	detail	note
 2026-09-27	30	68	advance		10	day 139: Dave and Torsat guard the passage at (27,10); the other eight search the walls and contents of area 39, one thorough turn
 2026-09-27	30	60	check	60	d6=6	anchor 60 + 0
 2026-09-27	30	70	advance		2	day 139: the sword, the plaque and the letter taken from area 39
+2026-09-27	30	90	advance		20	day 139: the full eight-turn wall-and-section pass of area 39, everybody on every section, block 1 of 4
+2026-09-27	30	110	advance		20	day 139: the full eight-turn wall-and-section pass of area 39, block 2 of 4
+2026-09-27	30	92	check	90	d6=2	anchor 90 + 2
+2026-09-27	30	130	advance		20	day 139: the full eight-turn wall-and-section pass of area 39, block 3 of 4
+2026-09-27	30	120	check	120	d6=4	anchor 120 + 0
+2026-09-27	30	140	advance		10	day 139: the full eight-turn wall-and-section pass of area 39, block 4 of 4, done
