@@ -312,3 +312,17 @@ when	day	exped	round	side	actor	verb	target	qty	detail
 2026-09-26	138	28	4	monsters		damage	orc C	5	Frython's dart 1, Ista's dart 1, Tristle's arrow 3, as he broke off; hp 3
 2026-09-26	138	28	4		orc C	dead			the held missiles as he left melee
 2026-09-26	138	28	4			end			day 138 rounds 91-94, expedition 28: THREE ORCS (hp 6, 4, 3) killed at the mouth of area 22. B by Dave's arrow in round 1; A by Torsat's natural 20 in round 4; C by the held darts and Tristle's arrow as his morale broke. Dave took 6 (to 3 of 9) and was cured twice (9 of 9 at the end); Yrtone took 6 (to 1 of 7) and was cured by Blartho (6 of 7). XP 10 + 1 per hp: 16 + 14 + 13 = 43.
+2026-09-27	139	30	1			start			day 139 round 34, level 2 corridor east of the door (21,8,V): one orc, hp 6, met at 20 ft, neither side surprised
+2026-09-27	139	30	1	party	Dave	declare			fires his short bow at the orc
+2026-09-27	139	30	1	party	Torsat	declare			fires his short bow at the orc
+2026-09-27	139	30	1	party	Yrtone	declare			fires her sling at the orc
+2026-09-27	139	30	1	party	Blartho	declare			fires her sling at the orc
+2026-09-27	139	30	1	party	Dellie	declare			fires her sling at the orc
+2026-09-27	139	30	1	party	Hask	declare			fires his sling at the orc
+2026-09-27	139	30	1	party	Brand	declare			throws his hand axe at the orc
+2026-09-27	139	30	1	party	Frython	declare			throws a dart at the orc
+2026-09-27	139	30	1	party	Blartho	declare			fires his sling at the orc
+2026-09-27	139	30	1	party	Blartho	declare			fires his sling at the orc
+2026-09-27	139	30	1	party		surprise			d6=5, not surprised (rolled at check-fire time, round 34)
+2026-09-27	139	30	1	monster		surprise			d6=4, not surprised
+2026-09-27	139	30	1	monsters		damage	orc	3	
