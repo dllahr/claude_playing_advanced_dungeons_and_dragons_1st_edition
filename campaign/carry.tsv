@@ -1467,3 +1467,9 @@ when	day	who	asset	verb	qty	unit	note
 2026-09-26	138	area_30	spear	move	2	each	the two orc spears, SW corner of area 30
 2026-09-26	138	party	polearm_orc	move	-1	each	the orc polearm laid in the SW corner of area 30
 2026-09-26	138	area_30	polearm_orc	move	1	each	the orc polearm, SW corner of area 30
+2026-09-26	138	area_30	hand_axe	move	-3	each	the three orc axes taken up again from the SW corner of area 30, day 138
+2026-09-26	138	party	hand_axe	move	3	each	the three orc axes carried out (salvage)
+2026-09-26	138	area_30	spear	move	-2	each	the two orc spears taken up again
+2026-09-26	138	party	spear	move	2	each	the two orc spears carried out (salvage)
+2026-09-26	138	area_30	polearm_orc	move	-1	each	the orc polearm taken up again
+2026-09-26	138	party	polearm_orc	move	1	each	the orc polearm carried out (salvage)
