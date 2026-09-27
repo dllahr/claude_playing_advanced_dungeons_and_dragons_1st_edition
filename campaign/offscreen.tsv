@@ -24,3 +24,7 @@ day	agenda	tick	action	roll	kind	news	delivered_day
 135	A004	2	deliver				135
 136	A019	1	tick	1	progress	Durnhak has left an answer at the slab or shown himself at the watercourse. WHAT he says (a meeting, the 36 gp, the lower-level offer) is the DM's to author when the party goes to the slab.	
 136	A019	1	deliver				137
+126	A021	1	tick	6	progress	Brand moves on a stage (1 the alphabet, 2 his own name, 3 simple words, 4 a short line, 5 a plain notice); the stage is the count of progress ticks. SHOWN AT ONCE, in the next scene, as Brand reading something: he is with the party, so there is nothing to hide. At the FIFTH progress tick the DM closes this agenda and Brand raises his profession himself (the standing loop on it).	
+133	A021	2	tick	3	hold	A bad week. Brand loses what he had and the lessons stand still; nothing new to show.	
+126	A021	1	deliver				138
+133	A021	2	deliver				138
