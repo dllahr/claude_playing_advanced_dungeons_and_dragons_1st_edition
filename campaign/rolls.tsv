@@ -10916,3 +10916,7 @@ when	exped	turn	notation	dice	modifier	total	hidden	reason
 2026-09-26			d6	3	0	3		HIDDEN: what each barrel (all but SD, which held ale) held, by residue and smell, same order: DECLARED FIRST: 1 sour-sweet (ale/wine), 2 sharp (vinegar or brine), 3 oily or greasy (oil or lard), 4 dry meal or dust (grain or flour), 5 salt crust, 6 nothing left to tell
 2026-09-26			d6	6	0	6		HIDDEN: what each barrel (all but SD, which held ale) held, by residue and smell, same order: DECLARED FIRST: 1 sour-sweet (ale/wine), 2 sharp (vinegar or brine), 3 oily or greasy (oil or lard), 4 dry meal or dust (grain or flour), 5 salt crust, 6 nothing left to tell
 2026-09-26			d6	2	0	2		HIDDEN: what each barrel (all but SD, which held ale) held, by residue and smell, same order: DECLARED FIRST: 1 sour-sweet (ale/wine), 2 sharp (vinegar or brine), 3 oily or greasy (oil or lard), 4 dry meal or dust (grain or flour), 5 salt crust, 6 nothing left to tell
+2026-09-26			d6	4	0	4		wandering check, anchor extra
+2026-09-26			d6	6	0	6		wandering check, anchor 90
+2026-09-26			d6	2	0	2		wandering check, anchor extra
+2026-09-26			d6	6	0	6		wandering check, anchor extra

@@ -1516,3 +1516,10 @@ when	exped	round	kind	anchor	detail	note
 2026-09-26	29	70	advance		4	day 138: to the door of area 13 and in, standard formation
 2026-09-26	29	71	advance		1	day 138: the box of wooden pegs taken from the shelf in area 13
 2026-09-26	29	79	advance		8	day 138: eight mallets taken, door of area 13 shut and spiked with a cloak under the sill, Ista and Tristle examine the eleven empty barrels
+2026-09-26	29	89	advance		10	day 138: turn 1 of mending the three slack-hoop barrels of area 13 (Ista and Tristle, two turns a barrel each)
+2026-09-26	29	89	check	extra	d6=4	extra
+2026-09-26	29	99	advance		10	day 138: turn 2 of mending the three slack-hoop barrels of area 13
+2026-09-26	29	92	check	90	d6=6	anchor 90 + 2
+2026-09-26	29	99	check	extra	d6=2	extra
+2026-09-26	29	109	advance		10	day 138: turn 3 of mending the three slack-hoop barrels of area 13
+2026-09-26	29	109	check	extra	d6=6	extra
