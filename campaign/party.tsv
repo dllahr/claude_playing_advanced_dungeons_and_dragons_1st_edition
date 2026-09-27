@@ -515,3 +515,4 @@ when	map	level	x	y	exped	turn	squares	feet	rate	why	route
 2026-09-26	b1	1	22	9	29				PLACED	party steps round the corner from the stair line, out of area 30 corridor axis, lantern hooded fully, while Tristle scouts down (day 138)	
 2026-09-26	b1	2	20	13	29				PLACED	day 138: the whole party down the stair of area 30 into the hall of area 38, lantern open, standard formation with Tristle in the second rank; Level 2 has no walk route from level 1 in the model, so placed at the stair foot	
 2026-09-26	b1	2	24	13	29		4	40	explore	day 138: the party follows the north wall of the hall of area 38 east (facing south at the stair foot, left is east), standard formation, lantern open	20,13 21,13 22,13 23,13 24,13
+2026-09-26	b1	2	24	10	29		3	30	explore	day 138: the party follows the east wall of the hall of area 38 south to the SE corner, lantern open	24,13 24,12 24,11 24,10
