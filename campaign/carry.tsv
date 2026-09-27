@@ -1473,3 +1473,4 @@ when	day	who	asset	verb	qty	unit	note
 2026-09-26	138	party	spear	move	2	each	the two orc spears carried out (salvage)
 2026-09-26	138	area_30	polearm_orc	move	-1	each	the orc polearm taken up again
 2026-09-26	138	party	polearm_orc	move	1	each	the orc polearm carried out (salvage)
+2026-09-26	138	party	pegs_box	move	1	each	the box of wooden pegs from area 13, day 138
