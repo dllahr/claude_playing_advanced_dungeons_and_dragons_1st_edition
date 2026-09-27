@@ -1478,3 +1478,13 @@ when	day	who	asset	verb	qty	unit	note
 2026-09-26	138	party	iron_spike	move	-2	each	the two jamb wedges driven into the door of area 13 at (10,40,H), day 138 (emplaced, world_changes)
 2026-09-26	138	party	iron_spike	move	2	each	the two jamb wedges drawn from the door of area 13 at (10,40,H), day 138
 2026-09-26	138	cave_mouth	barrel_empty	move	8	each	the eight sound empty barrels from area 13, rolled out to the cave mouth, day 138
+2026-09-26	138	party	hand_axe	move	-3	each	the three orc axes left at the basecamp lean-to, day 138
+2026-09-26	138	basecamp	hand_axe	move	3	each	the three orc axes left at the basecamp lean-to, day 138
+2026-09-26	138	party	spear	move	-2	each	the two orc spears left at the basecamp lean-to
+2026-09-26	138	basecamp	spear	move	2	each	the two orc spears left at the basecamp lean-to
+2026-09-26	138	party	polearm_orc	move	-1	each	the orc polearm left at the basecamp lean-to
+2026-09-26	138	basecamp	polearm_orc	move	1	each	the orc polearm left at the basecamp lean-to
+2026-09-26	138	party	mallet	move	-8	each	the eight mallets from area 13 left at the basecamp lean-to (Tristle keeps his own)
+2026-09-26	138	basecamp	mallet	move	8	each	the eight mallets from area 13 left at the basecamp lean-to
+2026-09-26	138	party	pegs_box	move	-1	each	the box of wooden pegs left at the basecamp lean-to
+2026-09-26	138	basecamp	pegs_box	move	1	each	the box of wooden pegs left at the basecamp lean-to
