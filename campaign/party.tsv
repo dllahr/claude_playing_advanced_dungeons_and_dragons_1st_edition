@@ -529,3 +529,4 @@ when	map	level	x	y	exped	turn	squares	feet	rate	why	route
 2026-09-27	b1	2	27	10	30		2	20	explore	day 139: standard formation, north through the corridor bend to the threshold of the room beyond	27,8 27,9 27,10
 2026-09-27	b1	2	20	8	30		9	90	known	day 139: standard formation back down the passage, through the open doorway, to the hall's south nub	27,10 27,9 27,8 26,8 25,8 24,8 23,8 22,8 21,8 20,8
 2026-09-27	b1	2	18	6	30		4	40	explore	day 139: standard formation, southwest into the unexplored passage toward room 41	20,8 20,7 19,7 19,6 18,6
+2026-09-27	b1	2	17	5	30		2	20	explore	day 139: standard formation to (17,5) where the cavern opens up, to look around	18,6 18,5 17,5

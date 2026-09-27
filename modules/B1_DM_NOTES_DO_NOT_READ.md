@@ -5383,3 +5383,6 @@ At the player's word, re-run as the thorough method: 8 sections, every one of th
 
 ## Day 139 rounds 142-146 -- southwest into room 41 (HIDDEN ROLLS)
 Party back through the door and southwest, 40 ft, four rounds, nothing fired. Room 41's stocked troglodytes (1-2, hp 10,4): present? d6=2 (1-4 present): YES, somewhere in the cavern. In the lantern's 30 ft reach right now at (18,6)? d6=6 (1-2 yes): NOT YET IN SIGHT. Nothing perceived. The cavern here is natural, walls irregular, floor uneven -- described to the player without naming what is or isn't ahead.
+
+## Day 139 round 148 -- (17,5), the cavern opens up (HIDDEN ROLL)
+Troglodytes still not within the lantern's 30 ft reach: d6=6 (1-2 yes). Reported: a wide, irregular natural chamber opening north and around, rough walls and an uneven floor, nothing living in sight, no sound.

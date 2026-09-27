@@ -11049,3 +11049,4 @@ when	exped	turn	notation	dice	modifier	total	hidden	reason
 2026-09-27			d6	4	0	4		wandering check, anchor 120
 2026-09-27			d6	2	0	2		HIDDEN day 139 round 146: are the stocked troglodytes of area 41 present right now (not a wandering check, the room's own stocking)? DECLARED FIRST: 1-4 present somewhere in the cavern, 5-6 out foraging, not here
 2026-09-27			d6	6	0	6		HIDDEN: are they within the lantern's 30 ft reach right now, at (18,6)? DECLARED FIRST: 1-2 yes, in sight; 3-6 further off, not yet in sight
+2026-09-27			d6	6	0	6		HIDDEN day 139: are the troglodytes of area 41 within the lantern's 30 ft reach now, at (17,5)? DECLARED FIRST: 1-2 yes, 3-6 not yet
