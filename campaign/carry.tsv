@@ -1496,3 +1496,6 @@ when	day	who	asset	verb	qty	unit	note
 2026-09-26	138	cave_mouth	sledge	move	-4	each	the four sledges taken down the sledge-way loaded, day 138
 2026-09-26	138	basecamp	sledge	move	4	each	the four sledges at the basecamp again, day 138
 2026-09-26	138	basecamp	camp_food	move	-0.48	person-week	dinner at the basecamp, day 138 (ten mouths)
+2026-09-26	139	basecamp	camp_food	move	-0.48	person-week	breakfast at the basecamp, day 139 (ten mouths)
+2026-09-26	139	basecamp	camp_food	move	-0.95	person-week	lunch packed for twenty (the party's ten and ten more) to take to the watercourse, day 139: 20 mouths at a third of a person-day, 6.67 person-days
+2026-09-26	139	party	camp_food	move	0.95	person-week	lunch for twenty carried to the watercourse, day 139 (133 gp-wt)
