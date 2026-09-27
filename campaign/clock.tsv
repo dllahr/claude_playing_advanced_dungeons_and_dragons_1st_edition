@@ -1565,3 +1565,7 @@ when	exped	round	kind	anchor	detail	note
 2026-09-27	30	142	advance		2	day 139: back down the passage and through the open doorway to the hall
 2026-09-27	30	146	advance		4	day 139: southwest into the unexplored passage toward room 41
 2026-09-27	30	148	advance		2	day 139: to (17,5), where the cavern opens up
+2026-09-27	30	152	advance		4	day 139: east into the cavern of area 41, standard formation
+2026-09-27	30	150	check	150	d6=1 -> Kobolds (2-7)-AC7, HD V 2 , hp4,4,3,3,2,2,1,#AT1,D1-4or weapon -1, MV 90' (30'), Save NM, ML 6	anchor 150 + 0
+2026-09-27	30	150	correct		-2	the anchor-150 wandering check (kobolds) fired mid-move; resolving it at round 150, where the party actually was
+2026-09-27	30	152	advance		2	day 139: finishing the move east into the cavern to (20,4), after the round-150 kobold check (spent, never near)

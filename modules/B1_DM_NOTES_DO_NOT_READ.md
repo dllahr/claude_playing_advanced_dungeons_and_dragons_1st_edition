@@ -5386,3 +5386,7 @@ Party back through the door and southwest, 40 ft, four rounds, nothing fired. Ro
 
 ## Day 139 round 148 -- (17,5), the cavern opens up (HIDDEN ROLL)
 Troglodytes still not within the lantern's 30 ft reach: d6=6 (1-2 yes). Reported: a wide, irregular natural chamber opening north and around, rough walls and an uneven floor, nothing living in sight, no sound.
+
+## Day 139 round 150-152 -- a wandering kobold check spent, then a troglodyte sighted (HIDDEN ROLLS)
+Anchor-150 fired mid-move: level2 table d6=1, KOBOLDS. Count (CORRECTING my own wrong die: I rolled d4 first by mistake for a printed '(2-7)' range, a shell/table error, not a real event, discarded; re-rolled 1d6+1 = 4, hp 4,4,3,3). Approach d6=4 (declared first: 1-3 come): NEVER NEAR. Spent, the party never knew.
+Troglodytes of area 41 (stocked, 1-2, hp 10 and 4): now within the lantern's reach (rolled earlier this leg, d6=2): distance d3=2, 20 ft; which one, d2=2, the hp-4 one (the hp-10 one is elsewhere in the cavern, not in sight). Surprise: party d6=5 not surprised; troglodyte d6=5, needs 1-4 (chameleon camouflage vs normal light-sight, MM, applied before) -- NOT SURPRISED, it has seen the lantern coming. Neither side surprised. STOPPED HERE for the party's declaration; nothing attacked yet.
