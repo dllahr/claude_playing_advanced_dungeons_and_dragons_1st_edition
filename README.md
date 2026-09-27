@@ -17,3 +17,5 @@ python tools/offscreen.py check            # validate the agendas
 
 `status` is safe to read: it shows the task and a count of waiting news, not the news. The news itself (`offscreen.py news --who NAME`) is read when the party meets the person, so don't run that one if you want to be surprised.
 
+**A companion's own agenda is the exception to 'hidden until met'.** Brand's letters (A021, loop L054) are taught in front of the party every day, so its ticks are `deliver`ed at once and shown in the next scene as what he can now do. Its stage is the count of `progress` ticks; at the fifth the DM closes it and Brand raises his profession himself. A pause cannot be backdated (`tick` reads the agenda's state today), so a gap in the lessons is a `close` row with the true day and a fresh `open` (A020, closed day 104; A021, opened day 119).
+
