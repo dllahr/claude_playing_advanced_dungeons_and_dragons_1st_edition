@@ -5351,3 +5351,6 @@ Ista and Tristle examine the door: swing and hinge, then try the latch (B1's own
 
 ## Day 139 round 23-28 -- hinges oiled, Tristle picks the lock (HIDDEN ROLL, revealed as an objective fact)
 Two turns of oil off the broached flask worked into the hinge knuckles (in reach, the door opens toward the party), left to soak five rounds (round 23 to 28); silent, no extra check (soaking is not hammering). Tristle tries Open Locks: 35% (rules/thief.md), d100 = 82: FAILED. Per-lock limit: Tristle may not try this lock again until 2nd level (rules/thief.md, the PHB's own 'once per lock'); logged to world.py picks as STUMPED. Ista has not tried. The door is still locked.
+
+## Day 139 round 29 -- Ista's own Open Locks attempt (revealed roll)
+Her own separate try (each thief gets one per lock, PHB "one try only per thief"): 25% (base 25, human -- no racial row, DEX 13 no adjustment). d100 = 59: FAILED. Stumped for Ista too, until 2nd level. Still locked; neither thief can try it again at their current levels.
