@@ -5380,3 +5380,6 @@ Booked to the party: sword_barbarian, plaque_chief, letter_thanks (assets.tsv ad
 
 ## Day 139 rounds 70-140 -- the full eight-turn pass of area 39 (everybody on every section)
 At the player's word, re-run as the thorough method: 8 sections, every one of the eight searchers rolling on every section, 8 turns (80 rounds), round 70 to 140. Two anchor checks fell in the span: round 92 (anchor 90+2), d6=2, silent; round 120 (anchor 120+0), d6=4, silent. Result unchanged from the fast pass: nothing found, nothing hidden (mapdb carries no door or secret edge anywhere bordering this room). About 4:50 pm.
+
+## Day 139 rounds 142-146 -- southwest into room 41 (HIDDEN ROLLS)
+Party back through the door and southwest, 40 ft, four rounds, nothing fired. Room 41's stocked troglodytes (1-2, hp 10,4): present? d6=2 (1-4 present): YES, somewhere in the cavern. In the lantern's 30 ft reach right now at (18,6)? d6=6 (1-2 yes): NOT YET IN SIGHT. Nothing perceived. The cavern here is natural, walls irregular, floor uneven -- described to the player without naming what is or isn't ahead.
