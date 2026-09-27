@@ -255,3 +255,5 @@ when	exped	round	source	kind	what	who	fuel	certainty	note
 2026-09-26	29	23	lantern-ista	hooded		Ista		known	hooded fully at the head of the stair down, day 138, the party steps out of the line of the stair
 2026-09-26	29	27	lantern-ista	unhooded		Ista		known	opened fully at the head of the stair, day 138, for the whole party's descent
 2026-09-26	29	133	lantern-ista	out		Ista		known	snuffed at the cave mouth on leaving the dungeon, day 138, expedition 29 ends (10.7 turns left)
+2026-09-26	30	0	lantern-ista	lit		Ista		known	relit at the basecamp for the climb up the trail in the failing light, day 138
+2026-09-26	30	0	lantern-ista	anchor		Ista	7.7	known	day 138: the climb from the basecamp is half an hour, 3 turns burnt outside the dungeon clock: 10.7 - 3.0 = 7.7 turns on arrival at the cave mouth

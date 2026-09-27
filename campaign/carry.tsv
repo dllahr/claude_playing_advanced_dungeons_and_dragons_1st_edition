@@ -1488,3 +1488,5 @@ when	day	who	asset	verb	qty	unit	note
 2026-09-26	138	basecamp	mallet	move	8	each	the eight mallets from area 13 left at the basecamp lean-to
 2026-09-26	138	party	pegs_box	move	-1	each	the box of wooden pegs left at the basecamp lean-to
 2026-09-26	138	basecamp	pegs_box	move	1	each	the box of wooden pegs left at the basecamp lean-to
+2026-09-26	138	basecamp	sledge	move	-4	each	the four sledges dragged up the trail to the cave mouth, day 138
+2026-09-26	138	cave_mouth	sledge	move	4	each	the four sledges at the cave mouth, day 138, for the eight empty barrels
