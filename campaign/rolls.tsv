@@ -11060,3 +11060,27 @@ when	exped	turn	notation	dice	modifier	total	hidden	reason
 2026-09-27			d2	2	0	2		HIDDEN: which of the two troglodytes (hp 10, hp 4) is the one seen; the other may be elsewhere in the cavern
 2026-09-27			d6	5	0	5		HIDDEN: party surprise (1-2 standard)
 2026-09-27			d6	5	0	5		HIDDEN: troglodyte surprise, chameleon camouflage vs normal light-sight (1-4 per MM, applied before)
+2026-09-27			d6	2	0	2		initiative, party
+2026-09-27			d6	1	0	1		initiative, monsters
+2026-09-27			d20	4	0	4		Dave attacks with short bow
+2026-09-27			d20	18	0	18		Dave attacks with short bow
+2026-09-27			1-6 (1d6)	3	0	3		Dave damage, short bow
+2026-09-27			d20	9	0	9		Torsat attacks with short bow
+2026-09-27			d20	5	0	5		Torsat attacks with short bow
+2026-09-27			d20	11	0	11		Tristle attacks with short bow
+2026-09-27			d20	1	0	1		Tristle attacks with short bow
+2026-09-27			d20	5	0	5		Yrtone attacks with sling
+2026-09-27			d20	19	0	19		Blartho attacks with sling
+2026-09-27			2-5 (1d4+1)	3	1	4		Blartho damage, sling
+2026-09-27			d20	13	0	13		Dellie attacks with sling
+2026-09-27			d20	15	0	15		Hask attacks with sling
+2026-09-27			2-5 (1d4+1)	3	1	4		Hask damage, sling
+2026-09-27			d20	12	0	12		Frython attacks with dart
+2026-09-27			d20	6	0	6		Frython attacks with dart
+2026-09-27			d20	18	0	18		Frython attacks with dart
+2026-09-27			1-3 (1d3)	2	0	2		Frython damage, dart
+2026-09-27			d20	8	0	8		Ista attacks with dart
+2026-09-27			d20	8	0	8		Ista attacks with dart
+2026-09-27			d20	11	0	11		Ista attacks with dart
+2026-09-27			d20	9	0	9		Brand attacks with hand axe
+2026-09-27			d6	3	0	3		HIDDEN day 139: does the second troglodyte (hp 10), elsewhere in the cavern, notice the fight and come? DECLARED FIRST: 1-3 yes, comes to investigate, 4-6 stays away

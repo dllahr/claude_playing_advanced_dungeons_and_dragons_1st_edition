@@ -329,3 +329,17 @@ when	day	exped	round	side	actor	verb	target	qty	detail
 2026-09-27	139	30	1	monsters		damage	orc	4	
 2026-09-27	139	30	1	monster	orc	dead			round 1, total party damage 7 (Hask 3, Frython 1 and 3) vs 6 hp, dead before its own segment
 2026-09-27	139	30	1			end			round 1: the orc dies to the corrected full volley (7 damage vs 6 hp) before it can complete its own segment
+2026-09-27	139	30	1			start			day 139 round 152, cavern of area 41: one troglodyte, hp 4, at 20 ft, neither side surprised; a second (hp 10) somewhere in the cavern, not in sight
+2026-09-27	139	30	1	party	Dave	declare			fires his short bow at the troglodyte
+2026-09-27	139	30	1	party	Torsat	declare			fires his short bow at the troglodyte
+2026-09-27	139	30	1	party	Tristle	declare			fires his short bow at the troglodyte
+2026-09-27	139	30	1	party	Yrtone	declare			fires her sling at the troglodyte
+2026-09-27	139	30	1	party	Blartho	declare			fires her sling at the troglodyte
+2026-09-27	139	30	1	party	Dellie	declare			fires her sling at the troglodyte
+2026-09-27	139	30	1	party	Hask	declare			fires his sling at the troglodyte
+2026-09-27	139	30	1	party	Frython	declare			throws darts at the troglodyte
+2026-09-27	139	30	1	party	Ista	declare			throws darts at the troglodyte
+2026-09-27	139	30	1	party	Brand	declare			throws his hand axe at the troglodyte
+2026-09-27	139	30	1	monsters		damage	troglodyte	13	
+2026-09-27	139	30	1	monster	troglodyte	dead			round 1, 13 damage vs 4 hp, dead before its own segment (party won initiative 2 v 1)
+2026-09-27	139	30	1			end			round 1: the troglodyte dies to the volley
