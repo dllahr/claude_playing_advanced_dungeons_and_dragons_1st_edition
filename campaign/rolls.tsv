@@ -11007,3 +11007,5 @@ when	exped	turn	notation	dice	modifier	total	hidden	reason
 2026-09-27			d6	2	0	2		B1 module door procedure (rules/b1-module.md), door (21,8,V), rolled once at examination: 1-2 locked, 3-6 opens
 2026-09-27			d2	1	0	1		which way this door swings, party's side: 1 toward the party, 2 away
 2026-09-27			d2	2	0	2		hinge side, facing the door from the party's side: 1 left, 2 right
+2026-09-27			d6	5	0	5		wandering check, anchor extra
+2026-09-27			d100	82	0	82		HIDDEN day 139 round ~28: Tristle picks the lock, Open Locks 35% (rules/thief.md)
