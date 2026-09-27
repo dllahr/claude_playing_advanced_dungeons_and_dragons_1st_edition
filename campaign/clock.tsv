@@ -1536,3 +1536,4 @@ when	exped	round	kind	anchor	detail	note
 2026-09-26	30	0	jitter		30:4,60:0,90:2,120:0,150:0,180:3,210:5,240:5,270:1,300:3,330:1,360:4,390:1,420:2,450:2,480:2,510:3,540:5,570:4,600:0,630:0,660:5,690:1,720:2,750:4,780:2,810:4,840:3,870:4,900:4,930:4,960:2,990:2,1020:3,1050:2,1080:1,1110:4,1140:0,1170:2,1200:3,1230:4,1260:0,1290:2,1320:4,1350:1,1380:3,1410:4,1440:4,1470:3,1500:1,1530:1,1560:3,1590:1,1620:2,1650:0,1680:1,1710:4,1740:2,1770:5,1800:0	rolled in advance and HIDDEN; each is reported when its check fires
 2026-09-27	30	8	advance		8	day 139: from the cave mouth to the head of the stair down in area 30, standard formation, Tristle 40 ft ahead
 2026-09-27	30	11	advance		3	day 139: down the stair of area 30 to the foot in area 38
+2026-09-27	30	13	advance		2	day 139: Tristle greets the gnomes of area 38 in gnomish; one steps to the edge of the light, told by Durnhak
