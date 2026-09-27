@@ -1510,3 +1510,7 @@ when	exped	round	kind	anchor	detail	note
 2026-09-26	29	43	advance		1	day 138: Tristle offers to withdraw and meet Durnhak at the appointed place if the gnome asks
 2026-09-26	29	46	advance		3	day 138: back along the walls of area 38 to the stair foot and up the stair to its head
 2026-09-26	29	54	advance		8	day 138: the orc arms taken up, standard formation out of area 30 to the cave mouth, Tristle 40 ft ahead
+2026-09-26	29	60	advance		6	day 138: back in from the cave mouth toward area 13, standard formation, Tristle 40 ft ahead
+2026-09-26	29	66	advance		6	day 138: on toward area 13, standard formation, Tristle 40 ft ahead
+2026-09-26	29	61	check	60	d6=6	anchor 60 + 1
+2026-09-26	29	70	advance		4	day 138: to the door of area 13 and in, standard formation
