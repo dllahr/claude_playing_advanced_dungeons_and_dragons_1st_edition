@@ -505,3 +505,4 @@ when	day	asset	verb	qty	unit	condition	holder	evidence	note
 2026-09-26	138	barrel_empty	move	8	each	sound	spread	-	TAKEN FROM AREA 13, day 138: the eight sound empty 36-gallon barrels (marks WT, LO, two worn past reading, SD, KB, CN, TV; WT, KB and CN mended by Ista and Tristle), rolled out to the cave mouth. The other three (VN, HM, PA) are rotted through and left.
 2026-09-26	138	camp_food	move	-0.48	person-week				dinner at the basecamp, day 138: ten mouths at a third of a person-day each
 2026-09-26	139	camp_food	move	-0.48	person-week				breakfast at the basecamp, day 139: ten mouths at a third of a person-day each
+2026-09-26	139	camp_food	move	-0.52	person-week				lunch at the watercourse, day 139: eleven mouths (the ten and Durnhak) at a third of a person-day each

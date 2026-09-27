@@ -1499,3 +1499,6 @@ when	day	who	asset	verb	qty	unit	note
 2026-09-26	139	basecamp	camp_food	move	-0.48	person-week	breakfast at the basecamp, day 139 (ten mouths)
 2026-09-26	139	basecamp	camp_food	move	-0.95	person-week	lunch packed for twenty (the party's ten and ten more) to take to the watercourse, day 139: 20 mouths at a third of a person-day, 6.67 person-days
 2026-09-26	139	party	camp_food	move	0.95	person-week	lunch for twenty carried to the watercourse, day 139 (133 gp-wt)
+2026-09-26	139	party	coin	move	-36	gp	the 36 gp paid to Durnhak at the watercourse, day 139
+2026-09-26	139	party	oil_flask	move	-1	each	one sealed flask given to Durnhak, day 139
+2026-09-26	139	party	camp_food	move	-0.52	person-week	lunch at the watercourse, day 139: ten of the party and Durnhak, eleven mouths at a third of a person-day each
