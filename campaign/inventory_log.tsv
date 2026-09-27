@@ -508,3 +508,6 @@ when	day	asset	verb	qty	unit	condition	holder	evidence	note
 2026-09-26	139	camp_food	move	-0.52	person-week				lunch at the watercourse, day 139: eleven mouths (the ten and Durnhak) at a third of a person-day each
 2026-09-27	139	long_sword	move	1.0	each	sound	spread	-	OFF THE ORC, day 139: weapons-carried table (bestiary/orc.md) d100=22, sword and spear. Salvage for Mund.
 2026-09-27	139	spear	move	1.0	each	sound	spread	-	OFF THE ORC, day 139: the same d100=22 roll, sword and spear.
+2026-09-27	139	sword_barbarian	move	1.0	each	sound	spread	-	TAKEN from area 39 MUSEUM, day 139, one of the north-wall mementoes.
+2026-09-27	139	plaque_chief	move	1.0	each	sound	spread	-	TAKEN from area 39 MUSEUM, day 139, off the skeleton.
+2026-09-27	139	letter_thanks	move	1.0	each	sound	spread	-	TAKEN from area 39 MUSEUM, day 139, the north-wall letter.
