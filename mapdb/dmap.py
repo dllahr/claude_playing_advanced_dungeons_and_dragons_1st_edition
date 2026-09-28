@@ -752,9 +752,10 @@ def walk_until(db, level, start, heading, max_squares=60):
     label data says and leaves the reading to the DM.
 
     Does not know about monsters, wandering or placed -- see `light_reach`
-    for what is visible from any cell this returns, and the (forthcoming)
-    stocking registry for what is actually there. Deliberately kept a pure
-    geometry query, the same separation `clock.py` and `mapdb` already keep.
+    for what is visible from any cell this returns, and
+    `tools/stocking.py`/`modules/private/b1_stocking.tsv` for what is
+    actually there. Deliberately kept a pure geometry query, the same
+    separation `clock.py` and `mapdb` already keep.
     """
     cells, edges = load(db, level)
     con = sqlite3.connect(db)

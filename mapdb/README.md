@@ -593,8 +593,10 @@ not as certain. See `mapdb/tests/test_walk.py` for the worked cases.
 **Deliberately knows nothing about monsters, wandering or placed.** Wandering
 checks stay exactly where they are, on `clock.py`'s round-based schedule,
 independent of geometry — `walk`'s square/foot count is what tells the DM
-how big a block to advance before the next check. Placed-monster visibility
-is a separate, later piece (a DM-only stocking registry, still to come) —
+how big a block to advance before the next check. Placed-monster presence
+lives in a separate, DM-only registry — `tools/stocking.py`, reading
+`modules/private/b1_stocking.tsv` — and `walk`/`light` are deliberately kept
+ignorant of it, the same separation `clock.py` and `mapdb` already keep —
 `walk` is kept a pure geometry query on purpose, the same separation
 `clock.py` and `mapdb` already keep.
 

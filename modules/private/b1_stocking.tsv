@@ -1,0 +1,122 @@
+# B1's stocked monster placement, event-sourced -- what is actually where.
+# DM-ONLY, same standing as B1_DM_NOTES_DO_NOT_READ.md and b1_wandering.tsv:
+# tracked, published, never quoted to the player.
+#
+# APPEND-ONLY. `stock` places an individual once, from the master stocking
+# table below (rolled 2026-08-15, never re-rolled -- see the DM notes'
+# opening section). `hp`/`move`/`flee`/`die` are logged as they happen in
+# play. Current position, hp and whether an individual still counts as
+# "there" are all computed by tools/stocking.py, never stored twice.
+#
+# monster_id is per INDIVIDUAL (troglodyte_41a, not "the troglodytes"), so a
+# wounded one that flees and is met again keeps its real remaining hp.
+#
+# area is the module's own room number, for citation back to the stocking
+# table; x,y is the mapdb placement (the room's anchor at `stock` time, its
+# real current cell after any move/flee).
+when	day	level	area	monster_id	monster	verb	x	y	hp	exped	round	duration	note
+2026-08-15	1	1	1	orc_1a	orc	stock	15	8	5			BACKFILLED from the master stocking table (rolled 2026-08-15): area 1 Alcoves, M7, Orcs (2-7), hp 5,5,4,4,3,2,1. Individual a of 7.
+2026-08-15	1	1	1	orc_1b	orc	stock	15	8	5			Individual b of 7.
+2026-08-15	1	1	1	orc_1c	orc	stock	15	8	4			Individual c of 7.
+2026-08-15	1	1	1	orc_1d	orc	stock	15	8	4			Individual d of 7.
+2026-08-15	1	1	1	orc_1e	orc	stock	15	8	3			Individual e of 7.
+2026-08-15	1	1	1	orc_1f	orc	stock	15	8	2			Individual f of 7.
+2026-08-15	1	1	1	orc_1g	orc	stock	15	8	1			Individual g of 7.
+2026-08-15	1	1	5	carrion_crawler_5a	carrion_crawler	stock	22	27	1			BACKFILLED: area 5 Wizard's Chamber, M6, Carrion Crawler (1); hp per the AD&D conversion notes elsewhere in the DM notes, not restated here -- check before use if this individual is ever met.
+2026-08-15	1	1	7	bandit_7a	bandit	stock	18	23	7			BACKFILLED: area 7 Wizard's Annex, M20, Bandits (1-4), hp 7,5,4,2. Individual a of 4.
+2026-08-15	1	1	7	bandit_7b	bandit	stock	18	23	5			Individual b of 4.
+2026-08-15	1	1	7	bandit_7c	bandit	stock	18	23	4			Individual c of 4.
+2026-08-15	1	1	7	bandit_7d	bandit	stock	18	23	2			Individual d of 4.
+2026-08-15	1	1	8	giant_rat_8a	giant_rat	stock	14	23	4			BACKFILLED: area 8 Wizard's Workroom, M17, Giant Rats (2-7), hp 4,3,3,2,2,1,1. Individual a of 7.
+2026-08-15	1	1	8	giant_rat_8b	giant_rat	stock	14	23	3			Individual b of 7.
+2026-08-15	1	1	8	giant_rat_8c	giant_rat	stock	14	23	3			Individual c of 7.
+2026-08-15	1	1	8	giant_rat_8d	giant_rat	stock	14	23	2			Individual d of 7.
+2026-08-15	1	1	8	giant_rat_8e	giant_rat	stock	14	23	2			Individual e of 7.
+2026-08-15	1	1	8	giant_rat_8f	giant_rat	stock	14	23	1			Individual f of 7.
+2026-08-15	1	1	8	giant_rat_8g	giant_rat	stock	14	23	1			Individual g of 7.
+2026-08-15	1	1	9	skeleton_9a	skeleton	stock	14	27	4			BACKFILLED: area 9 Wizard's Laboratory, M14, Skeletons (1-6), hp 4,4,3,3,2,1. Individual a of 6.
+2026-08-15	1	1	9	skeleton_9b	skeleton	stock	14	27	4			Individual b of 6.
+2026-08-15	1	1	9	skeleton_9c	skeleton	stock	14	27	3			Individual c of 6.
+2026-08-15	1	1	9	skeleton_9d	skeleton	stock	14	27	3			Individual d of 6.
+2026-08-15	1	1	9	skeleton_9e	skeleton	stock	14	27	2			Individual e of 6.
+2026-08-15	1	1	9	skeleton_9f	skeleton	stock	14	27	1			Individual f of 6.
+2026-08-15	1	1	11	orc_11a	orc	stock	5	28	8			BACKFILLED: area 11 Supply Room, M23, Orcs (2-7), hp 8,6,5,4,4,2,2. Individual a of 7.
+2026-08-15	1	1	11	orc_11b	orc	stock	5	28	6			Individual b of 7.
+2026-08-15	1	1	11	orc_11c	orc	stock	5	28	5			Individual c of 7.
+2026-08-15	1	1	11	orc_11d	orc	stock	5	28	4			Individual d of 7.
+2026-08-15	1	1	11	orc_11e	orc	stock	5	28	4			Individual e of 7.
+2026-08-15	1	1	11	orc_11f	orc	stock	5	28	2			Individual f of 7.
+2026-08-15	1	1	11	orc_11g	orc	stock	5	28	2			Individual g of 7.
+2026-08-15	1	1	12	orc_12a	orc	stock	9	32	5			BACKFILLED: area 12 Library, M1, Orcs (1-4), hp 5,4,3,2 -- squatters. Individual a of 4.
+2026-08-15	1	1	12	orc_12b	orc	stock	9	32	4			Individual b of 4.
+2026-08-15	1	1	12	orc_12c	orc	stock	9	32	3			Individual c of 4.
+2026-08-15	1	1	12	orc_12d	orc	stock	9	32	2			Individual d of 4.
+2026-08-15	1	1	18	crab_spider_18a	crab_spider	stock	4	18	6			BACKFILLED: area 18 Smithy, M8, Crab Spiders (1-2), hp 6,5. Individual a of 2.
+2026-08-15	1	1	18	crab_spider_18b	crab_spider	stock	4	18	5			Individual b of 2.
+2026-08-15	1	1	22	ghoul_22a	ghoul	stock	11	12	6			BACKFILLED: area 22 Garden Room, M4, Ghouls (1-2), hp 6,4 -- overgrown garden.
+2026-08-15	1	1	22	ghoul_22b	ghoul	stock	11	12	4			Individual b of 2.
+2026-08-15	1	1	32	giant_centipede_32a	giant_centipede	stock	31	19	2			BACKFILLED: area 32 Advisor's Chamber, M5, Giant Centipedes (1-4); the table's own hp column only gives 2,2 for a 4-count entry -- flagged AS IN THE SOURCE, not corrected. Individual a.
+2026-08-15	1	1	32	giant_centipede_32b	giant_centipede	stock	31	19	2			Individual b. Note the count/hp mismatch above; verify against the module page render if this area is ever resolved.
+2026-08-15	1	2	38	gnome_38a	gnome	stock	21	12	7			BACKFILLED: area 38 Access Room, M22, Gnomes (2-5), hp 7,5,4,2,1 -- parley possible. Individual a of 5 (Durnhak's group; Durnhak himself is not one of the five per the day-95 record, he is their contact and does not live in the room).
+2026-08-15	1	2	38	gnome_38b	gnome	stock	21	12	5			Individual b of 5.
+2026-08-15	1	2	38	gnome_38c	gnome	stock	21	12	4			Individual c of 5. One of the three met in the hall on day 139 is called "Harn" in play; not tied to a specific letter here.
+2026-08-15	1	2	38	gnome_38d	gnome	stock	21	12	2			Individual d of 5.
+2026-08-15	1	2	38	gnome_38e	gnome	stock	21	12	1			Individual e of 5.
+2026-08-15	1	2	41	troglodyte_41a	troglodyte	stock	19	4	10			BACKFILLED: area 41 Cavern, M9, Troglodytes (1-2), hp 10,4.
+2026-08-15	1	2	41	troglodyte_41b	troglodyte	stock	19	4	4			Individual b of 2.
+2026-08-15	1	2	42	black_widow_spider_42a	black_widow_spider	stock	15	8	13			BACKFILLED: area 42 Webbed Cave, M10, Black Widow Spider (1), hp 13 -- moved here from r45 per the DM notes' own correction.
+2026-08-15	1	2	48	gnoll_48a	gnoll	stock	15	26	13			BACKFILLED: area 48 Arena Cavern, M12, Gnolls (1-4), hp 13,7,6,3. Individual a of 4.
+2026-08-15	1	2	48	gnoll_48b	gnoll	stock	15	26	7			Individual b of 4.
+2026-08-15	1	2	48	gnoll_48c	gnoll	stock	15	26	6			Individual c of 4.
+2026-08-15	1	2	48	gnoll_48d	gnoll	stock	15	26	3			Individual d of 4.
+2026-08-15	1	2	49	hobgoblin_49a	hobgoblin	stock	25	16	9			BACKFILLED: area 49 Phosphorescent Cave, M15, Hobgoblins (2-5), hp 9,8,6,4,3. Individual a of 5.
+2026-08-15	1	2	49	hobgoblin_49b	hobgoblin	stock	25	16	8			Individual b of 5.
+2026-08-15	1	2	49	hobgoblin_49c	hobgoblin	stock	25	16	6			Individual c of 5.
+2026-08-15	1	2	49	hobgoblin_49d	hobgoblin	stock	25	16	4			Individual d of 5.
+2026-08-15	1	2	49	hobgoblin_49e	hobgoblin	stock	25	16	3			Individual e of 5.
+2026-08-15	1	2	50	ochre_jelly_50a	ochre_jelly	stock	27	34	16			BACKFILLED: area 50 Water Pit, M21, Ochre Jelly (1), hp 16.
+2026-08-15	1	2	51	kobold_51a	kobold	stock	31	27	4			BACKFILLED: area 51 Side Cavern, M19, Kobolds (2-5), hp 4,4,4,2,1. Individual a of 5.
+2026-08-15	1	2	51	kobold_51b	kobold	stock	31	27	4			Individual b of 5.
+2026-08-15	1	2	51	kobold_51c	kobold	stock	31	27	4			Individual c of 5.
+2026-08-15	1	2	51	kobold_51d	kobold	stock	31	27	2			Individual d of 5.
+2026-08-15	1	2	51	kobold_51e	kobold	stock	31	27	1			Individual e of 5.
+2026-08-15	1	2	52	crab_spider_52a	crab_spider	stock	32	34	7			BACKFILLED: area 52 Raised Cavern, M24, Crab Spider (1), hp 7.
+2026-08-15	1	2	53	kobold_53a	kobold	stock	23	40	4			BACKFILLED: area 53 Grand Cavern of the Bats, M3, Kobolds (2-9), hp 4,4,3,3,3,3,2,2,1. Individual a of 9.
+2026-08-15	1	2	53	kobold_53b	kobold	stock	23	40	4			Individual b of 9.
+2026-08-15	1	2	53	kobold_53c	kobold	stock	23	40	3			Individual c of 9.
+2026-08-15	1	2	53	kobold_53d	kobold	stock	23	40	3			Individual d of 9.
+2026-08-15	1	2	53	kobold_53e	kobold	stock	23	40	3			Individual e of 9.
+2026-08-15	1	2	53	kobold_53f	kobold	stock	23	40	3			Individual f of 9.
+2026-08-15	1	2	53	kobold_53g	kobold	stock	23	40	2			Individual g of 9.
+2026-08-15	1	2	53	kobold_53h	kobold	stock	23	40	2			Individual h of 9.
+2026-08-15	1	2	53	kobold_53i	kobold	stock	23	40	1			Individual i of 9.
+2026-09-28				carrion_crawler_5a		die							day~50ish, expedition 4 round 1503: broke and fled at 2 hp after being cornered, then finished. See DM notes L1644 (flees) and L1770 (killed).
+2026-09-28				bandit_7a		die							Never fought -- the four bandits of area 7 were parleyed, not stocked-monster combat. Kell (one of the four) was already dead before contact, killed by the area-5 carrion crawler, not the party. Hask and Dellie are these two, now party members; Corm and Sarn are named NPCs. Removed from the stocked-monster pool; see campaign/people.tsv and interactions.tsv for their actual ongoing roles, not this file.
+2026-09-28				bandit_7b		die							Never fought -- the four bandits of area 7 were parleyed, not stocked-monster combat. Kell (one of the four) was already dead before contact, killed by the area-5 carrion crawler, not the party. Hask and Dellie are these two, now party members; Corm and Sarn are named NPCs. Removed from the stocked-monster pool; see campaign/people.tsv and interactions.tsv for their actual ongoing roles, not this file.
+2026-09-28				bandit_7c		die							Never fought -- the four bandits of area 7 were parleyed, not stocked-monster combat. Kell (one of the four) was already dead before contact, killed by the area-5 carrion crawler, not the party. Hask and Dellie are these two, now party members; Corm and Sarn are named NPCs. Removed from the stocked-monster pool; see campaign/people.tsv and interactions.tsv for their actual ongoing roles, not this file.
+2026-09-28				bandit_7d		die							Never fought -- the four bandits of area 7 were parleyed, not stocked-monster combat. Kell (one of the four) was already dead before contact, killed by the area-5 carrion crawler, not the party. Hask and Dellie are these two, now party members; Corm and Sarn are named NPCs. Removed from the stocked-monster pool; see campaign/people.tsv and interactions.tsv for their actual ongoing roles, not this file.
+2026-09-28				crab_spider_18a		die							Day 95, expedition 11, area 18 the smithy: BOTH crab spiders killed in the surprise segment, no damage taken. See bestiary/crab-spider.md's own play record.
+2026-09-28				crab_spider_18b		die							Day 95, expedition 11: killed alongside crab_spider_18a in the same surprise segment. See bestiary/crab-spider.md.
+2026-09-28				ghoul_22a		die							Ghoul A (hp6) dead by round 419; Ghoul B (hp4) alerted round 456 and killed same day. Reconfirmed empty on days 124 and 138. See world_changes.tsv and the day-119/124/138 DM notes.
+2026-09-28				ghoul_22b		die							Ghoul A (hp6) dead by round 419; Ghoul B (hp4) alerted round 456 and killed same day. Reconfirmed empty on days 124 and 138. See world_changes.tsv and the day-119/124/138 DM notes.
+2026-09-28				orc_11a		die							Day 118 (world_changes.tsv round 307, expedition 14): 'all seven stocked orcs (M23) killed asleep.' Room confirmed cleared and empty again on day 119 round 12 (Yrtone triggers the pressure plate, room empty).
+2026-09-28				orc_11b		die							Day 118 (world_changes.tsv round 307, expedition 14): 'all seven stocked orcs (M23) killed asleep.' Room confirmed cleared and empty again on day 119 round 12 (Yrtone triggers the pressure plate, room empty).
+2026-09-28				orc_11c		die							Day 118 (world_changes.tsv round 307, expedition 14): 'all seven stocked orcs (M23) killed asleep.' Room confirmed cleared and empty again on day 119 round 12 (Yrtone triggers the pressure plate, room empty).
+2026-09-28				orc_11d		die							Day 118 (world_changes.tsv round 307, expedition 14): 'all seven stocked orcs (M23) killed asleep.' Room confirmed cleared and empty again on day 119 round 12 (Yrtone triggers the pressure plate, room empty).
+2026-09-28				orc_11e		die							Day 118 (world_changes.tsv round 307, expedition 14): 'all seven stocked orcs (M23) killed asleep.' Room confirmed cleared and empty again on day 119 round 12 (Yrtone triggers the pressure plate, room empty).
+2026-09-28				orc_11f		die							Day 118 (world_changes.tsv round 307, expedition 14): 'all seven stocked orcs (M23) killed asleep.' Room confirmed cleared and empty again on day 119 round 12 (Yrtone triggers the pressure plate, room empty).
+2026-09-28				orc_11g		die							Day 118 (world_changes.tsv round 307, expedition 14): 'all seven stocked orcs (M23) killed asleep.' Room confirmed cleared and empty again on day 119 round 12 (Yrtone triggers the pressure plate, room empty).
+2026-09-28				orc_12a		die							Day 99: four orc squatters (M1, hp 5,4,3,2) dead in the first surprise segment. See DM notes L4543-4545.
+2026-09-28				orc_12b		die							Day 99: four orc squatters (M1, hp 5,4,3,2) dead in the first surprise segment. See DM notes L4543-4545.
+2026-09-28				orc_12c		die							Day 99: four orc squatters (M1, hp 5,4,3,2) dead in the first surprise segment. See DM notes L4543-4545.
+2026-09-28				orc_12d		die							Day 99: four orc squatters (M1, hp 5,4,3,2) dead in the first surprise segment. See DM notes L4543-4545.
+2026-09-28				skeleton_9a		die							Day 46 (expedition 7, round 87-89): THREE DESTROYED in melee at the area-9 doorway bottleneck. See world_changes.tsv round 89.
+2026-09-28				skeleton_9b		die							Day 46 (expedition 7, round 87-89): THREE DESTROYED in melee at the area-9 doorway bottleneck. See world_changes.tsv round 89.
+2026-09-28				skeleton_9c		die							Day 46 (expedition 7, round 87-89): THREE DESTROYED in melee at the area-9 doorway bottleneck. See world_changes.tsv round 89.
+2026-09-28				skeleton_9d		die							Day 46, round 89: turned by Blartho (12 v 10, 2d6=10 affected of 3 remaining, so all three; passive 3d4=6 rounds, area 9 is a dead end so they could not flee). Ultimate fate NOT explicitly recorded after that -- INFERRED finished off shortly after, since the party returned to this exact dead-end room twice more (day 70, day 79) with no further skeleton mention. Flagged as inference, not a citation; revisit if area 9 is ever relevant again.
+2026-09-28				skeleton_9e		die							Day 46, round 89: turned by Blartho (12 v 10, 2d6=10 affected of 3 remaining, so all three; passive 3d4=6 rounds, area 9 is a dead end so they could not flee). Ultimate fate NOT explicitly recorded after that -- INFERRED finished off shortly after, since the party returned to this exact dead-end room twice more (day 70, day 79) with no further skeleton mention. Flagged as inference, not a citation; revisit if area 9 is ever relevant again.
+2026-09-28				skeleton_9f		die							Day 46, round 89: turned by Blartho (12 v 10, 2d6=10 affected of 3 remaining, so all three; passive 3d4=6 rounds, area 9 is a dead end so they could not flee). Ultimate fate NOT explicitly recorded after that -- INFERRED finished off shortly after, since the party returned to this exact dead-end room twice more (day 70, day 79) with no further skeleton mention. Flagged as inference, not a citation; revisit if area 9 is ever relevant again.
+2026-09-28				gnoll_48a		die							Day 99: the hp-13 gnoll, found alone far from area 48 (a scout), killed. See DM notes L4460/L4501-4503. The other three (b,c,d) are NOT confirmed dead -- a day-139 gnome report says 'four in the key, three left,' consistent with this kill and no other.
+2026-09-28				troglodyte_41a		die							Day 139 round 155: the hp-10 troglodyte, killed by the readied volley (14 dmg v 10 hp), the second of the two encountered.
+2026-09-28				troglodyte_41b		die							Day 139 round 152: the hp-4 troglodyte, killed by the first volley (13 dmg v 4 hp).
+2026-09-28				black_widow_spider_42a		die							Day 139: put to sleep by Frython then killed automatically per the day-139 sleep ruling; never woke.

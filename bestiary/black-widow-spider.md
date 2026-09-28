@@ -16,9 +16,21 @@ poison, MV 60' (20'), in web 120' (40'), Save F2, ML8."* Full B1 pdf p.100+
 | Damage | 2-12 + poison |
 | Save As | Fighter 2 |
 | Morale | 8 |
+| Treasure Type | Nil |
+| Surprised On | 2 |
+| Surprises On | 2 |
+| Alignment | Chaotic evil |
+| Size | S |
 
-*source: B1, In Search of the Unknown, the back-matter wandering monster list,
-entry 10, read 2026-09-27.*
+*source: B1, In Search of the Unknown, the back-matter wandering monster list, entry 10, cross-checked against the **Monster Manual** p.90 SPIDER entries for everything B1's line does not print, read 2026-09-27.
+Treasure Type Nil
+because B1 gives this individual none (area 42's own room treasure, FF, is
+separate). Surprised/Surprises On standard (2), NOT the MM huge spider's
+enhanced 1-5 — that trait belongs to a different creature (used for B1's
+*crab spiders* instead) and does not carry over here; this is the exact
+correction made mid-resolution on day 139, see the play record below.
+Alignment and Size are a DM estimate matching the MM's small ambush spiders
+generally, not read off any B1 or MM line specific to this creature.*
 
 **Does not match either MM spider used elsewhere in this bestiary.** It is
 closer in flavour to the MM's **GIANT SPIDER** (a web-builder that traps prey

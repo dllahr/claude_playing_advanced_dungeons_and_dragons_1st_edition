@@ -191,8 +191,14 @@ def test_roster_itemises_every_person_and_names_the_unweighed():
 
 
 def test_roster_says_so_when_somebody_carries_nothing_of_their_own():
-    """Brand signed on for no money and arrived with his own axe."""
-    assert 'nothing of his own' in carry.roster()
+    """A live-state script, not a fixture -- it is UPDATED as play moves the
+    manifest, not converted away from checking the real file (see the note
+    above this section). Brand carried nothing of his own from day 95 until
+    day 139, when he took up his own axe again plus three salvaged orc axes
+    as ammunition; the roster now itemises them instead of saying so."""
+    out = carry.roster()
+    assert 'Brand' in out and 'nothing of his own' not in out.split('Brand')[1]
+    assert 'hand_axe' in out
 
 
 # ------------------------------------------------- where: the complement of roster

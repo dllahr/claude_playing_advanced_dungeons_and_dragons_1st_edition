@@ -87,8 +87,9 @@ the right boundary and mention it in a line if it is worth knowing.
 
   > ### THE REPO IS PUBLIC AND THE DM NOTES ARE IN IT — SETTLED, DO NOT RE-RAISE
   >
-  > `modules/B1_DM_NOTES_DO_NOT_READ.md`, `modules/private/b1_wandering.tsv` and
-  > the B1 level-1 map PNG are tracked and published. **This was flagged and the
+  > `modules/B1_DM_NOTES_DO_NOT_READ.md`, `modules/private/b1_wandering.tsv`,
+  > `modules/private/b1_stocking.tsv` and the B1 level-1 map PNG are tracked and
+  > published. **This was flagged and the
   > player decided: the repo stays public and he will not read the notes.**
   >
   > **Nothing about this relaxes CHECKLIST §8.** The player choosing not to look
@@ -548,6 +549,7 @@ DM to tell the player their spikes were in a door they had already recovered the
 | `tools/recall.py` | **every logged event for one character, across all seven TSVs, in order.** `python tools/recall.py Ista --exped 6`. **Run it before narrating anybody's past** — the prose files are an index, the TSVs are the evidence |
 | **`tools/offscreen.py`** | **WHAT THE NPCs DO WHILE THE PARTY IS ELSEWHERE.** `campaign/agendas.tsv` holds one row per NPC task on a **weekly** cadence with its outcome table **written down before the first roll**; `tick` rolls what has come due (through `dice.py`, so every roll is in `rolls.tsv`) into `campaign/offscreen.tsv`. **`log.py day` runs it on every new day**, so a day cannot open without the queue catching up, and it prints a COUNT only. **THE NEWS IS HIDDEN UNTIL THE PARTY MEETS THE PERSON (player's ruling, day 135): run `offscreen.py news --who NAME` when they do, tell it in the person's voice, then `deliver`.** Never read out a waiting tick early. `brief.py` shows counts, never content. `close`/`pause` an agenda when a loop closes. Built because Wend's queue sat at OVERDUE 110 for two weeks: an NPC who only moves when asked is not a person |
 | **`tools/account.py`** | **RUNNING ACCOUNTS WITH NPCs, computed from `campaign/accounts.tsv`.** Positive = the NPC owes the party. The first is **`holt`** (loop L065): goods sold on a schedule, coin now, a **tab** at the Inn (board and ale come off the balance a night at a time) and 40 gp a month. **A tab or credit is not coin and does not touch `money.tsv`; coin paid does.** Never quote the balance from a note |
+| **`tools/stocking.py`** | **B1's stocked monster placement, computed from `modules/private/b1_stocking.tsv`.** DM-only, same standing as the DM notes and `b1_wandering.tsv` — tracked, published, never quoted to the player. Append-only per INDIVIDUAL (`troglodyte_41a`, not "the troglodytes"), so a wounded one that flees keeps its real remaining hp if met again. `status`/`at` are the read side; `stock`/`hp`/`move`/`flee`/`die` are the write side. **`flee` gives a limited findable window** (rounds, expires on a change of day or expedition regardless of the exact count) rather than the individual vanishing — built after the orcs that ran from (4,19) on level 1 forced a retcon (an invented passage) because there was nowhere real for them to have gone. Backfilled day 139 from the master stocking table (rolled once, 2026-08-15, never re-rolled) and cross-checked against `world_changes.tsv`/`bestiary/` for what has actually been resolved in play so far |
 | `tools/tsvlog.py` | the shared TSV reader every other tool uses; not run directly |
 
 `bestiary/` holds one markdown file per creature in the same pipe-table format, with
