@@ -5404,3 +5404,6 @@ Missiles recovered (no breakage), the two troglodyte bodies searched: NOTHING (M
 
 ## Day 139 rounds 220-224 -- west to the last dark corner of area 41
 40 ft, four rounds, nothing fired. The whole of area 41 is now seen (25 of 25). Beyond it to the west the cavern continues, unlabeled ground opening further on, trending toward area 42 (the webbed cave, per Harn's account the one place with the black spider that took one of Durnhak's people -- NOT volunteered to the player, only the sight of open ground continuing). Nothing living in view from here.
+
+## Day 139 rounds 224-228 -- further west into open cavern
+40 ft, four rounds, nothing fired. Still the same unworked natural cave, wider than a corridor, no boundary reached yet in any direction the lantern shows. Nothing living seen or heard.
