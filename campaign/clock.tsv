@@ -1588,3 +1588,6 @@ when	exped	round	kind	anchor	detail	note
 2026-09-27	30	253	advance		1	day 139: sleep lands, the spider is slain in its sleep, never fights back
 2026-09-27	30	263	advance		10	day 139: lighting the oil-soaked webbing (a turn of work, not a round, per the standing damp-air ruling)
 2026-09-27	30	264	advance		1	day 139: the party backs off 20 ft as the web catches
+2026-09-27	30	254	correct		-10	the player pointed out the party already had a lit lantern in hand; touching an open flame directly to oil-soaked webbing ignites in a round, not the full turn the damp-air rule reserves for kindling a fire from scratch
+2026-09-27	30	255	advance		1	day 139: the web ignites at once from the lit lantern's own flame; the party backs off 20 ft to (13,7) as it catches
+2026-09-27	30	258	advance		3	day 139: the watch, Brand and Hask facing west, the rest with missile weapons facing east, watching the fire
