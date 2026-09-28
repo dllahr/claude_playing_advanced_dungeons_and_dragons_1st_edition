@@ -7,12 +7,48 @@ orcs that ran west at (4,19) on level 1 and were "gone" when the party
 followed.
 """
 import os
+import sqlite3
 import sys
 
 import pytest
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 import stocking as stk                                            # noqa: E402
+
+MAPDB = os.path.join(stk.ROOT, 'mapdb')
+sys.path.insert(0, MAPDB)
+import dmap                                                        # noqa: E402
+
+
+def make_db(tmp_path, cells, edges, level=2):
+    """`cells`: {(x,y): terrain}. `edges`: {(x,y,orient): kind}."""
+    schema = os.path.join(MAPDB, 'schema.sql')
+    db = str(tmp_path / 'stocking_map.sqlite')
+    con = sqlite3.connect(db)
+    con.executescript(open(schema).read())
+    con.execute('INSERT INTO levels (level,name) VALUES (?,?)', (level, 'test'))
+    for (x, y), terrain in cells.items():
+        con.execute('INSERT INTO cells (level,x,y,terrain,confidence)'
+                    ' VALUES (?,?,?,?,10)', (level, x, y, terrain))
+    for (x, y, o), kind in edges.items():
+        con.execute('INSERT INTO edges (level,x,y,orient,kind,confidence)'
+                    ' VALUES (?,?,?,?,?,10)', (level, x, y, o, kind))
+    con.commit(); con.close()
+    return db
+
+
+def corridor(n):
+    """A straight open corridor (0,0)..(n,0)."""
+    cells = {(x, 0): 'open' for x in range(n + 1)}
+    edges = {(x, 0, 'V'): 'open' for x in range(n)}
+    return cells, edges
+
+
+def scripted_roller(*picks):
+    """A roller that returns each of `picks` in turn, ignoring notation --
+    for tests that need a KNOWN sequence of choices rather than real dice."""
+    it = iter(picks)
+    return lambda notation, reason: next(it)
 
 
 @pytest.fixture
@@ -161,6 +197,91 @@ def test_flee_requires_a_duration(log):
 def test_an_unknown_verb_is_refused(log):
     with pytest.raises(ValueError):
         stk.record('x', 'wander', path=log)
+
+
+# ---------------------------------------------------------------- random_walk
+
+def test_random_walk_stops_at_a_dead_end_within_budget(tmp_path):
+    cells, edges = corridor(3)
+    db = make_db(tmp_path, cells, edges)
+    c, e = dmap.load(db, 2)
+    end, _path, feet, reason = stk.random_walk(
+        c, e, (0, 0), feet_budget=999, roller=lambda n, r: 1)
+    assert reason == 'dead_end'
+    assert end == (3, 0)
+    assert feet == 30
+
+
+def test_random_walk_stops_when_the_budget_runs_out(tmp_path):
+    cells, edges = corridor(20)
+    db = make_db(tmp_path, cells, edges)
+    c, e = dmap.load(db, 2)
+    end, path, feet, reason = stk.random_walk(
+        c, e, (0, 0), feet_budget=50, roller=lambda n, r: 1)
+    assert reason == 'budget'
+    assert feet == 50
+    assert end == (5, 0)
+
+
+def test_random_walk_does_not_roll_a_single_exit_step(tmp_path):
+    """No real choice, no die -- same reasoning `dmap.walk_until` uses."""
+    cells, edges = corridor(3)
+    db = make_db(tmp_path, cells, edges)
+    c, e = dmap.load(db, 2)
+
+    def refuse(notation, reason):
+        raise AssertionError('should not have rolled: %s' % reason)
+
+    end, _path, _feet, reason = stk.random_walk(c, e, (0, 0), 999, refuse)
+    assert reason == 'dead_end' and end == (3, 0)
+
+
+def test_random_walk_uses_the_roller_at_a_real_junction(tmp_path):
+    cells, edges = corridor(4)
+    cells[(2, 1)] = 'open'
+    edges[(2, 0, 'H')] = 'open'
+    db = make_db(tmp_path, cells, edges)
+    c, e = dmap.load(db, 2)
+    # two single-exit steps reach (2,0) unrolled; only THAT junction rolls.
+    # options there are N->(2,1) and E->(3,0), in DIRS' own order (N, E)
+    end, _path, _feet, _reason = stk.random_walk(
+        c, e, (0, 0), feet_budget=30, roller=scripted_roller(1))
+    assert end == (2, 1), 'picking option 1 of 2 (N) at the junction'
+
+
+# -------------------------------------------------------------- simulate_flee
+
+def test_simulate_flee_moves_it_and_records_a_flee_event(tmp_path, log):
+    cells, edges = corridor(10)
+    db = make_db(tmp_path, cells, edges)
+    stock(log, 'troglodyte_41a', x=0, y=0)
+    out = stk.simulate_flee(
+        'troglodyte_41a', feet_per_turn=120, db=db, day=5, exped=9, rnd=100,
+        roller=scripted_roller(2, 3), path=log)  # duration d3=2 turns, jitter d4=3
+    st = stk.state(path=log)['troglodyte_41a']
+    assert st['flee_at'] is not None
+    assert 'flees' in out
+
+    # 2 turns * 120 ft/turn = 240 ft = 24 squares along a 10-square corridor
+    # -> stops at the dead end, x=10
+    assert (st['x'], st['y']) == (10, 0)
+
+    # linger = (5 + 3) * 10 = 80 rounds
+    now_in = (5, 9, 100 + 79)
+    now_out = (5, 9, 100 + 80)
+    assert stk.at(2, 10, 0, now=now_in, path=log) == ['troglodyte_41a']
+    assert stk.at(2, 10, 0, now=now_out, path=log) == []
+
+
+def test_simulate_flee_refuses_an_unknown_or_dead_individual(tmp_path, log):
+    with pytest.raises(ValueError):
+        stk.simulate_flee('nobody', 90, db=make_db(tmp_path, *corridor(3)),
+                          path=log)
+    stock(log, 'troglodyte_41a')
+    stk.record('troglodyte_41a', 'die', day=1, path=log)
+    with pytest.raises(ValueError):
+        stk.simulate_flee('troglodyte_41a', 90,
+                          db=make_db(tmp_path, *corridor(3)), path=log)
 
 
 # --------------------------------------------------------------- the real file

@@ -704,10 +704,12 @@ STOP_JUNCTION, STOP_DEAD_END, STOP_AREA, STOP_FEATURE, STOP_CAPPED = (
     'junction', 'dead_end', 'area_boundary', 'feature', 'capped')
 
 
-def _exits(cell, edges, came_from=None):
-    """[(dir, neighbour)] -- every WALKABLE, PASSABLE exit from `cell`,
-    excluding the direction just arrived from. Does not check whether the
-    neighbour cell itself exists in `cells`; callers do that."""
+def exits(cell, edges, came_from=None):
+    """[(dir, neighbour)] -- every PASSABLE exit from `cell`, excluding the
+    direction just arrived from. Does not check whether the neighbour cell
+    itself exists in `cells` or is WALKABLE terrain; callers do that (see
+    `walk_until` and `tools/stocking.py`'s flee simulator, both of which
+    filter this against `cells` themselves). Public because both need it."""
     out = []
     for d, dx, dy, ef in DIRS:
         n = (cell[0] + dx, cell[1] + dy)
@@ -801,7 +803,7 @@ def walk_until(db, level, start, heading, max_squares=60):
         if feat:
             return {'path': path, 'stop': STOP_FEATURE,
                     'why': '%s at (%d,%d)' % (feat, *cur)}
-        options = [(d, n) for d, n in _exits(cur, edges, came_from)
+        options = [(d, n) for d, n in exits(cur, edges, came_from)
                    if n in cells and cells[n][0] in WALKABLE]
         if not options:
             return {'path': path, 'stop': STOP_DEAD_END,

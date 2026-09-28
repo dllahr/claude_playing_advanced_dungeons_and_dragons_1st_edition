@@ -10,6 +10,8 @@
     python tools/stocking.py flee   --id troglodyte_41a --x 17 --y 3 \\
         --duration 32 --note "panicked west at the junction, d6=2"
     python tools/stocking.py die    --id troglodyte_41a --note "..."
+    python tools/stocking.py simulate --id troglodyte_41a --feet-per-turn 120 \\
+        --note "broke off when Torsat dropped its packmate"
 
 **DM-ONLY, same standing as `modules/B1_DM_NOTES_DO_NOT_READ.md` and
 `modules/private/b1_wandering.tsv`.** Tracked, published, never quoted to the
@@ -50,9 +52,23 @@ one expedition's clock.
 **GENERAL-PURPOSE, not flee-specific.** `move`/`flee`/`hp` apply to any
 stocked individual, not only ones running from the party -- a wounded
 creature that limps off, a patrol repositioned by DM judgement, anything.
-Ambient, undisturbed movement (a monster wandering its home area on no
-particular schedule) is deliberately NOT built here yet; an untouched
-individual stays exactly where `stock` put it until some event moves it.
+
+**`simulate` is the dice-driven mover, also general-purpose.** Give it an
+individual and its own move rate (from `bestiary/`, the DM's to supply --
+this does not look it up) and it walks the REAL map from wherever that
+individual currently is: `dmap.random_walk` picks uniformly at random among
+the walkable exits at every junction (excluding only the square just left,
+same as a panicked animal not doubling straight back), for a dice-rolled
+1d3 turns at that move rate, stopping early at a dead end. It then rolls the
+linger window (5+1d4 turns) and records the whole thing as one `flee`
+event -- built for exactly the case that forced a retcon once already, the
+orcs that ran from (4,19) on level 1 and were simply "gone" when the party
+followed, because there was nowhere real on the map for them to have gone.
+Not limited to actual flight -- anything that needs a real, dice-decided
+position can use it. Ambient, UNDISTURBED movement (a monster wandering its
+home area on no particular schedule, with nothing having provoked it) is
+deliberately NOT built here yet; an untouched individual stays exactly
+where `stock` put it until some event -- a `simulate` among them -- moves it.
 """
 import argparse
 import os
@@ -63,6 +79,8 @@ from tsvlog import append, read_tsv, today                        # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 LOG = os.path.join(ROOT, 'modules', 'private', 'b1_stocking.tsv')
+B1_DB = os.path.join(ROOT, 'mapdb', 'output', 'b1', 'b1.sqlite')
+sys.path.insert(0, os.path.join(ROOT, 'mapdb'))  # for `import dmap`
 
 VERBS = ('stock', 'hp', 'move', 'flee', 'die')
 
@@ -191,6 +209,95 @@ def record(monster_id, verb, level=None, area=None, monster=None,
 
 
 # --------------------------------------------------------------------------
+# movement -- general-purpose, not flee-specific; walks ANY stocked
+# individual across the real map with the dice deciding every junction
+# --------------------------------------------------------------------------
+
+def _default_roller():
+    import dice as dicemod
+    return lambda notation, reason: dicemod.roll(notation, reason=reason).total
+
+
+def random_walk(cells, edges, start, feet_budget, roller):
+    """A dice-driven walk from `start`: at every step, choose uniformly at
+    random among the walkable, non-backtrack exits (excluding only the
+    square just left, same as a panicked animal not doubling straight back
+    on itself) and take it, until the feet budget runs out or a dead end is
+    reached. A single-exit step is not rolled -- there is no real choice in
+    it, same reasoning `dmap.walk_until` uses for the party.
+
+    Returns (end_cell, path, feet_used, reason) -- `reason` is 'dead_end' or
+    'budget'. `roller(notation, reason) -> int` is `dice.roll(...).total` by
+    default, swappable for tests."""
+    import dmap
+    path = [start]
+    came_from, cur, feet_used = None, start, 0
+    while feet_used < feet_budget:
+        options = [(d, n) for d, n in dmap.exits(cur, edges, came_from)
+                  if n in cells and cells[n][0] in dmap.WALKABLE]
+        if not options:
+            return cur, path, feet_used, 'dead_end'
+        if len(options) == 1:
+            pick = options[0]
+        else:
+            i = roller('d%d' % len(options),
+                      'panicked flight: %d-way choice at (%d,%d)'
+                      % (len(options), *cur))
+            pick = options[max(1, min(len(options), i)) - 1]
+        came_from, cur = cur, pick[1]
+        path.append(cur)
+        feet_used += dmap.FEET_PER_SQUARE
+    return cur, path, feet_used, 'budget'
+
+
+def simulate_flee(monster_id, feet_per_turn, db=None, day=None, exped=None,
+                  rnd=None, roller=None, note='', path=None,
+                  duration_die='d3', linger_base_turns=5,
+                  linger_jitter_die='d4'):
+    """Simulate one stocked, live individual bolting from wherever it
+    currently is: a dice-rolled number of turns (default 1d3) of panicked,
+    dice-driven movement at its OWN move rate (`feet_per_turn` -- the DM's
+    to supply, from its bestiary entry; not looked up here), stopping early
+    at a dead end. Then a dice-rolled LINGER window (default 5 + 1d4 turns)
+    during which it is genuinely findable at the cell it stopped at, before
+    the `flee` event's own expiry logic (see `_fled_expired`) retires it.
+
+    Built for exactly the case that forced a retcon once already: orcs that
+    ran from (4,19) on level 1 and were simply "gone" when the party
+    followed, because there was nowhere real on the map for them to have
+    gone. This walks the real graph, so wherever it ends up is a real,
+    reachable square.
+
+    Records a `flee` event and returns a human-readable report. Raises if
+    the individual is unknown or already dead."""
+    import dmap
+    roller = roller or _default_roller()
+    cur = state(path=path).get(monster_id)
+    if cur is None or not cur['alive']:
+        raise ValueError('%s is not a known, live, stocked individual'
+                         % monster_id)
+    cells, edges = dmap.load(db or B1_DB, cur['level'])
+    turns = roller(duration_die, '%s panics: how many turns it flees'
+                                 % monster_id)
+    end, walked, feet_used, reason = random_walk(
+        cells, edges, (cur['x'], cur['y']), turns * feet_per_turn, roller)
+    jitter = roller(linger_jitter_die,
+                    '%s: linger window jitter' % monster_id)
+    linger_rounds = (linger_base_turns + jitter) * 10
+    full_note = ('%s. ' % note if note else '') + (
+        'fled %d turn(s) (%d ft) at %d ft/turn, stopped by %s at (%d,%d); '
+        '%d-round linger window (5+%d turns); path %s'
+        % (turns, feet_used, feet_per_turn, reason, end[0], end[1],
+           linger_rounds, jitter, walked))
+    record(monster_id, 'flee', x=end[0], y=end[1], duration=linger_rounds,
+          day=day, exped=exped, rnd=rnd, note=full_note, path=path)
+    return ('%s flees %d turn(s) (%d ft), stops (%s) at (%d,%d). Findable '
+           'there for %d more round(s) of this expedition, this day.'
+           % (monster_id, turns, feet_used, reason, end[0], end[1],
+              linger_rounds))
+
+
+# --------------------------------------------------------------------------
 # reports
 # --------------------------------------------------------------------------
 
@@ -256,6 +363,14 @@ def build_parser():
                     help='rounds the flee window lasts')
 
     common_write('die', 'remove from what present()/at() will ever return')
+
+    sm = sub.add_parser('simulate', help='dice-driven flight from wherever '
+                        'this individual currently is, walking the real map')
+    sm.add_argument('--id', dest='monster_id', required=True)
+    sm.add_argument('--feet-per-turn', type=int, required=True,
+                    help="the creature's own MV, from its bestiary entry")
+    sm.add_argument('--note', default='')
+    sm.add_argument('--day', type=int)
     return p
 
 
@@ -268,6 +383,13 @@ def main(argv=None):
         now = None if a.ignore_clock else current_now()
         found = at(a.level, a.x, a.y, now)
         print(', '.join(found) if found else '(nobody there)')
+        return 0
+    if a.cmd == 'simulate':
+        day, exped, rnd = current_now()
+        if a.day:
+            day = a.day
+        print(simulate_flee(a.monster_id, a.feet_per_turn, day=day,
+                            exped=exped, rnd=rnd, note=a.note))
         return 0
     day, exped, rnd = (None, None, None)
     if a.cmd in ('stock', 'move', 'flee'):
