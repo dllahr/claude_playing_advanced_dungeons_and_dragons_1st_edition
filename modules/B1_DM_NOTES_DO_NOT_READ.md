@@ -5439,3 +5439,6 @@ Three turns waited. Anchor-270 fired at round 271, d6=6: silent, nothing. By rou
 
 ## Day 139 round 290 -- back at the mouth of area 42, scanning (no search declared yet)
 Nothing declared as a search; general approach only. Reported: a small chamber, blackened, the last of the web burned to ash and char draped over the walls in places, the spider's body a shrunken, blackened husk. Smoke still thin in the air. NOT VOLUNTEERED: the module's treasure (FF, 4 small gold rods, 30 gp each) -- waits on an actual search.
+
+## Day 139 round 300 -- Tristle finds the gold rods (module treasure, revealed)
+One turn's search, the rest guarding, scanning both directions and the ceiling. B1's own treasure for area 42 (FF): 4 small gold rods, 30 gp each. Found in the ash and debris round the body, untouched by the fire (metal). Booked (assets.tsv gold_rod_small, 10 gp-weight, a DM call). Anchor-300 not yet fired (jitter pending). Nothing else found; no dice needed, the fire already cleared any concealment.
