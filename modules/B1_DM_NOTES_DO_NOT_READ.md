@@ -5416,3 +5416,6 @@ Party cautiously to (11,7), adjacent. Is the black widow (area 42's stocked mons
 
 ## Day 139 rounds 242-245 -- Tristle scouts alone toward area 42 (HIDDEN ROLLS)
 Alone, no light, infravision (party's lantern stays at 11,7 with the others, out of the 30 ft washout once he's clear of it). Move Silently: d100=77 v 30%: FAILED. Does the spider notice? d6=3 (1-3 yes): ALERTED -- it has heard something and, being an ambush hunter, holds still rather than showing itself or fleeing. Tristle reaches the edge of area 42 (via (13,8) then (14,8); the direct y=7 row is walled at (14,7)) and looks in from (14,8), adjacent to the webbed cave's mouth at (15,8). Per the new cold-blooded ruling (rules/exploration.md): infravision shows the ROOM's shape (the DMG p.59 dark-cloudy-night reading) -- a mass of webbing filling the small chamber, thick strands crossing the entrance, the walls and floor of it -- but NO warm or cold signature stands out, so whether the spider is in there right now cannot be told by heat alone. Nothing moves that he can see. He does not know he has been heard.
+
+## Day 139 rounds 245-248 -- Tristle returns to the party (no dice)
+The alerted spider stays put (an ambush hunter, it does not chase what has not come to it). Tristle withdraws the way he came, unmolested, and rejoins the party at (11,7). Nothing fired.
