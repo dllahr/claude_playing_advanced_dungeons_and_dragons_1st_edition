@@ -303,6 +303,20 @@ raw Euclidean distance either (both get corners wrong in opposite directions). U
 instead of eyeballing which nearby cells are "close enough" or hand-picking a `seen
 --cells` list — both were the direct cause of geometry mistakes in play (day 139).
 
+**`dmap.py walk <db> <level> <x> <y> <N|S|E|W>`** advances the party in a direction
+until there is something to stop FOR — a junction (2+ ways on, a real choice, handed
+back rather than picked), a dead end, an area-label change, or an already-visible
+feature (a cell's own `feature` tag, or a found secret door) — and deliberately does
+**not** stop merely for stepping onto ground nobody has walked before. Use it for
+open-ended declarations ("advance east", "keep going until something changes") in
+place of guessing a destination and retrying against `party.py move`'s REFUSED errors,
+which is what several of day 139's geometry mistakes actually were. A destination the
+player names explicitly still goes straight to `party.py move`. **Level 2's room
+labels are unreliable** (`mapdb/README.md`: "nearest numbered area", not "inside room
+N") — an area-boundary stop there may fire on a label flicker that means nothing in
+the fiction; read it the way any low-confidence call in this database is read, not as
+certain.
+
 **Read the map's own legend before writing any classifier.** The DMG prints a LEVEL
 KEY (pdf p.95) defining `S`=secret door, `C`=concealed door, boxed `X`=trap door,
 boxed `S`=secret trap door, even hatching=stairs up, tapering=stairs down, and the

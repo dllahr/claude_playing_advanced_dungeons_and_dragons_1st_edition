@@ -543,6 +543,7 @@ python dmap.py at    output/b1/b1.sqlite 1 32 13     # where am I, what are the 
 python dmap.py path  output/b1/b1.sqlite 1 16 1 32 13   # squares, feet, turns, rounds
 python dmap.py seen  output/b1/b1.sqlite 1 --room 25 # record what the party verified
 python dmap.py light output/b1/b1.sqlite 2 14 9 --radius 3 --mark-seen  # what a lantern there actually reveals
+python dmap.py walk  output/b1/b1.sqlite 2 14 9 E                       # advance east until something stops it
 ```
 
 `seen` is DM-side only. It exists because describing geography the party has not
@@ -567,6 +568,35 @@ one genuinely ambiguous case, a ray that grazes a lattice corner precisely —
 and `mapdb/tests/test_line_of_sight.py` for the worked cases (open room,
 around a corner, a secret door that still looks like wall, a diagonal squeeze
 between two solid corners).
+
+**`walk` is `light`'s companion for open-ended movement** — "advance east",
+"keep going until something changes" — replacing a guessed destination
+retried against `party.py move`'s REFUSED errors, which is what several of
+day 139's geometry mistakes actually were. It takes the one way forward
+through a plain corridor on its own and stops the instant there is a real
+event: a junction (2+ ways on, once the way just walked is excluded — a real
+choice, handed back rather than picked for the player), a dead end, an
+area-label change (leaving a numbered room counts as much as entering one),
+or a feature already visible to the party (its own `feature` tag, or a
+secret/concealed edge that is already `seen` — an unfound secret is invisible
+to this exactly as it is to a passing glance). Simply stepping onto ground
+nobody has walked is deliberately **not** a stop condition — a long plain
+corridor should not stop every ten feet just because it is new.
+
+**Level 2's room labels are unreliable** (see "Treat `cells.room` on level 2
+as nearest numbered area" above) — an area-boundary stop there can fire on a
+label flicker that means nothing in the fiction, over one large, patchily
+labelled cavern. `walk` does not try to filter that out; read a level-2
+area-boundary stop the way any low-confidence call in this database is read,
+not as certain. See `mapdb/tests/test_walk.py` for the worked cases.
+
+**Deliberately knows nothing about monsters, wandering or placed.** Wandering
+checks stay exactly where they are, on `clock.py`'s round-based schedule,
+independent of geometry — `walk`'s square/foot count is what tells the DM
+how big a block to advance before the next check. Placed-monster visibility
+is a separate, later piece (a DM-only stocking registry, still to come) —
+`walk` is kept a pure geometry query on purpose, the same separation
+`clock.py` and `mapdb` already keep.
 
 **Rebuilding clears it.** `seen` lives in the extracted tables, so a rebuild
 wipes it, exactly like a correction made directly in SQLite. Re-run the `seen`

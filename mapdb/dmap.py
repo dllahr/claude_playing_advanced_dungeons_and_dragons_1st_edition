@@ -8,6 +8,7 @@
     python dmap.py check   dmg.sqlite 1
     python dmap.py reach   dmg.sqlite 1 --from-room 1
     python dmap.py light   dmg.sqlite 1 12 8 --radius 3 --mark-seen
+    python dmap.py walk    dmg.sqlite 1 12 8 E
 """
 import argparse
 import os
@@ -699,6 +700,137 @@ def light_reach(db, level, x, y, radius=3):
     return out
 
 
+STOP_JUNCTION, STOP_DEAD_END, STOP_AREA, STOP_FEATURE, STOP_CAPPED = (
+    'junction', 'dead_end', 'area_boundary', 'feature', 'capped')
+
+
+def _exits(cell, edges, came_from=None):
+    """[(dir, neighbour)] -- every WALKABLE, PASSABLE exit from `cell`,
+    excluding the direction just arrived from. Does not check whether the
+    neighbour cell itself exists in `cells`; callers do that."""
+    out = []
+    for d, dx, dy, ef in DIRS:
+        n = (cell[0] + dx, cell[1] + dy)
+        if n == came_from:
+            continue
+        if edges.get(ef(*cell), 'unknown') in PASSABLE:
+            out.append((d, n))
+    return out
+
+
+def walk_until(db, level, start, heading, max_squares=60):
+    """Walk from `start` heading roughly `heading` ('N'/'S'/'E'/'W'), taking
+    the only way forward through a plain corridor and stopping the moment
+    there is something to stop FOR -- never routing the party through a
+    decision point unasked.
+
+    A STOP fires on: a JUNCTION (2+ ways on, once the way just walked is
+    excluded -- a real choice, so this hands back to the player rather than
+    picking for them); a DEAD END (0 ways on); an AREA BOUNDARY (the room
+    label of the cell just entered differs from the one just left -- this
+    includes leaving a numbered room into blank corridor and the reverse,
+    not only room-to-room); or a FEATURE already visible to the party (the
+    cell's own `feature` tag, or a secret/concealed edge at this cell that
+    is already `seen`.  An UNFOUND secret is invisible to this the same way
+    it is to the party). Simply crossing into ground the party has not
+    walked before is deliberately NOT a stop condition on its own -- a long
+    featureless corridor should not stop every ten feet just because it is
+    new.
+
+    Returns a dict: `path` (list of cells walked, `start` included), `stop`
+    (one of the STOP_* constants above), `why` (what fired it, in enough
+    detail to narrate), and for STOP_JUNCTION, `options` (the [(dir, cell)]
+    choices on offer).
+
+    *** LEVEL 2's ROOM LABELS ARE UNRELIABLE. *** mapdb/README.md already
+    documents this: `cells.room` there is "nearest numbered area", not
+    "inside room N", over one large, patchily-labelled open cavern. An
+    AREA_BOUNDARY stop on level 2 may fire on a label flicker that means
+    nothing in the fiction -- use judgement the way any confidence-scored
+    call in this database asks for, same as a low-confidence wall call.
+    This function does not try to filter that out; it reports what the
+    label data says and leaves the reading to the DM.
+
+    Does not know about monsters, wandering or placed -- see `light_reach`
+    for what is visible from any cell this returns, and the (forthcoming)
+    stocking registry for what is actually there. Deliberately kept a pure
+    geometry query, the same separation `clock.py` and `mapdb` already keep.
+    """
+    cells, edges = load(db, level)
+    con = sqlite3.connect(db)
+    found_secret = {(r[0], r[1], r[2]) for r in con.execute(
+        "SELECT x,y,orient FROM edges WHERE level=? AND kind IN"
+        " ('secret','concealed') AND seen=1", (level,))}
+    con.close()
+    if start not in cells or cells[start][0] not in WALKABLE:
+        return {'path': [start], 'stop': STOP_DEAD_END,
+                'why': '(%d,%d) is not walkable ground' % start}
+
+    leg = next(((dx, dy, ef) for d, dx, dy, ef in DIRS if d == heading), None)
+    if leg is None:
+        return {'path': [start], 'stop': STOP_DEAD_END,
+                'why': 'unknown heading %r' % heading}
+    dx, dy, ef = leg
+    first = (start[0] + dx, start[1] + dy)
+    if first not in cells or cells[first][0] not in WALKABLE or \
+            edges.get(ef(*start), 'unknown') not in PASSABLE:
+        return {'path': [start], 'stop': STOP_DEAD_END,
+                'why': 'no way %s from (%d,%d)' % (heading, *start)}
+
+    def feature_at(cell):
+        feat = cells[cell][2]
+        if feat:
+            return 'feature: %s' % feat
+        for d, dx, dy, ef in DIRS:
+            e = ef(*cell)
+            if e in found_secret:
+                return 'a known secret door (%s)' % (e,)
+        return None
+
+    path = [start, first]
+    came_from = start
+    cur = first
+    room_here = cells[start][1]
+    while True:
+        if cells[cur][1] != room_here:
+            return {'path': path, 'stop': STOP_AREA,
+                    'why': 'area changes from %r to %r entering (%d,%d)'
+                           % (room_here, cells[cur][1], *cur)}
+        feat = feature_at(cur)
+        if feat:
+            return {'path': path, 'stop': STOP_FEATURE,
+                    'why': '%s at (%d,%d)' % (feat, *cur)}
+        options = [(d, n) for d, n in _exits(cur, edges, came_from)
+                   if n in cells and cells[n][0] in WALKABLE]
+        if not options:
+            return {'path': path, 'stop': STOP_DEAD_END,
+                    'why': 'no way on from (%d,%d)' % cur}
+        if len(options) > 1:
+            return {'path': path, 'stop': STOP_JUNCTION,
+                    'why': '%d ways on from (%d,%d)' % (len(options), *cur),
+                    'options': options}
+        if len(path) - 1 >= max_squares:
+            return {'path': path, 'stop': STOP_CAPPED,
+                    'why': 'still going after %d squares, nothing new yet'
+                           % max_squares}
+        came_from, cur = cur, options[0][1]
+        room_here = cells[path[-1]][1]
+        path.append(cur)
+
+
+def walk_report(db, level, start, heading, max_squares=60):
+    r = walk_until(db, level, start, heading, max_squares)
+    feet = (len(r['path']) - 1) * FEET_PER_SQUARE
+    out = ['heading %s from (%d,%d): %d square(s), %d ft, stopped at (%d,%d)'
+           % (heading, start[0], start[1], len(r['path']) - 1, feet,
+              *r['path'][-1]),
+           '  %s -- %s' % (r['stop'], r['why'])]
+    if r['stop'] == STOP_JUNCTION:
+        out.append('  choices: ' + ', '.join('%s -> (%d,%d)' % (d, *n)
+                                              for d, n in r['options']))
+    return '\n'.join(out)
+
+
 def light_report(db, level, x, y, radius=3, mark=False):
     """Human-readable: every square a light source at (x,y) actually
     reaches, grouped by whether the party has already seen it, with the
@@ -834,6 +966,18 @@ def build_parser():
                     help="also mark the newly-lit squares seen -- the "
                          "computed replacement for hand-picking a `seen "
                          "--cells` list")
+
+    wk = common(sub.add_parser(
+        'walk', help='advance in a direction until there is something to '
+                      'stop for -- a junction, dead end, area change or a '
+                      'known feature',
+        formatter_class=argparse.ArgumentDefaultsHelpFormatter),
+        level_required=True)
+    wk.add_argument('x', type=int)
+    wk.add_argument('y', type=int)
+    wk.add_argument('heading', choices=['N', 'S', 'E', 'W'])
+    wk.add_argument('--max-squares', type=int, default=60,
+                    help='safety cap if nothing stops it first')
     return p
 
 
@@ -886,6 +1030,9 @@ def main(argv=None):
     elif args.cmd == 'light':
         print(light_report(args.db, args.level, args.x, args.y,
                            args.radius, mark=args.mark_seen))
+    elif args.cmd == 'walk':
+        print(walk_report(args.db, args.level, (args.x, args.y),
+                          args.heading, args.max_squares))
     return 0
 
 
