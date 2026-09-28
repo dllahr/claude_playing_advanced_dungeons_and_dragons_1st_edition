@@ -5436,3 +5436,6 @@ CORRECTED (clock.py correct to 254, then +1): the player pointed out an already-
 
 ## Day 139 rounds 258-288 -- the fire burns down
 Three turns waited. Anchor-270 fired at round 271, d6=6: silent, nothing. By round 288 the fire has burned to embers; the web mass is gone, the corpse charred, smoke still hanging but thinning. About 7:35 pm.
+
+## Day 139 round 290 -- back at the mouth of area 42, scanning (no search declared yet)
+Nothing declared as a search; general approach only. Reported: a small chamber, blackened, the last of the web burned to ash and char draped over the walls in places, the spider's body a shrunken, blackened husk. Smoke still thin in the air. NOT VOLUNTEERED: the module's treasure (FF, 4 small gold rods, 30 gp each) -- waits on an actual search.
