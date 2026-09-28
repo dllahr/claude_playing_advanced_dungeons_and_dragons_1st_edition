@@ -1510,3 +1510,8 @@ when	day	who	asset	verb	qty	unit	note
 2026-09-27	139	party	oil_flask	move	-1	each	one flask emptied over the webbing and the spider's body at the mouth of area 42, day 139
 2026-09-28	139	party	gold_rod_small	move	4	each	found in area 42, day 139
 2026-09-28	139	basecamp	camp_food	move	-0.52	person-week	dinner at the basecamp, day 139 (ten mouths)
+2026-09-28	139	basecamp	hand_axe	move	-3	each	Brand takes the three orc axes from the lean-to for ammunition, day 139
+2026-09-28	139	party	hand_axe	move	3	each	Brand carries the three orc axes, day 139
+2026-09-28	139	Brand	hand_axe	anchor	1	each	RESTORED to visibility: his own axe, arrived with it day 95, never left him -- the day-102 zero-anchor kept it deliberately off the party's books as his personal property, which read to the player as it having vanished. Booked now at 1 so the roster shows it, still understood as his own, not party salvage.
+2026-09-28	139	party	hand_axe	move	-3	each	CORRECTION: the three orc axes were booked to the shared party kit; they are Brand's specifically, moved to him
+2026-09-28	139	Brand	hand_axe	move	3	each	the three orc axes, held by Brand specifically (ammunition), day 139
