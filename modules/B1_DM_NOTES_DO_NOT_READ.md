@@ -5433,3 +5433,6 @@ A stray 'oil' row (fuel=?) was logged first as a shell/tool-use slip before the 
 
 ## Day 139 rounds 255-258 -- the correction on lighting, then the watch (HIDDEN ROLLS)
 CORRECTED (clock.py correct to 254, then +1): the player pointed out an already-lit lantern was in hand, so the flame is applied directly to the oil-soaked web, not kindled from scratch -- one round, not a turn. No checks fell in the voided 253-264 span, nothing to re-resolve. New watch declared: Brand and Hask facing west, the other eight with missile weapons facing east toward the fire. Does anything stir? d6=1 (1-2 yes): SOMETHING DOES. What: d6=6 (5-6 just the fire): NOTHING ALIVE -- a mass of burning web collapses in on itself with a soft crackling rush and a gout of sparks, nothing more. Reported to the player as what is seen: no creature, just the fire settling.
+
+## Day 139 rounds 258-288 -- the fire burns down
+Three turns waited. Anchor-270 fired at round 271, d6=6: silent, nothing. By round 288 the fire has burned to embers; the web mass is gone, the corpse charred, smoke still hanging but thinning. About 7:35 pm.
