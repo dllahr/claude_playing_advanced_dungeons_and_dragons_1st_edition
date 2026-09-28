@@ -5442,3 +5442,6 @@ Nothing declared as a search; general approach only. Reported: a small chamber, 
 
 ## Day 139 round 300 -- Tristle finds the gold rods (module treasure, revealed)
 One turn's search, the rest guarding, scanning both directions and the ceiling. B1's own treasure for area 42 (FF): 4 small gold rods, 30 gp each. Found in the ash and debris round the body, untouched by the fire (metal). Booked (assets.tsv gold_rod_small, 10 gp-weight, a DM call). Anchor-300 not yet fired (jitter pending). Nothing else found; no dice needed, the fire already cleared any concealment.
+
+## Day 139 -- GEOMETRY CORRECTION: the party is at (14,9), not (14,8)
+Checked at the player's prompt (he asked to advance 'east' and the map showed solid rock there from 14,8). The edge data: (14,8,V) is WALL (no opening to 15,8); the true door is (14,9,V), OPEN, into (15,9) area 42. This has been the doorway all along in the fiction (Tristle's scout, the ambush-that-wasn't, the oil, the search) -- only the recorded SQUARE was one row off. Placed at (14,9). Nothing about what happened changes; only the coordinate does.
