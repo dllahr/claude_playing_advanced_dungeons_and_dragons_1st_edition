@@ -296,6 +296,13 @@ text *independently* of the image and let `build.py` compare them, and run
 `dmap.py reach` — every non-solid square should be reachable from the entrance, so
 anything unreachable is an invented wall or a missed door.
 
+**`dmap.py light <db> <level> <x> <y> --radius N [--mark-seen]`** answers "what does a
+light source here actually reveal" by ray-casting — the exact line from cell centre to
+cell centre, blocked by a wall, a shut door or solid rock, not graph distance and not
+raw Euclidean distance either (both get corners wrong in opposite directions). Use it
+instead of eyeballing which nearby cells are "close enough" or hand-picking a `seen
+--cells` list — both were the direct cause of geometry mistakes in play (day 139).
+
 **Read the map's own legend before writing any classifier.** The DMG prints a LEVEL
 KEY (pdf p.95) defining `S`=secret door, `C`=concealed door, boxed `X`=trap door,
 boxed `S`=secret trap door, even hatching=stairs up, tapering=stairs down, and the

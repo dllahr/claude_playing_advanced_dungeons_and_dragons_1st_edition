@@ -542,10 +542,31 @@ each and are worth a look at the walls.
 python dmap.py at    output/b1/b1.sqlite 1 32 13     # where am I, what are the exits
 python dmap.py path  output/b1/b1.sqlite 1 16 1 32 13   # squares, feet, turns, rounds
 python dmap.py seen  output/b1/b1.sqlite 1 --room 25 # record what the party verified
+python dmap.py light output/b1/b1.sqlite 2 14 9 --radius 3 --mark-seen  # what a lantern there actually reveals
 ```
 
 `seen` is DM-side only. It exists because describing geography the party has not
 verified is the specific mistake this database was built to prevent.
+
+**`light` is `seen`'s computed replacement for "which cells is the light close
+enough to reach."** Built day 139 after a session with several geometry errors
+that all came from eyeballing grid distance instead of asking the map, the
+worst being a `seen --cells` list hand-picked from squares that only *looked*
+close on a printed page. It ray-casts: draws the exact line from the light's
+cell centre to a candidate cell's centre and asks whether it crosses a wall,
+a shut door, or solid rock before it gets there — not graph distance, not
+Euclidean distance alone, an actual line of sight. That is why it correctly
+sees clear across an open room on the diagonal (naive grid math undercounts
+this) but does **not** see around a corner even when the far cell is well
+inside the nominal radius (naive Euclidean distance overcounts this). `-
+-radius` is in cells, 10 ft each; a hooded lantern's 30 ft is the default.
+`--mark-seen` calls `seen` on exactly the newly-lit squares, so narrating what
+a light source reveals and recording it are one call, not two guesses.
+See `mapdb/dmap.py`'s `line_of_sight()` docstring for the exact rule on the
+one genuinely ambiguous case, a ray that grazes a lattice corner precisely —
+and `mapdb/tests/test_line_of_sight.py` for the worked cases (open room,
+around a corner, a secret door that still looks like wall, a diagonal squeeze
+between two solid corners).
 
 **Rebuilding clears it.** `seen` lives in the extracted tables, so a rebuild
 wipes it, exactly like a correction made directly in SQLite. Re-run the `seen`

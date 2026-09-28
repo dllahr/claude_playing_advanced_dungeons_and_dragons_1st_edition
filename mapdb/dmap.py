@@ -7,6 +7,7 @@
     python dmap.py lowconf dmg.sqlite --level 1 --max-conf 3
     python dmap.py check   dmg.sqlite 1
     python dmap.py reach   dmg.sqlite 1 --from-room 1
+    python dmap.py light   dmg.sqlite 1 12 8 --radius 3 --mark-seen
 """
 import argparse
 import os
@@ -35,6 +36,17 @@ def load(db, level):
         "SELECT x,y,orient,kind FROM edges WHERE level=?", (level,))}
     con.close()
     return cells, edges
+
+
+def load_edge_states(db, level):
+    """{(x,y,orient): state} -- a door's CURRENT state (open, locked, spiked
+    shut, ...), separate from `load()`'s structural `kind`. Its own query
+    because most callers never need it; `line_of_sight` does."""
+    con = sqlite3.connect(db)
+    out = {(r[0], r[1], r[2]): r[3] for r in con.execute(
+        "SELECT x,y,orient,state FROM edges WHERE level=?", (level,))}
+    con.close()
+    return out
 
 
 def render(db, level, bounds=None):
@@ -526,6 +538,193 @@ def path_report(db, level, a, b, rate_ft=90, avoid=None, through=()):
     return out
 
 
+EDGE_ALWAYS_OPAQUE = {'wall', 'secret', 'concealed', 'false_door', 'unknown'}
+EDGE_NEVER_OPAQUE = {'open', 'archway', 'stairs'}
+EDGE_OPEN_STATES = {'open', 'leaf removed'}
+
+
+def _edge_blocks_light(kind, state):
+    """Does one edge stop a ray of light? Opacity, not walkability --
+
+    a SECRET or CONCEALED door still looks like solid wall until it is found
+    and opened, so it blocks light even though `find_path` may already treat
+    it as walkable for a party that knows it is there. Conversely an ARCHWAY
+    is open by construction and a `stairs` edge is a stairwell opening, not a
+    wall, so neither is gated by state at all.
+
+    A DOOR (or one-way / portcullis / trap-door) blocks unless its logged
+    `state` says otherwise. No state on record defaults to blocking -- the
+    conservative direction, same as `unknown` -- because a door nobody has
+    opened is shut.
+    """
+    if kind in EDGE_NEVER_OPAQUE:
+        return False
+    if kind in EDGE_ALWAYS_OPAQUE:
+        return True
+    return (state or '').strip() not in EDGE_OPEN_STATES
+
+
+def _corner_passable(cells, edges, edge_states, i, j):
+    """Is the lattice point (i,j) -- where cells (i-1,j-1), (i,j-1),
+    (i-1,j) and (i,j) all meet -- open on every side? Used only for a ray
+    that grazes a corner exactly; see `line_of_sight`."""
+    for c in ((i - 1, j - 1), (i, j - 1), (i - 1, j), (i, j)):
+        if cells.get(c, ('solid',))[0] == 'solid':
+            return False
+    for edge in ((i - 1, j - 1, 'V'), (i - 1, j, 'V'),
+                 (i - 1, j - 1, 'H'), (i, j - 1, 'H')):
+        kind = edges.get(edge, 'unknown')
+        if _edge_blocks_light(kind, (edge_states or {}).get(edge)):
+            return False
+    return True
+
+
+def line_of_sight(cells, edges, ax, ay, bx, by, edge_states=None):
+    """Does an unbroken line of sight run from the CENTRE of (ax,ay) to the
+    CENTRE of (bx,by)? Ray-casting, not a walk-graph search: the ray is a
+    continuous segment between the two cell centres (each at (n+0.5, n+0.5)
+    in cell units, so 1 cell = 10 ft), and it is blocked the instant it
+    crosses an opaque edge or passes through a solid cell -- never routed
+    AROUND one the way a pathfinder would. Returns (bool, why); `why` names
+    the blocking edge or cell when the answer is False, '' when the segment
+    never leaves the source cell.
+
+    Built on exact `fractions.Fraction` arithmetic, not floats: a ray that
+    passes EXACTLY through a lattice corner (grazing where four cells meet)
+    is a real, not-vanishingly-rare case at this grid's scale, and it has to
+    compare as *exactly* equal, not almost. Graze a corner and this call it
+    BLOCKED -- the conservative reading, matching the direction every other
+    known error in this map already leans (mapdb/DIAGONAL_CONNECTIVITY.md:
+    the live grid never claims two squares are FURTHER apart than they
+    really are, only ever closer / more open -- so an ambiguous ray answers
+    the way that under-, not over-, shows what a torch would).
+
+    Does NOT special-case the 45-degree diagonal-wall squares
+    (DIAGONAL_WALLS.md) beyond what their own `terrain`/`edges` rows already
+    encode -- if that extraction is right, the wall and solid-terrain checks
+    below already see it; this does not re-derive sub-cell geometry.
+
+    `edge_states`, if given, is `load_edge_states()`'s {(x,y,orient): state}
+    -- a door's CURRENT open/shut state, separate from `edges`'s structural
+    kind. Omit it and every door-like edge is read as shut (the same
+    conservative default `_edge_blocks_light` falls back to on its own).
+    """
+    from fractions import Fraction
+    import math
+    edge_states = edge_states or {}
+    x0 = Fraction(ax) + Fraction(1, 2)
+    y0 = Fraction(ay) + Fraction(1, 2)
+    x1 = Fraction(bx) + Fraction(1, 2)
+    y1 = Fraction(by) + Fraction(1, 2)
+    if (ax, ay) == (bx, by):
+        return True, ''
+    dx, dy = x1 - x0, y1 - y0
+
+    crossings = []  # (t, orient, i)
+    if dx != 0:
+        lo, hi = sorted((x0, x1))
+        for i in range(math.floor(lo) + 1, math.ceil(hi)):
+            crossings.append(((i - x0) / dx, 'V', i))
+    if dy != 0:
+        lo, hi = sorted((y0, y1))
+        for j in range(math.floor(lo) + 1, math.ceil(hi)):
+            crossings.append(((j - y0) / dy, 'H', j))
+    crossings.sort(key=lambda c: c[0])
+
+    def cell_at(t):
+        px, py = x0 + t * dx, y0 + t * dy
+        return (math.floor(px), math.floor(py))
+
+    bounds = [Fraction(0)] + [c[0] for c in crossings] + [Fraction(1)]
+    for i, (t, orient, k) in enumerate(crossings):
+        # a corner graze: a V and an H crossing land at the identical t --
+        # the ray passes exactly through the lattice point where 4 cells
+        # meet. Block it UNLESS all 4 cells and the 4 edges between them are
+        # open: a diagonal sightline across an open room grazes a corner at
+        # every step (draw the line y=x and see), and calling every one of
+        # those blocked would make this useless in the single most common
+        # case. It is still the conservative side of any real ambiguity --
+        # one solid cell or opaque edge at that corner blocks it.
+        if i + 1 < len(crossings) and crossings[i + 1][0] == t:
+            corner_i = k if orient == 'V' else math.floor(x0 + t * dx)
+            corner_j = k if orient == 'H' else math.floor(y0 + t * dy)
+            if not _corner_passable(cells, edges, edge_states,
+                                     corner_i, corner_j):
+                return False, 'corner graze at (%s, %s)' % (corner_i, corner_j)
+        if orient == 'V':
+            row = math.floor(y0 + t * dy)
+            edge = (k - 1, row, 'V')
+        else:
+            col = math.floor(x0 + t * dx)
+            edge = (col, k - 1, 'H')
+        kind = edges.get(edge, 'unknown')
+        if _edge_blocks_light(kind, edge_states.get(edge)):
+            return False, 'edge %s (%s)' % (edge, kind)
+        # the cell the ray occupies AFTER this crossing, up to the next one
+        # (or the target) -- the midpoint needs no epsilon, it is exact
+        far = cell_at((t + bounds[i + 2]) / 2)
+        if cells.get(far, ('solid',))[0] == 'solid':
+            return False, 'solid cell %s' % (far,)
+    return True, ''
+
+
+def light_reach(db, level, x, y, radius=3):
+    """{(cx,cy): why} every cell within `radius` cells (default 3 = 30 ft)
+    of (x,y) that an unbroken ray reaches -- see `line_of_sight`. `why` is a
+    one-line reason: 'origin' for the source cell itself, 'los' for
+    everything else. Cells outside the radius, or blocked, are simply
+    absent; this never claims a negative.
+
+    Checks the full disk, not just the three ring boundaries at r=1,2,3 --
+    a cell at offset (1,1), for instance, sits on neither ring but is well
+    within 30 ft and needs its own ray checked like any other.
+    """
+    cells, edges = load(db, level)
+    if (x, y) not in cells:
+        return {}
+    edge_states = load_edge_states(db, level)
+    out = {(x, y): 'origin'}
+    r2 = radius * radius
+    for cx in range(x - radius, x + radius + 1):
+        for cy in range(y - radius, y + radius + 1):
+            if (cx, cy) == (x, y) or (cx, cy) not in cells:
+                continue
+            # centre-to-centre distance, in cell units
+            ddx, ddy = (cx - x), (cy - y)
+            if ddx * ddx + ddy * ddy > r2:
+                continue
+            ok, _why = line_of_sight(cells, edges, x, y, cx, cy, edge_states)
+            if ok:
+                out[(cx, cy)] = 'los'
+    return out
+
+
+def light_report(db, level, x, y, radius=3, mark=False):
+    """Human-readable: every square a light source at (x,y) actually
+    reaches, grouped by whether the party has already seen it, with the
+    new ones on top since those are what narration needs. `mark`, if set,
+    calls `mark_seen` on the newly-lit squares before returning -- the
+    direct fix for hand-picking a `seen --cells` list and getting it wrong,
+    which is why this exists."""
+    lit = light_reach(db, level, x, y, radius)
+    con = sqlite3.connect(db)
+    already = {(r[0], r[1]) for r in con.execute(
+        'SELECT x,y FROM cells WHERE level=? AND seen=1', (level,))}
+    con.close()
+    new = sorted(c for c in lit if c not in already and c != (x, y))
+    known = sorted(c for c in lit if c in already and c != (x, y))
+    out = ['light from (%d,%d), radius %d (%d ft): %d square(s) lit'
+           % (x, y, radius, radius * 10, len(lit))]
+    if new:
+        out.append('  newly lit: ' + ', '.join('(%d,%d)' % c for c in new))
+    if known:
+        out.append('  already seen: ' + ', '.join('(%d,%d)' % c for c in known))
+    if mark and new:
+        n = mark_seen(db, level, new)
+        out.append('  marked %d square(s) seen' % n)
+    return '\n'.join(out)
+
+
 def mark_seen(db, level, cells_):
     """Record that the party has verified these squares and their boundaries."""
     con = sqlite3.connect(db)
@@ -621,6 +820,20 @@ def build_parser():
                    help='start from an explicit cell instead')
     rc.add_argument('--no-diagonal', action='store_true',
                     help='forbid corner steps between diagonal-passage cells')
+
+    lt = common(sub.add_parser(
+        'light', help='what a light source at a square actually reveals, '
+                       'by ray-cast line of sight -- not grid distance',
+        formatter_class=argparse.ArgumentDefaultsHelpFormatter),
+        level_required=True)
+    lt.add_argument('x', type=int)
+    lt.add_argument('y', type=int)
+    lt.add_argument('--radius', type=int, default=3,
+                    help='cells (10 ft each); 3 = a hooded lantern\'s 30 ft')
+    lt.add_argument('--mark-seen', action='store_true',
+                    help="also mark the newly-lit squares seen -- the "
+                         "computed replacement for hand-picking a `seen "
+                         "--cells` list")
     return p
 
 
@@ -670,6 +883,9 @@ def main(argv=None):
             args.db, args.level,
             start=tuple(args.from_cell) if args.from_cell else None,
             from_room=args.from_room, diagonal=not args.no_diagonal)))
+    elif args.cmd == 'light':
+        print(light_report(args.db, args.level, args.x, args.y,
+                           args.radius, mark=args.mark_seen))
     return 0
 
 
