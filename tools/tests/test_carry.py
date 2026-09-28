@@ -195,6 +195,39 @@ def test_roster_says_so_when_somebody_carries_nothing_of_their_own():
     assert 'nothing of his own' in carry.roster()
 
 
+# ------------------------------------------------- where: the complement of roster
+
+def test_where_lists_a_place_but_not_a_character_or_party():
+    """Added day 139, after a hand-rolled one-off script got a basecamp total
+    wrong by summing anchors additively instead of letting the last one win.
+    `roster` already answers what a PERSON carries; `where` answers what a
+    PLACE holds, which nothing had before."""
+    out = carry.everywhere(_log(
+        ('d', '139', 'basecamp', 'cart', 'anchor', '2', 'each', ''),
+        ('d', '139', 'Dave', 'long_sword', 'anchor', '1', 'each', '')))
+    assert 'basecamp:' in out
+    assert 'cart' in out
+    assert 'Dave' not in out
+    assert 'party:' not in out
+
+
+def test_where_respects_anchor_sets_outright_same_as_state():
+    """The exact bug this subcommand exists to stop: a naive additive sum of
+    two anchors gives 3; the real total, last-anchor-wins, is 1."""
+    out = carry.everywhere(_log(
+        ('d', '135', 'basecamp', 'cart', 'anchor', '2', 'each', ''),
+        ('d', '139', 'basecamp', 'cart', 'anchor', '1', 'each', 'corrected')))
+    assert '        2 each' not in out
+    assert '        1 each' in out
+
+
+def test_where_omits_a_holder_whose_balance_has_gone_to_zero():
+    out = carry.everywhere(_log(
+        ('d', '135', 'basecamp', 'torch', 'anchor', '3', 'each', ''),
+        ('d', '139', 'basecamp', 'torch', 'move', '-3', 'each', 'used up')))
+    assert 'basecamp' not in out
+
+
 # ------------------------------------------------- fill the strongest first
 
 def test_pack_fills_the_strongest_first():

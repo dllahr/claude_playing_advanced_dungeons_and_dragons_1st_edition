@@ -402,6 +402,39 @@ def roster(log=None, bearers=None):
     return '\n'.join(out).rstrip()
 
 
+def everywhere(log=None):
+    """Every non-character holder's contents, itemised. THE "WHERE IS X" LIST.
+
+    `roster` answers what each character carries; the default report answers
+    what the party's shared kit holds. Neither answers "what's at the
+    basecamp" or "what's at Wend's barn" -- this does, by listing every `who`
+    in carry.tsv that ISN'T a character or the shared `party` bucket, i.e.
+    every place and non-PC person state() tracks a balance for.
+
+    Added day 139, at the player's word, after a hand-rolled one-off script
+    got a location total wrong by not respecting anchor-sets-outright
+    semantics -- state() already gets that right, so this is a thin wrapper
+    round it rather than a second implementation of the same arithmetic.
+    """
+    chars = characters()
+    st = state(log)
+    ass = invmod.ledgermod.assets()
+    locations = sorted(w for w in st if w not in chars and w != SHARED)
+    out = []
+    for loc in locations:
+        items = {k: q for k, q in st[loc].items() if abs(q) > 1e-9}
+        if not items:
+            continue
+        out.append(loc + ':')
+        for (asset, unit), qty in sorted(items.items(),
+                                          key=lambda kv: -abs(kv[1])):
+            nm = (ass.get(asset) or {}).get('name', asset)
+            out.append('   %-18s %8s %-12s  %s'
+                       % (asset, invmod._fmt(qty), unit, nm[:40]))
+        out.append('')
+    return '\n'.join(out).rstrip()
+
+
 def pack(log=None, bearers=None, target='heavy'):
     """Fill the STRONGEST first, up to `target`, then the next strongest.
 
@@ -621,7 +654,8 @@ def build_parser():
                    'trip. The shared `party` kit is divided among THEM, not '
                    'the whole roster. Used by the default report, `person` '
                    'and `pack`; ignored by `check` and `roster`')
-    sub = p.add_subparsers(dest='cmd', metavar='{person,roster,pack,check}',
+    sub = p.add_subparsers(dest='cmd',
+                            metavar='{person,roster,where,pack,check}',
                             help='omit for the full manifest')
     q = sub.add_parser('person', help="one person's load in gp-weight and "
                         'their encumbrance band (reads characters.tsv for '
@@ -629,6 +663,9 @@ def build_parser():
     q.add_argument('name', help='a character name from campaign/characters.tsv')
     sub.add_parser('roster', help="every person's kit, itemised (ignores "
                     '--bearers)')
+    sub.add_parser('where', help='every place and non-PC holder\'s contents, '
+                    "itemised -- what's at the basecamp, at Wend's barn, "
+                    'with Holt, and so on. The complement of `roster`')
     pk = sub.add_parser('pack', help='fill the strongest bearers first, up '
                         'to --target; report what is left over unpacked')
     pk.add_argument('--target', default='heavy',
@@ -650,6 +687,10 @@ def main(argv=None):
 
     if a.cmd == 'roster':
         print(roster(log, bearers))
+        return 0
+
+    if a.cmd == 'where':
+        print(everywhere(log))
         return 0
 
     if a.cmd == 'pack':
