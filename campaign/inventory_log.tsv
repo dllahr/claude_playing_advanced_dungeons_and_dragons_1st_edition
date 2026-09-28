@@ -514,3 +514,6 @@ when	day	asset	verb	qty	unit	condition	holder	evidence	note
 2026-09-28	139	gold_rod_small	move	4.0	each	sound	spread	-	FOUND in area 42, day 139: 4 small gold rods, 30 gp each, in the ash around the spider's remains (module treasure FF).
 2026-09-28	139	camp_food	move	-0.52	person-week				dinner at the basecamp, day 139: ten mouths at a third of a person-day each
 2026-09-28	139	hand_axe	move	1.0	each		Brand -- HIS OWN		RESTORED to visibility, day 139: Brand's own hand axe, arrived with it day 95. Not party salvage, same footing as Ista's own axe (row above, day 102): personal property, counted here only so the manifest can show him carrying it without a FAIL. The day-102 zero-anchor kept it off the books entirely, which is what made it look to have vanished.
+2026-09-28	140	camp_food	move	-0.43	person-week				breakfast at the basecamp, day 140: ten mouths at a third of a person-day each
+2026-09-28	140	camp_food	move	0.43	person-week				CORRECTION: the deduction above should not have come from the carried stock -- that food is being relocated to the basecamp, not eaten. Voided by this offsetting row (kept, not erased, per the append-only rule).
+2026-09-28	140	camp_food	move	-0.48	person-week				breakfast at the basecamp, day 140: ten mouths at a third of a person-day each, from the basecamp's own stock

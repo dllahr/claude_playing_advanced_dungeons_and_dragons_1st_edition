@@ -11143,3 +11143,4 @@ when	exped	turn	notation	dice	modifier	total	hidden	reason
 2026-09-28			d4	3	0	3		HIDDEN day 139 round 364: wandering troglodytes, count (printed range 1-4)
 2026-09-28			d6	4	0	4		HIDDEN: do the 3 wandering troglodytes come toward the searching party? DECLARED FIRST: 1-3 they come, 4-6 never near
 2026-09-28			d6	6	0	6		wandering check, anchor 390
+2026-09-28			d6	4	0	4		OFFSCREEN A021 tick 3, day 140: Frython's lessons with Brand resume, both at Coll's basecamp with the  (brand). DECLARED FIRST, in agendas.tsv: d6|1-3=hold:A bad week. Brand loses what he had and the lessons stand still; nothing new to show.|4-6=progress:Brand moves on a stage (1 the alphabet, 2 his own name, 3 simple words, 4 a short line, 5 a plain notice); the stage is the count of progress ticks. SHOWN AT ONCE, in the next scene, as Brand reading something: he is with the party, so there is nothing to hide. At the FIFTH progress tick 
