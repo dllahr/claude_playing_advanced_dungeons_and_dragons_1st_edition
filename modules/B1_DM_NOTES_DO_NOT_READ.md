@@ -5445,3 +5445,6 @@ One turn's search, the rest guarding, scanning both directions and the ceiling. 
 
 ## Day 139 -- GEOMETRY CORRECTION: the party is at (14,9), not (14,8)
 Checked at the player's prompt (he asked to advance 'east' and the map showed solid rock there from 14,8). The edge data: (14,8,V) is WALL (no opening to 15,8); the true door is (14,9,V), OPEN, into (15,9) area 42. This has been the doorway all along in the fiction (Tristle's scout, the ambush-that-wasn't, the oil, the search) -- only the recorded SQUARE was one row off. Placed at (14,9). Nothing about what happened changes; only the coordinate does.
+
+## Day 139 -- CORRECTION: (15,6) was marked seen in error, now genuinely seen
+Player caught it: (15,6) had been marked seen during an earlier batch (the 'further west' cell list) without real line of sight there. Corrected (unmarked, now marked properly as the party actually stands there). What it actually is, checked against the edges: a short connector, open north into area 42 (already searched, burnt) and open west into the cavern floor the party already crossed earlier this expedition (the open ground near (12-14,4-6)). Nothing new beyond it in any direction from here -- it closes a loop between two places already seen, not a new cavern.
