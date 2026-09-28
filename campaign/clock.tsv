@@ -1577,3 +1577,9 @@ when	exped	round	kind	anchor	detail	note
 2026-09-27	30	220	advance		20	day 139: the pairs finish searching the floor of area 41, block 3 of 3
 2026-09-27	30	215	check	210	d6=6	anchor 210 + 5
 2026-09-27	30	224	advance		4	day 139: standard formation west across area 41 toward the unexplored column
+2026-09-27	30	228	advance		4	day 139: standard formation continuing west into the unlabeled open cavern
+2026-09-27	30	235	advance		7	day 139: standard formation west, the route jogging north then west, until something changes
+2026-09-27	30	241	advance		6	day 139: standard formation northeast
+2026-09-27	30	242	advance		1	day 139: cautiously to (11,7), adjacent to the webbing at (12,7)
+2026-09-27	30	245	advance		3	day 139: Tristle alone, silently, scanning by infravision, northeast toward the webbing near area 42
+2026-09-27	30	245	check	240	d6=5	anchor 240 + 5
