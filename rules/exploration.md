@@ -136,6 +136,30 @@ best.**"*
 reading is the player's and is a DM RULING, not a printed number. The 30' washout radius is the
 earlier house rule above.*
 
+### Cold-blooded creatures give no heat signature — DM ruling, day 139
+
+Neither the PHB nor the DMG says a word about this; it is physics plus a ruling, set
+2026-09-27 the moment it mattered (a black widow spider's web, area 42).
+
+**Infravision reads body heat. A cold-blooded creature — spiders, insects, reptiles,
+oozes — sits at the same temperature as its surroundings and gives off no signature
+of its own.** It does not "light up" the way a troglodyte or a man does. Under the
+DMG p.59 ruling above, a viewer using infravision in ordinary dark ground still sees
+the ROOM as a dark-cloudy-night silhouette — walls, openings, large masses — so a
+web mass, a burrow mouth, or the creature's own bulk may still show as a shape if it
+is large enough and the viewer takes care scanning. **What does not show is a
+distinct warm or cold outline picking it out from its surroundings**, and it gets no
+extra visibility from the 2-round warm-footprint rule either, since it leaves none.
+
+**Consequence: infravision does not defeat a cold-blooded ambush predator.** A
+spider sitting still in its own web is exactly as invisible to heat-sight as it would
+be to normal sight in the dark — the hazard is the same either way, and a scout
+relying on infravision alone gets no special warning of it.
+
+*source: **DM RULING**, physics reasoning from DMG p.59's own text (infravision
+picks up "differences in thermal radiation, hot or cold"), applied to the case the
+book doesn't name.*
+
 ### Troglodyte camouflage vs. infravision
 
 Troglodyte chameleon skin gives surprise on 1–4 **by sight only**. It conceals nothing from
