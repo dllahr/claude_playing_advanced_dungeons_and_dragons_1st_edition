@@ -543,3 +543,7 @@ when	map	level	x	y	exped	turn	squares	feet	rate	why	route
 2026-09-28	b1	2	15	6	30		4	40	explore	day 139: standard formation slowly east through area 42 and out its north side, scanning ceiling walls floor	14,9 15,9 15,8 15,7 15,6
 2026-09-28	b1	2	14	9	30		4	40	known	day 139: Dave and Torsat return to guard the entrance at (14,9), facing southwest	15,6 15,7 15,8 15,9 14,9
 2026-09-28	b1	2	15	6	30				PLACED	day 139: CORRECTION -- party.tsv tracks the main body; the eight searchers stay in the cavern near (15,6), Dave and Torsat split off to guard the entrance at (14,9) separately (not a whole-party move)	
+2026-09-28	b1	2	14	9	30				PLACED	day 139: the party reforms, Dave and Torsat rejoin the other eight, standard formation, Tristle 40 ft ahead, heading back toward area 38 and the stair	
+2026-09-28	b1	2	20	13	30		32	320	known	day 139: standard formation, Tristle 40 ft ahead, everyone with missile weapons, back to area 38 and the stair	14,9 14,8 13,8 13,7 12,7 12,6 11,6 11,5 10,5 9,5 9,4 9,3 10,3 10,4 11,4 12,4 13,4 14,4 15,4 16,4 16,5 17,5 17,6 18,6 18,7 19,7 19,8 19,9 20,9 20,10 20,11 20,12 20,13
+2026-09-28	b1	1	21	10	30				PLACED	day 139: up the stair of area 30 to its head, standard formation; level change, so placed	
+2026-09-28	b1	1	16	1	30		34	340	known	day 139: standard formation out of the caves, Tristle 40 ft ahead, missile weapons	21,10 21,9 22,9 22,10 23,10 24,10 25,10 26,10 27,10 27,11 27,12 27,13 26,13 25,13 24,13 23,13 22,13 21,13 20,13 19,13 18,13 17,13 16,13 16,12 16,11 16,10 16,9 16,8 16,7 16,6 16,5 16,4 16,3 16,2 16,1

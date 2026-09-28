@@ -1610,3 +1610,7 @@ when	exped	round	kind	anchor	detail	note
 2026-09-28	30	374	advance		10	day 139: the pairs continue searching the western cavern floor, block 7 of 7
 2026-09-28	30	364	correct		-10	the search ran past the round-364 wandering check (troglodytes); resolving it at round 364, where the party actually was
 2026-09-28	30	374	advance		10	day 139: the pairs finish searching the western cavern floor, block 7 of 7, after the round-364 troglodyte check (spent, never near)
+2026-09-28	30	381	advance		7	day 139: standard formation back to area 38, Tristle 40 ft ahead, missile weapons
+2026-09-28	30	384	advance		3	day 139: up the stair to the head, area 30
+2026-09-28	30	392	advance		8	day 139: standard formation out of the caves to the mouth, Tristle 40 ft ahead, missile weapons
+2026-09-28	30	391	check	390	d6=6	anchor 390 + 1
