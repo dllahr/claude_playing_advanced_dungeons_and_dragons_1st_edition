@@ -199,19 +199,26 @@ against the printed columns.*
 
 | | |
 |---|---|
-| **Slaying a sleeper** | **automatic. 1 per slayer per melee round.** No roll, no damage dice |
-| **Shooting a sleeper** | **wounds it, which WAKES it.** It is up one full round later |
+| **Attacking a sleeper to kill — melee or missile** | **automatic slaying, 1 per slayer per melee round.** No roll, no damage dice, no weapon restriction |
+| **Slapping or otherwise deliberately just wounding a sleeper** | wakes it, up one full round later |
 | **Noise** | does not wake them |
 | **The centre is the caster's choice** | so a 30-ft circle can be placed to catch a doorway and stop short of your own line |
 
-**The tactical consequence is the opposite of instinct: do NOT shoot them.** A
-missile volley into a heap of sleeping enemies wakes the ones it hits and kills
-none of them outright. **Walk in and cut throats** — every able body accounts for
-one a round, automatically.
+**RULING, day 139, the player's word, corrects an earlier over-reading of this file.** The
+printed text draws its line between *"slapping or wounding"* (an incidental or deliberately
+non-lethal touch) and *"slain… automatically"* — it does **not** say the automatic slaying is
+melee-only, and this file previously said it was. That was this DM's own inference, not the
+book's. **An attack made WITH LETHAL INTENT that connects is a slaying**, whatever the
+weapon — a bow shot meant to kill a sleeping creature kills it outright, exactly as a sword
+stroke would, and is exempt from the normal to-hit/damage rolls the same way melee is.
+**Only a strike explicitly meant NOT to kill** (a slap, a called non-lethal blow) risks merely
+wounding and waking it instead. So: **fire at will on a sleeping enemy.** The earlier advice
+below the old table (do not shoot them) is retracted along with the table it sat under.
 
 *source: **PHB p. 68**, SLEEP, text layer read 2026-09-06 and the rate confirmed
 word for word. The campaign had been citing "1 per slayer per round, PHB p.68"
-from expedition 6 onward; that citation is exactly right.*
+from expedition 6 onward; that citation is exactly right — the melee-only gloss added on top
+of it, on day 139, was not.*
 
 ### SLEEP DOES NOT DISTINGUISH FRIEND FROM FOE
 
