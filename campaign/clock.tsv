@@ -1570,3 +1570,9 @@ when	exped	round	kind	anchor	detail	note
 2026-09-27	30	150	correct		-2	the anchor-150 wandering check (kobolds) fired mid-move; resolving it at round 150, where the party actually was
 2026-09-27	30	152	advance		2	day 139: finishing the move east into the cavern to (20,4), after the round-150 kobold check (spent, never near)
 2026-09-27	30	155	advance		3	day 139: the party stands ready, missile weapons up, waiting for the second troglodyte
+2026-09-27	30	160	advance		5	day 139: missiles recovered, the two troglodytes searched (treasure type A, a lair type -- nothing on a wandering individual, no weapon either)
+2026-09-27	30	180	advance		20	day 139: Dave and Torsat guard facing west, the other eight in pairs search the lit floor of area 41, block 1 of 3
+2026-09-27	30	200	advance		20	day 139: the pairs search the floor of area 41, block 2 of 3
+2026-09-27	30	183	check	180	d6=3	anchor 180 + 3
+2026-09-27	30	220	advance		20	day 139: the pairs finish searching the floor of area 41, block 3 of 3
+2026-09-27	30	215	check	210	d6=6	anchor 210 + 5
