@@ -5407,3 +5407,6 @@ Missiles recovered (no breakage), the two troglodyte bodies searched: NOTHING (M
 
 ## Day 139 rounds 224-228 -- further west into open cavern
 40 ft, four rounds, nothing fired. Still the same unworked natural cave, wider than a corridor, no boundary reached yet in any direction the lantern shows. Nothing living seen or heard.
+
+## Day 139 rounds 228-241 -- west then northeast, a junction at (11,6)
+Nothing fired either leg. At (8,4) the way narrowed and west closed off; the party turned north then northeast, 50 ft, six rounds, to (11,6) -- a junction, open north, east and west, nothing living in sight.
