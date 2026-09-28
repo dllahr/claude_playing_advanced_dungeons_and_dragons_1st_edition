@@ -1599,3 +1599,14 @@ when	exped	round	kind	anchor	detail	note
 2026-09-28	30	300	advance		10	day 139: Tristle searches the spider's body and the ash around it, one turn, the rest guarding
 2026-09-28	30	304	advance		4	day 139: east through the burnt area 42 and out its north opening
 2026-09-28	30	303	check	300	d6=5	anchor 300 + 3
+2026-09-28	30	314	advance		10	day 139: Dave and Torsat guard (14,9) facing southwest; the other eight, in pairs, search the western cavern floor, block 1 of 7
+2026-09-28	30	324	advance		10	day 139: the pairs continue searching the western cavern floor, block 2 of 7
+2026-09-28	30	334	advance		10	day 139: the pairs continue searching the western cavern floor, block 3 of 7
+2026-09-28	30	331	check	330	d6=2	anchor 330 + 1
+2026-09-28	30	344	advance		10	day 139: the pairs continue searching the western cavern floor, block 4 of 7
+2026-09-28	30	354	advance		10	day 139: the pairs continue searching the western cavern floor, block 5 of 7
+2026-09-28	30	364	advance		10	day 139: the pairs continue searching the western cavern floor, block 6 of 7
+2026-09-28	30	364	check	360	d6=1 -> Troglodytes (1-4)-AC 5, HD 2*, hp 9,8,5,4, #AT 3, D 1-4/1-4/1-4, MV 120' (40'), Save F2, ML 9	anchor 360 + 4
+2026-09-28	30	374	advance		10	day 139: the pairs continue searching the western cavern floor, block 7 of 7
+2026-09-28	30	364	correct		-10	the search ran past the round-364 wandering check (troglodytes); resolving it at round 364, where the party actually was
+2026-09-28	30	374	advance		10	day 139: the pairs finish searching the western cavern floor, block 7 of 7, after the round-364 troglodyte check (spent, never near)

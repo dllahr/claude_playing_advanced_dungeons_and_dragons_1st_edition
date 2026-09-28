@@ -541,3 +541,5 @@ when	map	level	x	y	exped	turn	squares	feet	rate	why	route
 2026-09-28	b1	2	14	8	30		2	20	explore	day 139: standard formation back to the mouth of area 42, scanning walls, ceiling and floor	13,7 13,8 14,8
 2026-09-28	b1	2	14	9	30				PLACED	day 139: GEOMETRY CORRECTION -- the actual doorway of area 42 is (14,9)/(15,9), not (14,8)/(15,8) which is solid wall; the party has been narrated at the doorway throughout, so placed at the square that matches that	
 2026-09-28	b1	2	15	6	30		4	40	explore	day 139: standard formation slowly east through area 42 and out its north side, scanning ceiling walls floor	14,9 15,9 15,8 15,7 15,6
+2026-09-28	b1	2	14	9	30		4	40	known	day 139: Dave and Torsat return to guard the entrance at (14,9), facing southwest	15,6 15,7 15,8 15,9 14,9
+2026-09-28	b1	2	15	6	30				PLACED	day 139: CORRECTION -- party.tsv tracks the main body; the eight searchers stay in the cavern near (15,6), Dave and Torsat split off to guard the entrance at (14,9) separately (not a whole-party move)	
