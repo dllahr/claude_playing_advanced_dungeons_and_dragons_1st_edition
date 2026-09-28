@@ -357,3 +357,17 @@ when	day	exped	round	side	actor	verb	target	qty	detail
 2026-09-27	139	30	1	monsters		damage	troglodyte	14	
 2026-09-27	139	30	1	monster	troglodyte	dead			the readied volley, 14 damage vs 10 hp, dead before it closes
 2026-09-27	139	30	1			end			the second troglodyte dies to the readied volley
+2026-09-27	139	30	1			start			day 139, mouth of area 42: the black widow spider, hp 13, at 10 ft, neither side surprised
+2026-09-27	139	30	1	party	Yrtone	declare			holds ready, melee
+2026-09-27	139	30	1	party	Dave	declare			holds ready, melee
+2026-09-27	139	30	1	party	Torsat	declare			holds ready, melee
+2026-09-27	139	30	1	party	Frython	declare			casts sleep at the spider
+2026-09-27	139	30	1	party	Blartho	declare			fires her sling at the spider
+2026-09-27	139	30	1	party	Dellie	declare			fires her sling at the spider
+2026-09-27	139	30	1	party	Hask	declare			fires his sling at the spider
+2026-09-27	139	30	1	party	Ista	declare			throws darts at the spider
+2026-09-27	139	30	1	party	Tristle	declare			fires his short bow at the spider
+2026-09-27	139	30	1	party	Brand	declare			holds position
+2026-09-27	139	30	1	monsters		damage	spider	13	
+2026-09-27	139	30	1	monster	spider	dead			put to sleep by Frython, then slain automatically per the day-139 sleep ruling; never woke
+2026-09-27	139	30	1			end			the black widow spider dies in its sleep, never fought back
