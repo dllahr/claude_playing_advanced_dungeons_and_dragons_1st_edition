@@ -5460,3 +5460,6 @@ Half an hour down the trail (2 miles/8,348 ft, the outcrop path), about 9:45 pm 
 
 ## Day 140 morning -- expedition 31 begins, up to area 30
 Breakfast at the basecamp (camp food, already booked day 140). Two flasks taken from the basecamp stock (party carries 4 oil_flask total now: 2 already in hand + 2 new). Ista's lantern refilled (24.0 turns) and lit, the standing oil-management arrangement, told to the player. Half an hour up the trail (not clocked), then in: standard formation, Tristle 40 ft ahead, MELEE weapons this time (not missile), known route to the head of the stair in area 30, 34 squares/340 ft, 8 rounds. Nothing fired. About 9:05 am. Party at (21,10), the head of the stair down to area 38.
+
+## Day 140 round 8 -- the second lantern topped off
+Yrtone's lantern (Dave carries it) was at 17.0 turns, unlit. Topped to 24.0 from the broached flask in the pool (16.1 turns there was enough; no new flask opened, carry.tsv's four in hand unchanged). Still unlit (hooded lanterns are lit only when declared).
