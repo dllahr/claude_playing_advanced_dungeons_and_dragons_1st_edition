@@ -5475,3 +5475,6 @@ Verified the bend with dmap.py walk before moving (new tooling doing its job): h
 
 ## Day 140 round 20 (cont.) -- light check at (8,8)
 Ran dmap.py light, radius 3 (30 ft lantern), mark-seen: 8 squares lit, 7 newly seen. Cross-checked stocking.present() against the lit set -- nothing stocked falls in range (nearest is the gnomes at (21,12), far off). No feature tags on any lit cell. Previewed both forks with dmap.py walk (no commit): N from (8,8) runs 20 ft to another fork at (7,9) [S/W]; W runs 10 ft to a fork at (7,8) [N/W] -- the two forks are adjacent and likely the same irregular chamber corner, not two different destinations.
+
+## Day 140 round 21 -- (7,8), confirms it's one crooked pocket
+Moved W to (7,8), 10 ft, 1 round, no check. Light check: only (8,8) newly lit, rest already seen -- confirms this is a tight irregular corner, not a spread of separate corridors. Walked both remaining forks (no commit): N from (7,8) goes to (7,9) then E/W; W goes to (6,8) then N/S. Still nothing stocked in range, no features. This whole pocket ((6,8)-(10,8) roughly) reads as one small irregular chamber/junction cluster typical of level 2's cave sections.
