@@ -162,3 +162,67 @@ def test_the_safety_cap_fires_before_a_pathological_walk_runs_forever(tmp_path):
     r = dmap.walk_until(db, 1, (0, 0), 'E', max_squares=10)
     assert r['stop'] == dmap.STOP_CAPPED
     assert len(r['path']) == 11
+
+
+# ------------------------------------------------------- loops vs. real forks
+#
+# Built day 140 after B1 level 2's alcove at (6,8)-(10,8): two raw exits at a
+# junction both looked like choices, but both only curled back through
+# squares already `seen` before either reached anything new. A plain
+# "does this branch ever reach unseen ground" check still isn't enough --
+# walking EITHER way around a loop eventually reaches the loop's one real
+# exit, so a per-branch check calls both of them real. `frontier_exits`
+# floods the whole connected bubble of already-seen ground at once and
+# reduces it to the distinct first steps that reach a NEW frontier, so two
+# directions around the same loop collapse into the one real option.
+
+def _loop_with_one_exit(tmp_path, exit_cell=None):
+    """(0,0) --E-- (1,0), which forks N to (1,1) and E to (2,0); those
+    rejoin via (1,1)-E-(2,1)-S-(2,0), a closed 4-cycle. `exit_cell`, if
+    given, hangs one more cell off (2,0) to the south, left unseen -- the
+    loop's only real way on. Everything in the loop itself is marked
+    `seen`, standing in for ground the party mapped earlier."""
+    cells = {(0, 0): 'open', (1, 0): 'open', (1, 1): 'open',
+              (2, 1): 'open', (2, 0): 'open'}
+    edges = {(0, 0, 'V'): 'open',   # (0,0)-E-(1,0)
+             (1, 0, 'H'): 'open',   # (1,0)-N-(1,1)
+             (1, 0, 'V'): 'open',   # (1,0)-E-(2,0)
+             (1, 1, 'V'): 'open',   # (1,1)-E-(2,1)
+             (2, 0, 'H'): 'open'}   # (2,0)-N-(2,1)
+    if exit_cell:
+        cells[exit_cell] = 'open'
+        edges[(exit_cell[0], exit_cell[1], 'H')] = 'open'  # (2,0)-S-exit_cell
+    db = make_db(tmp_path, cells, edges)
+    dmap.mark_seen(db, 1, [(1, 1), (2, 1), (2, 0)])
+    return db
+
+
+def test_two_raw_ways_around_one_closed_loop_is_not_a_junction(tmp_path):
+    db = _loop_with_one_exit(tmp_path)
+    r = dmap.walk_until(db, 1, (0, 0), 'E')
+    assert r['stop'] == dmap.STOP_CLOSED_LOOP, (
+        'N and E out of (1,0) both only loop back into already-seen '
+        'ground; neither is a real choice, and there is nothing unseen '
+        'anywhere nearby')
+    assert r['path'][-1] == (1, 0)
+
+
+def test_a_loop_with_one_real_exit_is_walked_through_not_offered_as_a_fork(
+        tmp_path):
+    db = _loop_with_one_exit(tmp_path, exit_cell=(2, -1))
+    r = dmap.walk_until(db, 1, (0, 0), 'E')
+    assert r['stop'] == dmap.STOP_DEAD_END, (
+        'the loop has exactly one real way on -- south off (2,0) -- so the '
+        'walk should pass silently through the loop and stop at the real '
+        'dead end, never pausing at (1,0) to offer N/E as if they led '
+        'somewhere different')
+    assert r['path'] == [(0, 0), (1, 0), (2, 0), (2, -1)]
+
+
+def test_frontier_exits_collapses_a_loop_directly(tmp_path):
+    db = _loop_with_one_exit(tmp_path, exit_cell=(2, -1))
+    cells, edges = dmap.load(db, 1)
+    seen = dmap.load_seen(db, 1)
+    real = dmap.frontier_exits(cells, edges, seen, (1, 0), (0, 0))
+    assert len(real) == 1, 'N and E both lead to the one exit -- one option'
+    assert real[0][1] == (2, 0), 'the direction whose bubble found it first'

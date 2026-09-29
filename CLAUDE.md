@@ -305,18 +305,29 @@ instead of eyeballing which nearby cells are "close enough" or hand-picking a `s
 --cells` list — both were the direct cause of geometry mistakes in play (day 139).
 
 **`dmap.py walk <db> <level> <x> <y> <N|S|E|W>`** advances the party in a direction
-until there is something to stop FOR — a junction (2+ ways on, a real choice, handed
-back rather than picked), a dead end, an area-label change, or an already-visible
-feature (a cell's own `feature` tag, or a found secret door) — and deliberately does
-**not** stop merely for stepping onto ground nobody has walked before. Use it for
-open-ended declarations ("advance east", "keep going until something changes") in
-place of guessing a destination and retrying against `party.py move`'s REFUSED errors,
-which is what several of day 139's geometry mistakes actually were. A destination the
-player names explicitly still goes straight to `party.py move`. **Level 2's room
-labels are unreliable** (`mapdb/README.md`: "nearest numbered area", not "inside room
-N") — an area-boundary stop there may fire on a label flicker that means nothing in
-the fiction; read it the way any low-confidence call in this database is read, not as
-certain.
+until there is something to stop FOR — a junction (2+ REAL ways on, a real choice,
+handed back rather than picked), a dead end, a closed loop, an area-label change, or
+an already-visible feature (a cell's own `feature` tag, or a found secret door) — and
+deliberately does **not** stop merely for stepping onto ground nobody has walked
+before. Use it for open-ended declarations ("advance east", "keep going until
+something changes") in place of guessing a destination and retrying against
+`party.py move`'s REFUSED errors, which is what several of day 139's geometry
+mistakes actually were. A destination the player names explicitly still goes
+straight to `party.py move`. **Level 2's room labels are unreliable**
+(`mapdb/README.md`: "nearest numbered area", not "inside room N") — an
+area-boundary stop there may fire on a label flicker that means nothing in the
+fiction; read it the way any low-confidence call in this database is read, not
+as certain.
+
+**A junction is decided by REAL ways on, not raw exits.** `frontier_exits` floods
+the whole bubble of already-`seen` ground reachable from a cell and reduces it to
+the directions that actually reach something unseen, so two raw exits that both
+wind around one loop to the same single frontier collapse into ONE real choice
+instead of a false fork (`mapdb/README.md` has the full day-140 writeup: B1 level
+2's alcove at (6,8)-(10,8), where "north" and "west" out of (7,8) both only curled
+back through squares already lit). This is also why `party.py move` now marks
+every square it actually walks as `seen` — a square walked but never light-checked
+was still reading as fair game for that search to wander back through.
 
 **Read the map's own legend before writing any classifier.** The DMG prints a LEVEL
 KEY (pdf p.95) defining `S`=secret door, `C`=concealed door, boxed `X`=trap door,

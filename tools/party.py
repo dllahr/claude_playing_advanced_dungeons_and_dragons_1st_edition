@@ -320,6 +320,15 @@ def move(to, why='', rate='explore', db=None, path=None, map_name='b1',
             'The destination is not where you think.\n    Route: %s'
             % (walked, max_squares, ' '.join('%d,%d' % s for s in steps)))
     feet = walked * 10
+    # Every square actually walked is verified ground -- mark it `seen` so
+    # dmap.py's light/walk/frontier queries don't treat it as unexplored on
+    # a later pass. Day 140 found this gap: (10,7) was walked through whole
+    # rounds earlier but still read as unseen, which let a junction query
+    # wander all the way back through it looking for "new" ground. This does
+    # NOT substitute for a light check -- it only confirms the path itself,
+    # not everything within lantern radius of it; `dmap.py light --mark-seen`
+    # is still how the party's actual light radius gets recorded.
+    dmap.mark_seen(db, level, steps)
     append(path or LOG, dict(
         when=today(), map=map_name, level=level, x=dest[0], y=dest[1],
         exped=exped, turn=turn, squares=len(steps) - 1, feet=feet,

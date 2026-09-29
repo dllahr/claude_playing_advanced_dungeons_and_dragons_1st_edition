@@ -14,6 +14,7 @@ import argparse
 import os
 import sqlite3
 import sys
+from collections import deque
 
 CELL = {'open': ' ', 'solid': '#', 'mixed': ':', 'unknown': '?'}
 HEDGE = {'wall': '---', 'open': '   ', 'door': '-D-', 'secret': '-S-',
@@ -700,8 +701,86 @@ def light_reach(db, level, x, y, radius=3):
     return out
 
 
-STOP_JUNCTION, STOP_DEAD_END, STOP_AREA, STOP_FEATURE, STOP_CAPPED = (
-    'junction', 'dead_end', 'area_boundary', 'feature', 'capped')
+STOP_JUNCTION, STOP_DEAD_END, STOP_AREA, STOP_FEATURE, STOP_CAPPED, \
+    STOP_CLOSED_LOOP = ('junction', 'dead_end', 'area_boundary', 'feature',
+                         'capped', 'closed_loop')
+
+
+def load_seen(db, level):
+    """{(x,y)} -- every cell the party has actually verified, per
+    `mark_seen`. The set `frontier_exits` and `light_report` both test
+    branches against."""
+    con = sqlite3.connect(db)
+    seen = {(r[0], r[1]) for r in con.execute(
+        'SELECT x,y FROM cells WHERE level=? AND seen=1', (level,))}
+    con.close()
+    return seen
+
+
+def _frontier_from(cells, edges, seen, start, came_from, max_cells):
+    """BFS the connected bubble of already-`seen` walkable ground reachable
+    from `start` -- never stepping back onto `came_from`, the cell the
+    party is walking away from -- and returns {frontier_cell: route} for
+    every unseen cell bordering that bubble. `route` is the cells from
+    `start` to the frontier, inclusive of both ends. Bounded to `max_cells`
+    bubble cells expanded: a real frontier is found the moment the flood
+    fill touches it, so the cap only matters for a genuinely closed loop,
+    where it stands in for "not findable nearby"."""
+    predecessor = {start: None}
+    if came_from is not None:
+        predecessor[came_from] = None
+    queue = deque([start])
+    expanded = 0
+    frontiers = {}
+    while queue and expanded < max_cells:
+        cur = queue.popleft()
+        expanded += 1
+        for _, n in exits(cur, edges):
+            if n not in cells or cells[n][0] not in WALKABLE or n in predecessor:
+                continue
+            predecessor[n] = cur
+            if n in seen:
+                queue.append(n)
+            elif n not in frontiers:
+                route = [n]
+                p = cur
+                while p is not None:
+                    route.append(p)
+                    p = predecessor[p]
+                route.reverse()
+                frontiers[n] = route
+    return frontiers
+
+
+def frontier_exits(cells, edges, seen, cell, came_from=None, max_squares=60):
+    """Every REAL way on from `cell`: not `exits()`'s raw neighbours, but
+    the distinct first steps that actually lead somewhere new. Floods the
+    whole connected bubble of already-`seen` ground reachable from `cell`
+    (never stepping back onto `came_from`) and finds every unseen cell
+    bordering it, via `_frontier_from` -- then reduces those frontiers to
+    the directions that reach at least one of them. Two raw exits that
+    both wind around the same seen ground to the same single frontier
+    collapse into ONE real option, not two: the fix for B1 level 2's
+    alcove at (6,8)-(10,8), where "north" and "west" out of (7,8) both
+    looked like choices but both only curled around to the one true way
+    out, south of (6,8) -- a plain per-branch check (does THIS branch ever
+    reach unseen ground) still called both real, since walking either way
+    around the loop eventually gets there; this is why the reduction has
+    to happen over the whole bubble at once, not branch by branch.
+
+    This is the general "simulate walking every direction from here and
+    see what's actually there" primitive. `walk_until` calls it to decide
+    what counts as a junction; it is equally the right call for an ad hoc
+    "what are our real options right now" query with no heading at all."""
+    frontiers = _frontier_from(cells, edges, seen, cell, came_from, max_squares)
+    cell_to_dir = {n: d for d, n in exits(cell, edges, came_from)
+                   if n in cells and cells[n][0] in WALKABLE}
+    firsts = {}
+    for route in frontiers.values():
+        first_step = route[1]
+        if first_step in cell_to_dir and first_step not in firsts:
+            firsts[first_step] = cell_to_dir[first_step]
+    return [(firsts[n], n) for n in firsts]
 
 
 def exits(cell, edges, came_from=None):
@@ -726,18 +805,32 @@ def walk_until(db, level, start, heading, max_squares=60):
     there is something to stop FOR -- never routing the party through a
     decision point unasked.
 
-    A STOP fires on: a JUNCTION (2+ ways on, once the way just walked is
-    excluded -- a real choice, so this hands back to the player rather than
-    picking for them); a DEAD END (0 ways on); an AREA BOUNDARY (the room
-    label of the cell just entered differs from the one just left -- this
-    includes leaving a numbered room into blank corridor and the reverse,
-    not only room-to-room); or a FEATURE already visible to the party (the
-    cell's own `feature` tag, or a secret/concealed edge at this cell that
-    is already `seen`.  An UNFOUND secret is invisible to this the same way
-    it is to the party). Simply crossing into ground the party has not
-    walked before is deliberately NOT a stop condition on its own -- a long
+    A STOP fires on: a JUNCTION (2+ REAL ways on, once the way just walked
+    is excluded -- a real choice, so this hands back to the player rather
+    than picking for them); a DEAD END (0 ways on, full stop -- solid rock
+    or a wall in every other direction); a CLOSED LOOP (1+ ways on, but
+    every one of them, flood-filled outward via `frontier_exits`, only
+    curls back into ground already `seen` -- a "choice" that is not
+    actually one, so it stops here rather than pretending it is a dead end
+    or silently detouring through it); an AREA BOUNDARY (the room label of
+    the cell just entered differs from the one just left -- this includes
+    leaving a numbered room into blank corridor and the reverse, not only
+    room-to-room); or a FEATURE already visible to the party (the cell's
+    own `feature` tag, or a secret/concealed edge at this cell that is
+    already `seen`.  An UNFOUND secret is invisible to this the same way it
+    is to the party). Simply crossing into ground the party has not walked
+    before is deliberately NOT a stop condition on its own -- a long
     featureless corridor should not stop every ten feet just because it is
     new.
+
+    A JUNCTION is decided by REAL ways on, not raw ones: a branch that only
+    loops back into already-`seen` ground (per `frontier_exits`) is not
+    offered as a choice, and if walking it is the only way on, this walks
+    it silently and keeps going rather than stopping there and calling it a
+    fork. Built after B1 level 2's little alcove at (6,8)-(10,8): "north"
+    and "west" out of (7,8) both looked like ways on, and both actually
+    just curled back through squares already lit -- the one real way out
+    was a branch two junctions later that neither raw choice made obvious.
 
     Returns a dict: `path` (list of cells walked, `start` included), `stop`
     (one of the STOP_* constants above), `why` (what fired it, in enough
@@ -760,6 +853,7 @@ def walk_until(db, level, start, heading, max_squares=60):
     separation `clock.py` and `mapdb` already keep.
     """
     cells, edges = load(db, level)
+    seen = load_seen(db, level)
     con = sqlite3.connect(db)
     found_secret = {(r[0], r[1], r[2]) for r in con.execute(
         "SELECT x,y,orient FROM edges WHERE level=? AND kind IN"
@@ -808,15 +902,21 @@ def walk_until(db, level, start, heading, max_squares=60):
         if not options:
             return {'path': path, 'stop': STOP_DEAD_END,
                     'why': 'no way on from (%d,%d)' % cur}
-        if len(options) > 1:
+        real = frontier_exits(cells, edges, seen, cur, came_from, max_squares)
+        if not real:
+            return {'path': path, 'stop': STOP_CLOSED_LOOP,
+                    'why': 'every way on from (%d,%d) loops back into '
+                           'ground already seen, nothing unexplored past '
+                           'here' % cur}
+        if len(real) > 1:
             return {'path': path, 'stop': STOP_JUNCTION,
-                    'why': '%d ways on from (%d,%d)' % (len(options), *cur),
-                    'options': options}
+                    'why': '%d real ways on from (%d,%d)' % (len(real), *cur),
+                    'options': real}
         if len(path) - 1 >= max_squares:
             return {'path': path, 'stop': STOP_CAPPED,
                     'why': 'still going after %d squares, nothing new yet'
                            % max_squares}
-        came_from, cur = cur, options[0][1]
+        came_from, cur = cur, real[0][1]
         room_here = cells[path[-1]][1]
         path.append(cur)
 
@@ -842,10 +942,7 @@ def light_report(db, level, x, y, radius=3, mark=False):
     direct fix for hand-picking a `seen --cells` list and getting it wrong,
     which is why this exists."""
     lit = light_reach(db, level, x, y, radius)
-    con = sqlite3.connect(db)
-    already = {(r[0], r[1]) for r in con.execute(
-        'SELECT x,y FROM cells WHERE level=? AND seen=1', (level,))}
-    con.close()
+    already = load_seen(db, level)
     new = sorted(c for c in lit if c not in already and c != (x, y))
     known = sorted(c for c in lit if c in already and c != (x, y))
     out = ['light from (%d,%d), radius %d (%d ft): %d square(s) lit'

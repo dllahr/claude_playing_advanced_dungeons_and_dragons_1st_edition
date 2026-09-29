@@ -574,14 +574,35 @@ between two solid corners).
 retried against `party.py move`'s REFUSED errors, which is what several of
 day 139's geometry mistakes actually were. It takes the one way forward
 through a plain corridor on its own and stops the instant there is a real
-event: a junction (2+ ways on, once the way just walked is excluded — a real
-choice, handed back rather than picked for the player), a dead end, an
-area-label change (leaving a numbered room counts as much as entering one),
-or a feature already visible to the party (its own `feature` tag, or a
-secret/concealed edge that is already `seen` — an unfound secret is invisible
-to this exactly as it is to a passing glance). Simply stepping onto ground
-nobody has walked is deliberately **not** a stop condition — a long plain
-corridor should not stop every ten feet just because it is new.
+event: a junction (2+ REAL ways on, once the way just walked is excluded — a
+real choice, handed back rather than picked for the player), a dead end, a
+closed loop, an area-label change (leaving a numbered room counts as much as
+entering one), or a feature already visible to the party (its own `feature`
+tag, or a secret/concealed edge that is already `seen` — an unfound secret is
+invisible to this exactly as it is to a passing glance). Simply stepping onto
+ground nobody has walked is deliberately **not** a stop condition — a long
+plain corridor should not stop every ten feet just because it is new.
+
+**A junction is decided by REAL ways on, not raw ones.** `frontier_exits`
+floods the whole connected bubble of already-`seen` ground reachable from the
+current cell and reduces it to the distinct directions that actually reach
+something unseen — so two raw exits that both wind around the same loop to
+the same single frontier collapse into ONE real option, and a branch that
+only closes back into ground already `seen`, with nothing unseen findable
+nearby, is not offered as a choice at all (`STOP_CLOSED_LOOP` if that leaves
+zero real options; otherwise the walk passes through the loop silently).
+Built day 140 after B1 level 2's alcove at (6,8)-(10,8): "north" and "west"
+out of (7,8) both looked like choices, and both only curled back through
+squares already lit before reaching anything new — a plain per-branch check
+("does this branch ever reach unseen ground") still called both of them
+real, since walking either way around the loop eventually gets there; the
+fix has to look at the whole bubble at once, not branch by branch. This also
+surfaced a second, real gap: `party.py move` never marked the squares it
+walked through as `seen` — only an explicit `light --mark-seen` did — so a
+square physically walked minutes earlier still read as fair game for this
+search to wander back through. `move` now marks its own route `seen` (not a
+substitute for a light check — that still records the fuller light radius,
+this only confirms the path itself).
 
 **Level 2's room labels are unreliable** (see "Treat `cells.room` on level 2
 as nearest numbered area" above) — an area-boundary stop there can fire on a
