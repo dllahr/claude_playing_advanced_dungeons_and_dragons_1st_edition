@@ -5472,3 +5472,6 @@ Marching order changed: Tristle drops to 2nd rank, Hask/Dellie 3rd, Brand/Blarth
 
 ## Day 140 round 20 -- corridor bends N then NW to (8,8)
 Verified the bend with dmap.py walk before moving (new tooling doing its job): heading W from (11,7) the corridor actually runs (11,7)->(10,7)->(10,8)->(9,8)->(8,8), i.e. a jog north then a run west/northwest -- matches the player's own read of the corridor's angle. Moved the party accordingly, 40 ft, 1 round. New fork at (8,8): N or W. Nothing stocked or wandering in this stretch; no check fired.
+
+## Day 140 round 20 (cont.) -- light check at (8,8)
+Ran dmap.py light, radius 3 (30 ft lantern), mark-seen: 8 squares lit, 7 newly seen. Cross-checked stocking.present() against the lit set -- nothing stocked falls in range (nearest is the gnomes at (21,12), far off). No feature tags on any lit cell. Previewed both forks with dmap.py walk (no commit): N from (8,8) runs 20 ft to another fork at (7,9) [S/W]; W runs 10 ft to a fork at (7,8) [N/W] -- the two forks are adjacent and likely the same irregular chamber corner, not two different destinations.
