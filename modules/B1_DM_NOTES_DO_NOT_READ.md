@@ -5478,3 +5478,6 @@ Ran dmap.py light, radius 3 (30 ft lantern), mark-seen: 8 squares lit, 7 newly s
 
 ## Day 140 round 21 -- (7,8), confirms it's one crooked pocket
 Moved W to (7,8), 10 ft, 1 round, no check. Light check: only (8,8) newly lit, rest already seen -- confirms this is a tight irregular corner, not a spread of separate corridors. Walked both remaining forks (no commit): N from (7,8) goes to (7,9) then E/W; W goes to (6,8) then N/S. Still nothing stocked in range, no features. This whole pocket ((6,8)-(10,8) roughly) reads as one small irregular chamber/junction cluster typical of level 2's cave sections.
+
+## Day 140 round 22 -- west then south, out of the alcove to (6,7)
+Moved 20 ft to (6,7), the alcove's real exit. Light check radius 3: 4 newly lit squares to the south/southwest (5,5),(6,4),(6,5),(6,6). Nothing stocked in range, no features. The passage keeps going south, with another fork already visible at (6,6): W or S. Corridor is walled E and W at (6,7) itself, so it's a narrow neck, not another pocket -- genuinely new ground this time.

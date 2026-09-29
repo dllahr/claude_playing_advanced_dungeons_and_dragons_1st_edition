@@ -555,3 +555,4 @@ when	map	level	x	y	exped	turn	squares	feet	rate	why	route
 2026-09-28	b1	2	11	7	31		1	10	known	day 140: formation reshuffled (Tristle to 2nd rank, Hask/Dellie 3rd, Brand/Blartho 4th), heading north/northwest	11,6 11,7
 2026-09-28	b1	2	8	8	31		4	40	known	day 140: corridor bends N then NW out of (11,7), standard formation continues	11,7 10,7 10,8 9,8 8,8
 2026-09-28	b1	2	7	8	31		1	10	known	day 140: west fork out of (8,8)	8,8 7,8
+2026-09-28	b1	2	6	7	31		2	20	known	day 140: west then south, into the alcove's real exit	7,8 6,8 6,7
