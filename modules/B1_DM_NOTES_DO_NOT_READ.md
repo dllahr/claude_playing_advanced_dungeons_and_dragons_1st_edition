@@ -5469,3 +5469,6 @@ CORRECTION: a process error advanced the clock 12 rounds for what should have be
 
 ## Day 140 round 19 -- formation reshuffled, one step north to (11,7)
 Marching order changed: Tristle drops to 2nd rank, Hask/Dellie 3rd, Brand/Blartho 4th (narrative/tactical note only, not TSV-tracked -- relevant to who takes a surprise hit first and who's in melee range first if the front rank is engaged). Walked north via dmap.py walk: one square to (11,7), then wall to the north -- corridor forks E/W there. Handed the fork back to the player rather than picking.
+
+## Day 140 round 20 -- corridor bends N then NW to (8,8)
+Verified the bend with dmap.py walk before moving (new tooling doing its job): heading W from (11,7) the corridor actually runs (11,7)->(10,7)->(10,8)->(9,8)->(8,8), i.e. a jog north then a run west/northwest -- matches the player's own read of the corridor's angle. Moved the party accordingly, 40 ft, 1 round. New fork at (8,8): N or W. Nothing stocked or wandering in this stretch; no check fired.
