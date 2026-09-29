@@ -5466,3 +5466,6 @@ Yrtone's lantern (Dave carries it) was at 17.0 turns, unlit. Topped to 24.0 from
 
 ## Day 140 rounds 11-18 -- back to (11,6), Tristle's infravision check at (17,4)
 CORRECTION: a process error advanced the clock 12 rounds for what should have been ~3 (120 ft at the known rate); corrected back to round 14. At (17,4), Tristle pauses and looks east on infravision (no light near him at 40 ft out). Checked with the real tools this time: dmap.py light from (17,4), radius 6 (60 ft, infravision range) -- 30 squares in sight -- cross-checked against tools/stocking.py's present() for level 2: NOTHING STOCKED falls in that lit set (area 41's troglodytes and area 42's spider are dead; nothing else stocked is anywhere near here). Reported to the player: nothing warm seen. Continued to (11,6), 140 ft, 3 rounds; nothing fired either leg.
+
+## Day 140 round 19 -- formation reshuffled, one step north to (11,7)
+Marching order changed: Tristle drops to 2nd rank, Hask/Dellie 3rd, Brand/Blartho 4th (narrative/tactical note only, not TSV-tracked -- relevant to who takes a surprise hit first and who's in melee range first if the front rank is engaged). Walked north via dmap.py walk: one square to (11,7), then wall to the north -- corridor forks E/W there. Handed the fork back to the player rather than picking.

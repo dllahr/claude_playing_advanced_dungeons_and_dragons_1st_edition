@@ -1622,3 +1622,4 @@ when	exped	round	kind	anchor	detail	note
 2026-09-28	31	14	correct		-9	process error: advanced 12 rounds for what should have been ~3 rounds (120 ft at the known rate) reaching (17,4) from (20,13); the party.py move calls were correct, only the clock arithmetic was wrong
 2026-09-28	31	15	advance		1	day 140: Tristle pauses at (17,4) to check east on infravision
 2026-09-28	31	18	advance		3	day 140: on to (11,6), Tristle 40 ft ahead
+2026-09-28	31	19	advance		1	day 140: one square north to (11,7), formation reshuffled
