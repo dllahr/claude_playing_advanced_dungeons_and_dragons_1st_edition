@@ -5457,3 +5457,6 @@ Lit at round 0 of expedition 30 (2:25 pm), 24.0 turns, never refilled or hooded 
 
 ## Day 139 night -- down to the basecamp, dinner
 Half an hour down the trail (2 miles/8,348 ft, the outcrop path), about 9:45 pm at the basecamp. Nothing on the trail. Dinner for ten, camp food 0.52 person-week (2.89 -> 2.37). Nothing else declared.
+
+## Day 140 morning -- expedition 31 begins, up to area 30
+Breakfast at the basecamp (camp food, already booked day 140). Two flasks taken from the basecamp stock (party carries 4 oil_flask total now: 2 already in hand + 2 new). Ista's lantern refilled (24.0 turns) and lit, the standing oil-management arrangement, told to the player. Half an hour up the trail (not clocked), then in: standard formation, Tristle 40 ft ahead, MELEE weapons this time (not missile), known route to the head of the stair in area 30, 34 squares/340 ft, 8 rounds. Nothing fired. About 9:05 am. Party at (21,10), the head of the stair down to area 38.

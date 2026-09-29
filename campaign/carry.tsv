@@ -1527,3 +1527,5 @@ when	day	who	asset	verb	qty	unit	note
 2026-09-28	140	party	camp_food	move	-0.43	person-week	left at the basecamp, day 140
 2026-09-28	140	basecamp	camp_food	move	0.43	person-week	the remainder the party was carrying, left at the basecamp, day 140
 2026-09-28	140	party	camp_food	anchor	0	person-week	CLEAN ANCHOR, day 140: the party carries no camp food now, all of it left at the basecamp; the preceding rows' arithmetic left a floating-point dust value instead of a clean zero, this sets it outright
+2026-09-28	140	basecamp	oil_flask	move	-2	each	two flasks taken for the caves, day 140
+2026-09-28	140	party	oil_flask	move	2	each	two flasks taken from the basecamp, day 140
