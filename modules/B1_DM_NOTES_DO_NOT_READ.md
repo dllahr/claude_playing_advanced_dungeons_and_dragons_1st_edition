@@ -5463,3 +5463,6 @@ Breakfast at the basecamp (camp food, already booked day 140). Two flasks taken 
 
 ## Day 140 round 8 -- the second lantern topped off
 Yrtone's lantern (Dave carries it) was at 17.0 turns, unlit. Topped to 24.0 from the broached flask in the pool (16.1 turns there was enough; no new flask opened, carry.tsv's four in hand unchanged). Still unlit (hooded lanterns are lit only when declared).
+
+## Day 140 rounds 11-18 -- back to (11,6), Tristle's infravision check at (17,4)
+CORRECTION: a process error advanced the clock 12 rounds for what should have been ~3 (120 ft at the known rate); corrected back to round 14. At (17,4), Tristle pauses and looks east on infravision (no light near him at 40 ft out). Checked with the real tools this time: dmap.py light from (17,4), radius 6 (60 ft, infravision range) -- 30 squares in sight -- cross-checked against tools/stocking.py's present() for level 2: NOTHING STOCKED falls in that lit set (area 41's troglodytes and area 42's spider are dead; nothing else stocked is anywhere near here). Reported to the player: nothing warm seen. Continued to (11,6), 140 ft, 3 rounds; nothing fired either leg.
