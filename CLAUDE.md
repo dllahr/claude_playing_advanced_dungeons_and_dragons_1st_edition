@@ -329,6 +329,18 @@ back through squares already lit). This is also why `party.py move` now marks
 every square it actually walks as `seen` — a square walked but never light-checked
 was still reading as fair game for that search to wander back through.
 
+**A junction also needs STRUCTURE, not just two different destinations.**
+`structural_options` collapses two directions into one if the lattice corner
+between them is open (`_corner_passable`, the same check `light` uses for a
+grazed corner) — nothing separates the paths, so it is one pocket widening,
+not a fork. Same session, one cell further: (6,6)'s "south" and "west" both
+reached genuinely different unseen ground, so `frontier_exits` correctly
+called both real, but there was no wall between them either — confirmed
+against the actual page render, not re-derived, since a freshly-refit grid
+drifted enough to misread a confidently-solid cell as open (`mapdb/README.md`
+has the full writeup, including why the page must be rendered at the level's
+own stored `pdf`/`page`/`dpi`/`channel`).
+
 **Read the map's own legend before writing any classifier.** The DMG prints a LEVEL
 KEY (pdf p.95) defining `S`=secret door, `C`=concealed door, boxed `X`=trap door,
 boxed `S`=secret trap door, even hatching=stairs up, tapering=stairs down, and the

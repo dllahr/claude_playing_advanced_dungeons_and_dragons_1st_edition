@@ -783,6 +783,57 @@ def frontier_exits(cells, edges, seen, cell, came_from=None, max_squares=60):
     return [(firsts[n], n) for n in firsts]
 
 
+_CORNER_OFFSET = {frozenset(('S', 'W')): (0, 0), frozenset(('S', 'E')): (1, 0),
+                   frozenset(('N', 'W')): (0, 1), frozenset(('N', 'E')): (1, 1)}
+
+
+def _directions_merge(cells, edges, edge_states, cell, d1, d2):
+    """True if the two directions out of `cell` are NOT a real fork -- the
+    lattice corner between them (where the two edges of this cell meet) is
+    passable, so nothing stands between the paths: it is one pocket getting
+    wider, not a branch. `N`/`S` and `E`/`W` are opposite, share no single
+    corner, and are never merged this way -- only the four ADJACENT pairs
+    (S/W, S/E, N/W, N/E) have one."""
+    off = _CORNER_OFFSET.get(frozenset((d1, d2)))
+    if off is None:
+        return False
+    i, j = cell[0] + off[0], cell[1] + off[1]
+    return _corner_passable(cells, edges, edge_states, i, j)
+
+
+def structural_options(cells, edges, edge_states, cell, options):
+    """Reduce `options` (a [(dir, cell)] list, e.g. from `frontier_exits`)
+    to one representative per group of directions that are not actually
+    separated by anything -- collapsing a passage that merely widens into a
+    single way on, so a STOP_JUNCTION only fires when there is real
+    structure between the choices. Built day 140: B1 level 2's (6,6), where
+    "south" and "west" both looked like a fork by direction and by
+    eventual destination, but the player asked the right question -- there
+    is no wall between them, `_corner_passable` confirms it, and the page
+    render shows one winding cave passage, not two. A fork needs something
+    standing between the paths; two edges of one open pocket are not that,
+    they are the pocket getting wider."""
+    dirs = [d for d, _ in options]
+    parent = {d: d for d in dirs}
+
+    def find(d):
+        while parent[d] != d:
+            parent[d] = parent[parent[d]]
+            d = parent[d]
+        return d
+
+    for i, d1 in enumerate(dirs):
+        for d2 in dirs[i + 1:]:
+            if _directions_merge(cells, edges, edge_states, cell, d1, d2):
+                r1, r2 = find(d1), find(d2)
+                if r1 != r2:
+                    parent[r1] = r2
+    groups = {}
+    for d, n in options:
+        groups.setdefault(find(d), (d, n))
+    return list(groups.values())
+
+
 def exits(cell, edges, came_from=None):
     """[(dir, neighbour)] -- every PASSABLE exit from `cell`, excluding the
     direction just arrived from. Does not check whether the neighbour cell
@@ -832,6 +883,18 @@ def walk_until(db, level, start, heading, max_squares=60):
     just curled back through squares already lit -- the one real way out
     was a branch two junctions later that neither raw choice made obvious.
 
+    A JUNCTION ALSO NEEDS STRUCTURE, not just two different eventual
+    destinations: `structural_options` collapses two directions into one
+    if the lattice corner between them (`_corner_passable`) is open --
+    nothing stands between the paths, so it is one pocket getting wider,
+    not a fork. Built after (6,6) on the same level: "south" and "west"
+    both reached genuinely different unseen ground, so `frontier_exits`
+    correctly called both real, but there was no wall between them either
+    -- the page render shows one winding cave passage. A direction that
+    eventually leads somewhere different is necessary but not sufficient;
+    it also has to be walled off from its neighbour at the cell it forks
+    from, or it is not a real choice yet, just a bend.
+
     Returns a dict: `path` (list of cells walked, `start` included), `stop`
     (one of the STOP_* constants above), `why` (what fired it, in enough
     detail to narrate), and for STOP_JUNCTION, `options` (the [(dir, cell)]
@@ -854,6 +917,7 @@ def walk_until(db, level, start, heading, max_squares=60):
     """
     cells, edges = load(db, level)
     seen = load_seen(db, level)
+    edge_states = load_edge_states(db, level)
     con = sqlite3.connect(db)
     found_secret = {(r[0], r[1], r[2]) for r in con.execute(
         "SELECT x,y,orient FROM edges WHERE level=? AND kind IN"
@@ -908,6 +972,7 @@ def walk_until(db, level, start, heading, max_squares=60):
                     'why': 'every way on from (%d,%d) loops back into '
                            'ground already seen, nothing unexplored past '
                            'here' % cur}
+        real = structural_options(cells, edges, edge_states, cur, real)
         if len(real) > 1:
             return {'path': path, 'stop': STOP_JUNCTION,
                     'why': '%d real ways on from (%d,%d)' % (len(real), *cur),

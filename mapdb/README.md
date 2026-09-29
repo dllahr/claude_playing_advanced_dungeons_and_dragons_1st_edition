@@ -604,6 +604,22 @@ search to wander back through. `move` now marks its own route `seen` (not a
 substitute for a light check — that still records the fuller light radius,
 this only confirms the path itself).
 
+**A junction ALSO needs STRUCTURE, not just two different eventual
+destinations.** `structural_options` collapses two directions into one if the
+lattice corner between them (`_corner_passable`, the same primitive
+`light`'s ray-caster uses for a grazed corner) is open — nothing stands
+between the paths, so it is one pocket getting wider, not a fork. Built the
+same day, one cell further on: at (6,6), "south" and "west" genuinely reached
+different unseen ground, so `frontier_exits` was right to call both real —
+but the player asked the obvious next question, "is there a wall between
+them," and there wasn't one. The page render (rendered at the level's own
+stored `pdf`/`page`/`dpi`/`channel` from the `levels` table, NOT re-fit from
+scratch — a re-fit grid drifted enough to misread a confidently-solid cell as
+open) shows one winding cave passage the whole way, no rock in it anywhere.
+Reaching somewhere different is necessary for a fork but not sufficient; it
+also has to be walled off from its neighbour at the cell it splits from, or
+it is a bend, not a branch.
+
 **Level 2's room labels are unreliable** (see "Treat `cells.room` on level 2
 as nearest numbered area" above) — an area-boundary stop there can fire on a
 label flicker that means nothing in the fiction, over one large, patchily

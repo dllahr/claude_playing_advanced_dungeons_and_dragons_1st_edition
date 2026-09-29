@@ -226,3 +226,65 @@ def test_frontier_exits_collapses_a_loop_directly(tmp_path):
     real = dmap.frontier_exits(cells, edges, seen, (1, 0), (0, 0))
     assert len(real) == 1, 'N and E both lead to the one exit -- one option'
     assert real[0][1] == (2, 0), 'the direction whose bubble found it first'
+
+
+# ------------------------------------------------------ a fork needs structure
+#
+# Built day 140, the SAME session, on B1 level 2's (6,6): "south" and "west"
+# both reached genuinely different unseen ground, so `frontier_exits` was
+# right to call both real -- but the player asked whether anything actually
+# separated them, and nothing did. The page render shows one winding cave
+# passage, no wall anywhere in it. Two directions that eventually diverge are
+# not yet a fork if nothing stands between them where they leave the cell.
+
+def _widening_pocket(tmp_path):
+    """(5,5) --S-- (5,4), an open pocket with two ways on: S to (5,3), W to
+    (4,4). The corner between S and W (the pocket's SW corner) is open on
+    every cell and edge that meets there -- nothing separates the two
+    paths, matching (6,6)'s S/W corner on the real map."""
+    cells = {(5, 5): 'open', (5, 4): 'open', (5, 3): 'open',
+             (4, 4): 'open', (4, 3): 'open'}
+    edges = {(5, 4, 'H'): 'open',   # (5,5)-S-(5,4)
+             (5, 3, 'H'): 'open',   # (5,4)-S-(5,3)
+             (4, 4, 'V'): 'open',   # (5,4)-W-(4,4)
+             (4, 3, 'V'): 'open',   # corner: east side of (4,3)
+             (4, 3, 'H'): 'open'}   # corner: north side of (4,3)
+    return make_db(tmp_path, cells, edges)
+
+
+def test_two_open_edges_of_one_pocket_are_not_a_fork(tmp_path):
+    db = _widening_pocket(tmp_path)
+    cells, edges = dmap.load(db, 1)
+    edge_states = dmap.load_edge_states(db, 1)
+    seen = dmap.load_seen(db, 1)
+    real = dmap.frontier_exits(cells, edges, seen, (5, 4), (5, 5))
+    assert sorted(d for d, _ in real) == ['S', 'W'], (
+        'both S and W genuinely reach different unseen ground -- '
+        'frontier_exits alone is right to call them both real')
+    reduced = dmap.structural_options(cells, edges, edge_states, (5, 4), real)
+    assert len(reduced) == 1, (
+        'nothing separates them -- the corner between S and W is open, so '
+        'this is one pocket widening, not a fork')
+
+
+def test_walk_does_not_stop_at_a_widening_pocket(tmp_path):
+    # capped short, before the pocket's edges loop back around to (5,4) --
+    # this test is only about NOT stopping at (5,4) itself on the way in.
+    db = _widening_pocket(tmp_path)
+    r = dmap.walk_until(db, 1, (5, 5), 'S', max_squares=2)
+    assert r['stop'] == dmap.STOP_CAPPED
+    assert (5, 4) in r['path'][:-1], (
+        'the pocket was walked through, not stopped at, on the way in')
+
+
+def test_a_real_wall_between_two_directions_still_forks(tmp_path):
+    """The control case: same shape, but the SW corner is now blocked by a
+    solid cell at (4,3). S and W must stay two separate real options."""
+    cells = {(5, 5): 'open', (5, 4): 'open', (5, 3): 'open', (4, 4): 'open',
+             (4, 3): 'solid'}
+    edges = {(5, 4, 'H'): 'open', (5, 3, 'H'): 'open', (4, 4, 'V'): 'open'}
+    db = make_db(tmp_path, cells, edges)
+    r = dmap.walk_until(db, 1, (5, 5), 'S')
+    assert r['stop'] == dmap.STOP_JUNCTION
+    assert r['path'][-1] == (5, 4)
+    assert sorted(d for d, _ in r['options']) == ['S', 'W']
