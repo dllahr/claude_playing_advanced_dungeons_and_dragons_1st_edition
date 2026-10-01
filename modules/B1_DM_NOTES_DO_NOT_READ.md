@@ -5487,3 +5487,6 @@ Moved 90 ft south, 2 rounds, via the corrected walk logic -- the entire (6,7)-(5
 
 ## Day 140 round 24 (correction) -- the "outside opening" at (2,9) was invented
 Retracted. `feature='outside'` is a data-extraction housekeeping tag (page-border scenery swept by the frame heuristic), not a geographic fact -- misread as "an opening to the surface" and narrated to the player as daylight/a draft/a second cave mouth. Checked against the actual page render: real connected cave floor, nothing special about it. Corrected in mapdb/b1_lv2_corrections.tsv (and 25 other cells with the identical false tag). The party's actual position (3,9) and the route there are untouched -- only the invented narration beat is retracted. Nothing west of (3,9) is any different from an ordinary continuation of the passage; told the player so directly.
+
+## Day 140 round 27 -- north from (3,9) to a dead end at (7,18)
+130 ft, 3 rounds, nothing stocked anywhere on the route or in the newly lit area. Confirmed (3,9)'s "west" really was the same pocket as came_from (south) -- fixed in the tooling this session -- so north was the only real way on, and it runs a good distance before truly dead-ending. Nothing eventful.
