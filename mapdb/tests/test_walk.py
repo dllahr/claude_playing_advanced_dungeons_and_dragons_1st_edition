@@ -20,9 +20,9 @@ import dmap                                                       # noqa: E402
 
 
 def make_db(tmp_path, cells, edges, rooms=(), secrets_seen=()):
-    """`cells`: {(x,y): terrain} or {(x,y): (terrain, room, feature)}.
-    `edges`: {(x,y,orient): kind}. `secrets_seen`: [(x,y,orient)] already
-    found by the party."""
+    """`cells`: {(x,y): terrain} or {(x,y): (terrain, room, feature)} or
+    {(x,y): (terrain, room, feature, passage)}. `edges`: {(x,y,orient): kind}.
+    `secrets_seen`: [(x,y,orient)] already found by the party."""
     schema = os.path.join(os.path.dirname(os.path.dirname(
         os.path.abspath(__file__))), 'schema.sql')
     db = str(tmp_path / 'walk.sqlite')
@@ -30,10 +30,14 @@ def make_db(tmp_path, cells, edges, rooms=(), secrets_seen=()):
     con.executescript(open(schema).read())
     con.execute('INSERT INTO levels (level,name) VALUES (1,?)', ('test',))
     for (x, y), v in cells.items():
-        terrain, room, feature = v if isinstance(v, tuple) else (v, None, None)
+        if isinstance(v, tuple):
+            terrain, room, feature = v[0], v[1], v[2]
+            passage = v[3] if len(v) > 3 else None
+        else:
+            terrain, room, feature, passage = v, None, None, None
         con.execute('INSERT INTO cells (level,x,y,terrain,room,feature,'
-                    'confidence) VALUES (1,?,?,?,?,?,10)',
-                    (x, y, terrain, room, feature))
+                    'passage,confidence) VALUES (1,?,?,?,?,?,?,10)',
+                    (x, y, terrain, room, feature, passage))
     seen = set(secrets_seen)
     for (x, y, o), kind in edges.items():
         con.execute('INSERT INTO edges (level,x,y,orient,kind,seen,'
@@ -414,3 +418,95 @@ def test_b1_level_2_2_9_is_not_tagged_outside(tmp_path):
     assert cells[(2, 9)][2] is None, (
         '(2,9) must not carry the outside/frame-scenery tag -- it is real '
         'cave floor, confirmed against the page render')
+
+
+# -------------------------------------------------------- diagonal corner-steps
+#
+# Found day 140 at B1 level 2's (7,18): orthogonally walled on N, E and W,
+# it reported a dead end. `reachable()` has known about diagonal corner-steps
+# between two 'diagonal'/'diagonal_half'-passage cells since day 139 -- a
+# half-width 45-degree corridor connects only at the corner, no floor at all
+# on the squares that would bridge it orthogonally -- but `exits()`, the
+# primitive under frontier_exits/walk_until/structural_options AND
+# party.py's find_path, never implemented it. Checked against the real map:
+# (7,18) itself isn't diagonal-tagged (its own rock touches three sides, not
+# the two-ADJACENT-sides pattern the classifier requires), so this specific
+# dead end holds up -- but 38 OTHER cells on level 2 had a diagonal-only
+# neighbour the old exits() could never see, including (6,7), right where
+# today's exploration started.
+
+def test_exits_adds_no_diagonal_step_without_cells(tmp_path):
+    """Backward compatible: omitting `cells` is the pre-existing contract
+    (several callers still rely on it), and must not change."""
+    cells = {(0, 0): ('mixed', None, None, 'diagonal'),
+             (1, 1): ('mixed', None, None, 'diagonal')}
+    db = make_db(tmp_path, cells, {})
+    cells_, edges_ = dmap.load(db, 1)
+    assert dmap.exits((0, 0), edges_) == []
+
+
+def test_exits_steps_corner_to_corner_between_two_diagonal_cells(tmp_path):
+    cells = {(0, 0): ('mixed', None, None, 'diagonal'),
+             (1, 1): ('mixed', None, None, 'diagonal')}
+    db = make_db(tmp_path, cells, {})
+    cells_, edges_ = dmap.load(db, 1)
+    assert dmap.exits((0, 0), edges_, cells=cells_) == [('NE', (1, 1))]
+    assert dmap.exits((1, 1), edges_, cells=cells_) == [('SW', (0, 0))]
+
+
+def test_exits_does_not_step_unless_both_cells_are_diagonal(tmp_path):
+    """One cell carrying the tag is not enough -- B1's (7,18) is the real
+    example: its SE neighbour (8,17) is diagonal-tagged, but (7,18) itself
+    is not, so nothing connects them this way."""
+    cells = {(0, 0): ('mixed', None, None, None),
+             (1, 1): ('mixed', None, None, 'diagonal')}
+    db = make_db(tmp_path, cells, {})
+    cells_, edges_ = dmap.load(db, 1)
+    assert dmap.exits((0, 0), edges_, cells=cells_) == []
+
+
+def test_walk_until_takes_a_diagonal_step_instead_of_stopping_short(tmp_path):
+    """The actual shape of the bug: a cell walled on every orthogonal side
+    but one -- the one behind the party -- with its only way on a diagonal
+    corner-step. Without `cells` wired through, the walk stopped dead at
+    (0,-1) and called it STOP_DEAD_END; the diagonal cell one step further,
+    (1,-2), was invisible to it. (1,-2) genuinely has no exits of its own
+    in this tiny test map, so the walk still ends in a dead end -- the
+    fix is that it gets there, rather than stopping one square short."""
+    cells = {(0, 0): 'open', (0, -1): ('mixed', None, None, 'diagonal'),
+             (1, -2): ('mixed', None, None, 'diagonal')}
+    edges = {(0, -1, 'H'): 'open'}   # (0,0)-S-(0,-1), the only orthogonal way
+    db = make_db(tmp_path, cells, edges)
+    r = dmap.walk_until(db, 1, (0, 0), 'S')
+    assert r['path'] == [(0, 0), (0, -1), (1, -2)], (
+        'the diagonal step to (1,-2) must be taken, not missed')
+    assert r['stop'] == dmap.STOP_DEAD_END, '(1,-2) genuinely has no exits'
+
+
+def test_b1_level_2_exits_matches_reachable_across_the_whole_level(tmp_path):
+    """Cross-check against the independently-built, already-validated
+    `reachable()` (used for the day-139 audit): now that `exits()` knows
+    about diagonal corner-steps too, a plain BFS with it should reach
+    EXACTLY the same walkable cells `reachable()` does, from the same
+    start. Agreement here is the strongest evidence the fix is complete,
+    not just correct on the one cell that found it."""
+    import collections
+    db = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
+                       'output', 'b1', 'b1.sqlite')
+    if not os.path.exists(db):
+        pytest.skip('map not built')
+    cells, edges = dmap.load(db, 2)
+    start = (21, 10)
+    walk = {k for k, v in cells.items()
+            if v[0] in dmap.WALKABLE and (v[2] or '') not in ('stream', 'outside')}
+    seen = {start}
+    q = collections.deque([start])
+    while q:
+        cur = q.popleft()
+        for _, n in dmap.exits(cur, edges, cells=cells):
+            if n in seen or n not in walk:
+                continue
+            seen.add(n); q.append(n)
+    reachable_report = dmap.reachable(db, 2, start=start)[0]
+    assert ('reached %d' % len(seen)) in reachable_report
+    assert 'UNREACHED 0' in reachable_report

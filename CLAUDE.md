@@ -360,6 +360,24 @@ walked) while "north" stayed genuinely separate. A group that includes
 every option turns out to be that same pocket, one is still returned so the
 walk continues through it instead of reporting nothing there.
 
+**`exits()` was missing DIAGONAL corner-steps entirely** — found at (7,18),
+reported a dead end despite being adjacent to open floor, orthogonally walled
+on every side. `reachable()` has allowed a corner-to-corner step between two
+`'diagonal'`/`'diagonal_half'`-passage cells since day 139 (a half-width
+45-degree corridor connects only at the corner; the squares that would bridge
+it orthogonally hold no floor at all) — but `exits()`, the primitive under
+`frontier_exits`/`walk_until`/`structural_options` AND `find_path` (so
+`party.py move` too), never implemented it, because it never had `cells` to
+check passage tags against. Fixed by giving `exits()` an optional `cells`
+param; every caller now passes it. Cross-checked against `reachable()` across
+the whole level: a plain BFS with the fixed `exits()` now reaches EXACTLY the
+same 950 cells, confirming the fix, not just one cell of it — 38 cells on
+level 2 had a diagonal-only neighbour the old `exits()` could never see,
+including (6,7), right where this session's exploration started. (7,18)
+itself turned out NOT to be diagonal-tagged on closer check (its rock touches
+three sides, not the two-adjacent-sides pattern the classifier requires), so
+that specific dead end held up — the bug was real regardless.
+
 **Read the map's own legend before writing any classifier.** The DMG prints a LEVEL
 KEY (pdf p.95) defining `S`=secret door, `C`=concealed door, boxed `X`=trap door,
 boxed `S`=secret trap door, even hatching=stairs up, tapering=stairs down, and the

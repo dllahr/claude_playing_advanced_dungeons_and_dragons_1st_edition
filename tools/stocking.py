@@ -233,7 +233,7 @@ def random_walk(cells, edges, start, feet_budget, roller):
     path = [start]
     came_from, cur, feet_used = None, start, 0
     while feet_used < feet_budget:
-        options = [(d, n) for d, n in dmap.exits(cur, edges, came_from)
+        options = [(d, n) for d, n in dmap.exits(cur, edges, came_from, cells=cells)
                   if n in cells and cells[n][0] in dmap.WALKABLE]
         if not options:
             return cur, path, feet_used, 'dead_end'

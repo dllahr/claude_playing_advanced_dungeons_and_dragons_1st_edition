@@ -662,6 +662,38 @@ turns out to be that same pocket, one is still returned (not zero) so the
 walk continues through it rather than reporting nothing there, since
 `frontier_exits` already confirmed something real is further on.
 
+**`exits()` had no DIAGONAL corner-step at all — the biggest gap of the
+three.** Found at (7,18): orthogonally walled on every side but the way the
+party came, it reported a dead end. But `reachable()` (see "Two checks
+matter more than any classifier tweak" above) has allowed a corner-to-corner
+step between two `'diagonal'`/`'diagonal_half'` cells since day 139 — the
+schema comment on `cells.passage` already explains why: a half-width
+45-degree corridor connects only at the corner, and the squares that would
+bridge it orthogonally hold no floor at all on the page. `exits()`,
+underneath `frontier_exits`, `walk_until`, `structural_options` and
+`find_path` alike, never implemented this, because it never had `cells` in
+hand to check the passage tag against — it only ever looked at `edges`.
+
+Fixed by giving `exits()` an optional `cells` parameter: when present, a
+cell whose own `passage` is diagonal also gets a corner-step to any
+diagonal-adjacent cell (NE/NW/SE/SW) that carries the SAME tag, exactly
+`reachable()`'s rule. Every caller (`_frontier_from`, `frontier_exits`,
+`walk_until`, `find_path`, `tools/stocking.py`'s flee simulator) now passes
+it. Verified two ways, not just asserted: cross-checked a plain BFS using
+the fixed `exits()` against `reachable()`'s own independent flood across the
+WHOLE level — both now reach exactly the same 950 walkable cells on level
+2. And directly: 38 cells on the level had a diagonal-only neighbour
+invisible to the old `exits()`, among them (6,7), the very cell this
+session's exploration of the alcove at (6,8)-(10,8) started from.
+
+**(7,18) itself held up anyway, checked carefully.** Its own rock touches
+THREE sides (N, W, E), not the two-ADJACENT-sides pattern `passage_kind()`
+requires to call a cell diagonal, and a full-boundary profile of its east
+edge never dropped below the clear threshold anywhere along its length. So
+that specific dead end was correct — the underlying bug the player's
+reasoning pointed at was real and serious regardless of whether this exact
+cell turned out to be an instance of it.
+
 **Level 2's room labels are unreliable** (see "Treat `cells.room` on level 2
 as nearest numbered area" above) — an area-boundary stop there can fire on a
 label flicker that means nothing in the fiction, over one large, patchily

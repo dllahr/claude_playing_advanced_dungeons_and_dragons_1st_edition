@@ -473,13 +473,11 @@ def find_path(db, level, a, b, avoid=None):
             if (x, y) == b:
                 q = []
                 break
-            for _, dx, dy, ef in DIRS:
-                n = (x + dx, y + dy)
+            for _, n in exits((x, y), edges, cells=cells):
                 if n in prev or n not in walk:
                     continue
-                if edges.get(ef(x, y), 'unknown') in PASSABLE:
-                    prev[n] = (x, y)
-                    nxt.append(n)
+                prev[n] = (x, y)
+                nxt.append(n)
         q = nxt
         if b in prev:
             break
@@ -777,7 +775,7 @@ def _frontier_from(cells, edges, seen, start, came_from, max_cells):
     while queue and expanded < max_cells:
         cur = queue.popleft()
         expanded += 1
-        for _, n in exits(cur, edges):
+        for _, n in exits(cur, edges, cells=cells):
             if n not in cells or cells[n][0] not in WALKABLE or n in predecessor:
                 continue
             predecessor[n] = cur
@@ -815,7 +813,7 @@ def frontier_exits(cells, edges, seen, cell, came_from=None, max_squares=60):
     what counts as a junction; it is equally the right call for an ad hoc
     "what are our real options right now" query with no heading at all."""
     frontiers = _frontier_from(cells, edges, seen, cell, came_from, max_squares)
-    cell_to_dir = {n: d for d, n in exits(cell, edges, came_from)
+    cell_to_dir = {n: d for d, n in exits(cell, edges, came_from, cells=cells)
                    if n in cells and cells[n][0] in WALKABLE}
     firsts = {}
     for route in frontiers.values():
@@ -911,12 +909,27 @@ def structural_options(cells, edges, edge_states, cell, came_from, options):
     return list(groups.values())
 
 
-def exits(cell, edges, came_from=None):
+DIAGONAL_STEPS = (('NE', 1, 1), ('NW', -1, 1), ('SE', 1, -1), ('SW', -1, -1))
+
+
+def exits(cell, edges, came_from=None, cells=None):
     """[(dir, neighbour)] -- every PASSABLE exit from `cell`, excluding the
-    direction just arrived from. Does not check whether the neighbour cell
-    itself exists in `cells` or is WALKABLE terrain; callers do that (see
-    `walk_until` and `tools/stocking.py`'s flee simulator, both of which
-    filter this against `cells` themselves). Public because both need it."""
+    direction just arrived from. Does not check whether an ORTHOGONAL
+    neighbour cell itself exists in `cells` or is WALKABLE terrain; callers
+    do that (see `walk_until` and `tools/stocking.py`'s flee simulator,
+    both of which filter this against `cells` themselves).
+
+    `cells`, if given, also adds a DIAGONAL corner-step to any neighbour
+    that -- like `cell` itself -- carries a 'diagonal'/'diagonal_half'
+    passage, the exact rule `reachable()` already used: a half-width
+    45-degree corridor connects only at the corner, and the squares that
+    would bridge it orthogonally contain no floor at all on the page.
+    Without `cells` this corner-step is invisible, which is why it went
+    unbuilt here despite `reachable()` knowing about it since day 139 --
+    found day 140 at B1 level 2's (7,18), reported a dead end with real
+    corner-connected floor one step beyond it, orthogonally walled on
+    every side. Direction is a combined compass label ('NE','NW','SE',
+    'SW'), distinct from the four plain ones."""
     out = []
     for d, dx, dy, ef in DIRS:
         n = (cell[0] + dx, cell[1] + dy)
@@ -924,6 +937,16 @@ def exits(cell, edges, came_from=None):
             continue
         if edges.get(ef(*cell), 'unknown') in PASSABLE:
             out.append((d, n))
+    if cells is not None:
+        here = cells.get(cell)
+        if here and here[3] in ('diagonal', 'diagonal_half'):
+            for d, dx, dy in DIAGONAL_STEPS:
+                n = (cell[0] + dx, cell[1] + dy)
+                if n == came_from:
+                    continue
+                nb = cells.get(n)
+                if nb and nb[3] in ('diagonal', 'diagonal_half'):
+                    out.append((d, n))
     return out
 
 
@@ -1039,7 +1062,7 @@ def walk_until(db, level, start, heading, max_squares=60):
         if feat:
             return {'path': path, 'stop': STOP_FEATURE,
                     'why': '%s at (%d,%d)' % (feat, *cur)}
-        options = [(d, n) for d, n in exits(cur, edges, came_from)
+        options = [(d, n) for d, n in exits(cur, edges, came_from, cells=cells)
                    if n in cells and cells[n][0] in WALKABLE]
         if not options:
             return {'path': path, 'stop': STOP_DEAD_END,
