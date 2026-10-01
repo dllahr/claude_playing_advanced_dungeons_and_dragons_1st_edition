@@ -670,12 +670,51 @@ def line_of_sight(cells, edges, ax, ay, bx, by, edge_states=None):
     return True, ''
 
 
+def _elbow_lit(cells, edges, edge_states, sx, sy, cx, cy):
+    """True if a cell DIAGONALLY ADJACENT to the light source (`cx,cy` one
+    step diagonal from `sx,sy`) is lit around the corner -- it has an OPEN
+    border with one of the source's own orthogonal neighbours, and that
+    neighbour is itself lit.
+
+    The direct centre-to-centre ray to a diagonal neighbour always grazes
+    the shared lattice corner exactly -- an unavoidable property of a
+    45-degree line on this grid, not a close call -- and `line_of_sight`
+    reads a graze as blocked the instant anything solid touches that
+    corner, even when real light plainly reaches past it at a slightly
+    different angle. Confirmed day 140 against a line the player drew on
+    the actual page render, straight from (6,7) to (5,5): the ray passes
+    directly through the interior of (5,6), which the single centre-ray
+    test alone called dark.
+
+    Only reaches ONE step past the direct test -- a diagonal neighbour of
+    a diagonal neighbour is not checked this way. That covers the case
+    that actually occurred; a cell grazed further out would need the same
+    idea applied recursively, not yet built."""
+    dx, dy = cx - sx, cy - sy
+    for mx, my in ((sx + dx, sy), (sx, sy + dy)):
+        if (mx, my) not in cells or cells[(mx, my)][0] not in WALKABLE:
+            continue
+        ok, _why = line_of_sight(cells, edges, sx, sy, mx, my, edge_states)
+        if not ok:
+            continue
+        ef = next((ef for d, ddx, ddy, ef in DIRS
+                    if (ddx, ddy) == (cx - mx, cy - my)), None)
+        if ef is None:
+            continue
+        edge = ef(mx, my)
+        if not _edge_blocks_light(edges.get(edge, 'unknown'),
+                                   edge_states.get(edge)):
+            return True
+    return False
+
+
 def light_reach(db, level, x, y, radius=3):
     """{(cx,cy): why} every cell within `radius` cells (default 3 = 30 ft)
     of (x,y) that an unbroken ray reaches -- see `line_of_sight`. `why` is a
-    one-line reason: 'origin' for the source cell itself, 'los' for
-    everything else. Cells outside the radius, or blocked, are simply
-    absent; this never claims a negative.
+    one-line reason: 'origin' for the source cell itself, 'los' for a clear
+    direct ray, 'corner' for a diagonal neighbour of the source lit around
+    a grazed corner instead (see `_elbow_lit`). Cells outside the radius,
+    or blocked, are simply absent; this never claims a negative.
 
     Checks the full disk, not just the three ring boundaries at r=1,2,3 --
     a cell at offset (1,1), for instance, sits on neither ring but is well
@@ -698,6 +737,9 @@ def light_reach(db, level, x, y, radius=3):
             ok, _why = line_of_sight(cells, edges, x, y, cx, cy, edge_states)
             if ok:
                 out[(cx, cy)] = 'los'
+            elif abs(ddx) == 1 and abs(ddy) == 1 and _elbow_lit(
+                    cells, edges, edge_states, x, y, cx, cy):
+                out[(cx, cy)] = 'corner'
     return out
 
 

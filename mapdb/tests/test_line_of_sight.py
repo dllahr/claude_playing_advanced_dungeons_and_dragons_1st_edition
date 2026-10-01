@@ -218,3 +218,52 @@ def test_light_reach_does_not_cross_a_wall(tmp_path):
     lit = dmap.light_reach(db, 2, 0, 0, radius=3)
     assert (2, 0) not in lit, 'on the far side of a wall within radius'
     assert (1, 0) in lit, 'up against this side of the same wall'
+
+
+# ------------------------------------------------ light around a grazed corner
+#
+# Built day 140 after the player drew a line on the actual page render,
+# straight from (6,7) to (5,5): it passes directly through the interior of
+# (5,6), which `light_reach` called dark, because the ONLY ray it tried --
+# centre to centre -- is a 45-degree line to a diagonal neighbour, and that
+# always grazes the shared corner exactly. A solid cell pinching that corner
+# (B1's (5,7)) blocks the direct test even though real light plainly
+# reaches around it at a slightly different angle.
+
+def test_light_reaches_a_diagonal_neighbour_around_a_pinched_corner(tmp_path):
+    cells, edges = open_room(-3, 4, -3, 4)
+    cells[(-1, 0)] = ('solid', None, None, None)   # pinches the SW corner
+    db = make_db(tmp_path, cells, edges)
+    lit = dmap.light_reach(db, 2, 0, 0, radius=3)
+    assert (-1, -1) not in [c for c, w in lit.items() if w == 'los'], (
+        'the direct centre-ray must still fail -- it grazes the corner '
+        'pinched by the solid cell at (-1,0)')
+    assert lit.get((-1, -1)) == 'corner', (
+        '(0,-1) is open, lit, and shares an open border with (-1,-1) -- '
+        'light reaches it around the corner the other way')
+
+
+def test_no_elbow_means_no_light_around_the_corner(tmp_path):
+    """Control: pinch BOTH elbows (make the south neighbour solid too), so
+    neither path around the corner exists. The diagonal cell must stay
+    dark."""
+    cells, edges = open_room(-3, 4, -3, 4)
+    cells[(-1, 0)] = ('solid', None, None, None)
+    cells[(0, -1)] = ('solid', None, None, None)
+    db = make_db(tmp_path, cells, edges)
+    lit = dmap.light_reach(db, 2, 0, 0, radius=3)
+    assert (-1, -1) not in lit, 'both elbows are blocked -- no way around'
+
+
+def test_an_open_elbow_cell_with_a_walled_edge_still_blocks(tmp_path):
+    """The elbow neighbour being lit is not enough on its own -- the edge
+    between it and the diagonal cell must also be open. Here (0,-1) is
+    open and lit, but a wall sits between it and (-1,-1)."""
+    cells, edges = open_room(-3, 4, -3, 4)
+    cells[(-1, 0)] = ('solid', None, None, None)
+    edges[(-1, -1, 'V')] = 'wall'   # between (-1,-1) and (0,-1), the elbow
+    db = make_db(tmp_path, cells, edges)
+    lit = dmap.light_reach(db, 2, 0, 0, radius=3)
+    assert (-1, -1) not in lit, (
+        'the elbow cell is lit, but the wall between it and the target '
+        'must still block light reaching around')

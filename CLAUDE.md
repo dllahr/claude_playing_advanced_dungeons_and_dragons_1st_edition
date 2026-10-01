@@ -303,6 +303,13 @@ cell centre, blocked by a wall, a shut door or solid rock, not graph distance an
 raw Euclidean distance either (both get corners wrong in opposite directions). Use it
 instead of eyeballing which nearby cells are "close enough" or hand-picking a `seen
 --cells` list — both were the direct cause of geometry mistakes in play (day 139).
+**A diagonal neighbour of the source gets a second check if the direct ray fails**:
+that ray is always exactly 45 degrees, so it always grazes the shared corner, and a
+single solid cell pinching that corner used to read as "dark" even when light plainly
+reaches around it at a slightly different angle. The second check is the player's own:
+does the cell have an open border with one of the source's orthogonal neighbours, and
+is THAT neighbour lit? Confirmed day 140 against a line drawn on the actual page
+render. Reported as `'corner'` in `light_reach`'s output, distinct from a direct `'los'`.
 
 **`dmap.py walk <db> <level> <x> <y> <N|S|E|W>`** advances the party in a direction
 until there is something to stop FOR — a junction (2+ REAL ways on, a real choice,

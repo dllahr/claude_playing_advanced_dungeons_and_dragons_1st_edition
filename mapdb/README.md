@@ -569,6 +569,22 @@ and `mapdb/tests/test_line_of_sight.py` for the worked cases (open room,
 around a corner, a secret door that still looks like wall, a diagonal squeeze
 between two solid corners).
 
+**A diagonal neighbour of the source gets a second check if the direct ray
+fails.** That ray is always exactly 45 degrees — not a close call, a property
+of the grid — so it always grazes the shared lattice corner, and used to read
+as flatly dark the moment anything solid touched that corner, even when real
+light plainly reached around it at a different angle. Found day 140 when the
+player drew a line on the actual page render, straight from (6,7) to (5,5):
+it passes directly through the interior of (5,6), which the single
+centre-ray test called unlit. The fix is the player's own proposed rule —
+`_elbow_lit`: a diagonal cell counts as lit if it has an OPEN border with one
+of the source's own orthogonal neighbours, and that neighbour is itself lit.
+Reported as `'corner'` in `light_reach`'s output, distinct from a direct
+`'los'`, so narration can still tell the two apart if it matters. Only
+reaches one step past the direct test — a diagonal neighbour of a diagonal
+neighbour isn't covered; the same idea would need to apply recursively if a
+graze is ever found further out.
+
 **`walk` is `light`'s companion for open-ended movement** — "advance east",
 "keep going until something changes" — replacing a guessed destination
 retried against `party.py move`'s REFUSED errors, which is what several of
