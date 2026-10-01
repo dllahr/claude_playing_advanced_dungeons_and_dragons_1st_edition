@@ -5481,3 +5481,6 @@ Moved W to (7,8), 10 ft, 1 round, no check. Light check: only (8,8) newly lit, r
 
 ## Day 140 round 22 -- west then south, out of the alcove to (6,7)
 Moved 20 ft to (6,7), the alcove's real exit. Light check radius 3: 4 newly lit squares to the south/southwest (5,5),(6,4),(6,5),(6,6). Nothing stocked in range, no features. The passage keeps going south, with another fork already visible at (6,6): W or S. Corridor is walled E and W at (6,7) itself, so it's a narrow neck, not another pocket -- genuinely new ground this time.
+
+## Day 140 round 24 -- south through the whole pocket to (3,9)
+Moved 90 ft south, 2 rounds, via the corrected walk logic -- the entire (6,7)-(5,4)-(4,5)-(3,x) stretch is confirmed one open pocket, no real fork in any of it. Stopped at (3,9), a genuine wall-bounded junction (N/E). Light check radius 3 marked 11 new squares seen. Notable: (2,9), just west, carries a `feature=outside` tag -- a second opening to the surface, distinct from the party's own basecamp mouth. Nothing stocked anywhere on the route or in the newly lit area. Narrated only the physical perception (daylight/fresh air from the west), nothing about what's actually out there.

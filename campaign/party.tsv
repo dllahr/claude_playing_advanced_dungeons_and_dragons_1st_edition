@@ -556,3 +556,4 @@ when	map	level	x	y	exped	turn	squares	feet	rate	why	route
 2026-09-28	b1	2	8	8	31		4	40	known	day 140: corridor bends N then NW out of (11,7), standard formation continues	11,7 10,7 10,8 9,8 8,8
 2026-09-28	b1	2	7	8	31		1	10	known	day 140: west fork out of (8,8)	8,8 7,8
 2026-09-28	b1	2	6	7	31		2	20	known	day 140: west then south, into the alcove's real exit	7,8 6,8 6,7
+2026-09-30	b1	2	3	9	31		9	90	known	day 140: continuing south through the winding passage	6,7 6,6 6,5 5,5 4,5 3,5 3,6 3,7 3,8 3,9
