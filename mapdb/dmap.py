@@ -787,13 +787,12 @@ _CORNER_OFFSET = {frozenset(('S', 'W')): (0, 0), frozenset(('S', 'E')): (1, 0),
                    frozenset(('N', 'W')): (0, 1), frozenset(('N', 'E')): (1, 1)}
 
 
-def _directions_merge(cells, edges, edge_states, cell, d1, d2):
-    """True if the two directions out of `cell` are NOT a real fork -- the
-    lattice corner between them (where the two edges of this cell meet) is
-    passable, so nothing stands between the paths: it is one pocket getting
-    wider, not a branch. `N`/`S` and `E`/`W` are opposite, share no single
-    corner, and are never merged this way -- only the four ADJACENT pairs
-    (S/W, S/E, N/W, N/E) have one."""
+def _adjacent_corner_passable(cells, edges, edge_states, cell, d1, d2):
+    """True if `d1`/`d2` are ADJACENT compass directions (share one lattice
+    corner) and that corner is open -- nothing stands between them there.
+    `N`/`S` and `E`/`W` are opposite, share no single corner, and always
+    return False here; `structural_options` catches those transitively,
+    through a THIRD direction adjacent to both, rather than directly."""
     off = _CORNER_OFFSET.get(frozenset((d1, d2)))
     if off is None:
         return False
@@ -801,20 +800,37 @@ def _directions_merge(cells, edges, edge_states, cell, d1, d2):
     return _corner_passable(cells, edges, edge_states, i, j)
 
 
-def structural_options(cells, edges, edge_states, cell, options):
+def structural_options(cells, edges, edge_states, cell, came_from, options):
     """Reduce `options` (a [(dir, cell)] list, e.g. from `frontier_exits`)
     to one representative per group of directions that are not actually
     separated by anything -- collapsing a passage that merely widens into a
     single way on, so a STOP_JUNCTION only fires when there is real
-    structure between the choices. Built day 140: B1 level 2's (6,6), where
-    "south" and "west" both looked like a fork by direction and by
-    eventual destination, but the player asked the right question -- there
-    is no wall between them, `_corner_passable` confirms it, and the page
-    render shows one winding cave passage, not two. A fork needs something
-    standing between the paths; two edges of one open pocket are not that,
-    they are the pocket getting wider."""
+    structure between the choices.
+
+    Directions merge when the lattice corner between them is open
+    (`_adjacent_corner_passable`) -- but only ADJACENT pairs (S/W, S/E,
+    N/W, N/E) share a single corner to check. `came_from` -- the direction
+    the party is walking away from, not itself an offered choice -- is
+    added to the comparison as a bridge: two OPPOSITE directions (E/W,
+    N/S) never share a corner with each other, but if both are separately
+    corner-connected to `came_from`, they are transitively part of the
+    same pocket the party is already standing in.
+
+    Built day 140 in two passes. First, at B1 level 2's (6,6): "south" and
+    "west" both looked like a fork, but the corner between them was open --
+    one winding cave passage, confirmed against the page render. That
+    caught only adjacent pairs, so it missed the SAME problem one cell
+    further on at (5,4), where the real choices were the OPPOSITE pair
+    "east" and "west" -- caught here because both separately corner-connect
+    to `came_from` (north, back the way the party actually arrived)."""
     dirs = [d for d, _ in options]
-    parent = {d: d for d in dirs}
+    came_dir = None
+    if came_from is not None:
+        dx, dy = came_from[0] - cell[0], came_from[1] - cell[1]
+        came_dir = next((d for d, ddx, ddy, ef in DIRS
+                          if (ddx, ddy) == (dx, dy)), None)
+    nodes = list(dirs) + ([came_dir] if came_dir is not None else [])
+    parent = {d: d for d in nodes}
 
     def find(d):
         while parent[d] != d:
@@ -822,9 +838,9 @@ def structural_options(cells, edges, edge_states, cell, options):
             d = parent[d]
         return d
 
-    for i, d1 in enumerate(dirs):
-        for d2 in dirs[i + 1:]:
-            if _directions_merge(cells, edges, edge_states, cell, d1, d2):
+    for i, d1 in enumerate(nodes):
+        for d2 in nodes[i + 1:]:
+            if _adjacent_corner_passable(cells, edges, edge_states, cell, d1, d2):
                 r1, r2 = find(d1), find(d2)
                 if r1 != r2:
                     parent[r1] = r2
@@ -884,16 +900,17 @@ def walk_until(db, level, start, heading, max_squares=60):
     was a branch two junctions later that neither raw choice made obvious.
 
     A JUNCTION ALSO NEEDS STRUCTURE, not just two different eventual
-    destinations: `structural_options` collapses two directions into one
-    if the lattice corner between them (`_corner_passable`) is open --
-    nothing stands between the paths, so it is one pocket getting wider,
-    not a fork. Built after (6,6) on the same level: "south" and "west"
-    both reached genuinely different unseen ground, so `frontier_exits`
-    correctly called both real, but there was no wall between them either
-    -- the page render shows one winding cave passage. A direction that
-    eventually leads somewhere different is necessary but not sufficient;
-    it also has to be walled off from its neighbour at the cell it forks
-    from, or it is not a real choice yet, just a bend.
+    destinations: `structural_options` merges two directions if the
+    lattice corner between them is open -- nothing stands between the
+    paths, so it is one pocket getting wider, not a fork. Only ADJACENT
+    pairs (S/W, S/E, N/W, N/E) share a single corner; an OPPOSITE pair
+    (N/S, E/W) merges too, but only TRANSITIVELY, through `came_from` (the
+    direction just walked, not itself offered) -- if both separately
+    corner-connect to it, they are part of the same pocket the party is
+    already standing in. Built at B1 level 2's (6,6) ("south"/"west", an
+    adjacent pair) and confirmed one cell further on at (5,4) (the SAME
+    thing with "east"/"west", opposite -- caught through north, the
+    direction just walked, which both connect to).
 
     Returns a dict: `path` (list of cells walked, `start` included), `stop`
     (one of the STOP_* constants above), `why` (what fired it, in enough
@@ -972,7 +989,7 @@ def walk_until(db, level, start, heading, max_squares=60):
                     'why': 'every way on from (%d,%d) loops back into '
                            'ground already seen, nothing unexplored past '
                            'here' % cur}
-        real = structural_options(cells, edges, edge_states, cur, real)
+        real = structural_options(cells, edges, edge_states, cur, came_from, real)
         if len(real) > 1:
             return {'path': path, 'stop': STOP_JUNCTION,
                     'why': '%d real ways on from (%d,%d)' % (len(real), *cur),

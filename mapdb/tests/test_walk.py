@@ -13,6 +13,8 @@ import os
 import sqlite3
 import sys
 
+import pytest
+
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 import dmap                                                       # noqa: E402
 
@@ -261,7 +263,8 @@ def test_two_open_edges_of_one_pocket_are_not_a_fork(tmp_path):
     assert sorted(d for d, _ in real) == ['S', 'W'], (
         'both S and W genuinely reach different unseen ground -- '
         'frontier_exits alone is right to call them both real')
-    reduced = dmap.structural_options(cells, edges, edge_states, (5, 4), real)
+    reduced = dmap.structural_options(cells, edges, edge_states, (5, 4),
+                                       (5, 5), real)
     assert len(reduced) == 1, (
         'nothing separates them -- the corner between S and W is open, so '
         'this is one pocket widening, not a fork')
@@ -288,3 +291,77 @@ def test_a_real_wall_between_two_directions_still_forks(tmp_path):
     assert r['stop'] == dmap.STOP_JUNCTION
     assert r['path'][-1] == (5, 4)
     assert sorted(d for d, _ in r['options']) == ['S', 'W']
+
+
+def test_a_door_is_real_structure_even_though_its_walkable(tmp_path):
+    """A door blocks light (unless recorded open), so it blocks the corner
+    check too even though a party can walk through it. Same
+    widening-pocket shape, but the S edge out of (5,4) is now a shut door
+    instead of open floor -- S and W must stay separate choices."""
+    cells = {(5, 5): 'open', (5, 4): 'open', (5, 3): 'open', (4, 4): 'open',
+             (4, 3): 'open'}
+    edges = {(5, 4, 'H'): 'open', (5, 3, 'H'): 'door', (4, 4, 'V'): 'open',
+             (4, 3, 'V'): 'open', (4, 3, 'H'): 'open'}
+    db = make_db(tmp_path, cells, edges)
+    cells_, edges_ = dmap.load(db, 1)
+    edge_states = dmap.load_edge_states(db, 1)
+    seen = dmap.load_seen(db, 1)
+    real = dmap.frontier_exits(cells_, edges_, seen, (5, 4), (5, 5))
+    reduced = dmap.structural_options(cells_, edges_, edge_states, (5, 4),
+                                       (5, 5), real)
+    assert len(reduced) == 2, (
+        'the shut door to the south is real structure -- S and W must '
+        'stay separate choices even though the door is walkable')
+
+
+def test_opposite_directions_merge_transitively_through_came_from(tmp_path):
+    """The case the first corner-only attempt missed: N/S and E/W share no
+    single lattice corner, so a pairwise check between just the two of
+    them never catches this. But B1 level 2's (5,4) is exactly this shape
+    -- "east" and "west", entered from the north -- and it needed fixing
+    too. E and W each corner-connect to N (the direction just walked, not
+    itself offered) via a diagonal cell open on both sides, so they merge
+    transitively through it. No cell south of the junction is defined, so
+    S is never a raw option at all -- only E and W are on offer."""
+    cells = {(5, 6): 'open', (5, 5): 'open', (6, 5): 'open',
+             (4, 5): 'open', (6, 6): 'open', (4, 6): 'open'}
+    edges = {(5, 5, 'H'): 'open',   # (5,6)-S-(5,5), the way in
+             (5, 5, 'V'): 'open',   # (5,5)-E-(6,5)
+             (4, 5, 'V'): 'open',   # (5,5)-W-(4,5)
+             (5, 6, 'V'): 'open',   # NE corner: (5,6)-E-(6,6)
+             (6, 5, 'H'): 'open',   # NE corner: (6,5)-N-(6,6)
+             (4, 6, 'V'): 'open',   # NW corner: (4,6)-E-(5,6)
+             (4, 5, 'H'): 'open'}   # NW corner: (4,5)-N-(4,6)
+    db = make_db(tmp_path, cells, edges)
+    cells_, edges_ = dmap.load(db, 1)
+    edge_states = dmap.load_edge_states(db, 1)
+    seen = dmap.load_seen(db, 1)
+    real = dmap.frontier_exits(cells_, edges_, seen, (5, 5), (5, 6))
+    assert sorted(d for d, _ in real) == ['E', 'W']
+    reduced = dmap.structural_options(cells_, edges_, edge_states, (5, 5),
+                                       (5, 6), real)
+    assert len(reduced) == 1, (
+        'E and W are opposite, not adjacent, but both corner-connect to '
+        'N (came_from) through this open 3x3 block -- one pocket, not a '
+        'fork')
+
+
+def test_b1_level_2_54_east_west_is_not_a_fork(tmp_path):
+    """The actual regression: B1 level 2's (5,4). "East" (to (6,4)) and
+    "west" (to (4,4)) both looked like a real fork -- frontier_exits is
+    right that they reach different unseen ground -- but the player asked
+    whether anything separated them, and the page render confirmed no:
+    one open pocket, no wall in it anywhere. The walk should pass straight
+    through (5,4) rather than stopping there; it does stop later, for real,
+    once it reaches (3,9), which has an actual wall in its corner."""
+    db = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
+                       'output', 'b1', 'b1.sqlite')
+    if not os.path.exists(db):
+        pytest.skip('map not built')
+    r = dmap.walk_until(db, 2, (6, 7), 'S')
+    assert (5, 4) in r['path'][:-1], (
+        '(5,4) must be walked through, not stopped at -- there is no wall '
+        'between its east and west')
+    assert r['stop'] == dmap.STOP_JUNCTION and r['path'][-1] == (3, 9), (
+        'expected the walk to pass through (5,4) and stop at the next '
+        'REAL fork, (3,9); got %r at %r' % (r['stop'], r['path'][-1]))

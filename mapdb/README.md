@@ -620,6 +620,20 @@ Reaching somewhere different is necessary for a fork but not sufficient; it
 also has to be walled off from its neighbour at the cell it splits from, or
 it is a bend, not a branch.
 
+**Only ADJACENT direction pairs (S/W, S/E, N/W, N/E) share a single lattice
+corner** to check this way. The first pass over (6,6) only checked those, so
+it missed the identical false fork one cell further on at B1's own (5,4),
+where the two real directions were the OPPOSITE pair "east" and "west" — no
+shared corner between them at all, so nothing merged them. Fixed by folding
+`came_from` (the direction the party is walking away from, never itself
+offered as a choice) into the same comparison: `structural_options` now checks
+every pair among the real options *and* `came_from`, transitively — east
+corner-connects to north, west corner-connects to north, so east and west end
+up in the same group as each other even with no corner directly between them.
+A plain wall, or a real door (blocking even though it's walkable — a door is
+an intentional division, not the absence of one), still keeps two directions
+apart exactly as before; only an actually-open corner merges anything.
+
 **Level 2's room labels are unreliable** (see "Treat `cells.room` on level 2
 as nearest numbered area" above) — an area-boundary stop there can fire on a
 label flicker that means nothing in the fiction, over one large, patchily

@@ -339,7 +339,13 @@ called both real, but there was no wall between them either — confirmed
 against the actual page render, not re-derived, since a freshly-refit grid
 drifted enough to misread a confidently-solid cell as open (`mapdb/README.md`
 has the full writeup, including why the page must be rendered at the level's
-own stored `pdf`/`page`/`dpi`/`channel`).
+own stored `pdf`/`page`/`dpi`/`channel`). **Only ADJACENT direction pairs
+share one corner** (S/W, S/E, N/W, N/E) — a first pass checked only those and
+missed the SAME false fork one cell further on at (5,4), where the real
+choices were the OPPOSITE pair "east"/"west". Fixed by adding `came_from` (the
+direction just walked, never itself offered) into the comparison as a bridge:
+E and W each corner-connect to `came_from`, so they merge transitively through
+it even with no direct corner of their own.
 
 **Read the map's own legend before writing any classifier.** The DMG prints a LEVEL
 KEY (pdf p.95) defining `S`=secret door, `C`=concealed door, boxed `X`=trap door,
