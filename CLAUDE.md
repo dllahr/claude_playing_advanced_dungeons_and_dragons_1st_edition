@@ -352,7 +352,13 @@ missed the SAME false fork one cell further on at (5,4), where the real
 choices were the OPPOSITE pair "east"/"west". Fixed by adding `came_from` (the
 direction just walked, never itself offered) into the comparison as a bridge:
 E and W each corner-connect to `came_from`, so they merge transitively through
-it even with no direct corner of their own.
+it even with no direct corner of their own. **A direction can also merge with
+`came_from` ITSELF**, not just with a sibling option — found at (3,9), where
+"west" corner-connected straight back to south (the way the party had just
+walked) while "north" stayed genuinely separate. A group that includes
+`came_from` is dropped entirely rather than kept as a stand-in choice; if
+every option turns out to be that same pocket, one is still returned so the
+walk continues through it instead of reporting nothing there.
 
 **Read the map's own legend before writing any classifier.** The DMG prints a LEVEL
 KEY (pdf p.95) defining `S`=secret door, `C`=concealed door, boxed `X`=trap door,

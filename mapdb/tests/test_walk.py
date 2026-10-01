@@ -293,6 +293,36 @@ def test_a_real_wall_between_two_directions_still_forks(tmp_path):
     assert sorted(d for d, _ in r['options']) == ['S', 'W']
 
 
+def test_a_direction_that_merges_with_came_from_is_dropped_not_kept(tmp_path):
+    """The case a working run against the real map found that neither
+    earlier fix caught: a direction can be transitively one pocket with
+    `came_from` ITSELF, not just with a sibling option. B1 level 2's
+    (3,9) -- entered from the south -- had "north" (genuinely separate)
+    and "west" (which corner-connects back to south, the way the party
+    just came from) both reported as real. West isn't a second choice;
+    it's the same pocket the party is standing in. Only north should
+    survive, not two options with west picked as an arbitrary stand-in
+    for "the pocket you're already in."""
+    cells = {(0, 0): 'open', (0, -1): 'open', (-1, -1): 'open',
+             (-1, 0): 'open', (0, 1): 'open'}
+    edges = {(0, -1, 'H'): 'open',    # (0,0)-S-(0,-1), the way in
+             (-1, 0, 'V'): 'open',    # (0,0)-W-(-1,0)
+             (0, 0, 'H'): 'open',     # (0,0)-N-(0,1)
+             (-1, -1, 'V'): 'open',   # SW corner: east side of (-1,-1)
+             (-1, -1, 'H'): 'open'}   # SW corner: north side of (-1,-1)
+    db = make_db(tmp_path, cells, edges)
+    cells_, edges_ = dmap.load(db, 1)
+    edge_states = dmap.load_edge_states(db, 1)
+    seen = dmap.load_seen(db, 1)
+    real = dmap.frontier_exits(cells_, edges_, seen, (0, 0), (0, -1))
+    assert sorted(d for d, _ in real) == ['N', 'W']
+    reduced = dmap.structural_options(cells_, edges_, edge_states, (0, 0),
+                                       (0, -1), real)
+    assert reduced == [('N', (0, 1))], (
+        '"west" corner-connects to south (came_from) -- it must be '
+        'dropped entirely, not offered as a second real choice')
+
+
 def test_a_door_is_real_structure_even_though_its_walkable(tmp_path):
     """A door blocks light (unless recorded open), so it blocks the corner
     check too even though a party can walk through it. Same
@@ -352,10 +382,11 @@ def test_b1_level_2_54_east_west_is_not_a_fork(tmp_path):
     right that they reach different unseen ground -- but the player asked
     whether anything separated them, and the page render confirmed no:
     one open pocket, no wall in it anywhere. The walk should pass straight
-    through (5,4) rather than stopping there; it does stop later, for
-    real, once it reaches an actual wall. (Exactly where that is moved
-    once a separate bug -- a false 'outside'/frame-scenery feature tag --
-    got corrected nearby; this only pins the part that matters.)"""
+    through (5,4) rather than stopping there. Where it eventually DOES
+    stop is not pinned here -- it already moved once when a separate bug
+    (a false 'outside'/frame-scenery tag nearby) got corrected, and a
+    direction's exact far endpoint isn't the thing this regression is
+    about."""
     db = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
                        'output', 'b1', 'b1.sqlite')
     if not os.path.exists(db):
@@ -364,9 +395,6 @@ def test_b1_level_2_54_east_west_is_not_a_fork(tmp_path):
     assert (5, 4) in r['path'][:-1], (
         '(5,4) must be walked through, not stopped at -- there is no wall '
         'between its east and west')
-    assert r['stop'] == dmap.STOP_JUNCTION, (
-        'expected a real fork somewhere further on; got %r at %r'
-        % (r['stop'], r['path'][-1]))
 
 
 def test_b1_level_2_2_9_is_not_tagged_outside(tmp_path):

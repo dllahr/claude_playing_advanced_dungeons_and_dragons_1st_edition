@@ -650,6 +650,18 @@ A plain wall, or a real door (blocking even though it's walkable — a door is
 an intentional division, not the absence of one), still keeps two directions
 apart exactly as before; only an actually-open corner merges anything.
 
+**A direction can merge with `came_from` ITSELF, not only with a sibling
+option.** Found one cell further on again, at (3,9): "west" corner-connected
+straight back to south — the direction the party had just walked — while
+"north" stayed genuinely separate. The player caught it by asking the tool to
+check where "west" actually led, rather than trusting that two different
+eventual destinations meant two real choices. A group that includes
+`came_from` is now dropped from the result entirely, not kept as an arbitrary
+representative of "the pocket you're already standing in"; if every option
+turns out to be that same pocket, one is still returned (not zero) so the
+walk continues through it rather than reporting nothing there, since
+`frontier_exits` already confirmed something real is further on.
+
 **Level 2's room labels are unreliable** (see "Treat `cells.room` on level 2
 as nearest numbered area" above) — an area-boundary stop there can fire on a
 label flicker that means nothing in the fiction, over one large, patchily

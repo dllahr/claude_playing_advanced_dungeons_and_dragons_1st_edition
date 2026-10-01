@@ -858,13 +858,27 @@ def structural_options(cells, edges, edge_states, cell, came_from, options):
     corner-connected to `came_from`, they are transitively part of the
     same pocket the party is already standing in.
 
-    Built day 140 in two passes. First, at B1 level 2's (6,6): "south" and
-    "west" both looked like a fork, but the corner between them was open --
-    one winding cave passage, confirmed against the page render. That
-    caught only adjacent pairs, so it missed the SAME problem one cell
-    further on at (5,4), where the real choices were the OPPOSITE pair
-    "east" and "west" -- caught here because both separately corner-connect
-    to `came_from` (north, back the way the party actually arrived)."""
+    A group that includes `came_from` itself is not a real choice either,
+    however many directions are in it -- it is still just the pocket the
+    party is standing in, not a new one -- so it is DROPPED from the
+    result, not kept as a representative. If every option turns out to be
+    that same pocket, one of them is still returned (the first found,
+    before dropping) so the walk continues through it rather than
+    reporting zero options as if nothing were there; `frontier_exits`
+    already confirmed something is.
+
+    Built day 140 in three passes. First, at B1 level 2's (6,6): "south"
+    and "west" both looked like a fork, but the corner between them was
+    open -- one winding cave passage, confirmed against the page render.
+    That caught only adjacent pairs, so it missed the SAME problem one
+    cell further on at (5,4), where the real choices were the OPPOSITE
+    pair "east" and "west" -- caught by adding `came_from` (north, back
+    the way the party arrived) as a bridge, since both separately
+    corner-connect to it. That still missed a THIRD case at (3,9): "west"
+    merged with `came_from` itself (south) rather than with the other
+    option, "north" -- a direction can be transitively one pocket with
+    where the party just came from, not just with its sibling options,
+    and that pocket is exactly as much "not a real choice" either way."""
     dirs = [d for d, _ in options]
     came_dir = None
     if came_from is not None:
@@ -889,6 +903,11 @@ def structural_options(cells, edges, edge_states, cell, came_from, options):
     groups = {}
     for d, n in options:
         groups.setdefault(find(d), (d, n))
+    came_root = find(came_dir) if came_dir is not None else None
+    if came_root is not None and came_root in groups:
+        fallback = groups.pop(came_root)
+        if not groups:
+            return [fallback]
     return list(groups.values())
 
 
