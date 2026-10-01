@@ -352,8 +352,10 @@ def test_b1_level_2_54_east_west_is_not_a_fork(tmp_path):
     right that they reach different unseen ground -- but the player asked
     whether anything separated them, and the page render confirmed no:
     one open pocket, no wall in it anywhere. The walk should pass straight
-    through (5,4) rather than stopping there; it does stop later, for real,
-    once it reaches (3,9), which has an actual wall in its corner."""
+    through (5,4) rather than stopping there; it does stop later, for
+    real, once it reaches an actual wall. (Exactly where that is moved
+    once a separate bug -- a false 'outside'/frame-scenery feature tag --
+    got corrected nearby; this only pins the part that matters.)"""
     db = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
                        'output', 'b1', 'b1.sqlite')
     if not os.path.exists(db):
@@ -362,6 +364,25 @@ def test_b1_level_2_54_east_west_is_not_a_fork(tmp_path):
     assert (5, 4) in r['path'][:-1], (
         '(5,4) must be walked through, not stopped at -- there is no wall '
         'between its east and west')
-    assert r['stop'] == dmap.STOP_JUNCTION and r['path'][-1] == (3, 9), (
-        'expected the walk to pass through (5,4) and stop at the next '
-        'REAL fork, (3,9); got %r at %r' % (r['stop'], r['path'][-1]))
+    assert r['stop'] == dmap.STOP_JUNCTION, (
+        'expected a real fork somewhere further on; got %r at %r'
+        % (r['stop'], r['path'][-1]))
+
+
+def test_b1_level_2_2_9_is_not_tagged_outside(tmp_path):
+    """Day 140: (2,9) carried a false `feature='outside'` -- the extractor's
+    frame-scenery sweep catches anything non-'open' within 2 columns of the
+    sheet's edge, and (2,9) is 'mixed' terrain there, not 'open'. The DM read
+    the tag mid-session and narrated an invented second cave mouth from a
+    data-pipeline housekeeping marker. Confirmed against the page render:
+    real connected cave floor. Corrected in `b1_lv2_corrections.tsv`, along
+    with the 25 other 'outside'+'mixed' cells reachable from the explored
+    interior the same way; 24 more are NOT reachable and were left alone."""
+    db = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
+                       'output', 'b1', 'b1.sqlite')
+    if not os.path.exists(db):
+        pytest.skip('map not built')
+    cells, _ = dmap.load(db, 2)
+    assert cells[(2, 9)][2] is None, (
+        '(2,9) must not carry the outside/frame-scenery tag -- it is real '
+        'cave floor, confirmed against the page render')

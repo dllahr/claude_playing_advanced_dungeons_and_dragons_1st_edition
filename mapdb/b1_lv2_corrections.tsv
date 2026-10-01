@@ -356,3 +356,54 @@ edge	15	11	H	open	claude-2026-09-03	NOT A DOOR: plain cave wall; no glyph on the
 # but unlabelled". The module gives no room dimension anywhere on this level,
 # so there is nothing to cross-check against either. Treat `cells.room` here as
 # "nearest numbered area", not as "this square is inside room N".
+
+# ---------------------------------------------------------------------------
+# DAY 140: a false `feature='outside'` at (2,9) produced an invented plot
+# beat. `outside_cells()` sweeps the outer frame ring (here, columns/rows
+# within 2 of the sheet's edge) and tags anything in it that isn't cleanly
+# 'open' terrain as page-border scenery, on the assumption B1's one real
+# entrance is the only non-scenery square in that ring. (2,9) is 'mixed'
+# terrain, two columns from the left edge, and got swept up by that rule --
+# but the DM read it as "feature: outside" mid-session and narrated a second
+# cave mouth, daylight, a draft, from a DATA-PIPELINE HOUSEKEEPING TAG that
+# has nothing to do with the fiction. Checked against the actual page render
+# (dpi/page/channel from the levels table): columns 0-1 at this row are
+# genuinely blank rock/margin, but column 2 is part of the SAME connected
+# winding passage running north-south through x=2, y=6-12 -- real cave
+# floor, not scenery, not a second entrance. 51 other 'mixed' cells carry
+# this same tag across level 2 and have not been individually checked;
+# treat any of them the same way before narrating from one.
+feature	2	9	-	none	claude-2026-09-30	false 'outside' (frame-scenery) tag; confirmed against the page render to be real connected cave floor, not border art and not an opening to the surface -- see note above
+
+# Same bug, swept wholesale: every mixed-terrain 'outside' cell connected
+# to the explored interior network from (6,7) by genuine open passage --
+# the same false positive as (2,9) above, confirmed the same way (reachable
+# from real, far-from-the-margin dungeon floor, which decorative page-border
+# scenery cannot be). 24 more 'outside'+mixed cells on this level are NOT in
+# this reachable set and are left alone -- unverified, not merely assumed.
+feature	1	6	-	none	claude-2026-09-30	same false "outside" bug as (2,9); reachable from (6,7)'s explored interior, so real floor not scenery
+feature	1	19	-	none	claude-2026-09-30	same false "outside" bug as (2,9); reachable from (6,7)'s explored interior, so real floor not scenery
+feature	1	21	-	none	claude-2026-09-30	same false "outside" bug as (2,9); reachable from (6,7)'s explored interior, so real floor not scenery
+feature	1	22	-	none	claude-2026-09-30	same false "outside" bug as (2,9); reachable from (6,7)'s explored interior, so real floor not scenery
+feature	1	32	-	none	claude-2026-09-30	same false "outside" bug as (2,9); reachable from (6,7)'s explored interior, so real floor not scenery
+feature	2	4	-	none	claude-2026-09-30	same false "outside" bug as (2,9); reachable from (6,7)'s explored interior, so real floor not scenery
+feature	2	11	-	none	claude-2026-09-30	same false "outside" bug as (2,9); reachable from (6,7)'s explored interior, so real floor not scenery
+feature	2	17	-	none	claude-2026-09-30	same false "outside" bug as (2,9); reachable from (6,7)'s explored interior, so real floor not scenery
+feature	2	28	-	none	claude-2026-09-30	same false "outside" bug as (2,9); reachable from (6,7)'s explored interior, so real floor not scenery
+feature	2	34	-	none	claude-2026-09-30	same false "outside" bug as (2,9); reachable from (6,7)'s explored interior, so real floor not scenery
+feature	2	36	-	none	claude-2026-09-30	same false "outside" bug as (2,9); reachable from (6,7)'s explored interior, so real floor not scenery
+feature	2	37	-	none	claude-2026-09-30	same false "outside" bug as (2,9); reachable from (6,7)'s explored interior, so real floor not scenery
+feature	2	38	-	none	claude-2026-09-30	same false "outside" bug as (2,9); reachable from (6,7)'s explored interior, so real floor not scenery
+feature	33	4	-	none	claude-2026-09-30	same false "outside" bug as (2,9); reachable from (6,7)'s explored interior, so real floor not scenery
+feature	33	5	-	none	claude-2026-09-30	same false "outside" bug as (2,9); reachable from (6,7)'s explored interior, so real floor not scenery
+feature	33	6	-	none	claude-2026-09-30	same false "outside" bug as (2,9); reachable from (6,7)'s explored interior, so real floor not scenery
+feature	33	12	-	none	claude-2026-09-30	same false "outside" bug as (2,9); reachable from (6,7)'s explored interior, so real floor not scenery
+feature	33	13	-	none	claude-2026-09-30	same false "outside" bug as (2,9); reachable from (6,7)'s explored interior, so real floor not scenery
+feature	33	14	-	none	claude-2026-09-30	same false "outside" bug as (2,9); reachable from (6,7)'s explored interior, so real floor not scenery
+feature	33	15	-	none	claude-2026-09-30	same false "outside" bug as (2,9); reachable from (6,7)'s explored interior, so real floor not scenery
+feature	33	16	-	none	claude-2026-09-30	same false "outside" bug as (2,9); reachable from (6,7)'s explored interior, so real floor not scenery
+feature	33	32	-	none	claude-2026-09-30	same false "outside" bug as (2,9); reachable from (6,7)'s explored interior, so real floor not scenery
+feature	33	33	-	none	claude-2026-09-30	same false "outside" bug as (2,9); reachable from (6,7)'s explored interior, so real floor not scenery
+feature	33	35	-	none	claude-2026-09-30	same false "outside" bug as (2,9); reachable from (6,7)'s explored interior, so real floor not scenery
+feature	33	37	-	none	claude-2026-09-30	same false "outside" bug as (2,9); reachable from (6,7)'s explored interior, so real floor not scenery
+feature	33	38	-	none	claude-2026-09-30	same false "outside" bug as (2,9); reachable from (6,7)'s explored interior, so real floor not scenery
