@@ -5499,3 +5499,6 @@ Module text (p.23, area 56): "any characters reaching the area will have a basic
 
 ## Day 140 round 45 -- climbing out, CLW on Tristle
 The party lowered a line and pulled Tristle up; no roll called for, shallow and help on hand. Yrtone cast cure light wounds on Tristle: 1d8=5, capped at his hp max (1 to 3, full). audit-skip -- she still has cure light wounds and command memorised, unused this expedition.
+
+## Day 140 rounds 46-51 -- on through area 56 to (5,23), looking into the cavern
+(7,22),(8,22 re-crossed, already sprung, safe),(8,23),(7,23),(6,23) and (5,23) entered area 56 (room label), nothing stocked anywhere on the route. Infravision check (radius 6, 60ft) from (5,23), mark-seen 21 squares: nothing stocked in range; the area's own statue feature is at (3,19), within range -- narrated as a still man-sized silhouette (infravision shows silhouettes/large masses, not detail, and a stone statue radiates no heat to stand out further), nothing about what it depicts or any of its other module properties.

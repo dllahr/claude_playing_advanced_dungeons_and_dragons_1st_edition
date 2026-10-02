@@ -567,3 +567,7 @@ when	map	level	x	y	exped	turn	squares	feet	rate	why	route
 2026-10-02	b1	2	7	20	31		1	10	explore	day 140: on to (7,20)	8,20 7,20
 2026-10-02	b1	2	8	21	31		2	20	explore	day 140: Tristle 40ft ahead, on to (8,21)	7,20 8,20 8,21
 2026-10-02	b1	2	8	22	31		1	10	explore	day 140: on to (8,22)	8,21 8,22
+2026-10-02	b1	2	7	22	31		1	10	explore	day 140: around the pit, on to (7,22)	8,22 7,22
+2026-10-02	b1	2	7	23	31		3	30	explore	day 140: on to (7,23)	7,22 8,22 8,23 7,23
+2026-10-02	b1	2	6	23	31		1	10	explore	day 140: on to (6,23)	7,23 6,23
+2026-10-02	b1	2	5	23	31		1	10	explore	day 140: on to (5,23)	6,23 5,23
