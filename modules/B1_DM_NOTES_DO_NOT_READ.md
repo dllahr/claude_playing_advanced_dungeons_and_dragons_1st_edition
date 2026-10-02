@@ -5508,3 +5508,6 @@ Tristle to 2nd rank, party moves together to (3,19). Route (5,22),(4,22),(4,21),
 
 ## Day 140 round 68 -- statue searched for traps, clean
 Tristle (25%) and Ista (20%) both searched the statue, 1 turn, Dave and Torsat on north watch, rest covering the cavern. Both failed their Find/Remove Traps rolls (d100=37, d100=27) but it doesn't matter -- the module text gives this statue no trap at all, only the separate pit trap outside the cavern (already sprung). Logged both attempts to world_changes.tsv for the once-per-object record. One wandering check during the turn (round 64, d6=4), no encounter.
+
+## Day 140 round 78 -- full party search of the statue, clean
+Everyone but Dave and Torsat (on watch) spent a turn going over the statue itself -- pushing/testing it, checking for compartments or markings. Nothing beyond what's already visible. Module text is explicit: too heavy to move, resists any attempt to budge or topple. No wandering check this turn.
