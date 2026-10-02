@@ -11217,3 +11217,5 @@ when	exped	turn	notation	dice	modifier	total	hidden	reason
 2026-09-28			d6	2	0	2	yes	wandering jitter, anchor 1770
 2026-09-28			d6	3	0	3	yes	wandering jitter, anchor 1800
 2026-10-02			d6	4	0	4		wandering check, anchor 30
+2026-10-02			d100	83	0	83		Tristle, lead scout, at the covered pit trap near area 56: 70% falls in, 30% notices
+2026-10-02			d4	2	0	2		fall damage into the covered pit, area 56 approach
