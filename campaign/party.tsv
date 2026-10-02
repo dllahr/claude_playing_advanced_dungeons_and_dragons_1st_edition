@@ -571,3 +571,4 @@ when	map	level	x	y	exped	turn	squares	feet	rate	why	route
 2026-10-02	b1	2	7	23	31		3	30	explore	day 140: on to (7,23)	7,22 8,22 8,23 7,23
 2026-10-02	b1	2	6	23	31		1	10	explore	day 140: on to (6,23)	7,23 6,23
 2026-10-02	b1	2	5	23	31		1	10	explore	day 140: on to (5,23)	6,23 5,23
+2026-10-02	b1	2	3	19	31		6	60	explore	day 140: Tristle to 2nd rank, approaching the shape together	5,23 5,22 4,22 4,21 4,20 4,19 3,19
