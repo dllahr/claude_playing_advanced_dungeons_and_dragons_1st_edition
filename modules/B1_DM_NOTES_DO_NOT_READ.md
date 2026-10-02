@@ -5511,3 +5511,6 @@ Tristle (25%) and Ista (20%) both searched the statue, 1 turn, Dave and Torsat o
 
 ## Day 140 round 78 -- full party search of the statue, clean
 Everyone but Dave and Torsat (on watch) spent a turn going over the statue itself -- pushing/testing it, checking for compartments or markings. Nothing beyond what's already visible. Module text is explicit: too heavy to move, resists any attempt to budge or topple. No wandering check this turn.
+
+## Day 140 rounds 78-88 -- (3,19) to (5,27), standard formation, nothing encountered
+Tristle 40ft ahead again. Route (3,20),(3,21),(3,22),(3,23),(3,24),(4,24),(4,25),(5,25),(5,26),(5,27) all clean -- nothing stocked, no new wandering check (still just the 2 from earlier this expedition).
