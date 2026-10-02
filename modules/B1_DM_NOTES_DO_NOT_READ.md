@@ -5523,3 +5523,6 @@ Yrtone pulled it open and returned to formation. Infravision check (radius 6) fr
 
 ## Day 140 rounds 90-103 -- Tristle scouts ahead on infravision, properly separated from the lantern this time
 Corrected a process error: narrated Tristle using infravision at the door while standing with the party's lit lantern, which washes it out within ~30ft (rules/exploration.md). Player caught it. Redone properly: Tristle alone to (4,31) (~41ft straight-line from the party's lantern at the door), infravision check radius 6 -- nothing stocked, nothing to report, 40 squares lit/marked seen. Then party follows to (4,30) (door crossed, already open), Tristle continues alone to (4,34) (40ft ahead of the party's new position), second infravision check -- again nothing stocked, 50 squares lit. One wandering check during all this (round 93, d6=4), no encounter. Area 55 EXIT CAVE is a large open cavern, 86+ squares.
+
+## Day 140 rounds 103-116 -- Tristle to (4,40), party to (4,36)
+Clean the whole way, both legs -- nothing stocked anywhere on (4,35)-(4,40), no features, no wandering check. Infravision from (4,40), radius 6, 46 squares lit (26 newly seen): nothing detected.
