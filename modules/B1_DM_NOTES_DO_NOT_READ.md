@@ -5529,3 +5529,6 @@ Clean the whole way, both legs -- nothing stocked anywhere on (4,35)-(4,40), no 
 
 ## Day 140 rounds 116-129 -- Tristle to (10,40), party to (6,40)
 Clean -- nothing stocked on (5,40) through (10,40), no features, one wandering check (round 124, d6=5), no encounter. Infravision from (10,40): 28 squares lit, nothing detected. East side of the cavern reads noticeably more bounded than the ground already covered (fewer new squares revealed) -- not narrated as such, just geometry so far.
+
+## Day 140 rounds 129-139 -- back toward the pit trap, known route
+Tristle 40ft ahead to (6,23), party to (4,25), retracing already-seen ground at known rate. Nothing stocked anywhere on either route, no new wandering check. Tristle is now one square short of the pit zone (7,22)/(7,23)/(8,22)/(8,23) -- stopped there rather than assuming he walks onto it again.
