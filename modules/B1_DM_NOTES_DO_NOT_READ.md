@@ -5535,3 +5535,10 @@ Tristle 40ft ahead to (6,23), party to (4,25), retracing already-seen ground at 
 
 ## Day 140 rounds 139-144 -- Tristle around the pit's north edge to (10,24)
 Route (7,23),(8,23),(8,24),(9,24),(10,24) -- skirting the known/visible pit's rim, no new roll needed (already sprung, not hidden). Nothing stocked anywhere, no new feature. Infravision from (10,24): 16 squares lit, nothing detected.
+
+## Day 140 round 152 -- wandering goblins, Tristle alone, striking distance
+PROCESS ERROR caught and corrected: advanced the full 17-round move through this check instead of stopping at round 152 where it fired. Corrected via clock.py correct --to 152, --why logged. Party moved only as far as 40ft behind Tristle's actual position at that round: Tristle at (12,29) (7th square of the 17-square route), party at (11,26) (3rd square, 4 behind).
+
+Wandering check (round 152): d6=1 -> encounter; level 2 table d6=6 -> Goblins (2-7). Distance: d6=2 -> striking distance (<10ft), DMG p.62 close-encounter analog (rounding a bend in the corridor). Tristle's Move Silently (30%) rolled 80 -- failed, no surprise-bonus pip for him. Surprise: Tristle d6=4 (not surprised), goblins d6=2 (SURPRISED, 2 segments lost -- DMG p.62, one-side-surprised rule, the surprised side's own roll = segments). Number appearing: 2-7 roll = 7, the maximum.
+
+Tristle is ALONE at contact; the party (40ft back, corridor sightlines) is not yet part of this. Stopped here to hand the moment to the player -- what Tristle does with his 2 free segments is his call, not mine.

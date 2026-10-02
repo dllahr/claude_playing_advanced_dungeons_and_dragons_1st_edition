@@ -1666,3 +1666,6 @@ when	exped	round	kind	anchor	detail	note
 2026-10-02	31	135	advance		6	day 140: Tristle 40ft ahead, back toward the pit area, known route, to (6,23)
 2026-10-02	31	139	advance		4	day 140: party catches up to (4,25)
 2026-10-02	31	144	advance		5	day 140: Tristle around the north edge of the pit, to (10,24)
+2026-10-02	31	161	advance		17	day 140: Tristle 40ft ahead, to (20,29)
+2026-10-02	31	152	check	150	d6=1 -> Goblins (2-7)-AC 6, HD 1 -1, hp 5,5,4,4,3,2,1, #AT 1, D 1 -6 or by weapon, MV 90' (30'), Save NM, ML 7	anchor 150 + 2
+2026-10-02	31	152	correct		-9	process error: advanced the full 17-round move straight through a wandering check that fired at round 152 (goblins, d6=1/d6=6) instead of stopping there to resolve it; rolling back to the point of the check

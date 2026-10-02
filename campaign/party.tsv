@@ -581,3 +581,4 @@ when	map	level	x	y	exped	turn	squares	feet	rate	why	route
 2026-10-02	b1	2	4	36	31		6	60	explore	day 140: party follows 40ft behind Tristle, to (4,36)	4,30 4,31 4,32 4,33 4,34 4,35 4,36
 2026-10-02	b1	2	6	40	31		6	60	explore	day 140: party follows 40ft behind Tristle, to (6,40)	4,36 4,37 4,38 4,39 4,40 5,40 6,40
 2026-10-02	b1	2	4	25	31		17	170	known	day 140: party follows 40ft behind Tristle, known route back toward the pit area	6,40 6,39 6,38 5,38 5,37 5,36 5,35 5,34 5,33 5,32 5,31 5,30 5,29 5,28 5,27 5,26 5,25 4,25
+2026-10-02	b1	2	11	26	31		12	120	explore	day 140: party 40ft behind Tristle, stopped at the wandering check's round (152)	4,25 4,24 4,23 5,23 6,23 7,23 8,23 8,24 9,24 10,24 11,24 11,25 11,26

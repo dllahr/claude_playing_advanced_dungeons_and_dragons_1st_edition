@@ -11226,3 +11226,10 @@ when	exped	turn	notation	dice	modifier	total	hidden	reason
 2026-10-02			d6	6	0	6		B1 lock roll, door (5,27,H), examined by Tristle and Ista
 2026-10-02			d6	4	0	4		wandering check, anchor 90
 2026-10-02			d6	5	0	5		wandering check, anchor 120
+2026-10-02			d6	1	0	1		wandering check, anchor 150
+2026-10-02			d6	6	0	6		wandering table, level 2
+2026-10-02			d6	2	0	2		encounter distance in the corridor at (12,29): 1-2 striking, 3-4 ~10ft, 5-6 ~20ft (DMG p.62 close-encounter analog)
+2026-10-02			d100	80	0	80		Tristle Move Silently 30%, approaching the goblins at striking distance
+2026-10-02			d6	4	0	4		Tristle's surprise check vs the goblins (1-2 surprised)
+2026-10-02			d6	2	0	2		goblins' surprise check vs Tristle (1-2 surprised)
+2026-10-02			2-7 (1d6+1)	6	1	7		number of goblins encountered at (12,29)+1E, wandering check
