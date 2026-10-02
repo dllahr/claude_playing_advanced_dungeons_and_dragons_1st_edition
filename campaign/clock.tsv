@@ -1670,3 +1670,6 @@ when	exped	round	kind	anchor	detail	note
 2026-10-02	31	152	check	150	d6=1 -> Goblins (2-7)-AC 6, HD 1 -1, hp 5,5,4,4,3,2,1, #AT 1, D 1 -6 or by weapon, MV 90' (30'), Save NM, ML 7	anchor 150 + 2
 2026-10-02	31	152	correct		-9	process error: advanced the full 17-round move straight through a wandering check that fired at round 152 (goblins, d6=1/d6=6) instead of stopping there to resolve it; rolling back to the point of the check
 2026-10-02	31	157	advance		5	day 140: Dave and Torsat stand guard while the rest search the 7 goblin bodies and recover ammunition near (12,29)
+2026-10-02	31	168	advance		11	day 140: Tristle resumes, 40ft ahead, to (20,29), continuing the route from before the goblin fight
+2026-10-02	31	165	correct		-3	process error: Tristle scouting alone carries 0 share of common kit (carry.py person Tristle: normal, 12"), not the 9" I'd been assuming for his solo legs -- 100ft at 120ft/turn is 8 rounds, not 11; correcting this leg's advance (157->168 becomes 157->165)
+2026-10-02	31	178	advance		13	day 140: party (now very heavy, 6", after taking the goblin weapons) catches up to (17,30), 40ft behind Tristle

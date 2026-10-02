@@ -5564,3 +5564,9 @@ Dave and Torsat stood guard; the rest searched and recovered ammunition. No brea
 Treasure (MM type K individually, tools/treasure.py K --individuals 7): 8,13,7,3,15,14,11 sp = 71 sp total. Logged to money.tsv.
 
 Weapons (bestiary/goblin.md table, d100 x7): short sword+military pick, military pick, short sword+sling, short sword+spear, military pick, military pick, short sword+sling. Totals: 4 short swords, 4 military picks, 2 slings, 1 spear. Not logged to inventory_log.tsv -- reported to the player, left for them to decide whether to carry any of it out.
+
+## Day 140 rounds 157-178 -- resuming the route, two rate corrections
+(1) Tristle alone carries 0 share of common kit (carry.py person Tristle: normal, 12") -- corrected his resumed leg from an assumed 9"/90ft-turn (11 rounds) to the real 12"/120ft-turn (8 rounds), clock.py correct 168->165. NOT retroactively corrected for his earlier solo legs this session (same 90ft/turn error likely present there too) -- flagging as a known inaccuracy rather than reconstructing the whole session; the wandering checks that already fired stand as rolled.
+(2) The goblin weapons just picked up (440 gp-wt: 4 short swords, 4 military picks, 2 slings, 1 spear) pushed the party's shared kit out of the 'heavy' band (9") into 'very heavy' (6") -- confirmed via party.py's own dynamic carry.py-pack-based rate calc, not a bug, a real consequence of the extra weight. Flagged to the player.
+
+Tristle reached (20,29) clean (nothing stocked en route). Party reached (17,30), 40ft behind. No new wandering check either leg.
