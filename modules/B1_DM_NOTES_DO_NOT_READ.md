@@ -5526,3 +5526,6 @@ Corrected a process error: narrated Tristle using infravision at the door while 
 
 ## Day 140 rounds 103-116 -- Tristle to (4,40), party to (4,36)
 Clean the whole way, both legs -- nothing stocked anywhere on (4,35)-(4,40), no features, no wandering check. Infravision from (4,40), radius 6, 46 squares lit (26 newly seen): nothing detected.
+
+## Day 140 rounds 116-129 -- Tristle to (10,40), party to (6,40)
+Clean -- nothing stocked on (5,40) through (10,40), no features, one wandering check (round 124, d6=5), no encounter. Infravision from (10,40): 28 squares lit, nothing detected. East side of the cavern reads noticeably more bounded than the ground already covered (fewer new squares revealed) -- not narrated as such, just geometry so far.

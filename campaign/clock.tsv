@@ -1660,3 +1660,6 @@ when	exped	round	kind	anchor	detail	note
 2026-10-02	31	103	advance		3	day 140: Tristle on north to (4,34), still ahead of the party
 2026-10-02	31	109	advance		6	day 140: Tristle due north to (4,40), still ahead
 2026-10-02	31	116	advance		7	day 140: party catches up to (4,36)
+2026-10-02	31	122	advance		6	day 140: Tristle due east to (10,40), still ahead
+2026-10-02	31	129	advance		7	day 140: party catches up to (6,40)
+2026-10-02	31	124	check	120	d6=5	anchor 120 + 4
