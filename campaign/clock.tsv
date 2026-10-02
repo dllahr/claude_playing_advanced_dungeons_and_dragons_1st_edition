@@ -1644,3 +1644,5 @@ when	exped	round	kind	anchor	detail	note
 2026-10-02	31	50	advance		1	day 140: on to (6,23)
 2026-10-02	31	51	advance		1	day 140: on to (5,23)
 2026-10-02	31	58	advance		7	day 140: to the statue at (3,19)
+2026-10-02	31	68	advance		10	day 140: Tristle and Ista search the statue for traps, 1 turn, party on watch
+2026-10-02	31	64	check	60	d6=4	anchor 60 + 4

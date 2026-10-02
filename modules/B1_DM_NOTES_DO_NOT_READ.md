@@ -5505,3 +5505,6 @@ The party lowered a line and pulled Tristle up; no roll called for, shallow and 
 
 ## Day 140 rounds 51-58 -- to the statue at (3,19)
 Tristle to 2nd rank, party moves together to (3,19). Route (5,22),(4,22),(4,21),(4,20),(4,19),(3,19) all clean, nothing stocked, no new wandering check. Up close: the statue per module text (p.23, area 56) -- crude, unfinished black stone, ~5ft, human male, arms outstretched pointing toward the rock outcropping dividing the two corridors to the NNE. Narrated the physical description and pose (directly observable, not spoiler content); withheld nothing else about it yet since nothing else has been investigated.
+
+## Day 140 round 68 -- statue searched for traps, clean
+Tristle (25%) and Ista (20%) both searched the statue, 1 turn, Dave and Torsat on north watch, rest covering the cavern. Both failed their Find/Remove Traps rolls (d100=37, d100=27) but it doesn't matter -- the module text gives this statue no trap at all, only the separate pit trap outside the cavern (already sprung). Logged both attempts to world_changes.tsv for the once-per-object record. One wandering check during the turn (round 64, d6=4), no encounter.
