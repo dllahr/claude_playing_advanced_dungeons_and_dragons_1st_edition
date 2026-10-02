@@ -371,3 +371,18 @@ when	day	exped	round	side	actor	verb	target	qty	detail
 2026-09-27	139	30	1	monsters		damage	spider	13	
 2026-09-27	139	30	1	monster	spider	dead			put to sleep by Frython, then slain automatically per the day-139 sleep ruling; never woke
 2026-09-27	139	30	1			end			the black widow spider dies in its sleep, never fought back
+2026-10-02	140	31	1			start			5 goblins (of 7), level 2 near (12,29)+1E, morale broken but not yet moved -- Tristle alone at striking distance, party 40ft back at (11,26)
+2026-10-02	140	31	1			initiative			party d6=6 vs monsters d6=1, party acts first
+2026-10-02	140	31	1	party	Tristle	declare			fires 2 arrows, short bow
+2026-10-02	140	31	1	party	party	declare			advance 40ft to (11,28), then fire missile weapons at the goblins -- Dave/Torsat short bow x2, Blartho/Yrtone/Dellie/Hask sling x1, Ista/Frython dart x3, Brand hand axe x1
+2026-10-02	140	31	1	monsters		damage	goblin_delta_1hp	2	Tristle, short bow, hit for 2
+2026-10-02	140	31	1		goblin_delta_1hp	dead			killed by Tristle's shot
+2026-10-02	140	31	1	monsters		damage	goblin_epsilon_2hp	6	Dave, short bow x2, 1 then 5
+2026-10-02	140	31	1		goblin_epsilon_2hp	dead			killed by Dave
+2026-10-02	140	31	1	monsters		damage	goblin_alpha_4hp_a	7	Blartho sling 3, Yrtone sling 4
+2026-10-02	140	31	1		goblin_alpha_4hp_a	dead			killed by Blartho/Yrtone
+2026-10-02	140	31	1	monsters		damage	goblin_gamma_4hp_b	5	Dellie sling 2, Ista dart 3
+2026-10-02	140	31	1		goblin_gamma_4hp_b	dead			killed by Dellie/Ista
+2026-10-02	140	31	1	monsters		damage	goblin_beta_5hp	6	Ista dart nat20 1, Frython dart 3, Brand hand axe 2
+2026-10-02	140	31	1		goblin_beta_5hp	dead			killed by Ista/Frython/Brand
+2026-10-02	140	31	1			end			all 5 remaining goblins killed in one round of missile fire, round 1
