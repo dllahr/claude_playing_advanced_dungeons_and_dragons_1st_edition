@@ -5551,3 +5551,9 @@ The two-goblin kill XP (round 152) was written straight into campaign/encounters
 
 PENDING LEDGER, expedition 31 (credit on emerging, not yet earned):
 - Tristle, pending 25 XP -- two goblins (hp 4 and hp 1), surprise volley near (12,29), round 152. Source: 10 + 1/hp, bestiary/goblin.md / DMG Appendix E p.203. audit-skip
+
+## Day 140 round 1 (fight) -- remaining 5 goblins wiped out
+Party closed 40ft to (11,28) at known rate (1 round), joined Tristle's missile fire. Initiative: party d6=6 vs monsters d6=1, party first. 17 attacks: Tristle x2 short bow, Dave x2, Torsat x2 short bow, Blartho/Yrtone/Dellie/Hask x1 sling each, Ista x3 dart, Frython x3 dart, Brand x1 hand axe. 10 hits, 26 total damage vs 16 hp remaining across the 5 survivors (4,5,4,1,2) -- all 5 dead, round 1, no party losses. Fight closed in encounter.tsv.
+
+Pending ledger addition, expedition 31 (not yet earned -- credit on emerging):
+- all 10 (Dave,Torsat,Tristle,Frython,Ista,Blartho,Yrtone,Dellie,Hask,Brand), pending 66 XP for the 5 goblins (hp 4,5,4,1,2 -> 14+15+14+11+12=66), 10+1/hp per bestiary/goblin.md. audit-skip

@@ -70,5 +70,14 @@ goblin at 1hp hit once (5 dmg) — **dead**.
 
 **2 killed, 5 remaining** (full/full/4hp/1hp/full across the survivors).
 Morale check at +5% (25%+ casualties, DMG p.67): base 50, roll 66+5=71 vs 50 —
-broke by 21%, **disengage and retreat**. Surviving five fell back down the
-corridor rather than closing.
+broke by 21%, **disengage and retreat** — but only as *intent*. 2 segments is
+12 seconds; nobody had actually moved yet when the surprise window closed.
+They were still standing exactly where they'd been met, about to break, when
+the party's round began.
+
+**Round 1 (normal combat).** Initiative: party d6=6 vs monsters d6=1, party
+first. Party closed 40ft to join Tristle and the whole group fired at once —
+17 missile attacks (Tristle and Dave/Torsat's bows at normal, not surprise,
+rate; slings; Ista/Frython's darts at 3/round; Brand's hand axe). 10 hits for
+26 total damage against the 16 hp left standing (4, 5, 4, 1, 2) — all five
+dead before they ever took a step. No party losses.
