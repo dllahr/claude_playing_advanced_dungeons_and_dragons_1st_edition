@@ -5570,3 +5570,8 @@ Weapons (bestiary/goblin.md table, d100 x7): short sword+military pick, military
 (2) The goblin weapons just picked up (440 gp-wt: 4 short swords, 4 military picks, 2 slings, 1 spear) pushed the party's shared kit out of the 'heavy' band (9") into 'very heavy' (6") -- confirmed via party.py's own dynamic carry.py-pack-based rate calc, not a bug, a real consequence of the extra weight. Flagged to the player.
 
 Tristle reached (20,29) clean (nothing stocked en route). Party reached (17,30), 40ft behind. No new wandering check either leg.
+
+## Day 140 round 188 -- Tristle spots the area 53 kobolds
+9 stocked kobolds (kobold_53a-i, hp 4,4,3,3,3,3,2,2,1) at (23,40), area 53 GRAND CAVERN OF THE BATS -- within Tristle's infravision radius from (24,37), confirmed line of sight via dmap light_reach. First sighting, never engaged before. d6=4 -> working/foraging, decided (silent DM call, not rolled against any table) as gathering bat guano off the cavern floor, since the area name all but hands it to me and it's exactly the kind of mundane kobold livelihood the MM flavor text supports. Not yet aware of Tristle -- absorbed in the work, he's 30+ft off, no light, no noise. Narrated to the player as a distant sighting only: shapes, rough count, an activity, not species-certain detail or hp.
+
+Party's lantern is hooded (light.py show: lantern-ista BURNING hooded). Humans in the party have no infravision (only Tristle, elf) -- the party arriving 40ft behind sees nothing; they are functionally blind in the dark with the lantern shuttered. Noting this so I don't accidentally have them perceive something only Tristle's infravision can.

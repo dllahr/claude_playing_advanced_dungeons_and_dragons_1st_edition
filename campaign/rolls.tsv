@@ -11289,3 +11289,5 @@ when	exped	turn	notation	dice	modifier	total	hidden	reason
 2026-10-02			d100	64	0	64		goblin 5 weapon loadout
 2026-10-02			d100	62	0	62		goblin 6 weapon loadout
 2026-10-02			d100	15	0	15		goblin 7 weapon loadout
+2026-10-02			d6	2	0	2		wandering check, anchor 180
+2026-10-02			d6	4	0	4		kobold group at (23,40), area 53: what they're doing when first spotted (1-2 resting/idle, 3-4 working/foraging, 5-6 moving/patrolling)

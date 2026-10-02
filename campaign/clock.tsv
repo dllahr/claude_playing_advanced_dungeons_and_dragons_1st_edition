@@ -1673,3 +1673,6 @@ when	exped	round	kind	anchor	detail	note
 2026-10-02	31	168	advance		11	day 140: Tristle resumes, 40ft ahead, to (20,29), continuing the route from before the goblin fight
 2026-10-02	31	165	correct		-3	process error: Tristle scouting alone carries 0 share of common kit (carry.py person Tristle: normal, 12"), not the 9" I'd been assuming for his solo legs -- 100ft at 120ft/turn is 8 rounds, not 11; correcting this leg's advance (157->168 becomes 157->165)
 2026-10-02	31	178	advance		13	day 140: party (now very heavy, 6", after taking the goblin weapons) catches up to (17,30), 40ft behind Tristle
+2026-10-02	31	188	advance		10	day 140: Tristle 40ft ahead, own 12" rate, to (24,37)
+2026-10-02	31	184	check	180	d6=2	anchor 180 + 4
+2026-10-02	31	208	advance		20	day 140: party catches up to (22,35), 40ft behind Tristle, lantern still hooded
