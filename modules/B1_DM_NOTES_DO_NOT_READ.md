@@ -5517,3 +5517,6 @@ Tristle 40ft ahead again. Route (3,20),(3,21),(3,22),(3,23),(3,24),(4,24),(4,25)
 
 ## Day 140 round 89 -- the door at (5,27,H) examined
 B1 lock roll (d6, once per door, at examination): rolled 6 -- not locked (1-2 would have been). Hinge read directly off the page render (not rolled, per rules/b1-module.md's standing routine): west side of the narrow throat the door sits in, leaf drawn swung open toward (5,27) -- the party's side. No light or draught through the gap, sill dust old and undisturbed. Logged to world_changes.tsv as edge state 'unlocked' (door itself still shut; examined, not yet opened).
+
+## Day 140 round 90 -- the door opened
+Yrtone pulled it open and returned to formation. Infravision check (radius 6) from (5,27) through the open door: 19 newly lit squares to the north, nothing stocked anywhere in range, no feature tags. Narrated as open cavern space, nothing detected -- no spoilers (area beyond is 55 EXIT CAVE, not told to the player).

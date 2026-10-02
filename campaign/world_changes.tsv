@@ -1500,3 +1500,4 @@ when	map	exped	turn	level	scope	target	change	item	qty	who	note
 2026-10-02	b1	31		2	cell	3,19	searched			Ista	day 140: Find/Remove Traps on the statue at (3,19), d100=27 vs 20% -- failed, nothing found
 2026-10-02	b1	31		2	cell	3,19	searched			Hask,Dellie,Ista,Blartho,Yrtone,Frython,Brand	day 140: full general search of the statue (not just traps) -- try to budge/topple it, look for compartments/inscriptions; nothing found, matches module text: too heavy to move, resists any attempt to budge or topple
 2026-10-02	b1	31		2	edge	5,27,H	unlocked			Tristle,Ista	day 140: examined -- B1 lock roll d6=6, not locked. Hinge read off the page: west side of the throat, leaf swung open toward (5,27) (south, the party's side). No light or draught through the gap; sill shows old, undisturbed dust.
+2026-10-02	b1	31		2	edge	5,27,H	open			Yrtone	day 140: pulled open, standard formation facing it, Tristle 2nd rank
