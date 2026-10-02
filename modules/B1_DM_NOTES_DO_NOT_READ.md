@@ -5514,3 +5514,6 @@ Everyone but Dave and Torsat (on watch) spent a turn going over the statue itsel
 
 ## Day 140 rounds 78-88 -- (3,19) to (5,27), standard formation, nothing encountered
 Tristle 40ft ahead again. Route (3,20),(3,21),(3,22),(3,23),(3,24),(4,24),(4,25),(5,25),(5,26),(5,27) all clean -- nothing stocked, no new wandering check (still just the 2 from earlier this expedition).
+
+## Day 140 round 89 -- the door at (5,27,H) examined
+B1 lock roll (d6, once per door, at examination): rolled 6 -- not locked (1-2 would have been). Hinge read directly off the page render (not rolled, per rules/b1-module.md's standing routine): west side of the narrow throat the door sits in, leaf drawn swung open toward (5,27) -- the party's side. No light or draught through the gap, sill dust old and undisturbed. Logged to world_changes.tsv as edge state 'unlocked' (door itself still shut; examined, not yet opened).
