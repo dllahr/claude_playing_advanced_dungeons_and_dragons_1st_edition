@@ -190,6 +190,18 @@ expeditions), and DMG p.79 Fighters row 0. **Recording a normal man as "1 hit
 die" is what caused that error**; the MM gives him a flat 1-6 hit points and no
 die at all.
 
+### The party's movement rate is read from `carry.py pack`, NOT `carry.py roster`
+
+**Standing player instruction: the party packs to the `heavy` band (9") by
+default.** `roster` shows whatever carry.tsv's current item-by-item snapshot
+happens to be, which drifts and is NOT the rate to use — `pack --target heavy`
+is the authoritative one, because the party is assumed to have arranged their
+shared kit efficiently before setting out, not whatever ad hoc split the log
+last recorded. **Do not read `roster`'s mixed per-person bands and conclude the
+party needs to stop and "repack" mid-scene** — that already got it wrong once
+(day 140, closing on a wandering encounter): `pack` was treated as a plan that
+had to be separately applied, when the 9" rate is simply the number to use.
+
 ### Tristle's spear is NON-PROFICIENT on purpose — do not "fix" it
 
 `combat.py` applies **−3** to every spear attack Tristle makes (PHB p. 37, thief
