@@ -5490,3 +5490,6 @@ Retracted. `feature='outside'` is a data-extraction housekeeping tag (page-borde
 
 ## Day 140 round 27 -- north from (3,9) to a dead end at (7,18)
 130 ft, 3 rounds, nothing stocked anywhere on the route or in the newly lit area. Confirmed (3,9)'s "west" really was the same pocket as came_from (south) -- fixed in the tooling this session -- so north was the only real way on, and it runs a good distance before truly dead-ending. Nothing eventful.
+
+## Day 140 rounds 28-41 -- player-directed path, (7,17) through (7,20)
+New process starting this stretch: player reads the map and calls out the exact squares; I only check each square for stocking/feature/wandering and stop if something's there, otherwise narrate nothing and keep going. Checked every square: (7,17),(8,17),(8,18),(8,19),(9,19),(9,18),(10,18),(10,19),(9,20),(8,20),(7,20) -- nothing stocked, no features, one wandering check (round 32, d6=4, no encounter -- CHANCE_IN_6=1). Player's original leg included (10,20), which is genuinely solid (confidence 10, open=0.00) -- flagged plainly rather than silently rerouted, and the player corrected course to (9,20)/(8,20)/(7,20) instead.

@@ -1628,3 +1628,11 @@ when	exped	round	kind	anchor	detail	note
 2026-09-28	31	22	advance		1	day 140: 20 ft W then S to (6,7)
 2026-09-30	31	24	advance		2	day 140: 90 ft south through the pocket to (3,9)
 2026-09-30	31	27	advance		3	day 140: north to (7,18)
+2026-10-02	31	28	advance		1	day 140: step to (7,17)
+2026-10-02	31	30	advance		2	day 140: on to (8,18) via (8,17)
+2026-10-02	31	32	advance		2	day 140: on to (9,19) via (8,19)
+2026-10-02	31	32	check	30	d6=4	anchor 30 + 2
+2026-10-02	31	35	advance		3	day 140: on to (10,19) via (9,18),(10,18)
+2026-10-02	31	39	advance		4	day 140: back to (9,20)
+2026-10-02	31	40	advance		1	day 140: on to (8,20)
+2026-10-02	31	41	advance		1	day 140: on to (7,20)
