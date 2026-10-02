@@ -11282,3 +11282,10 @@ when	exped	turn	notation	dice	modifier	total	hidden	reason
 2026-10-02			d20	12	0	12		Frython attacks with dart
 2026-10-02			d20	15	0	15		Brand attacks with hand axe
 2026-10-02			1-6 (1d6)	2	0	2		Brand damage, hand axe
+2026-10-02			d100	1	0	1		goblin 1 weapon loadout
+2026-10-02			d100	62	0	62		goblin 2 weapon loadout
+2026-10-02			d100	16	0	16		goblin 3 weapon loadout
+2026-10-02			d100	25	0	25		goblin 4 weapon loadout
+2026-10-02			d100	64	0	64		goblin 5 weapon loadout
+2026-10-02			d100	62	0	62		goblin 6 weapon loadout
+2026-10-02			d100	15	0	15		goblin 7 weapon loadout

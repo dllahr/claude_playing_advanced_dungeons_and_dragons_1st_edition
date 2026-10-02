@@ -5557,3 +5557,10 @@ Party closed 40ft to (11,28) at known rate (1 round), joined Tristle's missile f
 
 Pending ledger addition, expedition 31 (not yet earned -- credit on emerging):
 - all 10 (Dave,Torsat,Tristle,Frython,Ista,Blartho,Yrtone,Dellie,Hask,Brand), pending 66 XP for the 5 goblins (hp 4,5,4,1,2 -> 14+15+14+11+12=66), 10+1/hp per bestiary/goblin.md. audit-skip
+
+## Day 140 rounds 152-157 -- searching the 7 goblin bodies
+Dave and Torsat stood guard; the rest searched and recovered ammunition. No breakage per the standing ruling (rules/exploration.md) -- nothing was ever deducted from inventory_log.tsv for the shots fired, so nothing needs restoring. No wandering check fired in the 5 rounds.
+
+Treasure (MM type K individually, tools/treasure.py K --individuals 7): 8,13,7,3,15,14,11 sp = 71 sp total. Logged to money.tsv.
+
+Weapons (bestiary/goblin.md table, d100 x7): short sword+military pick, military pick, short sword+sling, short sword+spear, military pick, military pick, short sword+sling. Totals: 4 short swords, 4 military picks, 2 slings, 1 spear. Not logged to inventory_log.tsv -- reported to the player, left for them to decide whether to carry any of it out.
