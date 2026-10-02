@@ -5496,3 +5496,6 @@ New process starting this stretch: player reads the map and calls out the exact 
 
 ## Day 140 round 44 -- Tristle springs the covered pit trap near area 56
 Module text (p.23, area 56): "any characters reaching the area will have a basic 70% chance of falling in, with a 30% chance of noticing the trap." Rolled d100=83 for Tristle (lead scout, alone, 40ft ahead) -- falls in. d4=2 fall damage (1-4 range per text). Tristle's hp before this fall was 3/3 (day 140, audit-skip), now 1/3 per tools/hp.py. Per the text, "the trap, once sprung, does not shield the pit any further, and the pit will be noticeable" -- logged as world_changes cell (8,22) pit_sprung, replayed onto the map. Since Tristle was solo (not a marching rank), the "20% chance for the next row" clause doesn't apply -- the party catching up afterward simply sees the sprung, now-obvious pit. Stopped the declared movement here per the player's new process; narrated only the natural outcome, no percentages, no die shown.
+
+## Day 140 round 45 -- climbing out, CLW on Tristle
+The party lowered a line and pulled Tristle up; no roll called for, shallow and help on hand. Yrtone cast cure light wounds on Tristle: 1d8=5, capped at his hp max (1 to 3, full). audit-skip -- she still has cure light wounds and command memorised, unused this expedition.
