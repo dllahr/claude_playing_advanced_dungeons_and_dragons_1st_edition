@@ -1654,3 +1654,7 @@ when	exped	round	kind	anchor	detail	note
 2026-10-02	31	88	advance		2	day 140: on to (5,27) via (5,26)
 2026-10-02	31	89	advance		1	day 140: Tristle and Ista examine the door at (5,27,H)
 2026-10-02	31	90	advance		1	day 140: Yrtone pulls the door open, back into formation
+2026-10-02	31	96	advance		6	day 140: Tristle alone 40ft+ ahead to (4,31), infravision check, lantern left with the party
+2026-10-02	31	93	check	90	d6=4	anchor 90 + 3
+2026-10-02	31	100	advance		4	day 140: party to (4,30), 40ft behind Tristle
+2026-10-02	31	103	advance		3	day 140: Tristle on north to (4,34), still ahead of the party

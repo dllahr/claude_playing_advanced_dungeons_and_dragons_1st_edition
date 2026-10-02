@@ -5520,3 +5520,6 @@ B1 lock roll (d6, once per door, at examination): rolled 6 -- not locked (1-2 wo
 
 ## Day 140 round 90 -- the door opened
 Yrtone pulled it open and returned to formation. Infravision check (radius 6) from (5,27) through the open door: 19 newly lit squares to the north, nothing stocked anywhere in range, no feature tags. Narrated as open cavern space, nothing detected -- no spoilers (area beyond is 55 EXIT CAVE, not told to the player).
+
+## Day 140 rounds 90-103 -- Tristle scouts ahead on infravision, properly separated from the lantern this time
+Corrected a process error: narrated Tristle using infravision at the door while standing with the party's lit lantern, which washes it out within ~30ft (rules/exploration.md). Player caught it. Redone properly: Tristle alone to (4,31) (~41ft straight-line from the party's lantern at the door), infravision check radius 6 -- nothing stocked, nothing to report, 40 squares lit/marked seen. Then party follows to (4,30) (door crossed, already open), Tristle continues alone to (4,34) (40ft ahead of the party's new position), second infravision check -- again nothing stocked, 50 squares lit. One wandering check during all this (round 93, d6=4), no encounter. Area 55 EXIT CAVE is a large open cavern, 86+ squares.
