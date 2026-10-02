@@ -5545,3 +5545,9 @@ Tristle is ALONE at contact; the party (40ft back, corridor sightlines) is not y
 
 ## Day 140 round 152 -- goblin volley resolved
 First goblin bestiary entry created (bestiary/goblin.md, MM p.47 + DMG Appendix E p.203 for XP). 12 arrows assigned 2/2/2/2/2/1/1 across the 7 (hp 5,5,4,4,3,2,1 in that order): goblin3 (4hp) took 6 dmg, dead; goblin7 (1hp) took 5 dmg, dead; goblin5 (3hp) took 2 dmg (nat 20) to 1hp; goblin1 (5hp) took 1 dmg to 4hp; goblins 2,4,6 untouched. Morale broke (+5% for 25%+ casualties, rolled 71 vs 50, 21% over -- disengage/retreat). Survivors falling back east down the corridor. XP logged to Tristle alone (solo kill, party 40ft back and not engaged): 25 total (14+11).
+
+## Correction -- XP logged too early
+The two-goblin kill XP (round 152) was written straight into campaign/encounters.tsv -- figure restated below, audit-skip. Wrong: rules/experience.md is explicit that B1 credits XP only when the party gets out alive -- "accumulate as a pending ledger during an expedition... credited on emerging." Expedition 31 is still in progress. Removed that row from encounters.tsv.
+
+PENDING LEDGER, expedition 31 (credit on emerging, not yet earned):
+- Tristle, pending 25 XP -- two goblins (hp 4 and hp 1), surprise volley near (12,29), round 152. Source: 10 + 1/hp, bestiary/goblin.md / DMG Appendix E p.203. audit-skip
