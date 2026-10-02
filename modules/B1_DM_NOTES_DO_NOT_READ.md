@@ -5532,3 +5532,6 @@ Clean -- nothing stocked on (5,40) through (10,40), no features, one wandering c
 
 ## Day 140 rounds 129-139 -- back toward the pit trap, known route
 Tristle 40ft ahead to (6,23), party to (4,25), retracing already-seen ground at known rate. Nothing stocked anywhere on either route, no new wandering check. Tristle is now one square short of the pit zone (7,22)/(7,23)/(8,22)/(8,23) -- stopped there rather than assuming he walks onto it again.
+
+## Day 140 rounds 139-144 -- Tristle around the pit's north edge to (10,24)
+Route (7,23),(8,23),(8,24),(9,24),(10,24) -- skirting the known/visible pit's rim, no new roll needed (already sprung, not hidden). Nothing stocked anywhere, no new feature. Infravision from (10,24): 16 squares lit, nothing detected.
