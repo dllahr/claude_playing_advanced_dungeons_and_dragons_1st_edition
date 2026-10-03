@@ -5762,3 +5762,6 @@ With kobold_51d/e correctly at (32,29) (full 60ft move, farthest actual distance
 
 ## Day 140 round 494 -- party re-spots the 2 kobolds at (31,27)
 Clearing the corner obstruction that blocked LOS from (30,27), the party at (31,27) now has a clean line to kobold_51d/e at (32,29), ~22.4ft. No new surprise (prior contact already established, DMG p.62 "prior detection negates surprise" and they already know each other is there). No wandering check.
+
+## Day 140 -- Tristle parleys with the 2 surviving kobolds
+MM p.57 checked: kobolds speak own tongue + lawful evil always, 75% chance each of goblin/orcish. Rolled whether THESE two know orcish: d100=10, yes. Tristle's "hold, we can talk" in orcish is understood. Reaction roll (DMG p.63, first contact with intent to communicate): Tristle CHA9=+0, circumstance +20 (badly wounded, already failed to flee once, heavily outnumbered -- strong incentive to listen). d100=69+20=89 -> Friendly, immediate action (76-95 band). They're receptive. Combat suspended before any round-1 action resolved.

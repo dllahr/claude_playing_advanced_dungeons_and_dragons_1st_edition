@@ -42,6 +42,12 @@ None.
 | Infravision | 60' |
 | Sunlight | **-1 to hit** in bright sunlight — irrelevant underground |
 
+## Languages
+
+Own tongue and the lawful evil alignment tongue always; **75% chance each**
+of also speaking goblin and orcish. *(MM p.57 — checked day 140 when Tristle
+tried Orcish at two cornered survivors: d100=10, they understood.)*
+
 ## Weapons carried
 
 Spiked wooden club 30%, axe 20%, javelins (2-3) 15%, short sword and spear 10%,
