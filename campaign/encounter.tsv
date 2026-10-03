@@ -426,3 +426,4 @@ when	day	exped	round	side	actor	verb	target	qty	detail
 2026-10-03	140	31	1		spider2	dead			dead before it ever acted
 2026-10-03	140	31	1			end			wandering crab spider killed in the surprise segments, zero party losses
 2026-10-03	140	31	1			start			troglodyte (hp9) ambushes Tristle alone near (29,30), ~10ft -- 1 segment surprise, all 3 attacks hit
+2026-10-03	140	31	1			end			no valid LOS/approach from (29,30) to the only unseen ground nearby -- check spent, nothing encountered, per the standing wandering-check rule

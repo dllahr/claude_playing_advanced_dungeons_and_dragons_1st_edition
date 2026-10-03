@@ -5684,3 +5684,6 @@ Wandering check fired right as Tristle finished his 2-round leg to (29,30) -- no
 
 ## Day 140 -- correction: troglodyte ambush retracted, no valid hidden-close placement
 Player caught this twice in a row (first placement at 29,31, still visible from 27,29/28,29). Verified properly: nothing within the 10-30ft surprise-cap distance of (29,30) was unseen from Tristle's actual transit squares. DMG p.62 "prior detection negates surprise" -- there is no legitimate ambush here. Healed Tristle back to 3/3 (hp.py heal, append-only correction). Re-rolling this encounter as a normal (non-surprise) wandering troglodyte, placed in genuinely unseen ground further out (toward area 50, unexplored, south/southwest of 29,30).
+
+## Day 140 -- troglodyte wandering check spent, no encounter
+Checked LOS from (29,30) itself to the nearest unseen pockets (28,33)/(28,34)/(29,35) -- none visible, same terrain blocking that kept them out of his earlier scans. No approach exists this round. Per the standing rule ("if it cannot reach them at this round, the check is SPENT and they never knew it was there"), this resolves as no encounter at all. Tristle remains at full hp, untouched.
