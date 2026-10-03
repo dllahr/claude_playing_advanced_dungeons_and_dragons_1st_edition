@@ -5703,3 +5703,6 @@ First ochre jelly of the campaign -- bestiary/ochre-jelly.md created (MM p.75, p
 Surprise: party d6=3, widened to 1-3 (could pass for a wet patch at a glance, DMG factors-contributing-to-surprise). Front rank is Dave/Torsat/Yrtone (established day 140 round 19 reshuffle); d3=3 -> Yrtone (same ordering convention as the day-139 orc melee-contact pick). Hit for 5 (needs 10 vs AC3, rolled 14, 3d4). 7hp -> 2hp.
 
 STANDING THREAT: the MM text describes the fluid as causing 3-12 hp/round of ongoing exposure while in contact -- Yrtone is still touching it. This needs resolving before narrating further; stopped to hand it back to the player.
+
+## Day 140 round 1 (jelly fight) -- Yrtone pulled clear, jelly at 7hp
+Spell declared before initiative (Dellie's CLW), correct per the new combat-sequence rule. Initiative: party d6=6 vs monsters d6=2, party first -- Yrtone pulled clear before any second round of ongoing fluid exposure. CLW: 1d8=3, Yrtone 2->5hp. Missile volley: Blartho miss(3v12), Hask miss(6v12), Ista miss(12v13), Frython miss(3v13), Brand hit(15v13) for 6 (1d6), Tristle hit(15v9) for 3 (1d6) -- 9 of 16hp. Jelly (Move 3", nothing adjacent) couldn't reach anyone this round. Still alive at 7hp.

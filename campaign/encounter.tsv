@@ -432,3 +432,7 @@ when	day	exped	round	side	actor	verb	target	qty	detail
 2026-10-03	140	31	1		trog3	dead			killed in the surprise segments, never acted
 2026-10-03	140	31	1			end			troglodyte dead, zero party losses
 2026-10-03	140	31	1			start			ochre jelly (hp16) at (27,34) -- Yrtone stepped in it mistaking it for wet floor, surprised, took 5 dmg, still in contact (ongoing 3-12/round fluid exposure if not freed)
+2026-10-03	140	31	1	party	Yrtone	declare			pulled clear by Dave and Torsat
+2026-10-03	140	31	1	party	Dellie	declare			cure light wounds on Yrtone
+2026-10-03	140	31	1	party	party	declare			Blartho/Hask sling, Ista/Frython dart, Brand hand axe, Tristle short bow -- all fire at the jelly
+2026-10-03	140	31	1	monsters		damage	ochre	9	Brand 6, Tristle 3 -- 9 of 16hp. Nobody else in reach (it's slow, Move 3", everyone fired from range).

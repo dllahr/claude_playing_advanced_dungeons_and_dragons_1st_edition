@@ -11510,3 +11510,14 @@ when	exped	turn	notation	dice	modifier	total	hidden	reason
 2026-10-03			d3	3	0	3		which of the front rank (Dave/Torsat/Yrtone) is leading into the room and steps in the jelly, mistaking it for a puddle
 2026-10-03			d20	14	0	14		ochre jelly attacks AC 3
 2026-10-03			3-12 (3d4)	2,2,1	0	5		ochre jelly damage
+2026-10-03			d6	6	0	6		initiative, party
+2026-10-03			d6	2	0	2		initiative, monsters
+2026-10-03			1-8 (1d8)	3	0	3		Dellie's cure light wounds on Yrtone
+2026-10-03			d20	3	0	3		Blartho attacks with sling
+2026-10-03			d20	6	0	6		Hask attacks with sling
+2026-10-03			d20	12	0	12		Ista attacks with dart
+2026-10-03			d20	3	0	3		Frython attacks with dart
+2026-10-03			d20	15	0	15		Brand attacks with hand axe
+2026-10-03			1-6 (1d6)	6	0	6		Brand damage, hand axe
+2026-10-03			d20	15	0	15		Tristle attacks with short bow
+2026-10-03			1-6 (1d6)	3	0	3		Tristle damage, short bow
