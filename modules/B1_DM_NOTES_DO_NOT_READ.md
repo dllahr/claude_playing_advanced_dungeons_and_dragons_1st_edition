@@ -5771,3 +5771,6 @@ d6=4 -> honest but limited knowledge (not leaders, low-status foragers). Content
 
 ## Day 140 rounds 501-531 -- door spiked, area 51 searched
 Jamb spiked (2 iron spikes) at (27,26,H), correct method since it opens away from the party's current side. Dave guarded while the rest searched: 3 dead kobold bodies (type J individually, 13+13+13=39cp, logged) plus the accessible cavern floor. Module key for area 51 is blank beyond the stocking table (checked earlier) -- nothing else to find, confirmed via stocking.present() (only the 2 released, fled kobolds remain registered in this area, not findable by a normal search). No wandering check across 30 rounds.
+
+## Day 140 round 539 -- stocking.py scan catches hobgoblins before the full route completes
+Ran scan on Tristle's full 10-square declared path up front (per standing practice now) -- 5 hobgoblins (hp 9,8,6,4,3), area 49 PHOSPHORESCENT CAVE (not yet entered), spotted at (25,16) from the 9th square, (25,19), not the declared 10th (26,19). Stopped him there rather than letting the route complete blind. Distance 30ft, within his 60' infravision. Tristle not near the party's lantern (40ft lead per formation), so infravision is clean. Not yet narrated in detail -- next reply.
