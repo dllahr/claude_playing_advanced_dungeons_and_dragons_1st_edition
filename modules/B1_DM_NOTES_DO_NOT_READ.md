@@ -5650,3 +5650,11 @@ Spider is undamaged (7hp), adjacent to an unconscious Tristle, animal intelligen
 Found a real inconsistency: rules/exploration.md's "Withdrawing from melee" note said +2 only (rear attack), citing just half of the DMG p.70 quote already fully rendered in rules/combat.md (which derives +6 total: rear +2, stunned/motionless +4, shield+DEX negated). Past precedent in this campaign (rat round 1206, orc round ~93 area) was built on the incomplete +2-only reading. Fixed rules/exploration.md to point to the fuller rule and marked the correction prospective -- those past resolutions stand as played.
 
 Tristle's free-attack result (0hp, unconscious) was reached using the CORRECT fuller rule, but he was declared under the prior (incomplete) understanding the player had every reason to rely on, given actual campaign precedent. Healed him back to 3/3 (hp.py heal, append-only correction) and reopened the decision rather than let a declaration made on bad information stand. The 1-segment surprise ambush and its miss still stand -- only the free-attack consequence of retreating is reopened. Spider (7hp, undamaged) is still adjacent/in melee range.
+
+## Day 140 round 1 (spider fight) -- resolved, dead in one round
+Tristle:short bow, needs 11, rolled 19, HIT for 5 (1d6). Blartho:flail, needs 14, rolled 20 (nat20), HIT for 3 (1d6+1). Yrtone:flail miss (11v14). Dellie:flail miss (8v14). Hask:short sword, needs 14, rolled 19, HIT for 1 -- moot, already dead (5+3=8 > 7hp before his hit even lands). Brand:hand axe miss (11v15, needs15 for 0-level). Frython/Ista never fired -- target already dead. Dave/Torsat spent the round closing+switching to sword&shield per the weapon-change rule, no attack, as the player intended.
+
+Party now at (31,35), area 52 RAISED CAVERN (8 squares) -- new area, not yet explored. Bat-disturbance: turn14 (338-347, final check, they're leaving area 53) rolled 89, safe. No further bat checks needed once out of area 53's airspace.
+
+Pending ledger addition, expedition 31 (not yet earned -- credit on emerging):
+- all 10 (Dave,Torsat,Tristle,Frython,Ista,Blartho,Yrtone,Dellie,Hask,Brand), pending XP for 1 crab spider, hp7: 145+3(7)=166, per bestiary/crab-spider.md. audit-skip

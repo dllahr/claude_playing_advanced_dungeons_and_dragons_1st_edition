@@ -11411,3 +11411,13 @@ when	exped	turn	notation	dice	modifier	total	hidden	reason
 2026-10-02			d20	18	0	18		crab spider attacks AC 8
 2026-10-02			1-6 (1d6)	3	0	3		crab spider bite damage, free attack on Tristle breaking off, hit
 2026-10-02			d20	14	0	14		Tristle save vs Paralyze/Poison/Death
+2026-10-03			d20	19	0	19		Tristle attacks with short bow
+2026-10-03			1-6 (1d6)	5	0	5		Tristle damage, short bow
+2026-10-03			d20	20	0	20		Blartho attacks with footman's flail
+2026-10-03			2-7 (1d6+1)	2	1	3		Blartho damage, footman's flail
+2026-10-03			d20	11	0	11		Yrtone attacks with footman's flail
+2026-10-03			d20	8	0	8		Dellie attacks with footman's flail
+2026-10-03			d20	19	0	19		Hask attacks with short sword
+2026-10-03			1-6 (1d6)	1	0	1		Hask damage, short sword
+2026-10-03			d20	11	0	11		Brand attacks with hand axe
+2026-10-03			d100	89	0	89		B1 area 53 bat-disturbance check, turn 14 (rounds 338-347, final -- party now leaving into area 52): 5% light + 10% noise (Tristle's shout, combat) = 15%

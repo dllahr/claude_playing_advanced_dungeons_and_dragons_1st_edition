@@ -141,3 +141,19 @@ over. Four stones and three darts saved.
 
 **Nothing got to use its poison, its leap, or its 1-5 surprise.** On a different
 d6 this would have been two men down before anyone moved.
+
+**Day 140, expedition 31, area 52 the raised cavern — IT GOT THE ROLL THIS
+TIME.** Hidden near (32,34), it surprised Tristle alone (surprised-on 5,
+rolled 1) as he approached the stairs up from area 53. Its leap missed (needs
+12 vs AC4, rolled 6). Tristle tried to break off and rejoin the party — this
+is what exposed the "breaking off from melee" rule's full DMG p.70 cost (+6
+total, shield+DEX negated, not the +2 this file and `rules/exploration.md`
+had been using): its free attack hit (18 vs AC8) for 3, taking Tristle's 3hp
+to 0. He made the poison save (14+1 vs 13). The decision was reopened once
+the rule was corrected (see `rules/exploration.md`), and healed back to 3/3.
+
+**Redeclared: Tristle stood and fired point-blank instead of retreating**,
+calling the party in. His shot alone (5 dmg) plus Blartho's flail (nat 20, 3
+dmg) killed it outright in one round, 8 of 7hp, before it got a second
+action. Dave and Torsat spent the round only closing and switching to
+sword+shield (DMG weapon-change rule), no attack. Untouched otherwise.

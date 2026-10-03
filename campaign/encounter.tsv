@@ -412,3 +412,8 @@ when	day	exped	round	side	actor	verb	target	qty	detail
 2026-10-02	140	31	1			initiative			party d6=4 vs monsters d6=3, party acts first
 2026-10-02	140	31	1	party	Tristle	declare			breaks off from melee to retreat toward the party, calling out
 2026-10-02	140	31	1	monsters		damage	spider_30_36	0	free attack vs Tristle (DMG p.70 breaking-off-from-melee rule: +6, shield & DEX negated), needs ~8 at AC8, rolled 18 -- hit for 3. Tristle to 0hp, unconscious, bleeding 1/round. Poison save made (15 vs 13).
+2026-10-03	140	31	1	party	Tristle	declare			stands and fires his short bow at the spider, point-blank, calling for help
+2026-10-03	140	31	1	party	party	declare			Dave/Torsat close and switch to sword+shield (no attack this round); Blartho/Yrtone/Dellie/Hask drop slings (free) and close to melee with flail/short sword; Brand closes with hand axe; Frython/Ista hold at range with darts
+2026-10-03	140	31	1	monsters		damage	crab	10	Tristle 5, Blartho 3 (nat20), Hask 1 -- 9 total vs 7hp, dead; Yrtone/Dellie/Brand missed, moot
+2026-10-03	140	31	1		crab	dead			killed before completing its next action
+2026-10-03	140	31	1			end			crab spider dead, round 1, Tristle's only wound was the earlier missed leap -- he's untouched
