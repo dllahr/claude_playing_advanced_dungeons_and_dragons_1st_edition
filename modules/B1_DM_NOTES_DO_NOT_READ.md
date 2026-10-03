@@ -5609,3 +5609,6 @@ Wandering check: 2 troglodytes (of the 1-4/hp 9,8,5,4 pool, took the first two: 
 Troglodyte pursuit decision (d6=4, 4-6 hold/wary of the shout): they stay put rather than chasing. Tristle closes the (correctly logged) 40ft gap within his own full combat-round move allowance (12" = 120ft/round, well over the 40ft needed) and takes 2nd rank. No blows exchanged. Fight closed in encounter.tsv. Bat-disturbance turn6 (258-267, missed earlier, rolled retroactively): d100=64, safe.
 
 The 2 troglodytes (hp 9, 8) are still out there near (24,43)/beyond, aware of the party now, not currently approaching.
+
+## Day 140 -- pinning the 2 troglodytes' actual squares
+Hadn't committed to exact coordinates when the encounter fired, just an abstract 60ft distance. Player asked for the real arc from (24,43) at 60' infravision radius -- ran dmap.py light to get the true visible-cell set rather than guessing, and placed them at the far (unexplored) edge of it: (29,40) and (29,41), 58.3ft and 53.9ft from Tristle respectively, both within the 60ft cap already established. Open floor, area 53, confirmed via dmap.py at.
