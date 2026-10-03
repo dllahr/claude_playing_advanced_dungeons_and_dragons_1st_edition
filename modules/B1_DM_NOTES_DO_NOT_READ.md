@@ -5601,3 +5601,6 @@ Player explicitly named (15,39),(14,39),(13,39) as waypoints; I let dmap.find_pa
 
 ## Day 140 round 271 -- process error: troglodyte chameleon surprise applied against infravision
 Wandering check: 2 troglodytes (of the 1-4/hp 9,8,5,4 pool, took the first two: 9 and 8) near (24,43), Tristle alone. First pass wrongly used Surprises-On 4 (chameleon) for Tristle's own surprise check -- rules/exploration.md and bestiary/troglodyte.md both already say this bonus is BY SIGHT ONLY and does not apply against infravision (Tristle has no light, total darkness). Caught by the player before anything was logged. Corrected: both sides' surprise re-read at standard 1-2 using the SAME original rolls (Tristle d6=4, troglodytes d6=3) -- neither surprised. No segment-1 damage happened; nothing needed reverting since nothing was written to hp_log.tsv yet. Proceeding straight to initiative per DMG p.61 step 3 (both unsurprised).
+
+## Day 140 round 271 (trog fight) -- distance and setup
+2d6x10 rolled 80ft, capped at Tristle's own 60' infravision range (the troglodytes' 90' doesn't help since mutual awareness happens at the shorter range). Distance: 60ft. Initiative tied (1v1) -- simultaneous. Live fight open in encounter.tsv, round 1, nothing declared.

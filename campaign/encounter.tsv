@@ -398,3 +398,5 @@ when	day	exped	round	side	actor	verb	target	qty	detail
 2026-10-02	140	31	2	monsters		damage	kobold_53a	6	Tristle, short bow, hit for 6
 2026-10-02	140	31	2		kobold_53a	dead			killed by Tristle -- all 9 kobolds dead
 2026-10-02	140	31	2			end			all 9 kobolds dead, round 2, no party losses
+2026-10-02	140	31	1			start			2 troglodytes (hp 9, 8) near (24,43), Tristle alone -- neither side surprised (camouflage doesn't work against infravision)
+2026-10-02	140	31	1			initiative			party d6=1 vs monsters d6=1, TIED -- simultaneous
