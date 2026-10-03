@@ -5720,3 +5720,6 @@ Every ad hoc check this session used edges.get((cell_a,cell_b)) as a key. That k
 
 ## Day 140 round 480 -- door opened, 5 kobolds spotted at (31,27)
 5 stocked kobolds (hp 4,4,4,2,1), never engaged, area 51 itself -- 40ft down the corridor/room beyond the door, within Tristle's 60' infravision and clear LOS once the door swung open (door D at 27,27,S confirmed via the corrected full-radius check). Not yet an encounter -- just spotted at range, door just opened, nobody's moved toward them. Narrated as shapes/count via infravision only, not species-certain (though given the party's already fought two kobold groups today they'd likely guess right) -- no exact hp/stats given.
+
+## Day 140 -- correction: kobold sighting retracted, Tristle's infravision was washed out
+Player caught it: standard tight formation (not 40ft-separated scouting) puts Ista's lit lantern well within 30ft of Tristle regardless of rank, washing out his infravision per the standing rule. Checked properly: at 30ft lamp-only range from (27,27), nothing stocked is visible -- the kobolds at (31,27), 40ft off, are beyond both the lamp AND (since infravision is washed out) Tristle's own senses right now. Retracted the sighting; they remain unseen/unspotted as things stand. Still there, just not currently perceived by anyone.
