@@ -5589,3 +5589,6 @@ Tristle's 2 arrows at kobold A: hit (11 vs 10) for 6, dead; second arrow moot. A
 
 Pending ledger addition, expedition 31 (not yet earned -- credit on emerging):
 - Tristle, pending XP for all 9 kobolds (hp 4,4,3,3,3,3,2,2,1 -> 9+9+8+8+8+8+7+7+6=70), 5+1/hp per bestiary/kobold.md. Solo kill -- same rule as the goblins, whoever was still standing takes it all; the party never engaged. audit-skip
+
+## Day 140 rounds 220-225 -- searching the kobold site
+Dave and Torsat stood guard. All 22 arrows (18 surprise + 2 round1 + 2 round2) recovered, no breakage per standing ruling. Treasure (MM type J individually, 9 kobolds): 13,16,15,16,13,12,21,17,13 cp = 136 cp, logged to money.tsv. The guano sacks: d6=1, nothing mixed in, just guano -- not worth the party's while to haul out given its bulk-to-value ratio. No wandering check.
