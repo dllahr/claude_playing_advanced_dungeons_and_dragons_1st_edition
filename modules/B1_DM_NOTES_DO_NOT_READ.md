@@ -5783,3 +5783,6 @@ d6=4 -> 2 of the 5 (hobgoblin_49a/b) sent to scout toward the shot, not the whol
 
 ## Day 140 -- correction and resolution: scouts now visible at (26,24), 10ft
 Caught two errors mid-resolution: first move put them in solid rock (25,22), second valid-path move still had LOS blocked by a corner. Corrected by advancing them along the real pathed route (dmap.find_path) to (26,24), confirmed via scan -- genuinely visible now, 10ft north of the party. Both sides have been aware of each other's general presence since Tristle's shot; narrating this as a tense close approach, not a fresh surprise check (neither side is meaningfully hidden from the other at this point).
+
+## Day 140 -- correction: checked the approach path, not just the endpoint, for the monsters' side too
+Same class of error as the door/stocking bugs earlier, mirrored: when moving a stocked individual TOWARD the party, I checked light_reach only at their final stop, not each square of their path. (26,24) was already a square deep into the light; (26,25) is the actual first lit square on their route. Corrected. General procedure note: this applies symmetrically to `stocking.py scan` (party moving past monsters) AND to moving monsters toward a stationary party -- check every square either way, not just the destination.

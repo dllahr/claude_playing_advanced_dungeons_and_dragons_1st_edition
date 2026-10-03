@@ -154,3 +154,5 @@ when	day	level	area	monster_id	monster	verb	x	y	hp	exped	round	duration	note
 2026-10-03	140			hobgoblin_49b		move	24	22		31	552		day 140: CORRECTION -- same fix
 2026-10-03	140			hobgoblin_49a		move	26	24		31	552		day 140: closed the rest of the real path, now in sight of the party
 2026-10-03	140			hobgoblin_49b		move	26	24		31	552		day 140: same
+2026-10-03	140			hobgoblin_49a		move	26	25		31	553		CORRECTION: checked light_reach along the full path this time, not just the endpoint -- (26,25) is the FIRST square on their route that's actually inside the party's 30ft lamp radius, not (26,24). Stopping them there.
+2026-10-03	140			hobgoblin_49b		move	26	25		31	553		CORRECTION: same fix
