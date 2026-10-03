@@ -5592,3 +5592,6 @@ Pending ledger addition, expedition 31 (not yet earned -- credit on emerging):
 
 ## Day 140 rounds 220-225 -- searching the kobold site
 Dave and Torsat stood guard. All 22 arrows (18 surprise + 2 round1 + 2 round2) recovered, no breakage per standing ruling. Treasure (MM type J individually, 9 kobolds): 13,16,15,16,13,12,21,17,13 cp = 136 cp, logged to money.tsv. The guano sacks: d6=1, nothing mixed in, just guano -- not worth the party's while to haul out given its bulk-to-value ratio. No wandering check.
+
+## Day 140 rounds 225-237 -- along the west wall of area 53
+Tristle to (18,37), own 12" rate. Party to (22,37), 40ft behind. Nothing stocked along either route. Bat-disturbance check (B1 area 53 key text, pdf p.3996 of the module txt, printed p.22-23): "5% per light source per turn + 10% for noise above subdued conversation" -- the party's lit, unshuttered lantern (lantern-ista, burning since round 0) is the one source in play. Rolling it per complete turn since they entered the cavern at round 208: turn1 (208-217, includes the kobold fight -- noise applies, 15%) rolled 30, safe. turn2 (218-227, quiet searching, 5%) rolled 30, safe. turn3 (228-237, quiet movement, 5%) rolled 59, safe. Not narrated to the player -- preserve surprise, this is module content that only matters if it actually fires.

@@ -11338,3 +11338,7 @@ when	exped	turn	notation	dice	modifier	total	hidden	reason
 2026-10-02			1-6 (1d6)	6	0	6		Tristle damage, short bow
 2026-10-02			d20	6	0	6		Tristle attacks with short bow
 2026-10-02			d6	3	0	3		wandering check, anchor 210
+2026-10-02			d6	1	0	1		anything unusual mixed into the gathered guano sacks? 1-5 no, just guano, 6 something odd turns up
+2026-10-02			d100	30	0	30		B1 area 53 bat-disturbance check, turn 1 in the cavern (rounds 208-217): 5% per light source (1 lit lantern) + 10% noise (the kobold fight) = 15%
+2026-10-02			d100	30	0	30		B1 area 53 bat-disturbance check, turn 2 (rounds 218-227): 5% per light source (1 lit lantern), no loud noise this turn (quiet searching)
+2026-10-02			d100	59	0	59		B1 area 53 bat-disturbance check, turn 3 (rounds 228-237): 5% per light source (1 lit lantern), quiet movement, no loud noise
