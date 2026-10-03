@@ -5626,3 +5626,6 @@ Pending ledger addition, expedition 31 (not yet earned -- credit on emerging):
 
 ## Day 140 rounds 282-290 -- gathering missiles, searching the troglodyte
 Party advanced 30ft to (29,40). All 17 missiles recovered, no breakage. Weapon check for the dead one (hp9): d100=4, armed; d100=11, javelin x2 -- added to inventory/carry (new javelin asset, weight estimated, flagged for page-render verification). Treasure: bestiary/troglodyte.md lists "Treasure Type A" with no Individuals/Lair split, unlike goblin/kobold's explicit split -- read this as LAIR-ONLY (a lone wandering pair away from any lair carries nothing of coin value), NOT rolled as individual loot. A full type A roll (2000sp+300pp+magic chance) would be absurd on a solo wanderer's corpse; that hoard belongs to the actual lair if/when found. Dave and Torsat stood guard, no wandering check.
+
+## Day 140 rounds 290-316 -- north side loop, west then east
+Same pathfinder-substitution bug as before (party.py picked a 7-square shortcut through 29,41/29,42 instead of the player's 9-square route via 24,40/23,41/22,42). Corrected directly in party.tsv before anything depended on it. Tristle to (28,42) clean, nothing stocked. Party to (24,42), 40ft behind, clean. Bat-disturbance: turn9 (288-297) rolled 56 safe, turn10 (298-307) rolled 74 safe. No wandering checks.

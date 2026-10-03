@@ -1692,3 +1692,6 @@ when	exped	round	kind	anchor	detail	note
 2026-10-02	31	282	advance		10	day 140: party advances together to (26,40), missile weapons ready, approaching the troglodytes
 2026-10-02	31	287	advance		5	day 140: party advances 30ft to the dead troglodyte
 2026-10-02	31	290	advance		3	day 140: Dave and Torsat stand guard while the rest gather missiles and search the troglodyte's body
+2026-10-02	31	301	advance		11	day 140: Tristle 40ft ahead, own 12" rate, west then back east to (28,42)
+2026-10-02	31	300	check	300	d6=4	anchor 300 + 0
+2026-10-02	31	316	advance		15	day 140: party catches up to (24,42), 40ft behind Tristle (corrected path)
