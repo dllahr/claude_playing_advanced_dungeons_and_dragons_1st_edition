@@ -410,3 +410,5 @@ when	day	exped	round	side	actor	verb	target	qty	detail
 2026-10-02	140	31	1			end			unarmed troglodyte survivor (d100=73, no weapon) withdraws into the unexplored dark rather than charging 10 armed people alone -- morale held but it isn't suicidal
 2026-10-02	140	31	1			start			crab spider (hp7) ambushes Tristle from concealment near (32,34)/(31,35), area 52 raised cavern -- 1 segment of surprise, its leap attack missed
 2026-10-02	140	31	1			initiative			party d6=4 vs monsters d6=3, party acts first
+2026-10-02	140	31	1	party	Tristle	declare			breaks off from melee to retreat toward the party, calling out
+2026-10-02	140	31	1	monsters		damage	spider_30_36	0	free attack vs Tristle (DMG p.70 breaking-off-from-melee rule: +6, shield & DEX negated), needs ~8 at AC8, rolled 18 -- hit for 3. Tristle to 0hp, unconscious, bleeding 1/round. Poison save made (15 vs 13).

@@ -5640,3 +5640,8 @@ DANGER NOTE FOR UPCOMING MOVEMENT: it can leap 3" (30ft) from concealment in one
 
 ## Day 140 -- crab spider ambushes Tristle, misses
 Tristle's route to (31,35) passed within the spider's 30' leap range starting at the stairs (30,36), ~28.3ft from (32,34). Surprise: Tristle surprised-on 5 (bestiary/crab-spider.md), rolled 1 -- SURPRISED, 1 segment lost. Its leap bite: needs 12 vs AC4, rolled 6 -- MISS. It has now revealed itself. Initiative for the following round: party d6=4 vs monsters d6=3, party first. Live fight open, round 1, nothing declared.
+
+## Day 140 -- Tristle goes down breaking off from the crab spider
+DMG p.70 "Breaking Off From Melee": disengaging grants the opponent a free attack/routine at +6 total, shield AND DEX negated -- treated as a rear attack on a stunned target. This is a pre-existing cached rule (rules/combat.md), not a new DM invention, applied as written. Tristle's DEX bonus negated took his AC from 4 to 8 for this one attack. Spider needed ~8, rolled 18 -- hit. Damage 1d6=3 -- Tristle 3hp to 0, unconscious, bleeding 1/round per DMG p.82 zero-hp rule. Poison save (14+1=15 vs 13) MADE -- he does not die outright.
+
+Spider is undamaged (7hp), adjacent to an unconscious Tristle, animal intelligence. The party's stated trigger ("fire when they see something following Tristle") cannot fire -- he isn't coming back under his own power. This needs to go back to the player immediately; the party doesn't have eyes on the actual situation.

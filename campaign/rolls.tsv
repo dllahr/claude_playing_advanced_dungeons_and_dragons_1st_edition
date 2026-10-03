@@ -11408,3 +11408,6 @@ when	exped	turn	notation	dice	modifier	total	hidden	reason
 2026-10-02			d20	6	0	6		crab spider attacks AC 4
 2026-10-02			d6	4	0	4		initiative, party
 2026-10-02			d6	3	0	3		initiative, monsters
+2026-10-02			d20	18	0	18		crab spider attacks AC 8
+2026-10-02			1-6 (1d6)	3	0	3		crab spider bite damage, free attack on Tristle breaking off, hit
+2026-10-02			d20	14	0	14		Tristle save vs Paralyze/Poison/Death
