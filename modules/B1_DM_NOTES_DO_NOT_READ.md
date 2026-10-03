@@ -5612,3 +5612,8 @@ The 2 troglodytes (hp 9, 8) are still out there near (24,43)/beyond, aware of th
 
 ## Day 140 -- pinning the 2 troglodytes' actual squares
 Hadn't committed to exact coordinates when the encounter fired, just an abstract 60ft distance. Player asked for the real arc from (24,43) at 60' infravision radius -- ran dmap.py light to get the true visible-cell set rather than guessing, and placed them at the far (unexplored) edge of it: (29,40) and (29,41), 58.3ft and 53.9ft from Tristle respectively, both within the 60ft cap already established. Open floor, area 53, confirmed via dmap.py at.
+
+## Day 140 rounds 272-282 -- party advances on the troglodytes' position
+Process error caught and fixed: party.py move substituted its own 9-square orthogonal route instead of the player's explicit 6-square diagonal-stepping path. Corrected directly in party.tsv (edited the just-written row before anything depended on it) to the real path and distance (60ft, 10 rounds at 60ft/turn very-heavy), not the tool's 90ft/15-round guess.
+
+Troglodytes decided to hold position (round 272 ruling stands) rather than move off in the 10 rounds since. (29,40) is now within the party's lit lantern's 30ft radius (dmap confirms); (29,41) is just outside it (31.6ft/blocked), still dark -- only Tristle's infravision would show that one. Bat-disturbance turn7 (268-277, includes Tristle's shout -- 15%): rolled 23, safe. No wandering check.
