@@ -463,3 +463,8 @@ when	day	exped	round	side	actor	verb	target	qty	detail
 2026-10-03	140	31	2	monsters		damage	kob5	4	Torsat hit for 4 -- dead (1hp)
 2026-10-03	140	31	2		kob5	dead			Torsat
 2026-10-03	140	31	2			end			both survivors dead round 2, all 5 kobolds killed, zero party losses
+2026-10-03	140	31	1			start			REPLAY of round 2 -- 2 kobolds (1hp each) correctly retreat instead of holding, won initiative
+2026-10-03	140	31	2			initiative			round 2 begins
+2026-10-03	140	31	2			initiative			party d6=4 vs monsters d6=5, monsters first (same roll as originally)
+2026-10-03	140	31	2	party	kobolds	declare			use their won initiative to retreat -- full move (60ft) to (32,28), out of the party's lamp light before the party can act
+2026-10-03	140	31	2			end			2 survivors escaped out of lamp light on their won initiative before the party could act -- encounter broken off, not a kill

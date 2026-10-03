@@ -5742,4 +5742,9 @@ Pending ledger addition, expedition 31:
 Round 1 had been wrongly closed with 2 live kobolds still standing -- reopened (encounter.py start/next to round 2), fresh initiative (monsters first, d6=5v4, but nothing changed so they held again), party declared another volley. Dave:bow hit(18v13) for 5 -- dead (1hp kobold). Torsat:bow hit(19v13) for 4 -- dead (other 1hp kobold). Rest of the roster never needed to fire, both already dead. All 5 kobolds now dead, zero party losses across both rounds.
 
 Pending ledger addition, expedition 31 (completes this group's XP):
-- all 10, pending XP for the last 2 kobolds (hp2,1 -> 12+11=23), bringing this group's total to 65 (42 round1 + 23 round2). audit-skip
+- CORRECTED/VOID: the last 2 kobolds did NOT die (round 2 replayed -- they escaped). Group total stands at 42 (round 1 only), not 65. audit-skip
+
+## Day 140 -- round 2 replayed: the 2 survivors actually escape
+Player's correction (monsters-dont-passively-hold) applied retroactively to this specific round, since they'd won initiative and were never in melee (no breaking-off penalty applies -- that rule needs actual melee contact, DMG p.70). Verified geometrically: kobold move 6"=60ft easily reaches ground outside the party's 30ft lamp radius from (29,26) -- picked (32,28), 20ft away via a real path, confirmed dark. Since they act first (won initiative) and move out of light before the party's turn, the party has no valid target this round -- Dave/Torsat's round-2 hits are RETRACTED (never synced to the persistent stocking registry, so nothing to formally undo there). 
+
+Two of the five kobolds survive, now at 1hp each, somewhere past (32,28) in the dark, status/position not tracked further unless the party pursues. XP pending ledger corrected: only the 3 round-1 kills count (42 XP total for this group, not 65).
