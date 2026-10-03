@@ -11552,3 +11552,29 @@ when	exped	turn	notation	dice	modifier	total	hidden	reason
 2026-10-03			d6	1	0	1		area 51 kobolds at (31,27): what they're doing when first spotted (1-2 resting/idle, 3-4 working/foraging, 5-6 moving/alert)
 2026-10-03			d6	2	0	2		surprise check, party
 2026-10-03			d6	2	0	2		surprise check, monsters
+2026-10-03			d6	5	0	5		initiative, party
+2026-10-03			d6	2	0	2		initiative, monsters
+2026-10-03			d20	9	0	9		Dave attacks with short bow
+2026-10-03			d20	13	0	13		Dave attacks with short bow
+2026-10-03			1-6 (1d6)	1	0	1		Dave damage, short bow
+2026-10-03			d20	4	0	4		Torsat attacks with short bow
+2026-10-03			d20	10	0	10		Torsat attacks with short bow
+2026-10-03			d20	15	0	15		Tristle attacks with short bow
+2026-10-03			1-6 (1d6)	5	0	5		Tristle damage, short bow
+2026-10-03			d20	3	0	3		Tristle attacks with short bow
+2026-10-03			d20	18	0	18		Blartho attacks with sling
+2026-10-03			2-5 (1d4+1)	4	1	5		Blartho damage, sling
+2026-10-03			d20	10	0	10		Yrtone attacks with sling
+2026-10-03			d20	5	0	5		Dellie attacks with sling
+2026-10-03			d20	16	0	16		Hask attacks with sling
+2026-10-03			2-5 (1d4+1)	4	1	5		Hask damage, sling
+2026-10-03			d20	6	0	6		Ista attacks with dart
+2026-10-03			d20	14	0	14		Ista attacks with dart
+2026-10-03			d20	8	0	8		Ista attacks with dart
+2026-10-03			d20	10	0	10		Frython attacks with dart
+2026-10-03			d20	6	0	6		Frython attacks with dart
+2026-10-03			d20	3	0	3		Frython attacks with dart
+2026-10-03			d20	8	0	8		Brand attacks with hand axe
+2026-10-03			d100	18	0	18		morale
+2026-10-03			d100	68	0	68		kobold A (survivor, 1hp) weapon loadout
+2026-10-03			d100	85	0	85		kobold B (survivor, 1hp) weapon loadout

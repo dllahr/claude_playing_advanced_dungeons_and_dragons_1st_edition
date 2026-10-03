@@ -5729,3 +5729,11 @@ Party advanced to (30,26); the stocked kobold group at (31,27) is now genuinely 
 
 ## Day 140 -- correction: kobold sighting actually happened at (29,26), not (30,26)
 Two catches: (1) 31.6ft vs a 30ft radius is false precision, well within normal positional slop -- shouldn't have been read as a clean miss in the first place. (2) Only checked the destination square of the 2-square move, not the intermediate one -- (31,27) is 22.4ft from (29,26), the FIRST square, genuinely in range there already. Corrected party position to (29,26) (clock.py correct 488->486, party.tsv edited). The already-rolled surprise result (both sides d6=2, equal, cancels) stands -- same scenario, just the right square. Written into CHECKLIST.md and saved as a standing memory: check every square of a multi-square move for stocking visibility, not just the endpoint.
+
+## Day 140 round 1 -- 3 of 5 kobolds dead, 2 holding at 1hp each
+Dave:bow miss(9v13),hit(13v13) for 1. Torsat:bow miss(4),miss(10). Tristle:bow hit(15v10) for 5, miss(3). Blartho:sling hit(18v13) for 5. Yrtone:sling miss(10). Dellie:sling miss(5v15,-2dex). Hask:sling hit(16v13) for 5. Ista:dart x3 all miss(6,14,8 v16,-2 range). Frython:dart x3 all miss(10,6,3 v16). Brand:hand axe miss(8v14).
+Assigned: kobold1(4hp)->Tristle 5dmg dead. kobold2(4hp)->Blartho 5dmg dead. kobold3(4hp)->Hask 5dmg dead. kobold4(2hp)->Dave 1dmg->1hp. kobold5(1hp) untouched.
+Morale +15% (60% casualties): 50 base, 18+15=33<50, HOLDS. Both survivors (1hp each) rolled melee-only weapons (d100=68 ss+spear, d100=85 ss) -- no javelins, too far to safely close (22ft vs a missile-ready party of 10), hold position rather than suicide-charge. Round ends.
+
+Pending ledger addition, expedition 31:
+- all 10, pending XP for 3 kobolds (hp4,4,4 -> 14+14+14=42), per bestiary/kobold.md. audit-skip

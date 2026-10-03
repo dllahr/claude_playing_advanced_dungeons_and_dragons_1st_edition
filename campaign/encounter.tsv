@@ -442,3 +442,14 @@ when	day	exped	round	side	actor	verb	target	qty	detail
 2026-10-03	140	31	2	party	party	declare			everyone fires another volley, staying out of contact range -- Dave/Torsat/Blartho/Yrtone/Dellie/Hask sling or bow, Ista/Frython dart x3, Brand hand axe
 2026-10-03	140	31	2		ochre	dead			dead by Dave's first shot (4 dmg vs 4hp remaining) -- rest of the volley is overkill, not rolled
 2026-10-03	140	31	2			end			ochre jelly dead, round 2, zero party losses beyond Yrtone's earlier contact hit
+2026-10-03	140	31	1			start			5 kobolds (hp 4,4,4,2,1) at (31,27), mutual surprise cancelled -- normal round 1
+2026-10-03	140	31	1			initiative			party d6=5 vs monsters d6=2, party first
+2026-10-03	140	31	1	party	party	declare			everyone fires missiles -- Dave/Torsat/Tristle bow x2, Blartho/Yrtone/Dellie/Hask sling x1, Ista/Frython dart x3, Brand hand axe x1
+2026-10-03	140	31	1	monsters		damage	kob1	5	Tristle hit for 5 -- dead (4hp)
+2026-10-03	140	31	1		kob1	dead			Tristle
+2026-10-03	140	31	1	monsters		damage	kob2	5	Blartho hit for 5 -- dead (4hp)
+2026-10-03	140	31	1		kob2	dead			Blartho
+2026-10-03	140	31	1	monsters		damage	kob3	5	Hask hit for 5 -- dead (4hp)
+2026-10-03	140	31	1		kob3	dead			Hask
+2026-10-03	140	31	1	monsters		damage	kob4	1	Dave hit for 1 -- 2hp to 1hp
+2026-10-03	140	31	1			end			3 of 5 dead, morale held (rolled 33 vs 50) but the 2 survivors (1hp each, melee-only weapons) hold position rather than closing 22ft into missile range alone -- round 1 ends here

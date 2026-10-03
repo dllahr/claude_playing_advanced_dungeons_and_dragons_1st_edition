@@ -1732,3 +1732,4 @@ when	exped	round	kind	anchor	detail	note
 2026-10-03	31	488	advance		4	day 140: formation advances to (30,26)
 2026-10-03	31	485	check	480	d6=3	anchor 480 + 5
 2026-10-03	31	486	correct		-2	process error: only checked the destination (30,26) for stocking visibility, not the intermediate square (29,26) actually passed through first. Kobolds came into lamp range at (29,26), 1 square in, not after the full 2-square move. Correcting the round count to match the shorter actual distance (1 square = 2 rounds, not 4).
+2026-10-03	31	487	advance		1	day 140: party volley on the kobolds, round 1
