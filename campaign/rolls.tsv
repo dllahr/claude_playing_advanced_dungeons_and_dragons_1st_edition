@@ -11481,3 +11481,26 @@ when	exped	turn	notation	dice	modifier	total	hidden	reason
 2026-10-03			1-3 (1d3)	1	0	1		troglodyte damage
 2026-10-03			d20	18	0	18		troglodyte attacks AC 4
 2026-10-03			2-5 (1d4+1)	3	1	4		troglodyte damage
+2026-10-03			d6	6	0	6		surprise check, party
+2026-10-03			d6	2	0	2		surprise check, monsters
+2026-10-03			d6	5	0	5		distance, capped since surprise is indicated (DMG p.62, 1-3in/10-30ft): 1-2 striking, 3-4 ~10ft, 5-6 ~20ft
+2026-10-03			d20	5	0	5		Tristle attacks with short bow
+2026-10-03			d20	17	0	17		Tristle attacks with short bow
+2026-10-03			1-6 (1d6)	5	0	5		Tristle damage, short bow
+2026-10-03			d20	16	0	16		Tristle attacks with short bow
+2026-10-03			1-6 (1d6)	2	0	2		Tristle damage, short bow
+2026-10-03			d20	18	0	18		Tristle attacks with short bow
+2026-10-03			1-6 (1d6)	3	0	3		Tristle damage, short bow
+2026-10-03			d20	2	0	2		Tristle attacks with short bow
+2026-10-03			d20	20	0	20		Tristle attacks with short bow
+2026-10-03			1-6 (1d6)	1	0	1		Tristle damage, short bow
+2026-10-03			d20	13	0	13		Tristle attacks with short bow
+2026-10-03			1-6 (1d6)	1	0	1		Tristle damage, short bow
+2026-10-03			d20	1	0	1		Tristle attacks with short bow
+2026-10-03			d20	17	0	17		Tristle attacks with short bow
+2026-10-03			1-6 (1d6)	5	0	5		Tristle damage, short bow
+2026-10-03			d20	10	0	10		Tristle attacks with short bow
+2026-10-03			d20	17	0	17		Tristle attacks with short bow
+2026-10-03			1-6 (1d6)	2	0	2		Tristle damage, short bow
+2026-10-03			d20	15	0	15		Tristle attacks with short bow
+2026-10-03			1-6 (1d6)	1	0	1		Tristle damage, short bow

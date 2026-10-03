@@ -5687,3 +5687,9 @@ Player caught this twice in a row (first placement at 29,31, still visible from 
 
 ## Day 140 -- troglodyte wandering check spent, no encounter
 Checked LOS from (29,30) itself to the nearest unseen pockets (28,33)/(28,34)/(29,35) -- none visible, same terrain blocking that kept them out of his earlier scans. No approach exists this round. Per the standing rule ("if it cannot reach them at this round, the check is SPENT and they never knew it was there"), this resolves as no encounter at all. Tristle remains at full hp, untouched.
+
+## Day 140 -- redone properly: normal encounter instead of void, troglodyte killed
+Player's correction: a failed-LOS wandering check shouldn't just vanish -- the creature can still close distance and the encounter resolves normally (not forced ambush, since nothing was hiding). Fresh surprise rolls: Tristle not surprised (d6=6), troglodyte surprised (d6=2) -- 2 segments, Tristle's. Distance capped by surprise (DMG p.62): d6=5 -> ~20ft. Tristle's short bow at 3x rate, 12 arrows: hits on shots 2,3,4,6,7,9,11,12 for 5,2,3,1,1,5,2,1 = 20 damage, dead by shot 4 (10 dmg vs 9hp), rest moot. Solo kill, zero party losses.
+
+Pending ledger addition, expedition 31:
+- Tristle, pending XP for 1 troglodyte, hp9: 36+2(9)=54, per bestiary/troglodyte.md. Solo kill. audit-skip
