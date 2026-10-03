@@ -5706,3 +5706,6 @@ STANDING THREAT: the MM text describes the fluid as causing 3-12 hp/round of ong
 
 ## Day 140 round 1 (jelly fight) -- Yrtone pulled clear, jelly at 7hp
 Spell declared before initiative (Dellie's CLW), correct per the new combat-sequence rule. Initiative: party d6=6 vs monsters d6=2, party first -- Yrtone pulled clear before any second round of ongoing fluid exposure. CLW: 1d8=3, Yrtone 2->5hp. Missile volley: Blartho miss(3v12), Hask miss(6v12), Ista miss(12v13), Frython miss(3v13), Brand hit(15v13) for 6 (1d6), Tristle hit(15v9) for 3 (1d6) -- 9 of 16hp. Jelly (Move 3", nothing adjacent) couldn't reach anyone this round. Still alive at 7hp.
+
+## Day 140 -- correction: Ista/Frython (3 darts) and Tristle (2 bow) under-rolled
+Only resolved 1 attack each initially instead of their real rate. Added: Ista dart#2 hit(18v13) for 3(1d3), dart#3 miss(11v13). Frython dart#2 miss(7v13), dart#3 miss(6v13). Tristle bow#2 miss(1v9, nat1). +3 damage. Jelly now 12 of 16hp total this round, not 9.
