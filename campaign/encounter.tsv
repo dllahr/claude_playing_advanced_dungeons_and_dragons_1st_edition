@@ -386,3 +386,5 @@ when	day	exped	round	side	actor	verb	target	qty	detail
 2026-10-02	140	31	1	monsters		damage	goblin_beta_5hp	6	Ista dart nat20 1, Frython dart 3, Brand hand axe 2
 2026-10-02	140	31	1		goblin_beta_5hp	dead			killed by Ista/Frython/Brand
 2026-10-02	140	31	1			end			all 5 remaining goblins killed in one round of missile fire, round 1
+2026-10-02	140	31	1			start			2 kobolds (of 9) survive Tristle's surprise volley near (23,40), area 53 -- morale held, both badly wounded, Tristle alone at ~12-22ft, party 40ft back blind in the dark
+2026-10-02	140	31	1			initiative			party d6=6 vs monsters d6=5, party acts first

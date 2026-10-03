@@ -66,3 +66,4 @@ For every 40 kobolds there is a leader and two guards **equal to goblins** —
 | Expedition | Where | Outcome |
 |---|---|---|
 | 3 | — | Three killed of the group. **Seven rounds to kill the last one** — AC 7 and a 1st-level party is a long grind. 25 XP, plus 19 cp and salvage. |
+| 31 | area 53, near (23,40), day 140 | Group of 9 (hp 4,4,3,3,3,3,2,2,1), gathering guano, first sighted by Tristle's infravision at range, closed to ~22ft unseen. 3 segments of surprise (kobolds d6=3, widened 1-4 for work/no-weapon-ready). 18 arrows: 7 of 9 dead. Morale held at +15% (78% casualties) — 50 base, rolled 22. Two survivors (2hp, 1hp) fighting on into round 1. |
