@@ -345,6 +345,79 @@ def simulate_flee(monster_id, feet_per_turn, db=None, day=None, exped=None,
               linger_rounds))
 
 
+def break_contact(monster_id, threat_x, threat_y, feet_budget,
+                  light_radius=3, db=None, day=None, exped=None, rnd=None,
+                  note='', path=None, linger_rounds=20):
+    """ONE immediate tactical retreat move -- a creature using its round's
+    movement to get clear of a threat's light, NOT the longer panicked
+    multi-turn wander `simulate_flee` models (call that too, afterward, if
+    enough TIME then passes that it would keep moving/hiding).
+
+    Built after day 140 got this wrong twice in the same conversation: once
+    by picking the NEAREST reachable square that happened to clear the
+    light (using only a fraction of the creature's move), and once by then
+    assuming it sat frozen there afterward. The fix for "did it use its
+    full move" is PATH LENGTH toward the farthest REACHABLE square is not
+    the same question as "which reachable square is actually farthest from
+    the threat" -- in an enclosed room the long way round can double back
+    closer than a shorter path does. This picks by actual distance from
+    (threat_x, threat_y), among squares reachable within `feet_budget`,
+    preferring ones outside `light_radius` of the threat; if nothing
+    reachable clears the light (cornered), it still returns the single
+    reachable square that is farthest away, which is the honest answer to
+    "where would it go," lit or not.
+
+    Records a `flee` event (same expiry mechanics as `simulate_flee`) with a
+    short default linger window, since this is the FIRST move, not the end
+    of its attempt to get away -- call `simulate_flee` again later to
+    continue it if the party doesn't catch up immediately."""
+    import dmap
+    cur = state(path=path).get(monster_id)
+    if cur is None or not cur['alive']:
+        raise ValueError('%s is not a known, live, stocked individual'
+                         % monster_id)
+    db = db or B1_DB
+    cells, edges = dmap.load(db, cur['level'])
+    start = (cur['x'], cur['y'])
+    lit = dmap.light_reach(db, cur['level'], threat_x, threat_y,
+                           radius=light_radius)
+    lit = set(lit.keys()) if isinstance(lit, dict) else set(lit)
+    squares = max(1, int(feet_budget // 10))
+    visited = {start: 0}
+    q = __import__('collections').deque([start])
+    while q:
+        c = q.popleft()
+        if visited[c] >= squares:
+            continue
+        for _d, nb in dmap.exits(c, edges):
+            if nb in cells and nb not in visited:
+                visited[nb] = visited[c] + 1
+                q.append(nb)
+    del visited[start]
+    if not visited:
+        return '%s has nowhere to go (boxed in) -- stays at %s' % (
+            monster_id, start)
+
+    def dist2(c):
+        return (c[0] - threat_x) ** 2 + (c[1] - threat_y) ** 2
+
+    clear = [c for c in visited if c not in lit]
+    pool = clear if clear else list(visited)
+    dest = max(pool, key=dist2)
+    import math
+    feet = round(math.hypot(dest[0] - threat_x, dest[1] - threat_y) * 10, 1)
+    full_note = ('%s. ' % note if note else '') + (
+        'breaks contact, %d square(s) of up to %d available, to (%d,%d) '
+        '-- %.1fft from the threat, %s the %dft light radius'
+        % (visited[dest], squares, dest[0], dest[1], feet,
+           'outside' if clear else 'still inside (cornered)', light_radius * 10))
+    record(monster_id, 'flee', x=dest[0], y=dest[1], duration=linger_rounds,
+          day=day, exped=exped, rnd=rnd, note=full_note, path=path)
+    return ('%s breaks contact to (%d,%d), %.1fft from the threat (%s)'
+           % (monster_id, dest[0], dest[1], feet,
+              'clear of the light' if clear else 'still lit, cornered'))
+
+
 # --------------------------------------------------------------------------
 # reports
 # --------------------------------------------------------------------------
@@ -435,6 +508,23 @@ def build_parser():
                     help="the creature's own MV, from its bestiary entry")
     sm.add_argument('--note', default='')
     sm.add_argument('--day', type=int)
+
+    bc = sub.add_parser('break-contact', help='ONE immediate retreat move '
+                        'away from a threat, using as much of the move as '
+                        'actually helps -- call `simulate` afterward too if '
+                        'real time then passes before the party catches up')
+    bc.add_argument('--id', dest='monster_id', required=True)
+    bc.add_argument('--threat', type=int, nargs=2, required=True,
+                    metavar=('X', 'Y'), help="the threat's (the party's) "
+                    'current position')
+    bc.add_argument('--feet', type=int, required=True,
+                    help="the creature's full movement this round "
+                         "(inches x10, e.g. 60 for a 6\" move)")
+    bc.add_argument('--radius', type=int, default=3,
+                    help="the threat's light radius in squares, 3=lamp")
+    bc.add_argument('--db', default=None)
+    bc.add_argument('--note', default='')
+    bc.add_argument('--day', type=int)
     return p
 
 
@@ -464,6 +554,14 @@ def main(argv=None):
             day = a.day
         print(simulate_flee(a.monster_id, a.feet_per_turn, day=day,
                             exped=exped, rnd=rnd, note=a.note))
+        return 0
+    if a.cmd == 'break-contact':
+        day, exped, rnd = current_now()
+        if a.day:
+            day = a.day
+        print(break_contact(a.monster_id, a.threat[0], a.threat[1], a.feet,
+                            a.radius, db=a.db, day=day, exped=exped, rnd=rnd,
+                            note=a.note))
         return 0
     day, exped, rnd = (None, None, None)
     if a.cmd in ('stock', 'move', 'flee'):

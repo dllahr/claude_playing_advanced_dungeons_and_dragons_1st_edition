@@ -378,6 +378,29 @@ python tools/combat.py monster --creature troglodyte --target-ac 3 --attacks 2
       individual**.
 - [ ] **XP is awarded on emerging from the dungeon**, per the module — not at the
       moment of the kill.
+- [ ] ⚠ **A LOSING MONSTER WITH NO GOOD ATTACK ACTIVELY DISENGAGES — it never
+      just stands there.** Day 140: kobolds at 1hp with no ranged option were
+      left "holding position" for a round, which is strictly worse than
+      retreating (same exposure, no chance of escaping it) and makes combat a
+      static turkey shoot. When morale holds but closing is a bad trade, the
+      default is retreat, not passivity.
+      **For the retreat move itself, use `stocking.py break-contact`, never a
+      hand-rolled BFS:**
+      ```bash
+      python tools/stocking.py break-contact --id <id> --threat X,Y \
+          --feet <its full move, e.g. 60 for 6"> --radius 3
+      ```
+      It picks by ACTUAL distance from the threat among reachable squares,
+      not path length — in an enclosed room the longest *path* can double
+      back closer than a shorter one. Hand-computing this got it wrong twice
+      running: once by stopping at the nearest square that merely cleared the
+      light (using a fraction of the move), once by assuming "farthest
+      squares traveled" was the same as "farthest away" when it wasn't.
+      **If real time then passes before the party catches up, call
+      `stocking.py simulate` next** to continue the flight/hiding — a
+      creature that broke contact doesn't freeze in place, it keeps trying
+      to survive. `break-contact` is the first move; `simulate` is every
+      turn after that it isn't re-engaged.
 
 ---
 
