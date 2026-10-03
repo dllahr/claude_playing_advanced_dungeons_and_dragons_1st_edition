@@ -5678,3 +5678,6 @@ Pending ledger addition, expedition 31 (not yet earned):
 
 ## Day 140 rounds 391-394 -- searching the wandering spider
 All 30 missiles recovered, no breakage. Treasure: same reasoning as the troglodyte precedent -- this was a WANDERING individual, not one encountered at a lair/web, and crab spiders don't carry coin on their person. No roll, nothing found. Blartho/Yrtone/Dellie/Hask switched back to slings (treated as free, same speed logic as the original sling-drop rule, just in reverse). No wandering check.
+
+## Day 140 round 421 -- Tristle ambushed again, down to -4
+Wandering check fired right as Tristle finished his 2-round leg to (29,30) -- no partial-move rollback needed this time, he's genuinely there. 1 troglodyte (of the 1-4 roll), hp9. Surprise: Tristle d6=1 SURPRISED (standard 1-2, camouflage doesn't apply against infravision), troglodyte d6=5 not surprised -- 1 segment lost, Tristle's own roll. Distance capped by surprise (DMG p.62, 1-3in/10-30ft): d6=3 -> ~10ft, well within its 12" move to close and strike within the one segment. All 3 of its attacks hit (needs 12 vs AC4): 18->2dmg, 12->1dmg, 18->4dmg = 7 total. Tristle 3hp -> -4, unconscious, bleeding 1/round. Party 40ft+ back, no idea anything happened -- he was surprised, never got to call out.
