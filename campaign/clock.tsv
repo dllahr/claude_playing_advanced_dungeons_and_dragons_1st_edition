@@ -1684,3 +1684,5 @@ when	exped	round	kind	anchor	detail	note
 2026-10-02	31	239	advance		2	day 140: Tristle 40ft ahead, own 12" rate, due west to (15,37)
 2026-10-02	31	244	advance		5	day 140: party catches up to (19,37), 40ft behind Tristle
 2026-10-02	31	240	check	240	d6=5	anchor 240 + 0
+2026-10-02	31	250	advance		6	day 140: Tristle 40ft ahead, via (15,39),(14,39),(13,39) -- passing the known secret door -- to (13,42)
+2026-10-02	31	262	advance		12	day 140: party catches up to (14,39), 40ft behind Tristle

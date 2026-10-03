@@ -11342,3 +11342,7 @@ when	exped	turn	notation	dice	modifier	total	hidden	reason
 2026-10-02			d100	30	0	30		B1 area 53 bat-disturbance check, turn 1 in the cavern (rounds 208-217): 5% per light source (1 lit lantern) + 10% noise (the kobold fight) = 15%
 2026-10-02			d100	30	0	30		B1 area 53 bat-disturbance check, turn 2 (rounds 218-227): 5% per light source (1 lit lantern), no loud noise this turn (quiet searching)
 2026-10-02			d100	59	0	59		B1 area 53 bat-disturbance check, turn 3 (rounds 228-237): 5% per light source (1 lit lantern), quiet movement, no loud noise
+2026-10-02			d6	5	0	5		wandering check, anchor 240
+2026-10-02			d6	6	0	6		Tristle's elf passive secret door check, passing (13,39) adjacent to the known secret door at (13,38)/(13,39), DMG p.97, 1-in-6
+2026-10-02			d100	41	0	41		B1 area 53 bat-disturbance check, turn 4 (rounds 238-247): 5% per light source (1 lit lantern), quiet movement
+2026-10-02			d100	15	0	15		B1 area 53 bat-disturbance check, turn 5 (rounds 248-257): 5% per light source, quiet movement
