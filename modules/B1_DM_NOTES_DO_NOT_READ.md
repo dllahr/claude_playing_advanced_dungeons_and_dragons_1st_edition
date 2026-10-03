@@ -5759,3 +5759,6 @@ Over-corrected: claimed they'd been "sitting still for two rounds" and ran stock
 
 ## Day 140 -- final correction: with the real retreat distance, they're NOT re-spotted
 With kobold_51d/e correctly at (32,29) (full 60ft move, farthest actual distance, not farthest path), re-ran stocking.py scan from (30,26): clean, only the known door. The earlier "re-spotted at 28.3ft" conclusion was built on the under-shot retreat position (32,28) and is retracted along with it. They got away clean. Built tools/stocking.py break-contact this session specifically so this class of error (wrong retreat distance, then compounding conclusions built on it) doesn't recur -- see CHECKLIST.md "Monster mechanics".
+
+## Day 140 round 494 -- party re-spots the 2 kobolds at (31,27)
+Clearing the corner obstruction that blocked LOS from (30,27), the party at (31,27) now has a clean line to kobold_51d/e at (32,29), ~22.4ft. No new surprise (prior contact already established, DMG p.62 "prior detection negates surprise" and they already know each other is there). No wandering check.

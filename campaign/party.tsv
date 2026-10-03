@@ -607,3 +607,4 @@ when	map	level	x	y	exped	turn	squares	feet	rate	why	route
 2026-10-03	b1	2	29	26	31		1	10	explore	day 140: formation advances east -- stopped at (29,26), first square of the move, where the kobolds came into lamp range (22.4ft), not the planned (30,26)	29,26
 2026-10-03	b1	2	30	26	31		1	10	explore	day 140: party advances 1 square east to (30,26), looks around	30,26
 2026-10-03	b1	2	30	27	31		1	10	explore	day 140: party advances 1 square north to (30,27)	30,27
+2026-10-03	b1	2	31	27	31		1	10	explore	day 140: party advances 1 square east to (31,27)	31,27
