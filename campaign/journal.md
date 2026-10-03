@@ -162,3 +162,17 @@ it.**
 **Still unmet:** Toller's condition of sale — coin, or Master Wace's own hand.
 Perrin's headboard was not on the day's business, the party did not raise it, and
 the set has not moved.
+
+## Day 140 — two kobolds let go, under a bargain
+
+Deep in the side cavern, after killing most of a kobold band, the last two
+survivors — hurt, cornered, no way out — understood enough Orcish for
+Tristle to call a halt. They talked. Not leaders, just foragers, but they
+knew the shape of the dangers nearby: the bats that panic at fire and noise,
+something that bites in a flooded side-cave, and pale stone-colored things
+that stink when roused and hunt by smell in the dark. All of it matched what
+the party had already found the hard way.
+
+Tristle let them go — on a bargain. **If the party crosses them again, they
+call his name, trade what news they have, and walk free a second time.**
+Whether that holds is an open question.
