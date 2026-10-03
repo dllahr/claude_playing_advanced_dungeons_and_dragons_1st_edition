@@ -5623,3 +5623,6 @@ Troglodytes decided to hold position (round 272 ruling stands) rather than move 
 
 Pending ledger addition, expedition 31 (not yet earned -- credit on emerging):
 - all 10 (Dave,Torsat,Tristle,Frython,Ista,Blartho,Yrtone,Dellie,Hask,Brand), pending XP for 1 troglodyte, hp9: 36+2(9)=54, per bestiary/troglodyte.md. audit-skip
+
+## Day 140 rounds 282-290 -- gathering missiles, searching the troglodyte
+Party advanced 30ft to (29,40). All 17 missiles recovered, no breakage. Weapon check for the dead one (hp9): d100=4, armed; d100=11, javelin x2 -- added to inventory/carry (new javelin asset, weight estimated, flagged for page-render verification). Treasure: bestiary/troglodyte.md lists "Treasure Type A" with no Individuals/Lair split, unlike goblin/kobold's explicit split -- read this as LAIR-ONLY (a lone wandering pair away from any lair carries nothing of coin value), NOT rolled as individual loot. A full type A roll (2000sp+300pp+magic chance) would be absurd on a solo wanderer's corpse; that hoard belongs to the actual lair if/when found. Dave and Torsat stood guard, no wandering check.

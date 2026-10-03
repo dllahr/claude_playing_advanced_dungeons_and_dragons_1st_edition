@@ -86,6 +86,7 @@ arrows	arrows	weapon	1	gp-weight
 sling	sling	weapon	5	gp-weight
 sling_bullet	sling bullets	weapon	5	gp-weight
 military_pick	military pick, footman's	weapon	60	gp-weight	PHB p.38 weapons table, OCR read (8 gp, 60 gp-wt, 2-7/2-8 dmg) -- not yet page-render verified, flagged
+javelin	javelin	weapon	20	gp-weight	PHB p.37 price 10 sp confirmed (rules/equipment.md); weight ESTIMATED by analogy to spear/dart, not yet page-render verified, flagged
 dart	dart	weapon	5	gp-weight
 dagger	dagger	weapon	10	gp-weight
 hand_axe	hand axe	weapon	50	gp-weight

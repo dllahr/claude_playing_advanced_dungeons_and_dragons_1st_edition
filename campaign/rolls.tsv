@@ -11394,3 +11394,6 @@ when	exped	turn	notation	dice	modifier	total	hidden	reason
 2026-10-02			d100	39	0	39		morale
 2026-10-02			d100	73	0	73		is the surviving troglodyte armed at all? 50% chance per MM
 2026-10-02			d100	31	0	31		if armed, which weapon (bestiary/troglodyte.md: javelin x2 25%, stone battle axe 10%, stone morning star 10%, sword 5%, else claws/teeth)
+2026-10-02			d100	41	0	41		B1 area 53 bat-disturbance check, turn 8 (rounds 278-287): 5% light + 10% noise (the volley/combat) = 15%
+2026-10-02			d100	4	0	4		was the dead troglodyte (hp9) armed? 50% chance per MM
+2026-10-02			d100	11	0	11		which weapon (bestiary/troglodyte.md: javelin x2 25%, stone battle axe 10%, stone morning star 10%, sword 5%, else claws)
