@@ -5629,3 +5629,6 @@ Party advanced 30ft to (29,40). All 17 missiles recovered, no breakage. Weapon c
 
 ## Day 140 rounds 290-316 -- north side loop, west then east
 Same pathfinder-substitution bug as before (party.py picked a 7-square shortcut through 29,41/29,42 instead of the player's 9-square route via 24,40/23,41/22,42). Corrected directly in party.tsv before anything depended on it. Tristle to (28,42) clean, nothing stocked. Party to (24,42), 40ft behind, clean. Bat-disturbance: turn9 (288-297) rolled 56 safe, turn10 (298-307) rolled 74 safe. No wandering checks.
+
+## Day 140 rounds 316-341 -- east then south to (32,37)/(32,41)
+Tristle to (32,37), clean, nothing stocked -- hit the cavern's south wall there, exit continues east at (33,37) (unexplored, mixed terrain, not yet lit/entered). Party to (32,41), 40ft behind, route built and verified manually (not via party.py's own pathfinder) to avoid a third pathfinder-substitution. Bat-disturbance: turn11 (308-317) rolled 14, turn12 (318-327) rolled 77, turn13 (328-337) rolled 77 -- all safe. No wandering checks.

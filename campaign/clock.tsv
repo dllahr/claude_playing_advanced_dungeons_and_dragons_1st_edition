@@ -1695,3 +1695,6 @@ when	exped	round	kind	anchor	detail	note
 2026-10-02	31	301	advance		11	day 140: Tristle 40ft ahead, own 12" rate, west then back east to (28,42)
 2026-10-02	31	300	check	300	d6=4	anchor 300 + 0
 2026-10-02	31	316	advance		15	day 140: party catches up to (24,42), 40ft behind Tristle (corrected path)
+2026-10-02	31	324	advance		8	day 140: Tristle 40ft ahead, own 12" rate, east then south to (32,37)
+2026-10-02	31	341	advance		17	day 140: party catches up to (32,41), 40ft behind Tristle
+2026-10-02	31	332	check	330	d6=3	anchor 330 + 2
