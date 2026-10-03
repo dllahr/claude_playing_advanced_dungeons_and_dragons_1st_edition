@@ -521,6 +521,20 @@ python mapdb/dmap.py graph <db> <level>
       (19,6) — through it — and given a corridor opening that does not exist.
       The player caught it by reading the printed map. `path` reproduced their
       route exactly, first try.)*
+- [ ] ⚠ **CHECK EVERY CELL IN THE LIT RADIUS FOR DOORS AND FEATURES, NOT JUST
+      THE DESTINATION.** Day 140: a door sat one cell off the party's path,
+      inside their own lamp's 30' radius, and went unmentioned through an
+      entire return trip until the player asked directly. Root cause: every
+      ad hoc check that session used `edges.get((cell_a, cell_b))` as a key —
+      **that key does not exist in this database and silently returns
+      `None` for everything**, doors included, which reads as "no wall,
+      fine." The real edge key is positional: `(x, y, 'H')` for a N/S
+      boundary, `(x, y, 'V')` for E/W — see `DIRS` in `mapdb/dmap.py`, or just
+      call `dmap.py at` on the cell, which uses the real key internally and
+      is the only thing that was ever finding doors correctly. **Never
+      hand-roll an edge lookup.** When reporting what a stop reveals, iterate
+      every cell `dmap.py light` returns and run `at` (or `dmap.exits`) on
+      each one — not just the cell the party is standing on.
 - [ ] Movement has **THREE speeds**, not two *(PHB p. 102, verified)*:
       **1" = 10 ft per TURN** exploring and mapping; **5× faster on a known
       route** (90 ft per 2 rounds for this party); **10× faster fleeing or in
