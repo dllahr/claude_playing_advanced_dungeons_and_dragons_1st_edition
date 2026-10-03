@@ -5661,3 +5661,6 @@ Pending ledger addition, expedition 31 (not yet earned -- credit on emerging):
 
 ## Day 140 rounds 347-351 -- searching the spider's lair
 Area 52 is only 8 squares total; nothing else stocked there besides the now-dead spider -- confirmed via stocking.present(). Treasure (type J-N,Q, solitary monster killed at its own lair, not a wandering individual away from home like the troglodyte -- rolled in full): 13cp+8sp+5ep+7gp+5pp, gems none. Logged to money.tsv (5 separate coin-type rows). Single arrow recovered, no breakage. Dave and Torsat switched back to bows on guard. No wandering check.
+
+## Day 140 rounds 351-361 -- the room itself searched
+Module key for area 52 (RAISED CAVERN, pdf p.3985 of the module txt): low 5' ceiling, bluish ore streaks on the east wall matching room 51's (explicitly "of no unusual use or value to the adventurers" per the book). Monster/Treasure fields blank in the key -- the stocking table's crab_spider_52a and its coin hoard (already recovered) were the full allocation for this room. 8 searchers covered the 8 squares in parallel, 1 turn. Nothing else found. No wandering check (outside area 53's bat mechanic now).
