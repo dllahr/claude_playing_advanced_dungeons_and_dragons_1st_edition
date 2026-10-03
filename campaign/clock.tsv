@@ -1710,3 +1710,4 @@ when	exped	round	kind	anchor	detail	note
 2026-10-03	31	391	check	390	d6=1 -> CrabSpider(1)-AC7, HD2*, hp 12,#AT 1, D1-8 +poison, MV 120'(40'), Save FI, ML7	anchor 390 + 1
 2026-10-03	31	391	correct		-5	process error: advanced the full 20-round party catch-up move straight through a wandering check that fired at round 391 instead of stopping there; rolling back to resolve it at the party's actual position (15 rounds in = 90ft = 9 squares of the 12-square route)
 2026-10-03	31	394	advance		3	day 140: recover missiles, switch back to ranged weapons, search the wandering spider's body
+2026-10-03	31	399	advance		5	day 140: party catches up to (22,33), 40ft behind Tristle, resuming the route out
