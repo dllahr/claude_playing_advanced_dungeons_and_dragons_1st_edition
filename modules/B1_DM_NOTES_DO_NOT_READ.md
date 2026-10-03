@@ -5632,3 +5632,8 @@ Same pathfinder-substitution bug as before (party.py picked a 7-square shortcut 
 
 ## Day 140 rounds 316-341 -- east then south to (32,37)/(32,41)
 Tristle to (32,37), clean, nothing stocked -- hit the cavern's south wall there, exit continues east at (33,37) (unexplored, mixed terrain, not yet lit/entered). Party to (32,41), 40ft behind, route built and verified manually (not via party.py's own pathfinder) to avoid a third pathfinder-substitution. Bat-disturbance: turn11 (308-317) rolled 14, turn12 (318-327) rolled 77, turn13 (328-337) rolled 77 -- all safe. No wandering checks.
+
+## Day 140 round 343 -- crab spider in range, NOT revealed
+crab_spider_52a (area 52, hp7) is at (32,34), within Tristle's 60' infravision radius and LOS from (30,37) (~36ft) per dmap. DM call: this is an ambush predator by design (bestiary/crab-spider.md: "builds carefully hidden places of concealment and rushes forth," surprises on 5-in-6) -- unlike the troglodyte's chameleon skin, this is PHYSICAL concealment (hidden in a burrow/trapdoor), which DOES still work against infravision (infravision cannot see through solid cover, same rule that excludes "the far side of anything solid"). Not narrated to the player; Tristle's passing scan doesn't reveal it. 
+
+DANGER NOTE FOR UPCOMING MOVEMENT: it can leap 3" (30ft) from concealment in one action (MM p.90) -- current distance ~36ft, just outside that. If the party's route brings them within 30ft of (32,34), check for an ambush trigger before resolving the move as clean. Area 52 "Raised Cavern" itself hasn't been entered/identified yet.
