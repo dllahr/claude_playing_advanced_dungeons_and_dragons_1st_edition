@@ -599,3 +599,4 @@ when	map	level	x	y	exped	turn	squares	feet	rate	why	route
 2026-10-03	b1	2	24	36	31		9	90	explore	day 140: party 40ft behind Tristle, heading out -- stopped at round 391 where a wandering check fired, not at the planned destination	31,36 30,36 30,37 29,37 28,37 27,37 26,36 25,36 24,36
 2026-10-03	b1	2	22	33	31		3	30	explore	day 140: party resumes toward (22,33), 40ft behind Tristle (already at 22,29), rest of the original route	23,35 22,34 22,33
 2026-10-03	b1	2	24	25	31		8	80	explore	day 140: party 40ft behind Tristle, into the side cavern	22,32 22,31 22,30 22,29 23,28 23,27 23,26 24,25
+2026-10-03	b1	2	29	32	31		11	110	flee	day 140: party joins Tristle at the troglodyte body/pool, called in, combat-pace movement	24,26 24,27 24,28 24,29 25,29 26,29 27,29 28,29 29,30 29,31 29,32

@@ -1713,3 +1713,7 @@ when	exped	round	kind	anchor	detail	note
 2026-10-03	31	399	advance		5	day 140: party catches up to (22,33), 40ft behind Tristle, resuming the route out
 2026-10-03	31	406	advance		7	day 140: Tristle 40ft ahead, own 12" rate, into the side cavern to (26,28)
 2026-10-03	31	419	advance		13	day 140: party catches up to (24,25), 40ft behind Tristle
+2026-10-03	31	421	advance		2	day 140: Tristle 40ft ahead, own 12" rate, to (29,30)
+2026-10-03	31	421	check	420	d6=1 -> Troglodytes (1-4)-AC 5, HD 2*, hp 9,8,5,4, #AT 3, D 1-4/1-4/1-4, MV 120' (40'), Save F2, ML 9	anchor 420 + 1
+2026-10-03	31	439	advance		18	day 140: party joins Tristle at the troglodyte body/pool
+2026-10-03	31	441	advance		2	day 140: Tristle gathers his arrows and searches the troglodyte while waiting for the party

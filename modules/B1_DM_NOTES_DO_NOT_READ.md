@@ -5693,3 +5693,6 @@ Player's correction: a failed-LOS wandering check shouldn't just vanish -- the c
 
 Pending ledger addition, expedition 31:
 - Tristle, pending XP for 1 troglodyte, hp9: 36+2(9)=54, per bestiary/troglodyte.md. Solo kill. audit-skip
+
+## Day 140 rounds 421-441 -- gathering the body, party joins
+All 12 arrows recovered, no breakage. Weapon check (same table): d100=37 armed, d100=83 -> unarmed with a formal weapon (claws/teeth only) -- nothing to recover. No coin (wandering individual, same reasoning as the first troglodyte -- no lair here). Party joined Tristle at (29,32), 11 squares, no wandering check. Next to the pool (area 50/the pool feature at 29,33) together.
