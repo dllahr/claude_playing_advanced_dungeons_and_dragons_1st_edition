@@ -1746,3 +1746,4 @@ when	exped	round	kind	anchor	detail	note
 2026-10-03	31	549	advance		3	day 140: party watches in formation; 2 of the 5 move to scout toward where the arrow came from
 2026-10-03	31	552	advance		3	day 140: party keeps watching; the scouts close further
 2026-10-03	31	553	advance		1	day 140: the 2 scouts close the last stretch, now visible 10ft north of the party
+2026-10-03	31	542	correct		-11	day 140: correcting a chain of clock advances (531->553, 22 rounds) built on a phantom encounter -- Tristle's declared path was mis-transcribed, the real 11-square route (27,27)->(28,19) never gave him LOS to the hobgoblins at all, so none of the volley/scout-approach rounds actually happened. True elapsed time for the corrected move is 11 rounds: 531->542.

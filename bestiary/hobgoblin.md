@@ -1,6 +1,8 @@
 # Hobgoblin
 
-First met day 140, area 49, the phosphorescent cave (not yet entered).
+Stocked in area 49, the phosphorescent cave (not yet entered). Stat block
+transcribed day 140 while chasing down a phantom sighting that turned out to
+have no real LOS (see DM notes) -- not yet actually met in play.
 
 ## Hobgoblin stat block
 

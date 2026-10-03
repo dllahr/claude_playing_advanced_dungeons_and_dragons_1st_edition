@@ -474,3 +474,4 @@ when	day	exped	round	side	actor	verb	target	qty	detail
 2026-10-03	140	31	1			end			parley offered and accepted (reaction 89, friendly) before any action resolved -- combat suspended
 2026-10-03	140	31	1			start			5 hobgoblins (hp 9,8,6,4,3) at (25,16), ~30ft, surprised (hobgoblins d6=1, 1 segment) -- Tristle alone, not surprised
 2026-10-03	140	31	1	monsters		damage	hobgoblin	3	Tristle, 1 of 6 shots hit, 3 dmg on the 9hp one -- 6hp left
+2026-10-03	140	31	1			end			VOIDED -- this fight never happened. Tristle's declared path was mis-transcribed, the real route never gave him LOS to the hobgoblins. No contact occurred; all damage undone.

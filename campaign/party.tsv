@@ -610,3 +610,4 @@ when	map	level	x	y	exped	turn	squares	feet	rate	why	route
 2026-10-03	b1	2	31	27	31		1	10	explore	day 140: party advances 1 square east to (31,27)	31,27
 2026-10-03	b1	2	27	27	31		4	40	explore	day 140: party heads back to the door to spike it	29,27 28,27 27,27
 2026-10-03	b1	2	26	23	31		4	40	explore	day 140: party 40ft behind Tristle, heading south	26,26 26,25 26,24 26,23
+2026-10-03	b1	2	26	21	31		4	40	explore	day 140: CORRECTION -- party trails Tristle 4 squares behind along his real (corrected) path, not the phantom (26,23) stop	27,26 26,26 26,25 26,24 26,23 26,22 26,21

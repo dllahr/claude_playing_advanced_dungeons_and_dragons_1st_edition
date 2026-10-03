@@ -156,3 +156,6 @@ when	day	level	area	monster_id	monster	verb	x	y	hp	exped	round	duration	note
 2026-10-03	140			hobgoblin_49b		move	26	24		31	552		day 140: same
 2026-10-03	140			hobgoblin_49a		move	26	25		31	553		CORRECTION: checked light_reach along the full path this time, not just the endpoint -- (26,25) is the FIRST square on their route that's actually inside the party's 30ft lamp radius, not (26,24). Stopping them there.
 2026-10-03	140			hobgoblin_49b		move	26	25		31	553		CORRECTION: same fix
+2026-10-03	140			hobgoblin_49a		move	25	16		31	553		RESET to stocked origin -- the player caught that Tristle's declared path was mis-transcribed (26,20)->(25,19) is impossible, should read (26,20)->(27,19)->(28,19). Every move logged for this individual since round 546 was built on the wrong stop point and is void; starting the whole encounter over from here.
+2026-10-03	140			hobgoblin_49b		move	25	16		31	553		RESET to stocked origin -- same correction, void all prior moves
+2026-10-03				hobgoblin_49a		hp			9.0				undo the 3 dmg from the voided volley -- the sighting it was based on never happened, Tristle's real path never had LOS to them
