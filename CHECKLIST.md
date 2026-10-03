@@ -521,33 +521,26 @@ python mapdb/dmap.py graph <db> <level>
       (19,6) — through it — and given a corridor opening that does not exist.
       The player caught it by reading the printed map. `path` reproduced their
       route exactly, first try.)*
-- [ ] ⚠ **CHECK EVERY CELL IN THE LIT RADIUS FOR DOORS AND FEATURES, NOT JUST
-      THE DESTINATION.** Day 140: a door sat one cell off the party's path,
-      inside their own lamp's 30' radius, and went unmentioned through an
-      entire return trip until the player asked directly. Root cause: every
-      ad hoc check that session used `edges.get((cell_a, cell_b))` as a key —
-      **that key does not exist in this database and silently returns
-      `None` for everything**, doors included, which reads as "no wall,
-      fine." The real edge key is positional: `(x, y, 'H')` for a N/S
-      boundary, `(x, y, 'V')` for E/W — see `DIRS` in `mapdb/dmap.py`, or just
-      call `dmap.py at` on the cell, which uses the real key internally and
-      is the only thing that was ever finding doors correctly. **Never
-      hand-roll an edge lookup.** When reporting what a stop reveals, iterate
-      every cell `dmap.py light` returns and run `at` (or `dmap.exits`) on
-      each one — not just the cell the party is standing on.
-- [ ] ⚠ **CHECK STOCKING VISIBILITY AT EVERY SQUARE OF A MULTI-SQUARE MOVE, NOT
-      JUST THE DESTINATION.** Day 140, same session as the door bug above: a
-      stocked group came within lamp range on the FIRST square of a 2-square
-      move, but only the destination square was checked, so the sighting (and
-      the party's stop) landed a full square late. Also: **don't treat a
-      light-radius distance check as pass/fail at a hard decimal** — 31.6ft
-      vs a 30ft radius is inside normal positional slop for where within a
-      10' square something actually stands; a margin that small is "yes,"
-      not "no." Check the fractional intermediate squares of any multi-square
-      move the same way the goblin/troglodyte wandering-check incidents
-      taught for TIME (stop where the trigger actually fires, not at the
-      planned endpoint) — the same discipline applies to stocked sightings
-      coming into range mid-move, not just to wandering checks firing mid-move.
+- [ ] ⚠ **FOR EVERY MOVE AND EVERY LOOK-AROUND, RUN `stocking.py scan` —
+      never a hand-rolled check.** Day 140: two back-to-back misses, same
+      root cause — ad hoc checks only looked at the destination square (a
+      door one cell off the path went unmentioned a whole return trip; a
+      stocked group came into lamp range on square 1 of a 2-square move but
+      wasn't caught until square 2). A third ad hoc attempt that same session
+      used `edges.get((cell_a, cell_b))`, a key format that **does not
+      exist** in this database and silently returns `None` for everything.
+      Adding more rules to remember was tried twice and failed twice — this
+      replaces all of it with one command that cannot skip a square:
+      ```bash
+      python tools/stocking.py scan --db <mapdb> <level> \
+          --path X1,Y1 X2,Y2 ... --radius 3   # 3=lamp, 6=infravision
+      ```
+      Pass *every* square the move actually passes through, not just the
+      destination. It reports the first square anything (a stocked monster,
+      a door, a secret, a feature) comes into range — stop the move there.
+      Empty output means genuinely clean. **Never call `dmap.py at`/`light`
+      or `edges.get(...)` by hand for this** — `scan` is now the only
+      sanctioned way to answer "what does this move/look reveal."
 - [ ] Movement has **THREE speeds**, not two *(PHB p. 102, verified)*:
       **1" = 10 ft per TURN** exploring and mapping; **5× faster on a known
       route** (90 ft per 2 rounds for this party); **10× faster fleeing or in

@@ -170,6 +170,54 @@ def at(level, x, y, now=None, rows_=None, path=None):
                   if (s['x'], s['y']) == (x, y))
 
 
+def scan_squares(db, level, squares, radius=3, now=None):
+    """Walk `squares` IN ORDER (a move, or a single [cell] for a look-around)
+    and report, for each one, what FIRST comes into range there -- stocked
+    monsters, doors/secrets, and feature tags -- that was not already in
+    range from an earlier square in the list.
+
+    THE WHOLE POINT: a single `at`/`light` call on the destination of a
+    multi-square move misses anything that came into range partway there
+    (day 140 -- the same door-visibility bug, and the same bug again one
+    stop later for a stocked sighting mid-move, not just at the endpoint).
+    Call this with the full list of squares a move actually passes through,
+    not just the last one, and stop the move at the first square that
+    reports something.
+
+    Returns a list of (square, kind, detail) tuples, in the order squares
+    were walked -- kind is 'monster', 'door', 'secret' or 'feature'.
+    """
+    sys.path.insert(0, os.path.join(ROOT, 'mapdb'))
+    import dmap
+    cells, edges = dmap.load(db, level)
+    seen_monsters = set()
+    seen_edges = set()
+    seen_features = set()
+    findings = []
+    for sq in squares:
+        lit = dmap.light_reach(db, level, sq[0], sq[1], radius=radius)
+        lit = set(lit.keys()) if isinstance(lit, dict) else set(lit)
+        here = present(level, now)
+        for mid, s in sorted(here.items()):
+            if (s['x'], s['y']) in lit and mid not in seen_monsters:
+                seen_monsters.add(mid)
+                findings.append((sq, 'monster',
+                                 '%s at (%s,%s)' % (mid, s['x'], s['y'])))
+        for c in sorted(lit):
+            feat = cells.get(c, ('?', None, None, None))[2]
+            if feat and (c, feat) not in seen_features:
+                seen_features.add((c, feat))
+                findings.append((sq, 'feature', '%s at %s' % (feat, c)))
+            for d, dx, dy, ef in dmap.DIRS:
+                key = ef(*c)
+                val = edges.get(key)
+                if val in ('door', 'secret') and key not in seen_edges:
+                    seen_edges.add(key)
+                    findings.append((sq, val,
+                                     '%s facing %s from %s' % (val, d, c)))
+    return findings
+
+
 def current_now(clock_log=None, days_log=None):
     """(day, exped, round) off the real clock and day logs -- what a CLI
     caller passes to `present`/`at`. Kept out of the pure functions above so
@@ -334,6 +382,22 @@ def build_parser():
     at_p.add_argument('--ignore-clock', action='store_true',
                       help='do not expire flee windows against the real clock')
 
+    sc = sub.add_parser('scan', help='walk a planned move square by square '
+                         'and report the FIRST square from which anything '
+                         '(a stocked monster, a door, a feature) comes into '
+                         'range -- use this for every multi-square move and '
+                         'every look-around, not `at`/`light` on just the '
+                         'destination')
+    sc.add_argument('--db', required=True)
+    sc.add_argument('level', type=int)
+    sc.add_argument('--path', nargs='+', required=True, metavar='X,Y',
+                    help='every square the move actually passes through, '
+                         'in order, starting with the first one after the '
+                         'current position (a single X,Y for a look-around)')
+    sc.add_argument('--radius', type=int, default=3,
+                    help='cells (10 ft each); 3 = lamp, 6 = infravision')
+    sc.add_argument('--ignore-clock', action='store_true')
+
     def common_write(name, help_):
         sp = sub.add_parser(name, help=help_)
         sp.add_argument('--id', dest='monster_id', required=True)
@@ -383,6 +447,16 @@ def main(argv=None):
         now = None if a.ignore_clock else current_now()
         found = at(a.level, a.x, a.y, now)
         print(', '.join(found) if found else '(nobody there)')
+        return 0
+    if a.cmd == 'scan':
+        now = None if a.ignore_clock else current_now()
+        squares = [tuple(int(v) for v in sq.split(',')) for sq in a.path]
+        findings = scan_squares(a.db, a.level, squares, a.radius, now)
+        if not findings:
+            print('nothing new the whole way -- clean')
+            return 0
+        for sq, kind, detail in findings:
+            print('%-10s %-8s %s' % (str(sq), kind.upper(), detail))
         return 0
     if a.cmd == 'simulate':
         day, exped, rnd = current_now()
