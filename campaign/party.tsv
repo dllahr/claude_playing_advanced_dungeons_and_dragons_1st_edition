@@ -594,3 +594,4 @@ when	map	level	x	y	exped	turn	squares	feet	rate	why	route
 2026-10-02	b1	2	29	40	31		3	30	explore	day 140: party advances to the dead troglodyte, gathering missiles and searching	26,40 27,40 28,40 29,40
 2026-10-02	b1	2	24	42	31		9	90	explore	day 140: party 40ft behind Tristle, west then east -- player-specified squares used directly, not the tool's auto-route	29,40 28,40 27,40 26,40 25,40 24,40 23,41 22,42 23,42 24,42
 2026-10-02	b1	2	32	41	31		10	100	explore	day 140: party 40ft behind Tristle, east then south, squares verified directly	25,42 26,42 27,42 28,42 29,43 30,43 31,43 32,43 32,42 32,41
+2026-10-02	b1	2	32	39	31		2	20	explore	day 140: party 40ft behind Tristle, catching up along the north-south leg	32,40 32,39
