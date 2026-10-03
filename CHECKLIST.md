@@ -151,6 +151,14 @@ of context mid-scene loses anything not yet written.
 
 ## 3. Every combat round
 
+**One declare point per round, two if a spell is in play.** `rules/combat.md`
+"Combat sequence" / "WHEN TO ASK" has the full DMG p.61/p.65 procedure.
+Spellcasters (if any) declare their spell BEFORE initiative, every round,
+blind to who'll win it — DMG p.65 is explicit this is a bet made blind.
+Everyone else declares AFTER initiative, once, in the single moment the DM
+asks "what's everyone doing" — not a stop after every sub-step. Close the
+round with `encounter.py next` before the next round's spell-declare step.
+
 ```bash
 python tools/combat.py round --target "berserker AC 7 HD 1" \
     --attack Dave:"long sword" Torsat:"long sword" Yrtone:"footman's flail"

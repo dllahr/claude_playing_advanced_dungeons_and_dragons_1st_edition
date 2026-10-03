@@ -779,15 +779,57 @@ factor in close encounter situations… the distance must be either 1" to 3"."*
 - 1 turn = 10 melee rounds. 1 melee round = 10 segments.
 - Casting time in segments determines initiative order within a round.
 
-## Combat sequence (Gygaxian rigor)
+## Combat sequence (Gygaxian rigor) — the DMG's own 6 steps, p.61
 
-1. Determine surprise (d6, 1–2 surprised unless modified)
-2. Roll initiative (d6 per side, **high wins**)
-3. Apply casting times / weapon speed factors within the round
-4. Resolve attacks, then damage, then morale checks if triggered
+1. Determine if either or both parties are **surprised**.
+2. Determine **distance**, if unknown.
+3. If both parties are unsurprised, or equally surprised, determine **initiative**
+   (d6 per side, high wins).
+4. Resolve the actions of the side **with** initiative: avoid/flee, parley, await,
+   **discharge missiles or magical device attacks or cast spells or turn undead**,
+   close/charge, set weapons, strike blows, grapple.
+5. Resolve the actions of the side that **lost** initiative, same list.
+6. Repeat — distance, initiative, action — until the melee ends.
 
-*Weapon speed factors and the full DMG initiative procedure are not yet transcribed —
-pull from DMG before the first real melee.*
+*source: **DMG p. 61**, COMBAT (ENCOUNTERS, COMBAT, AND INITIATIVE), the
+numbered list, 200 dpi page render 2026-10-02.*
+
+### ⚠ WHEN TO ASK — one declare point per round, except spells
+
+**The actions in step 4/5 above are decided AFTER initiative is known** — the
+side that won initiative picks from the list (attack, close, hold, etc.)
+knowing they have it, then the losing side responds. That is **one** moment
+per round where the DM asks what everyone not already resolved is doing, not
+a stop after every single sub-step.
+
+**Spells are the one exception, and they invert the order.** DMG p.65, SPELL
+CASTING DURING MELEE, procedure step 1: *"Spell casters must note what spell
+they intend to cast **at the beginning of each round, prior to any knowledge
+of which side has initiative**."* A caster declares the spell (or declares
+nothing, meaning no spell this round) **before** the initiative roll, because
+whether the caster can be disrupted depends on which segment the spell lands
+on relative to whoever attacks them, and that has to be fixed before either
+side knows who's acting first. Declaring a spell is a bet made blind.
+
+**So the shape of a round is:**
+
+1. **Ask only spellcasters** (currently Frython; Blartho/Yrtone/Dellie if
+   they mean to cast rather than swing) what they intend to cast this round,
+   or that they're not casting. This happens before initiative, every round,
+   even if the answer is usually "nothing."
+2. Roll initiative.
+3. **Ask everyone else** (and confirm spellcasters' targets/details now that
+   initiative is known) what they're doing. This is the ONE declare point for
+   non-spell actions.
+4. Resolve the winning side, then the losing side.
+5. `encounter.py next` to close the round before starting the next one's
+   spell-declare step.
+
+*source: **DMG p. 65**, COMBAT (SPELL CASTING DURING MELEE), procedure steps
+1–5, 200 dpi page render 2026-10-02. Weapon speed factors proper (which
+weapon acts first within a won segment) are not yet transcribed — pull from
+DMG if two characters with different weapons ever need resolving in a
+specific sub-order within the same side.*
 
 ## Disease (DMG p. 14)
 
