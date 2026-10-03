@@ -11546,3 +11546,4 @@ when	exped	turn	notation	dice	modifier	total	hidden	reason
 2026-10-03			d6	1	0	1		B1 lock roll, door at (27,26,H): 1-2 locked, 3-6 opens
 2026-10-03			d100	32	0	32		Tristle Hear Noise 15% at the door
 2026-10-03			d100	87	0	87		Ista Hear Noise 10% at the door
+2026-10-03			d100	53	0	53		Tristle Open Locks 35% on the door at (27,26,H) -- ONE TRY PER LOCK EVER, PHB p.28

@@ -1725,3 +1725,4 @@ when	exped	round	kind	anchor	detail	note
 2026-10-03	31	455	check	450	d6=6	anchor 450 + 5
 2026-10-03	31	476	advance		18	day 140: standard formation back to (26,27)
 2026-10-03	31	477	advance		1	day 140: Tristle and Ista approach the door at (27,26)/(27,27)
+2026-10-03	31	478	advance		1	day 140: Tristle attempts Open Locks on the door at (27,26,H)
