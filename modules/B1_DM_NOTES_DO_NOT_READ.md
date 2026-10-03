@@ -5583,3 +5583,9 @@ Morale at +15% (50%+ casualties): base 50, roll 7+15=22 vs 50 -- HOLDS. They fig
 
 ## Day 140 round 1 (kobold fight) -- kobold A's weapon
 Rolled its loadout retroactively (bestiary/kobold.md weapon table, d100=62 -> javelins 2-3). It had no weapon in hand when surprised (that was one of the two circumstances widening their surprise range) -- round 1 it grabs a javelin and throws rather than closing, since its 6" move (6ft/round) can't cross 12-22ft of open floor in one round anyway. Missed (needs 17, rolled 10).
+
+## Day 140 round 2 -- kobold fight ends, all 9 dead
+Tristle's 2 arrows at kobold A: hit (11 vs 10) for 6, dead; second arrow moot. All 9 kobolds dead, zero party losses, fight closed in encounter.tsv at round 2. Party arrived at (23,39) after the fight was already decided -- never got a shot in.
+
+Pending ledger addition, expedition 31 (not yet earned -- credit on emerging):
+- Tristle, pending XP for all 9 kobolds (hp 4,4,3,3,3,3,2,2,1 -> 9+9+8+8+8+8+7+7+6=70), 5+1/hp per bestiary/kobold.md. Solo kill -- same rule as the goblins, whoever was still standing takes it all; the party never engaged. audit-skip

@@ -392,3 +392,9 @@ when	day	exped	round	side	actor	verb	target	qty	detail
 2026-10-02	140	31	1	monsters		damage	kobold_53f	3	Tristle, short bow, hit for 3
 2026-10-02	140	31	1		kobold_53f	dead			killed by Tristle
 2026-10-02	140	31	2			initiative			round 2 begins
+2026-10-02	140	31	2			initiative			party d6=2 vs monsters d6=1, party acts first
+2026-10-02	140	31	2	party	Tristle	declare			fires both arrows at kobold A
+2026-10-02	140	31	2	party	party	declare			advance toward Tristle; will fire if kobold A is still standing when they arrive
+2026-10-02	140	31	2	monsters		damage	kobold_53a	6	Tristle, short bow, hit for 6
+2026-10-02	140	31	2		kobold_53a	dead			killed by Tristle -- all 9 kobolds dead
+2026-10-02	140	31	2			end			all 9 kobolds dead, round 2, no party losses

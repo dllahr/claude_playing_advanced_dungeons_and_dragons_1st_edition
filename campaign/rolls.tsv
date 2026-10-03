@@ -11332,3 +11332,9 @@ when	exped	turn	notation	dice	modifier	total	hidden	reason
 2026-10-02			1-6 (1d6)	3	0	3		Tristle damage, short bow
 2026-10-02			d20	10	0	10		kobold attacks AC 4
 2026-10-02			d100	62	0	62		kobold A's weapon loadout (bestiary/kobold.md table)
+2026-10-02			d6	2	0	2		initiative, party
+2026-10-02			d6	1	0	1		initiative, monsters
+2026-10-02			d20	11	0	11		Tristle attacks with short bow
+2026-10-02			1-6 (1d6)	6	0	6		Tristle damage, short bow
+2026-10-02			d20	6	0	6		Tristle attacks with short bow
+2026-10-02			d6	3	0	3		wandering check, anchor 210
