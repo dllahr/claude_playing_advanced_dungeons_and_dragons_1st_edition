@@ -5737,3 +5737,9 @@ Morale +15% (60% casualties): 50 base, 18+15=33<50, HOLDS. Both survivors (1hp e
 
 Pending ledger addition, expedition 31:
 - all 10, pending XP for 3 kobolds (hp4,4,4 -> 14+14+14=42), per bestiary/kobold.md. audit-skip
+
+## Day 140 round 2 -- reopened correctly, both survivors killed
+Round 1 had been wrongly closed with 2 live kobolds still standing -- reopened (encounter.py start/next to round 2), fresh initiative (monsters first, d6=5v4, but nothing changed so they held again), party declared another volley. Dave:bow hit(18v13) for 5 -- dead (1hp kobold). Torsat:bow hit(19v13) for 4 -- dead (other 1hp kobold). Rest of the roster never needed to fire, both already dead. All 5 kobolds now dead, zero party losses across both rounds.
+
+Pending ledger addition, expedition 31 (completes this group's XP):
+- all 10, pending XP for the last 2 kobolds (hp2,1 -> 12+11=23), bringing this group's total to 65 (42 round1 + 23 round2). audit-skip

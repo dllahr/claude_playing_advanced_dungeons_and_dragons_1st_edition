@@ -11578,3 +11578,11 @@ when	exped	turn	notation	dice	modifier	total	hidden	reason
 2026-10-03			d100	18	0	18		morale
 2026-10-03			d100	68	0	68		kobold A (survivor, 1hp) weapon loadout
 2026-10-03			d100	85	0	85		kobold B (survivor, 1hp) weapon loadout
+2026-10-03			d6	4	0	4		initiative, party
+2026-10-03			d6	5	0	5		initiative, monsters
+2026-10-03			d20	18	0	18		Dave attacks with short bow
+2026-10-03			1-6 (1d6)	5	0	5		Dave damage, short bow
+2026-10-03			d20	3	0	3		Dave attacks with short bow
+2026-10-03			d20	2	0	2		Torsat attacks with short bow
+2026-10-03			d20	19	0	19		Torsat attacks with short bow
+2026-10-03			1-6 (1d6)	4	0	4		Torsat damage, short bow

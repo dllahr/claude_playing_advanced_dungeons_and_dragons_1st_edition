@@ -453,3 +453,13 @@ when	day	exped	round	side	actor	verb	target	qty	detail
 2026-10-03	140	31	1		kob3	dead			Hask
 2026-10-03	140	31	1	monsters		damage	kob4	1	Dave hit for 1 -- 2hp to 1hp
 2026-10-03	140	31	1			end			3 of 5 dead, morale held (rolled 33 vs 50) but the 2 survivors (1hp each, melee-only weapons) hold position rather than closing 22ft into missile range alone -- round 1 ends here
+2026-10-03	140	31	1			start			REOPENED -- 2 kobolds (1hp each) still alive at (31,27), holding position, round 1 was wrongly closed with the fight not actually over
+2026-10-03	140	31	2			initiative			round 2 begins
+2026-10-03	140	31	2			initiative			party d6=4 vs monsters d6=5, monsters first
+2026-10-03	140	31	2	party	kobolds	declare			hold position again, weapons ready, not closing -- nothing's changed since last round to push them either way
+2026-10-03	140	31	2	party	party	declare			everyone fires missiles again -- same roster as round 1
+2026-10-03	140	31	2	monsters		damage	kob4	5	Dave hit for 5 -- dead (1hp)
+2026-10-03	140	31	2		kob4	dead			Dave
+2026-10-03	140	31	2	monsters		damage	kob5	4	Torsat hit for 4 -- dead (1hp)
+2026-10-03	140	31	2		kob5	dead			Torsat
+2026-10-03	140	31	2			end			both survivors dead round 2, all 5 kobolds killed, zero party losses
