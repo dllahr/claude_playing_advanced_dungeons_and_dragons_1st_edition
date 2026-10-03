@@ -1721,3 +1721,5 @@ when	exped	round	kind	anchor	detail	note
 2026-10-03	31	444	advance		1	day 140: Yrtone pulled clear, healed, party fires on the jelly
 2026-10-03	31	445	advance		1	day 140: second volley finishes the ochre jelly
 2026-10-03	31	448	advance		3	day 140: recover missiles, search the ochre jelly's remains
+2026-10-03	31	458	advance		10	day 140: Dave and Torsat guard south at (29,32); the other 8 thoroughly search the 4 squares west of the pool
+2026-10-03	31	455	check	450	d6=6	anchor 450 + 5
