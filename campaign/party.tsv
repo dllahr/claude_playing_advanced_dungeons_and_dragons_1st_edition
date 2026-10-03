@@ -589,3 +589,4 @@ when	map	level	x	y	exped	turn	squares	feet	rate	why	route
 2026-10-02	b1	2	22	37	31		3	30	explore	day 140: party 40ft behind Tristle, along the wall	23,39 23,38 23,37 22,37
 2026-10-02	b1	2	19	37	31		3	30	explore	day 140: party 40ft behind Tristle, due west	22,37 21,37 20,37 19,37
 2026-10-02	b1	2	14	39	31		7	70	explore	day 140: party 40ft behind Tristle	19,37 19,38 19,39 18,39 17,39 16,39 15,39 14,39
+2026-10-02	b1	2	20	43	31		10	100	explore	day 140: RECORD-KEEPING CORRECTION, not a new event -- the party was always 40ft behind Tristle per standing formation; this move should have been logged alongside Tristle's (13,42)->(24,43) leg and was missed. No new clock time (already covered by that leg's 9 rounds, 262->271).	14,39 14,40 14,41 14,42 14,43 15,43 16,43 17,43 18,43 19,43 20,43
