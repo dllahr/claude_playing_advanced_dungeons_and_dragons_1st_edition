@@ -5748,3 +5748,8 @@ Pending ledger addition, expedition 31 (completes this group's XP):
 Player's correction (monsters-dont-passively-hold) applied retroactively to this specific round, since they'd won initiative and were never in melee (no breaking-off penalty applies -- that rule needs actual melee contact, DMG p.70). Verified geometrically: kobold move 6"=60ft easily reaches ground outside the party's 30ft lamp radius from (29,26) -- picked (32,28), 20ft away via a real path, confirmed dark. Since they act first (won initiative) and move out of light before the party's turn, the party has no valid target this round -- Dave/Torsat's round-2 hits are RETRACTED (never synced to the persistent stocking registry, so nothing to formally undo there). 
 
 Two of the five kobolds survive, now at 1hp each, somewhere past (32,28) in the dark, status/position not tracked further unless the party pursues. XP pending ledger corrected: only the 3 round-1 kills count (42 XP total for this group, not 65).
+
+## Day 140 -- registry fixed, and the advance to (30,26) re-spots the fled kobolds
+Caught stocking.py scan returning stale data: none of today's kills had been synced to the persistent registry (modules/private/b1_stocking.tsv), only to the ephemeral encounter.tsv. Fixed: kobold_51a/b/c marked die (round 1 kills), kobold_51d/e given a flee event to (32,28) matching the round-2 replay. Re-ran scan clean after.
+
+Party advanced to (30,26) -- scan shows kobold_51d/e now back in range, 28.3ft with clear LOS (closer than their previous 29,26 position). Their escape doesn't hold once the party closes the gap. Not yet revealed to player in detail -- next reply.
