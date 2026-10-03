@@ -11548,3 +11548,7 @@ when	exped	turn	notation	dice	modifier	total	hidden	reason
 2026-10-03			d100	87	0	87		Ista Hear Noise 10% at the door
 2026-10-03			d100	53	0	53		Tristle Open Locks 35% on the door at (27,26,H) -- ONE TRY PER LOCK EVER, PHB p.28
 2026-10-03			d100	15	0	15		Ista Open Locks 25% (base 25, DEX 13 = +0) on the door at (27,26,H) -- ONE TRY PER LOCK EVER
+2026-10-03			d6	3	0	3		wandering check, anchor 480
+2026-10-03			d6	1	0	1		area 51 kobolds at (31,27): what they're doing when first spotted (1-2 resting/idle, 3-4 working/foraging, 5-6 moving/alert)
+2026-10-03			d6	2	0	2		surprise check, party
+2026-10-03			d6	2	0	2		surprise check, monsters

@@ -5723,3 +5723,6 @@ Every ad hoc check this session used edges.get((cell_a,cell_b)) as a key. That k
 
 ## Day 140 -- correction: kobold sighting retracted, Tristle's infravision was washed out
 Player caught it: standard tight formation (not 40ft-separated scouting) puts Ista's lit lantern well within 30ft of Tristle regardless of rank, washing out his infravision per the standing rule. Checked properly: at 30ft lamp-only range from (27,27), nothing stocked is visible -- the kobolds at (31,27), 40ft off, are beyond both the lamp AND (since infravision is washed out) Tristle's own senses right now. Retracted the sighting; they remain unseen/unspotted as things stand. Still there, just not currently perceived by anyone.
+
+## Day 140 round 488 -- 5 kobolds spotted for real, within actual lamplight
+Party advanced to (30,26); the stocked kobold group at (31,27) is now genuinely within the lamp's 30ft radius (14.1ft), no infravision-washout issue this time -- real lamplight sighting. d6=1 -> resting/idle when spotted. Surprise: party d6=2 (surprised), kobolds d6=2 (surprised) -- EQUAL, difference=0, "both surprised means nobody is surprised" (rules/combat.md). No segments lost either way. Proceeding straight to a normal first-contact encounter.
