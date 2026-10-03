@@ -400,3 +400,5 @@ when	day	exped	round	side	actor	verb	target	qty	detail
 2026-10-02	140	31	2			end			all 9 kobolds dead, round 2, no party losses
 2026-10-02	140	31	1			start			2 troglodytes (hp 9, 8) near (24,43), Tristle alone -- neither side surprised (camouflage doesn't work against infravision)
 2026-10-02	140	31	1			initiative			party d6=1 vs monsters d6=1, TIED -- simultaneous
+2026-10-02	140	31	1	party	Tristle	declare			retreats 40ft to the party, shouting warning, takes 2nd rank
+2026-10-02	140	31	1			end			troglodytes held rather than pursuing (d6=4, wary of the shout) -- no blows exchanged, Tristle rejoins the party

@@ -5604,3 +5604,8 @@ Wandering check: 2 troglodytes (of the 1-4/hp 9,8,5,4 pool, took the first two: 
 
 ## Day 140 round 271 (trog fight) -- distance and setup
 2d6x10 rolled 80ft, capped at Tristle's own 60' infravision range (the troglodytes' 90' doesn't help since mutual awareness happens at the shorter range). Distance: 60ft. Initiative tied (1v1) -- simultaneous. Live fight open in encounter.tsv, round 1, nothing declared.
+
+## Day 140 round 272 -- Tristle rejoins the party, troglodytes hold
+Troglodyte pursuit decision (d6=4, 4-6 hold/wary of the shout): they stay put rather than chasing. Tristle closes the (correctly logged) 40ft gap within his own full combat-round move allowance (12" = 120ft/round, well over the 40ft needed) and takes 2nd rank. No blows exchanged. Fight closed in encounter.tsv. Bat-disturbance turn6 (258-267, missed earlier, rolled retroactively): d100=64, safe.
+
+The 2 troglodytes (hp 9, 8) are still out there near (24,43)/beyond, aware of the party now, not currently approaching.

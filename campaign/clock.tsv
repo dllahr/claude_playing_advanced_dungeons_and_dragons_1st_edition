@@ -1686,3 +1686,6 @@ when	exped	round	kind	anchor	detail	note
 2026-10-02	31	240	check	240	d6=5	anchor 240 + 0
 2026-10-02	31	250	advance		6	day 140: Tristle 40ft ahead, via (15,39),(14,39),(13,39) -- passing the known secret door -- to (13,42)
 2026-10-02	31	262	advance		12	day 140: party catches up to (14,39), 40ft behind Tristle
+2026-10-02	31	271	advance		9	day 140: Tristle 40ft ahead, (13,42)->(14,43) then straight east to (24,43), own 12" rate
+2026-10-02	31	271	check	270	d6=1 -> Troglodytes (1-4)-AC 5, HD 2*, hp 9,8,5,4, #AT 3, D 1-4/1-4/1-4, MV 120' (40'), Save F2, ML 9	anchor 270 + 1
+2026-10-02	31	272	advance		1	day 140: combat round 1 -- Tristle retreats to the party, troglodytes hold
