@@ -417,3 +417,11 @@ when	day	exped	round	side	actor	verb	target	qty	detail
 2026-10-03	140	31	1	monsters		damage	crab	10	Tristle 5, Blartho 3 (nat20), Hask 1 -- 9 total vs 7hp, dead; Yrtone/Dellie/Brand missed, moot
 2026-10-03	140	31	1		crab	dead			killed before completing its next action
 2026-10-03	140	31	1			end			crab spider dead, round 1, Tristle's only wound was the earlier missed leap -- he's untouched
+2026-10-03	140	31	1			start			wandering crab spider (hp12) spotted at (26,38), ~28ft, edge of lamplight -- 2 segments surprise
+2026-10-03	140	31	1	party	Dave	declare			fires 6 arrows/segment x2 (12 total), 3x rate
+2026-10-03	140	31	1	party	Torsat	declare			fires 6 arrows/segment x2 (12 total), 3x rate
+2026-10-03	140	31	1	party	Brand	declare			throws hand axe 3/segment x2 (6 total), 3x rate, -5 long range 28ft
+2026-10-03	140	31	1	party	Tristle	declare			runs back toward the party on Yrtone's call -- too far (73ft) to reach missile range this round
+2026-10-03	140	31	1	monsters		damage	spider2	34	Dave 10, Torsat 23, Brand 1 (moot) -- 34 total vs 12hp
+2026-10-03	140	31	1		spider2	dead			dead before it ever acted
+2026-10-03	140	31	1			end			wandering crab spider killed in the surprise segments, zero party losses

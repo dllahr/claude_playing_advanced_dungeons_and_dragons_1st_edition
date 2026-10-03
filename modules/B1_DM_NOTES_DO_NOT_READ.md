@@ -5670,3 +5670,8 @@ Standing responsibility (memory: "oil top-off is mine to manage") missed. lanter
 
 ## Day 140 round 391 -- wandering crab spider, distance corrected
 Player caught a real error: I capped encounter distance at 2x the lamp radius (60ft), but that DMG p.62 rule is about how far an OUTSIDE observer can spot a light source, not how far the lamp-reliant party itself can see. With nobody in the party (Tristle not present) having infravision right now, their own effective detection range is the lamp's actual 30ft radius. Corrected placement to (26,38), ~28.3ft from (24,36), consistent with "party not surprised" (spotted it right at the edge of lamplight). Surprise stands: party d6=4 not surprised, spider d6=2 surprised, 2 segments. Distance 8 (2d6) was the raw roll, now properly capped at 30ft not 60ft.
+
+## Day 140 round 1 (2nd spider fight) -- dead in the surprise segments
+Dave: 12 shots, hits on 4/8/9/12 for 1,3(nat20),4,2 = 10 dmg. Torsat: 12 shots, hits on 1/3/4/9/12 for 6,6,1,4,6 = 23 dmg. Brand: 6 throws at -5 (long range 28ft), 1 hit for 1 dmg (moot). Total 34 vs 12hp -- dead well before segment 2 even finished. Tristle running back (120ft/round max, 73ft to cover) didn't reach range in time, which is fine, moot now. Zero party losses, zero rounds of normal combat needed.
+Pending ledger addition, expedition 31 (not yet earned):
+- all 10, pending XP for 1 crab spider, hp12: 145+3(12)=181, per bestiary/crab-spider.md. audit-skip
