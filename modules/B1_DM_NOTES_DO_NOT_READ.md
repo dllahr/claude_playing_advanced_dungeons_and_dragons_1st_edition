@@ -5580,3 +5580,6 @@ Party's lantern is hooded (light.py show: lantern-ista BURNING hooded). Humans i
 Surprise: Tristle d6=6 (not surprised), kobolds d6=3, widened to 1-4 (absorbed in work +1, no weapon ready +1, DMG p.62 named circumstances) -- SURPRISED, 3 segments lost (one-side-surprised rule, their own roll). 18 arrows total across 3 segments (6/segment at 3x rate). Results: C dead (seg1), B wounded to 1 (seg1, nat20), A wounded to 2 (seg2), D/G/H dead (seg2), F wounded to 1 (seg2), E dead (seg3), I dead (seg3), B dead (seg3, finished off). 7 of 9 dead. Survivors: A (2hp), F (1hp).
 
 Morale at +15% (50%+ casualties): base 50, roll 7+15=22 vs 50 -- HOLDS. They fight on despite losing seven of nine. Initiative: party d6=6 vs monsters d6=5, party first. Live fight open in encounter.tsv, round 1, nothing declared yet.
+
+## Day 140 round 1 (kobold fight) -- kobold A's weapon
+Rolled its loadout retroactively (bestiary/kobold.md weapon table, d100=62 -> javelins 2-3). It had no weapon in hand when surprised (that was one of the two circumstances widening their surprise range) -- round 1 it grabs a javelin and throws rather than closing, since its 6" move (6ft/round) can't cross 12-22ft of open floor in one round anyway. Missed (needs 17, rolled 10).
