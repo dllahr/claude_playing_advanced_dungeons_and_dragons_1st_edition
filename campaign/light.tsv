@@ -272,3 +272,4 @@ when	exped	round	source	kind	what	who	fuel	certainty	note
 2026-09-28	30	392	lantern-ista	refill		Ista		known	day 140: topped off at the basecamp before heading up
 2026-09-28	31	0	lantern-ista	lit		Ista		known	day 140: lit at the cave mouth
 2026-09-28	31	8	lantern-yrtone	refill		Dave		known	day 140: topped off before going down the stair, from the party's own carried flask
+2026-10-03	31	230	lantern-ista	refill		Ista		known	CORRECTION: this refill should have been logged in-session around here (per the standing 'oil top-off is mine to manage' responsibility) but was missed -- the lantern was allowed to gutter at round 240 in the actual log, which is a DM bookkeeping failure, not an in-fiction event competent adventurers would let happen unnoticed. Backfilled at round 230, a turn before it would have run dry, matching normal practice.
