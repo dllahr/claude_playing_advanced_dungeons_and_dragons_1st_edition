@@ -5696,3 +5696,10 @@ Pending ledger addition, expedition 31:
 
 ## Day 140 rounds 421-441 -- gathering the body, party joins
 All 12 arrows recovered, no breakage. Weapon check (same table): d100=37 armed, d100=83 -> unarmed with a formal weapon (claws/teeth only) -- nothing to recover. No coin (wandering individual, same reasoning as the first troglodyte -- no lair here). Party joined Tristle at (29,32), 11 squares, no wandering check. Next to the pool (area 50/the pool feature at 29,33) together.
+
+## Day 140 -- ochre jelly, area 50, Yrtone steps in it
+First ochre jelly of the campaign -- bestiary/ochre-jelly.md created (MM p.75, page-rendered): AC8, HD6, 1 attack 3-12, Treasure Nil, non-intelligent. CRITICAL RULE: only LIGHTNING causes it to split (half damage each); no edged-weapon-splitting rule exists for this creature (that's a different ooze, don't invent it).
+
+Surprise: party d6=3, widened to 1-3 (could pass for a wet patch at a glance, DMG factors-contributing-to-surprise). Front rank is Dave/Torsat/Yrtone (established day 140 round 19 reshuffle); d3=3 -> Yrtone (same ordering convention as the day-139 orc melee-contact pick). Hit for 5 (needs 10 vs AC3, rolled 14, 3d4). 7hp -> 2hp.
+
+STANDING THREAT: the MM text describes the fluid as causing 3-12 hp/round of ongoing exposure while in contact -- Yrtone is still touching it. This needs resolving before narrating further; stopped to hand it back to the player.
