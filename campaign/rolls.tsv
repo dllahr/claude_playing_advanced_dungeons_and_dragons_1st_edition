@@ -11367,3 +11367,30 @@ when	exped	turn	notation	dice	modifier	total	hidden	reason
 2026-10-02			d6	4	0	4		do the 2 troglodytes pursue the retreating, shouting Tristle? 1-3 give chase, 4-6 hold/wary of the shout
 2026-10-02			d100	64	0	64		B1 area 53 bat-disturbance check, turn 6 (rounds 258-267): 5% per light source, quiet movement
 2026-10-02			d100	23	0	23		B1 area 53 bat-disturbance check, turn 7 (rounds 268-277): 5% light + 10% noise (Tristle's shout) = 15%
+2026-10-02			d6	3	0	3		initiative, party
+2026-10-02			d6	2	0	2		initiative, monsters
+2026-10-02			d20	12	0	12		Dave attacks with short bow
+2026-10-02			d20	17	0	17		Dave attacks with short bow
+2026-10-02			1-6 (1d6)	4	0	4		Dave damage, short bow
+2026-10-02			d20	13	0	13		Torsat attacks with short bow
+2026-10-02			d20	20	0	20		Torsat attacks with short bow
+2026-10-02			1-6 (1d6)	4	0	4		Torsat damage, short bow
+2026-10-02			d20	5	0	5		Tristle attacks with short bow
+2026-10-02			d20	3	0	3		Tristle attacks with short bow
+2026-10-02			d20	18	0	18		Blartho attacks with sling
+2026-10-02			2-5 (1d4+1)	2	1	3		Blartho damage, sling
+2026-10-02			d20	15	0	15		Yrtone attacks with sling
+2026-10-02			2-5 (1d4+1)	4	1	5		Yrtone damage, sling
+2026-10-02			d20	7	0	7		Dellie attacks with sling
+2026-10-02			d20	10	0	10		Hask attacks with sling
+2026-10-02			d20	20	0	20		Ista attacks with dart
+2026-10-02			1-3 (1d3)	1	0	1		Ista damage, dart
+2026-10-02			d20	3	0	3		Ista attacks with dart
+2026-10-02			d20	13	0	13		Ista attacks with dart
+2026-10-02			d20	3	0	3		Frython attacks with dart
+2026-10-02			d20	15	0	15		Frython attacks with dart
+2026-10-02			d20	1	0	1		Frython attacks with dart
+2026-10-02			d20	15	0	15		Brand attacks with hand axe
+2026-10-02			d100	39	0	39		morale
+2026-10-02			d100	73	0	73		is the surviving troglodyte armed at all? 50% chance per MM
+2026-10-02			d100	31	0	31		if armed, which weapon (bestiary/troglodyte.md: javelin x2 25%, stone battle axe 10%, stone morning star 10%, sword 5%, else claws/teeth)

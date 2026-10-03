@@ -5617,3 +5617,9 @@ Hadn't committed to exact coordinates when the encounter fired, just an abstract
 Process error caught and fixed: party.py move substituted its own 9-square orthogonal route instead of the player's explicit 6-square diagonal-stepping path. Corrected directly in party.tsv (edited the just-written row before anything depended on it) to the real path and distance (60ft, 10 rounds at 60ft/turn very-heavy), not the tool's 90ft/15-round guess.
 
 Troglodytes decided to hold position (round 272 ruling stands) rather than move off in the 10 rounds since. (29,40) is now within the party's lit lantern's 30ft radius (dmap confirms); (29,41) is just outside it (31.6ft/blocked), still dark -- only Tristle's infravision would show that one. Bat-disturbance turn7 (268-277, includes Tristle's shout -- 15%): rolled 23, safe. No wandering check.
+
+## Day 140 round 1 (trog fight) -- one killed, one withdraws
+17 attacks at the visible troglodyte (hp9, AC5, needs 10 at short range for bows/slings, +2 penalty applied to darts at medium/30ft, +5 to Brand's hand axe at long/30ft): hits from Dave(4), Torsat(4, nat20), Blartho(3), Yrtone(5), Ista(1, nat20) = 17 total -- dead before it could act. Morale check for the survivor at +15% (50%+ casualties): 50+5(2HD)=55 base, rolled 39+15=54, HOLDS. Weapon roll: d100=73, unarmed (claws/teeth only, no javelin). Given no ranged option and 1-vs-10 odds after watching its partner die in one volley, it withdraws into the unexplored dark east of (29,41) rather than charging in -- DM judgment, not a panic/flee roll (morale technically held). Fight closed.
+
+Pending ledger addition, expedition 31 (not yet earned -- credit on emerging):
+- all 10 (Dave,Torsat,Tristle,Frython,Ista,Blartho,Yrtone,Dellie,Hask,Brand), pending XP for 1 troglodyte, hp9: 36+2(9)=54, per bestiary/troglodyte.md. audit-skip

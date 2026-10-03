@@ -103,6 +103,7 @@ axe 10%, stone morning star 10%, sword 5%. The rest fight with claws and teeth.
 |---|---|---|---|
 | 3 | corridor 3, turn 10 wandering | 6 | Killed. Surprised the party on a 3. Torsat 6→1, Yrtone 7→1. Dave and Torsat both **failed** stench saves; Dave lost 6 rounds of cumulative -1 STR, 18/26 down to 12. 50 XP. |
 | 4 | area 27, round 64 wandering | 6 | Killed in one round. Surprised the party on a 3 again. Both stench saves **made**. All three of its surprise attacks missed AC 3. Died to Dave's rear attack for 11; **initiative was tied, so it still struck as it fell** and took Torsat 6→0. |
+| 31 | area 53, near (29,40), day 140 | 9 | **Neither side surprised** — Tristle had infravision in total darkness, and chameleon skin is "by sight only," so the 1-4 bonus never applied (see "Special defences" above). Visible one killed outright in round 1 by a 17-attack party volley before it acted. The second (hp 8, unarmed, d100=73) watched and withdrew into the dark rather than charge 10 armed people alone — morale technically held, it just wasn't suicidal. |
 
 **The lesson from both:** AC 3 turns most of its attacks aside, but it gets
 three of them every round and one landing hit is most of a 1st-level fighter.

@@ -402,3 +402,9 @@ when	day	exped	round	side	actor	verb	target	qty	detail
 2026-10-02	140	31	1			initiative			party d6=1 vs monsters d6=1, TIED -- simultaneous
 2026-10-02	140	31	1	party	Tristle	declare			retreats 40ft to the party, shouting warning, takes 2nd rank
 2026-10-02	140	31	1			end			troglodytes held rather than pursuing (d6=4, wary of the shout) -- no blows exchanged, Tristle rejoins the party
+2026-10-02	140	31	1			start			2 troglodytes (hp 9, 8), one visible at (29,40) in lamplight, one dark at (29,41) unseen -- party advances and fires
+2026-10-02	140	31	1			initiative			party d6=3 vs monsters d6=2, party acts first
+2026-10-02	140	31	1	party	party	declare			everyone fires missiles at the visible troglodyte at (29,40) -- Dave/Torsat/Tristle short bow x2, Blartho/Yrtone/Dellie/Hask sling x1, Ista/Frython dart x3 (-2, past 15ft), Brand hand axe x1 (-5, long range)
+2026-10-02	140	31	1	monsters		damage	trog_29_40	17	17 damage across the whole volley, 9hp troglodyte
+2026-10-02	140	31	1		trog_29_40	dead			killed before it could act
+2026-10-02	140	31	1			end			unarmed troglodyte survivor (d100=73, no weapon) withdraws into the unexplored dark rather than charging 10 armed people alone -- morale held but it isn't suicidal
