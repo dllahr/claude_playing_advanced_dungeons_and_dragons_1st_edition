@@ -5780,3 +5780,6 @@ First bestiary entry created (bestiary/hobgoblin.md, MM p.52 page-rendered): AC5
 
 ## Day 140 round 549 -- 2 scouts sent toward the arrow
 d6=4 -> 2 of the 5 (hobgoblin_49a/b) sent to scout toward the shot, not the whole group. Moved to (25,20), ~31.6ft from the party at (26,23) -- not quite in lamp range yet (checked via scan, clean). Not narrated as "hobgoblins" to the player, just "the group" / "shapes" per their actual perception limit.
+
+## Day 140 -- correction and resolution: scouts now visible at (26,24), 10ft
+Caught two errors mid-resolution: first move put them in solid rock (25,22), second valid-path move still had LOS blocked by a corner. Corrected by advancing them along the real pathed route (dmap.find_path) to (26,24), confirmed via scan -- genuinely visible now, 10ft north of the party. Both sides have been aware of each other's general presence since Tristle's shot; narrating this as a tense close approach, not a fresh surprise check (neither side is meaningfully hidden from the other at this point).
