@@ -1704,3 +1704,8 @@ when	exped	round	kind	anchor	detail	note
 2026-10-03	31	351	advance		4	day 140: Dave and Torsat switch to bows and stand guard while the rest recover the arrow and search the spider's lair
 2026-10-03	31	361	advance		10	day 140: Dave and Torsat guard the NW exit while the other 8 search all 8 squares of the raised cavern, one each
 2026-10-03	31	363	advance		2	day 140: chipping a sample of the bluish ore off the east wall, mallet and spike
+2026-10-03	31	376	advance		13	day 140: heading out, Tristle 40ft ahead, own 12" rate, down through the stairs and south to (22,29)
+2026-10-03	31	364	check	360	d6=6	anchor 360 + 4
+2026-10-03	31	396	advance		20	day 140: party catches up to (22,33), 40ft behind Tristle, heading out
+2026-10-03	31	391	check	390	d6=1 -> CrabSpider(1)-AC7, HD2*, hp 12,#AT 1, D1-8 +poison, MV 120'(40'), Save FI, ML7	anchor 390 + 1
+2026-10-03	31	391	correct		-5	process error: advanced the full 20-round party catch-up move straight through a wandering check that fired at round 391 instead of stopping there; rolling back to resolve it at the party's actual position (15 rounds in = 90ft = 9 squares of the 12-square route)
