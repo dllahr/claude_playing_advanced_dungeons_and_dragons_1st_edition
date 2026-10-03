@@ -5675,3 +5675,6 @@ Player caught a real error: I capped encounter distance at 2x the lamp radius (6
 Dave: 12 shots, hits on 4/8/9/12 for 1,3(nat20),4,2 = 10 dmg. Torsat: 12 shots, hits on 1/3/4/9/12 for 6,6,1,4,6 = 23 dmg. Brand: 6 throws at -5 (long range 28ft), 1 hit for 1 dmg (moot). Total 34 vs 12hp -- dead well before segment 2 even finished. Tristle running back (120ft/round max, 73ft to cover) didn't reach range in time, which is fine, moot now. Zero party losses, zero rounds of normal combat needed.
 Pending ledger addition, expedition 31 (not yet earned):
 - all 10, pending XP for 1 crab spider, hp12: 145+3(12)=181, per bestiary/crab-spider.md. audit-skip
+
+## Day 140 rounds 391-394 -- searching the wandering spider
+All 30 missiles recovered, no breakage. Treasure: same reasoning as the troglodyte precedent -- this was a WANDERING individual, not one encountered at a lair/web, and crab spiders don't carry coin on their person. No roll, nothing found. Blartho/Yrtone/Dellie/Hask switched back to slings (treated as free, same speed logic as the original sling-drop rule, just in reverse). No wandering check.
