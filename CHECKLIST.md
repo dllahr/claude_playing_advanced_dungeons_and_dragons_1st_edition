@@ -535,6 +535,19 @@ python mapdb/dmap.py graph <db> <level>
       hand-roll an edge lookup.** When reporting what a stop reveals, iterate
       every cell `dmap.py light` returns and run `at` (or `dmap.exits`) on
       each one — not just the cell the party is standing on.
+- [ ] ⚠ **CHECK STOCKING VISIBILITY AT EVERY SQUARE OF A MULTI-SQUARE MOVE, NOT
+      JUST THE DESTINATION.** Day 140, same session as the door bug above: a
+      stocked group came within lamp range on the FIRST square of a 2-square
+      move, but only the destination square was checked, so the sighting (and
+      the party's stop) landed a full square late. Also: **don't treat a
+      light-radius distance check as pass/fail at a hard decimal** — 31.6ft
+      vs a 30ft radius is inside normal positional slop for where within a
+      10' square something actually stands; a margin that small is "yes,"
+      not "no." Check the fractional intermediate squares of any multi-square
+      move the same way the goblin/troglodyte wandering-check incidents
+      taught for TIME (stop where the trigger actually fires, not at the
+      planned endpoint) — the same discipline applies to stocked sightings
+      coming into range mid-move, not just to wandering checks firing mid-move.
 - [ ] Movement has **THREE speeds**, not two *(PHB p. 102, verified)*:
       **1" = 10 ft per TURN** exploring and mapping; **5× faster on a known
       route** (90 ft per 2 rounds for this party); **10× faster fleeing or in
