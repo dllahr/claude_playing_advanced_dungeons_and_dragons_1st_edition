@@ -11404,3 +11404,7 @@ when	exped	turn	notation	dice	modifier	total	hidden	reason
 2026-10-02			d6	3	0	3		wandering check, anchor 330
 2026-10-02			d100	77	0	77		B1 area 53 bat-disturbance check, turn 12 (rounds 318-327): 5% light, quiet
 2026-10-02			d100	77	0	77		B1 area 53 bat-disturbance check, turn 13 (rounds 328-337): 5% light, quiet
+2026-10-02			d6	1	0	1		surprise check, party
+2026-10-02			d20	6	0	6		crab spider attacks AC 4
+2026-10-02			d6	4	0	4		initiative, party
+2026-10-02			d6	3	0	3		initiative, monsters
