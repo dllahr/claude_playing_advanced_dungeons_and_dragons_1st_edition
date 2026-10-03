@@ -608,3 +608,5 @@ when	map	level	x	y	exped	turn	squares	feet	rate	why	route
 2026-10-03	b1	2	30	26	31		1	10	explore	day 140: party advances 1 square east to (30,26), looks around	30,26
 2026-10-03	b1	2	30	27	31		1	10	explore	day 140: party advances 1 square north to (30,27)	30,27
 2026-10-03	b1	2	31	27	31		1	10	explore	day 140: party advances 1 square east to (31,27)	31,27
+2026-10-03	b1	2	27	27	31		4	40	explore	day 140: party heads back to the door to spike it	29,27 28,27 27,27
+2026-10-03	b1	2	26	23	31		4	40	explore	day 140: party 40ft behind Tristle, heading south	26,26 26,25 26,24 26,23
