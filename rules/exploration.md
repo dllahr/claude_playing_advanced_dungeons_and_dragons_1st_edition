@@ -193,9 +193,27 @@ asking "who is in the lane?"
 
 ### Withdrawing from melee
 
-A fighter who falls back while an ally immediately fills the gap takes **no free attack
-against them** — that's a relief in good order. A creature that **breaks and flees** does
-give free attacks, at **+2** for showing its back.
+A fighter who falls back **while an ally immediately fills the gap** takes **no free attack
+against them** — that's a relief in good order, not a disengage: someone is still standing
+in the opponent's reach the whole time, so there's no "melee ends, opponent gets a free
+swing" moment to trigger.
+
+**A creature that actually leaves the melee** — nobody fills its place, it is breaking off
+the engagement outright — invokes the fuller rule at `## Breaking off from melee` below
+(DMG p.70): a free attack **routine** at **+6 total** (rear +2, stunned/motionless +4,
+shield and DEX negated), not merely +2. **This file previously said "+2 for showing its
+back," citing only the rear-attack half of the DMG's own "as if it were a rear attack upon
+a stunned opponent" language and dropping the stunned +4.** That was an incomplete
+transcription, corrected 2026-10-02 after it produced an inconsistent ruling against the
+fuller, page-rendered citation in `rules/combat.md`. **Corollary: rules corrections are
+prospective** — anything already resolved under the old +2 reading stands as played.
+
+A withdrawal that still fights as it goes (the morale table's "Fall back, fighting," 1-15%
+margin) is the first case above, not the second: it backs away facing the enemy, someone
+is still in reach, and it draws nothing extra. A full "Disengage — retreat" (16-30%) or a
+panicked "Flee in panic" (31-50%) is the second case, and DOES owe the full p.70 free
+attack if the retreating creature was genuinely in melee (adjacent, in striking range) when
+it broke off.
 
 ### Recoverable ammunition
 
