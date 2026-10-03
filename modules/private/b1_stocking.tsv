@@ -146,3 +146,5 @@ when	day	level	area	monster_id	monster	verb	x	y	hp	exped	round	duration	note
 2026-10-03	140			kobold_51e		move	32	29		31	490		CORRECTION: same, fleeing alongside kobold_51d
 2026-10-03	140			kobold_51d		flee	32	30		31	494	999	day 140: released by Tristle under a standing arrangement -- call his name on sight, trade news for safe passage. Not pursued.
 2026-10-03	140			kobold_51e		flee	32	30		31	494	999	day 140: released alongside kobold_51d, same arrangement
+2026-10-03	140			hobgoblin_49a		move	25	20		31	546		day 140: sent with hobgoblin_49b to scout toward the arrow -- MOVE 9"=90ft/round, closing from (25,16)
+2026-10-03	140			hobgoblin_49b		move	25	20		31	546		day 140: scouting alongside hobgoblin_49a

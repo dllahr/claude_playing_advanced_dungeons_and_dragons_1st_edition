@@ -5777,3 +5777,6 @@ Ran scan on Tristle's full 10-square declared path up front (per standing practi
 
 ## Day 140 round 1 (hobgoblin encounter) -- Tristle's conditional volley resolved
 First bestiary entry created (bestiary/hobgoblin.md, MM p.52 page-rendered): AC5, HD1+1, dmg1-8, infravision 60', fights fine in daylight too, no special attacks/defenses. Surprise: Tristle d6=3 not surprised, hobgoblins d6=1 SURPRISED (1 segment, their own roll -- matches the player's "if surprised, fire 6" branch exactly since only 1 segment was available, not 2). 6 shots at 3x rate, needs 12 vs AC5: 5 misses (11,9,11,4,6), 1 hit (14) for 3 (1d6) -- the 9hp one down to 6. Tristle fell back to the party (not breaking off from melee -- he was never adjacent, so no DMG p.70 penalty), calling out the warning. Party caught up to (26,23), Tristle returning to meet them. Encounter left OPEN/paused in encounter.tsv -- hobgoblins' reaction not yet resolved, no morale trigger yet (1 minor hit on 1 of 5 doesn't meet any threshold).
+
+## Day 140 round 549 -- 2 scouts sent toward the arrow
+d6=4 -> 2 of the 5 (hobgoblin_49a/b) sent to scout toward the shot, not the whole group. Moved to (25,20), ~31.6ft from the party at (26,23) -- not quite in lamp range yet (checked via scan, clean). Not narrated as "hobgoblins" to the player, just "the group" / "shapes" per their actual perception limit.
