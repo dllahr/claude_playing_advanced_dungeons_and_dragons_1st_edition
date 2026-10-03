@@ -437,3 +437,8 @@ when	day	exped	round	side	actor	verb	target	qty	detail
 2026-10-03	140	31	1	party	party	declare			Blartho/Hask sling, Ista/Frython dart, Brand hand axe, Tristle short bow -- all fire at the jelly
 2026-10-03	140	31	1	monsters		damage	ochre	9	Brand 6, Tristle 3 -- 9 of 16hp. Nobody else in reach (it's slow, Move 3", everyone fired from range).
 2026-10-03	140	31	1	monsters		damage	ochre	3	correction -- Ista/Frython get 3 darts/round, Tristle 2 bow shots; only 1 each was rolled initially. Extra: Ista hit for 3, rest missed. 12 of 16hp total now.
+2026-10-03	140	31	2			initiative			round 2 begins
+2026-10-03	140	31	2			initiative			monsters d6=3 vs party d6=2, monsters first -- but the jelly (Move 3") still can't reach anyone holding range
+2026-10-03	140	31	2	party	party	declare			everyone fires another volley, staying out of contact range -- Dave/Torsat/Blartho/Yrtone/Dellie/Hask sling or bow, Ista/Frython dart x3, Brand hand axe
+2026-10-03	140	31	2		ochre	dead			dead by Dave's first shot (4 dmg vs 4hp remaining) -- rest of the volley is overkill, not rolled
+2026-10-03	140	31	2			end			ochre jelly dead, round 2, zero party losses beyond Yrtone's earlier contact hit

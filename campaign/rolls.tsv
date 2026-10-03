@@ -11527,3 +11527,18 @@ when	exped	turn	notation	dice	modifier	total	hidden	reason
 2026-10-03			d20	7	0	7		Frython attacks with dart
 2026-10-03			d20	6	0	6		Frython attacks with dart
 2026-10-03			d20	1	0	1		Tristle attacks with short bow
+2026-10-03			d6	2	0	2		initiative, party
+2026-10-03			d6	3	0	3		initiative, monsters
+2026-10-03			d20	13	0	13		Dave attacks with short bow
+2026-10-03			1-6 (1d6)	4	0	4		Dave damage, short bow
+2026-10-03			d20	3	0	3		Dave attacks with short bow
+2026-10-03			d20	13	0	13		Torsat attacks with short bow
+2026-10-03			1-6 (1d6)	2	0	2		Torsat damage, short bow
+2026-10-03			d20	12	0	12		Torsat attacks with short bow
+2026-10-03			1-6 (1d6)	1	0	1		Torsat damage, short bow
+2026-10-03			d20	14	0	14		Blartho attacks with sling
+2026-10-03			2-5 (1d4+1)	2	1	3		Blartho damage, sling
+2026-10-03			d20	11	0	11		Yrtone attacks with sling
+2026-10-03			d20	16	0	16		Dellie attacks with sling
+2026-10-03			2-5 (1d4+1)	4	1	5		Dellie damage, sling
+2026-10-03			d20	5	0	5		Hask attacks with sling

@@ -5709,3 +5709,8 @@ Spell declared before initiative (Dellie's CLW), correct per the new combat-sequ
 
 ## Day 140 -- correction: Ista/Frython (3 darts) and Tristle (2 bow) under-rolled
 Only resolved 1 attack each initially instead of their real rate. Added: Ista dart#2 hit(18v13) for 3(1d3), dart#3 miss(11v13). Frython dart#2 miss(7v13), dart#3 miss(6v13). Tristle bow#2 miss(1v9, nat1). +3 damage. Jelly now 12 of 16hp total this round, not 9.
+
+## Day 140 round 2 -- ochre jelly dead
+Monsters won initiative but it still couldn't reach anyone (Move 3", party held range). Volley: Dave hit(13v12) for 4 (1d6) -- already lethal on its own (4hp left). Torsat hit(13v12) for 2, hit(12v12) for 1. Blartho hit(14v12) for 3. Yrtone miss(11v12). Dellie hit(16v14, -2 DEX) for 5. Hask miss(5v12). 15 damage total before the rest were even rolled -- Ista/Frython/Brand/Tristle's shots never fired, moot. Dead, zero party losses beyond Yrtone's one hit.
+
+XP value for ochre jelly STILL NOT TRANSCRIBED (bestiary/ochre-jelly.md flags this) -- DMG Appendix E page not yet located under "ochre"/rotated-page OCR. Owed before this kill's XP can be added to the pending ledger. Do not credit a guessed number.
