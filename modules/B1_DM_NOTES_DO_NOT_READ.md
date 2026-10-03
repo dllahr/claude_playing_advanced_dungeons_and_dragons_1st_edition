@@ -5658,3 +5658,6 @@ Party now at (31,35), area 52 RAISED CAVERN (8 squares) -- new area, not yet exp
 
 Pending ledger addition, expedition 31 (not yet earned -- credit on emerging):
 - all 10 (Dave,Torsat,Tristle,Frython,Ista,Blartho,Yrtone,Dellie,Hask,Brand), pending XP for 1 crab spider, hp7: 145+3(7)=166, per bestiary/crab-spider.md. audit-skip
+
+## Day 140 rounds 347-351 -- searching the spider's lair
+Area 52 is only 8 squares total; nothing else stocked there besides the now-dead spider -- confirmed via stocking.present(). Treasure (type J-N,Q, solitary monster killed at its own lair, not a wandering individual away from home like the troglodyte -- rolled in full): 13cp+8sp+5ep+7gp+5pp, gems none. Logged to money.tsv (5 separate coin-type rows). Single arrow recovered, no breakage. Dave and Torsat switched back to bows on guard. No wandering check.
