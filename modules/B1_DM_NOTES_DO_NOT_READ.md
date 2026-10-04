@@ -6650,3 +6650,30 @@ Brand choosing a profession, which remains unresolved.
 Current state: A019 closed, A020/A021 closed (superseded), A022 active
 (0/16 ticks so far, location-independent). Brand now functionally
 literate at the "simple words" stage.
+
+## Day 141 -- player caught a 22-day-stale exemption: Yrtone never resumed
+Player asked why `carry.py pack --target heavy` doesn't list Yrtone.
+Traced it: campaign/carry_exempt.tsv marked her EXEMPT on day 119 after
+her coma (-8 hp vs the berserker), explicitly conditioned "RESUME when
+she is on her feet and has taken her kit back." She WAS back on her feet
+the same day (coma ended round 636, same expedition, confirmed in DM
+notes) and has cast spells and fought normally in every scene since --
+but the resume row was simply never written. Every OTHER day-123
+exemption in that file got its matching resume row same-day; hers alone
+was dropped.
+CONSEQUENCE: she has silently carried ZERO shared kit and gotten no pace
+benefit from it for roughly 22 in-game days (her own "+share 0" showing
+plainly in every `carry.py` roster run since, which nobody caught until
+now -- the number was right there, just never looked at with this
+question in mind). Not a tool bug: `pack`/`party.py` both correctly read
+carry_exempt.tsv as designed; the DATA was stale, not the code.
+FIX: appended the missing resume row (campaign/carry_exempt.tsv), dated
+today since that's when it was caught, with the note explaining the fact
+itself has been true since day 119 -- append-only, not a rewrite of the
+exemption's own history. NOT retroactively recomputing any of the last
+22 days' movement rates or pack distributions -- that's exactly the kind
+of TSV-revert this campaign doesn't do; fixed forward only.
+VERIFIED: `pack --target heavy` now lists all 9 relevant bearers
+including Yrtone, still fits cleanly within heavy (9"), carry.py check
+clean.
+Current state: Yrtone back in the shared-kit rotation going forward.
