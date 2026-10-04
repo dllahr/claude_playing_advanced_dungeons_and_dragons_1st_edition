@@ -6626,3 +6626,27 @@ coincidence. Logged the private conversation (141:3) and opened L069 to
 track it -- no name yet, follow-up whenever Toller's next letter to
 Ludbury gets an answer.
 Current state: unchanged otherwise. L069 open, subject tristle.
+
+## Day 141 -- agenda cleanup: A019 closed, A020/A021/A022 (Brand's letters)
+Player: A019 is done, and A020/A021 were wrongly location-locked -- Brand
+and Frython's lessons should progress whenever they're together, not only
+at Coll's basecamp specifically.
+A019 (Durnhak slab-watching, L053): closed. Correct call -- the whole
+account was settled face to face at the watercourse on day 139; nothing
+was ever going to show up at the slab after that, the agenda just hadn't
+been told to stop.
+A020/A021 (Brand's letters, L054): closed both, reopened as A022 with the
+location restriction removed, same table, same loop, same cadence/ceiling
+(7/16). Before closing A021, checked `offscreen.py news --who brand` --
+IT HAD AN UNDELIVERED TICK: tick 3 (day 140), a PROGRESS result, never
+shown to the player. Per its own rule ("shown at once... there is nothing
+to hide"), this had to be delivered now, not quietly lost in the
+close/reopen. Stage 3 = "simple words" on the established 5-stage table.
+Delivered via `offscreen.py deliver --who brand` and narrated in the
+reply (Brand actually demonstrating it, since he's right there with the
+party in Wethersby).
+L054 itself stays open -- this is about the reading prerequisite, not
+Brand choosing a profession, which remains unresolved.
+Current state: A019 closed, A020/A021 closed (superseded), A022 active
+(0/16 ticks so far, location-independent). Brand now functionally
+literate at the "simple words" stage.
