@@ -533,3 +533,4 @@ when	day	asset	verb	qty	unit	condition	holder	evidence	note
 2026-10-03	140	saw_hack	move	-1	each	sound			LOST -- same event, day 140
 2026-10-03	140	bag_weightless	move	-1	each				the bag itself ruptured and was ruined freeing Tristle from it, day 140
 2026-10-03	140	camp_food	move	-0.48	person-week				dinner at the basecamp, day 140: ten mouths at a third of a person-day each, from the basecamp's own stock
+2026-10-03	141	camp_food	move	-0.48	person-week				eaten on the road to Wethersby, day 141: ten mouths at a third of a person-day each

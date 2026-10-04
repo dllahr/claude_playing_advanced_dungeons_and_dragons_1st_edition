@@ -6505,3 +6505,20 @@ same rate as every meal this trip) -- not the whole 1.84, since the player
 said "for lunch," not "all of it." carry.py check clean after.
 Current state: everything named now with the party/cart, ready to depart.
 Not yet moved overland -- that's the next declared action.
+
+## Day 141 -- the road to Wethersby
+`overland.py how-far basecamp wethersby`: 21 miles, by cart 0.7-1.0 days --
+matches calendar.md's established "one day's walk, 15-20 miles laden"
+figure for Wethersby<->the crag turning (the basecamp sits half an hour
+off that same road). A single day's journey, departing this morning.
+No wilderness encounter -- this exact road has been travelled many times
+this campaign with nothing on it; no roll, consistent with precedent (not
+narrated as a "nothing happens" per the don't-mention-wandering-checks
+habit, which applies here too even though it's a different mechanism than
+the dungeon clock).
+Not logged to any TSV -- overland position has never been machine-tracked
+in this campaign (overland.py is read-only computation; calendar.md/
+days.tsv are the narrative record, picked up again whenever day 142
+opens).
+Current state: party arrives at Wethersby by evening, day 141, lunch eaten
+on the road from the packed camp_food.
