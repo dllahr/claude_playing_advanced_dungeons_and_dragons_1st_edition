@@ -534,3 +534,11 @@ when	day	asset	verb	qty	unit	condition	holder	evidence	note
 2026-10-03	140	bag_weightless	move	-1	each				the bag itself ruptured and was ruined freeing Tristle from it, day 140
 2026-10-03	140	camp_food	move	-0.48	person-week				dinner at the basecamp, day 140: ten mouths at a third of a person-day each, from the basecamp's own stock
 2026-10-03	141	camp_food	move	-0.48	person-week				eaten on the road to Wethersby, day 141: ten mouths at a third of a person-day each
+2026-10-04	141	military_pick	move	-4	each				sold to Mund, day 141
+2026-10-04	141	spear	move	-4	each				sold to Mund, day 141
+2026-10-04	141	short_sword	move	-4	each				sold to Mund, day 141
+2026-10-04	141	mallet	move	-8	each	sound			sold to Mund, day 141
+2026-10-04	141	pegs_box	move	-1	each	sound			sold to Mund, day 141
+2026-10-04	141	polearm_orc	move	-1	each				sold to Mund, day 141
+2026-10-04	141	long_sword	move	-1	each				sold to Mund, day 141
+2026-10-04	141	javelin	move	-2	each				sold to Mund, day 141

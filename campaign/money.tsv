@@ -156,3 +156,11 @@ when	day	delta	unit	asset	qty	counterparty	interaction	reason	book
 2026-10-03	140	7.0	gp	coin	7	-	-	7 gp off the crab spider's lair, area 52	
 2026-10-03	140	25.0	pp	coin	5	-	-	5 pp off the crab spider's lair, area 52	
 2026-10-03	140	0.39	cp	coin	39	-	-	39 cp off the 3 dead kobolds near (31,27), MM treasure type J individually: 13,13,13 cp	
+2026-10-04	141	16.0	gp	military_pick	-4	mund	-	4 military picks sold to Mund, used-arms half price (8gp list)	
+2026-10-04	141	2.0	gp	spear	-4	mund	-	4 spears sold to Mund, used-arms half price (1gp list)	
+2026-10-04	141	16.0	gp	short_sword	-4	mund	-	4 short swords sold to Mund, used-arms half price (8gp list)	
+2026-10-04	141	0.4	gp	mallet	-8	mund	-	8 mallets sold to Mund, no PHB price -- DM call, modest hardware-adjacent price	
+2026-10-04	141	0.5	gp	pegs_box	-1	mund	-	box of wooden pegs sold to Mund, no PHB price -- DM call, modest hardware-adjacent price	
+2026-10-04	141	3.0	gp	polearm_orc	-1	mund	-	orc polearm sold to Mund as a glaive, used-arms half price (6gp list)	
+2026-10-04	141	7.5	gp	long_sword	-1	mund	-	long sword sold to Mund, used-arms half price (15gp list)	
+2026-10-04	141	0.5	gp	javelin	-2	mund	-	2 javelins sold to Mund, used-arms half price (10sp list)	

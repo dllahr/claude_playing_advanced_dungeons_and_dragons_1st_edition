@@ -6522,3 +6522,38 @@ days.tsv are the narrative record, picked up again whenever day 142
 opens).
 Current state: party arrives at Wethersby by evening, day 141, lunch eaten
 on the road from the packed camp_food.
+
+## Day 141 -- player-caught: horses/mule/cart/camp_food never relocated to Wethersby
+Missed moving these 4 off the basecamp holder when the party travelled.
+Moved: horse_riding 3, mule 1, cart 1, camp_food (remaining 1.36 person-
+week) basecamp->wethersby. Floating-point dust on basecamp's camp_food
+after (same pattern as before) -- clean-anchored to 0. carry.py check
+clean after. Not a revert: append-only corrections, consistent with
+CLAUDE.md.
+
+## Day 141 -- Mund buys the salvage, asked about the ore
+No reaction roll -- known NPC (days 97/102/121/129/135). Sold at the
+established used-arms half-PHB-list rate (confirmed precedent, day 121/129
+scenes): military picks 8gp->4gp each, spears 1gp->10sp each, short swords
+8gp->4gp each, the polearm priced as a glaive (6gp->3gp, matches its
+existing assets.tsv weight entry), the long sword 15gp->7gp10sp, javelins
+10sp->5sp each. Verified all PHB prices via page render (PHB p.35) rather
+than trusting the txt -- OCR on this page was actually clean, confirmed
+rather than corrected. Mallets and the pegs box have no PHB price -- DM
+call, modest hardware-adjacent prices (same treatment as the day-121
+"hardware box... a DM call, flagged" precedent), not full value: 1sp each
+for the mallets, 1gp for the pegs box. Total realised 45gp 18sp, an XP
+award (1gp=1xp, DMG p.85, rounded down) logged to encounters.tsv, not a
+character's running total (audit-skip) -- earned_by "all,Hask,Dellie,Ista"
+per the standing full/half-share split.
+The ore: Mund's assessment given independently from his own trade (smith,
+not miner), landing on the same conclusion Harn already gave for a
+different reason -- not metagamed, just two credible experts agreeing
+because the underlying fact (ordinary streaked rock) is actually true.
+Interaction logged (141:1). Caught two inventory_log.tsv condition
+mismatches (mallet, pegs_box use 'sound', not blank) before committing --
+same bug class as the saw_hack fix earlier this session, now a recognized
+pattern: always check an existing asset's condition column before adding
+a new row for it.
+Current state: party at Wethersby, evening, day 141. Purse at 2,411gp1sp.
+Sold weapons gone; mallet 1 remains (the one meant to stay in use).

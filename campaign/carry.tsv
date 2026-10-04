@@ -1606,3 +1606,20 @@ when	day	who	asset	verb	qty	unit	note
 2026-10-03	141	basecamp	camp_food	move	-0.48	person-week	packed for the lunch stop on the way to Wethersby, day 141: ten mouths at a third of a person-day each
 2026-10-03	141	party	camp_food	move	0.48	person-week	packed for the lunch stop on the way to Wethersby, day 141
 2026-10-03	141	party	camp_food	move	-0.48	person-week	eaten on the road to Wethersby, day 141
+2026-10-03	141	basecamp	horse_riding	move	-3	each	CORRECTION, player-caught: the horses travelled with the cart to Wethersby, day 141, not left behind
+2026-10-03	141	wethersby	horse_riding	move	3	each	at Wethersby, day 141
+2026-10-03	141	basecamp	mule	move	-1	each	CORRECTION, player-caught: the mule travelled with the cart to Wethersby, day 141
+2026-10-03	141	wethersby	mule	move	1	each	at Wethersby, day 141
+2026-10-03	141	basecamp	cart	move	-1	each	the cart itself, now at Wethersby, day 141
+2026-10-03	141	wethersby	cart	move	1	each	at Wethersby, day 141
+2026-10-03	141	basecamp	camp_food	move	-1.36	person-week	CORRECTION, player-caught: the remaining camp food travelled to Wethersby with the party, day 141, not left behind
+2026-10-03	141	wethersby	camp_food	move	1.36	person-week	at Wethersby, day 141
+2026-10-03	141	basecamp	camp_food	anchor	0	person-week	CLEAN ANCHOR, day 141: no camp food left at the basecamp, all of it travelled to Wethersby; the preceding rows' arithmetic left a floating-point dust value instead of a clean zero, this sets it outright
+2026-10-04	141	party	military_pick	move	-4	each	sold to Mund, day 141
+2026-10-04	141	party	spear	move	-4	each	sold to Mund, day 141
+2026-10-04	141	party	short_sword	move	-4	each	sold to Mund, day 141
+2026-10-04	141	party	mallet	move	-8	each	sold to Mund, day 141
+2026-10-04	141	party	pegs_box	move	-1	each	sold to Mund, day 141
+2026-10-04	141	party	polearm_orc	move	-1	each	sold to Mund, day 141
+2026-10-04	141	party	long_sword	move	-1	each	sold to Mund, day 141
+2026-10-04	141	party	javelin	move	-2	each	sold to Mund, day 141
