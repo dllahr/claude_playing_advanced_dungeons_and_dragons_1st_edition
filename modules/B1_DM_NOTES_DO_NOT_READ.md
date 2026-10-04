@@ -6677,3 +6677,23 @@ VERIFIED: `pack --target heavy` now lists all 9 relevant bearers
 including Yrtone, still fits cleanly within heavy (9"), carry.py check
 clean.
 Current state: Yrtone back in the shared-kit rotation going forward.
+
+## Day 141 -- the Inn: ale for ten, and Brand asked again about his trade
+Ale: 10 pints, wool-headed, 3sp each, 1.5gp total, on Holt's tab (same
+convention as day 135/136 -- account.py has no write path, accounts.tsv
+appended directly, matching its own established format). Holt's balance
+384.15 -> 382.65gp owed to the party.
+Brand/L054: rolled a d6 for his immediate reaction, same improv style
+already established for this loop (day 99's d6=3/d6=2 set his original
+approach -- there's no book table for this, it's bespoke, kept
+consistent). Range I used: 1-2 still deflects, 3-4 opens up but stays
+undecided, 5-6 ready to commit. Rolled 4: he engages for real this time
+(reading was his stated prerequisite and it's gone now, so the usual
+dodge isn't available) but doesn't land on an answer -- asks what his
+actual choices even are rather than naming one himself.
+L054 stays open -- real movement, not a close. The reading-milestone from
+earlier tonight was the natural hook for asking again now rather than
+cold; letting that connect rather than treating the two scenes as
+unrelated.
+Current state: ale served, tab updated. Brand engaged but still
+undecided; conversation continues in the reply.
