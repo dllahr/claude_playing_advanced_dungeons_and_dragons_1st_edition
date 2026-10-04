@@ -1578,3 +1578,13 @@ when	day	who	asset	verb	qty	unit	note
 2026-10-03	140	bag_weightless	torch	move	-1	each	LOST -- bag ruptured, contents gone into the vortices of nilspace
 2026-10-03	140	bag_weightless	saw_hack	move	-1	each	LOST -- bag ruptured, contents gone into the vortices of nilspace
 2026-10-03	140	Ista	bag_weightless	move	-1	each	the bag itself ruptures and is ruined, cut open to free Tristle
+2026-10-03	140	area_38	short_sword	move	-4	each	CORRECTION, player-caught: picked back up on the way out, day 140 -- the return route passes right by the cache near the stairs
+2026-10-03	140	party	short_sword	move	4	each	picked back up on the way out, day 140
+2026-10-03	140	area_38	military_pick	move	-4	each	CORRECTION, player-caught: picked back up on the way out, day 140
+2026-10-03	140	party	military_pick	move	4	each	picked back up on the way out, day 140
+2026-10-03	140	area_38	sling	move	-2	each	CORRECTION, player-caught: picked back up on the way out, day 140
+2026-10-03	140	party	sling	move	2	each	picked back up on the way out, day 140
+2026-10-03	140	area_38	javelin	move	-2	each	CORRECTION, player-caught: picked back up on the way out, day 140
+2026-10-03	140	party	javelin	move	2	each	picked back up on the way out, day 140
+2026-10-03	140	area_38	spear	move	-1	each	CORRECTION, player-caught: picked back up on the way out, day 140
+2026-10-03	140	party	spear	move	1	each	picked back up on the way out, day 140

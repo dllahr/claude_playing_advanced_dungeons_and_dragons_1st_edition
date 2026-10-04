@@ -6440,3 +6440,16 @@ injuries all day despite how close the bag came.
 Current state: party out at the cave mouth, round 779, day 140. Tristle
 hp 3/3 (no damage taken in the bag incident). Hobgoblins at (25,16) remain
 alive, undamaged, unaware -- unfinished business for a future expedition.
+
+## Day 140 -- player-caught correction: the cached weapons came out too
+Player: forgot to grab the area-38 weapon cache (4 short swords, 4
+military picks, 2 slings, 2 javelins, 1 spear) on the way out. Checked the
+actual return route before accepting the retcon: it runs 20,9->20,10->
+20,11->20,12->20,13, directly past the cache near (20,14) -- geometrically
+clean, not contradicting anything already resolved, no dice needed (this
+is picking up known gear in plain sight on a route already walked, not a
+new search). Logged as an append-only correction (carry.tsv area_38->
+party, world_changes.tsv), not a revert -- consistent with CLAUDE.md.
+carry.py check clean after.
+Current state: party out at the cave mouth, round 779, day 140, weapon
+cache now back with the party. Nothing else changes.
