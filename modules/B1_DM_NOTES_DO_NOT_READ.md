@@ -6557,3 +6557,30 @@ pattern: always check an existing asset's condition column before adding
 a new row for it.
 Current state: party at Wethersby, evening, day 141. Purse at 2,411gp1sp.
 Sold weapons gone; mallet 1 remains (the one meant to stay in use).
+
+## Day 141 -- cart to the barn, Toller shown the new curios
+Barrels (8, empty) moved party->wend_barn. Cart itself left at the
+wethersby holder (where both carts already live; "send to the barn" read
+as the errand, not a permanent relocation of the cart object -- it was
+never stored inside wend_barn in this campaign's own precedent, only
+goods are).
+Toller scene (141:2): no reaction roll, known NPC. Grounded his response
+in the established "open terms" pattern (diary_zelligar/headboard_
+rosewood/plaque_rogahn, day 32, "still the party's" -- a display/research
+arrangement, not a sale) -- sword_barbarian, plaque_chief and letter_
+thanks are all area-39-MUSEUM pieces, same provenance as plaque_rogahn
+already in the set, so extending the same terms to them is the natural
+move rather than inventing a new arrangement. Offered: open terms for
+those three (nothing sold, nothing moved in carry.tsv -- the party keeps
+legal ownership either way, matching the existing set's own bookkeeping,
+which never shows a sale row for diary/headboard/plaque either).
+Gold rods: plain gold, not curios -- Toller named a number (25gp each,
+100gp for the four, a DM-called buying price under the 30gp list, he's
+not a goldsmith paying full melt) but nothing finalized, player's call.
+Ore: declined an opinion, consistent with "not my trade" -- third
+independent voice (Harn, Mund, now Toller) landing on nothing special,
+because the underlying fact is the same each time, not because anyone
+copied anyone.
+Current state: all 5 shown items still with the party (nothing sold yet),
+offers on the table: open terms for 3 museum pieces, 100gp for the 4 gold
+rods. Awaiting the player's decision.

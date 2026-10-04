@@ -1623,3 +1623,5 @@ when	day	who	asset	verb	qty	unit	note
 2026-10-04	141	party	polearm_orc	move	-1	each	sold to Mund, day 141
 2026-10-04	141	party	long_sword	move	-1	each	sold to Mund, day 141
 2026-10-04	141	party	javelin	move	-2	each	sold to Mund, day 141
+2026-10-04	141	party	barrel_empty	move	-8	each	unloaded at Wend's barn, day 141
+2026-10-04	141	wend_barn	barrel_empty	move	8	each	unloaded at Wend's barn, day 141
