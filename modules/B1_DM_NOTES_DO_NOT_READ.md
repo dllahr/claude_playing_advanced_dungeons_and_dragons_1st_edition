@@ -6453,3 +6453,18 @@ party, world_changes.tsv), not a revert -- consistent with CLAUDE.md.
 carry.py check clean after.
 Current state: party out at the cave mouth, round 779, day 140, weapon
 cache now back with the party. Nothing else changes.
+
+## Day 140 -- down to Coll's basecamp
+Overland, not dungeon -- not clocked against campaign/clock.tsv (that's
+dungeon-only). calendar.md: cave mouth<->basecamp is half an hour at 9".
+Checked current pace via carry.py: Dellie and Hask are at "very heavy, 6""
+right now (today's gear picked up/lost shifted bands), so the party's
+actual bottleneck is 6", not the usual 9" -- scaling per the established
+formula (30 min at 9" -> 45 min at 6"): 45 minutes for this leg. No
+wilderness encounters on this short, known trail (consistent with every
+prior pass). Not logged to any TSV -- this short hop has never been
+clock-tracked in this campaign, only narrated with elapsed time.
+Current state: party at Coll's basecamp, day 140, early evening (half an
+hour out the dungeon + 45 min down the trail, on top of whatever time of
+day the clock's 779 rounds -- about 13 real hours -- put them at by the
+cave mouth).
