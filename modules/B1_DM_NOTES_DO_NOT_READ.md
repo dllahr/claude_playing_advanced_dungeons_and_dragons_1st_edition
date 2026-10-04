@@ -6487,3 +6487,21 @@ from an unnamed landowner, thanking him for driving off a raid. Pure DM
 color grounded in the established facts; not a spoiler, not a clue to
 anything stocked -- just texture for a found curio. Full text given to
 the player in the reply.
+
+## Day 141 -- morning, loading the cart for Wethersby
+New campaign day via log.py day, from the previous day to 141 (audit-skip, before/after figure), the only write path for this.
+Verified exact current quantities via carry.py before moving anything
+(not assumed from memory): basecamp had mallet 8, barrel_empty 8, spear 3,
+polearm_orc 1, long_sword 1, pegs_box 1, sword_barbarian 1, camp_food 1.84
+person-week (post-dinner); party already held military_pick 4, short_sword
+4, spear 1, javelin 2, sling 2 -- no holder change needed for those, "onto
+the cart" is flavor, not a new storage location (cart has never been its
+own carry.tsv holder in this campaign, just an asset tracked by its own
+location like any other).
+Moved basecamp->party: all 7 named item types in full (per "where any of
+the above have multiple, we're taking all of them"), plus a lunch portion
+of camp_food (0.48 person-week, 10 mouths at a third of a person-day each,
+same rate as every meal this trip) -- not the whole 1.84, since the player
+said "for lunch," not "all of it." carry.py check clean after.
+Current state: everything named now with the party/cart, ready to depart.
+Not yet moved overland -- that's the next declared action.

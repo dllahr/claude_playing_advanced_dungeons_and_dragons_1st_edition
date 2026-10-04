@@ -1589,3 +1589,19 @@ when	day	who	asset	verb	qty	unit	note
 2026-10-03	140	area_38	spear	move	-1	each	CORRECTION, player-caught: picked back up on the way out, day 140
 2026-10-03	140	party	spear	move	1	each	picked back up on the way out, day 140
 2026-10-03	140	basecamp	camp_food	move	-0.48	person-week	dinner at the basecamp, day 140 (ten mouths)
+2026-10-03	141	basecamp	mallet	move	-8	each	loaded onto the cart for the trip into Wethersby, day 141
+2026-10-03	141	party	mallet	move	8	each	loaded onto the cart for the trip into Wethersby, day 141
+2026-10-03	141	basecamp	barrel_empty	move	-8	each	loaded onto the cart (stacked, roped down), day 141
+2026-10-03	141	party	barrel_empty	move	8	each	loaded onto the cart (stacked, roped down), day 141
+2026-10-03	141	basecamp	spear	move	-3	each	loaded onto the cart, day 141
+2026-10-03	141	party	spear	move	3	each	loaded onto the cart, day 141
+2026-10-03	141	basecamp	polearm_orc	move	-1	each	loaded onto the cart, day 141
+2026-10-03	141	party	polearm_orc	move	1	each	loaded onto the cart, day 141
+2026-10-03	141	basecamp	long_sword	move	-1	each	loaded onto the cart, day 141
+2026-10-03	141	party	long_sword	move	1	each	loaded onto the cart, day 141
+2026-10-03	141	basecamp	pegs_box	move	-1	each	loaded onto the cart, day 141
+2026-10-03	141	party	pegs_box	move	1	each	loaded onto the cart, day 141
+2026-10-03	141	basecamp	sword_barbarian	move	-1	each	loaded onto the cart, day 141
+2026-10-03	141	party	sword_barbarian	move	1	each	loaded onto the cart, day 141
+2026-10-03	141	basecamp	camp_food	move	-0.48	person-week	packed for the lunch stop on the way to Wethersby, day 141: ten mouths at a third of a person-day each
+2026-10-03	141	party	camp_food	move	0.48	person-week	packed for the lunch stop on the way to Wethersby, day 141
