@@ -6584,3 +6584,26 @@ copied anyone.
 Current state: all 5 shown items still with the party (nothing sold yet),
 offers on the table: open terms for 3 museum pieces, 100gp for the 4 gold
 rods. Awaiting the player's decision.
+
+## Day 141 -- offers accepted, sword held back, news asked
+Player's one adjustment: sword_barbarian stays with the party, NOT put on
+open terms yet -- they want to detect magic on it first and keep it if
+it's enchanted. No TSV change needed for it (never moved in the first
+place). plaque_chief and letter_thanks moved party->toller on open terms
+(mirrors diary_zelligar/headboard_rosewood/plaque_rogahn exactly -- no
+sale, no XP, same as that set's own precedent: confirmed by checking
+encounters.tsv, Zelligar's diary was explicitly "deliberately NOT sold"
+and never drew an award).
+Gold rods: sold, 100gp (25gp each, full value -- plain gold, not a
+used-arms discount). Logged via log.py money, carry.tsv and
+inventory_log.tsv (same condition-column bug caught again on
+gold_rod_small -- 'sound', not blank; this is now the third time this
+exact mistake has happened today, worth remembering for good). XP: 100,
+same gold-for-xp convention as every treasure award, earned_by "all,Hask,Dellie,Ista" (audit-skip).
+News: ran `loops.py --touching Toller` and `offscreen.py news --who
+toller` before answering, per standing practice -- no hidden offscreen
+tick, but L008 (six correspondents in six towns) is open and genuinely
+his to report on: three of six done as of day 86 (Ludbury), nothing
+further since. Honest, modest answer, not invented.
+Current state: purse 2,511gp1sp, XP updated. sword_barbarian still with
+the party, pending a detect magic cast (not yet declared/resolved).

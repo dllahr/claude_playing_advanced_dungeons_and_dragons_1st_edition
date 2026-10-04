@@ -1625,3 +1625,8 @@ when	day	who	asset	verb	qty	unit	note
 2026-10-04	141	party	javelin	move	-2	each	sold to Mund, day 141
 2026-10-04	141	party	barrel_empty	move	-8	each	unloaded at Wend's barn, day 141
 2026-10-04	141	wend_barn	barrel_empty	move	8	each	unloaded at Wend's barn, day 141
+2026-10-04	141	party	plaque_chief	move	-1	each	to Toller on open terms, day 141 -- still the party's, joins the diary/headboard/plaque set
+2026-10-04	141	toller	plaque_chief	move	1	each	on open terms, day 141
+2026-10-04	141	party	letter_thanks	move	-1	each	to Toller on open terms, day 141
+2026-10-04	141	toller	letter_thanks	move	1	each	on open terms, day 141
+2026-10-04	141	party	gold_rod_small	move	-4	each	sold to Toller, day 141

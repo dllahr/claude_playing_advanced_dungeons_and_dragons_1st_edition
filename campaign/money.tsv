@@ -164,3 +164,4 @@ when	day	delta	unit	asset	qty	counterparty	interaction	reason	book
 2026-10-04	141	3.0	gp	polearm_orc	-1	mund	-	orc polearm sold to Mund as a glaive, used-arms half price (6gp list)	
 2026-10-04	141	7.5	gp	long_sword	-1	mund	-	long sword sold to Mund, used-arms half price (15gp list)	
 2026-10-04	141	0.5	gp	javelin	-2	mund	-	2 javelins sold to Mund, used-arms half price (10sp list)	
+2026-10-04	141	100.0	gp	gold_rod_small	-4	toller	-	4 small gold rods sold to Toller, 25gp each	

@@ -542,3 +542,4 @@ when	day	asset	verb	qty	unit	condition	holder	evidence	note
 2026-10-04	141	polearm_orc	move	-1	each				sold to Mund, day 141
 2026-10-04	141	long_sword	move	-1	each				sold to Mund, day 141
 2026-10-04	141	javelin	move	-2	each				sold to Mund, day 141
+2026-10-04	141	gold_rod_small	move	-4	each	sound			sold to Toller, day 141
