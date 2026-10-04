@@ -1588,3 +1588,4 @@ when	day	who	asset	verb	qty	unit	note
 2026-10-03	140	party	javelin	move	2	each	picked back up on the way out, day 140
 2026-10-03	140	area_38	spear	move	-1	each	CORRECTION, player-caught: picked back up on the way out, day 140
 2026-10-03	140	party	spear	move	1	each	picked back up on the way out, day 140
+2026-10-03	140	basecamp	camp_food	move	-0.48	person-week	dinner at the basecamp, day 140 (ten mouths)

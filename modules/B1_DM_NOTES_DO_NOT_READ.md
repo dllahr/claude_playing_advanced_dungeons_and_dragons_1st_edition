@@ -6457,14 +6457,33 @@ cache now back with the party. Nothing else changes.
 ## Day 140 -- down to Coll's basecamp
 Overland, not dungeon -- not clocked against campaign/clock.tsv (that's
 dungeon-only). calendar.md: cave mouth<->basecamp is half an hour at 9".
-Checked current pace via carry.py: Dellie and Hask are at "very heavy, 6""
-right now (today's gear picked up/lost shifted bands), so the party's
-actual bottleneck is 6", not the usual 9" -- scaling per the established
-formula (30 min at 9" -> 45 min at 6"): 45 minutes for this leg. No
-wilderness encounters on this short, known trail (consistent with every
-prior pass). Not logged to any TSV -- this short hop has never been
-clock-tracked in this campaign, only narrated with elapsed time.
-Current state: party at Coll's basecamp, day 140, early evening (half an
-hour out the dungeon + 45 min down the trail, on top of whatever time of
-day the clock's 779 rounds -- about 13 real hours -- put them at by the
-cave mouth).
+ERROR, player-caught: I read the raw "divided evenly among bearers" output
+as the party's pace, which put Dellie/Hask at "very heavy, 6"". That
+ignores `carry.py pack --target heavy`, the tool that exists precisely
+for this -- it fills the STRONGEST bearers first (Dave alone can carry
+nearly all 892 gp-wt of the shared kit, he's got 1953 gp-wt of room to
+spare even after). Run: with it packed properly, EVERY member sits within
+"heavy" (9"), so the party genuinely moves at 9", same as it has all day.
+CORRECTED: 30 minutes for this leg, not 45. Not logged to any TSV -- this
+short hop has never been clock-tracked in this campaign, only narrated
+with elapsed time, so there's no row to fix, only the stated figure.
+No wilderness encounters on this short, known trail (consistent with
+every prior pass).
+Current state: party at Coll's basecamp, day 140, evening (half an hour
+out the dungeon + 30 min down the trail).
+
+## Day 140 -- dinner, and Frython reads the letter of thanks
+Dinner logged: -0.48 person-week from the basecamp's own camp_food stock
+(ten mouths), same rate as every other meal this trip. Needed BOTH a
+carry.tsv row (location) and an inventory_log.tsv row (ownership) --
+missed the second one first pass, carry.py check caught it immediately
+(located != owned), fixed before moving on.
+letter_thanks (assets.tsv: "a parchment letter of thanks," curio, off the
+north wall of area 39 MUSEUM, day 139, no value stated in the module) --
+first time its actual content is composed, since the key only ever said
+WHO it's between, not what it says. Addressed to ROGAHN specifically (the
+warrior of the pair, "help against barbarians" fits him over the wizard),
+from an unnamed landowner, thanking him for driving off a raid. Pure DM
+color grounded in the established facts; not a spoiler, not a clue to
+anything stocked -- just texture for a found curio. Full text given to
+the player in the reply.
