@@ -525,3 +525,10 @@ when	day	asset	verb	qty	unit	condition	holder	evidence	note
 2026-10-03	140	ore_sample_bluish	move	1.0	each				chipped off the east wall of area 52 with mallet and spike, to show Durnhak, day 140
 2026-10-03	140	iron_spike	move	-2.0	each				2 iron spikes driven into the jamb at (27,26,H) -- it opens away from area 51, into area 53, so a jamb spike (not a floor wedge) is the strong method
 2026-10-03	140	iron_spike	move	2.0	each				2 iron spikes pulled back out of the door jamb at (27,26,H), day 140
+2026-10-03	140	bag_weightless	move	1.0	each				found in area 43, day 140 -- a plain cloth sack that weighs a fixed 15 lb no matter what's inside it
+2026-10-03	140	iron_spike	move	-6	each				LOST -- bag of the mystical find ruptured to free Tristle, contents gone into the vortices of nilspace, day 140
+2026-10-03	140	rations_std	move	-7.62	person-week				LOST -- same event, day 140
+2026-10-03	140	waterskin	move	-7	each				LOST -- same event, day 140
+2026-10-03	140	torch	move	-1	each				LOST -- same event, day 140
+2026-10-03	140	saw_hack	move	-1	each	sound			LOST -- same event, day 140
+2026-10-03	140	bag_weightless	move	-1	each				the bag itself ruptured and was ruined freeing Tristle from it, day 140

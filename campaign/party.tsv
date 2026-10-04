@@ -611,3 +611,25 @@ when	map	level	x	y	exped	turn	squares	feet	rate	why	route
 2026-10-03	b1	2	27	27	31		4	40	explore	day 140: party heads back to the door to spike it	29,27 28,27 27,27
 2026-10-03	b1	2	26	23	31		4	40	explore	day 140: party 40ft behind Tristle, heading south	26,26 26,25 26,24 26,23
 2026-10-03	b1	2	26	21	31		4	40	explore	day 140: CORRECTION -- party trails Tristle 4 squares behind along his real (corrected) path, not the phantom (26,23) stop	27,26 26,26 26,25 26,24 26,23 26,22 26,21
+2026-10-03	b1	2	22	6			31	310	known	day 140: party advances to join Tristle and head into area 38 looking for Durnhak's gnomes -- following his just-mapped route, known-route rate	26,21 26,20 27,20 27,19 28,19 29,19 29,18 29,17 30,17 31,17 32,17 32,16 32,15 32,14 32,13 32,12 32,11 31,11 31,10 31,9 31,8 30,8 30,7 29,7 29,6 28,6 27,6 26,6 25,6 24,6 23,6 22,6
+2026-10-03	b1	2	20	10			6	60	explore	day 140: party heads north through area 38 looking for the gnomes, stops where something comes into lamplight	22,6 22,7 21,7 21,8 20,8 20,9 20,10
+2026-10-03	b1	2	6	6			32	320	known	day 140: standard formation, party trails Tristle 4 squares behind along his just-mapped route, everyone with missile weapons readied	20,10 20,9 20,8 20,7 19,7 19,6 18,6 18,5 18,4 17,4 16,4 15,4 14,4 14,3 13,3 12,3 11,3 10,3 9,3 9,4 9,5 10,5 10,6 11,6 11,7 10,7 10,8 9,8 8,8 7,8 6,8 6,7 6,6
+2026-10-03	b1	2	4	15			15	150	known	day 140: standard formation, party trails Tristle 4 squares behind along his just-mapped route	6,6 6,5 5,5 4,5 3,5 3,6 3,7 3,8 3,9 3,10 3,11 3,12 3,13 3,14 4,14 4,15
+2026-10-03	b1	2	7	16			4	40	known	day 140: standard formation, party trails Tristle 4 squares behind along his just-mapped route	4,15 5,15 5,16 6,16 7,16
+2026-10-03	b1	2	10	16			3	30	known	day 140: standard formation, party trails Tristle 4 squares behind along his just-mapped route	7,16 8,16 9,16 10,16
+2026-10-03	b1	2	11	15			2	20	known	day 140: standard formation, party trails Tristle 4 squares behind, keeping pace with his single step east	10,16 10,15 11,15
+2026-10-03	b1	2	15	14			5	50	known	day 140: party comes up to join Tristle before searching area 45	11,15 11,14 12,14 13,14 14,14 15,14
+2026-10-03	b1	2	15	15			1	10	known	day 140: the search party (not Dave/Torsat, who hold the threshold) steps into area 45 to search it	15,14 15,15
+2026-10-03	b1	2	15	14			1	10	known	day 140: everyone but Tristle steps back out of area 45 to join Dave and Torsat	15,15 15,14
+2026-10-03	b1	2	15	16			2	20	known	day 140: party joins Tristle in area 45 at (15,16)	15,14 15,15 15,16
+2026-10-03	b1	2	15	15			1	10	known	day 140: standard formation resumes, party trails Tristle 4 squares behind along his just-mapped route	15,16 15,15
+2026-10-03	b1	2	15	14			1	10	known	day 140: standard formation, party trails Tristle 4 squares behind	15,15 15,14
+2026-10-03	b1	2	17	13			3	30	known	day 140: party comes up to join Tristle; Dave and Torsat take the guard point at (17,13) facing west	15,14 15,13 16,13 17,13
+2026-10-03	b1	2	17	11			2	20	known	day 140: search group (not Dave/Torsat, holding (17,13) facing west) moves into area 44 to search it	17,13 17,12 17,11
+2026-10-03	b1	2	17	13			2	20	known	day 140: search group regroups with Dave and Torsat at (17,13) before moving out	17,11 17,12 17,13
+2026-10-03	b1	2	12	12			6	60	known	day 140: standard formation resumes, party trails Tristle 4 squares behind along his just-mapped route	17,13 16,13 15,13 15,12 14,12 13,12 12,12
+2026-10-03	b1	2	11	12			1	10	known	day 140: standard formation, party trails Tristle 4 squares behind	12,12 11,12
+2026-10-03	b1	2	8	13			4	40	known	day 140: party comes up to join Tristle in area 43, the cavern with the bag	11,12 10,12 10,13 9,13 8,13
+2026-10-03	b1	2	20	13			74	740	known	day 140: standard formation, Tristle kept in rank 2 (not scouting ahead), retracing the known route back to the stair foot in area 38	8,13 9,13 10,13 10,12 11,12 12,12 13,12 14,12 15,12 15,13 15,14 14,14 13,14 12,14 12,15 11,15 11,16 10,16 9,16 8,16 7,16 6,16 6,15 5,15 5,14 5,13 5,12 5,11 4,11 4,10 3,10 3,9 3,8 3,7 3,6 3,5 4,5 5,5 5,6 6,6 6,7 6,8 7,8 8,8 9,8 10,8 10,7 11,7 11,6 11,5 10,5 9,5 9,4 9,3 10,3 10,4 11,4 12,4 13,4 14,4 15,4 16,4 16,5 17,5 17,6 18,6 18,7 19,7 19,8 19,9 20,9 20,10 20,11 20,12 20,13
+2026-10-03	b1	1	21	10					PLACED	day 140: climbing the stair up from area 38 (level 2) to area 30 (level 1), no walk route between levels in mapdb -- placed, matching the day-138/139/140 descent's own landing square	
+2026-10-03	b1	1	16	1			34	340	known	day 140: standard formation, Tristle kept in rank 2, known route from area 30 to the cave mouth	21,10 21,9 22,9 22,10 23,10 24,10 25,10 26,10 27,10 27,11 27,12 27,13 26,13 25,13 24,13 23,13 22,13 21,13 20,13 19,13 18,13 17,13 16,13 16,12 16,11 16,10 16,9 16,8 16,7 16,6 16,5 16,4 16,3 16,2 16,1

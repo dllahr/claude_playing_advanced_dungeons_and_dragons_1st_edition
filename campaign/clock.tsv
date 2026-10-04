@@ -1747,3 +1747,58 @@ when	exped	round	kind	anchor	detail	note
 2026-10-03	31	552	advance		3	day 140: party keeps watching; the scouts close further
 2026-10-03	31	553	advance		1	day 140: the 2 scouts close the last stretch, now visible 10ft north of the party
 2026-10-03	31	542	correct		-11	day 140: correcting a chain of clock advances (531->553, 22 rounds) built on a phantom encounter -- Tristle's declared path was mis-transcribed, the real 11-square route (27,27)->(28,19) never gave him LOS to the hobgoblins at all, so none of the volley/scout-approach rounds actually happened. True elapsed time for the corrected move is 11 rounds: 531->542.
+2026-10-03	31	564	advance		22	day 140: Tristle continues scouting 40ft+ ahead of the party, own 12 inch rate, path (29,18)...(22,6) into area 38, nothing stocked found along the way (scan clean except a known undiscovered secret door near 30,7 -- elf passive check missed, and the already-leafless door at 21,8 from day 139's work)
+2026-10-03	31	574	advance		10	day 140: party travels the known route to join Tristle at (22,6), 310ft at the known-route rate party.py reported
+2026-10-03	31	584	advance		10	day 140: party moves north through area 38 toward the gnomes, 60ft explore rate
+2026-10-03	31	575	check	570	d6=4	anchor 570 + 5
+2026-10-03	31	585	advance		1	day 140: party sets the loose weapon salvage down in area 38 near the stairs
+2026-10-03	31	621	advance		36	day 140: Tristle scouts 40ft+ ahead of the party, own 12 inch rate, (20,10)->(17,4)->(3,5), 36 squares, nothing new found (gnomes/stairs/door all already known)
+2026-10-03	31	602	check	600	d6=6	anchor 600 + 2
+2026-10-03	31	628	advance		7	day 140: party follows Tristle's known route to (6,6), 320ft at the known-route rate
+2026-10-03	31	643	advance		15	day 140: Tristle scouts ahead, 40ft+ lead, own 12 inch rate, (3,5)->(7,16), 15 squares, nothing found
+2026-10-03	31	632	check	630	d6=3	anchor 630 + 2
+2026-10-03	31	646	advance		3	day 140: party follows Tristle's known route to (4,15), 150ft at the known-route rate
+2026-10-03	31	649	advance		3	day 140: Tristle scouts due east, (7,16)->(10,16), 3 squares, nothing found
+2026-10-03	31	650	advance		1	day 140: party follows Tristle's known route to (7,16)
+2026-10-03	31	655	advance		5	day 140: Tristle scouts (10,16)->(14,14), 4 squares, then stops to look around the intersection (1 round), nothing found
+2026-10-03	31	656	advance		1	day 140: party follows Tristle's known route to (10,16)
+2026-10-03	31	658	advance		2	day 140: Tristle steps 1 square east to (15,14) and looks around, nothing found
+2026-10-03	31	659	advance		1	day 140: party keeps pace, 2 squares to (11,15)
+2026-10-03	31	660	advance		1	day 140: party joins Tristle at (15,14), 5 squares known route
+2026-10-03	31	671	advance		11	day 140: party (minus Dave/Torsat guarding south/west at the threshold) searches area 45 thoroughly, 8 searchers on 4 squares, 1 turn, plus the step in
+2026-10-03	31	662	check	660	d6=5	anchor 660 + 2
+2026-10-03	31	672	advance		1	day 140: the rest of the party steps out of area 45 to rejoin Dave and Torsat; Tristle stays to poke the stone with the 10ft pole
+2026-10-03	31	673	advance		1	day 140: Tristle pokes the mystical stone with the 10ft pole
+2026-10-03	31	674	advance		1	day 140: Tristle breaks a chip off the mystical stone with mallet and chisel
+2026-10-03	31	675	advance		1	day 140: Tristle tries to break off more chips from the mystical stone -- fails, impervious while the first chip hasn't been dealt with
+2026-10-03	31	676	advance		1	day 140: party joins Tristle at (15,16), 2 squares known route
+2026-10-03	31	682	advance		6	day 140: Tristle scouts (15,16)->(15,13)->(17,13), 5 squares, then stops to look south -- area 44's entrance finally comes into view
+2026-10-03	31	683	advance		1	day 140: party follows Tristle's known route to (15,15)
+2026-10-03	31	685	advance		2	day 140: Tristle steps 1 south to (17,12) and looks around -- the rest of area 44 comes into view
+2026-10-03	31	686	advance		1	day 140: party keeps pace, 1 square to (15,14)
+2026-10-03	31	687	advance		1	day 140: party joins Tristle at (17,13), 3 squares known route
+2026-10-03	31	698	advance		11	day 140: search group thoroughly searches area 44 and its connected squares (17,10;18,10;16,10 nub) -- 6 squares, 8 searchers fanned out, 1 turn plus the step in
+2026-10-03	31	695	check	690	d6=2	anchor 690 + 5
+2026-10-03	31	708	advance		10	day 140: search group searches area 44 + connected squares a second time, same 6 squares, 1 turn
+2026-10-03	31	709	advance		1	day 140: party regroups at (17,13)
+2026-10-03	31	719	advance		10	day 140: Tristle scouts ahead, 40ft+ lead, own 12 inch rate, (17,13)->(9,13), 10 squares, nothing found
+2026-10-03	31	720	advance		1	day 140: party follows Tristle's known route to (12,12)
+2026-10-03	31	720	check	720	d6=2	anchor 720 + 0
+2026-10-03	31	722	advance		2	day 140: Tristle steps 1 west into the cavern (area 43) and looks carefully all around it
+2026-10-03	31	723	advance		1	day 140: party keeps pace, 1 square to (11,12)
+2026-10-03	31	724	advance		1	day 140: party joins Tristle at (8,13), 4 squares known route
+2026-10-03	31	735	advance		11	day 140: Dave/Torsat guard at (9,13) facing east; the other 8 search area 43's remaining 3 squares thoroughly, avoiding the bag, 1 turn plus repositioning
+2026-10-03	31	736	advance		1	day 140: everyone backs off 15ft from the bag; Tristle pokes it with the 10ft pole
+2026-10-03	31	737	advance		1	day 140: Tristle pries the bag's mouth open with the pole from the rim, Ista looks inside without reaching in
+2026-10-03	31	738	advance		1	day 140: Ista picks up the bag by its exterior and looks inside
+2026-10-03	31	739	advance		1	day 140: Ista inverts the bag by manipulating only the outer rim from outside, gravity-drop method, hands never cross the opening
+2026-10-03	31	740	advance		1	day 140: Tristle thrusts the 10ft pole into the bag's opening
+2026-10-03	31	741	advance		1	day 140: pole withdrawn, bag held normally, the now-ordinary mica chip dropped inside
+2026-10-03	31	742	advance		1	day 140: Tristle reaches into the bag to retrieve the rock
+2026-10-03	31	749	advance		7	day 140: systematic test of 7 item types thrust into the bag one at a time -- rations, spikes, rope, oil, coin, torch, hacksaw
+2026-10-03	31	750	advance		1	day 140: waterskins thrust into the bag
+2026-10-03	31	752	advance		2	day 140: the 4 retrieval attempts, the bag closing on Tristle's arm, Dave's failed pull, and Ista cutting him free -- a fast, compressed sequence, about 2 rounds all told
+2026-10-03	31	752	check	750	d6=2	anchor 750 + 2
+2026-10-03	31	768	advance		16	day 140: party retraces the known route back to the stair foot in area 38, 740ft at the known-route rate
+2026-10-03	31	771	advance		3	day 140: party climbs the stair from area 38 up to area 30, level 1
+2026-10-03	31	779	advance		8	day 140: party heads out the known route from area 30 to the cave mouth, 340ft at the known-route rate

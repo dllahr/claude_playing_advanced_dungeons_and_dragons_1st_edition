@@ -5791,3 +5791,652 @@ Same class of error as the door/stocking bugs earlier, mirrored: when moving a s
 Player caught the root cause: the declared path had a typo -- "(26,20) then (25,19)" is an impossible diagonal/teleport through rock; the intended continuation was (27,19) then (28,19). Rechecked LOS from every square of the REAL path (27,27)->...->(26,20)->(27,20)->(27,19)->(28,19) to the hobgoblins' stocked position (25,16): genuinely NO line of sight anywhere along it (confirmed via dmap.light_reach, not just distance). The entire chain built on the wrong (25,19) stop -- the surprise check, Tristle's 6-shot volley (3 dmg logged on hobgoblin_49a), the 2 scouts' approach to (26,25) -- never actually happened.
 Undone: hobgoblin_49a/49b reset to stocked origin (25,16), hp restored to 9/8. encounter.tsv fight VOIDED. clock corrected 553->542 (true elapsed time for the real 11-square move, not the 22 rounds the voided chain had accumulated) via clock.py correct (sanctioned for DM bookkeeping errors, not for undoing real play). Party repositioned to (26,21), 4 behind Tristle's real stop at (28,19). Scan at (28,19) is clean -- nothing stocked found there. bestiary/hobgoblin.md kept (the stat block transcription itself is still good reference material) but its "first met" framing corrected to not-yet-met.
 The hobgoblins remain alive, undamaged, unaware, at (25,16) -- genuinely unmet.
+
+## Day 140 -- Tristle continues scouting, (28,19) -> (22,6), into area 38
+Verified the full declared path against mapdb before narrating anything: every
+cell open/mixed (none solid), every step (orthogonal and diagonal) confirmed
+passable via dmap.find_path per-step (each diagonal step's elbow route exists,
+so no pinched corner blocks it), nothing crossed (no doors/stairs). Ran
+`stocking.py scan --radius 6` (60', his infravision) on the full 22-square
+path: no stocked individual anywhere in range -- clean the whole way.
+Two features came into range, neither a monster: (1) a known secret door on
+the south edge of (30,7), which Tristle's path runs directly through -- elf
+passive 1-in-6 rolled per DMG p.97 (d6=4, missed, stays undiscovered); (2) the
+door at (21,8,E)->(22,8), already leafless from the exp.30/day 139 drift
+(Tristle+Ista) -- not a new discovery, just a known opening sensed at range.
+Party itself did not move (still (26,21), Tristle ranging solo per standing
+practice); clock advanced 22 rounds (542->564) for Tristle's own travel time
+at his pace, 1 round/square per this session's established convention.
+Tristle's own position is now (22,6), area 38 ACCESS ROOM -- NOT SEEN by the
+party yet despite the party's prior history with this general area (the
+day-139 door removal happened at a different, nearby square). Nothing
+stocked found at or near (22,6) itself.
+
+## Day 140 -- party rejoins Tristle, heads for the gnomes, talks to Harn
+Party moved to (22,6) via party.py (known route, since Tristle had just
+mapped it), 10 rounds. dmap.py walk north looped on a real bug (cycled
+(19,8)(18,9)(18,8)(19,9) and capped at 60 without recognising the closed
+loop -- worth fixing some day, not blocking now) so routed by hand instead:
+dmap.find_path to (21,12) (the gnomes' stocked square), scanned the route at
+radius 3 (party's own lamp, Tristle no longer separated so his infravision
+is washed out same as the day-140 kobold correction), stopped at (20,10)
+where gnome_38a-e first come into light range -- 3 squares short of their
+actual square, matching the day-139 precedent of a gnome stepping to the
+edge of the light rather than the party walking onto them. 10 rounds
+(574->584). No reaction roll -- known NPCs, per standing practice; Harn
+(named day 139) stepped forward again.
+Tristle reported the spider kill (their own stated boundary per L067) and
+the kobold fight; Harn's relief/interest played straight from that. Showed
+him the ore_sample_bluish from area 52 -- DM call, grounded in the module's
+own key text (area 52, p.3985 of the module txt: "bluish ore streaks...of no
+unusual use or value to the adventurers", same vein as area 51): Harn
+recognizes it immediately as the common streak-color through this stretch,
+not actual ore, nothing to mine. No dice; an expert NPC's informed
+assessment of a fact the book already settled, not a hidden check.
+Player then declared caching some loose weapon salvage (short swords,
+military picks, slings, spear, javelins off the goblins/troglodyte) in area
+38 near the stairs at (20,14) rather than carry it on. Logged via carry.tsv
+(party -> area_38, 10 rows) and one world_changes.tsv cached row;
+area_38 had to be added to places.tsv first (carry.py check's closed
+vocabulary, same pattern as area_10/area_30 on days 123/138). carry.py check
+and entities.py check both clean after. 1 round for the actual setting-down
+(584->585).
+Current state: party together at (20,10), area 38, round 585. Gnomes
+(Harn's group) still at (21,12), friendly, nothing pending from them.
+Scene open for the party's next move or further conversation.
+
+## Day 140 -- standard formation resumes, (20,10) -> (17,4) -> (3,5)
+Back to standard formation (Tristle 40ft/4 squares out front, missile
+weapons readied -- noted for whenever contact happens, no mechanical effect
+until then). Verified both legs via dmap.find_path (10-square and 28-square
+real routes, nothing crossed), ran stocking.py scan on the full 36-square
+combined route at radius 6 (Tristle's infravision): only the already-known
+gnomes/stairs/door came into range, nothing new, nothing hostile. No
+separate party-side scan needed -- their lamp radius (3) is a strict subset
+of squares already covered at radius 6 along the same path.
+Tristle walked the full 36 squares solo first (36 rounds, 585->621, his own
+12" rate, 1 round/square per this session's convention), ending at (3,5).
+Path marked seen directly via dmap.mark_seen (not party.py, since only he
+walked it). Party then followed via party.py move --rate known (he'd just
+mapped it) to (6,6), 4 squares behind him -- 32 squares, 7 rounds (621->628).
+Current state: Tristle at (3,5), party at (6,6), round 628, day 140. Nothing
+stocked in range of either position right now.
+
+## Day 140 -- continue, (3,5) -> (7,16)
+Verified route (dmap.find_path, 15 squares, nothing crossed), scanned at
+radius 6: clean the whole way, nothing new. Tristle solo, 15 rounds
+(628->643), path marked seen. Party's new trailing square computed along
+the combined route (their old (6,6) plus the tail of the PREVIOUS leg they
+hadn't walked yet, plus this new leg) rather than a fresh shortest-path --
+4 behind Tristle's new stop lands on (4,15), and party.py move --to 4,15
+reproduced that exact route, confirming the arithmetic. 15 squares, 3 rounds
+known-route (643->646).
+Current state: Tristle at (7,16), party at (4,15), round 646, day 140.
+Nothing stocked in range of either.
+
+## Day 140 -- standing instruction: Tristle always attempts Move Silently while scouting
+Player's standing order, not to be repeated each time: whenever Tristle is
+out ahead of the party, he is automatically attempting Move Silently (30%:
+15 base + 5 elf + 10 DEX, rules/thief.md). Hidden-outcome check -- roll it
+every scouting move, log to rolls.tsv like any other roll, never state the
+result or even that it was rolled. Tristle's own character doesn't know if
+he succeeded; it surfaces only through how creatures react (or don't) if
+contact happens. Saved to cross-session memory
+(tristle-always-moves-silently-scouting.md) so this isn't re-asked.
+
+## Day 140 -- continue, (7,16) -> (10,16) due east
+Route verified (4 squares, nothing crossed), scanned radius 6: clean.
+Move Silently rolled per the new standing order: d100=83, FAILS (vs 30%) --
+no consequence since nothing was in range to hear him; not narrated per the
+standing instruction. Tristle solo, 3 rounds (646->649), path marked seen. Party to (7,16)
+(exactly Tristle's prior stop), 4 squares, 1 round (649->650).
+Current state: Tristle at (10,16), party at (7,16), round 650, day 140.
+Nothing stocked in range of either.
+
+## Day 140 -- continue, (10,16) -> (11,15) (12,14) (13,14) (14,14), stop and look around
+Route verified step by step (each leg's elbow confirmed passable via
+find_path), scanned radius 6: clean. Move Silently: d100=22, succeeds (vs
+30%) -- not narrated either way, no consequence since nothing was around.
+Deliberate look-around at (14,14) via stocking.py scan on a single-point
+path (its documented use for a look-around) backed by dmap.py light
+--mark-seen radius 6: 12 squares newly lit, nothing stocked.
+Geometry check against the player's own directional claims: area 45's label
+is at (15,15)/(16,15) -- roughly NE of (14,14), both ARE in the lit set, so
+the "north" guess is close enough and he genuinely sees its near edge (area
+45 CAVERN OF THE MYSTICAL STONE per the map key -- room name not narrated,
+just the physical cavern-opening shape; infravision shows silhouettes, not
+detail anyway). Area 44's label is at (17,11)/(18,11) -- actually SE of
+(14,14) as the player said, but OUTSIDE the lit set (not reachable by
+light_reach's ray-cast from here, blocked or just past the 60ft/corner
+limit) -- he does NOT see into area 44 itself from this spot, only the
+corridor trending east ((16,13)->(17,13)) that presumably leads toward it.
+Narrated accordingly: real sighting of 45's edge, no sighting of 44, a
+passage that might lead there.
+5 rounds (650->655: 4 squares + 1 for the deliberate look-around). Walked
+path marked seen; (11,15) fell outside the light splash so marked
+separately. Party to (10,16) (Tristle's prior stop), 3 squares, 1 round
+(655->656).
+Current state: Tristle at (14,14), party at (10,16), round 656, day 140.
+Nothing stocked in range of either.
+
+## Day 140 -- Tristle steps 1 east to (15,14), looks N/S/E-SE
+Verified, scanned radius 6: clean. Move Silently: d100=37, FAILS (vs 30%) --
+no consequence, not narrated. Light --mark-seen radius 6 from (15,14): 5
+newly lit squares -- south reveals a plain corridor continuing on; north
+fills in the rest of area 45's own small extent (now all 4 of its squares
+seen); east/southeast toward area 44 still nothing, same as last stop, out
+of LOS from here too. 2 rounds (656->658).
+Party kept pace to stay 4 squares behind (not separately declared --
+standing formation instruction implies it): (10,16)->(11,15), 2 squares (the
+diagonal "1 square" of Tristle's own path costs 2 on the party's orthogonal
+route, same elbow effect as every previous diagonal step this session), 1
+round (658->659).
+Current state: Tristle at (15,14), party at (11,15), round 659, day 140.
+Nothing stocked in range of either.
+
+## Day 140 -- party joins Tristle, searches area 45, mystical stone room
+Party up to (15,14), 5 squares known route, 1 round (659->660).
+Dave and Torsat held back at (15,14) watching S/W; the other 8 (Blartho,
+Yrtone, Dellie, Hask, Ista, Tristle, Brand, Frython) stepped into area 45
+(15,15)-(16,16), 4 squares. *** AREA 45 = CAVERN OF THE MYSTICAL STONE,
+module text p.21 (pdf), confirmed stocking.tsv/key note: the black widow
+rolled into this room originally but was moved to 42 by DM judgment because
+45 is a set-piece room that "runs as written, unstocked" -- Monster blank,
+Treasure & Location blank. ***
+THE SET PIECE: a large chunk of glowing mica-like rock, permanently fixed,
+radiates magic strongly. Chips can be broken off one at a time (next chip
+only breakable once the current one fully fades, 3 rounds after breaking,
+or sooner if removed from the room); a CHIP EATEN within 3 rounds of
+breaking triggers a d20 random-effect table (teleport to 42, blind 1-6hrs,
++1/-1 to a random ability score, cure/heal, invisibility, poison+1 save,
+a 500gp pearl appears, +1 weapon, 1-6 temp hp, a sleep-curse tied to the
+new moon removable only by remove curse, or no effect) -- ONE-TIME per
+character, ever, even on a later return. Full table in the module text,
+not transcribed here again, see tsr09023 pdf p.21-22 (printed), or the txt
+around line 3841.
+NOT NARRATED beyond the obvious physical fact (a big glowing rock) --
+nothing about chips, the d20 table, or the one-shot rule is DM-secret
+content the player hasn't triggered by declaring an action on it yet. If
+anyone tries to break off a chip or eat one, resolve from this table.
+Search itself: 1 turn (8 on 4 squares, fanned out), 11 rounds total
+including the step in (660->671). Nothing else found -- no roll needed, the
+key is blank beyond the stone.
+Current state: search party at (15,15)/area 45, Dave+Torsat at (15,14),
+round 671, day 140. Nothing stocked in range.
+
+## Day 140 -- everyone out except Tristle, who pokes the stone with the 10ft pole
+The other 7 (plus Dave/Torsat already there) stepped back to (15,14), 1
+round (671->672). Tristle alone at (15,15) with the stone.
+RULING, grounded in the module text: breaking a chip off is specified as
+done "by hand" -- poking it with a pole is contact, not a hand-break
+attempt, and there's no declared intent to break a piece off anyway. The
+stone doesn't react: solid, doesn't budge, no chip comes loose from an
+indirect poke. No roll needed -- it's an inert fixed object, not a trap,
+nothing to save against. 1 round (672->673).
+Current state: Tristle alone at (15,15), everyone else at (15,14), round
+673, day 140. Nothing stocked in range.
+
+## Day 140 -- Tristle breaks off a chip with mallet and chisel
+This IS "by hand" per the module text ("chips can easily be broken off the
+rock by hand") -- a deliberate break attempt, unlike the pole-poke. Text
+says it comes free EASILY: no roll. Chip now in Tristle's hand, glowing;
+per the module, the glow fades over 3 rounds (clock rounds 674/675/676)
+unless eaten before then, at which point it becomes ordinary mica with no
+properties -- NOT narrated as a countdown (DM secret, the player hasn't
+asked about timing), but if 3 rounds genuinely pass narrated in play
+without it being eaten, the fading itself is an observable fact and should
+be described plainly when it happens. Also per the text: the main stone is
+now IMPERVIOUS to further chipping until something is done with this one
+(eaten, or it simply fades/leaves the room) -- relevant if anyone tries to
+break off a second piece right now.
+1 round for the break (673->674).
+Current state: Tristle holding the chip at (15,15), round 674, day 140.
+Chip fades at round 677 if untouched.
+
+## Day 140 -- Tristle tries for 4 more chips
+Per the text, flatly refused: impervious to further breaking while the
+first chip hasn't been dealt with. Not a roll -- an absolute rule, same
+tier as a locked door that's actually barred. Narrated as physical
+resistance, not explained why. 1 round (674->675).
+Current state: Tristle still holding the one chip at (15,15), round 675,
+day 140. Chip fades at round 677 if still untouched.
+
+## Day 140 -- chip handed off, party rejoins, formation resumes, area 44 finally sighted
+Chip passed to the shared party kit (player said "general inventory," no
+named bearer -- not formally registered as an inventory_log.tsv/carry.tsv
+asset since it's about to be inert anyway; tracked here only). Not
+registered as a formal asset: by round 677 (3 rounds after the 674 break)
+it reverts to ordinary mica with no properties regardless, same outcome as
+leaving the room with it -- both paths converge, per the module text. Party
+moved into the room, 2 squares, 1 round (675->676).
+Standard formation resumed, Tristle 40ft out, chip no longer his light risk
+since it's off him anyway (academic -- it had already lost its light
+within 2-3 rounds regardless of who holds it). Route (15,16)->(15,13) then
+east to (17,13) verified (5 squares, nothing crossed), scanned radius 6:
+clean. Move Silently: d100=61, FAILS (vs 30%), no consequence, not
+narrated. Look south from (17,13): light --mark-seen radius 6, 4 newly lit
+-- AREA 44 CAVERN at (17,11) is finally in sight, the entrance the player's
+been asking after since (14,14). Narrate the physical cavern opening, not
+the room number/name. 6 rounds (676->682: 5 squares + 1 look-around).
+By now (682) the chip has long since faded past its round-677 deadline --
+ordinary mica, no properties, whoever's holding it. Observable fact,
+narrate plainly if asked.
+Party to (15,15), 4 behind, 1 square, 1 round (682->683).
+Current state: Tristle at (17,13), party at (15,15), round 683, day 140.
+Nothing stocked in range of either.
+
+## Day 140 -- Tristle steps 1 south to (17,12), looks again
+Verified, scanned radius 6: clean. Move Silently: d100=90, FAILS, no
+consequence, not narrated. light --mark-seen radius 6: 2 newly lit,
+(18,10) and (18,11) -- THE SECOND SQUARE OF AREA 44 IS NOW IN SIGHT TOO,
+both of its 2 squares visible, confirmed via light_reach directly on both
+cells (not inferred). Whole room is now in view. 2 rounds (683->685).
+Party kept pace, 1 square to (15,14) (party.py's first --to guess off by 1
+again on the diagonal-equivalent elbow, same recurring pattern, corrected
+same turn), 1 round (685->686).
+Current state: Tristle at (17,12), party at (15,14), round 686, day 140.
+Nothing stocked in range of either.
+
+## Day 140 -- party searches area 44 + connected squares, bounded at the guard point
+Party up to (17,13), 3 squares known route, 1 round (686->687). Dave and
+Torsat take the guard point there facing west (back the way they came --
+toward (16,13)/(15,13)). Worked out the exact bounded set reachable from
+area 44 WITHOUT passing (17,13): (17,12) [already seen], (17,11)+(18,11)
+[area 44 itself], (17,10), (18,10), and a dead-end nub at (16,10) (checked
+all its exits -- N/S/W all blocked, only connects back to (17,10); its
+south wall to (16,9)/area 42 is SOLID, no connection to the already-cleared
+webbed cave). 6 squares total, a closed set -- nothing missed, nothing
+overreached past the player's stated boundary.
+Stocking key confirmed: room 44 has no monster, no treasure (blank in both
+module tables, like rooms 43/47). Search group (the 8 minus Dave/Torsat)
+moved to (17,11), 2 squares, 1 round (687->688), then searched all 6
+squares, 8 fanned out, 1 turn (688->698, 10 rounds). Nothing found -- no
+roll needed.
+Current state: search group at (17,11)/area 44, Dave+Torsat at (17,13),
+round 698, day 140. Nothing stocked in range.
+
+## Day 140 -- search again, same ground
+Checked the map db directly for secret/concealed edges anywhere in the
+(17,10)-(18,11)/(16,10) cluster before resolving: none exist. This isn't a
+percentage-miss case (the elf-passive/active secret-door rolls that
+genuinely can fail against something real) -- there is nothing structural
+here to find, full stop, so a second pass costs a turn and finds nothing
+for the same reason the first one did. 1 turn, 10 rounds (698->708).
+Current state: unchanged positions, round 708, day 140. Nothing stocked in
+range.
+
+## Day 140 -- move out, standard formation, Tristle to (9,13)
+Search group regrouped with Dave/Torsat at (17,13), 2 squares, 1 round
+(708->709). Route to (9,13) verified (10 squares, nothing crossed), scanned
+radius 6: clean. Move Silently: d100=9, succeeds, not narrated either way.
+Tristle solo, 10 rounds (709->719), path marked seen. Party to (12,12), 4
+behind, 6 squares, 1 round (719->720).
+Current state: Tristle at (9,13), party at (12,12), round 720, day 140.
+Nothing stocked in range of either.
+
+## Day 140 -- "what does he see looking west" (follow-up on the (9,13) look-around)
+*** (9,13) ITSELF IS AREA 43, THE CAVERN -- STOCKED TREASURE U, A BAG OF
+DEVOURING (trap item), per the DM key. Module's own printed text for room
+43 is just "CAVERN." with blank Monster/Treasure fields -- the bag is the
+DM's own roll, not module read-aloud text, so there's no forced description
+to work from; it's a plain, nondescript cavern until someone looks closer.
+*** NOT NARRATED -- nothing has searched or picked anything up. Area 43 is
+a 2x2 cavern (8,12)(8,13)(9,12)(9,13), already fully lit from the earlier
+light --mark-seen at (9,13) (confirmed all 4 squares in the lit set).
+Beyond it, two short corridor nubs (7,12)/(7,13), each dead-ending at solid
+rock one square further west (confirmed via describe -- no further
+connections). RULING: infravision reads heat, not fine detail or color --
+a bag sitting on the floor at ambient temperature isn't something it would
+pick out from across a room, so it's consistent (not a spoiler-protecting
+fudge, an actual rule) that Tristle's passive glance doesn't spot it. If
+the party later walks in and searches/examines the room directly, resolve
+the bag then -- normal object, looks mundane, the trap is what "bag of
+devouring" actually means, not narrated until triggered.
+No new clock cost -- this is narrating the look-around already resolved
+last turn, not a new action.
+
+## Day 140 -- Tristle steps into the cavern (area 43), looks all around
+Verified, scanned radius 6: clean (scan doesn't carry static treasure at
+all, by design -- only stocked individuals/doors/secrets/features; the bag
+is tracked only here in DM notes, matching how every other room's treasure
+has been handled by hand). Move Silently: d100=22, succeeds, not narrated.
+light --mark-seen radius 6 from (8,13): nothing new, room already fully lit
+from the (9,13) stop.
+RULING: now that he's physically IN the room and deliberately looking all
+around rather than glancing from a distance, the bag counts as noticed --
+an object sitting in plain sight in a small room doesn't need a search
+roll to be SEEN (same standard as the area 45 mystical stone), only
+searching/handling it would reveal anything about its nature. Placed it at
+(9,12), DM call, not shared with the player. Narrated as an ordinary-
+looking bag/sack on the cavern floor -- nothing about what it actually is.
+2 rounds, move + careful look (720->722). Party kept pace to (11,12), 1
+square, 1 round (722->723).
+Current state: Tristle at (8,13)/area 43, party at (11,12), round 723, day
+140. Nothing stocked in range of either.
+
+## Day 140 -- Tristle calls the party up
+Party to (8,13), 4 squares known route, 1 round (723->724). Whole party now
+together in area 43 with the bag (still at (9,12), not yet approached or
+declared on).
+Current state: whole party at (8,13)/area 43, round 724, day 140. Nothing
+stocked in range.
+
+## Day 140 -- Dave/Torsat guard (9,13), rest search area 43, bag left alone
+Checked map db edges for area 43's 4 squares: no secret/concealed anywhere.
+No other treasure in this room per the key (code U, the bag, is the whole
+allocation). Search explicitly avoided the bag's square (9,12) per the
+player's own instruction -- it was not approached, picked up, or examined
+further. 11 rounds (724->735: repositioning + 1 turn, 8 fanned out over
+the 3 remaining squares). Nothing else found.
+Current state: Dave+Torsat at (9,13), rest at (8,13), round 735, day 140.
+Bag still untouched at (9,12). Nothing stocked in range.
+
+## Day 140 -- the bag is a BAG OF DEVOURING, confirmed, and Tristle pokes it
+*** PLAYER ASKED THE BAG'S EXACT SQUARE -- ANSWERED (9,12). Not a secret;
+they'd already visually spotted it, this is just which spot in a room
+they're standing in, same tier as any other observable fact. ***
+Rendered DMG p.137 (pdf index 137) for ground truth -- the txt had the key
+number corrupted ("*0%" where it should read 60%). CONFIRMED: Bag of
+Devouring, appears as a typical sack. 90% chance it ignores any intrusion.
+If it senses LIVING HUMAN FLESH thrust WITHIN it, 60% chance it closes and
+tries to draw the whole victim in (base 75% success, -5% per +1 STR damage
+bonus). Also: any animal/vegetable matter thrust within is subject to
+ordinary "swallowing" (holds up to 30 cu ft, bag-of-holding-like, but 5%
+cumulative chance per turn of dumping contents into non-space). Creatures
+drawn in are consumed in 7 segments, gone for good.
+RULING on THIS action: poking the OUTSIDE of a closed/resting sack with a
+pole is not "thrust within the bag" -- nothing is being inserted through
+its opening, just external contact, same category as the mystical-stone
+pole-poke earlier. No trigger either mechanic. Resolved as nothing
+happening: has the give of ordinary cloth, no reaction, no sound.
+NOT NARRATED: the bag's true nature, the percentages, or that an actual
+INSERTION (hand, item, weapon point) into its opening would be a
+materially different and far riskier action. If anyone tries to put
+something (or a hand) INSIDE the bag, re-resolve from these numbers.
+1 round for repositioning + the poke (735->736).
+Current state: unchanged positions, round 736, day 140. Bag poked (no
+reaction, no trigger), still at (9,12).
+
+## Day 140 -- Tristle pries the bag open with the pole, Ista looks inside
+RULING: the bag's mechanic specifically triggers on something "thrust
+WITHIN" it / "sensed within" -- prying the rim open with the pole from
+outside and looking in without reaching a hand past the opening keeps both
+Tristle and Ista's actual flesh OUTSIDE the bag the whole time. No flesh,
+no object, genuinely inside it. Neither mechanic (the 90/10 ignore-check or
+the 60% flesh-sensing grab) has anything to trigger on -- ruled safe, same
+logic as the earlier pole-poke, just a wider contact. No roll.
+Interior: per the book's own flavor text ("possibly appearing to be
+empty"), ruled empty-looking -- dark, nondescript cloth interior, nothing
+visible inside from a cautious look at the opening. Doesn't reveal what
+it actually is.
+1 round (736->737).
+Current state: unchanged positions, round 737, day 140. Bag open, nothing
+seen inside, still untouched by anyone's hand or object past its mouth.
+
+## Day 140 -- Ista picks the bag up and looks inside
+RULING, same logic: picking it up by gripping the exterior cloth (not
+scooping a hand through the open mouth) keeps her flesh outside the bag's
+interior the whole time -- still nothing "within" it to trigger on. Ruled
+safe, no roll. Sensory detail: it's noticeably light for its size, about
+what an empty sack of its dimensions should weigh -- nothing rattling or
+shifting inside. Still looks empty from the opening.
+1 round (737->738).
+Current state: unchanged positions, round 738, day 140. Ista now holding
+the bag; nobody's reached inside it yet.
+
+## Day 140 -- Ista's gravity-drop inversion technique
+I checked whether "turn it inside out" necessarily meant a hand past the
+opening and asked the player to clarify rather than assume (stakes: the
+60%-close/75%-drag-in/consumed-in-7-segments chain is a real death, not a
+softened one, so I wanted the actual physical method before resolving, not
+a DM-invented danger). PLAYER'S METHOD: bag mouth-down on the floor, grip
+only the OUTER rim/edge from outside, lift so the inner lining drops
+through under its own weight -- genuinely clever, and genuinely keeps her
+flesh outside the opening the entire time. ZERO risk, no roll, confirmed
+safe by the actual physics of the technique, not by DM fiat.
+RESULT, and this is the interesting part: it doesn't work the way it would
+on an ordinary sack. A bag of devouring's "inside" isn't continuous cloth
+lining attached at a seam -- it's an extradimensional opening (same family
+as a bag of holding). There's nothing for gravity to drop through. Ruled:
+the bag just hangs there when lifted by the rim, nothing inverts, nothing
+falls out, as if it has no far side to invert at all. NOT explained to the
+player as "why" -- this is honest physical observation (the technique
+genuinely failed, in a way a sharp player will read as a real clue), not a
+narrated secret.
+1 round (738->739).
+Current state: unchanged positions, round 739, day 140. Technique failed
+to invert the bag; nobody's flesh has gone past the opening at any point
+so far.
+
+## Day 140 -- the pole goes in
+First genuine "thrust within the bag" -- the pole (vegetable matter,
+wood), deliberately inserted. Rolled the 90/10 ignore check per DMG p.137:
+d100=7, IGNORED (the 90% case). Nothing grabs it, nothing resists. Since
+it's not living flesh, the 60%-close-and-drag mechanic was never in play
+for the pole regardless -- that's flesh-specific, confirmed on the render.
+Honest physical tell, no narration of the secret itself: a 10ft pole
+pushed into a sack this size should hit a bottom almost immediately. It
+doesn't -- it goes in the full 10ft with room to spare, no resistance, no
+bottom found. Second confirmation (after the failed inversion) that this
+bag's interior isn't physically what it appears to be from outside.
+1 round (739->740).
+Current state: unchanged positions, round 740, day 140. Pole still
+inserted, no bottom found, nothing has grabbed at it.
+
+## Day 140 -- pole out, rock in
+Pole withdrawn clean, no resistance (consistent with the 90% ignore result
+already rolled -- nothing was ever holding it). Ista back to a normal grip
+on the bag.
+The mica chip (ordinary, no magic, since round 677) dropped in. RULING:
+the text's swallowing clause is explicitly scoped to "animal or vegetable
+nature" -- a chip of mineral rock is neither, so it's not even "subject to"
+the mechanic by the letter of the rule. No roll. It just goes in, same as
+dropping something into a bag of holding (which is exactly how this item
+behaves for non-flesh storage purposes per its own text). Not narrated:
+whether it lands on anything, or whether retrieving it later would require
+reaching back in (an open question for later, not answered unprompted).
+1 round (740->741).
+Current state: unchanged positions, round 741, day 140. Rock now inside
+the bag; nobody's flesh has entered it at any point this whole sequence.
+
+## Day 140 -- Tristle reaches in for the rock -- first real flesh-in-bag roll
+FIRST genuine living-flesh-within intrusion this whole sequence. Full
+rigor, rolled in the open (this is a real trap danger, not a hidden-outcome
+class roll): 90/10 ignore check per DMG p.137, d100=30, IGNORED (the 90%
+case). Nothing senses him. He gets the rock back out clean.
+Tristle: STR 10, melee_dmg +0 (characters.tsv) -- noted for next time, in
+case the 60%/75% chain ever actually triggers: no reduction to the base
+75% drag-in chance, since +0 damage bonus means 0 * -5% = no modifier.
+1 round (741->742).
+Current state: unchanged positions, round 742, day 140. Rock retrieved
+successfully, bag confirmed to tolerate SOME flesh intrusions without
+reacting -- this was a 90%-case pass, not proof it's safe every time.
+
+## Day 140 -- systematic material test, 7 items, one roll each where material matters
+Checked current actual CARRIED quantities properly via `carry.py` (no
+subcommand, the SHARED KIT total) rather than hand-summing carry.tsv --
+a hand sum of torch rows gave a wrong total (nine) vs the tool's correct total (one) at that moment, because an
+`anchor` row resets the running total and a naive delta-sum doesn't honor
+that. Lesson for next time: always use the computed tool, same principle as
+every map-geometry correction this session, now confirmed for carry.tsv
+math too.
+Actual carried amounts tested (snapshot at the time, audit-skip): rations_std 7.62 person-week, iron_spike 10, rope_50ft 1, oil_flask 4, coin 64gp (gold), torch 1, saw_hack 1. (audit-skip)
+Material ruling: iron spikes, gold coin and the hacksaw (metal tool) are mineral, not animal/vegetable -- NOT subject to the swallowing clause at all, no roll, stated as fact. Rations, rope (hemp), oil (organic-derived) and the torch (wood) ARE organic -- each got its own ignore-roll chance (DMG p.137, one check per item category, not once per unit, impractical otherwise), figures here are dice rolls not quantities (audit-skip): rations d100=80, rope d100=43, oil d100=72, torch d100=66.
+ALL FOUR ignored (the 90% case). Nothing lost, nothing happened to any of
+the seven.
+7 rounds, one per item tested (742->749).
+Current state: unchanged positions, round 749, day 140. All seven test
+items currently resting inside the bag, nothing lost. Retrieving any of
+them later is a fresh flesh-in-bag roll each time, same as the rock was.
+
+## Day 140 -- "how much does it weigh, what does it look like"
+Rendered DMG p.137-138 for the cross-reference: the devouring bag's own
+text says "it will act as a bag of holding (normal capacity)" and states
+30 cubic feet capacity, which matches the bag-of-holding table's FIRST row
+(roll 01-30) exactly: 15 lb FIXED weight regardless of contents, 250 lb
+weight limit, 30 cu ft volume limit (confirmed on the render, p.138).
+RULING: since it explicitly acts as a normal-capacity bag of holding, it
+inherits that whole row, fixed weight included -- this isn't a stretch,
+it's the stated mechanism for why the inside is bigger than the outside.
+Computed actual carried weight of the 7 test items via the same authoritative
+carry.py figures: 152.4+10+7.5+8+6.4+2.5+3 = ~189.8 lb combined, well
+under the 250 lb limit. The bag itself: 15 lb, fixed, full stop -- doesn't
+change with contents.
+Narrated: picking it up, it's wildly lighter than it has any right to be
+given what's stuffed inside (the contrast IS the tell, not a secret -- an
+honest physical observation). Exterior appearance unchanged: still looks
+like a plain sack, not bulging, stretched, or distorted despite ~190 lb
+worth of gear inside.
+No new clock cost -- this is a direct factual question about the item's
+current state, not a new declared action in the fiction.
+
+## Day 140 -- waterskins added, and the bag is now a tracked container
+Waterskins (leather, animal nature) -- 90/10 ignore roll, d100=25, ignored,
+safe. 7 carried, all in. 1 round (749->750).
+PLAYER'S SECOND QUESTION: can the tooling actually track the bag's
+contents and its effect on carried weight. Yes -- built it using the exact
+precedent already in the codebase for a non-place, mobile carry.tsv holder:
+`horse_pack`/`horse_yrtone` (kind=animal, "not a place... so carry.py can
+say who is loaded and who is not, no coordinates of its own, it goes where
+the party goes"). Mirrored that for `bag_weightless` (kind=container):
+  - assets.tsv: bag_weightless, 150 gp-wt (15 lb) FIXED, kind=curio.
+    Name/notes kept non-revealing -- "a plain cloth sack, impossibly light
+    for what's inside," no mechanic, no true name. The real identity stays
+    DM-notes only.
+  - places.tsv: bag_weightless registered for carry.tsv's closed
+    vocabulary, same justification pattern as horse_pack.
+  - inventory_log.tsv: logged as found/owned (1 each), same verb
+    convention as the ore sample.
+  - carry.tsv: Ista carries the bag itself (1 each, 15 lb). The 8 item
+    types already tested (rations, iron spikes, rope, oil, coin, torch,
+    hacksaw, waterskin) MOVED from `party` to `bag_weightless` as holder --
+    their weight drops out of normal per-person encumbrance entirely, same
+    as any other item moved to a different legal holder. Cleaned one
+    floating-point dust leftover on rations_std with a CLEAN ANCHOR, same
+    technique as the day-140 camp_food fix.
+VERIFIED: carry.py check, inventory.py check and entities.py check all
+clean. SHARED KIT weight dropped from 2481 gp-wt (248.1 lb) to 233 gp-wt
+(23.3 lb) -- the ~190 lb of bagged goods no longer counts against anyone's
+encumbrance, replaced by nothing extra (the bag's 15 lb is personal to
+Ista, already reflected in her own total). `carry.py where` now lists
+`bag_weightless:` as a holder section showing its contents, same as any
+other location.
+GOING FORWARD: anything else put in the bag should move from `party` (or
+a person) to `bag_weightless` in carry.tsv the same way; anything taken
+back out moves the other direction -- AND remember each individual
+retrieval is still its own flesh-in-bag roll if a hand goes in to get it,
+the inventory tracking doesn't change that danger at all, it only fixes
+the bookkeeping.
+Current state: unchanged positions, round 750, day 140. Bag (Ista) now
+holds the 8 item types listed above, properly tracked. CORRECTION: the mica
+chip is NOT in there -- Tristle retrieved it successfully earlier and it's
+back in the general kit (round 742); not tracked in carry.tsv at all per
+the earlier decision (worthless mundane pebble, not worth a formal row).
+
+## Day 140 -- RETRIEVAL ATTEMPT TRIGGERS THE BAG, FOR REAL
+Player: move bag to shared/party inventory, retrieve 4 iron spikes, the
+gold coin, 1 oil flask, and the rope (restating the player's request, audit-skip). Each retrieval is its own
+flesh-in-bag intrusion (Tristle reaching, same as every prior retrieval --
+Ista holds, Tristle reaches, established since the rock). Rolled all four
+90/10 ignore checks in the declared order (DMG p.137) -- each figure below is a dice roll, not a quantity (audit-skip):
+  spikes: d100=91 -- NOT ignored (first "sensed" result all session) (audit-skip)
+  coin:   d100=57 -- ignored, safe (audit-skip)
+  oil flask: d100=92 -- NOT ignored (audit-skip)
+  rope:   d100=83 -- ignored, safe (audit-skip)
+Two intrusions sensed. Each gets its own independent 60% close-and-drag
+roll:
+  spikes intrusion: d100=81 > 60 -- does NOT close. Safe, but it noticed him.
+  oil flask intrusion: d100=54 <= 60 -- CLOSES, attempts to draw the whole
+  victim in.
+Base 75% success chance, Tristle STR10/+0 damage = no modifier, flat 75%:
+d100=30 <= 75 -- SUCCEEDS. The bag is pulling Tristle in.
+*** THIS IS A REAL, UNSOFTENED DANGER -- "consumed in 7 segments of a
+round, eaten, and forever gone," no save stated in the text. ***
+RULING, not a fudge: the text gives a 7-SEGMENT process, not an instant
+kill -- that's a real window (0.7 of a round) during which someone
+adjacent could physically try to intervene before he's fully drawn in and
+consumed. Ista is holding the bag already (zero distance, no travel time
+needed) -- she's the one with any realistic chance to act inside that
+window. The other six (Blartho, Yrtone, Dellie, Hask, Brand, Frython) are
+15ft back per the player's own stated formation and would need to close
+that gap first -- unlikely to arrive in time but not narrated as
+impossible, just unlikely. Dave/Torsat are further still, guarding (9,13).
+STOPPING to let the party declare a reaction rather than resolving the
+full 7 segments unilaterally -- consistent with this session's standing
+practice of giving full combat-sequence steps and asking before resolving
+a sudden reversal, not with softening the actual danger. The 75% success
+roll already happened and stands; what's open is only whether anyone can
+pull him free before segment 7.
+
+## Day 140 -- rescue attempt, segment math corrected, Dave's pull fails but the window isn't closed
+Player: Tristle lets go of the flask, Dave grabs and hauls him back, Torsat
+and Yrtone brace/stabilize Ista and the bag. Resolved as one combined
+action: DM-ruled base 50% + 5% per point of Dave's damage bonus (STR18/26
+= +3, so +15%) + 10% for the two extra hands bracing = 75%. Rolled in the
+open: d100=86, FAILS. Dave cannot break the grip -- the roll stands, not
+fudged.
+*** CAUGHT MY OWN ERROR BEFORE NARRATING FINAL DEATH: I'd been treating
+"7 segments" as roughly 4 seconds (wrongly dividing a round as if it were
+6 seconds total). rules/exploration.md is explicit: 1 round = 1 MINUTE, 10
+segments/round, so 1 segment = 6 seconds and 7 segments = 42 seconds --
+most of a full round, not an eyeblink. A single grab-and-pull action
+doesn't consume the whole window. *** Ruling: Dave's attempt resolves by
+about segment 4-5 (he's adjacent, reacts immediately, but a sustained haul
+takes a few segments to call failed) -- leaving roughly 2-3 segments still
+open before full consumption. NOT retracting the roll (Dave's pull
+genuinely failed), but NOT narrating final death yet either -- there is
+a real, mechanically justified window left for one more fast action.
+Tristle is being drawn in further, not yet gone. Asking the player what
+they try next, with urgency, rather than either fudging the failed roll
+away or skipping ahead past time that the rules say is actually there.
+
+## Day 140 -- RESOLVED: cutting the bag open saves him, at real cost
+Player: cut the fabric at the opening, avoiding Tristle's arm. RULING,
+grounded in the bag-of-holding sibling entry (DMG p.137): "if sharp
+objects are placed within so as to pierce it, the bag will rupture and be
+ruined, and the contents will be lost forever in the vortices of
+nilspace" -- since the devouring bag explicitly runs on the same
+mechanism, cutting the fabric at the magical threshold should sever the
+connection and free whoever's caught in it, at the cost of the bag (and
+whatever's still inside) being destroyed. Resolved as one check: Ista
+(DEX13, no bonus) making a precise cut under duress -- base 50% +10% for
+a smarter tactic (attacking the mechanism, not fighting the pull) = 60%.
+Rolled in the open: d100=39, SUCCEEDS. Tristle is cut free, unharmed (no
+damage specified for the grip/pull phase in the text, and the cut
+deliberately avoided him) -- genuinely saved, not fudged into safety; two
+separate rolls (the drag-in success AND this rescue) both stood as rolled.
+CONSEQUENCE, paid in full (figures here are the loss tally at the moment of rupture, not current totals, audit-skip): the bag ruptures. Everything still inside it at that moment is lost forever: 6 iron spikes, all 7.62 person-weeks of carried rations, 4 oil flasks, 7 waterskins, 1 torch, 1 hacksaw. The 3 items already pulled clear before the oil-flask attempt (4 iron spikes, 64gp coin, the rope) survive and are back in the party's own kit. The bag itself (bag_weightless) is destroyed.
+BOOKKEEPING, all re-verified clean (carry.py check, inventory.py check,
+entities.py check): carry.tsv moved the 3 survivors bag_weightless->party,
+zeroed everything else out of bag_weightless, and removed Ista's
+bag_weightless holding. inventory_log.tsv reduced total OWNED for
+iron_spike(-6), rations_std(-7.62), waterskin(-7), torch(-1),
+saw_hack(-1, matched to the EXISTING 'sound' condition row -- missing that
+the first time created a phantom negative in a blank-condition row) and
+bag_weightless(-1). Oil flasks specifically do NOT go through
+inventory_log.tsv (light.tsv owns the sealed-flask count, per CLAUDE.md --
+caught my own error when inventory.py check flagged the duplicate-source
+conflict) -- used `light.py oil pool --fuel -4` instead, the correct tool,
+dropping sealed flasks from 19 to 15 (audit-skip, before/after figures).
+Clock trued up: 2 rounds for the whole retrieval/rescue/cutting sequence
+(750->752).
+
+## Day 140 -- EXPEDITION 31 ENDS, party out
+"Dave: 'Wow might have been an understatement.'" Standard formation
+resumed, Tristle kept in rank 2 (not scouting) for the walk out. Three
+legs, each the real tool: known route back to the area 38 stair foot
+(8,13)->(20,13), 74 squares, 16 rounds (752->768); PLACED up the stair to
+level 1 area 30 at (21,10) (no cross-level walk route in mapdb, matches
+the day-138/139/140 descent's own landing square exactly), 3 rounds for
+the climb (768->771); known route out to the cave mouth (21,10)->(16,1),
+34 squares, crossing the known doors/one-way at (22,9,H)(27,12,H)
+(17,13,V)(16,6,H), 8 rounds (771->779).
+Expedition 31 closed in world_changes.tsv, round 779, day 140 -- day's
+summary: both kobold groups resolved, areas 44/45 explored, weapons cached
+in area 38, Harn updated (spider dead, ore sample confirmed worthless),
+area 43's bag of devouring incident (full DM-secret identity still never
+spoken to the player -- "the strange bag" throughout), zero party
+injuries all day despite how close the bag came.
+Current state: party out at the cave mouth, round 779, day 140. Tristle
+hp 3/3 (no damage taken in the bag incident). Hobgoblins at (25,16) remain
+alive, undamaged, unaware -- unfinished business for a future expedition.

@@ -1537,3 +1537,44 @@ when	day	who	asset	verb	qty	unit	note
 2026-10-03	140	party	ore_sample_bluish	move	1	each	chipped off the east wall of area 52 for Durnhak, day 140
 2026-10-03	140	party	iron_spike	move	-2	each	2 iron spikes emplaced in the door jamb at (27,26,H), day 140
 2026-10-03	140	party	iron_spike	move	2	each	2 iron spikes recovered from the door jamb, day 140
+2026-10-03	140	party	short_sword	move	-4	each	left in area 38 near the stairs at (20,14), day 140, so the party isn't carrying it while exploring
+2026-10-03	140	area_38	short_sword	move	4	each	left in area 38 near the stairs at (20,14), day 140
+2026-10-03	140	party	military_pick	move	-4	each	left in area 38 near the stairs at (20,14), day 140, so the party isn't carrying it while exploring
+2026-10-03	140	area_38	military_pick	move	4	each	left in area 38 near the stairs at (20,14), day 140
+2026-10-03	140	party	sling	move	-2	each	left in area 38 near the stairs at (20,14), day 140, so the party isn't carrying it while exploring
+2026-10-03	140	area_38	sling	move	2	each	left in area 38 near the stairs at (20,14), day 140
+2026-10-03	140	party	spear	move	-1	each	left in area 38 near the stairs at (20,14), day 140, so the party isn't carrying it while exploring
+2026-10-03	140	area_38	spear	move	1	each	left in area 38 near the stairs at (20,14), day 140
+2026-10-03	140	party	javelin	move	-2	each	left in area 38 near the stairs at (20,14), day 140, so the party isn't carrying it while exploring
+2026-10-03	140	area_38	javelin	move	2	each	left in area 38 near the stairs at (20,14), day 140
+2026-10-03	140	Ista	bag_weightless	move	1	each	found in area 43, day 140; weighs a fixed 15 lb no matter what's in it
+2026-10-03	140	party	rations_std	move	-7.62	person-week	moved into the bag -- doesn't count against carried weight while inside it
+2026-10-03	140	bag_weightless	rations_std	move	7.62	person-week	inside the bag
+2026-10-03	140	party	iron_spike	move	-10	each	moved into the bag
+2026-10-03	140	bag_weightless	iron_spike	move	10	each	inside the bag
+2026-10-03	140	party	rope_50ft	move	-1	each	moved into the bag
+2026-10-03	140	bag_weightless	rope_50ft	move	1	each	inside the bag
+2026-10-03	140	party	oil_flask	move	-4	each	moved into the bag
+2026-10-03	140	bag_weightless	oil_flask	move	4	each	inside the bag
+2026-10-03	140	party	coin	move	-64	gp	moved into the bag
+2026-10-03	140	bag_weightless	coin	move	64	gp	inside the bag
+2026-10-03	140	party	torch	move	-1	each	moved into the bag
+2026-10-03	140	bag_weightless	torch	move	1	each	inside the bag
+2026-10-03	140	party	saw_hack	move	-1	each	moved into the bag
+2026-10-03	140	bag_weightless	saw_hack	move	1	each	inside the bag
+2026-10-03	140	party	waterskin	move	-7	each	moved into the bag
+2026-10-03	140	bag_weightless	waterskin	move	7	each	inside the bag
+2026-10-03	140	party	rations_std	anchor	0	person-week	CLEAN ANCHOR, day 140: the party carries no rations_std directly now, all moved into bag_weightless; the preceding move rows left a floating-point dust value instead of a clean zero, this sets it outright
+2026-10-03	140	bag_weightless	iron_spike	move	-4	each	retrieved successfully before the bag ruptured
+2026-10-03	140	party	iron_spike	move	4	each	retrieved successfully before the bag ruptured
+2026-10-03	140	bag_weightless	coin	move	-64	gp	retrieved successfully before the bag ruptured
+2026-10-03	140	party	coin	move	64	gp	retrieved successfully before the bag ruptured
+2026-10-03	140	bag_weightless	rope_50ft	move	-1	each	retrieved successfully before the bag ruptured
+2026-10-03	140	party	rope_50ft	move	1	each	retrieved successfully before the bag ruptured
+2026-10-03	140	bag_weightless	iron_spike	move	-6	each	LOST -- bag ruptured, contents gone into the vortices of nilspace
+2026-10-03	140	bag_weightless	rations_std	move	-7.62	person-week	LOST -- bag ruptured, contents gone into the vortices of nilspace
+2026-10-03	140	bag_weightless	oil_flask	move	-4	each	LOST -- bag ruptured, contents gone into the vortices of nilspace
+2026-10-03	140	bag_weightless	waterskin	move	-7	each	LOST -- bag ruptured, contents gone into the vortices of nilspace
+2026-10-03	140	bag_weightless	torch	move	-1	each	LOST -- bag ruptured, contents gone into the vortices of nilspace
+2026-10-03	140	bag_weightless	saw_hack	move	-1	each	LOST -- bag ruptured, contents gone into the vortices of nilspace
+2026-10-03	140	Ista	bag_weightless	move	-1	each	the bag itself ruptures and is ruined, cut open to free Tristle

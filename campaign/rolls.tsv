@@ -11624,3 +11624,34 @@ when	exped	turn	notation	dice	modifier	total	hidden	reason
 2026-10-03			1-6 (1d6)	3	0	3		Tristle damage, short bow
 2026-10-03			d6	2	0	2		wandering check, anchor 540
 2026-10-03			d6	4	0	4		the hobgoblins' response to the arrow and the retreating archer: 1-2 cautious, hold and investigate slowly, 3-4 send a couple to scout toward the shot, 5-6 advance as a group
+2026-10-03			d6	4	0	4		Tristle (elf) passing secret door near 30,7 while scouting, DMG p.97 passive 1-in-6
+2026-10-03			d6	4	0	4		wandering check, anchor 570
+2026-10-03			d6	6	0	6		wandering check, anchor 600
+2026-10-03			d6	3	0	3		wandering check, anchor 630
+2026-10-03			d100	83	0	83		Tristle Move Silently (30%) while scouting ahead, (7,16)->(10,16) -- standing passive check, result not narrated
+2026-10-03			d100	22	0	22		Tristle Move Silently (30%) while scouting ahead, (10,16)->(14,14) -- standing passive check, result not narrated
+2026-10-03			d100	37	0	37		Tristle Move Silently (30%) while scouting ahead, (14,14)->(15,14) -- standing passive check, result not narrated
+2026-10-03			d6	5	0	5		wandering check, anchor 660
+2026-10-03			d100	61	0	61		Tristle Move Silently (30%) while scouting ahead, (15,16)->(17,13) -- standing passive check, result not narrated
+2026-10-03			d100	90	0	90		Tristle Move Silently (30%) while scouting ahead, (17,13)->(17,12) -- standing passive check, result not narrated
+2026-10-03			d6	2	0	2		wandering check, anchor 690
+2026-10-03			d100	9	0	9		Tristle Move Silently (30%) while scouting ahead, (17,13)->(9,13) -- standing passive check, result not narrated
+2026-10-03			d6	2	0	2		wandering check, anchor 720
+2026-10-03			d100	22	0	22		Tristle Move Silently (30%) while scouting ahead, (9,13)->(8,13) -- standing passive check, result not narrated
+2026-10-03			d100	7	0	7		Bag of Devouring: 90% ignore / 10% reacts to the 10ft pole thrust within it (DMG p.137)
+2026-10-03			d100	30	0	30		Bag of Devouring: 90% ignore / 10% senses Tristle's hand (living flesh) reaching in (DMG p.137)
+2026-10-03			d100	80	0	80		Bag of Devouring: 90/10 ignore check -- all carried rations (organic) thrust within
+2026-10-03			d100	43	0	43		Bag of Devouring: 90/10 ignore check -- the rope (hemp, vegetable matter) thrust within
+2026-10-03			d100	72	0	72		Bag of Devouring: 90/10 ignore check -- an oil flask (organic-derived oil) thrust within
+2026-10-03			d100	66	0	66		Bag of Devouring: 90/10 ignore check -- a torch (wood, vegetable matter) thrust within
+2026-10-03			d100	25	0	25		Bag of Devouring: 90/10 ignore check -- the waterskins (leather, animal nature) thrust within
+2026-10-03			d100	91	0	91		Bag of Devouring: 90/10 ignore check -- Tristle reaches in for 4 iron spikes
+2026-10-03			d100	57	0	57		Bag of Devouring: 90/10 ignore check -- Tristle reaches in for the gold coins
+2026-10-03			d100	92	0	92		Bag of Devouring: 90/10 ignore check -- Tristle reaches in for 1 oil flask
+2026-10-03			d100	83	0	83		Bag of Devouring: 90/10 ignore check -- Tristle reaches in for the rope
+2026-10-03			d100	81	0	81		Bag of Devouring: NOT ignored (reaching for spikes) -- 60% check: does it close and try to draw Tristle in?
+2026-10-03			d100	54	0	54		Bag of Devouring: NOT ignored (reaching for the oil flask) -- 60% check: does it close and try to draw Tristle in?
+2026-10-03			d100	30	0	30		Bag of Devouring CLOSES on Tristle's arm (oil flask retrieval) -- base 75% chance to draw the whole victim in, STR10/+0 damage = no modifier
+2026-10-03			d100	86	0	86		Rescue attempt within the 7-segment window: Dave grabs and hauls Tristle back (STR18/26, +3 dmg), Torsat+Yrtone brace/stabilize Ista and the bag. DM-ruled base 50% + 5%/pt of Dave's dmg bonus (+15%) + 10% for the two extra hands bracing = 75% to pull him free before consumption
+2026-10-03			d100	39	0	39		Last-chance rescue: Ista (DEX13, +0) cuts the bag's fabric at the rim, avoiding Tristle's arm, trying to sever the magical opening before the window closes. DM-ruled base 50% (precision under duress) + 10% for a smarter tactic (cutting the mechanism, not fighting the pull) = 60%
+2026-10-03			d6	2	0	2		wandering check, anchor 750
