@@ -6607,3 +6607,22 @@ his to report on: three of six done as of day 86 (Ludbury), nothing
 further since. Honest, modest answer, not invented.
 Current state: purse 2,511gp1sp, XP updated. sword_barbarian still with
 the party, pending a detect magic cast (not yet declared/resolved).
+
+## Day 141 -- Tristle asks Toller, privately, about a thief trainer
+No reaction roll (known NPC). Checked rules/experience.md's training
+section before answering: tutor must be the SAME CLASS, cost is level x
+1500gp/week, and training can't even start until Tristle actually HITS
+the XP threshold (DMG p.86: XP freezes there) -- he's 225 off right now
+(xp.py), so this is pure forward prep, nothing actionable today regardless
+of what Toller says.
+Nothing established yet in this campaign for a thief/guild presence
+anywhere nearby -- genuinely new ground, not a lookup. Grounded the
+improvisation in what's already on record rather than inventing a NPC out
+of nothing: Toller already deals in grey-market-adjacent goods (the
+diary's 40% rumour risk, L008's correspondent network reaching Ludbury),
+so "doesn't know personally but can ask his Ludbury contacts" is
+consistent with his established character rather than a convenient
+coincidence. Logged the private conversation (141:3) and opened L069 to
+track it -- no name yet, follow-up whenever Toller's next letter to
+Ludbury gets an answer.
+Current state: unchanged otherwise. L069 open, subject tristle.
