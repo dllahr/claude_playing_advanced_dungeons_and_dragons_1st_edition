@@ -6789,3 +6789,40 @@ happens to matter -- this is the second time a missed oil-log step has
 needed a correction this campaign.
 Current state: party at (20,13)/level 2, round 11, day 143. Ista's
 lantern lit, 22.9 turns. Clean scan, nothing stocked in range.
+
+## Day 143 -- player asked to search the text: SIX more missed kills found
+First pass (morning) only caught 3 missed XP awards. Player pushed back --
+"I don't think those are all the fights." Right. Grepped every "Day 140"
+header in this file and cross-checked against what was actually in
+encounters.tsv; found a whole chain of "pending ledger -- credit on
+emerging" notes that were written during play (correctly deferred, per
+rules/experience.md's "accumulate during an expedition, credit on
+emerging") but then never actually moved into encounters.tsv when the
+expedition ended. The deferral mechanism worked; the final step was
+dropped.
+Six more kills, all independently re-verified against each bestiary's own
+XP formula rather than trusting the historical "pending ledger" arithmetic
+blind (caught one actual error doing this: a prose note for the area-51
+kobolds had used the GOBLIN formula, 10+1/hp, instead of kobold's 5+1/hp,
+getting 42 instead of 27 -- never written anywhere authoritative, so no
+correction needed, just didn't propagate the mistake):
+  - 2 goblins, solo Tristle, round 152: 25 (10+1/hp, hp4+hp1)
+  - 5 goblins, party, round 1 of the main fight: 66 (hp 4,5,4,1,2)
+  - 1 troglodyte, party, area 53 near (29,40): 54 (36+2/hp, hp9)
+  - 1 crab spider, party, area 52: 166 (145+3/hp, hp7)
+  - 1 crab spider, party, wandering: 181 (145+3/hp, hp12)
+  - 1 troglodyte, solo Tristle, near (29,30): 54 (36+2/hp, hp9)
+Confirmed NOT double-counting: the "round 2 reopened, both survivors
+killed" kobold passage was itself voided two notes later ("the 2 survivors
+actually escape") -- group total stands at the 3-kill/27xp figure already
+credited this morning, not 5.
+*** TRISTLE HAS HIT THE 2ND-LEVEL XP THRESHOLD *** -- 1271 vs 1251 needed,
+8 over. XP freezes there per DMG p.86 until he actually trains. L028 and
+L069 both updated/superseded to stop quoting the stale "still short"
+figures from this morning's partial fix.
+Bestiary play records for goblin/troglodyte/crab-spider already documented
+these fights narratively from when they happened -- only the encounters.tsv
+XP rows and the loop updates were missing, now both done.
+Current state: all 9 of expedition 31's actual kills now credited.
+Tristle at the 2nd-level threshold, frozen. Full table given to the player
+in the reply.
