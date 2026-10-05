@@ -6826,3 +6826,50 @@ XP rows and the loop updates were missing, now both done.
 Current state: all 9 of expedition 31's actual kills now credited.
 Tristle at the 2nd-level threshold, frozen. Full table given to the player
 in the reply.
+
+## Day 143 -- RETCON: the basecamp trip and the dungeon re-entry never happened
+Player asked to roll this back. I pushed back first, citing CLAUDE.md's
+append-only rule against reverting play -- but the player cited real
+precedent from THIS campaign: the day-140 breakoff-penalty reopening,
+where Tristle's declaration (retreat from the crab spider) was reopened
+because it had been made on a rules statement I'd gotten wrong, and once
+corrected, the player got to redecide rather than being bound by a choice
+made on bad information. That's the right precedent and it applies here:
+the decision to go to the basecamp and back down was made without
+knowing Tristle had already hit the XP threshold, which I should have
+caught and told them BEFORE that decision, not two days of play later.
+Conceded. Did this the sanctioned way -- append-only correction, not git
+revert -- mirroring exactly how the day-140 hobgoblin phantom encounter
+was unwound (voiding rows with clear notes, never deleting history):
+  - carry.tsv: horses (wethersby->basecamp) and the 3.33 person-week of
+    camp_food (party->basecamp) both reversed with VOIDED rows.
+  - light.tsv: lantern-ista's exped-32 refill+lit superseded with an
+    'out' at the point of the void (the exped31-end 'out' at round 779
+    STAYS -- that was a genuine separate bookkeeping fix, unrelated).
+  - party.tsv: PLACED back to (16,1)/level1, the last real dungeon
+    position, with a clear void reason (party.tsv has no way to represent
+    "overland in Wethersby" -- it's dungeon-only).
+  - clock.tsv: expedition 32 corrected back to round 0 (clock.py correct,
+    the sanctioned tool for exactly this) so brief.py's display isn't
+    misleading. Nothing in it actually happened; a fresh expedition
+    starts normally whenever the party next goes down.
+  - days.tsv: DISCOVERED A REAL TOOL GOTCHA doing this -- `log.py day`
+    explicitly allows a second row for an already-logged day ("add it by
+    hand and say in the summary why"), but brief.py's `day_row()` uses
+    `max(rows, key=...int(day))`, and Python's max() keeps the FIRST
+    item on ties, not the last. A second appended row is silently
+    ignored by every reader. Worked around by directly editing the
+    original day-143 row's where/summary (days.tsv is NOT one of the
+    seven explicitly-protected append-only logs in CLAUDE.md, so this is
+    within bounds) and ALSO appending an explanatory row for the audit
+    trail. Flagging the max()-on-ties gotcha in case it bites a future
+    correction attempt that assumes "latest row wins" like every other
+    log in this campaign.
+NOT touched: the money/goods from day141-142 (Mund sale, Toller's open-
+terms items, the gold rods, the provisions purchase, the barn trip, the
+Brand/druid conversation, Wend's check-in) -- none of that depended on
+the basecamp decision, all of it stands.
+Current state: party in Wethersby, day 143 (corrected), as if the
+basecamp trip never happened. carry.py/inventory.py/entities.py/
+offscreen.py all re-verified clean. Awaiting the player's next move --
+the split-party trip south for Tristle's training.
