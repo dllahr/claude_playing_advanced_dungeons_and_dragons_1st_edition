@@ -6905,3 +6905,25 @@ Not yet resolved: the actual journey and arrivals. Marchford holds
 nothing established yet -- whatever a thief trainer lead there turns out
 to be is new content, to be improvised when the player actually gets
 them there, not pre-decided here.
+
+## Day 143/144 -- Marchford arrival, no trainer there
+No wilderness encounters on this leg (CHECKLIST.md's standing rule,
+established road, matches precedent at line ~2587). Logged the trio's
+road meals (lunch+dinner day 143, breakfast+lunch day 144, each person's
+own carried share) and the five staying behind's lodging night (5 gp,
+not 10 -- half the party is away now). Day 144 opened, 0 offscreen ticks
+due.
+Rolled d6 in the open for whether Marchford itself -- a bridge/crossing
+town, not a city -- happens to have anyone who'd tutor a thief: 4, no.
+Didn't invent a reaction-roll NPC confrontation for a plain "ask the
+innkeeper" exchange -- that table (DMG p.37, loyalty/situation mods) is
+for followers and combat-adjacent reactions, not a neutral commercial
+Q&A, so it was skipped as a mismatched mechanic rather than forced.
+Resolution for the player: nobody in Marchford deals in that kind of
+instruction openly; the sense they get is that it's a Ludbury thing, not
+a Marchford thing, consistent with Pell's day-6 line already on record
+("Ludbury. That's the whole mystery") -- reusing established lore, not
+inventing a new NPC/contact to pad this out.
+Current state: trio at Marchford, day 144 midday, no lead yet, their
+own call whether to push on to Ludbury or turn back. Draycot pair
+still a day out; Wethersby group's day uneventful so far.

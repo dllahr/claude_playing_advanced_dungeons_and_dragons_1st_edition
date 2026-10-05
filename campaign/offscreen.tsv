@@ -30,3 +30,12 @@ day	agenda	tick	action	roll	kind	news	delivered_day
 133	A021	2	deliver				138
 140	A021	3	tick	4	progress	Brand moves on a stage (1 the alphabet, 2 his own name, 3 simple words, 4 a short line, 5 a plain notice); the stage is the count of progress ticks. SHOWN AT ONCE, in the next scene, as Brand reading something: he is with the party, so there is nothing to hide. At the FIFTH progress tick the DM closes this agenda and Brand raises his profession himself (the standing loop on it).	
 140	A021	3	deliver				141
+142	A001	3	tick	5	hold	No holder has answered yet.	
+142	A002	3	tick	6	hold	Osk has not answered.	
+142	A003	3	tick	6	hold	Nothing new on the Ludbury rumour.	
+142	A004	3	tick	6	hold	Wend has not got to the eleven this week: the barn, the holders and the wool come first.	
+142	A005	1	tick	2	resolve	Coll has pointed the barn wall with the party's mortar and used the rope on the job. It is done.	
+142	A006	1	tick	1	progress	Toller has heard from one of his correspondents (Ossery at Marchford or the Ludbury man). WHAT is the DM's to author when Toller tells the party.	
+142	A010	1	tick	2	resolve	Bern has finished the second loom and it is ready. Its cost and where it stands are the DM's to author when Wend tells the party.	
+142	A015	1	tick	5	hold	The roof is still on her list; no trip to Draycot yet.	
+142	A017	1	tick		due	Wend hired Wat and he took the opening 10 gp of the Draycot burial account to Father Cuddy. His hire, about 6 to 9 sp, comes out of the purse; Cuddy's answer is the DM's to author when Wend tells the party.	

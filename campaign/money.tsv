@@ -169,3 +169,4 @@ when	day	delta	unit	asset	qty	counterparty	interaction	reason	book
 2026-10-04	142	-1.95	gp	camp_food	4.29	wethersby	-	3 days of camp food for the whole party (10 mouths, 30 person-days = 4.29 person-weeks), day 142	
 2026-10-04	141	-10.0	gp	lodging	10	the Inn, Wethersby	-	day 141 night: board and lodging at the Inn at the party rate of 1 gp a person a night, ten of the party. Missed in the original pass, caught while reconciling the day-143 retcon.	
 2026-10-04	142	-10.0	gp	lodging	10	the Inn, Wethersby	-	day 142 night: board and lodging at the Inn, ten of the party. Originally logged as a free night at the basecamp; now that the basecamp trip is retconned away, it's a real Inn night with the real charge.	
+2026-10-05	143	-5.0	gp	lodging	5	the Inn, Wethersby	-	day 143 night: board and lodging at the Inn, five of the party staying behind (Brand, Frython, Hask, Dellie, Ista) at 1 gp a person a night.	

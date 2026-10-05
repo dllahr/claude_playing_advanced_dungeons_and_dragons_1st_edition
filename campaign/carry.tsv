@@ -1662,3 +1662,9 @@ when	day	who	asset	verb	qty	unit	note
 2026-10-04	143	Blartho	camp_food	move	0.857143	person-week	day 143: 6 days' own ration, Marchford trip
 2026-10-04	143	Tristle	camp_food	move	0.857143	person-week	day 143: 6 days' own ration, Marchford trip
 2026-10-04	143	party	coin	anchor	1764	gp	day 143: 1700 gp drawn out of the purse into physical coin for the two trips (1600 Marchford, 100 Draycot), on top of the 64 already on hand -- the party normally carries only a small working sum, per standing practice; this is a one-time larger draw for travel expenses. Anchored outright since there's no "move" source for coin converted from the abstract purse.
+2026-10-04	143	Dave	camp_food	move	-0.095238	person-week	lunch and dinner on the road to Marchford, day 143
+2026-10-04	143	Blartho	camp_food	move	-0.095238	person-week	lunch and dinner on the road to Marchford, day 143
+2026-10-04	143	Tristle	camp_food	move	-0.095238	person-week	lunch and dinner on the road to Marchford, day 143
+2026-10-05	144	Dave	camp_food	move	-0.095238	person-week	breakfast and lunch on the road to Marchford, day 144
+2026-10-05	144	Blartho	camp_food	move	-0.095238	person-week	breakfast and lunch on the road to Marchford, day 144
+2026-10-05	144	Tristle	camp_food	move	-0.095238	person-week	breakfast and lunch on the road to Marchford, day 144
