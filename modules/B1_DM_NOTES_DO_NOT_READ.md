@@ -6873,3 +6873,35 @@ Current state: party in Wethersby, day 143 (corrected), as if the
 basecamp trip never happened. carry.py/inventory.py/entities.py/
 offscreen.py all re-verified clean. Awaiting the player's next move --
 the split-party trip south for Tristle's training.
+
+## Day 143 -- three-way party split declared, departure logistics logged
+Dave, Tristle, Blartho ride south to Marchford (first stop, not
+necessarily the end) looking for a thief trainer. Yrtone and Torsat walk
+to Draycot to see Cuddy. Brand, Frython, Hask, Dellie, Ista stay in
+Wethersby, resting/studying.
+Logged:
+  - availability.tsv: all five travelers marked away, day 143, with
+    forecast return days (not binding) -- Marchford trio ~148, Draycot
+    pair ~147.
+  - carry.tsv: anchored party's physical coin to 1764, a total made up of 64 already on hand plus 1700 drawn from the purse (audit-skip), then split it -- Dave 800, Blartho 500, Tristle 300 for the Marchford trip, Torsat 50 and Yrtone 50 for Draycot (audit-skip). coin is
+    a FOREIGN asset per carry.py's own doc comment (money.tsv owns the
+    total, these rows are location notes only), so no reconciliation
+    against the purse was needed or possible -- confirmed via
+    tools/ledger.py check, still clean.
+  - camp_food: 6 days each (0.857 person-week) to Dave, Tristle, Blartho
+    for the Marchford leg. Nothing logged for the Draycot pair -- 2 days
+    walking, presumably fed at Cuddy's or the road, not specified.
+  - Caught in passing: day 141 and day 142 nights at the Inn in
+    Wethersby had never been charged lodging (1 gp/person/night, ten of
+    the party = 10 gp/night) -- day 141 was simply missed, day 142 was
+    originally free at the basecamp and is now a real Inn night because
+    of the retcon above. Both logged. Purse now 2,476 gp 3 sp.
+  - FLAGGED TO THE PLAYER, not hidden (mechanics are transparent): the
+    coin+food load pushes Dave to "very heavy" (6") and Tristle --
+    already thin on allowance at STR 10 -- also to "very heavy" (6").
+    Immaterial while mounted; matters only if they're ever forced
+    to move on foot without the horses.
+Not yet resolved: the actual journey and arrivals. Marchford holds
+nothing established yet -- whatever a thief trainer lead there turns out
+to be is new content, to be improvised when the player actually gets
+them there, not pre-decided here.

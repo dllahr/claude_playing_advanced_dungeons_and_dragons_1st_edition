@@ -1650,3 +1650,15 @@ when	day	who	asset	verb	qty	unit	note
 2026-10-04	142	wethersby	horse_riding	move	3	each	VOIDED correction: horses restored to Wethersby, day 143
 2026-10-04	143	basecamp	camp_food	move	-3.33	person-week	VOIDED, day 143: the camp food never went to the basecamp -- the party never went there. Restored to the party's own kit.
 2026-10-04	143	party	camp_food	move	3.33	person-week	VOIDED correction: camp food restored to the party, day 143
+2026-10-04	143	party	coin	move	-1600	gp	day 143: 1600 gp drawn for the Marchford trip -- training fees and expenses for finding Tristle a tutor
+2026-10-04	143	Dave	coin	move	800	gp	day 143: carried south to Marchford, in saddlebags
+2026-10-04	143	Blartho	coin	move	500	gp	day 143: carried south to Marchford, in saddlebags
+2026-10-04	143	Tristle	coin	move	300	gp	day 143: carried south to Marchford, in saddlebags
+2026-10-04	143	party	coin	move	-100	gp	day 143: 100 gp drawn for the Draycot trip
+2026-10-04	143	Torsat	coin	move	50	gp	day 143: carried to Draycot
+2026-10-04	143	Yrtone	coin	move	50	gp	day 143: carried to Draycot
+2026-10-04	143	party	camp_food	move	-2.571429	person-week	day 143: 6 days' camp food each for Dave, Tristle, Blartho, drawn for the Marchford trip
+2026-10-04	143	Dave	camp_food	move	0.857143	person-week	day 143: 6 days' own ration, Marchford trip
+2026-10-04	143	Blartho	camp_food	move	0.857143	person-week	day 143: 6 days' own ration, Marchford trip
+2026-10-04	143	Tristle	camp_food	move	0.857143	person-week	day 143: 6 days' own ration, Marchford trip
+2026-10-04	143	party	coin	anchor	1764	gp	day 143: 1700 gp drawn out of the purse into physical coin for the two trips (1600 Marchford, 100 Draycot), on top of the 64 already on hand -- the party normally carries only a small working sum, per standing practice; this is a one-time larger draw for travel expenses. Anchored outright since there's no "move" source for coin converted from the abstract purse.
