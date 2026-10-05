@@ -16,9 +16,11 @@ Giant amoeba. First met day 140, area 50, the water pit side-chamber.
 | Alignment | Neutral |
 | Size | M |
 | Number Appearing | 1-3 |
-| XP Value | not yet transcribed -- DMG Appendix E lookup owed before any kill is logged |
+| XP Value | **150 + 6/hp** |
 
-*source: **Monster Manual p. 75**, 200 dpi page render 2026-10-03.*
+*source: **Monster Manual p. 75**, 200 dpi page render 2026-10-03; XP value
+**DMG Appendix E, p. 208**, 200 dpi page render 2026-10-04 (the txt layer is
+garbled across this whole appendix -- rendered, not transcribed from OCR).*
 
 ## Special attacks
 
@@ -38,4 +40,6 @@ Can flow through small spaces, travels walls and ceilings with ease.
 
 ## Play record
 
-None yet.
+| Expedition | Where | Outcome |
+|---|---|---|
+| 31 | area 50, the water pit side-chamber, day 140 | Yrtone stepped on it mistaking it for a wet patch (surprised, widened 1-3); hit for 5 (3d4), pulled clear next round. Killed over 2 rounds by missile fire, hp16, zero further party losses. 246 XP (150+6/hp). |
