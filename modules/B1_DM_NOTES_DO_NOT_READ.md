@@ -6760,3 +6760,32 @@ this is Coll's own cleared, graded camp, established safe ground all
 campaign.
 Current state: day 143, morning, Coll's basecamp. Full HP across the
 party, breakfast done.
+
+## Day 143 -- back down to level 2
+camp_food left at the basecamp (3.33 person-week, all of what was
+carried). Expedition 32 started (clock.py start). Standard route:
+cave mouth (16,1) -> known route to the area 30 stair head (21,10), 34
+squares/340ft, 8 rounds -- matches the day-138/139/140 figures exactly,
+confirming the route hasn't changed. Placed down to level 2 at the stair
+foot (20,13), 3 rounds for the climb, matching precedent. Scanned on
+arrival: only the already-known gnomes and the already-known stairs
+feature -- clean.
+CAUGHT A REAL GAP: light.py show displayed lantern-ista as "BURNING, 24.0
+turns" at round 11 of the NEW expedition, which made no sense -- nobody
+had lit it yet this trip. Traced it: the lantern genuinely guttered mid-
+expedition-31 (round 470, already correctly shown before today), but
+NEITHER an explicit 'out' at expedition 31's end NOR a fresh 'refill'/
+'lit' for expedition 32's start had ever been logged -- the overland days
+(no dungeon clock, lantern obviously unlit for a market-town stay and a
+road trip) fell into a gap between the two expeditions' round-numbering.
+Fixed: logged 'out' at exped31 round779 (the actual exit point, even
+though fuel was already spent, matching the explicit-out-at-every-exit
+pattern every other expedition boundary has), then 'refill' + 'lit' at
+exped32 round0 (standing oil-management practice, done without being
+asked). Now reads correctly: 22.9 turns, gutters round 240. Worth
+remembering: ALWAYS log the lantern out when leaving the dungeon and lit
+when re-entering, every single expedition boundary, not just when it
+happens to matter -- this is the second time a missed oil-log step has
+needed a correction this campaign.
+Current state: party at (20,13)/level 2, round 11, day 143. Ista's
+lantern lit, 22.9 turns. Clean scan, nothing stocked in range.

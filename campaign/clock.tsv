@@ -1802,3 +1802,7 @@ when	exped	round	kind	anchor	detail	note
 2026-10-03	31	768	advance		16	day 140: party retraces the known route back to the stair foot in area 38, 740ft at the known-route rate
 2026-10-03	31	771	advance		3	day 140: party climbs the stair from area 38 up to area 30, level 1
 2026-10-03	31	779	advance		8	day 140: party heads out the known route from area 30 to the cave mouth, 340ft at the known-route rate
+2026-10-04	32	0	start			day 143: back down into Quasqueton, standard route to the area 30 stair, down to level 2
+2026-10-04	32	0	jitter		30:3,60:5,90:1,120:5,150:3,180:4,210:5,240:4,270:5,300:1,330:0,360:0,390:0,420:5,450:5,480:1,510:5,540:2,570:5,600:2,630:3,660:3,690:5,720:1,750:2,780:1,810:2,840:2,870:0,900:2,930:4,960:5,990:0,1020:2,1050:5,1080:3,1110:5,1140:1,1170:4,1200:3,1230:0,1260:2,1290:3,1320:5,1350:0,1380:0,1410:3,1440:4,1470:3,1500:2,1530:2,1560:3,1590:4,1620:2,1650:1,1680:3,1710:2,1740:4,1770:3,1800:4	rolled in advance and HIDDEN; each is reported when its check fires
+2026-10-04	32	8	advance		8	day 143: standard formation into Quasqueton, known route from the cave mouth to the area 30 stair head, 340ft
+2026-10-04	32	11	advance		3	day 143: party descends the stair of area 30 to level 2, arriving at the stair foot (20,13)

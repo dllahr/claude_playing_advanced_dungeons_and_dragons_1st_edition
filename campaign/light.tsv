@@ -274,3 +274,6 @@ when	exped	round	source	kind	what	who	fuel	certainty	note
 2026-09-28	31	8	lantern-yrtone	refill		Dave		known	day 140: topped off before going down the stair, from the party's own carried flask
 2026-10-03	31	230	lantern-ista	refill		Ista		known	CORRECTION: this refill should have been logged in-session around here (per the standing 'oil top-off is mine to manage' responsibility) but was missed -- the lantern was allowed to gutter at round 240 in the actual log, which is a DM bookkeeping failure, not an in-fiction event competent adventurers would let happen unnoticed. Backfilled at round 230, a turn before it would have run dry, matching normal practice.
 2026-10-03	31	750	pool	oil			-4	known	4 sealed oil flasks lost -- bag of the mystical find ruptured to free Tristle, contents gone into the vortices of nilspace, day 140
+2026-10-04	31	779	lantern-ista	out		Ista		known	day 140: had already guttered mid-expedition (round 470); logging the explicit out state at the point of leaving the dungeon, matching the standing pattern every other expedition-end has, even though the fuel was already spent
+2026-10-04	32	0	lantern-ista	refill		Ista		known	day 143: topped off at the basecamp before heading back down, standing oil-management practice
+2026-10-04	32	0	lantern-ista	lit		Ista		known	day 143: lit at the cave mouth for the way back in to the area 30 stair

@@ -1644,3 +1644,5 @@ when	day	who	asset	verb	qty	unit	note
 2026-10-04	142	basecamp	horse_riding	move	3	each	at Coll's basecamp, day 142
 2026-10-04	142	party	camp_food	move	-0.48	person-week	dinner at Coll's basecamp, day 142: ten mouths at a third of a person-day each, from the party's own carried stock
 2026-10-04	143	party	camp_food	move	-0.48	person-week	breakfast at Coll's basecamp, day 143: ten mouths at a third of a person-day each
+2026-10-04	143	party	camp_food	move	-3.33	person-week	left at Coll's basecamp, day 143, before heading into the dungeon
+2026-10-04	143	basecamp	camp_food	move	3.33	person-week	left at Coll's basecamp, day 143
