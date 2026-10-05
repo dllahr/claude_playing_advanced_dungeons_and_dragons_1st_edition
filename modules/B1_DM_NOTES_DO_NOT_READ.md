@@ -6697,3 +6697,34 @@ cold; letting that connect rather than treating the two scenes as
 unrelated.
 Current state: ale served, tab updated. Brand engaged but still
 undecided; conversation continues in the reply.
+
+## Day 141/142 -- healing, spell swap, turn in, morning errands
+Yrtone: her remaining cure light wounds slot (she'd already spent one of her two today, on Tristle after the pit fall -- that's a spell-slot count, not his hp, audit-skip) cast on herself, d8=3, capped at the 2 missing (5->7,
+full). Logged to both hp_log.tsv and spells.tsv.
+Spell swap: command -> detect magic, same mechanism and precedent as
+Blartho's swap for the ring on day 121 (give it up, rest, re-memorise
+the replacement). Logged tonight's unmemorise; the actual re-memorise
+happens with the morning prayer, not before -- a swap isn't instant.
+Day 142 opened via log.py day (the only write path). 9 offscreen ticks
+rolled and held -- NOT delivered, nothing met yet that would surface them
+(per the standing news-hidden-until-met rule).
+Morning: Yrtone's loadout re-set (cure light wounds x2, detect magic x1),
+then cast ON THE BARBARIAN SWORD. No roll -- detect magic doesn't carry a
+percentage chance in 1e, it just works. Result: NO MAGICAL RADIATION,
+consistent with the module's own words already on record for area 39's
+mementoes ("none... of any particular worth or value") -- this confirms
+it's mundane outright, not merely unvalued. Logged.
+Provisions: 3 days each of rations_std and camp_food for the whole party
+(10 mouths, 30 person-days = 4.29 person-weeks of each), bought at
+Wethersby. rations_std 3gp/person-week, camp_food ~0.455gp/person-week
+(rules/prices.md) -- 12.86gp and 1.95gp, 14.81gp total. Purse now
+2,496gp3sp.
+Barn trip: 4 iron spikes taken from the barn's stock (45->41 there, +4
+carried); the ore sample and the 2 spare salvage slings left there
+instead (party doesn't need to keep hauling a confirmed-worthless rock,
+and the personal slings worn by Blartho/Yrtone/Dellie/Hask are untouched
+-- only the shared spares moved). carry.py check, inventory.py check
+both clean throughout.
+Current state: day 142, morning, Wethersby. Yrtone full hp, loadout
+CLW x2/detect magic x1. Sword confirmed mundane. Provisions restocked.
+Purse 2,496gp3sp.

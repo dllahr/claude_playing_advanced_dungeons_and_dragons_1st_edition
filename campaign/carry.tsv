@@ -1630,3 +1630,11 @@ when	day	who	asset	verb	qty	unit	note
 2026-10-04	141	party	letter_thanks	move	-1	each	to Toller on open terms, day 141
 2026-10-04	141	toller	letter_thanks	move	1	each	on open terms, day 141
 2026-10-04	141	party	gold_rod_small	move	-4	each	sold to Toller, day 141
+2026-10-04	142	party	rations_std	move	4.29	person-week	bought at Wethersby, day 142
+2026-10-04	142	party	camp_food	move	4.29	person-week	bought at Wethersby, day 142
+2026-10-04	142	wend_barn	iron_spike	move	-4	each	taken from the barn stock, day 142
+2026-10-04	142	party	iron_spike	move	4	each	taken from the barn stock, day 142
+2026-10-04	142	party	ore_sample_bluish	move	-1	each	left at Wend's barn, day 142 -- confirmed worthless by three independent sources (Harn, Mund, Toller), no reason to keep carrying it
+2026-10-04	142	wend_barn	ore_sample_bluish	move	1	each	left at Wend's barn, day 142
+2026-10-04	142	party	sling	move	-2	each	the spare salvage slings left at Wend's barn, day 142
+2026-10-04	142	wend_barn	sling	move	2	each	left at Wend's barn, day 142

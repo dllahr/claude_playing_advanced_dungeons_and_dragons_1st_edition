@@ -165,3 +165,5 @@ when	day	delta	unit	asset	qty	counterparty	interaction	reason	book
 2026-10-04	141	7.5	gp	long_sword	-1	mund	-	long sword sold to Mund, used-arms half price (15gp list)	
 2026-10-04	141	0.5	gp	javelin	-2	mund	-	2 javelins sold to Mund, used-arms half price (10sp list)	
 2026-10-04	141	100.0	gp	gold_rod_small	-4	toller	-	4 small gold rods sold to Toller, 25gp each	
+2026-10-04	142	-12.86	gp	rations_std	4.29	wethersby	-	3 days of standard rations for the whole party (10 mouths, 30 person-days = 4.29 person-weeks), day 142	
+2026-10-04	142	-1.95	gp	camp_food	4.29	wethersby	-	3 days of camp food for the whole party (10 mouths, 30 person-days = 4.29 person-weeks), day 142	
