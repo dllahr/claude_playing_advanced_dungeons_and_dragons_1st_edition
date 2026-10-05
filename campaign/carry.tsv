@@ -1638,3 +1638,7 @@ when	day	who	asset	verb	qty	unit	note
 2026-10-04	142	wend_barn	ore_sample_bluish	move	1	each	left at Wend's barn, day 142
 2026-10-04	142	party	sling	move	-2	each	the spare salvage slings left at Wend's barn, day 142
 2026-10-04	142	wend_barn	sling	move	2	each	left at Wend's barn, day 142
+2026-10-04	142	party	sword_barbarian	move	-1	each	to Toller on open terms, day 142 -- confirmed mundane by detect magic, joins the museum set alongside the plaque and letter
+2026-10-04	142	toller	sword_barbarian	move	1	each	on open terms, day 142
+2026-10-04	142	wethersby	horse_riding	move	-3	each	the three horses go with the party to the basecamp, day 142
+2026-10-04	142	basecamp	horse_riding	move	3	each	at Coll's basecamp, day 142

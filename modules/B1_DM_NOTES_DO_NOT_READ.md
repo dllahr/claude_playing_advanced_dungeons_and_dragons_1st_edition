@@ -6728,3 +6728,18 @@ both clean throughout.
 Current state: day 142, morning, Wethersby. Yrtone full hp, loadout
 CLW x2/detect magic x1. Sword confirmed mundane. Provisions restocked.
 Purse 2,496gp3sp.
+
+## Day 142 -- sword to Toller, back to the basecamp
+sword_barbarian moved party->toller, open terms, same as plaque_chief/
+letter_thanks yesterday -- confirmed mundane first, no reason to keep
+carrying it. carry.py check clean.
+Return trip: checked current pace first (carry.py pack --target heavy)
+rather than assuming -- still 9" even with today's added provisions and
+spikes, so this mirrors the outbound trip exactly: cart pace, ~21 miles,
+a single day, no incident (same well-travelled road). 3 horses go along
+this time (not left behind), but with only 3 for 10 people and the cart
+still the group's actual bottleneck, this doesn't change the group pace
+-- riders can't outpace the people walking/the cart if the party's
+moving together. Not logged to any TSV (overland position has never
+been tracked that way in this campaign).
+Current state: party arrives at Coll's basecamp by evening, day 142.
