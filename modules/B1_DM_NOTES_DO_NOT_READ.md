@@ -6927,3 +6927,30 @@ inventing a new NPC/contact to pad this out.
 Current state: trio at Marchford, day 144 midday, no lead yet, their
 own call whether to push on to Ludbury or turn back. Draycot pair
 still a day out; Wethersby group's day uneventful so far.
+
+## Day 144 -- druid ask (negative) and Ossery for the "merchants guild" ask
+Druid: rolled d6=4 against a 1-2 threshold (rural hinterland might have
+heard something even if the town itself wouldn't) -- no. L070 noted.
+Merchants' guild: Marchford is a market town, not a city -- no formal
+hall on the record, and inventing one out of nothing when an established
+NPC already fits better would be padding. OSSERY THE MERCER is already
+on record here: blue shutters, "buys to sell on," first met day 59
+(Hask sold him the small-goods lot), struck the correspondent
+arrangement with Dave/Frython day 85 (interactions.tsv 85:1, L008), and
+is one of Toller's six correspondents. He's the closest thing Marchford
+has to organized trade -- asking around for "a merchants' guild" leads
+straight to him. Dave knows him already (two prior meetings, settled
+disposition, "8c" per the day-93 Toller note) so no reaction roll --
+known NPC, not first contact.
+NOT revealed: the pending offscreen tick (A006, day 142, d6=1 =
+"progress") about Toller hearing from a correspondent (Ossery or the
+Ludbury man) is filed under TOLLER in offscreen.tsv/agendas.tsv --
+checked via `offscreen.py news --who ossery` (nothing) vs `--who toller`
+(the tick is there). The standing rule is news surfaces when the party
+meets the PERSON the tick is about, and that's Toller, not Ossery, even
+though Ossery is literally named in the tick's own text. Meeting Ossery
+in person does not trigger it. Correct per the mechanism, not withheld
+by DM whim -- flagging in case a future session is tempted to read it
+through Ossery and should be stopped.
+Scene handed back to the player at the moment of arriving at Ossery's
+shop -- no content invented for what they actually discuss with him.
