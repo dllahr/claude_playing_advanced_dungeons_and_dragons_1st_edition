@@ -6743,3 +6743,20 @@ still the group's actual bottleneck, this doesn't change the group pace
 moving together. Not logged to any TSV (overland position has never
 been tracked that way in this campaign).
 Current state: party arrives at Coll's basecamp by evening, day 142.
+
+## Day 142/143 -- night at the basecamp
+Dinner (day 142) and breakfast (day 143) both drawn from the PARTY's own
+carried camp_food, not basecamp's -- basecamp's own stock is still at the
+clean-anchored 0 from two days ago (it all went to Wethersby with the
+party then). -0.48 person-week each, ten mouths, standard rate. Checked
+light.py show before resolving the rest: nothing currently lit (Ista's
+lantern already guttered out at round 470 in the dungeon, Yrtone's
+already logged out, Torsat's shows GONE from some earlier event) -- no
+"out" entry owed, nothing would have burned through the night regardless.
+Day 143 opened via log.py day, 0 offscreen ticks waiting. Standard
+re-memorisation, Yrtone's new loadout (cure light wounds x2, detect
+magic x1) holds overnight same as any spell loadout. No watch incident --
+this is Coll's own cleared, graded camp, established safe ground all
+campaign.
+Current state: day 143, morning, Coll's basecamp. Full HP across the
+party, breakfast done.

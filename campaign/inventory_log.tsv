@@ -545,3 +545,5 @@ when	day	asset	verb	qty	unit	condition	holder	evidence	note
 2026-10-04	141	gold_rod_small	move	-4	each	sound			sold to Toller, day 141
 2026-10-04	142	rations_std	move	4.29	person-week				bought at Wethersby, day 142: 3 days for the whole party, 10 mouths
 2026-10-04	142	camp_food	move	4.29	person-week				bought at Wethersby, day 142: 3 days for the whole party, 10 mouths
+2026-10-04	142	camp_food	move	-0.48	person-week				dinner at Coll's basecamp, day 142: ten mouths at a third of a person-day each
+2026-10-04	143	camp_food	move	-0.48	person-week				breakfast at Coll's basecamp, day 143: ten mouths at a third of a person-day each
