@@ -560,3 +560,4 @@ when	day	asset	verb	qty	unit	condition	holder	evidence	note
 2026-10-06	152	camp_food	move	-0.285714	person-week				breakfast and lunch on the road, day 152, arriving Marchford: three mouths
 2026-10-06	152	camp_food	move	0.285714	person-week				bought at Marchford, day 152: 1 day for Dave and Blartho's ride north to Wethersby
 2026-10-06	159	camp_food	move	0.857142	person-week				bought at Marchford, day 159: minimal, 2 days for the ride back to Wethersby, three people
+2026-10-06	159	camp_food	move	-0.285714	person-week				lunch and dinner on the road to Wethersby, day 159: three mouths, two meals
