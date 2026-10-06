@@ -6972,3 +6972,23 @@ Hulme's own terms, price, and willingness to actually train a thief
 (same-class tutor requirement, DMG p.86, rules/experience.md) are not
 decided here. Day 145 opened; Draycot pair due to arrive today too
 (not yet resolved, flagged to the player rather than silently dropped).
+
+## Day 152, Marchford -- Tristle's training actually starts, the performance rating
+DMG p.86: weeks required = DM's performance rating, 1 (Excellent) to 4
+(Poor), "averaged over the adventures since the last level." Tristle
+has been 1st level his entire career (no prior level-up to average
+from), so this is a read of his whole run: real, repeated value
+(solo kobold/troglodyte kills off ambush, the standing silent-scout
+practice whose results nobody including the player has ever seen),
+against real, permanent failures (locks closed forever under the
+one-try rule, and tonight's own poor Move Silently/Hide in Shadows
+showing, though that's post-period and doesn't count toward the
+rating itself). Call: GOOD, not Excellent -- rating 2, two weeks.
+Reasoning given to the player plainly, mechanics transparent.
+Cost: 1 (current level) x 1,500 x 2 = 3,000 gp. Tristle is carrying
+300 gp. Real shortfall, 2,700 gp -- flagged to the player rather than
+quietly waved past or solved for them. Dave/Blartho are about to ride
+off with most of the trio's remaining coin; this is the natural moment
+to decide how it's covered (leave more with Tristle, arrange terms
+with Hulme per DMG's "some combination of gold and service," or
+something else).
