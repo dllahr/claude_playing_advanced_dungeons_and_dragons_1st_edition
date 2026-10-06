@@ -7014,3 +7014,31 @@ Excellent claims "few deviations" with more confidence than that
 affords. SAME PRACTICAL NUMBER as the wrong first pass -- 2 weeks,
 3,000 gp -- but for the right reason, told to the player as a genuine
 correction, not a rationalization to keep the number unchanged.
+
+## SECOND CORRECTION, same day -- player-supplied context dissolves the last hedge
+Player, rightly suspicious that two different methods landed on the
+same "2," asked for real digging. A sub-agent research pass confirmed
+Superior was genuinely evidence-based, not a coincidence -- but flagged
+one hedge: a couple of melee instances that "complicate a claim of few
+deviations" even though not characterized as bad conduct anywhere on
+record. That hedge was the ONLY thing keeping the rating at Superior
+instead of Excellent.
+The player then supplied the missing tactical context neither I nor
+the sub-agent had surfaced: the spear fight was fought from SECOND
+RANK, a support position, not a frontal charge -- and the spear itself
+was only in Tristle's hand because of an earlier DM error about thief
+weapon restrictions (corrected later, rules/combat.md:169, "-3,
+deliberately accepted"), not a character choice to fight like a
+front-liner. The other melee instance was outflanking (moving around
+behind the enemy) or forced by desperation -- cunning positioning or
+circumstance, neither of which is "boldly engaging in frontal attacks,"
+the DMG's own specific POOR marker.
+With that hedge gone, there is no remaining evidence of deviation.
+UPGRADED: EXCELLENT (E=1) -- one week, 1,500 gp (1 x 1,500 x 1, DMG
+p.86). Tristle carries 300 gp; the real shortfall is 1,200, not 2,700.
+THIS IS A THIRD NUMBER ON THE SAME QUESTION IN ONE CONVERSATION. Each
+change was driven by new information or a corrected method, not by
+pressure to move the number -- logged honestly in case a future
+session reads this and wonders whether the DM just kept folding. The
+player caught two real errors (wrong criteria, then an incomplete
+picture of the melee instances) and both corrections were earned.
