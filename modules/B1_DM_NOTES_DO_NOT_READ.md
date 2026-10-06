@@ -6992,3 +6992,25 @@ off with most of the trio's remaining coin; this is the natural moment
 to decide how it's covered (leave more with Tristle, arrange terms
 with Hulme per DMG's "some combination of gold and service," or
 something else).
+
+## CORRECTION, same day -- the performance rating used the wrong axis
+Player-caught, out of game, citing the actual p.86 text (checked
+against a page render, confirmed). The rating is NOT a measure of
+mechanical success/failure -- it's "did the character perform basically
+in the character of his or her class? Were his or her actions in
+keeping with his or her professed alignment?" The book's own POOR
+example is a thief who fights frontal and passes up treasure -- a
+roleplay-fidelity question, not a skill-check scoreboard. My original
+call used failed locks and tonight's bad Move Silently roll, which is
+exactly the wrong axis.
+Redone properly: Tristle scouts ahead rather than holding back, fights
+by bow and ambush rather than frontal melee, uses his class skills
+constantly and takes initiative -- a thief acting like a thief,
+consistently, across his whole career. No alignment was ever formally
+declared for him, so only the class-conduct half can be weighed.
+Nothing points toward Fair or Poor. Called SUPERIOR (S=2), not
+Excellent, since 150 days of conduct wasn't graded in real time and
+Excellent claims "few deviations" with more confidence than that
+affords. SAME PRACTICAL NUMBER as the wrong first pass -- 2 weeks,
+3,000 gp -- but for the right reason, told to the player as a genuine
+correction, not a rationalization to keep the number unchanged.
