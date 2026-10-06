@@ -6954,3 +6954,21 @@ by DM whim -- flagging in case a future session is tempted to read it
 through Ossery and should be stopped.
 Scene handed back to the player at the moment of arriving at Ossery's
 shop -- no content invented for what they actually discuss with him.
+
+## Day 144/145 -- Hulme, Caddow, and why the die said yes this time
+Caddow (the guard) was named day 144, offered 1 gp for two drinks by
+Dave as an apology for the public exposure. Rolled d6=5 overnight
+(declared: 1-2 still cold, 3-4 calmed/curious, 5-6 glad someone asked
+sincerely) for whether Caddow's own talk with Hulme actually helped --
+the good end. REASONING FOR WHY THIS ISN'T A FREEBIE: the structural
+cause of Hulme's hostility was never "the question," it was being named
+by trade IN PUBLIC, in front of men whose trust he needs for his real
+livelihood. The party's stated plan this time -- camp, retry tomorrow,
+"a more subtle approach" -- directly removes that cause before any die
+was rolled, so the better odds are earned by the plan, not handed out.
+Not resolved: the actual conversation with Hulme. That's the player's
+to drive tomorrow morning -- Caddow can set it up and vouch, but
+Hulme's own terms, price, and willingness to actually train a thief
+(same-class tutor requirement, DMG p.86, rules/experience.md) are not
+decided here. Day 145 opened; Draycot pair due to arrive today too
+(not yet resolved, flagged to the player rather than silently dropped).
