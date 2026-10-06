@@ -1697,3 +1697,6 @@ when	day	who	asset	verb	qty	unit	note
 2026-10-06	152	Tristle	camp_food	move	-0.095238	person-week	breakfast and lunch on the road, day 152, arriving Marchford
 2026-10-06	152	Dave	camp_food	move	0.142857	person-week	bought at Marchford for the ride north, day 152
 2026-10-06	152	Blartho	camp_food	move	0.142857	person-week	bought at Marchford for the ride north, day 152
+2026-10-06	152	Dave	coin	move	-800	gp	leaving it all with Tristle before riding north, day 152 -- covers the 1,500 gp training fee with some left over for his own expenses
+2026-10-06	152	Blartho	coin	move	-500	gp	leaving it all with Tristle before riding north, day 152
+2026-10-06	152	Tristle	coin	move	1300	gp	received from Dave (800) and Blartho (500), day 152 -- now carries 1,600 total, covering the 1,500 gp training fee
