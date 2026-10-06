@@ -180,3 +180,4 @@ when	day	delta	unit	asset	qty	counterparty	interaction	reason	book
 2026-10-06	152	-2.0	gp	lodging	2	the Weir, Marchford	-	day 152 night: board and lodging at the Weir, Marchford -- Dave and Blartho, 1 gp a person a night, same standing rate.	
 2026-10-06	159	-14.0	gp	lodging	14	the Weir, Marchford	-	days 153-159, seven nights: board and lodging at the Weir for Dave and Blartho, 1 gp a person a night, 2 people x 7 nights = 14 gp. Consolidated into one row rather than seven identical ones.	
 2026-10-06	159	-750.0	gp	training		Hulme, Marchford	-	day 159: the remaining half of Hulme's training fee, paid on completion (750 of 1,500 gp, DMG p.86).	
+2026-10-06	159	-0.39	gp	camp_food	0.857143	Marchford market	-	day 159: minimal camp food for the ride back to Wethersby -- 3 people, 2 days, 6 person-days at the established 6.5 cp/person-day board rate, 39 cp = 3 sp 9 cp.	
