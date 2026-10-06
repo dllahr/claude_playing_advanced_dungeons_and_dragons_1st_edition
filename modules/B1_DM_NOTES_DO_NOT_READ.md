@@ -7068,3 +7068,56 @@ L008 (Wraye correspondent still unfound).
 Clean state: all tools check OK as of the last commit. Next session
 should open with brief.py as usual, and should not forget the Draycot
 pair sitting unresolved three sessions running.
+
+## Day 152-159 -- Tristle's week of training, montage, and level-up
+Two complications rolled for the week (declared tables, both minor,
+neither interrupted the uninterrupted-training requirement): a company
+guard caught a glimpse of a lock-picking drill and asked a pointed
+question, Hulme covered it at a cost (156:1); Dave/Blartho got fuller
+flood details closer to the source, a village upstream lost livestock
+and stored grain, now resolved (154:1). Lodging for Dave/Blartho
+consolidated into one 14 gp row rather than seven identical ones.
+
+TRAINING COMPLETE, day 159. 2nd level. HP roll d6=5, hp_max 3->8 (hp.py
+now shows 6/8, 2 points of pre-existing unhealed damage carried
+forward correctly). characters.tsv and rules/thief.md both updated in
+place (not append-only logs; current-state reference sheets, same
+treatment as people.tsv/places.tsv corrections this session) --
+thief.md's superseded 1st-level table kept in a collapsed <details>
+block with a DISTINCT heading so tools/rules.py's by-heading lookup
+can't return the wrong one. Thief to-hit/saves matrices are banded
+1st-4th for thieves (rules/combat.md) -- NO CHANGE to his attack
+numbers, only hp_max and the five functions.
+XP FREEZE LIFTED. Going forward he earns normally toward 2501 (3rd).
+RETRYABLE NOW, per PHB's own "may try again when risen to a higher
+level" -- checked via tools/world.py picks plus a direct grep since the
+tool's own STUMPED marker missed one:
+  - Open Locks, edge (6,16,H), day 99 -- the only one the tool itself
+    flagged STUMPED for Tristle.
+  - Find/Remove Traps, cell (3,19), the statue, day 140 -- tool shows
+    "?" not STUMPED (a display gap, not an exemption; PHB's rule is
+    identical for traps and locks, "in exactly the same manner").
+  - Find/Remove Traps, THE AREA 36 PIT TRAP AT (29,31)/(29,30), day 46
+    -- not in world.py picks' output at all (tracked in prose,
+    world_changes.tsv line 501, not a parseable lock/trap row) but
+    explicit in its own text: "NEITHER MAY TRY THIS TRAP AGAIN UNTIL
+    2nd LEVEL." Ista is still 1st level and still cannot. This is the
+    one L028 flagged as "what exactly 'unfreezes' means now that the
+    question is live" -- answered: Tristle, specifically, can try it
+    again, the next time the party is physically at (29,30)/(29,31).
+TEST SUITE FLAG, not fixed tonight: Tristle carrying 850 gp (half the
+training fee, held until completion) pushes his own personal load to
+"encumbered" and breaks four tools/tests/test_carry.py tests that used
+his NORMAL low-weight state as an incidental fixture for testing
+unrelated things (pack() conservation math, band-fitting, the
+zero-share exemption). Confirmed pre-existing and unrelated: three
+test_bestiary.py failures and one test_checklist_shrinks.py failure,
+same with or without this session's changes -- not mine to fix.
+tools/tests/test_overland.py's south-road-is-unknown test WAS
+legitimately broken by real play (Darrow told Dave the road exists,
+day 146) and has been rewritten to assert the new, correct, known
+state rather than silenced -- full suite: 593 -> ~596 passed, the 4
+carry.py failures are the only ones actually caused by tonight and
+are left failing on purpose rather than patched in a hurry. Revisit
+once Tristle's coin load returns to normal (after the final 750 gp is
+paid) or give the test fixtures their own dedicated session.

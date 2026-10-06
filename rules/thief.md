@@ -1,7 +1,7 @@
 # Thief functions — AD&D 1e
 
-Parsed by `tools/rules.py`. Tristle is the party's only thief: **1st level, elf,
-DEX 18**.
+Parsed by `tools/rules.py`. Tristle is the party's only thief: **2nd level
+(day 159, trained under Hulme, Marchford — DMG p.86), elf, DEX 18**.
 
 ## Thief function table — base chance by level
 
@@ -54,6 +54,25 @@ and put Tristle's trap chance in the cache at 30% for most of the campaign. It i
 
 ## Tristle — the numbers actually in play
 
+**2nd level as of day 159.** Superseding the 1st-level table below it.
+
+| Function | Base (lvl 2) | Elf | DEX 18 | **Total** |
+|---|---|---|---|---|
+| Open Locks | 29% | -5% | +15% | **39%** |
+| Find/Remove Traps | 25% | - | +5% | **30%** |
+| Move Silently | 21% | +5% | +10% | **36%** |
+| Hide in Shadows | 15% | +10% | +10% | **35%** |
+| Pick Pockets | 35% | +5% | +10% | **50%** |
+| Hear Noise | 10% | +5% | 0 | **15%** |
+| Climb Walls | 86% | - | 0 | **86%** |
+
+*source: computed from the two tables above; both verified from page renders.*
+
+<details>
+<summary>1st-level table (superseded day 159)</summary>
+
+### Tristle — 1st-level numbers, superseded day 159
+
 | Function | Base (lvl 1) | Elf | DEX 18 | **Total** |
 |---|---|---|---|---|
 | Open Locks | 25% | -5% | +15% | **35%** |
@@ -64,7 +83,7 @@ and put Tristle's trap chance in the cache at 30% for most of the campaign. It i
 | Hear Noise | 10% | +5% | 0 | **15%** |
 | Climb Walls | 85% | - | 0 | **85%** |
 
-*source: computed from the two tables above; both verified from page renders.*
+</details>
 
 ## ONE TRY PER LOCK, EVER
 

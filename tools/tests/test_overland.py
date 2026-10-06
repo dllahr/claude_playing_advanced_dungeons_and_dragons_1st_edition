@@ -351,17 +351,25 @@ def test_the_south_road_does_not_pass_through_wethersby():
         overland.roads()['draycot_south'])
 
 
-def test_the_party_does_not_know_the_south_road_and_it_is_not_drawn():
-    """*** A ROAD IS A SPOILER TOO. *** They have never
-    asked where Sir Aymer's clip goes. Drawing the answer on their map would
-    hand it to them in a picture, which is harder to un-see than a sentence.
+def test_the_party_knows_the_south_road_as_of_day_146():
+    """*** A ROAD IS A SPOILER TOO -- UNTIL IT IS ASKED FOR AND EARNED. ***
+    This asserted UNKNOWN for 145 days: they had never asked where Sir
+    Aymer's clip goes, and drawing the answer on their map would have handed
+    it to them in a picture, harder to un-see than a sentence. Day 146,
+    Marchford: Dave asked Darrow directly what roads leave Ludbury, and
+    Darrow -- a goods dealer answering an honest question, not a DM leak --
+    named it plainly (interactions.tsv 146:3, knowledge.tsv). Surfaced
+    through the same mechanism as L070's druid question and L069's
+    thief-trainer question: only when the party actually goes asking, from a
+    mouth that would plausibly know. The guard this test protects stands;
+    the fact it was guarding has since been earned in play.
     """
     import mapimg
-    assert overland.level_of('draycot_south') == overland.UNKNOWN
+    assert overland.level_of('draycot_south') == 'known'
     name = overland.roads()['draycot_south']['name']
-    assert name not in overland.ways(true=False)
+    assert name in overland.ways(true=False)
     assert name in overland.ways(true=True)
-    assert name not in mapimg.svg()
+    assert name in mapimg.svg()
     assert name in mapimg.svg(true=True)
 
 
