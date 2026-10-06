@@ -1695,3 +1695,5 @@ when	day	who	asset	verb	qty	unit	note
 2026-10-06	152	Dave	camp_food	move	-0.095238	person-week	breakfast and lunch on the road, day 152, arriving Marchford
 2026-10-06	152	Blartho	camp_food	move	-0.095238	person-week	breakfast and lunch on the road, day 152, arriving Marchford
 2026-10-06	152	Tristle	camp_food	move	-0.095238	person-week	breakfast and lunch on the road, day 152, arriving Marchford
+2026-10-06	152	Dave	camp_food	move	0.142857	person-week	bought at Marchford for the ride north, day 152
+2026-10-06	152	Blartho	camp_food	move	0.142857	person-week	bought at Marchford for the ride north, day 152
