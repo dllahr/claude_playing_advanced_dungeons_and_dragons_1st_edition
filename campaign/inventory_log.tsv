@@ -555,3 +555,6 @@ when	day	asset	verb	qty	unit	condition	holder	evidence	note
 2026-10-06	149	camp_food	move	-0.142857	person-week				dinner, camped outside Ludbury's walls, day 149: three mouths, keeping watch on the road
 2026-10-06	150	camp_food	move	-0.142857	person-week				breakfast and lunch on the road north, day 150, chasing the caravan: three mouths
 2026-10-06	150	camp_food	move	-0.142857	person-week				CORRECTION, day 150: the earlier row labeled 'breakfast and lunch' only deducted one meal's worth (0.142857 = 3 mouths x 1 meal); this second row covers the actual second meal.
+2026-10-06	150	camp_food	move	-0.142857	person-week				dinner, camped with the caravan, day 150: three mouths
+2026-10-06	151	camp_food	move	-0.428571	person-week				breakfast, lunch and dinner on the road with the caravan, day 151: three mouths, three meals
+2026-10-06	152	camp_food	move	-0.285714	person-week				breakfast and lunch on the road, day 152, arriving Marchford: three mouths
