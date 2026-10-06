@@ -617,7 +617,7 @@ round 178 — and has never yet faced more than one at a time.
 
 | item | value | note |
 |---|---|---|
-| ring of protection +1, area 27 | **none yet** | UNIDENTIFIED. No XP until the party establishes what it is; DMG item value then applies. Its bonus still does not apply in play. |
+| ring of protection +1, area 27 | **none yet** | STILL UNIDENTIFIED for XP purposes (no exact bonus confirmed, no DMG item value established) -- but day 152, Marchford: Dave and Blartho trial-and-error tested it (40 real sparring exchanges, L029), correctly detected the AC effect's existence and direction (70% hit rate without vs 45% with), found nothing on attack/hiding/strength/speed, matching the true item exactly. FUNCTIONAL use ruled in from here -- the AC bonus now applies in play when worn, since the party has genuinely earned that much. Full ID (exact +1, the save bonus they never tested) still wants a sage or similar; XP waits for that. |
 | small tapestry, area 24 | 40 gp | carried |
 | silver-plated comb, area 24 | 5 gp | carried |
 | gold piece, area 24 | 1 gp | carried |
