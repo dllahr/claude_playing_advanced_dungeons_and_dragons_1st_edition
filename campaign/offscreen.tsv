@@ -40,3 +40,10 @@ day	agenda	tick	action	roll	kind	news	delivered_day
 142	A015	1	tick	5	hold	The roof is still on her list; no trip to Draycot yet.	
 142	A017	1	tick		due	Wend hired Wat and he took the opening 10 gp of the Draycot burial account to Father Cuddy. His hire, about 6 to 9 sp, comes out of the purse; Cuddy's answer is the DM's to author when Wend tells the party.	
 148	A022	1	tick	5	progress	Brand moves on a stage (1 the alphabet, 2 his own name, 3 simple words, 4 a short line, 5 a plain notice); the stage is the count of progress ticks. SHOWN AT ONCE, in the next scene, as Brand reading something: he is with the party, so there is nothing to hide. At the FIFTH progress tick the DM closes this agenda and Brand raises his profession himself (the standing loop on it).	
+149	A001	4	tick	2	progress	One of the four holders has answered Wend. WHICH holder and WHAT he understood about the price is the DM's to author when Wend tells the party.	
+149	A002	4	tick	5	hold	Osk has not answered.	
+149	A003	4	tick	6	hold	Nothing new on the Ludbury rumour.	
+149	A004	4	tick	2	progress	Wend has put the question about Gyll's field to one more of the eleven, quietly, as Ottir's condition requires. WHO and WHAT he said are the DM's to author when she tells the party. Nothing has been sown: flax is a spring crop.	
+149	A006	2	tick	6	hold	No word from Toller's correspondents this week.	
+149	A015	2	tick	4	hold	The roof is still on her list; no trip to Draycot yet.	
+149	A018	1	tick	4	due	Osk took BOTH carts this run, about 6 road days each at 5 sp: 60 sp (3 gp) is due to the party, paid to Wend.	
