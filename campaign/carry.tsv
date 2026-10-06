@@ -1705,3 +1705,6 @@ when	day	who	asset	verb	qty	unit	note
 2026-10-06	159	Dave	camp_food	move	0.285714	person-week	bought at Marchford for the ride home, day 159
 2026-10-06	159	Blartho	camp_food	move	0.285714	person-week	bought at Marchford for the ride home, day 159
 2026-10-06	159	Tristle	camp_food	move	0.285714	person-week	bought at Marchford for the ride home, day 159
+2026-10-06	159	Dave	oil_flask	move	7	each	bought at Marchford, day 159, carried for the ride home
+2026-10-06	159	Blartho	oil_flask	move	7	each	bought at Marchford, day 159, carried for the ride home
+2026-10-06	159	Tristle	oil_flask	move	6	each	bought at Marchford, day 159, carried for the ride home

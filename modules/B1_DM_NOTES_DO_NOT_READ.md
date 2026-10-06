@@ -7121,3 +7121,20 @@ carry.py failures are the only ones actually caused by tonight and
 are left failing on purpose rather than patched in a hurry. Revisit
 once Tristle's coin load returns to normal (after the final 750 gp is
 paid) or give the test fixtures their own dedicated session.
+
+## Day 159 -- oil purchase, and a confirmed pre-existing carry.tsv/light.tsv drift
+20 flasks bought at Marchford. First attempt wrongly added an
+inventory_log.tsv row for oil_flask -- caught immediately by
+inventory.py check itself ("TWO SOURCES FOR ONE FACT... remove this
+row"), same class of error as the earlier oil_flask double-track this
+session. Removed. Correct path: light.tsv's pool row (source=pool,
+kind=oil, fuel=+20) is what light.py oilstate actually reads; carry.tsv
+rows for oil_flask are DECORATIVE location notes only, not reconciled
+by either inventory.py or carry.py check (confirmed -- both still pass
+with carry.tsv's own oil_flask total sitting at a different number).
+FOUND IN THE PROCESS, PRE-EXISTING, NOT CAUSED TONIGHT: carry.tsv's
+"basecamp: oil_flask 18" is stale and does not match light.py's
+authoritative total even before tonight's purchase (14 sealed before,
+34 after; carry.tsv's own location rows sum differently). Not
+reconciled tonight -- out of scope, flagging rather than silently
+leaving it for a future session to trip over.
