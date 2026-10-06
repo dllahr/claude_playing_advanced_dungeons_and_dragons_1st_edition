@@ -7042,3 +7042,29 @@ pressure to move the number -- logged honestly in case a future
 session reads this and wonders whether the DM just kept folding. The
 player caught two real errors (wrong criteria, then an incomplete
 picture of the melee instances) and both corrections were earned.
+
+## Session close, day 152
+Party split three ways, all current:
+  - TRISTLE, alone, Marchford -- training under Hulme (4th-level thief),
+    one week, Excellent rating. 750 gp paid up front, 750 due on
+    completion. Carries 850 gp, band encumbered (3"-4"). No further
+    name given on the Ludbury Thieves' Guild yet (L072, open).
+  - DAVE AND BLARTHO, Marchford -- staying to guard the coin while
+    Tristle trains. Functionally identified the ring (L029) as AC-only,
+    no other effect, via real simulated sparring -- its bonus now
+    applies in play. Noticed recent bridge-repair work on the river
+    crossing, plausibly tied to the day-147 Ludbury flood rumor,
+    unconfirmed.
+  - YRTONE AND TORSAT, Draycot -- arrived day 145, NEVER ACTUALLY
+    PLAYED OUT. Still sitting there untouched; flag this at the start
+    of next session rather than let it go another sitting unresolved.
+  - BRAND, FRYTHON, HASK, DELLIE, ISTA, Wethersby -- resting/studying,
+    quiet the whole stretch, nothing played out beyond the opening
+    days' logistics.
+Open and live: L069 (Tristle's training, in progress), L071 (Merrick,
+held deliberately), L072 (Hulme's guild contact, held deliberately),
+L029 (ring, functionally ID'd, full ID still wants Ordric or similar),
+L008 (Wraye correspondent still unfound).
+Clean state: all tools check OK as of the last commit. Next session
+should open with brief.py as usual, and should not forget the Draycot
+pair sitting unresolved three sessions running.
