@@ -11939,3 +11939,5 @@ when	exped	turn	notation	dice	modifier	total	hidden	reason
 2026-10-06			d2	1	0	1		day 162, exped33: how many orcs can physically reach through the single alcove doorway to attack in this one free segment -- a 10ft opening, 1 or 2 fit
 2026-10-06			d20	16	0	16		day 162, exped33: the orc's free-segment attack on Yrtone, AC3. Monster matrix (1 HD column) needs 16 to hit AC3.
 2026-10-06			1-8 (1d8)	7	0	7		day 162, exped33: orc hit on Yrtone, damage (1-8 or by weapon, bestiary/orc.md)
+2026-10-06			d6	3	0	3		day 162, exped33, REDONE properly: orcs have infravision too (bestiary/orc.md) -- this is Tristle ALONE, 40ft ahead of the party, approaching the alcove mouth, not the main party. Both sides have equal infravision range/access, so it's genuinely mutual, not a one-sided advantage. Surprise for Tristle (1-2 surprised).
+2026-10-06			d6	5	0	5		day 162, exped33: surprise for the orcs (1-2 surprised) -- against Tristle alone, who failed his Move Silently (hidden roll, d100=81 vs 36%, already logged) but orcs also have infravision in range
