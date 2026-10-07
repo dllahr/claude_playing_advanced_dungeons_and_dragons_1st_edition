@@ -1713,3 +1713,15 @@ when	day	who	asset	verb	qty	unit	note
 2026-10-06	159	Tristle	camp_food	move	-0.095238	person-week	lunch and dinner on the road, day 159
 2026-10-06	145	Yrtone	coin	move	-3	gp	paid to Cuddy for the Draycot burial account's quarterly sum, day 145
 2026-10-06	160	wend_barn	loom_narrow_2	anchor	1	each	the second narrow loom from Bern, day 160 -- corrected to Wend's barn (not Lyde's village, player-caught: Lyde is the master weaver Meg/Tibb train under, he has his own equipment). For the party's own weaving once they're trained, same as the first loom (cloth_plant).
+2026-10-06	160	Dave	oil_flask	move	-7	each	all turned in at Wend's barn, day 160, sorting kit after the long trip
+2026-10-06	160	Blartho	oil_flask	move	-7	each	all turned in at Wend's barn, day 160
+2026-10-06	160	Tristle	oil_flask	move	-6	each	all turned in at Wend's barn, day 160
+2026-10-06	160	party	oil_flask	move	4	each	4 kept out of the 20 brought back, for the shared kit, day 160
+2026-10-06	160	wend_barn	oil_flask	move	16	each	the other 16 of the 20 brought back from Marchford, left at the barn, day 160
+2026-10-06	160	Dave	camp_food	move	-0.428572	person-week	pooled into the shared kit at Wend's barn, day 160
+2026-10-06	160	Blartho	camp_food	move	-0.428572	person-week	pooled into the shared kit at Wend's barn, day 160
+2026-10-06	160	party	camp_food	move	0.857144	person-week	Dave and Blartho's individually-carried camp food, pooled, day 160
+2026-10-06	160	wend_barn	saw_hack	move	-1	each	one hacksaw taken out of the barn's three, day 160
+2026-10-06	160	party	saw_hack	move	1	each	added to the shared kit, day 160
+2026-10-06	160	Dave	camp_food	anchor	0	person-week	CLEAN ANCHOR: the preceding pool-out left floating-point dust instead of a clean zero, this sets it outright
+2026-10-06	160	Blartho	camp_food	anchor	0	person-week	CLEAN ANCHOR: the preceding pool-out left floating-point dust instead of a clean zero, this sets it outright
