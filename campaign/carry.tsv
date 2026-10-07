@@ -1733,3 +1733,6 @@ when	day	who	asset	verb	qty	unit	note
 2026-10-06	160	party	coin	anchor	0	gp	Relocated to 'wend' holder (same row group) -- this was never really an untracked abstract 'party' pile, it's Wend's strongbox. Zeroing the old holder to avoid double-counting.
 2026-10-06	160	party	camp_food	move	1.03857	person-week	bought at Wethersby, day 160, added to the shared kit
 2026-10-06	160	Tristle	coin	move	-0.4725	gp	paid for the camp food top-up, day 160
+2026-10-06	161	party	camp_food	move	-0.476190	person-week	lunch on the road to the basecamp, day 161
+2026-10-06	161	wethersby	horse_riding	move	-3	each	the three riding horses go north with the party, day 161
+2026-10-06	161	basecamp	horse_riding	move	3	each	at Coll's basecamp, day 161
