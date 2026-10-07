@@ -1712,3 +1712,4 @@ when	day	who	asset	verb	qty	unit	note
 2026-10-06	159	Blartho	camp_food	move	-0.095238	person-week	lunch and dinner on the road, day 159
 2026-10-06	159	Tristle	camp_food	move	-0.095238	person-week	lunch and dinner on the road, day 159
 2026-10-06	145	Yrtone	coin	move	-3	gp	paid to Cuddy for the Draycot burial account's quarterly sum, day 145
+2026-10-06	160	wend_barn	loom_narrow_2	anchor	1	each	the second narrow loom from Bern, day 160 -- corrected to Wend's barn (not Lyde's village, player-caught: Lyde is the master weaver Meg/Tibb train under, he has his own equipment). For the party's own weaving once they're trained, same as the first loom (cloth_plant).
