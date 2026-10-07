@@ -1725,3 +1725,6 @@ when	day	who	asset	verb	qty	unit	note
 2026-10-06	160	party	saw_hack	move	1	each	added to the shared kit, day 160
 2026-10-06	160	Dave	camp_food	anchor	0	person-week	CLEAN ANCHOR: the preceding pool-out left floating-point dust instead of a clean zero, this sets it outright
 2026-10-06	160	Blartho	camp_food	anchor	0	person-week	CLEAN ANCHOR: the preceding pool-out left floating-point dust instead of a clean zero, this sets it outright
+2026-10-06	160	Tristle	camp_food	move	-0.285715	person-week	pooled into the shared kit at Wend's barn, day 160
+2026-10-06	160	party	camp_food	move	0.285715	person-week	Tristle's own carried camp food, pooled, day 160
+2026-10-06	160	Tristle	camp_food	anchor	0	person-week	CLEAN ANCHOR: the preceding pool-out left floating-point dust instead of a clean zero, this sets it outright
