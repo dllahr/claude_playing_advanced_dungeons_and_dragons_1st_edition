@@ -56,3 +56,20 @@ day	agenda	tick	action	roll	kind	news	delivered_day
 156	A006	3	tick	5	hold	No word from Toller's correspondents this week.	
 156	A015	3	tick	5	hold	The roof is still on her list; no trip to Draycot yet.	
 83	A014	1	deliver				145
+142	A001	3	deliver				160
+142	A002	3	deliver				160
+142	A003	3	deliver				160
+142	A004	3	deliver				160
+142	A010	1	deliver				160
+142	A015	1	deliver				160
+142	A017	1	deliver				160
+149	A001	4	deliver				160
+149	A002	4	deliver				160
+149	A003	4	deliver				160
+149	A004	4	deliver				160
+149	A015	2	deliver				160
+156	A001	5	deliver				160
+156	A002	5	deliver				160
+156	A003	5	deliver				160
+156	A004	5	deliver				160
+156	A015	3	deliver				160

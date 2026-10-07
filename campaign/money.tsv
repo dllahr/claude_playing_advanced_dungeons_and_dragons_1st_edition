@@ -184,3 +184,4 @@ when	day	delta	unit	asset	qty	counterparty	interaction	reason	book
 2026-10-06	159	-20.0	gp	oil_flask	20	Marchford market	-	day 159: 20 flasks of oil bought at Marchford, 1 gp each, standard price.	
 2026-10-06	160	-3.0	gp	lodging	3	the Inn, Wethersby	-	day 160 night: board and lodging at the Inn, Dave/Tristle/Blartho back from Marchford.	
 2026-10-06	145	-3.0	gp	burial_account		Cuddy, Draycot	-	day 145: a quarter's payment to the Draycot burial account, paid directly to Cuddy in person (A016, L066) -- 3 gp. The opening 10 gp was already delivered by Wat on day 142 (A017); this is the first quarterly instalment since.	
+2026-10-06	160	-20.0	gp	loom_narrow_2		Bern	-	day 160, told by Wend: the second narrow loom from Bern is finished and paid -- 20 gp, a bit more than the first (he charged for the rush of two jobs close together). For Lyde's two learners, Meg and Tibb.	
