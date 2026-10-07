@@ -1741,3 +1741,5 @@ when	day	who	asset	verb	qty	unit	note
 2026-10-06	162	party	camp_food	move	-1.51143	person-week	left at Coll's basecamp, day 162, before heading into the caves -- not carried on this expedition
 2026-10-06	162	basecamp	camp_food	move	1.51143	person-week	the party's travelling camp food, left here, day 162
 2026-10-06	162	party	camp_food	anchor	0	person-week	CLEAN ANCHOR: float dust from the basecamp move-out, set outright
+2026-10-06	162	wethersby	camp_food	move	-1.36	person-week	CORRECTION, player-caught: this was leftover from the day-142 purchase and never got moved along when the party traveled from Wethersby to the basecamp, day 161 -- it should have gone with the rest of the shared camp food the whole time. Relocating.
+2026-10-06	162	basecamp	camp_food	move	1.36	person-week	the stranded Wethersby portion, brought into the basecamp total where it always should have been
