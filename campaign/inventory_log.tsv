@@ -565,3 +565,5 @@ when	day	asset	verb	qty	unit	condition	holder	evidence	note
 2026-10-06	160	loom_narrow_2	move	0	each		wend_barn		CORRECTION, player-caught: the loom was logged as going to Lyde's village, but Lyde is the master weaver Meg and Tibb are training UNDER -- he has his own equipment and wouldn't need the party's. The loom is for the party's own weaving, same as the first (cloth_plant, also Wend's barn, day 77) -- for when Meg and Tibb come back trained. Corrected holder to Wend's barn; qty 0 since the anchor row already set the count, this just fixes location.
 2026-10-06	160	camp_food	move	1.03857	person-week				bought at Wethersby, day 160: topping up to 4.3 person-weeks before heading to the basecamp
 2026-10-06	161	camp_food	move	-0.476190	person-week				lunch on the road to the basecamp, day 161: ten mouths, one meal
+2026-10-06	161	camp_food	move	-0.476190	person-week				dinner at Coll's basecamp, day 161: ten mouths
+2026-10-06	162	camp_food	move	-0.476190	person-week				breakfast at Coll's basecamp, day 162: ten mouths
