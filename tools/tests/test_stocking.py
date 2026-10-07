@@ -284,6 +284,68 @@ def test_simulate_flee_refuses_an_unknown_or_dead_individual(tmp_path, log):
                           db=make_db(tmp_path, *corridor(3)), path=log)
 
 
+# --------------------------------------------- check_against_encounters() --
+#
+# Day 162: area 8's seven giant rats and area 32's two giant centipedes
+# were both fully fought and paid in encounters.tsv, with this file's own
+# die rows never appended -- they sat `present` indefinitely because
+# nothing ever cross-checked the two logs against each other. These tests
+# guard the fix.
+
+@pytest.fixture
+def encounters(tmp_path):
+    p = tmp_path / 'encounters.tsv'
+    p.write_text(
+        '# test fixture\n'
+        'exped\tkind\tencounter\txp\tearned_by\tsource\tnotes\n'
+        '7\tmonster\tgiant rats (2), area 9 doorway\t21\tall\tx\ty\n'
+        '7\tmonster\tgiant rats (5) slain sleeping, area 8\t44\tall\tx\ty\n'
+        '31\tmonster\tthree of five kobolds, area 51 near (31,27)\t27\tall\tx'
+        '\tthe 2hp and 1hp survivors fled, not credited\n')
+    return str(p)
+
+
+def test_check_flags_a_group_fully_fought_but_never_marked_dead(log, encounters):
+    """area 8's exact shape: all seven still `present`, but encounters.tsv
+    already has the kill rows."""
+    for mid, hp in (('giant_rat_8a', 4), ('giant_rat_8b', 3),
+                   ('giant_rat_8c', 3), ('giant_rat_8d', 2),
+                   ('giant_rat_8e', 2), ('giant_rat_8f', 1),
+                   ('giant_rat_8g', 1)):
+        stock(log, mid, level=1, area='8', monster='giant_rat', x=14, y=23,
+             hp=hp, day=46)
+    flags = stk.check_against_encounters(path=log, encounters_path=encounters)
+    assert len(flags) == 1
+    lvl, area, monster, ids, exped, text = flags[0]
+    assert (lvl, area, monster) == (1, '8', 'giant_rat')
+    assert ids == sorted('giant_rat_8%s' % c for c in 'abcdefg')
+
+
+def test_check_is_silent_once_the_die_rows_exist(log, encounters):
+    for mid, hp in (('giant_rat_8a', 4), ('giant_rat_8b', 3)):
+        stock(log, mid, level=1, area='8', monster='giant_rat', x=14, y=23,
+             hp=hp, day=46)
+        stk.record(mid, 'die', day=46, path=log)
+    assert stk.check_against_encounters(path=log, encounters_path=encounters) == []
+
+
+def test_check_does_not_flag_an_individual_already_tracked_as_fled(log, encounters):
+    """kobold_51d/e: encounters.tsv's own text says they fled, not died.
+    Sitting `present` after a FLEE event is a judged outcome, not an
+    oversight, and must not be flagged just because the room and monster
+    are mentioned in an unrelated kill row."""
+    stock(log, 'kobold_51a', level=2, area='51', monster='kobold',
+         x=31, y=27, hp=4, day=140)
+    stk.record('kobold_51a', 'die', day=140, path=log)
+    stock(log, 'kobold_51d', level=2, area='51', monster='kobold',
+         x=31, y=27, hp=2, day=140)
+    stk.record('kobold_51d', 'flee', x=32, y=30, duration=30, day=140,
+              path=log)
+    flags = stk.check_against_encounters(level=2, path=log,
+                                         encounters_path=encounters)
+    assert flags == []
+
+
 # --------------------------------------------------------------- the real file
 
 def test_the_live_file_parses_and_every_stocked_individual_has_a_home():

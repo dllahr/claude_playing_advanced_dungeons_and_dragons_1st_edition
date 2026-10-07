@@ -379,6 +379,32 @@ def secrets_near(steps, db=None, level=1):
     return out
 
 
+def monsters_near(steps, db=None, level=1, radius=6, now=None):
+    """[(square, kind, detail)] -- every still-PRESENT stocked monster that
+    comes into light-reach range of this route, first-sighting only.
+
+    *** WHY THIS EXISTS. *** Day 162: a stocked group of 7 orcs sat in a
+    side alcove the party walked past 57 times across two months of play,
+    in standard formation, Tristle scouting ahead on live infravision --
+    and `stocking.py scan` was never run against any of those 57 passes,
+    because it was a separate manual step nobody remembered to take. This
+    folds the same check into every `move`, exactly the way `secrets_near`
+    already folds the secret-door passive check in -- so whether something
+    is actually noticed stays the DM's judgment call (surprise, Hear
+    Noise, who is where in formation), but the OPPORTUNITY to notice can
+    no longer go unevaluated for 57 passes running.
+
+    `radius=6` is infravision range, the default because the party's
+    standing formation keeps an elf scouting ahead on it most trips; pass
+    a smaller radius (3, lamplight) if nobody present has it this time.
+    """
+    db = db or DB
+    import stocking
+    now = now if now is not None else stocking.current_now()
+    findings = stocking.scan_squares(db, level, steps, radius=radius, now=now)
+    return [f for f in findings if f[1] == 'monster']
+
+
 def _load(db, level):
     import dmap
     return dmap.load(db, level)
@@ -432,6 +458,10 @@ def build_parser():
                          'to use it to walk the magic-mouth corridor. ***')
     mv.add_argument('--exped', default='')
     mv.add_argument('--turn', default='')
+    mv.add_argument('--monster-radius', type=int, default=6,
+                    help='light-reach radius (in squares) to scan this '
+                         'route for still-PRESENT stocked monsters -- 6 is '
+                         'infravision, 3 is lamplight only. See day 162.')
 
     pl = sub.add_parser('place', help='put the party somewhere WITHOUT walking')
     pl.add_argument('--at', required=True, metavar='X,Y')
@@ -488,6 +518,13 @@ def main(argv=None):
             print('  *** KNOWN SECRET DOOR ON THIS ROUTE -- an elf passive '
                   '1-in-6 (DMG p.97) is owed EVERY pass, not once: %s'
                   % ', '.join('(%d,%d,%s)' % (x, y, o) for x, y, o, _n in near))
+        monsters = monsters_near(steps, a.db, level, a.monster_radius)
+        if monsters:
+            print('  !!! STOCKED MONSTER IN RANGE OF THIS ROUTE -- this is '
+                  'not a narration call, it is what the scan actually '
+                  'found. Resolve detection before narrating the move:')
+            for sq, _kind, detail in monsters:
+                print('      at %s: %s' % (sq, detail))
         return 0
 
     if a.cmd == 'place':

@@ -187,6 +187,67 @@ def test_secrets_near_is_silent_when_nothing_is_near(world_with_secret):
     assert near == []
 
 
+# ---------------------------------------- stocked monsters within range --
+#
+# Day 162: a stocked group of 7 orcs sat in a side alcove the party walked
+# past 57 times, and the check that would have found them (stocking.py
+# scan) was never run because it was a separate manual step. These tests
+# guard monsters_near(), the fix: the same check folded into every move.
+
+@pytest.fixture
+def world_with_monster(tmp_path, monkeypatch):
+    """(0,0)-(0,2) open corridor; a stocked, still-PRESENT orc sitting one
+    square off (0,1), in an open alcove with no wall between it and the
+    corridor -- the same shape as area 1's alcove pair."""
+    db = str(tmp_path / 'b1.sqlite')
+    con = sqlite3.connect(db)
+    con.executescript(open(SCHEMA).read())
+    con.execute("INSERT INTO levels (level,name) VALUES (1,'test')")
+    for x in (0, 1):
+        for y in range(3):
+            con.execute("INSERT INTO cells (level,x,y,terrain) "
+                        "VALUES (1,?,?,'open')", (x, y))
+    for x in (0, 1):
+        for y in range(3):
+            con.execute("INSERT INTO edges (level,x,y,orient,kind) "
+                        "VALUES (1,?,?,'H','open')", (x, y))
+            con.execute("INSERT INTO edges (level,x,y,orient,kind) "
+                        "VALUES (1,?,?,'V','open')", (x, y))
+    con.commit(); con.close()
+    stock_log = str(tmp_path / 'b1_stocking.tsv')
+    open(stock_log, 'w').write(
+        'when\tday\tlevel\tarea\tmonster_id\tmonster\tverb\tx\ty\thp'
+        '\texped\tround\tduration\tnote\n'
+        '2026-08-15\t\t1\t99\torc_99a\torc\tstock\t1\t1\t5\t\t\t\tfixture\n')
+    import stocking
+    monkeypatch.setattr(stocking, 'LOG', stock_log)
+    log = str(tmp_path / 'party.tsv')
+    open(log, 'w').write(HEADER)
+    return db, log
+
+
+def test_monsters_near_finds_a_stocked_monster_in_light_reach(world_with_monster):
+    db, _log = world_with_monster
+    found = party.monsters_near([(0, 0), (0, 1), (0, 2)], db=db,
+                                 radius=6, now=(1, 1, 1))
+    assert any('orc_99a' in detail for _sq, _kind, detail in found)
+
+
+def test_monsters_near_is_silent_once_the_monster_is_dead(world_with_monster, monkeypatch):
+    db, _log = world_with_monster
+    import stocking
+    stocking.record('orc_99a', 'die', path=stocking.LOG, note='fixture kill')
+    found = party.monsters_near([(0, 0), (0, 1), (0, 2)], db=db,
+                                 radius=6, now=(1, 1, 1))
+    assert found == []
+
+
+def test_monsters_near_is_silent_when_out_of_range(world_with_monster):
+    db, _log = world_with_monster
+    found = party.monsters_near([(0, 0)], db=db, radius=0, now=(1, 1, 1))
+    assert found == []
+
+
 def test_move_prints_the_owed_check(world_with_secret, capsys):
     db, log = world_with_secret
     party.place('0,0', 'test', path=log)

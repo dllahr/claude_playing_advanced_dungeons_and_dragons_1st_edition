@@ -422,6 +422,65 @@ def break_contact(monster_id, threat_x, threat_y, feet_budget,
 # reports
 # --------------------------------------------------------------------------
 
+ENCOUNTERS_LOG = os.path.join(ROOT, 'campaign', 'encounters.tsv')
+
+
+def check_against_encounters(level=None, rows_=None, path=None,
+                             encounters_path=None):
+    """Flag every GROUP (same level+area+monster) that is entirely still
+    `present` but campaign/encounters.tsv already has a monster-kill row
+    naming that same area and monster -- the exact shape of the day-162
+    gap: area 8's seven giant rats and area 11's seven orcs were both
+    logged in encounters.tsv (fully fought, XP paid) long before this
+    file's `die` rows were ever appended, because the two logs were never
+    cross-checked against each other.
+
+    Returns [(level, area, monster, [monster_id, ...], exped, encounter_text)].
+    Advisory, not authoritative: encounters.tsv's `encounter` column is
+    free prose, so a match here is a POSSIBLE contradiction for a human to
+    confirm -- the same discipline audit.py uses for a figure, never
+    silent trust. A group can go unflagged for reasons this cannot see
+    (the fight predates encounters.tsv's itemized rows, exp.1-2's lump
+    anchor being the one known case) -- it narrows the search, it does not
+    replace reading the actual history.
+    """
+    import re
+    rows_ = rows_ if rows_ is not None else rows(path)
+    # An individual with ANY event beyond its original `stock` row (a
+    # wound, a reposition, a flee) has already been deliberately tracked
+    # -- sitting `present` afterward (kobold_51d/e, FLED day 140) is a
+    # judged outcome, not an oversight, and must not be flagged just
+    # because a kill-row elsewhere mentions the same room and monster.
+    touched = {(r.get('monster_id') or '').strip() for r in rows_
+              if (r.get('verb') or '').strip() in ('hp', 'move', 'flee')}
+
+    groups = {}
+    for mid, s in state(rows_, path).items():
+        if level is not None and s['level'] != level:
+            continue
+        if not s['alive'] or mid in touched:
+            continue
+        key = (s['level'], s['area'], s['monster'])
+        groups.setdefault(key, []).append(mid)
+
+    enc_rows = read_tsv(encounters_path or ENCOUNTERS_LOG, missing_ok=True)
+    flags = []
+    for (lvl, area, monster), ids in sorted(groups.items()):
+        if not area or not monster:
+            continue
+        area_pat = re.compile(r'\barea\s+0*%s\b' % re.escape(str(area)), re.I)
+        monster_pat = re.compile(re.escape(monster).replace('_', '[ _]'), re.I)
+        for r in enc_rows:
+            if (r.get('kind') or '').strip().lower() != 'monster':
+                continue
+            text = r.get('encounter') or ''
+            if area_pat.search(text) and monster_pat.search(text):
+                flags.append((lvl, area, monster, sorted(ids),
+                             r.get('exped'), text))
+                break
+    return flags
+
+
 def status_report(level=None, area=None, rows_=None, path=None):
     st = state(rows_, path)
     out = []
@@ -447,6 +506,13 @@ def build_parser():
     st = sub.add_parser('status', help="everyone's current computed state")
     st.add_argument('--level', type=int)
     st.add_argument('--area')
+
+    ck = sub.add_parser('check', help="cross-check every still-'present' "
+                        'group against campaign/encounters.tsv for a '
+                        'monster-kill row that says otherwise -- the '
+                        'day-162 gap: a fight fully fought and paid, with '
+                        "this file's own die rows never appended")
+    ck.add_argument('--level', type=int)
 
     at_p = sub.add_parser('at', help='who is at exactly this cell now')
     at_p.add_argument('level', type=int)
@@ -533,6 +599,17 @@ def main(argv=None):
     if a.cmd == 'status':
         print(status_report(a.level, a.area))
         return 0
+    if a.cmd == 'check':
+        flags = check_against_encounters(a.level)
+        if not flags:
+            print('no contradictions found -- every still-present group '
+                  'has no matching kill row in encounters.tsv')
+            return 0
+        for lvl, area, monster, ids, exped, text in flags:
+            print('CONTRADICTION: L%s area %s %s (%s) still PRESENT, but '
+                  'encounters.tsv exp.%s says:\n    %s'
+                  % (lvl, area, monster, ', '.join(ids), exped, text))
+        return 1
     if a.cmd == 'at':
         now = None if a.ignore_clock else current_now()
         found = at(a.level, a.x, a.y, now)
