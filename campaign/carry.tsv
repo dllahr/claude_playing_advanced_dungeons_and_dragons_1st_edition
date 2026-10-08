@@ -1747,3 +1747,11 @@ when	day	who	asset	verb	qty	unit	note
 2026-10-07	162	party	spear	move	2	each	picked up off the dead orcs, area 1, day 162
 2026-10-07	162	party	hand_axe	move	4	each	picked up off the dead orcs, area 1, day 162
 2026-10-07	162	party	short_bow	move	1	each	picked up off the dead orcs, area 1, day 162
+2026-10-08	163	party	polearm_orc	move	-1	each	left at the basecamp, day 163, before heading back into the caves
+2026-10-08	163	basecamp	polearm_orc	move	1	each	left at the basecamp, day 163
+2026-10-08	163	party	spear	move	-2	each	left at the basecamp, day 163, before heading back into the caves
+2026-10-08	163	basecamp	spear	move	2	each	left at the basecamp, day 163
+2026-10-08	163	party	hand_axe	move	-4	each	left at the basecamp, day 163, before heading back into the caves
+2026-10-08	163	basecamp	hand_axe	move	4	each	left at the basecamp, day 163
+2026-10-08	163	party	short_bow	move	-1	each	left at the basecamp, day 163, before heading back into the caves
+2026-10-08	163	basecamp	short_bow	move	1	each	left at the basecamp, day 163

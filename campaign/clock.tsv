@@ -1816,3 +1816,8 @@ when	exped	round	kind	anchor	detail	note
 2026-10-07	33	20	advance		9	day 162: carrying the bound orc captive back to the cave mouth
 2026-10-07	33	30	advance		10	day 162: thorough search of the alcove, 1 turn
 2026-10-07	33	30	check	30	d6=2	anchor 30 + 0
+2026-10-07	33	60	advance		30	day 162: walk from the cave mouth to Coll's basecamp, 30 min at 9 inches (standing basecamp-trail figure)
+2026-10-07	33	60	check	60	d6=1 -> Kobolds (1 -6)-AC 7, HDV 2 , hp4,3,3,2,2,1,#AT 1, D 1-4 or weapon -1, MV 90’ (30’), Save NM, ML 6	anchor 60 + 0
+2026-10-07	34	0	start			day 163: back into the caves, down to level 2, standard formation, Tristle scouting ahead
+2026-10-07	34	0	jitter		30:0,60:4,90:5,120:5,150:4,180:1,210:1,240:5,270:4,300:3,330:0,360:3,390:2,420:3,450:2,480:1,510:3,540:3,570:3,600:2,630:0,660:2,690:1,720:3,750:1,780:3,810:5,840:5,870:2,900:1,930:2,960:0,990:0,1020:0,1050:1,1080:0,1110:2,1140:3,1170:2,1200:2,1230:5,1260:5,1290:1,1320:0,1350:5,1380:1,1410:1,1440:3,1470:5,1500:3,1530:2,1560:2,1590:5,1620:1,1650:5,1680:3,1710:1,1740:4,1770:1,1800:5	rolled in advance and HIDDEN; each is reported when its check fires
+2026-10-07	34	8	advance		8	day 163: known route from the cave mouth to the area 30 stair head

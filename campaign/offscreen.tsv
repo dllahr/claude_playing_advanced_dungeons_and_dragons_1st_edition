@@ -74,3 +74,11 @@ day	agenda	tick	action	roll	kind	news	delivered_day
 156	A004	5	deliver				160
 156	A015	3	deliver				160
 162	A022	3	tick	2	hold	A bad week. Brand loses what he had and the lessons stand still; nothing new to show.	
+163	A001	6	tick	3	hold	No holder has answered yet.	
+163	A002	6	tick	3	hold	Osk has not answered.	
+163	A003	6	tick	1	progress	Wend has learned something more about who in Ludbury is saying the wool floor is unfair. WHAT is the DM's to author when she tells the party.	
+163	A004	6	tick	6	hold	Wend has not got to the eleven this week: the barn, the holders and the wool come first.	
+163	A006	4	tick	2	hold	No word from Toller's correspondents this week.	
+163	A013	1	tick	1	progress	Lyde has something to report on Meg or Tibb (how far each has come). WHAT is the DM's to author when the party meets him or hears from Wend.	
+163	A015	4	tick	6	hold	The roof is still on her list; no trip to Draycot yet.	
+163	A018	2	tick	5	due	Osk took BOTH carts this run, about 6 road days each at 5 sp: 60 sp (3 gp) is due to the party, paid to Wend.	

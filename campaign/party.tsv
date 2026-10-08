@@ -641,3 +641,6 @@ when	map	level	x	y	exped	turn	squares	feet	rate	why	route
 2026-10-07	b1	1	16	5	33		5	50	explore	day 162: party advances in standard formation to (16,5), missile weapons ready, watching the alcove	16,0 16,1 16,2 16,3 16,4 16,5
 2026-10-07	b1	1	16	8	33		3	30	explore	day 162: party closes the last 30ft to the sleeping orcs, round 8 of 13 (sleep expires), to kill six and bind the seventh	16,5 16,6 16,7 16,8
 2026-10-07	b1	1	16	0	33		8	80	explore	day 162: carrying the bound orc captive back out to the cave mouth, standing watch with melee weapons ready for it to wake	16,8 16,7 16,6 16,5 16,4 16,3 16,2 16,1 16,0
+2026-10-07	b1	1	16	1	34				PLACED	day 163: back into the caves, expedition 34, standard formation, Tristle 40ft ahead	
+2026-10-07	b1	1	21	10	34		34	340	known	day 163: standard formation, known route, cave mouth to the area 30 stair head, Tristle 40ft ahead	16,1 16,2 16,3 16,4 16,5 16,6 16,7 16,8 16,9 16,10 16,11 16,12 16,13 17,13 18,13 19,13 20,13 21,13 22,13 23,13 24,13 25,13 26,13 27,13 27,12 27,11 27,10 26,10 25,10 24,10 23,10 22,10 22,9 21,9 21,10
+2026-10-07	b1	2	20	13	34				PLACED	day 163: down the stairs at area 30 to level 2, standard formation, Tristle 40ft ahead	

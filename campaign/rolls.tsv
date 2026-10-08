@@ -11953,3 +11953,73 @@ when	exped	turn	notation	dice	modifier	total	hidden	reason
 2026-10-07			d100	90	0	90		day 162: orc_14's weapon loadout, bestiary/orc.md weapons-carried table (1-20 polearm, 21-30 sword&spear, 31-40 axe&spear, 41-50 axe&polearm, 51-60 axe&crossbow, 61-70 axe&bow, 71-80 spear, 81-90 axe, 91-95 sword&flail, 96-100 sword&battleaxe)
 2026-10-07			d100	70	0	70		day 162: orc_15's weapon loadout, bestiary/orc.md weapons-carried table (1-20 polearm, 21-30 sword&spear, 31-40 axe&spear, 41-50 axe&polearm, 51-60 axe&crossbow, 61-70 axe&bow, 71-80 spear, 81-90 axe, 91-95 sword&flail, 96-100 sword&battleaxe)
 2026-10-07			d100	87	0	87		day 162: orc_16's weapon loadout, bestiary/orc.md weapons-carried table (1-20 polearm, 21-30 sword&spear, 31-40 axe&spear, 41-50 axe&polearm, 51-60 axe&crossbow, 61-70 axe&bow, 71-80 spear, 81-90 axe, 91-95 sword&flail, 96-100 sword&battleaxe)
+2026-10-07			d6	1	0	1		wandering check, anchor 60
+2026-10-07			d6	3	0	3		wandering table, level 1
+2026-10-07			d6	3	0	3		OFFSCREEN A001 tick 6, day 163: Answers to Wend's four letters to the holders about next season's pric (wend). DECLARED FIRST, in agendas.tsv: d6|1-2=progress:One of the four holders has answered Wend. WHICH holder and WHAT he understood about the price is the DM's to author when Wend tells the party.|3-6=hold:No holder has answered yet.
+2026-10-07			d6	3	0	3		OFFSCREEN A002 tick 6, day 163: Osk's answer to the cart-hire sheet (a flat rate a load, his name on t (wend). DECLARED FIRST, in agendas.tsv: d6|1-2=progress:Osk has answered the cart-hire sheet. YES or NO, and his terms, are the DM's to author when Wend tells the party.|3-6=hold:Osk has not answered.
+2026-10-07			d6	1	0	1		OFFSCREEN A003 tick 6, day 163: Who in Ludbury is saying the art. 7 floor is unfair, and why (wend). DECLARED FIRST, in agendas.tsv: d6|1=progress:Wend has learned something more about who in Ludbury is saying the wool floor is unfair. WHAT is the DM's to author when she tells the party.|2-6=hold:Nothing new on the Ludbury rumour.
+2026-10-07			d6	6	0	6		OFFSCREEN A004 tick 6, day 163: Flax on Gyll's four-and-a-bit acres: ask the eleven, one at a time, an (wend). DECLARED FIRST, in agendas.tsv: d6|1-3=progress:Wend has put the question about Gyll's field to one more of the eleven, quietly, as Ottir's condition requires. WHO and WHAT he said are the DM's to author when she tells the party. Nothing has been sown: flax is a spring crop.|4-6=hold:Wend has not got to the eleven this week: the barn, the holders and the wool come first.
+2026-10-07			d6	2	0	2		OFFSCREEN A006 tick 4, day 163: Toller's six correspondents in six towns: word from Ossery and the Lud (toller). DECLARED FIRST, in agendas.tsv: d6|1=progress:Toller has heard from one of his correspondents (Ossery at Marchford or the Ludbury man). WHAT is the DM's to author when Toller tells the party.|2-6=hold:No word from Toller's correspondents this week.
+2026-10-07			d6	1	0	1		OFFSCREEN A013 tick 1, day 163: How Meg and Tibb are coming on at the loom (a year's apprenticeship fr (lyde). DECLARED FIRST, in agendas.tsv: d6|1-2=progress:Lyde has something to report on Meg or Tibb (how far each has come). WHAT is the DM's to author when the party meets him or hears from Wend.|3-6=hold:Meg and Tibb are learning; nothing to report.
+2026-10-07			d6	6	0	6		OFFSCREEN A015 tick 4, day 163: Father Cuddy's chapel roof mended: who mended it last (ask Cuddy, neve (wend). DECLARED FIRST, in agendas.tsv: d6|1=resolve:Coll's crew has mended the chapel roof at Draycot on a trip already being made, without a letter to the hall. The cost (within the 30 gp ceiling) and any word from Cuddy are the DM's to author when Wend tells the party.|2-3=progress:Wend has moved on the roof: word from Cuddy about who mended it last, or a plan with Coll's crew. WHAT is the DM's to author.|4-6=hold:The roof is still o
+2026-10-07			d6	5	0	5		OFFSCREEN A018 tick 2, day 163: Osk's fortnightly hire of the party's carts: 5 sp a cart-day on the ro (osk). DECLARED FIRST, in agendas.tsv: d6|1-2=due:Osk took ONE cart this run, about 6 road days at 5 sp: 30 sp (1 gp 10 sp) is due to the party, paid to Wend.|3-6=due:Osk took BOTH carts this run, about 6 road days each at 5 sp: 60 sp (3 gp) is due to the party, paid to Wend.
+2026-10-07			d6	1	0	1	yes	wandering jitter, anchor 30
+2026-10-07			d6	5	0	5	yes	wandering jitter, anchor 60
+2026-10-07			d6	6	0	6	yes	wandering jitter, anchor 90
+2026-10-07			d6	6	0	6	yes	wandering jitter, anchor 120
+2026-10-07			d6	5	0	5	yes	wandering jitter, anchor 150
+2026-10-07			d6	2	0	2	yes	wandering jitter, anchor 180
+2026-10-07			d6	2	0	2	yes	wandering jitter, anchor 210
+2026-10-07			d6	6	0	6	yes	wandering jitter, anchor 240
+2026-10-07			d6	5	0	5	yes	wandering jitter, anchor 270
+2026-10-07			d6	4	0	4	yes	wandering jitter, anchor 300
+2026-10-07			d6	1	0	1	yes	wandering jitter, anchor 330
+2026-10-07			d6	4	0	4	yes	wandering jitter, anchor 360
+2026-10-07			d6	3	0	3	yes	wandering jitter, anchor 390
+2026-10-07			d6	4	0	4	yes	wandering jitter, anchor 420
+2026-10-07			d6	3	0	3	yes	wandering jitter, anchor 450
+2026-10-07			d6	2	0	2	yes	wandering jitter, anchor 480
+2026-10-07			d6	4	0	4	yes	wandering jitter, anchor 510
+2026-10-07			d6	4	0	4	yes	wandering jitter, anchor 540
+2026-10-07			d6	4	0	4	yes	wandering jitter, anchor 570
+2026-10-07			d6	3	0	3	yes	wandering jitter, anchor 600
+2026-10-07			d6	1	0	1	yes	wandering jitter, anchor 630
+2026-10-07			d6	3	0	3	yes	wandering jitter, anchor 660
+2026-10-07			d6	2	0	2	yes	wandering jitter, anchor 690
+2026-10-07			d6	4	0	4	yes	wandering jitter, anchor 720
+2026-10-07			d6	2	0	2	yes	wandering jitter, anchor 750
+2026-10-07			d6	4	0	4	yes	wandering jitter, anchor 780
+2026-10-07			d6	6	0	6	yes	wandering jitter, anchor 810
+2026-10-07			d6	6	0	6	yes	wandering jitter, anchor 840
+2026-10-07			d6	3	0	3	yes	wandering jitter, anchor 870
+2026-10-07			d6	2	0	2	yes	wandering jitter, anchor 900
+2026-10-07			d6	3	0	3	yes	wandering jitter, anchor 930
+2026-10-07			d6	1	0	1	yes	wandering jitter, anchor 960
+2026-10-07			d6	1	0	1	yes	wandering jitter, anchor 990
+2026-10-07			d6	1	0	1	yes	wandering jitter, anchor 1020
+2026-10-07			d6	2	0	2	yes	wandering jitter, anchor 1050
+2026-10-07			d6	1	0	1	yes	wandering jitter, anchor 1080
+2026-10-07			d6	3	0	3	yes	wandering jitter, anchor 1110
+2026-10-07			d6	4	0	4	yes	wandering jitter, anchor 1140
+2026-10-07			d6	3	0	3	yes	wandering jitter, anchor 1170
+2026-10-07			d6	3	0	3	yes	wandering jitter, anchor 1200
+2026-10-07			d6	6	0	6	yes	wandering jitter, anchor 1230
+2026-10-07			d6	6	0	6	yes	wandering jitter, anchor 1260
+2026-10-07			d6	2	0	2	yes	wandering jitter, anchor 1290
+2026-10-07			d6	1	0	1	yes	wandering jitter, anchor 1320
+2026-10-07			d6	6	0	6	yes	wandering jitter, anchor 1350
+2026-10-07			d6	2	0	2	yes	wandering jitter, anchor 1380
+2026-10-07			d6	2	0	2	yes	wandering jitter, anchor 1410
+2026-10-07			d6	4	0	4	yes	wandering jitter, anchor 1440
+2026-10-07			d6	6	0	6	yes	wandering jitter, anchor 1470
+2026-10-07			d6	4	0	4	yes	wandering jitter, anchor 1500
+2026-10-07			d6	3	0	3	yes	wandering jitter, anchor 1530
+2026-10-07			d6	3	0	3	yes	wandering jitter, anchor 1560
+2026-10-07			d6	6	0	6	yes	wandering jitter, anchor 1590
+2026-10-07			d6	2	0	2	yes	wandering jitter, anchor 1620
+2026-10-07			d6	6	0	6	yes	wandering jitter, anchor 1650
+2026-10-07			d6	4	0	4	yes	wandering jitter, anchor 1680
+2026-10-07			d6	2	0	2	yes	wandering jitter, anchor 1710
+2026-10-07			d6	5	0	5	yes	wandering jitter, anchor 1740
+2026-10-07			d6	2	0	2	yes	wandering jitter, anchor 1770
+2026-10-07			d6	6	0	6	yes	wandering jitter, anchor 1800
