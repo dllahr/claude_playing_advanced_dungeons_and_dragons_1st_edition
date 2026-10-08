@@ -567,3 +567,7 @@ when	day	asset	verb	qty	unit	condition	holder	evidence	note
 2026-10-06	161	camp_food	move	-0.476190	person-week				lunch on the road to the basecamp, day 161: ten mouths, one meal
 2026-10-06	161	camp_food	move	-0.476190	person-week				dinner at Coll's basecamp, day 161: ten mouths
 2026-10-06	162	camp_food	move	-0.476190	person-week				breakfast at Coll's basecamp, day 162: ten mouths
+2026-10-07	162	polearm_orc	move	1.0	each				off one of the six dead orcs, area 1, day 162 -- bestiary/orc.md weapons-carried table, d100=10 (1-20 band): salvage, likely sold in town
+2026-10-07	162	spear	move	2.0	each				off two of the six dead orcs, area 1, day 162 -- weapons-carried table, d100=36 (axe&spear) and d100=77 (spear): salvage
+2026-10-07	162	hand_axe	move	4.0	each				off four of the six dead orcs, area 1, day 162 -- weapons-carried table, d100=36,90,70,87: salvage, type unspecified (same DM call as polearm_orc's note)
+2026-10-07	162	short_bow	move	1.0	each				off one of the six dead orcs, area 1, day 162 -- weapons-carried table, d100=70 (axe&bow): salvage

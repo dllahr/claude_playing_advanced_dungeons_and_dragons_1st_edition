@@ -1,7 +1,8 @@
 # Orc
 
-Not yet fought in melee — a hand axe in the party's salvage came off one, so
-they have been met at some point. Recorded here because B1 stocks them.
+The party's single most-fought enemy. First recorded before any melee
+contact (a salvaged hand axe was the only evidence); fought directly many
+times since -- see the play record.
 
 ## Orc stat block
 
@@ -58,4 +59,11 @@ axe & bow / spear / axe 10% each, sword & flail / sword & battleaxe 5% each.
 
 ## Play record
 
-None yet in melee.
+Fought and killed on at least six separate occasions (expeditions 5, 6, 13,
+14, 28, 30, plus area 1's guard post on day 162 -- some found asleep via
+Frython's *sleep* and slain automatically, PHB p.68, never rolled to-hit).
+`campaign/encounters.tsv` has the itemized fights; this file does not
+duplicate the log, only the lesson: **orcs go for Tristle first** (above)
+has held every time it mattered, and the weapons-carried table below is
+worth actually rolling for salvage -- skipped once, day 162, and caught by
+the player.

@@ -1743,3 +1743,7 @@ when	day	who	asset	verb	qty	unit	note
 2026-10-06	162	party	camp_food	anchor	0	person-week	CLEAN ANCHOR: float dust from the basecamp move-out, set outright
 2026-10-06	162	wethersby	camp_food	move	-1.36	person-week	CORRECTION, player-caught: this was leftover from the day-142 purchase and never got moved along when the party traveled from Wethersby to the basecamp, day 161 -- it should have gone with the rest of the shared camp food the whole time. Relocating.
 2026-10-06	162	basecamp	camp_food	move	1.36	person-week	the stranded Wethersby portion, brought into the basecamp total where it always should have been
+2026-10-07	162	party	polearm_orc	move	1	each	picked up off the dead orcs, area 1, day 162
+2026-10-07	162	party	spear	move	2	each	picked up off the dead orcs, area 1, day 162
+2026-10-07	162	party	hand_axe	move	4	each	picked up off the dead orcs, area 1, day 162
+2026-10-07	162	party	short_bow	move	1	each	picked up off the dead orcs, area 1, day 162
