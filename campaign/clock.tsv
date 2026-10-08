@@ -1814,3 +1814,5 @@ when	exped	round	kind	anchor	detail	note
 2026-10-07	33	8	advance		6	day 162: party advances cautiously to (16,5)
 2026-10-07	33	11	advance		3	day 162: closing the last 30ft to the sleeping orcs
 2026-10-07	33	20	advance		9	day 162: carrying the bound orc captive back to the cave mouth
+2026-10-07	33	30	advance		10	day 162: thorough search of the alcove, 1 turn
+2026-10-07	33	30	check	30	d6=2	anchor 30 + 0
