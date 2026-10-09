@@ -12023,3 +12023,46 @@ when	exped	turn	notation	dice	modifier	total	hidden	reason
 2026-10-07			d6	5	0	5	yes	wandering jitter, anchor 1740
 2026-10-07			d6	2	0	2	yes	wandering jitter, anchor 1770
 2026-10-07			d6	6	0	6	yes	wandering jitter, anchor 1800
+2026-10-08			d6	2	0	2		wandering check, anchor 30
+2026-10-08			d6	2	0	2		swing direction of door (16,20,H)/(16,21): table declared before the die, 1-3 opens toward the party (south), 4-6 opens away (north)
+2026-10-08			d6	4	0	4		B1 lock roll, door (16,20,H): 1-2 locked, 3-6 opens -- rolled once at examination
+2026-10-08			d100	74	0	74		Tristle Move Silently 36%, scouting solo through the door and down to (14,23)
+2026-10-08			d6	2	0	2		surprise check, Tristle's side -- first contact with gnoll_48b/c/d at (15,26), DMG p.62, 1-2 surprised
+2026-10-08			d6	1	0	1		surprise check, gnoll_48b/c/d's side -- surprised on 2, so 1-2 surprised
+2026-10-08			d20	5	0	5		Tristle attacks with short bow
+2026-10-08			d20	7	0	7		Tristle attacks with short bow
+2026-10-08			d20	6	0	6		Tristle attacks with short bow
+2026-10-08			d20	2	0	2		Tristle attacks with short bow
+2026-10-08			d20	1	0	1		Tristle attacks with short bow
+2026-10-08			d20	13	0	13		Tristle attacks with short bow
+2026-10-08			1-6 (1d6)	4	0	4		Tristle damage, short bow
+2026-10-08			d6	5	0	5		initiative, Tristle
+2026-10-08			d6	5	0	5		initiative, gnolls
+2026-10-09			d20	4	0	4		Torsat attacks with short bow
+2026-10-09			d20	3	0	3		Torsat attacks with short bow
+2026-10-09			d20	13	0	13		Blartho attacks with sling
+2026-10-09			d20	4	0	4		Yrtone attacks with sling
+2026-10-09			d20	13	0	13		Hask attacks with sling
+2026-10-09			d20	11	0	11		Dellie attacks with sling
+2026-10-09			d20	15	0	15		Frython attacks with dart
+2026-10-09			d20	3	0	3		Frython attacks with dart
+2026-10-09			d20	1	0	1		Frython attacks with dart
+2026-10-09			d20	5	0	5		Ista attacks with dart
+2026-10-09			d20	17	0	17		Ista attacks with dart
+2026-10-09			d20	20	0	20		Ista attacks with dart
+2026-10-09			1-2 (1d2)	1	0	1		Ista damage, dart
+2026-10-09			d20	6	0	6		Brand attacks with hand axe
+2026-10-09			d20	5	0	5		Dave attacks with short bow
+2026-10-09			d20	17	0	17		Dave attacks with short bow
+2026-10-09			1-6 (1d6)	3	0	3		Dave damage, short bow
+2026-10-09			d20	16	0	16		Tristle attacks with short bow
+2026-10-09			1-6 (1d6)	4	0	4		Tristle damage, short bow
+2026-10-09			d20	1	0	1		Tristle attacks with short bow
+2026-10-09			d6	2	0	2		initiative, party
+2026-10-09			d6	3	0	3		initiative, monsters (gnoll_48c, gnoll_48d)
+2026-10-09			d100	18	0	18		weapon carried, gnoll_48d, vs Torsat
+2026-10-09			d100	62	0	62		weapon carried, gnoll_48c, vs Dave
+2026-10-09			d20	2	0	2		gnoll_48d attacks Torsat with pole arm
+2026-10-09			d20	19	0	19		gnoll_48c attacks Dave with two-handed sword
+2026-10-09			1-10 (1d10)	2	0	2		gnoll_48c damage, two-handed sword vs Dave
+2026-10-09			d20	1	0	1		Yrtone attacks gnoll_48d with footman flail

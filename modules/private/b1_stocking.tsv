@@ -179,3 +179,10 @@ when	day	level	area	monster_id	monster	verb	x	y	hp	exped	round	duration	note
 2026-10-07	162			orc_1g		move	16	8		33	11		Day 162, round 11, exped 33: the seventh, left asleep, hands and feet bound with rope by Tristle rather than killed. CAPTIVE, not dead -- present()/at() will keep returning it; die() is deliberately NOT called.
 2026-10-07	162			orc_1g		move	16	0		33	11		Day 162, round ~20, exped 33: carried out with the party to the cave mouth, still bound and asleep, to be watched as it wakes.
 2026-10-07	162			orc_1g		move	16	0		33	20		Day 162: RELEASED, untied and let go at the cave mouth on condition it warns its warren off (interactions.tsv 162:2). Alive, no longer meaningfully tracked -- it is leaving the dungeon's mapped area entirely and does not rejoin any wandering pool here.
+2026-10-08				gnoll_48b		hp			3.0				4 dmg, Tristle's short bow, surprise-segment volley (6 shots, 1 hit), day 163
+2026-10-09				gnoll_48b		hp			2.0				1 dmg (Ista, nat 20, dart 1d2), massed volley of 13 shots as the party readied-fired the instant the gnolls entered lantern light, day 163
+2026-10-09	163			gnoll_48b		move	14	24		34	40		closed to melee range of the party at (14,23), day 163
+2026-10-09	163			gnoll_48c		move	15	24		34	40		closed to melee range of the party at (14,23), day 163
+2026-10-09	163			gnoll_48d		move	14	24		34	40		closed to melee range of the party at (14,23), day 163
+2026-10-09				gnoll_48b		die							killed by Dave's short bow, round 2, day 163
+2026-10-09				gnoll_48c		hp			2.0				4 dmg, Tristle's short bow, round 2, day 163

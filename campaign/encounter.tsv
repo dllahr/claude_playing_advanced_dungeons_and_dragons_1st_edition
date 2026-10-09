@@ -484,3 +484,21 @@ when	day	exped	round	side	actor	verb	target	qty	detail
 2026-10-07	162	33	11	party	all but Tristle	slay	orc_1	6	day 162: six of the seven sleeping orcs killed where they lay, automatic, 1/slayer/round (PHB p.68) -- no roll. hp 5,5,4,4,3,2.
 2026-10-07	162	33	11	Tristle	orc_1g	bind		1	Tristle ties the seventh (hp1), still asleep, hands and feet with rope rather than killing it. Captive.
 2026-10-07	162	33	11			end			Threat resolved -- 6 dead, 1 bound captive, no one else present. Encounter closed.
+2026-10-08	163	34	1			start			area 48's cavern, north of (14,23): 3 gnolls present at (15,26) (gnoll_48a already dead since day 99); Tristle alone forward with a one-segment surprise edge, rest of party at (15,20)
+2026-10-08	163	34	1	party	Tristle	surprise			d6=2, within his own 1-2 threshold, but gnolls rolled lower (1) -- TABLE reading (day 163 ruling): the lower roll owes the difference, so Tristle is NOT charged
+2026-10-08	163	34	1	monsters	gnolls	surprise			d6=1, within their own 1-2, the LOWER of the two rolls -- owes the 1-segment difference to Tristle
+2026-10-08	163	34	1	party	Tristle	declare			fires 6 arrows (short bow, 3x rate in his free surprise segment), picks one gnoll and keeps firing at it until it drops, then switches to another; yells for the party to come join him
+2026-10-08	163	34	1	monsters		damage	gnoll_48b	4	Tristle, surprise segment: 6 shots (3x rate), 1 hit, 1d6=4
+2026-10-09	163	34	1	monsters		damage	gnoll_48b	1	massed readied volley (Torsat x2, Blartho, Yrtone, Hask, Dellie, Frython x3, Ista x3, Brand): 13 shots, 1 hit -- Ista's natural 20, dart for 1
+2026-10-09	163	34	2			initiative			round 2 begins
+2026-10-09	163	34	2	monsters		damage	gnoll_48b	3	Dave, short bow, round 2 -- kills it
+2026-10-09	163	34	2	monsters	gnoll_48b	dead			Dave's second shot, round 2
+2026-10-09	163	34	2	monsters		damage	gnoll_48c	4	Tristle, short bow, round 2, switched target after 48b dropped
+2026-10-09	163	34	3			initiative			round 3 begins
+2026-10-09	163	34	3	monsters		initiative			round 3: party d6=2 vs monsters d6=3, monsters first
+2026-10-09	163	34	3	party	monsters	declare			gnoll_48d (pole arm) attacks Torsat; gnoll_48c (two-handed sword) attacks Dave
+2026-10-09	163	34	3	monsters		damage	Dave	2	gnoll_48c, two-handed sword, round 3 -- d20=19 vs AC3, 1-10=2 dmg
+2026-10-09	163	34	3	party	Yrtone	declare			free switch sling->footman's flail, attacks gnoll_48d -- d20=1 vs AC5, miss
+2026-10-09	163	34	3	party	Dave,Torsat	declare			switching short bow -> long sword, costs the round, no attack
+2026-10-09	163	34	3	party	Hask	declare			switching sling -> spear; ruled NOT a free switch (not flail/mace), costs the round like Dave/Torsat -- no attack
+2026-10-09	163	34	3	party	Dellie,Blartho	declare			free switch sling->flail, step into 2nd rank, hold no attack declared
