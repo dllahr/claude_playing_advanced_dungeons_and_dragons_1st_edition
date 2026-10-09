@@ -12066,3 +12066,26 @@ when	exped	turn	notation	dice	modifier	total	hidden	reason
 2026-10-09			d20	19	0	19		gnoll_48c attacks Dave with two-handed sword
 2026-10-09			1-10 (1d10)	2	0	2		gnoll_48c damage, two-handed sword vs Dave
 2026-10-09			d20	1	0	1		Yrtone attacks gnoll_48d with footman flail
+2026-10-09			d6	2	0	2		initiative, party, round 4
+2026-10-09			d6	6	0	6		initiative, monsters, round 4
+2026-10-09			d20	20	0	20		gnoll_48d attacks Torsat with pole arm, round 4
+2026-10-09			1-10 (1d10)	1	0	1		gnoll_48d damage, pole arm vs Torsat, round 4
+2026-10-09			d20	11	0	11		gnoll_48c attacks Dave with two-handed sword, round 4
+2026-10-09			d20	4	0	4		Dave attacks gnoll_48c with long sword, round 4
+2026-10-09			d20	13	0	13		Torsat attacks gnoll_48d with long sword, round 4
+2026-10-09			d20	18	0	18		Yrtone attacks gnoll_48d with footman flail, round 4
+2026-10-09			2-8 (2d4)	3,1	0	4		Yrtone damage, flail vs gnoll_48d (size L)
+2026-10-09			d20	11	0	11		Hask attacks gnoll_48c with spear, round 4
+2026-10-09			d6	6	0	6		initiative, party, round 5
+2026-10-09			d6	5	0	5		initiative, monsters, round 5
+2026-10-09			d20	6	0	6		Dave attacks gnoll_48c with long sword, rear, round 5
+2026-10-09			d20	13	0	13		Torsat attacks gnoll_48c with long sword, rear, round 5
+2026-10-09			d20	5	0	5		Yrtone attacks gnoll_48c with footman flail, rear, round 5
+2026-10-09			d20	15	0	15		Dellie attacks gnoll_48c with footman flail, front, round 5
+2026-10-09			d20	19	0	19		Blartho attacks gnoll_48c with footman flail, front, round 5
+2026-10-09			d20	15	0	15		Brand attacks gnoll_48c with hand axe, front, round 5
+2026-10-09			d20	20	0	20		Hask attacks gnoll_48c with spear, reach, round 5
+2026-10-09			1-12 (1d12)	3	0	3		Torsat damage, long sword vs gnoll_48c (size L), round 5
+2026-10-09			2-8 (2d4)	2,4	0	6		Dellie damage, footman flail vs gnoll_48c (size L), round 5
+2026-10-09			2-8 (2d4)	2,4	0	6		Blartho damage, footman flail vs gnoll_48c (size L), round 5
+2026-10-09			1-8 (1d8)	4	0	4		Hask damage, spear vs gnoll_48c (size L), round 5

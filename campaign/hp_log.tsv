@@ -125,3 +125,4 @@ when	exped	turn	who	kind	delta	reason
 2026-10-06	33	1	Yrtone	damage	-7	day 162: orc's free-segment attack during the surprise -- she's in rank 1 (standard formation), nearest the alcove doorway. d20=16 vs AC3 (monster matrix, 1HD column), hit; damage 1d8=7. 7hp -> 0, unconscious (DMG p.82, not dead until -10).
 2026-10-06	33	1	Yrtone	heal	7	day 162: CORRECTION -- the surprise this resolved from was wrong. Tristle was scouting 40ft/4 squares ahead with infravision (elf, 60ft range); his own path reaches (16,7) several rounds before the main party, and dmap.py light confirms genuine line-of-sight from (16,7) to the orcs at (15,8) within infravision range. He would have spotted their heat signatures well before the main party arrived -- there was never a basis for the party to be surprised. Undoing the damage.
 2026-10-09	34		Dave	damage	-2	gnoll_48c, two-handed sword, round 3, melee
+2026-10-09	34		Torsat	damage	-1	gnoll_48d, pole arm, round 4, nat 20

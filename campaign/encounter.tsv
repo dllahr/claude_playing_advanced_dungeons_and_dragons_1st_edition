@@ -502,3 +502,17 @@ when	day	exped	round	side	actor	verb	target	qty	detail
 2026-10-09	163	34	3	party	Dave,Torsat	declare			switching short bow -> long sword, costs the round, no attack
 2026-10-09	163	34	3	party	Hask	declare			switching sling -> spear; ruled NOT a free switch (not flail/mace), costs the round like Dave/Torsat -- no attack
 2026-10-09	163	34	3	party	Dellie,Blartho	declare			free switch sling->flail, step into 2nd rank, hold no attack declared
+2026-10-09	163	34	4			initiative			round 4 begins
+2026-10-09	163	34	4	monsters		initiative			round 4: party d6=2 vs monsters d6=6, monsters first
+2026-10-09	163	34	4	party	monsters	declare			gnoll_48d (pole arm) attacks Torsat -- nat 20, hits for 1; gnoll_48c (two-handed sword) attacks Dave, misses
+2026-10-09	163	34	4	party	Dave,Torsat,Yrtone,Hask	declare			front rank (Dave vs gnoll_48c, Torsat+Yrtone vs gnoll_48d) attack with melee weapons now in hand; Hask attacks gnoll_48c over 2nd rank with spear; Dellie, Blartho, Brand, Tristle, Ista, Frython stand ready, no attack
+2026-10-09	163	34	4	monsters		damage	gnoll_48d	4	Yrtone, footman's flail, round 4 -- d20=18 vs AC5, 2-8=4 dmg, kills it
+2026-10-09	163	34	4	monsters	gnoll_48d	dead			Yrtone's flail, round 4
+2026-10-09	163	34	5			initiative			round 5 begins
+2026-10-09	163	34	5	party		initiative			round 5: party d6=6 vs monsters d6=5, party first
+2026-10-09	163	34	5	party	Dave,Torsat,Yrtone	declare			front rank works around behind gnoll_48c (now the only one left -- open frontage) and attacks from the rear, +2 to hit
+2026-10-09	163	34	5	party	Dellie,Blartho,Brand	declare			advance into the vacated front rank and attack
+2026-10-09	163	34	5	party	Hask	declare			attacks with spear from the new 2nd rank behind them
+2026-10-09	163	34	5	monsters		damage	gnoll_48c	19	Torsat(3)+Dellie(6)+Blartho(6)+Hask(4) all connect the same round -- Dave and Brand miss
+2026-10-09	163	34	5	monsters	gnoll_48c	dead			overkilled by four simultaneous hits, round 5
+2026-10-09	163	34	5			end			all 3 gnolls (48b/c/d) dead; gnoll_48a already dead since day 99 -- area 48's stocked gnoll group fully resolved

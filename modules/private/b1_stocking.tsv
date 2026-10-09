@@ -186,3 +186,5 @@ when	day	level	area	monster_id	monster	verb	x	y	hp	exped	round	duration	note
 2026-10-09	163			gnoll_48d		move	14	24		34	40		closed to melee range of the party at (14,23), day 163
 2026-10-09				gnoll_48b		die							killed by Dave's short bow, round 2, day 163
 2026-10-09				gnoll_48c		hp			2.0				4 dmg, Tristle's short bow, round 2, day 163
+2026-10-09				gnoll_48d		die							killed by Yrtone's footman's flail, round 4, day 163
+2026-10-09				gnoll_48c		die							overkilled by Torsat, Dellie, Blartho and Hask all connecting the same round, day 163
