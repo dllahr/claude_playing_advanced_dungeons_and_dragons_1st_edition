@@ -12089,3 +12089,5 @@ when	exped	turn	notation	dice	modifier	total	hidden	reason
 2026-10-09			2-8 (2d4)	2,4	0	6		Dellie damage, footman flail vs gnoll_48c (size L), round 5
 2026-10-09			2-8 (2d4)	2,4	0	6		Blartho damage, footman flail vs gnoll_48c (size L), round 5
 2026-10-09			1-8 (1d8)	4	0	4		Hask damage, spear vs gnoll_48c (size L), round 5
+2026-10-09			d100	63	0	63		gnoll lair treasure type D, magic chance (any 2 plus 1 potion, 15%)
+2026-10-09			d100	63	0	63		gnoll lair treasure type S, potions chance (2-8 potions, 40%)

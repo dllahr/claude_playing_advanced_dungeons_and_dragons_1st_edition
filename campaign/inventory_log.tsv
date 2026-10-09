@@ -571,3 +571,4 @@ when	day	asset	verb	qty	unit	condition	holder	evidence	note
 2026-10-07	162	spear	move	2.0	each				off two of the six dead orcs, area 1, day 162 -- weapons-carried table, d100=36 (axe&spear) and d100=77 (spear): salvage
 2026-10-07	162	hand_axe	move	4.0	each				off four of the six dead orcs, area 1, day 162 -- weapons-carried table, d100=36,90,70,87: salvage, type unspecified (same DM call as polearm_orc's note)
 2026-10-07	162	short_bow	move	1.0	each				off one of the six dead orcs, area 1, day 162 -- weapons-carried table, d100=70 (axe&bow): salvage
+2026-10-09	163	gems_gnoll_lair	move	4.0	each		party		4 gems off the gnoll lair cache, area 48, day 163 -- base value not yet rolled, pending appraisal

@@ -188,3 +188,6 @@ when	day	delta	unit	asset	qty	counterparty	interaction	reason	book
 2026-10-06	160	-0.4725	gp	camp_food	1.03857	Wethersby market	-	day 160: topping camp food up to 4.3 person-weeks total before heading north to the basecamp -- bought 1.03857 person-weeks (7.27 person-days) at the established 6.5 cp/person-day board rate, 47.25 cp = 4 sp 7 cp.	
 2026-10-07	162	25.0	gp	coin		orc_1 bodies	-	50 ep off the six dead orcs (MM treasure type L individually), 2ep=1gp	
 2026-10-07	162	41.0	gp	coin		area 1 alcove	-	820 sp (B1's own treasure placement, code P, room 1) found in a sack tucked under a loose floor stone, thorough search, 8 of the 10 party present (Dave and Torsat held the corridor north and south). 20 sp = 1 gp, rules/equipment.md	
+2026-10-09	163	10.5	ep	coin	21	gnoll_48b/c/d bodies	-	individual treasure type L off three gnoll bodies, area 48, day 163: 10,7,4 ep (21 total). VALUED at 2ep=1gp (rules/equipment.md line 90)	
+2026-10-09	163	19.0	gp	coin	19	gnoll_48b/c/d bodies	-	individual treasure type M off three gnoll bodies, area 48, day 163: 8,6,5 gp (19 total)	
+2026-10-09	163	3000.0	ep	coin	6000	gnoll lair cache, area 48	-	lair treasure type D, electrum column, off the gnoll lair cache area 48, day 163: rolled 6 (x1,000) = 6000 ep. VALUED at 2ep=1gp	
