@@ -267,6 +267,71 @@ def test_dexterity_adjustment_shifts_surprise():
     assert not s
 
 
+# ------------------------------------ both sides at once (day 163)
+#
+# Tristle rolled 2 (within his own 1-2), three gnolls rolled 1 (within
+# theirs) -- both sides independently cleared their own threshold, the
+# exact tied-range case where DMG p.62's printed table and its own worked
+# example disagree. The DM picked the worked-example reading (higher
+# roller inactive) without flagging it; the player caught it and restated
+# the day-118 ruling: the TABLE governs, so the LOWER roll is surprised and
+# owes the segments. These tests pin that down in code so it cannot be
+# re-litigated from memory under pressure a third time.
+
+def test_neither_side_surprised_owes_nothing():
+    _, r = combat.resolve_surprise('Tristle', 'gnolls', rng=Seq(5, 6))
+    assert not r['a']['surprised'] and not r['b']['surprised']
+    assert r['a']['segments'] == 0 and r['b']['segments'] == 0
+
+
+def test_one_side_surprised_owes_its_OWN_roll():
+    """The long-cached, unambiguous case: untouched by the tied-range fix."""
+    _, r = combat.resolve_surprise('Tristle', 'gnolls', rng=Seq(2, 5))
+    assert r['a']['surprised'] and not r['b']['surprised']
+    assert r['a']['segments'] == 2 and r['b']['segments'] == 0
+
+
+def test_the_actual_day_163_roll_the_LOWER_side_owes_the_difference():
+    """Tristle=2, gnolls=1. Both clear 1-2. TABLE reading: the lower roll
+    (gnolls, 1) is surprised and owes 2-1=1 segment; Tristle (2) owes
+    nothing -- the opposite of what got narrated live at the table."""
+    _, r = combat.resolve_surprise('Tristle', 'gnolls', rng=Seq(2, 1))
+    assert r['a']['surprised'] and r['b']['surprised']
+    assert r['a']['segments'] == 0, 'the higher roll must not be charged'
+    assert r['b']['segments'] == 1
+
+
+def test_the_difference_can_land_on_either_side():
+    _, r = combat.resolve_surprise('Tristle', 'gnolls', rng=Seq(1, 2))
+    assert r['a']['segments'] == 1 and r['b']['segments'] == 0
+
+
+def test_both_surprised_EQUALLY_cancels():
+    """DMG p.61: 'it is possible for both parties to be surprised EQUALLY --
+    with surprise thus having no effect.'"""
+    _, r = combat.resolve_surprise('Tristle', 'gnolls', rng=Seq(1, 1))
+    assert r['a']['surprised'] and r['b']['surprised']
+    assert r['a']['segments'] == 0 and r['b']['segments'] == 0
+
+
+def test_a_non_default_threshold_is_honoured_per_side():
+    """Troglodyte chameleon skin again, but now on one side of a two-sided
+    call: surprised on 1-4, not 1-2."""
+    _, r = combat.resolve_surprise('party', 'troglodyte', b_surprised_on=4,
+                                    rng=Seq(5, 3))
+    assert not r['a']['surprised']
+    assert r['b']['surprised'] and r['b']['segments'] == 3
+
+
+def test_dexterity_adjustment_can_rescue_a_side_from_surprise():
+    _, r = combat.resolve_surprise('Tristle', 'gnolls', a_adjust=3,
+                                    rng=Seq(2, 1))
+    assert not r['a']['surprised'], 'DEX +3 should push 2 out of the 1-2 range'
+    assert r['b']['surprised'] and r['b']['segments'] == 1, (
+        'B is the only one left surprised, so it owes its OWN roll (1), '
+        'not a difference')
+
+
 def test_attack_spec_carries_an_optional_modifier():
     assert combat.parse_attack('Dave:long sword') == ('Dave', 'long sword', ())
     who, weapon, extra = combat.parse_attack('Dave:long sword:+2:rear attack')

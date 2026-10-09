@@ -11,6 +11,7 @@
 
     python tools/combat.py initiative
     python tools/combat.py surprise --who "Tristle scouting" --adjust 3
+    python tools/combat.py encounter-surprise --a-who Tristle --b-who gnolls
     python tools/combat.py save --who Frython --vs Spell
     python tools/combat.py morale --hd 3+2 --modifier 15 --why "half the band down"
 
@@ -406,6 +407,81 @@ def surprise(sides=6, surprised_on=2, who='party', adjust=0, rng=None,
     return out, surprised
 
 
+def resolve_surprise(a_name, b_name, a_surprised_on=2, b_surprised_on=2,
+                      a_adjust=0, b_adjust=0, sides=6, rng=None):
+    """Both sides' surprise, resolved to lost segments in ONE call.
+
+    This exists because of day 163: Tristle rolled 2 (within his own 1-2),
+    three gnolls rolled 1 (within their own 1-2) -- both sides independently
+    cleared their own threshold, which is EXACTLY the tied-range case where
+    DMG p.62's own printed table and its own worked example disagree
+    (`rules/combat.md`, "DMG p.62's own table and its own worked example
+    contradict each other"). The DM picked a side of that contradiction
+    silently instead of flagging it, and the player caught it and restated
+    the day-118 ruling from memory. A rule that has to be re-derived from
+    memory, correctly, twice, under pressure, is a rule that belongs in code.
+
+    SETTLED, day 163 (`rules/combat.md`, "SETTLED, day 163"): when both
+    sides independently clear their own threshold, the TABLE reading
+    governs, not the worked example. Of the two rolls, the LOWER one is the
+    side that is surprised and owes the segments; the higher roll owes
+    nothing. Equal rolls cancel (DMG p.61, "it is possible for both parties
+    to be surprised EQUALLY -- with surprise thus having no effect").
+
+    When only ONE side clears its own threshold, that is the unambiguous,
+    long-cached case and is untouched by any of this: that side loses
+    segments equal to ITS OWN roll (a 1 costs one segment, a 2 costs two).
+
+    Returns (lines, result) where result is
+        {'a': {'roll': int, 'surprised': bool, 'segments': int},
+         'b': {'roll': int, 'surprised': bool, 'segments': int}}
+    `segments` is what that side owes -- the OTHER side acts freely, as if
+    each lost segment were an entire round (DMG p.62), for that many
+    segments. This does not apply a DEX adjustment per individual within an
+    already-surprised side (`rules/combat.md`, "Dexterity, per individual")
+    -- that stays a separate, narrated reduction of ONE character's own
+    inactive segments, same as before.
+    """
+    import random as _r
+    rng = rng or _r
+    ra = roll('d%d' % sides, reason='surprise check, %s' % a_name, rng=rng)
+    rb = roll('d%d' % sides, reason='surprise check, %s' % b_name, rng=rng)
+    val_a, val_b = ra.total + a_adjust, rb.total + b_adjust
+    surprised_a = val_a <= a_surprised_on
+    surprised_b = val_b <= b_surprised_on
+
+    if surprised_a and surprised_b:
+        if val_a < val_b:
+            segs_a, segs_b = val_b - val_a, 0
+        elif val_b < val_a:
+            segs_a, segs_b = 0, val_a - val_b
+        else:
+            segs_a, segs_b = 0, 0
+    elif surprised_a:
+        segs_a, segs_b = val_a, 0
+    elif surprised_b:
+        segs_a, segs_b = 0, val_b
+    else:
+        segs_a, segs_b = 0, 0
+
+    def fmt(name, val, on, surprised, segs):
+        return ('    %-20s d%d = %d, surprised on 1-%d -> %s%s'
+                % (name, sides, val, on,
+                   'SURPRISED' if surprised else 'not surprised',
+                   ', owes %d segment(s)' % segs if segs else ''))
+
+    out = ['surprise, %s vs %s' % (a_name, b_name),
+           fmt(a_name, val_a, a_surprised_on, surprised_a, segs_a),
+           fmt(b_name, val_b, b_surprised_on, surprised_b, segs_b)]
+    if surprised_a and surprised_b and segs_a == 0 and segs_b == 0 \
+            and val_a == val_b:
+        out.append('    both surprised EQUALLY -- cancels, no effect')
+    return out, {'a': {'roll': val_a, 'surprised': surprised_a,
+                        'segments': segs_a},
+                  'b': {'roll': val_b, 'surprised': surprised_b,
+                        'segments': segs_b}}
+
+
 SAVE_BANDS = {'Cleric': '1-3', 'Fighter': '1-2', 'Magic-User': '1-5',
               'Thief': '1-4'}
 
@@ -584,6 +660,17 @@ def build_parser():
     s.add_argument('--adjust', type=int, default=0,
                    help='DEX Reaction/Attacking adjustment, PHB p.11')
 
+    es = sub.add_parser('encounter-surprise',
+                         help='both sides at once, resolved to lost segments '
+                              '-- settles the tied-range case (day 163) '
+                              'instead of picking a reading by hand')
+    es.add_argument('--a-who', required=True)
+    es.add_argument('--b-who', required=True)
+    es.add_argument('--a-surprised-on', type=int, default=2)
+    es.add_argument('--b-surprised-on', type=int, default=2)
+    es.add_argument('--a-adjust', type=int, default=0)
+    es.add_argument('--b-adjust', type=int, default=0)
+
     sv = sub.add_parser('save', help='a saving throw')
     sv.add_argument('--who', required=True)
     sv.add_argument('--vs', required=True,
@@ -711,6 +798,14 @@ def main(argv=None):
     if a.cmd == 'surprise':
         lines, _ = surprise(who=a.who, adjust=a.adjust,
                             surprised_on=a.surprised_on, why=a.why)
+        print('\n'.join(lines))
+        return 0
+
+    if a.cmd == 'encounter-surprise':
+        lines, _ = resolve_surprise(
+            a.a_who, a.b_who,
+            a_surprised_on=a.a_surprised_on, b_surprised_on=a.b_surprised_on,
+            a_adjust=a.a_adjust, b_adjust=a.b_adjust)
         print('\n'.join(lines))
         return 0
 
