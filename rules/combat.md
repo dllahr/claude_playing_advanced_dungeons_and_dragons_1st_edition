@@ -614,6 +614,22 @@ he acts at his **normal rate of fire, once**.
 > this exact tied-range ambiguity ever becomes load-bearing, stop and ask
 > rather than picking a side of the contradiction silently.
 
+> ### SETTLED, day 163 — the TABLE reading governs, not the worked example
+>
+> It became load-bearing: Tristle (1-2) rolled 2, three gnolls (1-2) rolled 1,
+> both in range. The DM picked the worked-example reading on the spot (higher
+> roller, Tristle, inactive) without flagging the contradiction — exactly the
+> mistake this section already warned against — and the player caught it,
+> restating the position from the day-118 debate: **the higher roll is the
+> better roll, and is LESS surprised; a 3+ on either side is not surprised at
+> all.** That is the TABLE's reading, not the worked example's. **Ruling,
+> going forward: the TABLE governs.** Of two same-range dice both within
+> their own surprise thresholds, the LOWER roll is the side that is
+> surprised, and (when there is a single difference to compute) owes the
+> segments. The higher roller is not charged anything by this comparison.
+> The worked example on p.62 is noted as the book's own inconsistency and is
+> not followed.
+
 > *Caught by the player 2026-09-13, day 79, within the hour of this section
 > being written — the DM told him Tristle's bow fired at 3x because the rule had
 > been cached WITHOUT ITS SUBJECT. That is the same defect, in the same file,
