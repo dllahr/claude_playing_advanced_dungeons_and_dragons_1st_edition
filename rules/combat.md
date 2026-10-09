@@ -1228,11 +1228,18 @@ switch **or** you attack.
 | **Two-handed missile weapon → sword and shield** *(a short bow slung, a shield off the back)* | **THE WHOLE ROUND.** No attack |
 | **Sling → flail, mace or the like** | **FREE.** A sling is a strip of leather you let fall, and the weapon is on the belt with the shield already on the arm. **Attack normally** |
 | Sheathed weapon → another sheathed weapon | the round |
+| **Sling → spear, polearm or anything slung on the back** | **the round.** Not on the belt and not one-handed to bring up — same cost as drawing a sheathed weapon |
 
 *source: **NOT A BOOK RULE.** Neither the PHB nor the DMG prices a weapon change.
 This is a DM ruling, set 2026-09-04, and the sling exemption was added the same
 day for consistency rather than invented mid-round. Recorded so it is applied
 the same way every time.*
+
+**Day 163 extension:** Hask tried sling → spear expecting the same free switch
+as the clerics' sling → flail. The whitelist is narrow on purpose — "flail, mace
+or the like" means *a blunt weapon already on the belt*, not a pole weapon
+carried slung on the back. A spear needs the same unslinging motion as a
+sword from a sheath, so it is charged the same way: **the round, no attack.**
 
 **The consequence the party has paid twice:** a missile-forward marching order
 buys you a free volley at range and costs you a full round the moment anything
